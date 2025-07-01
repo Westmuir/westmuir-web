@@ -1,0 +1,40 @@
+[
+  {
+    "url": "/about/",
+    "label": "About",
+    "icon": "🏡",
+    "description": "Learn about the village, its history and people."
+  },
+  {
+    "url": "/news/",
+    "label": "News",
+    "icon": "📰",
+    "description": "Catch up on the latest announcements and updates."
+  },
+  {
+    "url": "/contact/",
+    "label": "Contact",
+    "icon": "✉️",
+    "description": "Reach out for hall bookings or community info."
+  },
+  {
+    "url": "/gallery/",
+    "label": "Gallery",
+    "icon": "🖼️",
+    "description": "View photos of village life and local events.",
+    "image": "https://placehold.co/300x180?text=Gallery"
+  },
+  {
+    "url": "/events/",
+    "label": "Events",
+    "icon": "📅",
+    "description": "Check the calendar for upcoming events."
+  },
+  {
+    "url": "/community/",
+    "label": "Community",
+    "icon": "🤝",
+    "description": "Connect with groups, clubs and local services.",
+    "image": "https://placehold.co/300x180?text=Community"
+  }
+]

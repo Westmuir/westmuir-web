@@ -1,0 +1,116 @@
+:root {
+  --primary: #6200ee;
+  --secondary: #03dac6;
+  --color-text: #212121;
+  --color-bg: #ffffff;
+  --color-link: #1a73e8;
+  --header-bg: #6200ee;
+
+  --error: #b00020;
+
+  --header-text: #212121;
+  --footer-bg: #f1f1f1;
+  --footer-text: #424242;
+  --footer-link: #1a73e8;
+  --btn-bg: #1a73e8;
+  --btn-color: #ffffff;
+  --card-bg: #ffffff;
+  --card-text: #212121;
+  --nav-hover: #e3f2fd;
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #212121;
+  --highlight: #2962ff;
+  --elevation-2: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  --surface: #f2f2f2;
+
+  --text: #000000;
+  --text-muted: #666;
+  --card-bg: #ffffff;
+  --border: #ddd;
+  --elevation: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --primary: #bb86fc;
+  --secondary: #03dac6;
+  --color-text: #ffffff;
+  --color-bg: #121212;
+  --color-link: #82b1ff;
+  --header-bg: #bb86fc;
+
+  --error: #cf6679;
+
+  --header-text: #ffffff;
+  --footer-bg: #1a1a1a;
+  --footer-text: #bdbdbd;
+  --footer-link: #82b1ff;
+  --btn-bg: #2962ff;
+  --btn-color: #ffffff;
+  --card-bg: #232323;
+  --card-text: #ffffff;
+  --nav-hover: #2e3b55;
+  --dropdown-bg: #2a2a40;
+  --dropdown-text: #ffffff;
+  --highlight: #80cbc4;
+  --elevation-2: 0 2px 4px rgba(255, 255, 255, 0.2);
+
+  --secondary: #03dac6;
+  --surface: #1e1e1e;
+
+  --text: #ffffff;
+  --text-muted: #bbb;
+  --card-bg: #1f1f1f;
+  --border: #333;
+  --elevation: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: var(--color-link);
+}
+
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font: inherit;
+  color: var(--color-text);
+  transition: background-color 0.3s ease;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-size: 28px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-fade {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+@media (max-width: 600px) {
+  .theme-toggle span#darkmode-label {
+    display: none;
+  }
+}

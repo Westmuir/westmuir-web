@@ -1,0 +1,21 @@
+[
+  {
+    "label": "Woodland",
+    "url": "/woodland/",
+    "description": "View images and videos of village life.",
+    "icon": "forest"
+  },
+  {
+    "label": "Resiliance",
+    "url": "/resilience/",
+    "description": "The resilience centre.",
+    "icon": "zone_person_urgent"
+  },
+
+  {
+    "label": "Defibrillator",
+    "url": "/defibrillator/",
+    "description": "Westmuir's defibrillator.",
+    "icon": "pulse_alert"
+  }
+]

@@ -1,0 +1,22 @@
+{% assign navPages = collections.all | eleventyNavigation %}
+
+<nav class="nav" role="navigation">
+  <button id="nav-toggle" class="nav-toggle" aria-label="Toggle Menu">
+    <span class="material-icons">menu</span>
+  </button>
+
+  
+
+  <ul id="nav-menu" class="nav-menu">
+    {% for item in navPages %}
+    <li>
+      <a href="{{ item.url }}">
+        {% if item.icon %}<span class="material-icons">{{ item.icon }}</span>{%
+        endif %} {{ item.title }}
+      </a>
+    </li>
+        {% endfor %}
+  </ul>
+
+
+</nav>

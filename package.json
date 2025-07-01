@@ -1,171 +1,38 @@
 {
-  "name": "westmuir-web",
-  "version": "24.8.1",
-  "description": "westmuir web",
-  "main": "index.html",
+  "name": "westmuir-site",
   "type": "module",
   "scripts": {
-    "start": "npm run serve",
-    "dev": "npm run serve:dev --watch",
-    "serve": "wireit",
-    "serve:dev": "wireit",
-    "build:dev": "wireit",
-    "build:dev:eleventy": "wireit",
-    "build:dev:js": "wireit",
-    "build:type-check": "wireit",
-    "build:prod": "wireit",
-    "build:prod:eleventy": "wireit",
-    "build:prod:js": "wireit"
+    "start": "eleventy --serve --quiet",
+    "build": "eleventy"
   },
-  "wireit": {
-    "build:dev": {
-      "dependencies": [
-        "build:dev:eleventy",
-        "build:dev:js"
-      ]
-    },
-    "build:dev:eleventy": {
-      "command": "NODE_ENV=DEV eleventy --config=eleventy.config.js",
-      "files": [
-        "site/**/*",
-        "lib/**/*",
-        "eleventy.config.js"
-      ],
-      "output": [
-        "_dev"
-      ],
-      "dependencies": [
-        "build:dev:js"
-      ]
-    },
-    "build:dev:js": {
-      "command": "NODE_ENV=DEV node esbuild.config.js",
-      "files": [
-        "src/**/*",
-        "jsconfig.json",
-        "esbuild.config.js"
-      ],
-      "output": [
-        "lib/**/*"
-      ]
-    },
-    "build:prod": {
-      "dependencies": [
-        "build:prod:eleventy",
-        "build:prod:js"
-      ]
-    },
-    "build:prod:eleventy": {
-      "command": "NODE_ENV=PROD eleventy --config=eleventy.config.js",
-      "files": [
-        "site/**/*",
-        "build/**/*",
-        "eleventy.config.js"
-      ],
-      "output": [
-        "_prod"
-      ],
-      "dependencies": [
-        "build:prod:js"
-      ]
-    },
-    "build:prod:js": {
-      "command": "NODE_ENV=PROD node esbuild.config.js",
-      "files": [
-        "src/**/*",
-        "jsconfig.json",
-        "esbuild.config.js"
-      ],
-      "output": [
-        "build/**/*"
-      ]
-    },
-    "serve:dev": {
-      "command": "wds --watch --root-dir _dev --open",
-      "service": true,
-      "dependencies": [
-        {
-          "script": "build:dev",
-          "cascade": false
-        }
-      ]
-    },
-    "serve": {
-      "command": "npm run build:prod && wds --watch --root-dir _prod",
-      "service": true,
-      "dependencies": [
-        {
-          "script": "build:prod",
-          "cascade": false
-        }
-      ]
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Westmuir/westmuir-web.git"
-  },
-  "keywords": [
-    "11ty",
-    "eleventy",
-    "lit",
-    "lit-element",
-    "SSR",
-    "Westmuir",
-    "Community"
-  ],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Westmuir/westmuir-web/issues"
-  },
-  "homepage": "https://github.com/Westmuir/westmuir-web#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0-beta.1",
-    "@lit-labs/eleventy-plugin-lit": "^1.0.3",
-    "@luncheon/esbuild-plugin-gzip": "^0.1.0",
-    "@web/dev-server": "^0.4.6",
-    "@webcomponents/template-shadowroot": "^0.2.1",
-    "clean-css": "^5.3.3",
-    "esbuild": "^0.25.2",
-    "esbuild-plugin-minify-html-literals": "^2.0.1",
-    "html-minifier": "^4.0.0",
-    "lit": "^3.2.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-organize-imports": "^4.0.0",
-    "tiny-glob": "^0.2.9",
-    "typescript": "^5.4.2",
-    "wireit": "^0.14.8"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-navigation": "^1.0.4",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-attrs": "^4.3.1",
+    "sass": "1.48.0",
+    "stylelint": "^16.21.0",
+    "markdown-it-container": "^4.0.0"
   },
   "prettier": {
-    "plugins": [
-      "prettier-plugin-organize-imports"
-    ],
     "semi": true,
     "singleQuote": true,
     "trailingComma": "all",
     "bracketSpacing": true,
     "arrowParens": "avoid",
+    "plugins": [
+      "prettier-plugin-organize-imports"
+    ],
     "overrides": [
       {
         "files": "*.html",
         "options": {
           "printWidth": 100
         }
-      },
-      {
-        "files": "*.njk",
-        "options": {
-          "parser": "html"
-        }
       }
     ]
-  },
-  "dependencies": {
-    "@11ty/eleventy-navigation": "^1.0.4",
-    "@11ty/eleventy-upgrade-help": "^3.0.1",
-    "@11ty/is-land": "^4.0.0",
-    "@lit-labs/ssr-client": "^1.1.7",
-    "@material/web": "^2"
   }
 }

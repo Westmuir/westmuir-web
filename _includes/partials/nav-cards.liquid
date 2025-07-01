@@ -1,0 +1,19 @@
+<ul class="section-cards">
+  {% for item in cards %}<a href="{{ item.url }}" ><li class="section-card section-card-page">
+ {% if item.image %}
+      <img
+        src="{{ item.image }}"
+        alt="{{ item.label }} image"
+        class="card-image"
+      />
+      {% else %}
+      <div class="material-symbols-outlined icon">{{ item.icon }}</div>
+      {% endif %}
+      <h3>
+        {{ item.label }}
+      </h3> 
+      <p>{{ item.description }}</p>
+      </li></a>{% endfor %}
+
+</ul>
+

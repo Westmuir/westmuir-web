@@ -1,0 +1,10 @@
+<footer class="footer">
+  <p>&copy; 2025 Westmuir Village. All rights reserved.</p>
+  {% if footer.links %}
+    <nav>
+      {% for link in footer.links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+    </nav>
+  {% endif %}
+</footer>

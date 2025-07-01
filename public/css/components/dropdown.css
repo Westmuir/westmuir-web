@@ -1,0 +1,27 @@
+.nav-menu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--header-bg);
+  box-shadow: var(--elevation-2);
+  z-index: 1000;
+  min-width: 180px;
+  flex-direction: column;
+}
+
+.nav-menu li:hover > .dropdown,
+.nav-menu li:focus-within > .dropdown {
+  display: flex;
+}
+
+.nav-menu .dropdown li a {
+  padding: 0.75rem 1rem;
+  white-space: nowrap;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-menu .dropdown li a:hover {
+  background-color: var(--hover-bg);
+}

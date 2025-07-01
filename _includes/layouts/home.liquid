@@ -1,0 +1,16 @@
+{% extends "layouts/base.liquid" %} {% block content %}
+
+<main class="main">
+  {{ content | safe }}
+</main>
+
+{% if hero %}
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Westmuir</h1>
+    <p>Discover the charm of our village, from events to local news.</p>
+    <a href="/about/" class="btn">Learn More</a>
+  </div>
+</section>
+{% endif %} {% if cta %} {% include "partials/cta.liquid" %} {% endif %} {%
+endblock %}

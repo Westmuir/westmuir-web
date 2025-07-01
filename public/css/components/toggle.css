@@ -1,0 +1,27 @@
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.theme-toggle-btn {
+  color: #cb57d1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Show hamburger on small screens */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+}

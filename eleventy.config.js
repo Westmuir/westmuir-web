@@ -1,61 +1,81 @@
-import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
-import litPlugin from '@lit-labs/eleventy-plugin-lit';
-import { inlineCSS } from './eleventy-helpers/shortcodes/inline-css.js';
-import { inlineJS } from './eleventy-helpers/shortcodes/inline-js.js';
-import { minifyHTML } from './eleventy-helpers/transforms/minify-html.js';
+/**
+ * @typedef {import("@11ty/eleventy/src/UserConfig")} EleventyConfig
+ * @typedef {ReturnType<import("@11ty/eleventy/src/defaultConfig")>} EleventyReturnValue
+ *
+ * @type {(eleventyConfig: EleventyConfig) => EleventyReturnValue}
+ */
 
-// dev mode build
-const DEV = process.env.NODE_ENV === 'DEV';
-// where the JS files are outputted
-const jsDir = DEV ? 'lib' : 'build';
-// where to output 11ty output
-const outputFolder = DEV ? '_dev' : '_prod';
+import markdownit from "markdown-it";
+import markdownitcontainer from "markdown-it-container";
+import markdownitattrs from "markdown-it-attrs";
+import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
+function configureMarkdownIt() {
+  return markdownit({ html: true })
+    .use(markdownitattrs)
+    .use(markdownitcontainer, "dynamic", {
+      validate: function () {
+        return true;
+      },
+      render: function (tokens, idx) {
+        const token = tokens[idx];
+        if (token.nesting === 1) {
+          return '<div class="' + token.info.trim() + '">';
+        } else {
+          return "</div>";
+        }
+      },
+    });
+}
 
 export default function (eleventyConfig) {
-  eleventyConfig
-    .addPassthroughCopy('site/images')
-    .addPassthroughCopy('site/favicon.ico')
-    .addPassthroughCopy('site/PDF Pages')
-    .addPassthroughCopy('site/Walk of the Month')
-    .addPassthroughCopy('site/videos')
-    .addPassthroughCopy('site/css/*.css')
-    .addPassthroughCopy('logs/*')
-    .addPassthroughCopy({ [`${jsDir}/`]: 'js/' });
+  eleventyConfig.addPassthroughCopy({ "src/scripts/": "/scripts" });
 
-  // add the lit-ssr plugin
-  eleventyConfig.addPlugin(litPlugin, {
-    mode: 'worker',
-    componentModules: [`./${jsDir}/ssr.js`],
+  // Copy the contents of the `public` folder to the output folder
+  // For example, `./public/css/` ends up in `_site/css/`
+  eleventyConfig.addPassthroughCopy({
+    "./public/": "/",
   });
+
+  // Watch CSS files
+  eleventyConfig.addWatchTarget("css/**/*.css");
+
+  eleventyConfig.setLibrary("md", configureMarkdownIt());
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // must be lasdt plugin
-  // eleventyConfig.addPlugin(UpgradeHelper);
+  // Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // Output formats for each image.
+    formats: ["avif", "webp", "auto"],
 
-  // Add this for 11ty's --watch flag
-  eleventyConfig.addWatchTarget(`./${jsDir}/**/*.js`);
+    // widths: ["auto"],
 
-  // install shortcodes
-  inlineCSS(eleventyConfig, DEV);
-  inlineJS(eleventyConfig, DEV, { jsDir });
+    failOnError: false,
+    htmlOptions: {
+      imgAttributes: {
+        // e.g. <img loading decoding> assigned on the HTML tag will override these values.
+        loading: "lazy",
+        decoding: "async",
+      },
+    },
 
-  eleventyConfig.addLayoutAlias('default', 'layouts/base.html');
-
-  // install transforms
-  minifyHTML(eleventyConfig, DEV);
-
-  eleventyConfig.addGlobalData('permalink', () => {
-    return data => `${data.page.filePathStem}.${data.page.outputFileExtension}`;
+    sharpOptions: {
+      animated: true,
+    },
   });
 
   return {
-    templateFormats: ['md', 'html', 'njk'],
-    htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk',
     dir: {
-      input: 'site',
-      output: outputFolder,
+      input: "src",
+      includes: "../_includes",
+      data: "../_data", // default: "_data" (`input` relative)
+      layouts: "../_includes/layouts",
+      output: "_site",
     },
+    templateFormats: ["md", "njk", "liquid", "html"],
+    htmlTemplateEngine: "liquid",
+    markdownTemplateEngine: "liquid",
   };
 }

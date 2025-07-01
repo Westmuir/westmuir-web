@@ -1,0 +1,100 @@
+/* Layout Integrity */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .btn {
+    display: inline-block;
+    width: auto;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  header,
+  nav,
+  .nav-toggle {
+    width: 100%;
+  }
+}
+/* Layout Utility Classes */
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}

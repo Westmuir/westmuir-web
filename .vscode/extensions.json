@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "ronnidc.nunjucks",
+    "stylelint.vscode-stylelint",
+    "sissel.shopify-liquid"
+  ]
+}

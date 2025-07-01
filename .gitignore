@@ -1,9 +1,2 @@
-_dev
-_prod
-node_modules
-.wireit
-/lib
-/build
-*.tsbuildinfo
-.DS_Store
-.wireit/
+node_modules/
+_site/
