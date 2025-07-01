@@ -18,6 +18,8 @@
   --btn-bg: #1a73e8;
   --btn-color: #ffffff;
 
+  --border-color: #333;
+
   --elevation: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -27,7 +29,7 @@ body.dark {
   --text-color: #ffffff;
   --hover-color: #272832;
 
-  --background-color: #ffffff;
+  --background-color: #11121a;
   --link-color: #82b1ff;
 
   --header-background-color: #bb86fc;
@@ -41,6 +43,8 @@ body.dark {
 
   --btn-bg: #2962ff;
   --btn-color: #ffffff;
+
+  --border-color: #777;
 
   --elevation: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
