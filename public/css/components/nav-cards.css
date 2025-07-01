@@ -14,9 +14,9 @@ ul.section-cards li {
   display: inline-block;
   margin: 0 0 0.5rem 0;
   padding: 0.5rem;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-top: 1px solid var(--border-color, #ddd);
+  border-left: 1px solid var(--border-color, #ddd);
+  border-right: 1px solid var(--border-color, #ddd);
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   height: 100%;
@@ -28,7 +28,7 @@ ul.section-cards li {
 .section-card {
   width: 230px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: var(--background-color, #fff);
 }
 
 .section-card:hover {
