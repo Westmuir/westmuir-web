@@ -13,52 +13,58 @@ hero: false
 
 {% block content %}
 
-<main class="main">
+  <main class="main">
 
-  <h2 class="main-heading">Feature content</h2>
+    <h2 class="main-heading">Feature content</h2>
 
-  {% render "partials/nav-cards", cards: cards %}
+    {% render "partials/nav-cards"
+      , cards: cards %}
 
-  {% if hero %}
+    {% if hero %}
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Westmuir</h1> 
-      <p>Discover the charm of our village, from events to local news.</p>
-      <a href="/about/" class="btn">Learn More</a>
-    </div>
-  </section>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Welcome to Westmuir</h1>
+          <p>Discover the charm of our village, from events to local news.</p>
+          <a href="/about/" class="btn">Learn More</a>
+        </div>
+      </section>
 
-  {% endif %}
+    {% endif %}
 
-  <h2 class="main-heading">Latest</h2>
+    <h2 class="main-heading">Latest</h2>
 
-  <article class="item-list section-card-page ">
-    <p class="style60">New Craft Group Starting Monday 4 September 2023</p>
-    <div class="home-article-image">
+    <article class="item-list section-card-page ">
+      <p class="style60">New Craft Group Starting Monday 4 September 2023</p>
+      <div class="home-article-image">
 
-      <img src="/images/crafts-poster.jpg" alt="Crafts" width="300">
+        <img
+          src="/images/crafts-poster.jpg"
+          alt="Crafts"
+          width="300">
 
-    </div>
-    <p class="style62">
-      This is a new group startup by Lillian McDownie and Christine Cobb who are setting up a
+      </div>
+      <p class="style62">
+        This is a new group startup by Lillian McDownie and Christine Cobb who are setting up a    
       Creative craft club in the village hall on Monday afternoons.
-    </p>
-  </article>
+      </p>
+    </article>
 
-  <article class="item-list section-card-page ">
-    <h2> Men's Speakeasy</h2>
+    <article class="item-list section-card-page multi-column">
+      <div class="light">
 
-    Calling all males living in Westmuir
-    <div class="home-article-image">
-      <img src="/images/speakeasy-poster.svg" alt="Calling all males living in Westmuir">
-    </div>
+        <div class="home-article-image">
+          <img src="/images/speakeasy-poster.svg" alt="Calling all males living in Westmuir">
+        </div>
+      </div>
+      <div></div>
+    </article>
 
-  </article>
 
-
-  {% if cta %} {% render "partials/cta" %} {% endif %} {%
-  endblock %}
+    {% if cta %}
+      {% render "partials/cta" %}
+    {% endif %}
+  {% endblock %}
 
 
 </main>

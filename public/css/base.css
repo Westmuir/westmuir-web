@@ -13,6 +13,14 @@ body {
   border-bottom: 1px solid #313544;
 }
 
+.light {
+  background-color: #fff;
+}
+.multi-column{
+  display: grid;
+  grid-template-columns: minmax(400px, auto) 1fr;
+}
+
 img {
   max-width: 100%;
 }
