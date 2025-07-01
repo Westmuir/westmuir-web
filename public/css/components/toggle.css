@@ -8,7 +8,20 @@
 }
 
 .theme-toggle-btn {
-  color: #cb57d1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font: inherit;
+  color: var(--toggle-text-color);
+
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn {
   background: none;
   border: none;
   cursor: pointer;

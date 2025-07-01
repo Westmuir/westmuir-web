@@ -7,23 +7,19 @@ hero: false
 ---
 
 <div class="center">
-  <img src="/images/westmuir-cortachy-header.jpg" alt="Welcome to Westmuir">
-
+  <img src="/images/westmuir-cortachy-header.jpg" alt="Welcome to Westmuir" />
 </div>
 
 {% block content %}
 
 <main class="main">
-
   <h2 class="main-heading">Feature content</h2>
 
-  {% render "partials/nav-cards", cards: cards %}
-
-  {% if hero %}
+  {% render "partials/nav-cards" , cards: cards %} {% if hero %}
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Welcome to Westmuir</h1> 
+      <h1>Welcome to Westmuir</h1>
       <p>Discover the charm of our village, from events to local news.</p>
       <a href="/about/" class="btn">Learn More</a>
     </div>
@@ -33,12 +29,10 @@ hero: false
 
   <h2 class="main-heading">Latest</h2>
 
-  <article class="item-list section-card-page ">
+  <article class="item-list section-card-page">
     <p class="style60">New Craft Group Starting Monday 4 September 2023</p>
     <div class="home-article-image">
-
-      <img src="/images/crafts-poster.jpg" alt="Crafts" width="300">
-
+      <img src="/images/crafts-poster.jpg" alt="Crafts" width="300" />
     </div>
     <p class="style62">
       This is a new group startup by Lillian McDownie and Christine Cobb who are setting up a
@@ -46,19 +40,14 @@ hero: false
     </p>
   </article>
 
-  <article class="item-list section-card-page ">
-    <h2> Men's Speakeasy</h2>
-
-    Calling all males living in Westmuir
-    <div class="home-article-image">
-      <img src="/images/speakeasy-poster.svg" alt="Calling all males living in Westmuir">
+  <article class="item-list section-card-page multi-column">
+    <div class="light">
+      <div class="home-article-image">
+        <img src="/images/speakeasy-poster.svg" alt="Calling all males living in Westmuir" />
+      </div>
     </div>
-
+    <div></div>
   </article>
 
-
-  {% if cta %} {% render "partials/cta" %} {% endif %} {%
-  endblock %}
-
-
+  {% if cta %} {% render "partials/cta" %} {% endif %} {% endblock %}
 </main>

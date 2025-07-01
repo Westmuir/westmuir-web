@@ -1,14 +1,15 @@
-
 .cta {
   padding: 2rem;
   margin: 2rem auto;
   text-align: center;
-  background-color: var(--header-bg);
-  color: var(--btn-color);
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
   border-radius: 0.5rem;
   max-width: 800px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .cta h2 {

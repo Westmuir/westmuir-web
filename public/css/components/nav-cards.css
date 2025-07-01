@@ -5,7 +5,7 @@
   justify-content: flex-start;
 }
 ul.section-cards {
-  list-style-type: "";
+  list-style-type: '';
   margin: 5px 0 0 0;
   padding: 0;
 }
@@ -19,6 +19,7 @@ ul.section-cards li {
   border-right: 1px solid #ddd;
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 
 .section-card-page {
@@ -62,7 +63,9 @@ ul.section-cards li {
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
   position: relative;
   overflow: hidden;
   color: var(--text);
@@ -93,24 +96,4 @@ ul.section-cards li {
 .description-content {
   display: none;
   font-size: 0.9rem;
-}
-
-.toggle-box {
-  display: none;
-}
-
-.toggle-box:checked ~ .description-content {
-  display: block;
-}
-
-.toggle-label::before {
-  content: "Read more";
-  color: var(--primary);
-  font-weight: 500;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.toggle-box:checked + .description-content + .toggle-label::before {
-  content: "Read less";
 }
