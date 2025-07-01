@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
 
-<head>
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" as="style"
-    onload="this.onload=null;this.rel='stylesheet'" />
-  <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style"
-    onload="this.onload=null;this.rel='stylesheet'" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <noscript>
+  <head>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    </noscript>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto"
+        , sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+      }
+
+      header.navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--header-bg);
+        padding: 1rem;
+        box-shadow: var(--elevation-2);
+      }
+
+      .hero {
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .btn {
+        background-color: var(--btn-bg);
+        color: var(--btn-color);
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+    </style>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title | default: "Westmuir Village" }}</title>
+    <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  </noscript>
+  </head>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Roboto", sans-serif;
-      background-color: var(--color-bg);
-      color: var(--color-text);
-    }
+  <body>
+    {% include "partials/header" %}
 
-    header.navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: var(--header-bg);
-      padding: 1rem;
-      box-shadow: var(--elevation-2);
-    }
+    <main
+      id="main"
+      class="container"
+      tabindex="-1">
+      {% block content %}
+        <article class="page-content">
+          {% comment %} <h1>{{ title }}</h1> {% endcomment %}
+          {{ content }}
+        </article>
+      {% endblock %}
+    </main>
 
-    .hero {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
+    {% include "partials/footer" %}
 
-    .btn {
-      background-color: var(--btn-bg);
-      color: var(--btn-color);
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-  </style>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ title | default: "Westmuir Village" }}</title>
-  <link rel="stylesheet" href="/css/main.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-</head>
-
-<body>
-  {% include "partials/header" %}
-
-  <main id="main" class="container" tabindex="-1">
-    {% block content %}<article class="page-content">
-      <h1>{{ title }}</h1>
-      {{ content  }}
-    </article>{% endblock %}
-  </main>
-
-  {% include "partials/footer" %}
-
-  <script type="module" src="/scripts/theme-toggle.js"></script>
-  <script type="module" src="/scripts/nav-toggle.js"></script>
-</body>
+    <script type="module" src="/scripts/theme-toggle.js"></script>
+    <script type="module" src="/scripts/nav-toggle.js"></script>
+  </body>
 
 </html>
