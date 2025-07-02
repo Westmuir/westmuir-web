@@ -5,8 +5,9 @@
  * @type {(eleventyConfig: EleventyConfig) => EleventyReturnValue}
  */
 
+import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from '@11ty/eleventy';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
-import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
+import pluginNavigation from '@11ty/eleventy-navigation';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
@@ -60,7 +61,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.setLibrary('md', configureMarkdownIt());
 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+  eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
   // Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
