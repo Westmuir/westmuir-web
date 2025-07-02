@@ -1,5 +1,10 @@
 {% assign navPages = collections.all | eleventyNavigation %}
 
+<style>
+  {% include "css/components/nav-menu.css" %}
+  {% include "css/components/toggle.css" %}
+</style>
+
 <button
   id="open-nav-button"
   aria-label="open sidebar"
@@ -37,26 +42,26 @@
         aria-current="page"
         {% endif %}
         href="/">Home</a>
-    </li>
-
-    {% for item in navPages %}
-      <li>
-        <a
-          href="{{ item.url }}"
-          {% if page.url == item.url %}
-          class="active-link"
-          aria-current="page"
-          {% endif %}>
-          {% if item.icon %}
-            <span class="material-icons">{{ item.icon }}</span>
-          {% endif %}
-          {{ item.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-
-
-</nav>
-
-<div id="overlay" aria-hidden="true"></div>
+                    </li>
+        
+                    {% for item in navPages %}
+                      <li>
+                        <a
+                          href="{{ item.url }}"
+                          {% if page.url == item.url %}
+                          class="active-link"
+                          aria-current="page"
+                          {% endif %}>
+                          {% if item.icon %}
+                            <span class="material-icons">{{ item.icon }}</span>
+                          {% endif %}
+                          {{ item.title }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+        
+        
+                </nav>
+        
+                <div id="overlay" aria-hidden="true"></div>

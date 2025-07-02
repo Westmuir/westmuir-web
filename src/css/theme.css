@@ -1,0 +1,79 @@
+:root {
+  --primary-color: #6200ee;
+  --secondary-color: #03dac6;
+  --text-color: #212121;
+  --background-color: #ffffff;
+  --link-color: #1a73e8;
+  --hover-color: #9699bb;
+
+  --header-background-color: #6200ee;
+  --header-text-color: #fff;
+
+  --footer-background-color: #f1f1f1;
+  --footer-text-color: #424242;
+  --footer-link-color: #1b70df;
+
+  --toggle-text-color: #d073d4;
+
+  --btn-bg: #1a73e8;
+  --btn-color: #ffffff;
+
+  --border-color: #333;
+
+  --elevation: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark {
+  --primary-color: #bb86fc;
+  --secondary-color: #03dac6;
+  --text-color: #ffffff;
+  --hover-color: #272832;
+
+  --background-color: #11121a;
+  --link-color: #82b1ff;
+
+  --header-background-color: #bb86fc;
+  --header-text-color: #fff;
+
+  --footer-background-color: #1a1a1a;
+  --footer-text-color: #bdbdbd;
+  --footer-link-color: #82b1ff;
+
+  --toggle-text-color: #936fcc;
+
+  --btn-bg: #2962ff;
+  --btn-color: #ffffff;
+
+  --border-color: #777;
+
+  --elevation: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-size: 28px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.toggle-fade {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+@media (max-width: 600px) {
+  .theme-toggle span#darkmode-label {
+    display: none;
+  }
+}

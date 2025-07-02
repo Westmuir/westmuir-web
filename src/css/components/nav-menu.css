@@ -1,0 +1,131 @@
+.nav {
+  position: relative;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  border-bottom: 1px solid var(--hover-color);
+  flex: 1;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .home-li {
+  margin-right: auto;
+}
+
+.navbar li {
+  display: flex;
+}
+
+.navbar a {
+  display: flex;
+  text-decoration: none;
+  color: var(--header-text-color);
+  padding: 1em 2em;
+  transition: background-color 150ms ease;
+}
+.navbar a:hover {
+  background-color: var(--hover-color);
+}
+
+.navbar a.active-link {
+  border-bottom: 2px solid var(--header-text-color);
+}
+
+.navbar a.accent-link {
+  background-color: var(--accent-color);
+}
+
+#open-nav-button {
+  display: none;
+  background: none;
+  border: none;
+  padding: 1em;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#close-nav-button {
+  display: none;
+  background: none;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+#overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: none;
+}
+
+.site-header {
+  background: var(--primary-color);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 700px) {
+  #open-nav-button,
+  #close-nav-button {
+    display: block;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: min(15em, 100%);
+    z-index: 10;
+    border-left: 1px solid var(--hover-color);
+    transition: right 300ms ease-in-out;
+  }
+  .navbar.show {
+    right: 0;
+  }
+  .navbar.show ~ #overlay {
+    display: block;
+  }
+  .navbar ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar a {
+    width: 100%;
+    padding-left: 2.5em;
+  }
+  .navbar a.active-link {
+    border-bottom: none;
+  }
+  .navbar .home-li {
+    margin-right: unset;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .cta {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+  }
+}

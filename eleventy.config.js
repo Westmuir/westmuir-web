@@ -35,11 +35,20 @@ export default function (eleventyConfig) {
   // Copy the contents of the `public` folder to the output folder
   // For example, `./public/css/` ends up in `_site/css/`
   eleventyConfig.addPassthroughCopy({
-    './public/': '/',
+    './public/pdf': '/pdf',
   });
 
   // Watch CSS files
   eleventyConfig.addWatchTarget('css/**/*.css');
+
+  // Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
+  // Bundle <style> content and adds a {% css %} paired shortcode
+  eleventyConfig.addBundle('css', {
+    toFileDirectory: 'css',
+    // Add all <style> content to `css` bundle (use <style eleventy:ignore> to opt-out)
+    // Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
+    bundleHtmlContentFromSelector: 'style',
+  });
 
   eleventyConfig.setLibrary('md', configureMarkdownIt());
 

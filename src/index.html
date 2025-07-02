@@ -49,5 +49,9 @@ hero: false
     <div></div>
   </article>
 
-  {% if cta %} {% render "partials/cta" %} {% endif %} {% endblock %}
+  {% if cta %}
+  <style>
+    {% include "css/components/cta.css" %}
+  </style>
+  {% render "partials/cta" %} {% endif %} {% endblock %}
 </main>
