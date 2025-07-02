@@ -50,7 +50,10 @@
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
-
+    <script type="module">
+      {% include "scripts/theme-toggle.js" %}
+       {% include "scripts/nav-toggle.js" %}
+    </script>
   </head>
 
   <body>
@@ -72,7 +75,7 @@
 
     {% include "partials/footer" %}
 
-    <script type="module" src="/scripts/theme-toggle.js"></script>
-    <script type="module" src="/scripts/nav-toggle.js"></script>
+
+    <script type="module" src='{% getBundleFileUrl "js" %}'></script>
   </body>
 </html>

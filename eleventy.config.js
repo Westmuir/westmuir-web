@@ -30,7 +30,7 @@ function configureMarkdownIt() {
 }
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ 'src/scripts/': '/scripts' });
+  // eleventyConfig.addPassthroughCopy({ 'src/scripts/': '/scripts' });
 
   // Copy the contents of the `public` folder to the output folder
   // For example, `./public/css/` ends up in `_site/css/`
@@ -48,6 +48,14 @@ export default function (eleventyConfig) {
     // Add all <style> content to `css` bundle (use <style eleventy:ignore> to opt-out)
     // Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
     bundleHtmlContentFromSelector: 'style',
+  });
+
+  // Bundle <script> content and adds a {% js %} paired shortcode
+  eleventyConfig.addBundle('js', {
+    toFileDirectory: 'js',
+    // Add all <script> content to the `js` bundle (use <script eleventy:ignore> to opt-out)
+    // Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
+    bundleHtmlContentFromSelector: 'script',
   });
 
   eleventyConfig.setLibrary('md', configureMarkdownIt());
