@@ -5,16 +5,16 @@
  * @type {(eleventyConfig: EleventyConfig) => EleventyReturnValue}
  */
 
-import markdownit from "markdown-it";
-import markdownitcontainer from "markdown-it-container";
-import markdownitattrs from "markdown-it-attrs";
-import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
+import markdownit from 'markdown-it';
+import markdownitattrs from 'markdown-it-attrs';
+import markdownitcontainer from 'markdown-it-container';
 
 function configureMarkdownIt() {
   return markdownit({ html: true })
     .use(markdownitattrs)
-    .use(markdownitcontainer, "dynamic", {
+    .use(markdownitcontainer, 'dynamic', {
       validate: function () {
         return true;
       },
@@ -23,32 +23,32 @@ function configureMarkdownIt() {
         if (token.nesting === 1) {
           return '<div class="' + token.info.trim() + '">';
         } else {
-          return "</div>";
+          return '</div>';
         }
       },
     });
 }
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "src/scripts/": "/scripts" });
+  eleventyConfig.addPassthroughCopy({ 'src/scripts/': '/scripts' });
 
   // Copy the contents of the `public` folder to the output folder
   // For example, `./public/css/` ends up in `_site/css/`
   eleventyConfig.addPassthroughCopy({
-    "./public/": "/",
+    './public/': '/',
   });
 
   // Watch CSS files
-  eleventyConfig.addWatchTarget("css/**/*.css");
+  eleventyConfig.addWatchTarget('css/**/*.css');
 
-  eleventyConfig.setLibrary("md", configureMarkdownIt());
+  eleventyConfig.setLibrary('md', configureMarkdownIt());
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     // Output formats for each image.
-    formats: ["avif", "webp", "auto"],
+    formats: ['avif', 'webp', 'auto'],
 
     // widths: ["auto"],
 
@@ -56,8 +56,8 @@ export default function (eleventyConfig) {
     htmlOptions: {
       imgAttributes: {
         // e.g. <img loading decoding> assigned on the HTML tag will override these values.
-        loading: "lazy",
-        decoding: "async",
+        loading: 'lazy',
+        decoding: 'async',
       },
     },
 
@@ -68,14 +68,13 @@ export default function (eleventyConfig) {
 
   return {
     dir: {
-      input: "src",
-      includes: "../_includes",
-      data: "../_data", // default: "_data" (`input` relative)
-      layouts: "../_includes/layouts",
-      output: "_site",
+      input: 'src',
+      data: '../_data', // default: "_data" (`input` relative)
+      layouts: '_includes/layouts',
+      output: '_site',
     },
-    templateFormats: ["md", "njk", "liquid", "html"],
-    htmlTemplateEngine: "liquid",
-    markdownTemplateEngine: "liquid",
+    templateFormats: ['md', 'njk', 'liquid', 'html'],
+    htmlTemplateEngine: 'liquid',
+    markdownTemplateEngine: 'liquid',
   };
 }
