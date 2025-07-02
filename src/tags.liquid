@@ -1,0 +1,14 @@
+---
+  layout: base
+---
+<h1>Tags</h1>
+
+<ul>
+  {% assign filteredCollections = collections | getKeys | filterTagList | sortAlphabetically %}
+  {% for tag in filteredCollections %}
+    {% capture tagUrl %}/tags/{{ tag | slugify }}/{% endcapture %}
+    <li>
+      <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+    </li>
+  {% endfor %}
+</ul>

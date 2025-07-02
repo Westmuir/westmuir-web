@@ -8,9 +8,11 @@
 import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from '@11ty/eleventy';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
+import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
+import pluginFilters from './_config/filters.js';
 
 function configureMarkdownIt() {
   return markdownit({ html: true })
@@ -61,6 +63,9 @@ export default function (eleventyConfig) {
 
   eleventyConfig.setLibrary('md', configureMarkdownIt());
 
+  eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+    preAttributes: { tabindex: 0 },
+  });
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
@@ -85,6 +90,9 @@ export default function (eleventyConfig) {
       animated: true,
     },
   });
+
+  // Filters
+  eleventyConfig.addPlugin(pluginFilters);
 
   return {
     dir: {
