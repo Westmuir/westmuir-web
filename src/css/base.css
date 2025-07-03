@@ -31,9 +31,9 @@ img {
   max-width: 100%;
 }
 
-img[width] {
+/* img[width] {
   width: auto;
-}
+} */
 
 img[width][height] {
   height: auto;
@@ -127,4 +127,93 @@ img[width][height] {
 }
 .post-metadata time {
   margin-right: 1em;
+}
+
+.craft-title {
+  font-family: 'Comic Neue', 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.figure,
+.craft-info {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.lg-fl {
+  float: left;
+}
+
+.lg-fr {
+  float: right;
+}
+
+.clear-both {
+  clear: both;
+}
+.ml-12 {
+  margin-left: 3rem;
+}
+.mr-12 {
+  margin-right: 3rem;
+}
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.craft-club {
+  margin-top: 2rem;
+  font-size: larger;
+}
+.craft-club img {
+  border: none;
+}
+
+.craft-info {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+
+  border-bottom: 1px dashed #313544;
+}
+
+.craft-info .item-text {
+  font-weight: 700;
+}
+.figure,
+.craft-info .bg-yellow-100 {
+  --bg-opacity: 1;
+  background-color: ivory;
+  background-color: rgba(255, 255, 240, var(--bg-opacity));
+}
+
+.figure,
+.craft-info .sm-p-3 {
+  padding: 0.75rem;
+}
+
+.figure,
+.craft-info .shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.figure,
+.craft-info .rotate-l {
+  transform: rotate(-3deg);
+}
+
+.figure,
+.craft-info .rotate-r {
+  transform: rotate(3deg);
+}
+
+.scale-2 {
+  transform: scale(2);
 }
