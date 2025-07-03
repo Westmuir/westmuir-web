@@ -12,6 +12,19 @@
     color 0.3s ease;
 }
 
+.cta-l {
+  margin-left: inherit;
+}
+
+.cta-sm {
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 500px;
+}
+.cta.cta-post {
+  background-color: var(--cta-background-color, #222);
+}
+
 .cta h2 {
   font-size: 2rem;
   margin-bottom: 1rem;

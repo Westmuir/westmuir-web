@@ -149,6 +149,9 @@ img[width][height] {
 .d-ib {
   display: inline-block;
 }
+.mb-2 {
+  margin-bottom: 1rem;
+}
 .mt-3 {
   margin-top: 3rem;
 }
@@ -241,4 +244,13 @@ img[width][height] {
   .lg-fr {
     float: right;
   }
+}
+
+.post-list {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.post-list li {
+  list-style-type: disc;
 }

@@ -29,27 +29,9 @@ hero: false
 
   <h2 class="main-heading">Latest</h2>
 
-  <article class="item-list section-card-page">
-    <p class="style60">New Craft Group Starting Monday 4 September 2023</p>
-    <div class="home-article-image">
-      <img src="/images/crafts-poster.jpg" alt="Crafts" width="300" />
-    </div>
-    <p class="style62">
-      This is a new group startup by Lillian McDownie and Christine Cobb who are setting up a
-      Creative craft club in the village hall on Monday afternoons.
-    </p>
-  </article>
-
-  <article class="item-list section-card-page multi-column">
-    <div class="light">
-      <div class="home-article-image">
-        <img src="/images/speakeasy-poster.svg" alt="Calling all males living in Westmuir" />
-      </div>
-    </div>
-    <div></div>
-  </article>
-
-  {% if cta %}
+  {% assign postslist = collections.posts | head: -3 %} {% assign postsCount = collections.posts |
+  size %} {% assign latestPostsCount = postsCount | min: 3 %} {% include
+  "partials/postslistarticles" %} {% if cta %}
   <style>
     {% include "css/components/cta.css" %}
   </style>

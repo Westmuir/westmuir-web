@@ -6,6 +6,7 @@
   --link-color: #1a73e8;
   --hover-color: #9699bb;
 
+  --cta-background-color: #6f3f70;
   --header-background-color: #6200ee;
   --header-text-color: #fff;
 
@@ -32,6 +33,7 @@ body.dark {
   --background-color: #11121a;
   --link-color: #82b1ff;
 
+  --cta-background-color: #d073d4;
   --header-background-color: #bb86fc;
   --header-text-color: #fff;
 
