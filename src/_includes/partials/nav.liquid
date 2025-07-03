@@ -1,7 +1,15 @@
 {% assign navPages = collections.all | eleventyNavigation %}
 
-  <button id="open-nav-button" aria-label="Toggle Menu">
-  {% comment %} <span class="material-icons">menu</span> {% endcomment %}
+<style>
+  {% include "css/components/nav-menu.css" %}
+  {% include "css/components/toggle.css" %}
+</style>
+
+<button
+  id="open-nav-button"
+  aria-label="open sidebar"
+  aria-expanded="false"
+  aria-controls="navbar">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height="40px"
@@ -29,24 +37,31 @@
     </li>
     <li class="home-li">
       <a
-        class="{% if page.url == '/' %} active-link {% endif %}"
+        {% if page.url == '/' %}
+        class="active-link"
         aria-current="page"
+        {% endif %}
         href="/">Home</a>
-    </li>
-
-    {% for item in navPages %}
-      <li>
-        <a href="{{ item.url }}" class="{% if page.url == item.url %} active-link {% endif %}">
-          {% if item.icon %}
-            <span class="material-icons">{{ item.icon }}</span>
-          {% endif %}
-          {{ item.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-
-
-</nav>
-
-<div id="overlay" aria-hidden="true"></div>
+                    </li>
+        
+                    {% for item in navPages %}
+                      <li>
+                        <a
+                          href="{{ item.url }}"
+                          {% if page.url == item.url %}
+                          class="active-link"
+                          aria-current="page"
+                          {% endif %}>
+                          {% if item.icon %}
+                            <span class="material-icons">{{ item.icon }}</span>
+                          {% endif %}
+                          {{ item.title }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+        
+        
+                </nav>
+        
+                <div id="overlay" aria-hidden="true"></div>

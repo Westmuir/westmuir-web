@@ -1,0 +1,9 @@
+<section class="cta">
+  <a href="/volunteer/">
+    <h2>{{ heading | default: "Join the Westmuir Community" }}</h2>
+    <p>{{ description | default: "Get involved with events, news, and village life." }}</p>
+    {% if button_url and button_label %}
+      <a href="{{ button_url }}" class="btn">{{ button_label }}</a>
+    {% endif %}
+  </a>
+</section>

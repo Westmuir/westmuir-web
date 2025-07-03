@@ -1,3 +1,4 @@
+@import url('components/reset.css');
 @import url('components/layout.css');
 @import url('components/toggle.css');
 @import url('components/nav-menu.css');
@@ -6,5 +7,4 @@
 @import url('components/footer.css');
 @import url('components/header.css');
 @import url('theme.css');
-
 @import url('components/cta.css');

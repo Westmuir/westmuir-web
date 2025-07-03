@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function updateNavbar(e) {
   const isMobile = e.matches;
-  console.log(isMobile);
   if (isMobile) {
     navbar.setAttribute('inert', '');
   } else {

@@ -1,0 +1,23 @@
+<ol
+  reversed
+  class="postlist"
+  style="--postlist-index: {{  postslist.length }}">
+  {%- assign reverseList = postslist | reverse -%}
+  {%- for post in reverseList %}
+
+    <article class="item-list section-card-page {{ post.data.cardType | default: "na" }}">
+      <a href="{{ post.url }}">
+        {% if post.data.title %}
+          {{ post.data.title }}{% else %}
+          <code>{{ post.url }}</code>
+        {% endif %}
+      </a>
+      <div>
+        <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate: "LLLL yyyy" }}</time>
+      </div>
+      {{ post.content }}
+    </article>
+
+
+  {%- endfor %}
+</ol>

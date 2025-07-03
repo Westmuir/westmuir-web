@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 2rem;
+  text-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+  border-bottom: 1px solid #313544;
+}
+
+.light {
+  background-color: #fff;
+}
+.multi-column {
+  display: grid;
+  grid-template-columns: minmax(400px, auto) 1fr;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* img[width] {
+  width: auto;
+} */
+
+img[width][height] {
+  height: auto;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.item-list {
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+}
+.home-main {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  columns: 20px;
+  max-width: 1024px;
+}
+
+.home-article-image {
+  max-width: 400px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.home-aside {
+  background-color: #fff;
+  text-align: center;
+  vertical-align: top;
+  min-width: 20em;
+}
+.home-aside blockquote {
+  margin: 1em;
+}
+
+.home-aside-image {
+  max-width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.home-content {
+  vertical-align: top;
+}
+.home-item {
+  text-align: center;
+}
+
+.home-item .title {
+  font-size: 22px;
+  color: #339933;
+}
+
+.poster-item {
+  max-width: 500px;
+}
+
+.poster-item-wide {
+  max-width: 768px;
+}
+
+/* Tags */
+.post-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-style: italic;
+}
+.postlist-item > .post-tag {
+  align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.post-metadata time {
+  margin-right: 1em;
+}
+
+.craft-title {
+  font-family: 'Comic Neue', 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+.figure,
+.craft-info {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+.clear-both {
+  clear: both;
+}
+.d-ib {
+  display: inline-block;
+}
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.ml-12 {
+  margin-left: 3rem;
+}
+.mr-12 {
+  margin-right: 3rem;
+}
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.craft-club {
+  margin-top: 2rem;
+  font-size: larger;
+}
+
+.craft-club-wrapper {
+  display: flex;
+}
+
+.craft-club-wrapper figure {
+  margin-top: -1rem;
+  margin-left: auto;
+}
+.craft-club-info {
+}
+.craft-club img {
+  border: none;
+}
+
+.craft-info {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+
+  border-bottom: 1px dashed #313544;
+}
+
+.ci-strong {
+  font-family: 'Comic Neue', 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.craft-info .item-text {
+  font-weight: 700;
+}
+.figure .bg-yellow-100,
+.craft-info .bg-yellow-100 {
+  --bg-opacity: 1;
+  background-color: ivory;
+  background-color: rgba(255, 255, 240, var(--bg-opacity));
+}
+
+.figure .sm-p-3,
+.craft-info .sm-p-3 {
+  padding: 0.75rem;
+}
+
+.figure .shadow-lg,
+.craft-info .shadow-lg {
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.figure .rotate-l,
+.craft-info .rotate-l {
+  transform: rotate(-3deg);
+}
+
+.figure .rotate-r,
+.craft-info .rotate-r {
+  transform: rotate(3deg);
+}
+
+.scale-2 {
+  transform: scale(2);
+}
+
+@media (min-width: 700px) {
+  .lg-fl {
+    float: left;
+  }
+
+  .lg-fr {
+    float: right;
+  }
+}
+
+.post-list {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.post-list li {
+  list-style-type: disc;
+}
+
+.volunteer-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  color: #222;
+  margin-top: 2rem;
+}
+
+.volunteer-columns li {
+  margin-left: 2rem;
+}
+
+.volunteer-columns p {
+  font-size: 1.1em;
+  font-weight: 600;
+  min-height: 3em;
+  text-align: center;
+}
+
+.volunteer-columns div {
+  padding: 1rem;
+  border-radius: 7px;
+}
+
+.volunteer-columns div:nth-child(n + 1) {
+  background-color: #ffc4ff;
+}
+
+.volunteer-columns div:nth-child(n + 2) {
+  background-color: #9bffb5;
+}
+
+.volunteer-columns div:nth-child(n + 3) {
+  background-color: #ffffb3;
+}
+
+.volunteer-footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 5px;
+
+  color: #222;
+}
+.volunteer-footer div {
+  background-color: rgb(234, 234, 255);
+  min-height: 5rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.ai-c {
+  align-self: center;
+}
+
+.lh-3 {
+  line-height: 3em;
+}

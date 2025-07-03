@@ -13,7 +13,7 @@ hero: false
 {% block content %}
 
 <main class="main">
-  <h2 class="main-heading">Feature content</h2>
+  <h2 class="main-heading">Quick links</h2>
 
   {% render "partials/nav-cards" , cards: cards %} {% if hero %}
 
@@ -29,25 +29,14 @@ hero: false
 
   <h2 class="main-heading">Latest</h2>
 
-  <article class="item-list section-card-page">
-    <p class="style60">New Craft Group Starting Monday 4 September 2023</p>
-    <div class="home-article-image">
-      <img src="/images/crafts-poster.jpg" alt="Crafts" width="300" />
-    </div>
-    <p class="style62">
-      This is a new group startup by Lillian McDownie and Christine Cobb who are setting up a
-      Creative craft club in the village hall on Monday afternoons.
-    </p>
-  </article>
-
-  <article class="item-list section-card-page multi-column">
-    <div class="light">
-      <div class="home-article-image">
-        <img src="/images/speakeasy-poster.svg" alt="Calling all males living in Westmuir" />
-      </div>
-    </div>
-    <div></div>
-  </article>
-
-  {% if cta %} {% render "partials/cta" %} {% endif %} {% endblock %}
+  {% assign featuredPosts = collections.posts | categoryFilter: "featured" %} {% assign postslist =
+  featuredPosts | head: -2 %} {% assign postsCount = collections.posts | size %} {% assign
+  latestPostsCount = postsCount | min: 3 %} {% render "partials/postslistarticles" postslist:
+  postslist %} {% assign remainderpostslist = featuredPosts | slice: -2 %} {% render
+  "partials/postslistcards" postslist: remainderpostslist %} {% if cta %}
+  <style>
+    {% include "css/components/cta.css" %}
+  </style>
+  {% render "partials/cta" button_label: "Read more", button_url:"/volunteer/" %} {% endif %} {%
+  endblock %}
 </main>

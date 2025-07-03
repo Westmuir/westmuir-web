@@ -1,0 +1,14 @@
+{%- assign reverseList = postslist | reverse -%}
+<ul class="section-cards">
+  {%- for post in reverseList %}
+    <li class="section-card section-card-page">
+      <a href="{{ post.url }}">
+        <div class="section-cards-title">{{ post.data.title }}</div>
+        {% if post.data.image %}
+          <img src="{{post.data.image}}" alt="post image" />
+        {% endif %}
+        <p>{{ post.data.description }}</p>
+      </a>
+    </li>
+  {%- endfor %}
+</ul>
