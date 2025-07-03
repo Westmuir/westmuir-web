@@ -143,16 +143,14 @@ img[width][height] {
   max-width: 100%;
 }
 
-.lg-fl {
-  float: left;
-}
-
-.lg-fr {
-  float: right;
-}
-
 .clear-both {
   clear: both;
+}
+.d-ib {
+  display: inline-block;
+}
+.mt-3 {
+  margin-top: 3rem;
 }
 .ml-12 {
   margin-left: 3rem;
@@ -168,6 +166,17 @@ img[width][height] {
   margin-top: 2rem;
   font-size: larger;
 }
+
+.craft-club-wrapper {
+  display: flex;
+}
+
+.craft-club-wrapper figure {
+  margin-top: -1rem;
+  margin-left: auto;
+}
+.craft-club-info {
+}
 .craft-club img {
   border: none;
 }
@@ -182,38 +191,54 @@ img[width][height] {
   border-bottom: 1px dashed #313544;
 }
 
+.ci-strong {
+  font-family: 'Comic Neue', 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: larger;
+}
+
 .craft-info .item-text {
   font-weight: 700;
 }
-.figure,
+.figure .bg-yellow-100,
 .craft-info .bg-yellow-100 {
   --bg-opacity: 1;
   background-color: ivory;
   background-color: rgba(255, 255, 240, var(--bg-opacity));
 }
 
-.figure,
+.figure .sm-p-3,
 .craft-info .sm-p-3 {
   padding: 0.75rem;
 }
 
-.figure,
+.figure .shadow-lg,
 .craft-info .shadow-lg {
   box-shadow:
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.figure,
+.figure .rotate-l,
 .craft-info .rotate-l {
   transform: rotate(-3deg);
 }
 
-.figure,
+.figure .rotate-r,
 .craft-info .rotate-r {
   transform: rotate(3deg);
 }
 
 .scale-2 {
   transform: scale(2);
+}
+
+@media (min-width: 700px) {
+  .lg-fl {
+    float: left;
+  }
+
+  .lg-fr {
+    float: right;
+  }
 }
