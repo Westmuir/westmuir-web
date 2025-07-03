@@ -12,6 +12,11 @@
   margin-bottom: 0.5rem;
 }
 
+.section-cards a {
+  text-decoration: none;
+  color: inherit;
+}
+
 ul.section-cards {
   list-style-type: '';
   margin: 5px 0 0 0;
@@ -29,9 +34,16 @@ ul.section-cards li {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.section-card-page {
-  border-bottom: 10px solid #3f4f8080;
+.section-cards .hall,
+.postlist .hall {
+  border-bottom: 10px solid var(--margin-color-hall, #803f6380);
 }
+
+.section-cards .na,
+.postlist .n-a {
+  border-bottom: 10px solid var(--margin-color-na, #3f4f8080);
+}
+
 .section-card {
   width: 150px;
   overflow: hidden;

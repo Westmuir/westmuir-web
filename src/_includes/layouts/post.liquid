@@ -16,7 +16,7 @@ page.date | readableDate
     {%- capture tagUrl %}/tags/{{ tag | slugify }}/{% endcapture %}
     <li>
       <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
-      {%- if not loop.last %},
+      {%- if not forloop.last %},
       {% endif %}
     </li>
   {%- endfor %}

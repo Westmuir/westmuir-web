@@ -23,6 +23,15 @@ export default function (eleventyConfig) {
     return array.slice(0, n);
   });
 
+  // Get the first `n` elements of a collection.
+  eleventyConfig.addFilter('slice', (array, n) => {
+    if (!Array.isArray(array) || array.length === 0) {
+      return [];
+    }
+
+    return array.slice(0, n);
+  });
+
   // Return the smallest number argument
   eleventyConfig.addFilter('min', (...numbers) => {
     return Math.min.apply(null, numbers);
@@ -37,6 +46,10 @@ export default function (eleventyConfig) {
     return [tags[1]];
 
     // return (tags || []).filter(tag => ['all', 'posts'].indexOf(tag) === -1);
+  });
+
+  eleventyConfig.addFilter('categoryFilter', (collection, category) => {
+    return collection.filter(item => item.data?.categories?.includes(category));
   });
 
   eleventyConfig.addFilter('sortAlphabetically', strings => (strings || []).sort((b, a) => b.localeCompare(a)));

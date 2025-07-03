@@ -16,6 +16,9 @@
 
   --toggle-text-color: #d073d4;
 
+  --margin-color-hall: #d073d4;
+  --margin-color-na: #3f4f8080;
+
   --btn-bg: #1a73e8;
   --btn-color: #ffffff;
 
@@ -42,6 +45,9 @@ body.dark {
   --footer-link-color: #82b1ff;
 
   --toggle-text-color: #936fcc;
+
+  --margin-color-hall: #864a89;
+  --margin-color-na: #3f4f8080;
 
   --btn-bg: #2962ff;
   --btn-color: #ffffff;

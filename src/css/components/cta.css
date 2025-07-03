@@ -1,5 +1,4 @@
 .cta {
-  padding: 2rem;
   margin: 2rem auto;
   text-align: center;
   background-color: var(--header-background-color);
@@ -10,6 +9,13 @@
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+.cta a {
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .cta-l {

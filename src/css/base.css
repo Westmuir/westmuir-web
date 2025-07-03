@@ -254,3 +254,63 @@ img[width][height] {
 .post-list li {
   list-style-type: disc;
 }
+
+.volunteer-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  color: #222;
+  margin-top: 2rem;
+}
+
+.volunteer-columns li {
+  margin-left: 2rem;
+}
+
+.volunteer-columns p {
+  font-size: 1.1em;
+  font-weight: 600;
+  min-height: 3em;
+  text-align: center;
+}
+
+.volunteer-columns div {
+  padding: 1rem;
+  border-radius: 7px;
+}
+
+.volunteer-columns div:nth-child(n + 1) {
+  background-color: #ffc4ff;
+}
+
+.volunteer-columns div:nth-child(n + 2) {
+  background-color: #9bffb5;
+}
+
+.volunteer-columns div:nth-child(n + 3) {
+  background-color: #ffffb3;
+}
+
+.volunteer-footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 5px;
+
+  color: #222;
+}
+.volunteer-footer div {
+  background-color: rgb(234, 234, 255);
+  min-height: 5rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.ai-c {
+  align-self: center;
+}
+
+.lh-3 {
+  line-height: 3em;
+}

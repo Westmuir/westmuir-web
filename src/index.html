@@ -29,11 +29,14 @@ hero: false
 
   <h2 class="main-heading">Latest</h2>
 
-  {% assign postslist = collections.posts | head: -3 %} {% assign postsCount = collections.posts |
-  size %} {% assign latestPostsCount = postsCount | min: 3 %} {% include
-  "partials/postslistarticles" %} {% if cta %}
+  {% assign featuredPosts = collections.posts | categoryFilter: "featured" %} {% assign postslist =
+  featuredPosts | head: -2 %} {% assign postsCount = collections.posts | size %} {% assign
+  latestPostsCount = postsCount | min: 3 %} {% render "partials/postslistarticles" postslist:
+  postslist %} {% assign remainderpostslist = featuredPosts | slice: -2 %} {% render
+  "partials/postslistcards" postslist: remainderpostslist %} {% if cta %}
   <style>
     {% include "css/components/cta.css" %}
   </style>
-  {% render "partials/cta" %} {% endif %} {% endblock %}
+  {% render "partials/cta" button_label: "Read more", button_url:"/volunteer/" %} {% endif %} {%
+  endblock %}
 </main>

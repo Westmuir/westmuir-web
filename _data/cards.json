@@ -17,5 +17,11 @@
     "url": "/defibrillator/",
     "description": "Westmuir's defibrillator.",
     "icon": "pulse_alert"
+  },
+  {
+    "label": "WCDT",
+    "url": "/wcdt/",
+    "description": "Community Development Trust",
+    "icon": "foundation"
   }
 ]

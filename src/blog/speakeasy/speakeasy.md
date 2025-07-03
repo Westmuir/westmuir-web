@@ -2,8 +2,12 @@
 title: Men's Speakeasy.
 description: Tuesday afternoons - come along for a chat.
 date: 2025-07-03
-tags: hall
-categories: [hall, featured]
+tags:
+  - hall
+categories:
+  - hall
+  - featured
+cardType: hall
 ---
 
 # Men's Speakeasy

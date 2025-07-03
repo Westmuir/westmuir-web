@@ -5,7 +5,7 @@
   {%- assign reverseList = postslist | reverse -%}
   {%- for post in reverseList %}
 
-    <article class="item-list section-card-page">
+    <article class="item-list section-card-page {{ post.data.cardType | default: "na" }}">
       <a href="{{ post.url }}">
         {% if post.data.title %}
           {{ post.data.title }}{% else %}
