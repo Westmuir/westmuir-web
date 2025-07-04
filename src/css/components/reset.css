@@ -96,7 +96,6 @@
 
     ol&,
     ul& {
-      padding-inline-start: 1.5em;
       list-style: revert;
     }
 
