@@ -15,7 +15,7 @@ hero: false
 <main class="main">
   <h2 class="main-heading">Quick links</h2>
 
-  {% render "partials/nav-cards" , cards: cards %} {% if hero %}
+  {% render "partials/nav-cards", cards: cards %} {% if hero %}
 
   <section class="hero">
     <div class="hero-content">
@@ -33,10 +33,7 @@ hero: false
   featuredPosts | head: -2 %} {% assign postsCount = collections.posts | size %} {% assign
   latestPostsCount = postsCount | min: 3 %} {% render "partials/postslistarticles" postslist:
   postslist %} {% assign remainderpostslist = featuredPosts | slice: -2 %} {% render
-  "partials/postslistcards" postslist: remainderpostslist %} {% if cta %}
-  <style>
-    {% include "css/components/cta.css" %}
-  </style>
-  {% render "partials/cta" button_label: "Read more", button_url:"/volunteer/" %} {% endif %} {%
-  endblock %}
+  "partials/postslistcards" postslist: remainderpostslist %} {% if cta %} {% css %} {% include
+  "css/components/cta.css" %} {% endcss%} {% render "partials/cta" button_label: "Read more",
+  button_url:"/volunteer/" %} {% endif %} {% endblock %}
 </main>

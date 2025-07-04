@@ -38,11 +38,16 @@
     </noscript>
 
     {% comment %} Add the contents of a file to the bundle  {% endcomment %}
-    <style>{% include "css/components/reset.css" %}</style>
-    <style>{% include "css/components/layout.css" %}</style>
-    <style>{% include "css/base.css" %}</style>
-    <style>{% include "css/theme.css" </style> %}</style>
-    <style>{% include "css/components/cta.css" </style> %}</style>
+    {% css %}
+      {% include "css/components/reset.css" %}
+
+      {% include "css/components/layout.css" %}
+      {% include "css/base.css" %}
+      {% include "css/theme.css" %}
+      {% include "css/components/cta.css" %}
+      {% include "css/components/nav-cards.css" %}
+    {% endcss %}
+
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,7 +56,6 @@
 
     <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 
-    <link rel="stylesheet" href="{% getBundleFileUrl "css" "craft-club" %}">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
     <script type="module">

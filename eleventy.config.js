@@ -9,6 +9,7 @@ import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from '@11ty/eleventy';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import pluginWebc from '@11ty/eleventy-plugin-webc';
 import browserslist from 'browserslist';
 import { browserslistToTargets, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
@@ -52,18 +53,37 @@ export default function (eleventyConfig) {
 
   let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
 
+  eleventyConfig.addPlugin(pluginWebc, {
+    bundlePluginOptions: {
+      transforms: [
+        async function (content) {
+          if (this.type === 'css') {
+            let { code } = transform({
+              code: Buffer.from(content),
+              minify: false,
+              sourceMap: false,
+              targets,
+            });
+            return code;
+          }
+          return content;
+        },
+      ],
+    },
+  });
+
   // Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
   // Bundle <style> content and adds a {% css %} paired shortcode
   eleventyConfig.addBundle('css', {
-    toFileDirectory: 'css',
+    // toFileDirectory: 'css',
     // Add all <style> content to `css` bundle (use <style eleventy:ignore> to opt-out)
     // Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
-    bundleHtmlContentFromSelector: 'style',
+    // bundleHtmlContentFromSelector: 'style',
     transforms: [
       async function (content) {
         let { code } = await transform({
           code: Buffer.from(content),
-          minify: false,
+          minify: true,
           sourceMap: false,
           targets,
         });
