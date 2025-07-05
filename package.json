@@ -1,6 +1,7 @@
 {
   "name": "westmuir-site",
   "type": "module",
+  "version": "202507-1",
   "scripts": {
     "start": "eleventy --serve --quiet",
     "build": "eleventy",
