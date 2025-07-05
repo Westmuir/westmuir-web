@@ -203,6 +203,7 @@ img[width][height] {
 .craft-info .item-text {
   font-weight: 700;
 }
+
 .figure .bg-yellow-100,
 .craft-info .bg-yellow-100 {
   --bg-opacity: 1;

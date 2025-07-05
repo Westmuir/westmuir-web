@@ -1,4 +1,4 @@
 export default {
   tags: ['posts'],
-  layout: 'post',
+  layout: 'post.webc',
 };

@@ -1,6 +1,6 @@
 ---
 title: Defibrillator
-layout: base
+layout: base.webc
 description: Learn about the Westmuir Village Defibrillator.
 eleventyNavigation:
   key: Defibrillator

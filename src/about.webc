@@ -1,0 +1,11 @@
+---
+title: About
+layout: base.webc
+eleventyNavigation:
+  key: About
+  order: 1
+---
+
+<p>Welcome to the About page. Learn about our history and values.</p>
+
+<!--- <my-component webc:nokeep></my-component> --->

@@ -1,0 +1,20 @@
+<header class="site-header">
+  <site-nav class="site-nav"></site-nav>
+  <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
+    <span id="darkmode-icon" class="material-symbols-outlined">dark_mode</span>
+  </button>
+</header>
+
+<style>
+  .site-header {
+    background: var(--primary-color);
+
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+  }
+
+  .site-nav {
+    flex: 1;
+  }
+</style>

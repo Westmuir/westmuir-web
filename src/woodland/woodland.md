@@ -1,6 +1,6 @@
 ---
 title: Woodland
-layout: base
+layout: base.webc
 description: Learn about the Westmuir Community Development Trust and the Woodland.
 eleventyNavigation:
   key: Woodland

@@ -1,14 +1,17 @@
 /**
  * @typedef {import("@11ty/eleventy/src/UserConfig")} EleventyConfig
- * @typedef {ReturnType<import("@11ty/eleventy/src/defaultConfig")>} EleventyReturnValue
+
  *
- * @type {(eleventyConfig: EleventyConfig) => EleventyReturnValue}
+ * @type {(eleventyConfig: EleventyConfig) => void}
  */
 
 import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from '@11ty/eleventy';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import pluginWebc from '@11ty/eleventy-plugin-webc';
+import browserslist from 'browserslist';
+import { browserslistToTargets, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
@@ -32,7 +35,23 @@ function configureMarkdownIt() {
     });
 }
 
-export default function (eleventyConfig) {
+export const config = {
+  dir: {
+    input: 'src',
+    data: '../_data', // default: "_data" (`input` relative)
+    layouts: '_includes/layouts',
+    output: '_site',
+  },
+  templateFormats: ['md', 'webc', 'liquid', 'html'],
+  htmlTemplateEngine: 'liquid',
+  markdownTemplateEngine: 'liquid',
+};
+
+/**
+ *
+ * @param {EleventyConfig} eleventyConfig
+ */
+export default async function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy({ 'src/scripts/': '/scripts' });
 
   // Copy the contents of the `public` folder to the output folder
@@ -48,21 +67,32 @@ export default function (eleventyConfig) {
   // Watch CSS files
   eleventyConfig.addWatchTarget('css/**/*.css');
 
-  // Per-page bundles, see https://github.com/11ty/eleventy-plugin-bundle
-  // Bundle <style> content and adds a {% css %} paired shortcode
-  eleventyConfig.addBundle('css', {
-    toFileDirectory: 'css',
-    // Add all <style> content to `css` bundle (use <style eleventy:ignore> to opt-out)
-    // Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
-    bundleHtmlContentFromSelector: 'style',
-  });
+  let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
 
-  // Bundle <script> content and adds a {% js %} paired shortcode
-  eleventyConfig.addBundle('js', {
-    toFileDirectory: 'js',
-    // Add all <script> content to the `js` bundle (use <script eleventy:ignore> to opt-out)
-    // Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
-    bundleHtmlContentFromSelector: 'script',
+  eleventyConfig.addPlugin(pluginWebc, {
+    componentsX: [
+      // …
+      // Add as a global WebC component
+      'npm:@11ty/eleventy-img/*.webc',
+      '_components/**/*.webc',
+    ],
+    components: ['./src/_includes/components/**/*.webc'],
+    bundlePluginOptions: {
+      transforms: [
+        async function (content) {
+          if (this.type === 'css') {
+            let { code } = transform({
+              code: Buffer.from(content),
+              minify: false,
+              sourceMap: false,
+              targets,
+            });
+            return code;
+          }
+          return content;
+        },
+      ],
+    },
   });
 
   eleventyConfig.setLibrary('md', configureMarkdownIt());
@@ -97,16 +127,4 @@ export default function (eleventyConfig) {
 
   // Filters
   eleventyConfig.addPlugin(pluginFilters);
-
-  return {
-    dir: {
-      input: 'src',
-      data: '../_data', // default: "_data" (`input` relative)
-      layouts: '_includes/layouts',
-      output: '_site',
-    },
-    templateFormats: ['md', 'njk', 'liquid', 'html'],
-    htmlTemplateEngine: 'liquid',
-    markdownTemplateEngine: 'liquid',
-  };
 }
