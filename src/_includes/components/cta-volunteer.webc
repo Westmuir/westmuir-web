@@ -1,0 +1,57 @@
+<section class="cta">
+  <a href="/volunteer/">
+    <h2 @text="heading ?? 'Join the Westmuir Community'"></h2>
+    <p @text="description ?? 'Get involved with events, news, and village life.'"></p>
+    <a :href="buttonurl" class="btn" @text="buttonlabel" webc:if="buttonlabel && buttonurl"></a>
+  </a>
+</section>
+
+<style>
+  .cta {
+    margin: 2rem auto;
+    text-align: center;
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+    border-radius: 0.5rem;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .cta a {
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .cta-l {
+    margin-left: inherit;
+  }
+
+  .cta-sm {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 500px;
+  }
+  .cta.cta-post {
+    background-color: var(--cta-background-color, #222);
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+</style>

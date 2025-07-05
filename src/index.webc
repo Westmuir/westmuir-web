@@ -1,0 +1,32 @@
+---js
+{ title: "Welcome to Westmuir",
+layout: "base.webc",
+cta: true,
+hero: false
+}
+---
+
+<div class="center">
+  <img src="/images/westmuir-cortachy-header.jpg" alt="Welcome to Westmuir" />
+</div>
+
+<main class="main">
+  <h2 class="main-heading">Quick links</h2>
+  <nav-cards :cards="$data.cards"></nav-cards>
+
+  <section class="hero" webc:if="false">
+    <div class="hero-content">
+      <h1>Welcome to Westmuir</h1>
+      <p>Discover the charm of our village, from events to local news.</p>
+      <a href="/about/" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <h2 class="main-heading">Latest</h2>
+
+  <postslist-articles :list="head(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-articles>
+
+  <postslist-cards :list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-cards>
+
+  <cta-volunteer buttonlabel="Read more" buttonurl="/volunteer/" webc:if="cta"></cta-volunteer>
+</main>

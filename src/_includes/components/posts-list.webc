@@ -1,0 +1,10 @@
+<ol reversed class="postlist">
+  <li class="postlist-item postlist-item-active" webc:for="post of reverse(list)">
+    <a :href="post.url" class="postlist-link" @text="post.data.title ?? post.url"></a>
+    <time
+      class="postlist-date"
+      :datetime="htmlDateString(post.date)"
+      @text="readableDate(post.date,'LLLL yyyy')"
+    ></time>
+  </li>
+</ol>

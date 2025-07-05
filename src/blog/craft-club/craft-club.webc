@@ -21,25 +21,17 @@ cardType: hall
       <div>Tel. 01575 573314 for more details.</div>
     </div>
     <figure class="figure ml-12 max-w-lg d-ib">
-      <img
-        class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
-        src="/images/craft-sew-2.png"
-        alt="Craft sew"
-      />
+      <img class="bg-yellow-100 sm-p-3 shadow-lg rotate-r" src="/images/craft-sew-2.png" alt="Craft sew" />
     </figure>
   </div>
 
   <figure class="lg-fl figure mr-12 max-w-lg">
-    <img
-      class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
-      src="/images/craft-paint-2.png"
-      alt="Craft paint"
-    />
+    <img class="bg-yellow-100 sm-p-3 shadow-lg rotate-l" src="/images/craft-paint-2.png" alt="Craft paint" />
   </figure>
 
   <div class="mt-3">
-    This is a group by Lillian McDownie and Christine Cobb who run a Creative craft club in the
-    village hall on Monday afternoons.
+    This is a group by Lillian McDownie and Christine Cobb who run a Creative craft club in the village hall on Monday
+    afternoons.
   </div>
 
   <div class="clear-both"></div>
