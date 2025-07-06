@@ -4,6 +4,31 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url('./custom.woff2') format('woff2');
+}
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -314,4 +339,39 @@ img[width][height] {
 
 .lh-3 {
   line-height: 3em;
+}
+
+.dark .agm-info {
+  --agm-border-color: yellow;
+}
+.agm-info {
+  border: 2px solid var(--agm-border-color, purple);
+  border-radius: 15px;
+  padding: 2rem;
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .agm-info-text {
+    font-size: 1.5rem;
+  }
+  p {
+    text-align: center;
+  }
+  .agm-time {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+.agm-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.agm-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
 }

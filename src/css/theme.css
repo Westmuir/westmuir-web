@@ -14,7 +14,7 @@
   --footer-text-color: #424242;
   --footer-link-color: #1b70df;
 
-  --toggle-text-color: #d073d4;
+  --toggle-text-color: hsl(200, 12%, 75%);
 
   --margin-color-hall: #d073d4;
   --margin-color-na: #3f4f8080;
@@ -44,7 +44,7 @@ body.dark {
   --footer-text-color: #bdbdbd;
   --footer-link-color: #82b1ff;
 
-  --toggle-text-color: #936fcc;
+  --toggle-text-color: hsl(201, 20%, 38%);
 
   --margin-color-hall: #864a89;
   --margin-color-na: #3f4f8080;

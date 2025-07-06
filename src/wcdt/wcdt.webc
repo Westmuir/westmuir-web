@@ -9,11 +9,12 @@ eleventyNavigation:
 
 <div class="main-wrapper">
   <img
-    src="./Banner_Development_Trust.jpg"
+    src="./src/wcdt/Banner_Development_Trust.jpg"
     alt="Banner_Community_Trust"
     name="Banner_Activities"
     class="banner-image"
     id="Banner_Activities"
+    webc:is="eleventy-image"
   />
 
   <p>
@@ -26,12 +27,13 @@ eleventyNavigation:
     <p align="justify">
       <img
         class="logo"
-        src="./Westmuir Community Development Trust_clip_image002.jpg"
+        src="./src/wcdt/Westmuir Community Development Trust_clip_image002.jpg"
         alt="Trust Logo"
         width="86"
         height="151"
         hspace="12"
         align="left"
+        webc:is="eleventy-image"
       /><span
         >Westmuir Community Development Trust was formed in 2004 following a strong desire for such an organisation
         having been expressed through a survey of the local community in Westmuir. Membership of the Trust, which is

@@ -3,7 +3,7 @@
     <a :href="item.url">
       <div class="section-cards-title">
         <img webc:if="item.image" src="{{ item.image }}" alt="{{ item.label }} image" class="card-image" />
-        <div webc:else class="material-symbols-outlined icon" @text="item.icon"></div>
+        <div webc:else class="material-symbols-outlined icon" @raw="item.icon"></div>
         <h3 @text="item.label"></h3>
       </div>
       <p @text="item.description"></p>

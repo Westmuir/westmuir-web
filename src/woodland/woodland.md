@@ -9,7 +9,10 @@ eleventyNavigation:
 
 ## WESTMUIR COMMUNITY WOODLAND PARK
 
-![Woodland](./community-woodland-1-banner-with-text.jpg)
+<img
+      src="./src/woodland/community-woodland-1-banner-with-text.jpg"
+      alt="Woodland" webc:is="eleventy-image"
+    />
 
 Big tussocks of moss, wet birch woodland dripping with lichen, common lizards basking in the sun on the boardwalks, birds flitting, the buzz of insects on wildflowers and the recreation of local people, all this is part of our community woodland.
 

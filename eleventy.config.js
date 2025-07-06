@@ -6,7 +6,7 @@
  */
 
 import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from '@11ty/eleventy';
-import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import { eleventyImagePlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
@@ -44,7 +44,7 @@ export const config = {
   },
   templateFormats: ['md', 'webc', 'liquid', 'html'],
   htmlTemplateEngine: 'liquid',
-  markdownTemplateEngine: 'liquid',
+  markdownTemplateEngine: 'webc',
 };
 
 /**
@@ -56,13 +56,10 @@ export default async function (eleventyConfig) {
 
   // Copy the contents of the `public` folder to the output folder
   // For example, `./public/css/` ends up in `_site/css/`
-  eleventyConfig
-    .addPassthroughCopy({
-      './public/pdf': '/pdf',
-    })
-    .addPassthroughCopy({
-      './src/images': '/images',
-    });
+  eleventyConfig.addPassthroughCopy({
+    './public/pdf': '/pdf',
+    './src/css/custom.woff2': '/bundle/custom.woff2',
+  });
 
   // Watch CSS files
   eleventyConfig.addWatchTarget('css/**/*.css');
@@ -70,13 +67,7 @@ export default async function (eleventyConfig) {
   let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
 
   eleventyConfig.addPlugin(pluginWebc, {
-    componentsX: [
-      // …
-      // Add as a global WebC component
-      'npm:@11ty/eleventy-img/*.webc',
-      '_components/**/*.webc',
-    ],
-    components: ['./src/_includes/components/**/*.webc'],
+    components: ['./src/_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
     bundlePluginOptions: {
       transforms: [
         async function (content) {
@@ -104,24 +95,18 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
-  // Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // Output formats for each image.
-    formats: ['avif', 'webp', 'auto'],
+  // Image plugin
+  eleventyConfig.addPlugin(eleventyImagePlugin, {
+    // Set global default options
+    formats: ['avif', 'webp', 'jpeg'],
+    urlPath: '/img/',
 
-    // widths: ["auto"],
+    // Notably `outputDir` is resolved automatically
+    // to the project output directory
 
-    failOnError: false,
-    htmlOptions: {
-      imgAttributes: {
-        // e.g. <img loading decoding> assigned on the HTML tag will override these values.
-        loading: 'lazy',
-        decoding: 'async',
-      },
-    },
-
-    sharpOptions: {
-      animated: true,
+    defaultAttributes: {
+      loading: 'lazy',
+      decoding: 'async',
     },
   });
 

@@ -18,14 +18,14 @@
       </button>
     </li>
     <li class="home-li">
-      <a href="/" :class="'/' === page.url?'active-link':''" :aria-current="page.url === '/' ? 'page' : ''">Home</a>
+      <a href="/" :class="'/' === pageurl?'active-link':''" :aria-current="page.url === '/' ? 'page' : ''">Home</a>
     </li>
 
     <li webc:for="item of eleventyNavigation($data.collections.all)">
       <a
         :href="item.url"
-        :class="item.url === page.url?'active-link':''"
-        :aria-current="page.url === item.url ? 'page' : ''"
+        :class="item.url === pageurl?'active-link':''"
+        :aria-current="url(pageurl) === item.url ? 'page' : ''"
         @text="item.title"
       >
       </a>

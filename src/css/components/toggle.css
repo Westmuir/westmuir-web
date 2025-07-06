@@ -17,19 +17,10 @@
   cursor: pointer;
   font: inherit;
   color: var(--toggle-text-color);
+  font-size: 1.5rem;
+  justify-content: center;
 
   transition: background-color 0.3s ease;
-}
-
-.theme-toggle-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Show hamburger on small screens */

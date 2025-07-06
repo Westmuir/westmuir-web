@@ -3,25 +3,25 @@
     "label": "Woodland",
     "url": "/woodland/",
     "description": "View images and videos of village life.",
-    "icon": "forest"
+    "icon": "&#xea99;"
   },
   {
     "label": "Resiliance",
     "url": "/resilience/",
     "description": "The resilience centre.",
-    "icon": "zone_person_urgent"
+    "icon": "&#xe781;"
   },
 
   {
     "label": "Defibrillator",
     "url": "/defibrillator/",
     "description": "Westmuir's defibrillator.",
-    "icon": "pulse_alert"
+    "icon": "&#xf501;"
   },
   {
     "label": "WCDT",
     "url": "/wcdt/",
     "description": "Community Development Trust",
-    "icon": "foundation"
+    "icon": "&#xf200"
   }
 ]
