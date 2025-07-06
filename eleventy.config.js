@@ -58,6 +58,7 @@ export default async function (eleventyConfig) {
   // For example, `./public/css/` ends up in `_site/css/`
   eleventyConfig.addPassthroughCopy({
     './public/pdf': '/pdf',
+    './src/css/custom.woff2': '/bundle',
   });
 
   // Watch CSS files

@@ -5,42 +5,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-
-    <link
-      rel="preload"
-      href="https://fonts.gstatic.com/s/roboto/v48/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiAo.woff2"
-      as="font"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="preload"
-      href="https://fonts.gstatic.com/s/materialsymbolsoutlined/v254/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2"
-      as="font"
-      crossorigin="anonymous"
-    />
-
-    <link
       href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
       webc:keep
     />
-
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
-    </noscript>
 
     <link rel="stylesheet" href="../../css/components/reset.css" />
 
@@ -49,6 +17,7 @@
     <link rel="stylesheet" href="../../css/base.css" />
 
     <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/components/toggle.css" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,6 +27,7 @@
     <style webc:keep @raw="`@import url(${getBundleFileUrl('css')});`"></style>
 
     <link webc:keep rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
+
     <script type="module" src="../../scripts/theme-toggle.js"></script>
     <script type="module" src="../../scripts/nav-toggle.js"></script>
   </head>
