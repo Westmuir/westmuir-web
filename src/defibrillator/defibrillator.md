@@ -13,7 +13,10 @@ In early 2019 a group of volunteers from the village embarked on a project to
 purchase a defibrillator for the Community with a view to locating it in the
 village, offering access to anyone living locally.
 
-![Welcome to Westmuir](./defibrillator-goes-live.jpg)
+<img
+      src="./src/defibrillator/defibrillator-goes-live.jpg"
+      alt="Welcome to Westmuir" webc:is="eleventy-image"
+    />
 
 The Community Council representative at the time had received a monetary bequest from the family of a local man, which greatly boosted fundraising efforts to obtain a defibrillator. The volunteer group subsequently set up a crowdfunding page to raise the balance of funds needed, and with a further successful application for ‘Matched Funding’ from Angus Council, the Group were able to proceed with the project.
 

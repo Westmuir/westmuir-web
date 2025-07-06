@@ -4,6 +4,7 @@
   "version": "202507-1",
   "scripts": {
     "start": "eleventy --serve --quiet",
+    "debug": "eleventy --serve --quiet",
     "build": "eleventy",
     "clean": "rimraf ./_site"
   },

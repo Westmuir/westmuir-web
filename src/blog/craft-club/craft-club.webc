@@ -14,19 +14,29 @@ cardType: hall
   <div class="craft-club-wrapper">
     <div class="craft-club-info">
       <strong>Weekly from Monday 4th September, 2023</strong>
-      <img src="/images/craft-wool.png" alt="Craft wool" />
+      <img src="./src/images/craft-wool.png" alt="Craft wool" webc:is="eleventy-image" />
 
       <div class="ci-strong item-text">2pm - 4pm</div>
       <div class="ci-strong item-text">Refreshments available</div>
       <div>Tel. 01575 573314 for more details.</div>
     </div>
     <figure class="figure ml-12 max-w-lg d-ib">
-      <img class="bg-yellow-100 sm-p-3 shadow-lg rotate-r" src="/images/craft-sew-2.png" alt="Craft sew" />
+      <img
+        class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
+        src="./src/images/craft-sew-2.png"
+        alt="Craft sew"
+        webc:is="eleventy-image"
+      />
     </figure>
   </div>
 
   <figure class="lg-fl figure mr-12 max-w-lg">
-    <img class="bg-yellow-100 sm-p-3 shadow-lg rotate-l" src="/images/craft-paint-2.png" alt="Craft paint" />
+    <img
+      class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
+      src="./src/images/craft-paint-2.png"
+      alt="Craft paint"
+      webc:is="eleventy-image"
+    />
   </figure>
 
   <div class="mt-3">

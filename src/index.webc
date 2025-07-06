@@ -7,7 +7,7 @@ hero: false
 ---
 
 <div class="center">
-  <img src="/images/westmuir-cortachy-header.jpg" alt="Welcome to Westmuir" />
+  <img src="./src/images/westmuir-cortachy-header.jpg" alt="Welcome to Westmuir" webc:is="eleventy-image" />
 </div>
 
 <main class="main">
