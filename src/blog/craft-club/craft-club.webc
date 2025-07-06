@@ -4,7 +4,7 @@ description: A Creative craft club in the village hall on Monday afternoons.
 date: 2025-07-03
 tags: hall
 categories: [hall, featured]
-image: /images/craft-wool.png
+image: src/images/craft-wool.png
 cardType: hall
 ---
 

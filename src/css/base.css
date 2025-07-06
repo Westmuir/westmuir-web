@@ -340,3 +340,38 @@ img[width][height] {
 .lh-3 {
   line-height: 3em;
 }
+
+.dark .agm-info {
+  --agm-border-color: yellow;
+}
+.agm-info {
+  border: 2px solid var(--agm-border-color, purple);
+  border-radius: 15px;
+  padding: 2rem;
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .agm-info-text {
+    font-size: 1.5rem;
+  }
+  p {
+    text-align: center;
+  }
+  .agm-time {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+.agm-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.agm-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
