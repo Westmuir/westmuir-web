@@ -7,7 +7,7 @@
 </button>
 
 <nav id="navbar" class="navbar" role="navigation">
-  <ul>
+  <ul role="list">
     <li>
       <button id="close-nav-button" aria-label="close sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
@@ -68,7 +68,7 @@
     display: flex;
     text-decoration: none;
     color: var(--header-text-color);
-    padding: 1em 2em;
+    padding: 1em 1em;
     transition: background-color 150ms ease;
   }
   .navbar a:hover {

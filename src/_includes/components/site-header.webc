@@ -9,7 +9,7 @@
   .site-header {
     background: var(--primary-color);
 
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     display: flex;
   }
