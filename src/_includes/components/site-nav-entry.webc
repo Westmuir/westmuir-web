@@ -1,0 +1,15 @@
+<li><a :href="item.url" @text="item.title"></a></li>
+<li webc:if="item.children.length" class="dropdown">
+  <button
+    type="button"
+    class="dropdown__title"
+    aria-expanded="false"
+    :aria-controls="`${item.title}-dropdown`"
+    @text="item.title"
+  ></button>
+  <ul class="dropdown__menu" :id="`${item.title}-dropdown`">
+    <li webc:for="child of item.children">
+      <a href="child.url" @text="child.title"></a>
+    </li>
+  </ul>
+</li>

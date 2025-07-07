@@ -1,6 +1,9 @@
 ---
 title: Volunteers
 layout: base
+eleventyNavigation:
+  key: Volunteers
+  parent: About
 ---
 
 <h2>Volunteers</h2>

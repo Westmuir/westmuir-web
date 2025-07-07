@@ -1,6 +1,9 @@
 ---
 title: Mission
 layout: base
+eleventyNavigation:
+  key: Mission
+  parent: About
 ---
 
 <h2>Our Mission</h2>
