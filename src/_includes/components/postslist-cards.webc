@@ -1,5 +1,5 @@
 <ul class="section-cards">
-  <li class="section-card section-card-page" webc:for="post of reverse(list)">
+  <li :class="`section-card section-card-page ${post.data.cardType ?? 'na'}`" webc:for="post of reverse(list)">
     <a :href="post.url">
       <div class="section-cards-title" @text="post.data.title"></div>
       <img :src="post.data.image" alt="post image" webc:is="eleventy-image" webc:if="post.data.image" />
