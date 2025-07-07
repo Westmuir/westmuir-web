@@ -1,3 +1,7 @@
+---
+layers: [reset]
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +14,7 @@
       webc:keep
     />
 
-    <link rel="stylesheet" href="../../css/components/reset.css" />
+    <link rel="stylesheet" href="../../css/components/reset.css" webc:bucket="reset" />
 
     <link rel="stylesheet" href="../../css/components/layout.css" />
 
@@ -24,6 +28,17 @@
     <meta name="description" content="Westmuir Village Website" />
     <title @text="title ?? 'Westmuir Village'"></title>
 
+    <!-- <style>@layer reset, config, default, etc;</style> -->
+    <style webc:keep @raw="`@layer ${($data.layers).join(', ')};`"></style>
+
+    <!-- <style>@import url('bucket-name.css') layer(bucket-name);</style> -->
+    <style
+      webc:keep
+      webc:for="layer of ($data.layers)"
+      @raw="`@import url(${getBundleFileUrl('css', layer)}) layer(${layer});`"
+    ></style>
+
+    <!-- <style>@import url('bucket-name.css'); the non-bucketed styles for now </style>   -->
     <style webc:keep @raw="`@import url(${getBundleFileUrl('css')});`"></style>
 
     <link webc:keep rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
@@ -33,7 +48,7 @@
   </head>
 
   <body>
-    <site-header :pageurl="page.url"></site-header>
+    <site-header :@pageurl="page.url"></site-header>
     <main id="main" class="container" tabindex="-1" @raw="content"></main>
 
     <site-footer></site-footer>

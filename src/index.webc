@@ -12,7 +12,7 @@ hero: false
 
 <main class="main">
   <h2 class="main-heading">Quick links</h2>
-  <nav-cards :cards="$data.cards"></nav-cards>
+  <nav-cards :@cards="$data.cards"></nav-cards>
 
   <section class="hero" webc:if="false">
     <div class="hero-content">
