@@ -1,0 +1,9 @@
+---
+title: Other
+layout: base.webc
+description: Other stuff.
+eleventyNavigation:
+  key: Other
+---
+
+<h1>Other stuff</h1>

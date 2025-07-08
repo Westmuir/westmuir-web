@@ -4,13 +4,14 @@ layout: base.webc
 description: Learn about the Westmuir Community Development Trust and the Woodland.
 eleventyNavigation:
   key: Woodland
+  parent: Westmuir Trust
   order: 1
 ---
 
 ## WESTMUIR COMMUNITY WOODLAND PARK
 
 <img
-      src="./src/woodland/community-woodland-1-banner-with-text.jpg"
+      src="./src/wcdt/woodland/community-woodland-1-banner-with-text.jpg"
       alt="Woodland" webc:is="eleventy-image"
     />
 

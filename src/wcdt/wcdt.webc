@@ -4,6 +4,7 @@ title: Westmuir Community Development Trust
 css: ['css/wcdt.css']
 eleventyNavigation:
   key: Westmuir Trust
+  title: About the Trust
   order: 2
 ---
 

@@ -1,5 +1,6 @@
 :root {
   --primary-color: #6200ee;
+  --primary-color-darker: hsl(265, 100%, 40%);
   --secondary-color: #03dac6;
   --text-color: #212121;
   --background-color: #ffffff;
@@ -29,11 +30,12 @@
 
 body.dark {
   --primary-color: #bb86fc;
+  --primary-color-darker: #ab6afb;
   --secondary-color: #03dac6;
   --text-color: #ffffff;
   --hover-color: #272832;
 
-  --background-color: #11121a;
+  --background-color: #27272c;
   --link-color: #82b1ff;
 
   --cta-background-color: #d073d4;

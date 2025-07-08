@@ -1,0 +1,9 @@
+---
+layout: base.webc
+title: Westmuir Village Hall
+
+eleventyNavigation:
+  key: Westmuir Hall
+  title: About the Hall
+  Order: 2
+---

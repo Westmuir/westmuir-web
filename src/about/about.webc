@@ -3,6 +3,7 @@ title: About
 layout: base.webc
 eleventyNavigation:
   key: About
+  title: About Us
   order: 1
 ---
 

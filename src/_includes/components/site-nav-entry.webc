@@ -4,9 +4,10 @@
     class="dropdown__title"
     aria-expanded="false"
     :aria-controls="`${item.title}-dropdown`"
-    @text="item.title"
+    @text="item.key"
+    :@click="onDropdown"
   ></button>
-  <ul class="dropdown__menu" :id="`${item.title}-dropdown`">
+  <ul class="dropdown__menu" :id="`${item.title}-dropdown`" role="list">
     <li><a :href="item.url" @text="item.title"></a></li>
     <li webc:for="child of item.children">
       <a :href="child.url" @text="child.title"></a>
