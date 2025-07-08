@@ -4,6 +4,7 @@ layout: base.webc
 description: Learn about the Westmuir Village Defibrillator.
 eleventyNavigation:
   key: Defibrillator
+  parent: Westmuir Hall
   order: 3
 ---
 
@@ -14,7 +15,7 @@ purchase a defibrillator for the Community with a view to locating it in the
 village, offering access to anyone living locally.
 
 <img
-      src="./src/defibrillator/defibrillator-goes-live.jpg"
+      src="./src/Westmuir Hall/defibrillator/defibrillator-goes-live.jpg"
       alt="Welcome to Westmuir" webc:is="eleventy-image"
     />
 

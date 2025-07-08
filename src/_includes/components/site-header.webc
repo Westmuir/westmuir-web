@@ -1,5 +1,5 @@
 <header class="site-header">
-  <site-nav class="site-nav" :pageurl="pageurl"></site-nav>
+  <site-nav class="site-nav" :@pageurl="pageurl"></site-nav>
   <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme">
     <span id="darkmode-icon" class="material-symbols-outlined">&#xe1ae;</span>
   </button>
@@ -9,12 +9,13 @@
   .site-header {
     background: var(--primary-color);
 
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     display: flex;
   }
 
   .site-nav {
     flex: 1;
+    z-index: 10;
   }
 </style>
