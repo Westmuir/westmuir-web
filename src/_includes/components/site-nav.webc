@@ -63,10 +63,10 @@
          a,
          .dropdown__title {
            text-decoration: none;
-           text-align: center;
+           text-align: left;
            display: inline-block;
-           color: blue;
-           font-size: 1.125rem;
+           color: var(--header-text-color, #fff);
+           font-size: 1.1rem;
 
            &:focus {
              outline: none;
@@ -119,10 +119,10 @@
      .dropdown__menu {
        position: absolute;
        min-width: 15ch;
-       left: 50%;
-       top: calc(100% - 0.25rem);
+       left: 20%;
+       top: calc(100% - 0.5rem);
        transition: 280ms all 120ms ease-out;
-       transform: rotateX(-90deg) translateX(-50%);
+       transform: rotateX(-90deg) translateX(-20%);
        transform-origin: top center;
        visibility: hidden;
        opacity: 0.3;
@@ -134,7 +134,7 @@
        a {
          color: #444;
          display: block;
-         padding: 0.5em;
+         padding: 0.25em;
          opacity: 0;
          transition: 280ms all 120ms ease-out;
 
@@ -169,7 +169,7 @@
        }
        .dropdown__menu {
          opacity: 1;
-         transform: rotateX(0) translateX(-50%);
+         transform: rotateX(0) translateX(-20%);
          visibility: visible;
 
          a {
