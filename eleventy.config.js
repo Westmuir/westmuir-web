@@ -11,7 +11,6 @@ import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
 import browserslist from 'browserslist';
-import purgeCssPlugin from 'eleventy-plugin-purgecss';
 import { browserslistToTargets, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
@@ -66,20 +65,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('css/**/*.css');
 
   let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
-
-  eleventyConfig.addPlugin(purgeCssPlugin, {
-    // Optional: Specify the location of your PurgeCSS config
-    config: {
-      // Content files referencing CSS classes
-      content: ['./_site/**/*.html'],
-
-      // CSS files to be purged in-place
-      css: ['./_site/**/*.css'],
-    },
-
-    // Optional: Set quiet: true to suppress terminal output
-    quiet: false,
-  });
 
   eleventyConfig.addPlugin(pluginWebc, {
     components: ['./src/_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
