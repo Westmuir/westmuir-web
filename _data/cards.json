@@ -1,20 +1,20 @@
 [
   {
     "label": "Woodland",
-    "url": "/woodland/",
+    "url": "/wcdt/woodland/",
     "description": "View images and videos of village life.",
     "icon": "&#xea99;"
   },
   {
     "label": "Resiliance",
-    "url": "/resilience/",
+    "url": "/Westmuir Hall/resilience/",
     "description": "The resilience centre.",
     "icon": "&#xe781;"
   },
 
   {
     "label": "Defibrillator",
-    "url": "/defibrillator/",
+    "url": "/Westmuir Hall/defibrillator/",
     "description": "Westmuir's defibrillator.",
     "icon": "&#xf501;"
   },
