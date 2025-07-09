@@ -79,6 +79,7 @@
 
     > ul {
       grid-auto-flow: column;
+
       > li {
         margin: 0 0.5rem;
 
@@ -234,6 +235,7 @@
             a {
               text-decoration: underline;
             }
+
             background-color: rgba(102, 51, 153, 0.15);
           }
         }
@@ -278,8 +280,6 @@
         }
 
         .dropdown__title {
-
-
           &:after {
             content: '';
             background-size: 1.125em 1.125em;
@@ -287,7 +287,6 @@
             border-top-color: #6a89fe;
             margin-left: 0.55em;
             transform: translateY(0.2em);
-
           }
         }
 
@@ -320,15 +319,16 @@
         &:after {
           display: none;
         }
+
         &:hover,
         &:focus-within {
-         .dropdown__title {
-          border-top-color: inherit;
-        }
+          .dropdown__title {
+            border-top-color: inherit;
+          }
 
-        .dropdown__menu {
-
-          transform: none;
+          .dropdown__menu {
+            transform: none;
+          }
         }
       }
     }
