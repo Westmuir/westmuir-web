@@ -70,14 +70,8 @@
     display: none;
   }
 
-  .site-header {
-    background: var(--primary-color);
-    position: sticky;
-    top: 0;
-  }
-
   @media (min-width: 701px) {
-    nav {
+    #site-nav {
       background-color: var(--primary-color);
       padding: 0 1rem;
       position: sticky;
@@ -132,7 +126,7 @@
       }
     }
 
-    .dropdown {
+    #site-nav .dropdown {
       position: relative;
 
       .dropdown__title {
@@ -351,10 +345,6 @@
           }
         }
       }
-    }
-
-    .site-header {
-      background: var(--primary-color);
     }
   }
 </style>
