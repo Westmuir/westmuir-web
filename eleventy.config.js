@@ -59,6 +59,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './public/pdf': '/pdf',
     './src/css/custom.woff2': '/bundle/custom.woff2',
+    './src/images': '/images',
   });
 
   // Watch CSS files
