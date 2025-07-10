@@ -143,6 +143,14 @@ eleventyNavigation:
     }
   }
 
+  @media (max-width: 700px) {
+    .content-image-text {
+      .content {
+        flex-direction: column;
+      }
+    }
+  }
+
   /* A section to contatin single column content */
   .content-block-one {
     margin-top: 2rem;
@@ -153,8 +161,8 @@ eleventyNavigation:
 
   .page-header {
     height: 300px;
-    /* display: none; */
-    background-image: url(/.11ty/image/?src=./src/wcdt/woodland/walkway-1980.jpg&width=1980&format=jpeg&via=webc);
+    background-color: darkviolet;
+    background-image: url(/images/walkway-1980.jpg);
     background-position: bottom;
     background-size: cover;
     color: #fff;
