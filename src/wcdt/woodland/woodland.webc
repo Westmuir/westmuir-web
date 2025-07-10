@@ -1,0 +1,195 @@
+---
+title: Woodland
+layout: plain
+description: Learn about the Westmuir Community Development Trust and the Woodland.
+eleventyNavigation:
+  key: Woodland
+  parent: Westmuir Trust
+  order: 1
+---
+
+<figure class="page-header">
+  <div class="page-header-info">
+    <div class="content">
+      <h1>Woodland park</h1>
+      <p>
+        Big tussocks of moss, wet birch woodland dripping with lichen, common lizards basking in the sun on the
+        boardwalks
+      </p>
+    </div>
+  </div>
+</figure>
+
+<div class="content-image-text">
+  <div class="content">
+    <div class="content-image">
+      <figure>
+        <img
+          class="bg-yellow-100 sm-p-3 shadow-lg"
+          src="./src/wcdt/woodland/woodland-park.jpg"
+          alt=""
+          webc:is="eleventy-image"
+        />
+      </figure>
+    </div>
+    <div class="content-text">
+      <p>
+        Big tussocks of moss, wet birch woodland dripping with lichen, common lizards basking in the sun on the
+        boardwalks, birds flitting, the buzz of insects on wildflowers and the recreation of local people, all this is
+        part of our community woodland.
+      </p>
+
+      <p>
+        Opened in 2007 but a good few years in the making, the Westmuir Community Woodland Park was set up by a few
+        visionary local people (give names?) to be a peaceful amenity for the village and to protect and enhance the
+        nature that lives there. The Westmuir Community Development Trust was set up to develop and look after the
+        community woodland and it is still doing this today.
+      </p>
+
+      <p>
+        This area of nearly 9 acres is leased from the Lindertis Estate and during the setting-up, grants were received
+        from various organisations to create a network of all-ability paths, signage, a car park, recycled-plastic
+        boardwalk over wet areas and fencing. Since then, there have been many hundreds of volunteer hours spent
+        planting trees, maintaining paths, building drystone entrance walls, planting wildflowers and putting up bird
+        boxes. The kickaround area has been mowed each spring, summer and autumn by volunteers but now we are delighted
+        to have the help of the Angus Council Justice Service Community Payback Team.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="content-block-one">
+  <div class="content-block">
+    <div>
+      <p>
+        There have been various phases of tree planting: the natural wet birch woodland has been enhanced by the
+        planting of alder (which love this wet site!), rowan, aspen, hazel, hawthorn, gean or wild cherry and a
+        scattering of oak. Sadly, we lost our largest Scots pine tree to Storm Arwen but others have been added. We have
+        also had donations of crab apple and elder trees so we will wait to see how they like our woodland site.
+      </p>
+
+      <p>
+        We have tried to add other native flowering plant species, like snowdrop, native daffodils & bluebells in drier
+        locations, we will see how they settle and whether they thrive. The wonderful late summer display of devils-bit
+        scabious flowers turbo-charges the nectar and pollen on offer to insects, and earlier in the flowering season
+        the star flower of chickweed wintergreen shows this area has never been ploughed.
+      </p>
+
+      <p>
+        In fact, many years ago this area was used as a gathering point for cattle drovers before heading to markets
+        near and far.
+      </p>
+
+      <p>
+        We’ve been fortunate to have the support of experts in plants, bugs, birds, fungi and herpetofauna (reptiles and
+        amphibians to you and me!)
+      </p>
+
+      <p>
+        Since the beginning volunteers have been the life blood of our park. Ordinary, local people have brought ideas
+        and energy in an extraordinary way. Could you be part of our team? Please consider volunteering in whatever way
+        you can, it’s a place that gets under your skin!
+      </p>
+
+      <p>
+        Ending on a high, in 2024 we were encouraged to enter the Scotland’s Finest Woods competition in the Best Small
+        Community Woodland category. After a visit from the judge and a long wait, we finally heard we won! A
+        representative of the Westmuir Community Development Trust went to the Scottish Parliament at Holyrood in
+        November 2024 to be given the award- a lovely cherrywood plaque. We also received £1,000 to spend on looking
+        after the woodland.
+      </p>
+
+      <p>
+        This was the most amazing boost to all the volunteers, past and present, who have helped care for this very
+        special place.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* A section to contain image beside text */
+  .content-image-text {
+    .content {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      padding-inline: 2rem;
+      gap: 3rem;
+    }
+    .content[image-end] {
+      flex-direction: row-reverse;
+    }
+
+    .content-image {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+    }
+    .content-text {
+      flex: 1;
+      background-color: #eec942;
+      color: #222;
+      padding: 2rem;
+      font-size: larger;
+      border-radius: 5px;
+    }
+  }
+
+  /* A section to contatin single column content */
+  .content-block-one {
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem;
+  }
+
+  .page-header {
+    height: 300px;
+    /* display: none; */
+    background-image: url(/.11ty/image/?src=./src/wcdt/woodland/walkway-1980.jpg&width=1980&format=jpeg&via=webc);
+    background-position: bottom;
+    background-size: cover;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header-info {
+    margin-inline: auto;
+
+    display: flex;
+    width: 100%;
+    padding-inline: 2.25rem;
+    max-inline-size: 1200px;
+    .content {
+      flex: 1;
+      display: flex;
+      max-width: 560px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      z-index: 2;
+      background: hsl(276, 50%, 35%);
+      clip-path: polygon(0 0, 100% 0, 100% 0%, 92% 100%, 0 100%);
+      clip-path: polygon(100% 0, 100% 31%, 92% 100%, 0 100%, 0 0);
+
+      padding: 24px 34px 24px 24px;
+      top: 100%;
+      left: 50%;
+      width: 95%;
+
+      > h1 {
+        font-family: 'Merriweather Sans', sans-serif;
+      }
+    }
+  }
+</style>

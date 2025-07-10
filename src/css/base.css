@@ -25,7 +25,8 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
 }
 
 .center {
@@ -149,7 +150,7 @@ img[width][height] {
 }
 
 .craft-title {
-  font-family: 'Comic Neue', 'Roboto', sans-serif;
+  font-family: 'Comic Neue', sans-serif;
   font-size: 2rem;
 }
 
