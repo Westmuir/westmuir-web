@@ -13,6 +13,7 @@
     flex-wrap: nowrap;
     align-items: center;
     display: flex;
+    z-index: 9;
   }
 
   .site-nav {

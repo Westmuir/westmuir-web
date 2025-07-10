@@ -1,11 +1,6 @@
 /* Layout Integrity */
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-}
 
-main {
+.main {
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
