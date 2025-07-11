@@ -477,11 +477,41 @@ img[width][height] {
   }
   .content-text {
     flex: 1;
-    background-color: #eec942;
-    color: #222;
+    color: var(--text-color, #777);
     padding: 2rem;
     font-size: larger;
     border-radius: 5px;
+    h4 {
+      font-size: 2rem;
+      font-family: 'Merriweather Sans', sans-serif;
+    }
+  }
+
+  .content-text-highlight {
+    background-color: #eec942;
+    color: #222;
+  }
+}
+
+.container-spacing[name='species-information'] {
+  margin-block: 4rem;
+}
+
+.container.light-bg {
+  background-color: hsl(120, 100%, 97%);
+}
+
+.species-facts {
+  font-size: 1.6rem;
+}
+
+[name='species-information'] {
+  h2 {
+    font-size: 2.5625rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+    line-height: 1.6;
   }
 }
 

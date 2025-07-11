@@ -1,5 +1,5 @@
 <section class="cta">
-  <a href="/volunteer/">
+  <a :href="buttonurl">
     <h2 @text="heading ?? 'Join the Westmuir Community'"></h2>
     <p @text="description ?? 'Get involved with events, news, and village life.'"></p>
     <a :href="buttonurl" class="btn" @text="buttonlabel" webc:if="buttonlabel && buttonurl"></a>
