@@ -2,6 +2,9 @@
 title: Volunteering.
 description:
 layout: plain
+eleventyNavigation:
+  key: Volunteers
+  parent: About
 ---
 
 <figure class="page-header">
