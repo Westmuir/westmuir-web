@@ -20,7 +20,7 @@ cardType: hall
       <div class="ci-strong item-text">Refreshments available</div>
       <div>Tel. 01575 573314 for more details.</div>
     </div>
-    <figure class="figure ml-12 max-w-lg d-ib">
+    <figure class="figure ml-12 max-w-sm d-ib">
       <img
         class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
         src="./src/images/craft-sew-2.png"
@@ -30,7 +30,7 @@ cardType: hall
     </figure>
   </div>
 
-  <figure class="lg-fl figure mr-12 max-w-lg">
+  <figure class="lg-fl figure mr-12 max-w-sm">
     <img
       class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
       src="./src/images/craft-paint-2.png"

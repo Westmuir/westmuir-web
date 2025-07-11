@@ -1,32 +1,71 @@
 ---js
 { title: "Welcome to Westmuir",
-layout: "base.webc",
+layout: "plain",
 cta: true,
 hero: false
 }
 ---
 
-<div class="center">
-  <img src="./src/images/westmuir-cortachy-header.jpg" alt="Welcome to Westmuir" webc:is="eleventy-image" />
+<figure class="page-header">
+  <img src="./src/images/east-bank.png" alt="East bank, Westmuir" webc:is="eleventy-image" />
+  <div class="page-header-info">
+    <div class="content">
+      <h1>Westmuir</h1>
+      <p>Welcome to Westmuir Village</p>
+    </div>
+  </div>
+</figure>
+
+<div class="container container-spacing" name="main-content">
+  <div class="section">
+    <h2 class="main-heading">Quick links</h2>
+    <nav-cards :@cards="$data.cards"></nav-cards>
+
+    <section class="hero" webc:if="false">
+      <div class="hero-content">
+        <h1>Welcome to Westmuir</h1>
+        <p>Discover the charm of our village, from events to local news.</p>
+        <a href="/about/" class="btn">Learn More</a>
+      </div>
+    </section>
+
+    <h2 class="main-heading">Latest</h2>
+
+    <postslist-articles :list="head(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-articles>
+
+    <postslist-cards :list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-cards>
+  </div>
 </div>
 
-<main class="main">
-  <h2 class="main-heading">Quick links</h2>
-  <nav-cards :@cards="$data.cards"></nav-cards>
-
-  <section class="hero" webc:if="false">
-    <div class="hero-content">
-      <h1>Welcome to Westmuir</h1>
-      <p>Discover the charm of our village, from events to local news.</p>
-      <a href="/about/" class="btn">Learn More</a>
+<div class="container" name="logos">
+  <div class="section">
+    <p>
+      Westmuir is host to a number of successful companies which operate throughout Angus and much further afield. The
+      links below offer contact details and may also lead to further information or to the relevant company website
+      where appropriate.
+    </p>
+    <div class="logos">
+      <div class="logo-item">
+        <a href="https://www.plovermuircottages.co.uk" target="_blank">
+          <img src="./src/images/Plovermuir_1.jpg" alt="Plovermuir cottages" webc:is="eleventy-image" />
+        </a>
+      </div>
+      <div class="logo-item">
+        <a href="https://www.garysinclairarchitecture.com/" target="_blank">
+          <img src="./src/images/Gary_Sinclair_1.jpg" alt="" webc:is="eleventy-image" />
+        </a>
+      </div>
+      <div class="logo-item">
+        <a href="https://angusscaffolding.co.uk/" target="_blank">
+          <img src="./src/images/Angus Scaffold.1.png" alt="" webc:is="eleventy-image" />
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <h2 class="main-heading">Latest</h2>
-
-  <postslist-articles :list="head(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-articles>
-
-  <postslist-cards :list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-cards>
-
-  <cta-volunteer buttonlabel="Read more" buttonurl="/volunteer/" webc:if="cta"></cta-volunteer>
-</main>
+<div class="container container-spacing" name="main-content">
+  <div class="section">
+    <cta-volunteer buttonlabel="Read more" buttonurl="/about/volunteers/" webc:if="cta"></cta-volunteer>
+  </div>
+</div>
