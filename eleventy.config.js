@@ -109,6 +109,7 @@ export default async function (eleventyConfig) {
     defaultAttributes: {
       loading: 'lazy',
       decoding: 'async',
+      class: 'carousel-slide',
     },
   });
 
