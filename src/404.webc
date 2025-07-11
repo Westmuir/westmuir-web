@@ -1,0 +1,12 @@
+---
+layout: plain
+permalink: 404.html
+---
+
+<div class="c-simple__hero">
+  <h1 id="page-not-found" class="c-heading-large">Sorry page not found</h1>
+  <p>
+    We’re sorry, that page doesn’t seem to exist. Please
+    <a class="c-simple__link" href="/">goto the home page</a>.
+  </p>
+</div>
