@@ -7,6 +7,8 @@
   --link-color: #1a73e8;
   --hover-color: #9699bb;
 
+  --content-light-bg: hsl(120, 100%, 97%);
+
   --cta-background-color: #6f3f70;
   --header-background-color: #6200ee;
   --header-text-color: #fff;
@@ -34,6 +36,8 @@ body.dark {
   --secondary-color: #03dac6;
   --text-color: #ffffff;
   --hover-color: #272832;
+
+  --content-light-bg: hsl(120, 12%, 27%);
 
   --background-color: #27272c;
   --link-color: #82b1ff;

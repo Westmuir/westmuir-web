@@ -498,7 +498,7 @@ img[width][height] {
 }
 
 .container.light-bg {
-  background-color: hsl(120, 100%, 97%);
+  background-color: var(--content-light-bg, hsl(120, 100%, 97%));
 }
 
 .species-facts {
