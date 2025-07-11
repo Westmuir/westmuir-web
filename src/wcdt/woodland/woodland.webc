@@ -9,6 +9,7 @@ eleventyNavigation:
 ---
 
 <figure class="page-header">
+  <img src="./src/wcdt/woodland/walkway-1980.jpg" alt="woodland walkway" webc:is="eleventy-image" />
   <div class="page-header-info">
     <div class="content">
       <h1>Woodland park</h1>
@@ -108,96 +109,11 @@ eleventyNavigation:
 </div>
 
 <style>
-  /* A section to contain image beside text */
-  .content-image-text {
-    .content {
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: row;
-      padding-inline: 2rem;
-      gap: 3rem;
-    }
-    .content[image-end] {
-      flex-direction: row-reverse;
-    }
-
-    .content-image {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      img {
-        box-shadow:
-          0 10px 15px -3px rgba(0, 0, 0, 0.1),
-          0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      }
-    }
-    .content-text {
-      flex: 1;
-      background-color: #eec942;
-      color: #222;
-      padding: 2rem;
-      font-size: larger;
-      border-radius: 5px;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .content-image-text {
-      .content {
-        flex-direction: column;
-      }
-    }
-  }
-
   /* A section to contatin single column content */
   .content-block-one {
     margin-top: 2rem;
     max-width: 1200px;
     margin-inline: auto;
     padding: 2rem;
-  }
-
-  .page-header {
-    height: 300px;
-    background-color: darkviolet;
-    background-image: url(/images/walkway-1980.jpg);
-    background-position: bottom;
-    background-size: cover;
-    color: #fff;
-
-    display: flex;
-    align-items: center;
-  }
-
-  .page-header-info {
-    margin-inline: auto;
-
-    display: flex;
-    width: 100%;
-    padding-inline: 2.25rem;
-    max-inline-size: 1200px;
-    .content {
-      flex: 1;
-      display: flex;
-      max-width: 560px;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-      z-index: 2;
-      background: hsl(276, 50%, 35%);
-      clip-path: polygon(0 0, 100% 0, 100% 0%, 92% 100%, 0 100%);
-      clip-path: polygon(100% 0, 100% 31%, 92% 100%, 0 100%, 0 0);
-
-      padding: 24px 34px 24px 24px;
-      top: 100%;
-      left: 50%;
-      width: 95%;
-
-      > h1 {
-        font-family: 'Merriweather Sans', sans-serif;
-      }
-    }
   }
 </style>

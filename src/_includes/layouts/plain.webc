@@ -49,10 +49,12 @@ layers: [reset]
   </head>
 
   <body tabindex="-1">
-    <site-header :@pageurl="page.url"></site-header>
-    <main @raw="content"></main>
+    <div class="page-wrapper">
+      <site-header :@pageurl="page.url"></site-header>
+      <main class="main" @raw="content"></main>
 
-    <site-footer></site-footer>
+      <site-footer></site-footer>
+    </div>
     <script :src="getBundleFileUrl('js')" webc:keep></script>
   </body>
 </html>

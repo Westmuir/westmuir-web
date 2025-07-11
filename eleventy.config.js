@@ -11,7 +11,7 @@ import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
 import browserslist from 'browserslist';
-import { browserslistToTargets, transform } from 'lightningcss';
+import { browserslistToTargets, Features, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
@@ -78,6 +78,7 @@ export default async function (eleventyConfig) {
               minify: false,
               sourceMap: false,
               targets,
+              exclude: Features.LogicalProperties,
             });
             return code;
           }

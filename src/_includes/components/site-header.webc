@@ -6,10 +6,14 @@
 </header>
 
 <style>
-  .site-header {
-    background: var(--primary-color);
+  site-header {
+    z-index: 1000;
     position: sticky;
     top: 0;
+  }
+  .site-header {
+    background: var(--primary-color);
+
     flex-wrap: nowrap;
     align-items: center;
     display: flex;
