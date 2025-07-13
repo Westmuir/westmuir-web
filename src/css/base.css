@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
@@ -7,9 +8,9 @@
 }
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
-  font-weight: normal;
+  font-weight: var(--font-size-4);
   font-style: normal;
-  font-size: 24px;
+  font-size: var(--font-size-1);
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;

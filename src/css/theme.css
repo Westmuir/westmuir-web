@@ -74,7 +74,7 @@ a {
 
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
-  font-size: 28px;
+  font-size: var(--font-size-7);
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;

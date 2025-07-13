@@ -1,5 +1,5 @@
 ---
-layers: [reset]
+layers: [props,reset]
 ---
 
 <!doctype html>
@@ -15,6 +15,7 @@ layers: [reset]
     />
 
     <link rel="stylesheet" href="../../css/components/reset.css" webc:bucket="reset" />
+    <link rel="stylesheet" href="../../css/open-props.css" webc:bucket="props" />
     <link rel="stylesheet" href="../../css/components/layout.css" />
     <link rel="stylesheet" href="../../css/base.css" />
     <link rel="stylesheet" href="../../css/theme.css" />
