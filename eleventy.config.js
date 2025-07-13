@@ -78,7 +78,7 @@ export default async function (eleventyConfig) {
       transforms: [
         async function (content) {
           if (this.type === 'css') {
-                const result = await postcss([postcssJit(OpenProps)]).process(content, {
+            const result = await postcss([postcssJit(OpenProps)]).process(content, {
               from: this.page.inputPath,
               to: null,
             });

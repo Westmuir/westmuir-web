@@ -1,7 +1,4 @@
 {
   "css.validate": false,
-  "scss.validate": false,
-  "[liquid]": {
-    "editor.formatOnSave": true
-  }
+  "scss.validate": false
 }
