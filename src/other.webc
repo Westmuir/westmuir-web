@@ -1,6 +1,6 @@
 ---
 title: Other
-layout: base.webc
+layout: plain
 description: Other stuff.
 eleventyNavigation:
   key: Other

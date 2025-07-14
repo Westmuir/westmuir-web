@@ -1,6 +1,6 @@
 ---
 title: Mission
-layout: base
+layout: plain
 eleventyNavigation:
   key: Mission
   parent: About

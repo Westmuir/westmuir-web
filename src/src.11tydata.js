@@ -1,3 +1,3 @@
 export default {
-  layout: 'base',
+  layout: 'plain',
 };

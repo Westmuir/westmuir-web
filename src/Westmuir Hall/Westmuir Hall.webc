@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: plain
 title: Westmuir Village Hall
 
 eleventyNavigation:

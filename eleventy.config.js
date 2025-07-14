@@ -19,6 +19,7 @@ import OpenProps from 'open-props';
 import pluginFilters from './_config/filters.js';
 
 import postcss from 'postcss';
+import postcssImport from 'postcss-import';
 import postcssJit from 'postcss-jit-props';
 
 function configureMarkdownIt() {
@@ -78,7 +79,7 @@ export default async function (eleventyConfig) {
       transforms: [
         async function (content) {
           if (this.type === 'css') {
-            const result = await postcss([postcssJit(OpenProps)]).process(content, {
+            const result = await postcss([postcssImport(), postcssJit(OpenProps)]).process(content, {
               from: this.page.inputPath,
               to: null,
             });
@@ -126,7 +127,6 @@ export default async function (eleventyConfig) {
     defaultAttributes: {
       loading: 'lazy',
       decoding: 'async',
-      class: 'carousel-slide',
     },
   });
 
