@@ -1,0 +1,171 @@
+<style>
+  .carousel {
+    position: relative;
+    overflow: hidden;
+
+    picture {
+      min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: var(--md-sys-color-surface-container-high, #fff);
+    color: var(--md-sys-color-on-surface, #000);
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.2),
+      0 2px 6px rgba(0, 0, 0, 0.2);
+    transition:
+      background 0.3s,
+      transform 0.2s ease-in-out;
+  }
+
+  .carousel-nav:hover {
+    background: var(--md-sys-color-surface-container-highest, #eee);
+    transform: scale(1.05);
+  }
+
+  .carousel-prev {
+    left: 1rem;
+  }
+  .carousel-next {
+    right: 1rem;
+  }
+
+  .carousel-nav svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  .carousel-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+  }
+
+  .carousel-dot.active {
+    opacity: 1;
+    background: var(--md-sys-color-primary, #6200ee);
+  }
+</style>
+
+<div class="carousel" id="heroCarousel">
+  <div class="carousel-track">
+    <slot></slot>
+  </div>
+
+  <button class="carousel-nav carousel-prev" aria-label="Previous slide">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" /></svg>
+  </button>
+
+  <button class="carousel-nav carousel-next" aria-label="Next slide">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z" /></svg>
+  </button>
+
+  <div class="carousel-dots" aria-label="Slide navigation"></div>
+
+  <script>
+    const carousel = document.getElementById('heroCarousel');
+    const track = carousel.querySelector('.carousel-track');
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    let index = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.classList.add('carousel-dot');
+      if (i === 0) dot.classList.add('active');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => {
+        index = i;
+        updateCarousel();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    carousel.querySelector('.carousel-prev').addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    carousel.querySelector('.carousel-next').addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    });
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    }, 5000);
+
+    // Touch swipe support
+    let startX = 0;
+    let isSwiping = false;
+
+    track.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+      isSwiping = true;
+    });
+
+    track.addEventListener('touchend', e => {
+      if (!isSwiping) return;
+      const endX = e.changedTouches[0].clientX;
+      const deltaX = endX - startX;
+      const threshold = 50;
+
+      if (deltaX > threshold) {
+        index = (index - 1 + slides.length) % slides.length;
+      } else if (deltaX < -threshold) {
+        index = (index + 1) % slides.length;
+      }
+
+      updateCarousel();
+      isSwiping = false;
+    });
+  </script>
+</div>
