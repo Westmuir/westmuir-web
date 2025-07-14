@@ -21,10 +21,6 @@ description: Learn about the Westmuir Community Development Trust and the Woodla
 <div class="content-image-text">
   <div class="content">
     <div class="content-image">
-      <hero-carousel>
-        <img class="carousel-slide" src="./src/wcdt/woodland/birds-foot-trefoil.png" alt="" webc:is="eleventy-image" />
-        <img class="carousel-slide" src="./src/wcdt/woodland/ling.png" alt="ling" webc:is="eleventy-image" />
-      </hero-carousel>
       <figure>
         <img
           class="bg-yellow-100 sm-p-3 shadow-lg"
