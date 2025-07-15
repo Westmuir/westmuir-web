@@ -63,8 +63,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './public/pdf': '/pdf',
     './src/css/custom.woff2': '/bundle/custom.woff2',
-    './src/images': '/images',
-    './node_modules/open-props/open-props.min.css': '/css/open-props.min.css',
   });
 
   // Watch CSS files

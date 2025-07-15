@@ -33,7 +33,7 @@ cardType: hall
   <figure class="lg-fl figure mr-12 max-w-sm">
     <img
       class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
-      src="./src/images/craft-paint-2.png"
+      src="./src/blog/craft-club/craft-paint-2.png"
       alt="Craft paint"
       webc:is="eleventy-image"
     />
