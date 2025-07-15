@@ -1,6 +1,6 @@
 ---
 title: About
-layout: base.webc
+layout: plain
 eleventyNavigation:
   key: About
   title: About Us

@@ -4,7 +4,7 @@ description: A Creative craft club in the village hall on Monday afternoons.
 date: 2025-07-03
 tags: hall
 categories: [hall, featured]
-image: src/images/craft-wool.png
+image: src/blog/craft-club/craft-wool.png
 cardType: hall
 ---
 
@@ -14,7 +14,7 @@ cardType: hall
   <div class="craft-club-wrapper">
     <div class="craft-club-info">
       <strong>Weekly from Monday 4th September, 2023</strong>
-      <img src="./src/images/craft-wool.png" alt="Craft wool" webc:is="eleventy-image" />
+      <img src="./src/blog/craft-club/craft-wool.png" alt="Craft wool" webc:is="eleventy-image" />
 
       <div class="ci-strong item-text">2pm - 4pm</div>
       <div class="ci-strong item-text">Refreshments available</div>
@@ -23,7 +23,7 @@ cardType: hall
     <figure class="figure ml-12 max-w-sm d-ib">
       <img
         class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
-        src="./src/images/craft-sew-2.png"
+        src="./src/blog/craft-club/craft-sew-2.png"
         alt="Craft sew"
         webc:is="eleventy-image"
       />
@@ -33,7 +33,7 @@ cardType: hall
   <figure class="lg-fl figure mr-12 max-w-sm">
     <img
       class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
-      src="./src/images/craft-paint-2.png"
+      src="./src/blog/craft-club/craft-paint-2.png"
       alt="Craft paint"
       webc:is="eleventy-image"
     />

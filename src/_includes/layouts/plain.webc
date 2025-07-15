@@ -1,5 +1,5 @@
 ---
-layers: [reset]
+layers: [openprops, reset]
 ---
 
 <!doctype html>
@@ -14,7 +14,8 @@ layers: [reset]
       webc:keep
     />
 
-    <link rel="stylesheet" href="../../css/components/reset.css" webc:bucket="reset" />
+    <link rel="stylesheet" href="../../../node_modules/open-props/normalize.min.css" webc:bucket="openprops" />
+
     <link rel="stylesheet" href="../../css/components/layout.css" />
     <link rel="stylesheet" href="../../css/base.css" />
     <link rel="stylesheet" href="../../css/theme.css" />
@@ -24,18 +25,18 @@ layers: [reset]
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Westmuir Village Website" />
     <title @text="title ?? 'Westmuir Village'"></title>
-
-    <!-- <style>@layer reset, config, default, etc;</style> -->
+    <style></style>
+    <!--- <style>@layer reset, config, default, etc;</style> --->
     <style webc:keep @raw="`@layer ${($data.layers).join(', ')};`"></style>
 
-    <!-- <style>@import url('bucket-name.css') layer(bucket-name);</style> -->
+    <!--- <style>@import url('bucket-name.css') layer(bucket-name);</style> --->
     <style
       webc:keep
       webc:for="layer of ($data.layers)"
       @raw="`@import url(${getBundleFileUrl('css', layer)}) layer(${layer});`"
     ></style>
 
-    <!-- <style>@import url('bucket-name.css'); the non-bucketed styles for now </style>   -->
+    <!--- <style>@import url('bucket-name.css'); the non-bucketed styles for now </style>   --->
     <style webc:keep @raw="`@import url(${getBundleFileUrl('css')});`"></style>
 
     <link
@@ -43,9 +44,6 @@ layers: [reset]
       rel="stylesheet"
       webc:keep
     />
-
-    <script type="module" src="../../scripts/theme-toggle.js"></script>
-    <script type="module" src="../../scripts/nav-toggle.js"></script>
   </head>
 
   <body tabindex="-1">

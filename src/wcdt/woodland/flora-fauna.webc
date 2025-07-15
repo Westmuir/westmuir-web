@@ -9,7 +9,7 @@ eleventyNavigation:
 ---
 
 <figure class="page-header">
-  <img src="./src/wcdt/woodland/woodland-oak-1980.png" alt="woodland walkway" webc:is="eleventy-image" />
+  <img src="./src/wcdt/woodland/woodland-oak-1980.avif" alt="woodland walkway" webc:is="eleventy-image" />
   <div class="page-header-info">
     <div class="content">
       <h1>Flora & Fauna</h1>
@@ -29,7 +29,7 @@ eleventyNavigation:
           <figure class="figure">
             <img
               class="figure-image"
-              src="./src/wcdt/woodland/birds-foot-trefoil.png"
+              src="./src/wcdt/woodland/birds-foot-trefoil.avif"
               alt=""
               webc:is="eleventy-image"
             />
@@ -45,7 +45,7 @@ eleventyNavigation:
       <li class="grid-item">
         <a href="/wcdt/woodland/flora/ling/" class="card-link">
           <figure class="figure">
-            <img class="figure-image" src="./src/wcdt/woodland/ling.png" alt="" webc:is="eleventy-image" />
+            <img class="figure-image" src="./src/wcdt/woodland/ling.avif" alt="" webc:is="eleventy-image" />
             <div class="overlay"></div>
             <figcaption class="caption">
               <div class="caption-content">
