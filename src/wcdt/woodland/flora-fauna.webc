@@ -157,4 +157,12 @@ eleventyNavigation:
       }
     }
   }
+
+  @media (--md-n-below) {
+    .section.grid-cards {
+      .grid {
+        grid-template-columns: auto auto;
+      }
+    }
+  }
 </style>

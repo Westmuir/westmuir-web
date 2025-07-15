@@ -37,7 +37,7 @@ footer {
 }
 
 /* Responsive Tweaks */
-@media (max-width: 768px) {
+@media (--md-n-below) {
   .hero-content {
     padding: 1rem;
     text-align: center;

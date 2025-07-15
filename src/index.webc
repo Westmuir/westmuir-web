@@ -52,12 +52,22 @@ hero: false
       </div>
       <div class="logo-item">
         <a href="https://www.garysinclairarchitecture.com/" target="_blank">
-          <img src="./src/images/Gary_Sinclair_1.jpg" alt="" webc:is="eleventy-image" width="200" />
+          <img
+            src="./src/images/Gary_Sinclair_1.jpg"
+            alt="Gary Sinclair architecture"
+            webc:is="eleventy-image"
+            width="200"
+          />
         </a>
       </div>
       <div class="logo-item">
         <a href="https://angusscaffolding.co.uk/" target="_blank">
-          <img src="./src/images/Angus Scaffold.1.png" alt="" webc:is="eleventy-image" width="200" />
+          <img
+            src="./src/images/Angus Scaffold.1.png"
+            alt="Angus Scaffolding Ltd"
+            webc:is="eleventy-image"
+            width="200"
+          />
         </a>
       </div>
     </div>

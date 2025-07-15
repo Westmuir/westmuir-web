@@ -236,7 +236,7 @@
     }
   }
 
-  @media (max-width: 700px) {
+  @media (--md-n-below) {
     #open-nav-button,
     #close-nav-button {
       display: block;

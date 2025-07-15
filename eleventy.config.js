@@ -66,7 +66,7 @@ export default async function (eleventyConfig) {
   });
 
   // Watch CSS files
-  eleventyConfig.addWatchTarget('css/**/*.css');
+  eleventyConfig.addWatchTarget('./src/css/**/*.css');
 
   let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
 
@@ -83,6 +83,9 @@ export default async function (eleventyConfig) {
               sourceMap: false,
               targets,
               exclude: Features.LogicalProperties,
+              drafts: {
+                customMedia: true,
+              },
             });
 
             return code;
