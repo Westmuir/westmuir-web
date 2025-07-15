@@ -157,4 +157,12 @@ eleventyNavigation:
       }
     }
   }
+
+  @media screen and (max-width: 760px) {
+    .section.grid-cards {
+      .grid {
+        grid-template-columns: auto auto;
+      }
+    }
+  }
 </style>

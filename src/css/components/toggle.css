@@ -27,7 +27,7 @@
 }
 
 /* Show hamburger on small screens */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .nav-toggle {
     display: block;
   }
