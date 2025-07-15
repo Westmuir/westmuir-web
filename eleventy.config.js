@@ -19,7 +19,6 @@ import OpenProps from 'open-props';
 import pluginFilters from './_config/filters.js';
 
 import postcss from 'postcss';
-import postcssImport from 'postcss-import';
 import postcssJit from 'postcss-jit-props';
 
 function configureMarkdownIt() {
@@ -79,17 +78,6 @@ export default async function (eleventyConfig) {
       transforms: [
         async function (content) {
           if (this.type === 'css') {
-            const result = await postcss([postcssImport(), postcssJit(OpenProps)]).process(content, {
-              from: this.page.inputPath,
-              to: null,
-            });
-
-            return result.css;
-          }
-          return content;
-        },
-        async function (content) {
-          if (this.type === 'css') {
             let { code } = transform({
               filename: 'bundle.css',
               code: Buffer.from(content), //r.toString()),
@@ -98,7 +86,19 @@ export default async function (eleventyConfig) {
               targets,
               exclude: Features.LogicalProperties,
             });
+
             return code;
+          }
+          return content;
+        },
+        async function (content) {
+          if (this.type === 'css') {
+            const result = await postcss([postcssJit(OpenProps)]).process(content, {
+              from: this.page.inputPath,
+              to: null,
+            });
+
+            return result.css;
           }
           return content;
         },

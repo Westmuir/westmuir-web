@@ -26,17 +26,17 @@ layers: [openprops, reset]
     <meta name="description" content="Westmuir Village Website" />
     <title @text="title ?? 'Westmuir Village'"></title>
     <style></style>
-    <!-- <style>@layer reset, config, default, etc;</style> -->
+    <!--- <style>@layer reset, config, default, etc;</style> --->
     <style webc:keep @raw="`@layer ${($data.layers).join(', ')};`"></style>
 
-    <!-- <style>@import url('bucket-name.css') layer(bucket-name);</style> -->
+    <!--- <style>@import url('bucket-name.css') layer(bucket-name);</style> --->
     <style
       webc:keep
       webc:for="layer of ($data.layers)"
       @raw="`@import url(${getBundleFileUrl('css', layer)}) layer(${layer});`"
     ></style>
 
-    <!-- <style>@import url('bucket-name.css'); the non-bucketed styles for now </style>   -->
+    <!--- <style>@import url('bucket-name.css'); the non-bucketed styles for now </style>   --->
     <style webc:keep @raw="`@import url(${getBundleFileUrl('css')});`"></style>
 
     <link
