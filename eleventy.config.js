@@ -83,6 +83,9 @@ export default async function (eleventyConfig) {
               sourceMap: false,
               targets,
               exclude: Features.LogicalProperties,
+              drafts: {
+                customMedia: true,
+              },
             });
 
             return code;

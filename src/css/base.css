@@ -286,7 +286,7 @@ img[width][height] {
   transform: scale(2);
 }
 
-@media (min-width: 700px) {
+@media (--md-n-above) {
   .lg-fl {
     float: left;
   }
@@ -528,7 +528,7 @@ img[width][height] {
   }
 }
 
-@media (max-width: 700px) {
+@media (--md-n-below) {
   .content-image-text {
     .content {
       flex-direction: column;

@@ -158,7 +158,7 @@ eleventyNavigation:
     }
   }
 
-  @media screen and (max-width: 760px) {
+  @media (--md-n-below) {
     .section.grid-cards {
       .grid {
         grid-template-columns: auto auto;

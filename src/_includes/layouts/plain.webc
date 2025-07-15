@@ -16,6 +16,9 @@ layers: [openprops]
 
     <link rel="stylesheet" href="../../../node_modules/open-props/normalize.min.css" webc:bucket="openprops" />
 
+    <!--- media queries cannot be in openprops bucket as 11ty needs them when it bundles css that uses them --->
+    <!--- they will be optimized away in the bundling process -->
+    <link rel="stylesheet" href="../../../node_modules/open-props/media.min.css" />
     <link rel="stylesheet" href="../../css/components/layout.css" />
     <link rel="stylesheet" href="../../css/base.css" />
     <link rel="stylesheet" href="../../css/theme.css" />

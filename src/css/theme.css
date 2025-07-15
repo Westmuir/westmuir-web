@@ -1,5 +1,5 @@
 :root {
-  --primary-color: light-dark(#6200ee, #bb86fc);
+  --primary-color: light-dark(var(--violet-10), var(--purple-9));
 
   --primary-color-darker: light-dark(hsl(265, 100%, 40%), #ab6afb);
 
@@ -8,10 +8,10 @@
   --background-color: light-dark(#ffffff, #272832);
   --hover-color: light-dark(#9699bb, #9699bb);
   --content-light-bg: light-dark(hsl(120, 100%, 97%), hsl(120, 12%, 27%));
-  --cta-background-color: light-dark(#6f3f70, #d073d4);
+  --cta-background-color: light-dark(#6f3f70, var(--purple-9));
 
-  --header-background-color: light-dark(#6200ee, #bb86fc);
-  --header-text-color: light-dark(#fff, #fff);
+  --header-background-color: light-dark(var(--violet-10), var(--purple-9));
+  --header-text-color: light-dark(var(--violet-0), var(--purple-1));
 
   --footer-background-color: light-dark(#f1f1f1, #1a1a1a);
   --footer-text-color: light-dark(#424242, #bdbdbd);
