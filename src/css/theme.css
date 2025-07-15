@@ -30,7 +30,7 @@
   --elevation: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-body.dark {
+[data-theme='dark'] {
   --primary-color: #bb86fc;
   --primary-color-darker: #ab6afb;
   --secondary-color: #03dac6;

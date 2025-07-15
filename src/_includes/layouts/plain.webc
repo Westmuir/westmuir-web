@@ -16,8 +16,6 @@ layers: [openprops, reset]
 
     <link rel="stylesheet" href="../../../node_modules/open-props/normalize.min.css" webc:bucket="openprops" />
 
-    <link rel="stylesheet" href="../../css/components/reset.css" webc:bucket="reset" />
-
     <link rel="stylesheet" href="../../css/components/layout.css" />
     <link rel="stylesheet" href="../../css/base.css" />
     <link rel="stylesheet" href="../../css/theme.css" />
