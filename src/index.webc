@@ -7,7 +7,7 @@ hero: false
 ---
 
 <figure class="page-header">
-  <img src="./src/images/east-bank.png" alt="East bank, Westmuir" webc:is="eleventy-image" />
+  <img src="./src/images/east-bank.avif" alt="East bank, Westmuir" webc:is="eleventy-image" />
   <div class="page-header-info">
     <div class="content">
       <h1>Westmuir</h1>
@@ -69,4 +69,3 @@ hero: false
     <cta-volunteer buttonlabel="Read more" buttonurl="/about/volunteers/" webc:if="cta"></cta-volunteer>
   </div>
 </div>
-

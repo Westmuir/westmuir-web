@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
 });
 
-document.getElementById('theme-toggle').addEventListener('click', () => {
+document.getElementById('theme-toggle')?.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   const theme = document.body.classList.contains('dark') ? 'dark' : 'light';
 

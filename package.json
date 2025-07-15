@@ -3,10 +3,10 @@
   "type": "module",
   "version": "202507-2",
   "scripts": {
-    "start": "eleventy --serve --incremental --quiet",
+    "start": "eleventy --serve  --quiet",
     "debug": "eleventy --serve ",
     "build": "eleventy",
-    "clean": "rimraf ./_site"
+    "clean": "rimraf \"site/**/* ./site/!(images/**/*)\"  --glob"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
