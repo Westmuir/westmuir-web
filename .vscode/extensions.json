@@ -4,6 +4,7 @@
     "editorconfig.editorconfig",
     "ronnidc.nunjucks",
     "stylelint.vscode-stylelint",
-    "sissel.shopify-liquid"
+    "sissel.shopify-liquid",
+    "phoenisx.cssvar"
   ]
 }

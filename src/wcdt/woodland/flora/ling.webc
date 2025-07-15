@@ -5,7 +5,7 @@ description: Learn about the Westmuir Community Development Trust and the Woodla
 ---
 
 <figure class="page-header" op-center>
-  <img src="./src/wcdt/woodland/ling.png" alt="ling" webc:is="eleventy-image" />
+  <img src="./src/wcdt/woodland/ling.avif" alt="ling" webc:is="eleventy-image" />
   <div class="page-header-info">
     <div class="content">
       <h1>Ling</h1>
@@ -24,7 +24,7 @@ description: Learn about the Westmuir Community Development Trust and the Woodla
       <figure>
         <img
           class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="./src/wcdt/woodland/ling.png"
+          src="./src/wcdt/woodland/ling.avif"
           alt=""
           webc:is="eleventy-image"
         />

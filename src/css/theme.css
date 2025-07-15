@@ -30,7 +30,7 @@
   --elevation: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-body.dark {
+[data-theme='dark'] {
   --primary-color: #bb86fc;
   --primary-color-darker: #ab6afb;
   --secondary-color: #03dac6;
@@ -74,19 +74,8 @@ a {
 
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
-  font-size: 28px;
+  font-size: var(--font-size-5);
   transition:
     opacity 0.3s ease,
     transform 0.3s ease;
-}
-
-.toggle-fade {
-  opacity: 0;
-  transform: scale(0.6);
-}
-
-@media (max-width: 600px) {
-  .theme-toggle span#darkmode-label {
-    display: none;
-  }
 }

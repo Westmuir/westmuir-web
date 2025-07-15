@@ -15,7 +15,11 @@ import { browserslistToTargets, Features, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
+import OpenProps from 'open-props';
 import pluginFilters from './_config/filters.js';
+
+import postcss from 'postcss';
+import postcssJit from 'postcss-jit-props';
 
 function configureMarkdownIt() {
   return markdownit({ html: true })
@@ -59,7 +63,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './public/pdf': '/pdf',
     './src/css/custom.woff2': '/bundle/custom.woff2',
-    './src/images': '/images',
   });
 
   // Watch CSS files
@@ -74,13 +77,26 @@ export default async function (eleventyConfig) {
         async function (content) {
           if (this.type === 'css') {
             let { code } = transform({
-              code: Buffer.from(content),
+              filename: 'bundle.css',
+              code: Buffer.from(content), //r.toString()),
               minify: false,
               sourceMap: false,
               targets,
               exclude: Features.LogicalProperties,
             });
+
             return code;
+          }
+          return content;
+        },
+        async function (content) {
+          if (this.type === 'css') {
+            const result = await postcss([postcssJit(OpenProps)]).process(content, {
+              from: this.page.inputPath,
+              to: null,
+            });
+
+            return result.css;
           }
           return content;
         },
