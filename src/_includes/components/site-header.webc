@@ -1,5 +1,6 @@
 <header class="site-header">
   <site-nav class="site-nav" :@pageurl="pageurl"></site-nav>
+  <theme-toggle></theme-toggle>
 </header>
 
 <style>

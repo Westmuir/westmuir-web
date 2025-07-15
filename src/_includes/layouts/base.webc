@@ -1,5 +1,5 @@
 ---
-layers: [props,reset]
+layers: [props, reset]
 ---
 
 <!doctype html>
@@ -44,8 +44,6 @@ layers: [props,reset]
       rel="stylesheet"
       webc:keep
     />
-    <script type="module" src="../../scripts/theme-toggle.js"></script>
-    <script type="module" src="../../scripts/nav-toggle.js"></script>
   </head>
 
   <body tabindex="-1">
