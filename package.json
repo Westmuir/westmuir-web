@@ -6,7 +6,8 @@
     "start": "eleventy --serve  --quiet",
     "debug": "eleventy --serve ",
     "build": "eleventy",
-    "clean": "rimraf \"site/**/* ./site/!(images/**/*)\"  --glob"
+    "clean": "del  './_site/**/*' '!./_site/img'",
+    "fullclean": "del  './_site'"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
@@ -15,6 +16,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
     "browserslist": "^4.25.1",
+    "del-cli": "^6.0.0",
     "eleventy-plugin-purgecss": "^0.5.0",
     "htl": "^0.3.1",
     "lightningcss": "^1.30.1",
