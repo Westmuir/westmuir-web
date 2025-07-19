@@ -7,7 +7,7 @@
 }
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
-  font-weight: var(--font-size-4);
+  font-weight: var(--font-weight-5);
   font-style: normal;
   font-size: var(--font-size-1);
   line-height: 1;
@@ -21,6 +21,14 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'liga';
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+a {
+  color: var(--link-color);
 }
 
 html {
@@ -45,7 +53,14 @@ body {
 body {
   margin: 0;
   line-height: 1.6;
-  font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+  font-family: var(--font-classical-humanist);
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacing, 1em);
 }
 
 .center {

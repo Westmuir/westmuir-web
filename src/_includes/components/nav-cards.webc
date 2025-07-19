@@ -3,7 +3,7 @@
     <a :href="item.url">
       <div class="section-cards-title">
         <img webc:if="item.image" src="{{ item.image }}" alt="{{ item.label }} image" class="card-image" />
-        <div webc:else class="material-symbols-outlined icon" @raw="item.icon"></div>
+        <div webc:else class="material-symbols-outlined" @raw="item.icon"></div>
         <h3 @text="item.label"></h3>
       </div>
       <p @text="item.description"></p>
@@ -12,29 +12,32 @@
 </ul>
 
 <style>
-  .section-cards {
+  ul.section-cards {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space, 1rem);
     justify-content: flex-start;
+
+    list-style-type: none;
+    margin-block: var(--size-1);
+    padding: 0;
 
     .section-cards-title {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 0.5rem;
+
+      > div {
+        font-size: var(--font-size-6);
+        margin-bottom: var(--size-2);
+      }
     }
 
     a {
       text-decoration: none;
       color: inherit;
     }
-  }
-
-  ul.section-cards {
-    list-style-type: '';
-    margin: 5px 0 0 0;
-    padding: 0;
 
     li {
       display: inline-block;
@@ -59,7 +62,7 @@
   }
 
   .section-card {
-    width: 150px;
+    width: 18ch;
     overflow: hidden;
     background-color: var(--background-color, #fff);
 
@@ -70,17 +73,12 @@
 
     h3 {
       margin-top: 0;
-      font-size: medium;
+      font-size: var(--font-size-3);
     }
 
     p {
       margin-top: 0;
       font-size: smaller;
-    }
-
-    .icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
     }
   }
 </style>

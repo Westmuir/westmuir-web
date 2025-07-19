@@ -51,7 +51,7 @@ layers: [openprops]
   <body tabindex="-1">
     <div class="page-wrapper">
       <site-header :@pageurl="page.url"></site-header>
-      <main class="main" @raw="content"></main>
+      <main class="flow" @raw="content"></main>
 
       <site-footer></site-footer>
     </div>
