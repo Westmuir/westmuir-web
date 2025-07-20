@@ -3,22 +3,18 @@ title: Lizards
 layout: plain
 ---
 
-<figure class="page-header" op-top>
-  <img src="./src/wcdt/woodland/fauna/lizard.avif" alt="lizard" webc:is="eleventy-image" />
-  <div class="page-header-info">
-    <div class="content">
-      <h1>Lizard</h1>
-      <p>Viviparous lizard</p>
+<div class="content-grid flow">
+  <figure class="page-header full-width-content" op-top>
+    <img src="./src/wcdt/woodland/fauna/lizard.avif" alt="lizard" webc:is="eleventy-image" />
+    <div class="page-header-info">
+      <div class="content">
+        <h1>Lizard</h1>
+        <p>Viviparous lizard</p>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<div class="container container-spacing" name="main-content">
-  <div class="section grid-cards"></div>
-</div>
-
-<div class="content-image-text">
-  <div class="content">
+  <section class="breakout content-image-text">
     <div class="content-image">
       <figure>
         <img
@@ -29,29 +25,31 @@ layout: plain
         />
       </figure>
     </div>
-    <div class="content-text bg-revert">
+    <div class="content-text bg-revert species-facts">
       <h4>Species Facts</h4>
-      <ul class="species-facts">
+      <ul>
         <li><strong>Category: </strong>Reptile</li>
         <li><strong>Scientific name: </strong>Viviparous lizard</li>
         <li><strong>Length: </strong>typically 10&ndash;15cm</li>
         <li><strong>Status: </strong>Common</li>
       </ul>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="container container-spacing light-bg" name="species-information">
-  <div class="section species-information">
-    <h2>Species information</h2>
-    <div>
-      <h4>&nbsp;</h4>
-      <h4>Identification</h4>
-      <p>They are often found in open, sunny areas like heaths, moorlands, and dry stone walls.</p>
-      <p><strong>Viviparous</strong> means they give birth to live young, not eggs.</p>
-      <hr />
-      <h4>Distribution</h4>
-      <p>Common in Scotland</p>
+  <section class="breakout light-bg">
+    <div class="light-bg" name="species-information">
+      <div class="section species-information">
+        <h2>Species information</h2>
+        <div>
+          <h4>&nbsp;</h4>
+          <h4>Identification</h4>
+          <p>They are often found in open, sunny areas like heaths, moorlands, and dry stone walls.</p>
+          <p><strong>Viviparous</strong> means they give birth to live young, not eggs.</p>
+          <hr />
+          <h4>Distribution</h4>
+          <p>Common in Scotland</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </div>

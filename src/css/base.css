@@ -424,6 +424,8 @@ img[width][height] {
   align-items: center;
   position: relative;
 
+  margin-bottom: var(--size-5);
+
   > picture {
     position: absolute;
     top: 0;
@@ -478,15 +480,14 @@ img[width][height] {
 }
 
 /* A section to contain image beside text */
+
 .content-image-text {
-  .content {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    padding-inline: 2rem;
-    gap: 3rem;
-  }
-  .content[image-end] {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-block: var(--size-5);
+
+  &[image-end] {
     flex-direction: row-reverse;
   }
 
@@ -498,26 +499,23 @@ img[width][height] {
     align-items: center;
 
     img {
+      border-radius: var(--radius-2);
       box-shadow:
         0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
   }
+
   .content-text {
     flex: 1;
     color: var(--text-color, #777);
-    padding: 2rem;
-    font-size: larger;
+    font-size: var(--font-size-2);
     border-radius: 5px;
-    h4 {
-      font-size: 2rem;
-      font-family: 'Merriweather Sans', sans-serif;
-    }
-  }
 
-  .content-text-highlight {
-    background-color: #eec942;
-    color: #222;
+    .content-text-highlight {
+      background-color: #eec942;
+      color: #222;
+    }
   }
 }
 
@@ -525,12 +523,18 @@ img[width][height] {
   margin-block: 4rem;
 }
 
-.container.light-bg {
+.light-bg {
   background-color: var(--content-light-bg, hsl(120, 100%, 97%));
 }
 
 .species-facts {
-  font-size: var(--font-size-4);
+  h4 {
+    font-size: var(--font-size-5);
+    font-family: var(--woodland-info-font);
+  }
+  ul {
+    font-size: var(--font-size-3);
+  }
 }
 
 .species-information {
@@ -551,9 +555,7 @@ img[width][height] {
 
 @media (--md-n-below) {
   .content-image-text {
-    .content {
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
 }
 
@@ -585,4 +587,35 @@ img[width][height] {
 
 .container[name='logos'] > section {
   background-color: #eec942;
+}
+
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 70ch;
+  --breakout-max-width: 95ch;
+
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width))
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width, .full-width-content),
+.full-width > :not(.breakout, .full-width, .full-width-content) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width,
+.content-grid > .full-width-content {
+  grid-column: full-width;
 }

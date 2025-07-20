@@ -1,4 +1,5 @@
 :root {
+  --woodland-info-font: 'Merriweather Sans', sans-serif;
   --primary-color: light-dark(var(--violet-10), var(--purple-9));
 
   --primary-color-darker: light-dark(hsl(265, 100%, 40%), #ab6afb);
