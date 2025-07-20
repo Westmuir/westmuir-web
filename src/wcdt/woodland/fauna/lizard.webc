@@ -1,0 +1,57 @@
+---
+title: Lizards
+layout: plain
+---
+
+<figure class="page-header" op-top>
+  <img src="./src/wcdt/woodland/fauna/lizard.avif" alt="lizard" webc:is="eleventy-image" />
+  <div class="page-header-info">
+    <div class="content">
+      <h1>Lizard</h1>
+      <p>Viviparous lizard</p>
+    </div>
+  </div>
+</figure>
+
+<div class="container container-spacing" name="main-content">
+  <div class="section grid-cards"></div>
+</div>
+
+<div class="content-image-text">
+  <div class="content">
+    <div class="content-image">
+      <figure>
+        <img
+          class="bg-yellow-100 sm-p-3 shadow-lg"
+          src="./src/wcdt/woodland/fauna/lizard.avif"
+          alt="lizard on board walk in woodland"
+          webc:is="eleventy-image"
+        />
+      </figure>
+    </div>
+    <div class="content-text bg-revert">
+      <h4>Species Facts</h4>
+      <ul class="species-facts">
+        <li><strong>Category: </strong>Reptile</li>
+        <li><strong>Scientific name: </strong>Viviparous lizard</li>
+        <li><strong>Length: </strong>typically 10&ndash;15cm</li>
+        <li><strong>Status: </strong>Common</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container container-spacing light-bg" name="species-information">
+  <div class="section species-information">
+    <h2>Species information</h2>
+    <div>
+      <h4>&nbsp;</h4>
+      <h4>Identification</h4>
+      <p>They are often found in open, sunny areas like heaths, moorlands, and dry stone walls.</p>
+      <p><strong>Viviparous</strong> means they give birth to live young, not eggs.</p>
+      <hr />
+      <h4>Distribution</h4>
+      <p>Common in Scotland</p>
+    </div>
+  </div>
+</div>

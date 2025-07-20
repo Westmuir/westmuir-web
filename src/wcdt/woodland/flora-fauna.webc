@@ -30,7 +30,7 @@ eleventyNavigation:
             <img
               class="figure-image"
               src="./src/wcdt/woodland/birds-foot-trefoil.avif"
-              alt=""
+              alt="bird;s foot trefoil in woodland"
               webc:is="eleventy-image"
             />
             <div class="overlay"></div>
@@ -45,7 +45,31 @@ eleventyNavigation:
       <li class="grid-item">
         <a href="/wcdt/woodland/flora/ling/" class="card-link">
           <figure class="figure">
-            <img class="figure-image" src="./src/wcdt/woodland/ling.avif" alt="" webc:is="eleventy-image" />
+            <img
+              class="figure-image"
+              src="./src/wcdt/woodland/ling.avif"
+              alt="ling in woodland"
+              webc:is="eleventy-image"
+            />
+            <div class="overlay"></div>
+            <figcaption class="caption">
+              <div class="caption-content">
+                <h3>Ling</h3>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+
+      <li class="grid-item">
+        <a href="/wcdt/woodland/fauna/lizard/" class="card-link">
+          <figure class="figure">
+            <img
+              class="figure-image"
+              src="./src/wcdt/woodland/fauna/lizard.avif"
+              alt="lizard on board walk"
+              webc:is="eleventy-image"
+            />
             <div class="overlay"></div>
             <figcaption class="caption">
               <div class="caption-content">

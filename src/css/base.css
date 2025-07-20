@@ -530,7 +530,13 @@ img[width][height] {
 }
 
 .species-facts {
-  font-size: 1.6rem;
+  font-size: var(--font-size-4);
+}
+
+.species-information {
+  hr {
+    margin-block: var(--size-fluid-3);
+  }
 }
 
 [name='species-information'] {
