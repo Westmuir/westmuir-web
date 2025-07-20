@@ -623,3 +623,7 @@ img[width][height] {
 .content-grid > .full-width-content {
   grid-column: full-width;
 }
+
+.post-wrapper {
+  margin-inline: 2rem;
+}
