@@ -8,24 +8,21 @@ eleventyNavigation:
   order: 2
 ---
 
-<figure class="page-header">
-  <img src="./src/Westmuir Hall/resilience/generator.avif" alt="Backup generator" webc:is="eleventy-image" />
-  <div class="page-header-info">
-    <div class="content">
-      <h1>Westmuir Resilience Centre</h1>
-      <p>A warm place for the community in challenging conditions</p>
+<div class="content-grid flow">
+  <figure class="page-header full-width-content">
+    <img src="./src/Westmuir Hall/resilience/generator.avif" alt="Backup generator" webc:is="eleventy-image" />
+    <div class="page-header-info">
+      <div class="content">
+        <h1>Westmuir Resilience Centre</h1>
+        <p>A warm place for the community in challenging conditions</p>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<div class="content-block-one">
-  <div class="content-block">
+  <section>
     <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolorum dolorem. Aut pariatur error perspiciatis
-        inventore illum amet dignissimos numquam, maxime iusto dolore adipisci quidem eaque ad, atque, dolorum
-        similique!
-      </p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, dolorum dolorem. Aut pariatur error perspiciatis
+      inventore illum amet dignissimos numquam, maxime iusto dolore adipisci quidem eaque ad, atque, dolorum similique!
     </div>
-  </div>
+  </section>
 </div>

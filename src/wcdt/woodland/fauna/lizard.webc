@@ -1,15 +1,15 @@
 ---
-title: Ling heather
+title: Lizards
 layout: plain
 ---
 
 <div class="content-grid flow">
-  <figure class="page-header full-width-content" op-center>
-    <img src="./src/wcdt/woodland/ling.avif" alt="ling" webc:is="eleventy-image" />
+  <figure class="page-header full-width-content" op-top>
+    <img src="./src/wcdt/woodland/fauna/lizard.avif" alt="lizard" webc:is="eleventy-image" />
     <div class="page-header-info">
       <div class="content">
-        <h1>Ling</h1>
-        <p>Calluna vulgaris</p>
+        <h1>Lizard</h1>
+        <p>Viviparous lizard</p>
       </div>
     </div>
   </figure>
@@ -19,8 +19,8 @@ layout: plain
       <figure>
         <img
           class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="./src/wcdt/woodland/ling.avif"
-          alt=""
+          src="./src/wcdt/woodland/fauna/lizard.avif"
+          alt="lizard on board walk in woodland"
           webc:is="eleventy-image"
         />
       </figure>
@@ -28,9 +28,9 @@ layout: plain
     <div class="content-text bg-revert species-facts">
       <h4>Species Facts</h4>
       <ul>
-        <li><strong>Category: </strong>Wildflower</li>
-        <li><strong>Scientific name: </strong>Calluna vulgaris</li>
-        <li><strong>Height: </strong>up to 90cm</li>
+        <li><strong>Category: </strong>Reptile</li>
+        <li><strong>Scientific name: </strong>Viviparous lizard</li>
+        <li><strong>Length: </strong>typically 10&ndash;15cm</li>
         <li><strong>Status: </strong>Common</li>
       </ul>
     </div>
@@ -43,10 +43,8 @@ layout: plain
         <div>
           <h4>&nbsp;</h4>
           <h4>Identification</h4>
-          <p>
-            The stems of heather are woody and coarse, sometimes clumped together and close to the ground in exposed
-            areas. The delicate pink flowers grow loosely up the stem and the short, narrow leaves are borne in rows.
-          </p>
+          <p>They are often found in open, sunny areas like heaths, moorlands, and dry stone walls.</p>
+          <p><strong>Viviparous</strong> means they give birth to live young, not eggs.</p>
           <hr />
           <h4>Distribution</h4>
           <p>Common in Scotland</p>

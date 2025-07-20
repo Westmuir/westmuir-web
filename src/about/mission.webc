@@ -6,6 +6,8 @@ eleventyNavigation:
   parent: About
 ---
 
-<h2>Our Mission</h2>
+<div class="content-grid flow">
+  <h2>Our Mission</h2>
 
-<p>We aim to support the community of Westmuir.</p>
+  <p>We aim to support the community of Westmuir.</p>
+</div>
