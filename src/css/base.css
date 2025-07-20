@@ -325,7 +325,10 @@ img[width][height] {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   color: #222;
-  margin-top: 2rem;
+
+  ul {
+    padding-inline-start: var(--size-1);
+  }
 }
 
 .volunteer-columns li {
@@ -337,23 +340,25 @@ img[width][height] {
   font-weight: 600;
   min-height: 3em;
   text-align: center;
+  margin-block-end: var(--size-3);
+  border-bottom: 2px solid var(--gray-5);
 }
 
 .volunteer-columns div {
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 7px;
 }
 
 .volunteer-columns div:nth-child(n + 1) {
-  background-color: #ffc4ff;
+  background-color: var(--purple-2);
 }
 
 .volunteer-columns div:nth-child(n + 2) {
-  background-color: #9bffb5;
+  background-color: var(--green-2);
 }
 
 .volunteer-columns div:nth-child(n + 3) {
-  background-color: #ffffb3;
+  background-color: var(--yellow-2);
 }
 
 .volunteer-footer {
@@ -361,15 +366,15 @@ img[width][height] {
   display: flex;
   flex-direction: column;
 
-  row-gap: 5px;
+  row-gap: var(--size-2);
 
-  color: #222;
+  color: var(--gray-10);
 }
 .volunteer-footer div {
-  background-color: rgb(234, 234, 255);
+  background-color: var(--gray-3);
   min-height: 5rem;
-  padding: 1rem;
-  border-radius: 10px;
+  padding: var(--size-3);
+  border-radius: var(--radius-2);
 }
 
 .ai-c {
@@ -560,11 +565,10 @@ img[width][height] {
 }
 
 /* A section to contatin single column content */
-.content-block-one {
-  margin-top: 2rem;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding: 2rem;
+.content-text-block {
+  div {
+    margin-block: var(--size-2);
+  }
 }
 
 .logos {

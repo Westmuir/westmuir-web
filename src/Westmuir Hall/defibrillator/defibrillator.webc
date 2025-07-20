@@ -8,18 +8,18 @@ eleventyNavigation:
   order: 3
 ---
 
-<figure class="page-header">
-  <img src="./src/Westmuir Hall/defibrillator/main-road.avif" alt="Main road" webc:is="eleventy-image" />
-  <div class="page-header-info">
-    <div class="content">
-      <h1>Westmuir Defibrillator</h1>
-      <p>Community Public Access Defibrillator (CPAD)</p>
+<div class="content-grid flow">
+  <figure class="page-header full-width-content">
+    <img src="./src/Westmuir Hall/defibrillator/main-road.avif" alt="Main road" webc:is="eleventy-image" />
+    <div class="page-header-info">
+      <div class="content">
+        <h1>Westmuir Defibrillator</h1>
+        <p>Community Public Access Defibrillator (CPAD)</p>
+      </div>
     </div>
-  </div>
-</figure>
+  </figure>
 
-<div class="content-image-text">
-  <div class="content">
+  <section class="breakout content-image-text">
     <div class="content-image">
       <figure class="figure ml-12 max-w-sm d-ib as-start">
         <img
@@ -58,47 +58,43 @@ eleventyNavigation:
         section on this website.
       </p>
     </div>
-  </div>
-</div>
+  </section>
 
-<div class="content-block-one">
-  <div class="content-block">
+  <section class="content-text-block">
     <div>
-      <p>
-        The Community Council representative at the time had received a monetary bequest from the family of a local man,
-        which greatly boosted fundraising efforts to obtain a defibrillator. The volunteer group subsequently set up a
-        crowdfunding page to raise the balance of funds needed, and with a further successful application for ‘Matched
-        Funding’ from Angus Council, the Group were able to proceed with the project.
-      </p>
-      <p>
-        A well-attended defibrillator launch event took place on 26th July 2019 and since then, several demonstration /
-        awareness events have taken place in the Village Hall to provide training to residents in the use of a
-        Defibrillator. The last event being a Heartstart Discovery Training session to learn CPR skills and awareness of
-        using an AED in March 2023.
-      </p>
-      <p>
-        There are annual costs associated with having a defibrillator located in the Village, and the Group that look
-        after the CPAD welcome any donations to help cover annual maintenance charges of £162.00, being for Insurance,
-        (public liability, theft and damage), replacement pads, batteries etc.
-      </p>
-      <p>
-        To ensure accounting transparency in recording defibrillator income and expenditure, defibrillator funds are
-        held in a separate sub-fund as part of a larger Trust, (known as an umbrella fund or scheme), which is managed
-        by the Westmuir Community Development Trust (WCDT).
-      </p>
-      <p>
-        To comply with insurance regulations, two members from the Volunteer Group share a rota to check that the
-        defibrillator is operational and update the online Governance System to report on site checks. We welcome anyone
-        from the Community with a few minutes of free time to engage with the volunteer group if they feel they can help
-        look after the Defibrillator and assist in future fundraising activities. Thanks are extended to those who
-        commit to checking the defibrillator weekly and to Susan Kettles, who voluntarily cleans the Defibrillator Kiosk
-        as required.
-      </p>
-      <p>
-        We are fortunate to have this asset in our Village for use by anyone that may need it, and with weekly checks to
-        ensure all is well, our defibrillator will continue to be accessible to anyone in the Community who may require
-        such assistance and for any local emergency that may arise.
-      </p>
+      The Community Council representative at the time had received a monetary bequest from the family of a local man,
+      which greatly boosted fundraising efforts to obtain a defibrillator. The volunteer group subsequently set up a
+      crowdfunding page to raise the balance of funds needed, and with a further successful application for ‘Matched
+      Funding’ from Angus Council, the Group were able to proceed with the project.
     </div>
-  </div>
+    <div>
+      A well-attended defibrillator launch event took place on 26th July 2019 and since then, several demonstration /
+      awareness events have taken place in the Village Hall to provide training to residents in the use of a
+      Defibrillator. The last event being a Heartstart Discovery Training session to learn CPR skills and awareness of
+      using an AED in March 2023.
+    </div>
+    <div>
+      There are annual costs associated with having a defibrillator located in the Village, and the Group that look
+      after the CPAD welcome any donations to help cover annual maintenance charges of £162.00, being for Insurance,
+      (public liability, theft and damage), replacement pads, batteries etc.
+    </div>
+    <div>
+      To ensure accounting transparency in recording defibrillator income and expenditure, defibrillator funds are held
+      in a separate sub-fund as part of a larger Trust, (known as an umbrella fund or scheme), which is managed by the
+      Westmuir Community Development Trust (WCDT).
+    </div>
+    <div>
+      To comply with insurance regulations, two members from the Volunteer Group share a rota to check that the
+      defibrillator is operational and update the online Governance System to report on site checks. We welcome anyone
+      from the Community with a few minutes of free time to engage with the volunteer group if they feel they can help
+      look after the Defibrillator and assist in future fundraising activities. Thanks are extended to those who commit
+      to checking the defibrillator weekly and to Susan Kettles, who voluntarily cleans the Defibrillator Kiosk as
+      required.
+    </div>
+    <div>
+      We are fortunate to have this asset in our Village for use by anyone that may need it, and with weekly checks to
+      ensure all is well, our defibrillator will continue to be accessible to anyone in the Community who may require
+      such assistance and for any local emergency that may arise.
+    </div>
+  </section>
 </div>
