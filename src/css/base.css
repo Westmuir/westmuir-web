@@ -571,6 +571,10 @@ img[width][height] {
   }
 }
 
+.section-logos {
+  max-width: 75ch;
+}
+
 .logos {
   display: flex;
   flex-wrap: wrap;
@@ -579,7 +583,6 @@ img[width][height] {
   gap: 48px;
   margin-inline: auto;
 
-  max-width: 50%;
   .logo-item {
     flex: 1 1 10%;
     max-width: 200px;
