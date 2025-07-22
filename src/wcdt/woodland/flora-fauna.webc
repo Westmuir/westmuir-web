@@ -63,6 +63,25 @@ eleventyNavigation:
         </li>
 
         <li class="grid-item">
+          <a href="/wcdt/woodland/flora/scots-pine/" class="card-link">
+            <figure class="figure">
+              <img
+                class="figure-image"
+                src="./src/wcdt/woodland/flora/scots-pine.avif"
+                alt="Scots Pine in woodland"
+                webc:is="eleventy-image"
+              />
+              <div class="overlay"></div>
+              <figcaption class="caption">
+                <div class="caption-content">
+                  <h3>Scots Pine</h3>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="grid-item">
           <a href="/wcdt/woodland/fauna/lizard/" class="card-link">
             <figure class="figure">
               <img
@@ -75,6 +94,25 @@ eleventyNavigation:
               <figcaption class="caption">
                 <div class="caption-content">
                   <h3>Viviparous lizard</h3>
+                </div>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li class="grid-item">
+          <a href="/wcdt/woodland/fauna/small-tortoiseshell/" class="card-link">
+            <figure class="figure">
+              <img
+                class="figure-image"
+                src="./src/wcdt/woodland/fauna/small-tortoiseshell.avif"
+                alt="Small tortoiseshell butterfly sunning itself"
+                webc:is="eleventy-image"
+              />
+              <div class="overlay"></div>
+              <figcaption class="caption">
+                <div class="caption-content">
+                  <h3>Small Tortoiseshell butterfly</h3>
                 </div>
               </figcaption>
             </figure>
