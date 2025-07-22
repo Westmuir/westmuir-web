@@ -1,0 +1,57 @@
+---
+title: Butterflies
+layout: plain
+---
+
+<div class="content-grid flow">
+  <figure class="page-header full-width-content" op-center>
+    <img src="./src/wcdt/woodland/fauna/small-tortoiseshell.avif" alt="Small Tortoiseshell" webc:is="eleventy-image" />
+    <div class="page-header-info">
+      <div class="content">
+        <h1>Small Tortoiseshell Butterfly</h1>
+        <p>Aglais urticae</p>
+      </div>
+    </div>
+  </figure>
+
+  <section class="breakout content-image-text">
+    <div class="content-image">
+      <figure>
+        <img
+          class="bg-yellow-100 sm-p-3 shadow-lg"
+          src="./src/wcdt/woodland/fauna/small-tortoiseshell.avif"
+          alt="Small Tortoiseshell on board walk in woodland"
+          webc:is="eleventy-image"
+        />
+      </figure>
+    </div>
+    <div class="content-text bg-revert species-facts">
+      <h4>Species Facts</h4>
+      <ul>
+        <li><strong>Category: </strong>Butterfly</li>
+        <li><strong>Scientific name: </strong>Aglais urticae</li>
+        <li><strong>Wingspan: </strong>50&ndash;56mm</li>
+        <li><strong>Status: </strong>Common</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="breakout light-bg">
+    <div class="light-bg" name="species-information">
+      <div class="section species-information">
+        <h2>Species information</h2>
+        <div>
+          <h4>&nbsp;</h4>
+          <h4>Identification</h4>
+          <p>
+            It is a medium-sized butterfly that is mainly reddish orange, with black and yellow markings on the
+            forewings as well as a ring of blue spots around the edge of the wings.
+          </p>
+          <hr />
+          <h4>Distribution</h4>
+          <p>Common</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
