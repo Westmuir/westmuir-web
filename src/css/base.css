@@ -516,8 +516,9 @@ img[width][height] {
     color: var(--text-color, #777);
     font-size: var(--font-size-2);
     border-radius: 5px;
+    padding: var(--size-fluid-2);
 
-    .content-text-highlight {
+    &.content-text-highlight {
       background-color: #eec942;
       color: #222;
     }
@@ -598,8 +599,8 @@ img[width][height] {
 
 .content-grid {
   --padding-inline: 1rem;
-  --content-max-width: 70ch;
-  --breakout-max-width: 95ch;
+  --content-max-width: 85ch;
+  --breakout-max-width: 105ch;
 
   --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
 
