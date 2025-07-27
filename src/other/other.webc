@@ -4,6 +4,8 @@ layout: plain
 description: Other stuff.
 eleventyNavigation:
   key: Other
+  title: Archive
+  order: 5
 ---
 
 <h1>Other stuff</h1>

@@ -5,7 +5,7 @@ layout: plain
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content" op-top>
-    <img src="./src/wcdt/woodland/fauna/lizard.avif" alt="lizard" webc:is="eleventy-image" />
+    <img src="./src/woodland/fauna/lizard.avif" alt="lizard" webc:is="eleventy-image" />
     <div class="page-header-info">
       <div class="content">
         <h1>Lizard</h1>
@@ -19,7 +19,7 @@ layout: plain
       <figure>
         <img
           class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="./src/wcdt/woodland/fauna/lizard.avif"
+          src="./src/woodland/fauna/lizard.avif"
           alt="lizard on board walk in woodland"
           webc:is="eleventy-image"
         />

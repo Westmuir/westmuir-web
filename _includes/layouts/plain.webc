@@ -14,14 +14,14 @@ layers: [openprops]
       webc:keep
     />
 
-    <link rel="stylesheet" href="../../../node_modules/open-props/normalize.min.css" webc:bucket="openprops" />
+    <link rel="stylesheet" href="../../node_modules/open-props/normalize.min.css" webc:bucket="openprops" />
 
     <!--- media queries cannot be in openprops bucket as 11ty needs them when it bundles css that uses them --->
     <!--- they will be optimized away in the bundling process -->
-    <link rel="stylesheet" href="../../../node_modules/open-props/media.min.css" />
-    <link rel="stylesheet" href="../../css/components/layout.css" />
-    <link rel="stylesheet" href="../../css/base.css" />
-    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../node_modules/open-props/media.min.css" />
+    <link rel="stylesheet" href="../../src/css/components/layout.css" />
+    <link rel="stylesheet" href="../../src/css/base.css" />
+    <link rel="stylesheet" href="../../src/css/theme.css" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,7 +51,7 @@ layers: [openprops]
   <body tabindex="-1">
     <div class="page-wrapper">
       <site-header :@pageurl="page.url"></site-header>
-      <main class="main" @raw="content"></main>
+      <main class="flow" @raw="content"></main>
 
       <site-footer></site-footer>
     </div>

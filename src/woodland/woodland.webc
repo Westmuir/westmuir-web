@@ -4,13 +4,13 @@ layout: plain
 description: Learn about the Westmuir Community Development Trust and the Woodland.
 eleventyNavigation:
   key: Woodland
-  parent: Westmuir Trust
+
   order: 1
 ---
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content">
-    <img src="./src/wcdt/woodland/walkway-1980.avif" alt="woodland walkway" webc:is="eleventy-image" />
+    <img src="./src/woodland/walkway-1980.avif" alt="woodland walkway" webc:is="eleventy-image" />
     <div class="page-header-info">
       <div class="content">
         <h1>Woodland park</h1>
@@ -27,7 +27,7 @@ eleventyNavigation:
       <figure>
         <img
           class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="./src/wcdt/woodland/woodland-park.avif"
+          src="./src/woodland/woodland-park.avif"
           alt=""
           webc:is="eleventy-image"
         />

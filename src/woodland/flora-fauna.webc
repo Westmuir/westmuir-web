@@ -4,13 +4,13 @@ layout: plain
 description: Learn about the Westmuir Community Development Trust and the Woodland.
 eleventyNavigation:
   key: What to see
-  parent: Westmuir Trust
+  parent: Woodland
   order: 1
 ---
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content">
-    <img src="./src/wcdt/woodland/woodland-oak-1980.avif" alt="woodland walkway" webc:is="eleventy-image" />
+    <img src="./src/woodland/woodland-oak-1980.avif" alt="woodland walkway" webc:is="eleventy-image" />
     <div class="page-header-info">
       <div class="content">
         <h1>Flora & Fauna</h1>
@@ -26,11 +26,11 @@ eleventyNavigation:
 
       <ul class="grid">
         <li class="grid-item">
-          <a href="/wcdt/woodland/flora/birds-foot-trefoil/" class="card-link">
+          <a href="/woodland/flora/birds-foot-trefoil/" class="card-link">
             <figure class="figure">
               <img
                 class="figure-image"
-                src="./src/wcdt/woodland/birds-foot-trefoil.avif"
+                src="./src/woodland/birds-foot-trefoil.avif"
                 alt="bird;s foot trefoil in woodland"
                 webc:is="eleventy-image"
               />
@@ -44,11 +44,11 @@ eleventyNavigation:
           </a>
         </li>
         <li class="grid-item">
-          <a href="/wcdt/woodland/flora/ling/" class="card-link">
+          <a href="/woodland/flora/ling/" class="card-link">
             <figure class="figure">
               <img
                 class="figure-image"
-                src="./src/wcdt/woodland/ling.avif"
+                src="./src/woodland/ling.avif"
                 alt="ling in woodland"
                 webc:is="eleventy-image"
               />
@@ -63,11 +63,11 @@ eleventyNavigation:
         </li>
 
         <li class="grid-item">
-          <a href="/wcdt/woodland/flora/scots-pine/" class="card-link">
+          <a href="/woodland/flora/scots-pine/" class="card-link">
             <figure class="figure">
               <img
                 class="figure-image"
-                src="./src/wcdt/woodland/flora/scots-pine.avif"
+                src="./src/woodland/flora/scots-pine.avif"
                 alt="Scots Pine in woodland"
                 webc:is="eleventy-image"
               />
@@ -82,11 +82,11 @@ eleventyNavigation:
         </li>
 
         <li class="grid-item">
-          <a href="/wcdt/woodland/fauna/lizard/" class="card-link">
+          <a href="/woodland/fauna/lizard/" class="card-link">
             <figure class="figure">
               <img
                 class="figure-image"
-                src="./src/wcdt/woodland/fauna/lizard.avif"
+                src="./src/woodland/fauna/lizard.avif"
                 alt="lizard on board walk"
                 webc:is="eleventy-image"
               />
@@ -101,11 +101,11 @@ eleventyNavigation:
         </li>
 
         <li class="grid-item">
-          <a href="/wcdt/woodland/fauna/small-tortoiseshell/" class="card-link">
+          <a href="/woodland/fauna/small-tortoiseshell/" class="card-link">
             <figure class="figure">
               <img
                 class="figure-image"
-                src="./src/wcdt/woodland/fauna/small-tortoiseshell.avif"
+                src="./src/woodland/fauna/small-tortoiseshell.avif"
                 alt="Small tortoiseshell butterfly sunning itself"
                 webc:is="eleventy-image"
               />
