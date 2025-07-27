@@ -1,0 +1,30 @@
+---
+title: Other
+layout: plain
+description: Other stuff.
+eleventyNavigation:
+  key: Other
+  title: Archive
+  order: 5
+---
+
+<div class="container container-spacing" name="main-content">
+  <div class="section">
+    <h2 class="main-heading">Archive</h2>
+
+    <section class="hero-wrapper" webc:if="true">
+      <div class="hero-content">
+        <h1>Westmuir archive</h1>
+        <p>Discover the charm of our village, from events to local news.</p>
+      </div>
+    </section>
+
+    <nav-cards :@cards="$data.archivecards"></nav-cards>
+  </div>
+</div>
+
+<style>
+  .hero-wrapper {
+    margin-block: 2rem;
+  }
+</style>

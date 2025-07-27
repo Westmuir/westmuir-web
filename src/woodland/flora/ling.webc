@@ -1,0 +1,52 @@
+---
+title: Ling heather
+layout: plain
+---
+
+<div class="content-grid flow">
+  <figure class="page-header full-width-content" op-center>
+    <img src="./src/woodland/ling.avif" alt="ling" webc:is="eleventy-image" />
+    <div class="page-header-info">
+      <div class="content">
+        <h1>Ling</h1>
+        <p>Calluna vulgaris</p>
+      </div>
+    </div>
+  </figure>
+
+  <section class="breakout content-image-text">
+    <div class="content-image">
+      <figure>
+        <img class="bg-yellow-100 sm-p-3 shadow-lg" src="./src/woodland/ling.avif" alt="" webc:is="eleventy-image" />
+      </figure>
+    </div>
+    <div class="content-text bg-revert species-facts">
+      <h4>Species Facts</h4>
+      <ul>
+        <li><strong>Category: </strong>Wildflower</li>
+        <li><strong>Scientific name: </strong>Calluna vulgaris</li>
+        <li><strong>Height: </strong>up to 90cm</li>
+        <li><strong>Status: </strong>Common</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="breakout light-bg">
+    <div class="light-bg" name="species-information">
+      <div class="section species-information">
+        <h2>Species information</h2>
+        <div>
+          <h4>&nbsp;</h4>
+          <h4>Identification</h4>
+          <p>
+            The stems of heather are woody and coarse, sometimes clumped together and close to the ground in exposed
+            areas. The delicate pink flowers grow loosely up the stem and the short, narrow leaves are borne in rows.
+          </p>
+          <hr />
+          <h4>Distribution</h4>
+          <p>Common in Scotland</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

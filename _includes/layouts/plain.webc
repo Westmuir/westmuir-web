@@ -1,0 +1,60 @@
+---
+layers: [openprops]
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+      webc:keep
+    />
+
+    <link rel="stylesheet" href="../../node_modules/open-props/normalize.min.css" webc:bucket="openprops" />
+
+    <!--- media queries cannot be in openprops bucket as 11ty needs them when it bundles css that uses them --->
+    <!--- they will be optimized away in the bundling process -->
+    <link rel="stylesheet" href="../../node_modules/open-props/media.min.css" />
+    <link rel="stylesheet" href="../../src/css/components/layout.css" />
+    <link rel="stylesheet" href="../../src/css/base.css" />
+    <link rel="stylesheet" href="../../src/css/theme.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Westmuir Village Website" />
+    <title @text="title ?? 'Westmuir Village'"></title>
+    <style></style>
+    <!--- <style>@layer reset, config, default, etc;</style> --->
+    <style webc:keep @raw="`@layer ${($data.layers).join(', ')};`"></style>
+
+    <!--- <style>@import url('bucket-name.css') layer(bucket-name);</style> --->
+    <style
+      webc:keep
+      webc:for="layer of ($data.layers)"
+      @raw="`@import url(${getBundleFileUrl('css', layer)}) layer(${layer});`"
+    ></style>
+
+    <!--- <style>@import url('bucket-name.css'); the non-bucketed styles for now </style>   --->
+    <style webc:keep @raw="`@import url(${getBundleFileUrl('css')});`"></style>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+      webc:keep
+    />
+  </head>
+
+  <body tabindex="-1">
+    <div class="page-wrapper">
+      <site-header :@pageurl="page.url"></site-header>
+      <main class="flow" @raw="content"></main>
+
+      <site-footer></site-footer>
+    </div>
+    <script :src="getBundleFileUrl('js')" webc:keep></script>
+  </body>
+</html>

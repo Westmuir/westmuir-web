@@ -1,18 +1,18 @@
 :root {
   --woodland-info-font: 'Merriweather Sans', sans-serif;
-  --primary-color: light-dark(var(--violet-10), var(--purple-9));
-
-  --primary-color-darker: light-dark(hsl(265, 100%, 40%), #ab6afb);
+  /* --primary-color: light-dark(var(--violet-10), var(--purple-9)); */
+  --primary-color: light-dark(var(--choco-9), var(--choco-11));
+  --primary-color-darker: light-dark(var(--choco-10), var(--choco-10));
 
   --secondary-color: light-dark(#03dac6, #03dac6);
   --text-color: light-dark(#212121, #ffffff);
   --background-color: light-dark(#ffffff, #272832);
   --hover-color: light-dark(#9699bb, #9699bb);
   --content-light-bg: light-dark(hsl(120, 100%, 97%), hsl(120, 12%, 27%));
-  --cta-background-color: light-dark(#6f3f70, var(--purple-9));
+  --cta-background-color: light-dark(var(--choco-9), var(--choco-11));
 
-  --header-background-color: light-dark(var(--violet-10), var(--purple-9));
-  --header-text-color: light-dark(var(--violet-0), var(--purple-1));
+  --header-background-color: light-dark(var(--choco-9), var(--choco-11));
+  --header-text-color: light-dark(var(--choco-1), var(--choco-1));
 
   --footer-background-color: light-dark(#f1f1f1, #1a1a1a);
   --footer-text-color: light-dark(#424242, #bdbdbd);

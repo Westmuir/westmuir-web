@@ -5,5 +5,5 @@ title: Westmuir Village Hall
 eleventyNavigation:
   key: Westmuir Hall
   title: About the Hall
-  Order: 2
+  order: 2
 ---

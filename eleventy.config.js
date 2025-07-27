@@ -43,7 +43,8 @@ export const config = {
   dir: {
     input: 'src',
     data: '../_data', // default: "_data" (`input` relative)
-    layouts: '_includes/layouts',
+    includes: './../_includes',
+    layouts: './../_includes/layouts',
     output: '_site',
   },
   templateFormats: ['md', 'webc', 'liquid', 'html'],
@@ -71,7 +72,7 @@ export default async function (eleventyConfig) {
   let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
 
   eleventyConfig.addPlugin(pluginWebc, {
-    components: ['./src/_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
+    components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
     bundlePluginOptions: {
       transforms: [
         async function (content) {

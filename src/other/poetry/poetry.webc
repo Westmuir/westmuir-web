@@ -1,0 +1,74 @@
+---
+title: Other
+layout: plain
+description: Other stuff.
+eleventyNavigation:
+  key: Other
+  title: Archive
+  order: 5
+---
+
+<div class="content-grid flow">
+  <figure class="page-header full-width-content full-image">
+    <img src="./src/other/poetry/banner-poet.avif" alt="abstract background" webc:is="eleventy-image" />
+    <div class="page-header-info">
+      <div class="content">
+        <h1>Poet in Residence</h1>
+        <p>A collection of Reflective Poems by Eila Webster</p>
+      </div>
+    </div>
+  </figure>
+
+  <section class="full-width">
+    <div class="content">
+      <img class="pull-left" src="./src/other/poetry/eila-webster.avif" alt="" webc:is="eleventy-image" />
+      <div class="content-text">
+        Born in 1925, Eila Webster has spent her entire life living in Westmuir. Blessed with a fine memory, Eila was
+        encouraged to write us a regular monthly poem which we featured on our website starting at Christmas in 2014.
+        Since then Eila has kept on writing for us and we are now in our 5th year of capturing this wonderful collection
+        of her poetry for all to enjoy !
+      </div>
+      <div class="content-text">
+        As well as her poems listed below, you can also read about Eila the Pianist, the Poet, the Performer, the
+        Published Writer and multiple Prize Winner as she recalls local people and memorable events decade by decade.
+        Now 95 years young, this is a fascinating and poignant personal account of a lifetime in Westmuir and is not to
+        be missed.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content-list-grid">
+      <div>April 2020</div>
+      <div>
+        <a href="poems/95-years-young/">Lockdown - A Poem During the Global Coved-19 Pandemic</a>
+      </div>
+      <div>March 2020</div>
+      <div><a href="poems/95-years-young/">95 Years Young</a></div>
+    </div>
+  </section>
+
+  <div @text="Object.keys($data.collections)"></div>
+</div>
+
+<style>
+  .pull-left {
+    float: left;
+    margin-inline-end: 1.5rem;
+    margin-block-end: 0.5rem;
+  }
+
+  .content-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    a {
+      color: light-dark(var(--teal-10), var(--teal-4));
+    }
+
+    div:nth-child(odd) {
+      justify-self: end;
+      padding-right: 3rem;
+    }
+  }
+</style>
