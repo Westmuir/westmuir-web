@@ -1,9 +1,13 @@
 <ul class="section-cards">
-  <li class="section-card section-card-page na" webc:for="item of cards">
+  <li
+    class="section-card section-card-page na sc-bg"
+    webc:for="item of cards"
+    :style="`background-color: ${item.bg || 'inherit'}`"
+  >
     <a :href="item.url">
       <div class="section-cards-title">
         <img webc:if="item.image" src="{{ item.image }}" alt="{{ item.label }} image" class="card-image" />
-        <div webc:else class="material-symbols-outlined" @raw="item.icon"></div>
+        <div webc:elseif="item.icon" class="material-symbols-outlined" @raw="item.icon"></div>
         <h3 @text="item.label"></h3>
       </div>
       <p @text="item.description"></p>
@@ -12,6 +16,9 @@
 </ul>
 
 <style>
+  .sc-bg {
+    background-color: red;
+  }
   ul.section-cards {
     display: flex;
     flex-wrap: wrap;
