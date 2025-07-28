@@ -142,8 +142,8 @@
 
           &:hover,
           &:focus {
-            border-top-color: pink;
-            color: pink;
+            border-top-color: var(--teal-3);
+            color: var(--teal-3);
           }
         }
       }
@@ -187,19 +187,20 @@
         visibility: hidden;
         opacity: 0.3;
         padding: 0.5em 0;
-        background-color: light-dark(#fff, var(--choco-10));
+        background-color: light-dark(var(--camo-8), var(--camo-10));
         border-radius: 4px;
         box-shadow: 0 0.15em 0.25em rgba(0, 0, 0, 0.25);
 
         a {
-          color: light-dark(var(--gray-8), var(--choco-1));
+          color: light-dark(var(--gray-2), var(--camo-1));
           display: block;
           padding: 0.25em;
           opacity: 0;
           transition: 280ms all 120ms ease-out;
 
           &:hover {
-            background-color: rgba(102, 51, 153, 0.15);
+            color: light-dark(#fff, var(--teal-1));
+            background-color: light-dark(var(--camo-9), var(--teal-10));
           }
         }
       }
@@ -220,7 +221,7 @@
       &:hover,
       &:focus-within {
         .dropdown__title {
-          border-top-color: pink;
+          border-top-color: var(--teal-3);
         }
 
         .dropdown__menu {
