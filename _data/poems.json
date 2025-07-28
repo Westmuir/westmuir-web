@@ -1,4 +1,200 @@
 [
   { "key": "March 2020", "title": "95 Years Young", "image": "./src/other/poetry/poems/2020 March.avif" },
-  { "key": "February 2020", "title": "Our Changing Seasons", "image": "./src/other/poetry/poems/2020 February.avif" }
+  { "key": "February 2020", "title": "Our Changing Seasons", "image": "./src/other/poetry/poems/2020 February.avif" },
+  {
+    "key": "January 2020",
+    "title": "Thoughts for the New Year",
+    "image": "./src/other/poetry/poems/2020 January.avif",
+    "endOfYear": true
+  },
+  {
+    "key": "December 2019",
+    "title": "It's the Christmas Season Again",
+    "image": "./src/other/poetry/poems/2019 December.avif"
+  },
+  {
+    "key": "November 2019",
+    "title": "Reedie's Tatties -1971",
+    "image": "./src/other/poetry/poems/2019 November.avif"
+  },
+  {
+    "key": "October 2019",
+    "title": "Tattie Picking . . . 1967",
+    "image": "./src/other/poetry/poems/2019 October.avif"
+  },
+  {
+    "key": "September 2019",
+    "title": "September. . . A Special Month",
+    "image": "./src/other/poetry/poems/2019 September.avif"
+  },
+  {
+    "key": "August 2019",
+    "title": "August is the Month for Fruit",
+    "image": "./src/other/poetry/poems/2019 August.avif"
+  },
+  {
+    "key": "July 2019",
+    "title": "July's Long Summer Days",
+    "image": "./src/other/poetry/poems/2019 July.avif"
+  },
+  {
+    "key": "June 2019",
+    "title": "June is the Month of Roses",
+    "image": "./src/other/poetry/poems/2019 June.avif"
+  },
+  {
+    "key": "May 2019",
+    "title": "Colourful May",
+    "image": "./src/other/poetry/poems/2019 May.avif"
+  },
+  {
+    "key": "Special Edition 2019",
+    "title": "Westmuir's Defibrillator",
+    "image": "./src/other/poetry/poems/2019 Defibrillator Poem.avif"
+  },
+  {
+    "key": "April 2019",
+    "title": "April's Charm",
+    "image": "./src/other/poetry/poems/2019 April.avif"
+  },
+  {
+    "key": "March 2019",
+    "title": "The Great Outdoors is Wakening Up",
+    "imageX": "./src/other/poetry/poems/2019 March.avif"
+  },
+  {
+    "key": "February 2019",
+    "title": "The month of Subtle Change",
+    "image": "./src/other/poetry/poems/2019 February.avif"
+  },
+  {
+    "key": "January 2019",
+    "title": "Another Year Begins",
+    "image": "./src/other/poetry/poems/2019 January.avif",
+    "endOfYear": true
+  },
+  {
+    "key": "December 2018",
+    "title": "Christmas 2018",
+    "image": "./src/other/poetry/poems/2018 December.avif"
+  },
+  {
+    "key": "November 2018",
+    "title": "I Greet the Dawn",
+    "image": "./src/other/poetry/poems/2018 November.avif"
+  },
+  {
+    "key": "October 2018",
+    "title": "Farming Matters",
+    "image": "./src/other/poetry/poems/2018 October.avif"
+  },
+  {
+    "key": "September 2018",
+    "title": "Appreciation and Contentment",
+    "image": "./src/other/poetry/poems/2018 September.avif"
+  },
+  {
+    "key": "August 2018",
+    "title": "Summer Weather",
+    "image": "./src/other/poetry/poems/2018 August.avif"
+  },
+  {
+    "key": "July 2018",
+    "title": "Summer Relaxation & Fun",
+    "image": "./src/other/poetry/poems/2018 July.avif"
+  },
+  {
+    "key": "June 2018",
+    "title": "All Change on the Money Front",
+    "image": "./src/other/poetry/poems/2018 June.avif"
+  },
+  {
+    "key": "May 2018",
+    "title": "May Blossom",
+    "image": "./src/other/poetry/poems/2018 May.avif"
+  },
+
+  {
+    "key": "April 2018",
+    "title": "Life's Race",
+    "image": "./src/other/poetry/poems/2018 April.avif"
+  },
+  {
+    "key": "March 2018",
+    "title": "March Winds",
+    "image": "./src/other/poetry/poems/2018 March.avif"
+  },
+  {
+    "key": "February 2018",
+    "title": "February Thoughts",
+    "image": "./src/other/poetry/poems/2018 February.avif"
+  },
+  {
+    "key": "January 2018",
+    "title": "The New Year",
+    "image": "./src/other/poetry/poems/2018 January.avif",
+    "endOfYear": true
+  },
+  {
+    "key": "December 2017",
+    "title": "Christmas",
+    "image": "./src/other/poetry/poems/2017 December.avif"
+  },
+  {
+    "key": "November 2017",
+    "title": "Truth or Lie ? ",
+    "image": "./src/other/poetry/poems/2017 November.avif"
+  },
+  {
+    "key": "October 2017",
+    "title": "The Promise",
+    "image": "./src/other/poetry/poems/2017 October.avif"
+  },
+  {
+    "key": "September 2017",
+    "title": "Just for a Laugh",
+    "image": "./src/other/poetry/poems/2017 September.avif"
+  },
+  {
+    "key": "August 2017",
+    "title": "Always Give of Your Best",
+    "image": "./src/other/poetry/poems/2017 August.avif"
+  },
+  {
+    "key": "July 2017",
+    "title": "At the Health Centre",
+    "image": "./src/other/poetry/poems/2017 July.avif"
+  },
+  {
+    "key": "June 2017",
+    "title": "Free Gifts",
+    "image": "./src/other/poetry/poems/2017 June.avif"
+  },
+  {
+    "key": "May 2017",
+    "title": "The Precious Gift",
+    "image": "./src/other/poetry/poems/2017 May.avif"
+  },
+
+  {
+    "key": "April 2017",
+    "title": "Memories of Long Ago",
+    "image": "./src/other/poetry/poems/2017 April.avif"
+  },
+  {
+    "key": "March 2017",
+    "title": "Snow",
+    "image": "./src/other/poetry/poems/2017 March.avif"
+  },
+  {
+    "key": "February 2017",
+    "title": "A Sad Dog",
+    "image": "./src/other/poetry/poems/2017 February.avif"
+  },
+  {
+    "key": "January 2017",
+    "title": "Looking to the Future",
+    "image": "./src/other/poetry/poems/2017 January.avif",
+    "endOfYear": true
+  }
 ]

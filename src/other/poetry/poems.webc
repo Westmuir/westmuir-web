@@ -19,4 +19,4 @@ const eleventyComputed = {
 };
 ---
 
-<img :src="poem.image" alt="" webc:is="eleventy-image" />
+<img :src="poem.image" alt="" webc:is="eleventy-image" webc:if="poem.image" />
