@@ -35,16 +35,14 @@ description: Other stuff.
 
   <section>
     <div class="content-list-grid">
-      <div>April 2020</div>
-      <div>
-        <a href="poems/95-years-young/">Lockdown - A Poem During the Global Coved-19 Pandemic</a>
-      </div>
-      <div>March 2020</div>
-      <div><a href="poems/95-years-young/">95 Years Young</a></div>
+      <template webc:for="poem of $data.poems" webc:nokeep>
+        <div @text="poem.key"></div>
+        <div>
+          <a :href="`/other/poems/${slugify(poem.title)}/`" @text="poem.title"></a>
+        </div>
+      </template>
     </div>
   </section>
-
-  <div @text="Object.keys($data.collections)"></div>
 </div>
 
 <style>

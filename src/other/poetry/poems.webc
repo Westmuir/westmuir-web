@@ -1,0 +1,22 @@
+---js
+// <script>
+const pagination = {
+	data: "poems",
+	size: 1,
+	alias: "poem",
+  layout: "base.webc"
+	// addAllPagesToCollections: true,
+};
+
+const eleventyExcludeFromCollections = true;
+
+
+const permalink=  function(data) {return `/other/poems/${this.slugify(data.poem.title)}/`};
+
+const eleventyComputed = {
+	title: data => `Tagged ${data.poem.title}`,
+
+};
+---
+
+<img :src="poem.image" alt="" webc:is="eleventy-image" />
