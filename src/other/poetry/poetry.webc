@@ -2,10 +2,6 @@
 title: Other
 layout: plain
 description: Other stuff.
-eleventyNavigation:
-  key: Other
-  title: Archive
-  order: 5
 ---
 
 <div class="content-grid flow">

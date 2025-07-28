@@ -422,7 +422,8 @@ img[width][height] {
 
 .page-header {
   height: 300px;
-  background-color: var(--choco-8);
+  background-color: var(--camo-8);
+  background-image: var(--gradient-30);
   color: #fff;
 
   display: flex;
@@ -474,7 +475,7 @@ img[width][height] {
     justify-content: center;
     gap: 10px;
     z-index: 2;
-    background: var(--choco-10);
+    background: var(--page-header-background-color);
     clip-path: polygon(0 0, 100% 0, 100% 0%, 92% 100%, 0 100%);
     clip-path: polygon(100% 0, 100% 31%, 92% 100%, 0 100%, 0 0);
 
