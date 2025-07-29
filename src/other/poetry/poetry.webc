@@ -35,19 +35,22 @@ description: Other stuff.
 
   <section>
     <div class="content-list-grid">
-      <div>April 2020</div>
-      <div>
-        <a href="poems/95-years-young/">Lockdown - A Poem During the Global Coved-19 Pandemic</a>
-      </div>
-      <div>March 2020</div>
-      <div><a href="poems/95-years-young/">95 Years Young</a></div>
+      <template webc:for="poem of $data.poems" webc:nokeep>
+        <div @text="poem.key"></div>
+        <a
+          :class="poem.endOfYear ? 'end-of-year' : ''"
+          :href="`/other/poems/${slugify(poem.title)}/`"
+          @text="poem.title"
+        ></a>
+      </template>
     </div>
   </section>
-
-  <div @text="Object.keys($data.collections)"></div>
 </div>
 
 <style>
+  .end-of-year {
+    margin-block-end: 2rem;
+  }
   .pull-left {
     float: left;
     margin-inline-end: 1.5rem;

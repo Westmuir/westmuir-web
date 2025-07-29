@@ -6,7 +6,7 @@
 
   --secondary-color: light-dark(#03dac6, #03dac6);
   --text-color: light-dark(#212121, #ffffff);
-  --background-color: light-dark(#ffffff, #272832);
+  --background-color: light-dark(rgb(255, 255, 238), #272832);
   --hover-color: light-dark(#9699bb, #9699bb);
   --content-light-bg: light-dark(hsl(120, 100%, 97%), hsl(120, 12%, 27%));
   --cta-background-color: light-dark(var(--camo-9), var(--camo-11));
