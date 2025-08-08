@@ -26,4 +26,6 @@
   --elevation: light-dark(0 2px 5px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5));
 
   --page-header-background-color: light-dark(var(--camo-10), var(--camo-10));
+
+  --link-color: light-dark(cyan, cyan);
 }
