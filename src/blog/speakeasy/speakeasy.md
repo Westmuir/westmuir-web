@@ -2,6 +2,7 @@
 title: Men's Speakeasy.
 description: Tuesday afternoons - come along for a chat.
 date: 2025-07-03
+expires: 2025-10-01
 tags:
   - hall
 categories:
