@@ -60,7 +60,12 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter('categoryFilter', (collection, category) => {
-    return collection.filter(item => item.data?.categories?.includes(category));
+    return collection.filter(item => {
+      const expired = item.data.expires && item.data.expires < DateTime.now();
+      return !expired && item.data?.categories?.includes(category);
+      //&&
+      //DateTime.fromFormat(item.data?.expires ?? '2099-12-31', 'yyyy-LL-dd') > DateTime.now()
+    });
   });
 
   eleventyConfig.addFilter('sortAlphabetically', strings => (strings || []).sort((b, a) => b.localeCompare(a)));
