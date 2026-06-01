@@ -11,7 +11,6 @@
     "description": "The resilience centre.",
     "icon": "&#xe781;"
   },
-
   {
     "label": "Defibrillator",
     "url": "/Westmuir Hall/defibrillator/",
@@ -22,6 +21,12 @@
     "label": "WCDT",
     "url": "/wcdt/",
     "description": "Community Development Trust",
+    "icon": "&#xf200"
+  },
+  {
+    "label": "Volunteer",
+    "url": "/about/volunteers",
+    "description": "Volunteering",
     "icon": "&#xf200"
   }
 ]
