@@ -6,7 +6,7 @@ description: Other stuff.
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content full-image">
-    <img src="./src/other/poetry/banner-poet.avif" alt="abstract background" webc:is="eleventy-image" />
+    <img src="/other/poetry/banner-poet.avif" alt="abstract background" />
     <div class="page-header-info">
       <div class="content">
         <h1>Poet in Residence</h1>
@@ -17,7 +17,7 @@ description: Other stuff.
 
   <section class="full-width">
     <div class="content">
-      <img class="pull-left" src="./src/other/poetry/eila-webster.avif" alt="" webc:is="eleventy-image" />
+      <img class="pull-left" src="/other/poetry/eila-webster.avif" alt="" />
       <div class="content-text">
         Born in 1925, Eila Webster has spent her entire life living in Westmuir. Blessed with a fine memory, Eila was
         encouraged to write us a regular monthly poem which we featured on our website starting at Christmas in 2014.

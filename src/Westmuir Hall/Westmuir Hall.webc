@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content">
-    <img src="./src/wcdt/wcdt-banner.avif" alt="westmuir village" webc:is="eleventy-image" />
+    <img src="/wcdt/wcdt-banner.avif" alt="westmuir village" />
     <div class="page-header-info">
       <div class="content">
         <h2>Westmuir Village Hall</h2>

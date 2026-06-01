@@ -1,22 +1,21 @@
 ---js
-// <script>
 const pagination = {
 	data: "poems",
 	size: 1,
 	alias: "poem",
-  layout: "base.webc"
-	// addAllPagesToCollections: true,
+	layout: "base.webc"
 };
 
 const eleventyExcludeFromCollections = true;
 
-
-const permalink=  function(data) {return `/other/poems/${this.slugify(data.poem.title)}/`};
+const permalink = function(data) {
+	return `/other/poems/${this.slugify(data.poem.title)}/`;
+};
 
 const eleventyComputed = {
 	title: data => `Tagged ${data.poem.title}`,
-
 };
 ---
 
-<img :src="poem.image" alt="" webc:is="eleventy-image" webc:if="poem.image" />
+<!-- Added eleventy:widths to cap processing at 1200px across all formats -->
+<img :src="poem.image" alt="" eleventy:widths="1200" webc:if="poem.image" />

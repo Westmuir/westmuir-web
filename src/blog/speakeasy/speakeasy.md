@@ -16,8 +16,8 @@ cardType: hall
   <figure class="figure ml-12 max-w-lg d-ib">
     <img
       class="bg-yellow-100 sm-p-3 shadow-lg"
-      src="./src/blog/speakeasy/speakeasy-group.png"
-      alt="A speakeasy group" webc:is="eleventy-image"
+      src="/blog/speakeasy/speakeasy-group.png"
+      alt="A speakeasy group"
     />
   </figure>
 

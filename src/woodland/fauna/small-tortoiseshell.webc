@@ -5,7 +5,7 @@ layout: plain
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content" op-center>
-    <img src="./src/woodland/fauna/small-tortoiseshell.avif" alt="Small Tortoiseshell" webc:is="eleventy-image" />
+    <img src="/woodland/fauna/small-tortoiseshell.avif" alt="Small Tortoiseshell" />
     <div class="page-header-info">
       <div class="content">
         <h1>Small Tortoiseshell Butterfly</h1>
@@ -19,9 +19,8 @@ layout: plain
       <figure>
         <img
           class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="./src/woodland/fauna/small-tortoiseshell.avif"
+          src="/woodland/fauna/small-tortoiseshell.avif"
           alt="Small Tortoiseshell on board walk in woodland"
-          webc:is="eleventy-image"
         />
       </figure>
     </div>

@@ -5,20 +5,24 @@ date: 2025-10-25
 expires: 2025-10-26
 tags: hall
 categories: [hall, featured]
-mage: src/blog/cafe/cafe.png
+cover: src/blog/cafe/cafe.png
 cardType: hall
 ---
 
 <div class="content-grid flow">
   <div class="cafe breakout">
-
     <div class="cafe-wrapper">
-   <img src="./src/blog/cafe/popup-cafe.jpg" alt="Popup cafe" webc:is="eleventy-image" />
-   </div>
-
-    <div class="mt-3">
+      <img src="/blog/cafe/popup-cafe.jpg" alt="Popup cafe"  ></img>
     </div>
+
+    <div class="mt-3"></div>
 
     <div class="clear-both"></div>
   </div>
 </div>
+
+
+<!-- This script block is required by WebC v0.12.x to satisfy the ESM compiler -->
+<script webc:type="js">
+export default {};
+</script>

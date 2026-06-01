@@ -5,7 +5,7 @@ layout: plain
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content" op-center>
-    <img src="./src/woodland/flora/scots-pine.avif" alt="ling" webc:is="eleventy-image" />
+    <img src="/woodland/flora/scots-pine.avif" alt="ling" />
     <div class="page-header-info">
       <div class="content">
         <h1>Scots Pine</h1>
@@ -17,12 +17,7 @@ layout: plain
   <section class="breakout content-image-text">
     <div class="content-image">
       <figure>
-        <img
-          class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="./src/woodland/flora/scots-pine.avif"
-          alt="Scots Pine"
-          webc:is="eleventy-image"
-        />
+        <img class="bg-yellow-100 sm-p-3 shadow-lg" src="/woodland/flora/scots-pine.avif" alt="Scots Pine" />
       </figure>
     </div>
     <div class="content-text bg-revert species-facts">

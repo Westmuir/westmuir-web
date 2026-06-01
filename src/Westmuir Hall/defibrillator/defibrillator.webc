@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content">
-    <img src="./src/Westmuir Hall/defibrillator/main-road.avif" alt="Main road" webc:is="eleventy-image" />
+    <img src="/Westmuir Hall/defibrillator/main-road.avif" alt="Main road" />
     <div class="page-header-info">
       <div class="content">
         <h1>Westmuir Defibrillator</h1>
@@ -24,17 +24,15 @@ eleventyNavigation:
       <figure class="figure ml-12 max-w-sm d-ib as-start">
         <img
           class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
-          src="./src/Westmuir Hall/defibrillator/defibrillator.avif"
+          src="/Westmuir Hall/defibrillator/defibrillator.avif"
           alt="Community defibrillator"
-          webc:is="eleventy-image"
         />
       </figure>
       <figure class="figure ml-12 max-w-sm d-ib">
         <img
           class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
-          src="./src/Westmuir Hall/defibrillator/kiosk.avif"
+          src="/Westmuir Hall/defibrillator/kiosk.avif"
           alt="Phone kiosk housing defibrillator"
-          webc:is="eleventy-image"
         />
       </figure>
     </div>
