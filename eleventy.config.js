@@ -6,7 +6,7 @@
  */
 
 import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from '@11ty/eleventy';
-import { eleventyImagePlugin } from '@11ty/eleventy-img';
+import { eleventyImagePlugin, eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
@@ -70,6 +70,19 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/css/**/*.css');
 
   let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
+
+  // Use the native HTML transform plugin
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // Set your global image configurations here
+    formats: ['webp', 'avif', 'jpeg'],
+    widths: ['auto'],
+    htmlOptions: {
+      imgAttributes: {
+        loading: 'lazy',
+        decoding: 'async',
+      },
+    },
+  });
 
   eleventyConfig.addPlugin(pluginWebc, {
     components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],

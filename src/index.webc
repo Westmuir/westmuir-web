@@ -1,13 +1,12 @@
----js
-{ title: "Welcome to Westmuir",
-layout: "plain",
-cta: true,
+---
+title: 'Welcome to Westmuir'
+layout: 'plain'
+cta: true
 hero: false
-}
 ---
 
 <figure class="page-header">
-  <img src="./src/images/east-bank.avif" alt="East bank, Westmuir" webc:is="eleventy-image" />
+  <img src="images/east-bank.avif" alt="East bank, Westmuir" />
   <div class="page-header-info">
     <div class="content">
       <h1>Westmuir</h1>
@@ -21,7 +20,7 @@ hero: false
     <h2 class="main-heading">Quick links</h2>
     <nav-cards :@cards="$data.cards"></nav-cards>
 
-    <section class="hero" webc:if="false">
+    <section class="hero" xwebc:if="false">
       <div class="hero-content">
         <h1>Welcome to Westmuir</h1>
         <p>Discover the charm of our village, from events to local news.</p>
@@ -32,7 +31,6 @@ hero: false
     <h2 class="main-heading">Latest</h2>
 
     <postslist-articles :list="head(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-articles>
-
     <postslist-cards :list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-cards>
   </div>
 </div>
@@ -47,27 +45,17 @@ hero: false
     <div class="logos">
       <div class="logo-item">
         <a href="https://www.plovermuircottages.co.uk" target="_blank">
-          <img src="./src/images/Plovermuir_1.jpg" alt="Plovermuir cottages" webc:is="eleventy-image" width="200" />
+          <img src="images/Plovermuir_1.jpg" alt="Plovermuir cottages" width="200" />
         </a>
       </div>
       <div class="logo-item">
         <a href="https://www.garysinclairarchitecture.com/" target="_blank">
-          <img
-            src="./src/images/Gary_Sinclair_1.jpg"
-            alt="Gary Sinclair architecture"
-            webc:is="eleventy-image"
-            width="200"
-          />
+          <img src="images/Gary_Sinclair_1.jpg" alt="Gary Sinclair architecture" width="200" />
         </a>
       </div>
       <div class="logo-item">
         <a href="https://angusscaffolding.co.uk/" target="_blank">
-          <img
-            src="./src/images/Angus Scaffold.1.png"
-            alt="Angus Scaffolding Ltd"
-            webc:is="eleventy-image"
-            width="200"
-          />
+          <img src="images/Angus Scaffold.1.png" alt="Angus Scaffolding Ltd" width="200" />
         </a>
       </div>
     </div>
@@ -76,6 +64,6 @@ hero: false
 
 <div class="container container-spacing" name="main-content">
   <div class="section">
-    <cta-volunteer buttonlabel="Read more" buttonurl="/about/volunteers/" webc:if="cta"></cta-volunteer>
+    <cta-volunteer buttonlabel="Read more" buttonurl="/about/volunteers/" xwebc:if="cta"></cta-volunteer>
   </div>
 </div>

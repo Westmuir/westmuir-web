@@ -1,334 +1,338 @@
 [
-  { "key": "March 2020", "title": "95 Years Young", "image": "./src/other/poetry/poems/2020 March.avif" },
-  { "key": "February 2020", "title": "Our Changing Seasons", "image": "./src/other/poetry/poems/2020 February.avif" },
+  {
+    "key": "March 2020",
+    "title": "95 Years Young",
+    "image": "/other/poetry/poems/2020 March.avif"
+  },
+  {
+    "key": "February 2020",
+    "title": "Our Changing Seasons",
+    "image": "/other/poetry/poems/2020 February.avif"
+  },
   {
     "key": "January 2020",
     "title": "Thoughts for the New Year",
-    "image": "./src/other/poetry/poems/2020 January.avif",
+    "image": "/other/poetry/poems/2020 January.avif",
     "endOfYear": true
   },
   {
     "key": "December 2019",
     "title": "It's the Christmas Season Again",
-    "image": "./src/other/poetry/poems/2019 December.avif"
+    "image": "/other/poetry/poems/2019 December.avif"
   },
   {
     "key": "November 2019",
     "title": "Reedie's Tatties -1971",
-    "image": "./src/other/poetry/poems/2019 November.avif"
+    "image": "/other/poetry/poems/2019 November.avif"
   },
   {
     "key": "October 2019",
     "title": "Tattie Picking . . . 1967",
-    "image": "./src/other/poetry/poems/2019 October.avif"
+    "image": "/other/poetry/poems/2019 October.avif"
   },
   {
     "key": "September 2019",
     "title": "September. . . A Special Month",
-    "image": "./src/other/poetry/poems/2019 September.avif"
+    "image": "/other/poetry/poems/2019 September.avif"
   },
   {
     "key": "August 2019",
     "title": "August is the Month for Fruit",
-    "image": "./src/other/poetry/poems/2019 August.avif"
+    "image": "/other/poetry/poems/2019 August.avif"
   },
   {
     "key": "July 2019",
     "title": "July's Long Summer Days",
-    "image": "./src/other/poetry/poems/2019 July.avif"
+    "image": "/other/poetry/poems/2019 July.avif"
   },
   {
     "key": "June 2019",
     "title": "June is the Month of Roses",
-    "image": "./src/other/poetry/poems/2019 June.avif"
+    "image": "/other/poetry/poems/2019 June.avif"
   },
   {
     "key": "May 2019",
     "title": "Colourful May",
-    "image": "./src/other/poetry/poems/2019 May.avif"
+    "image": "/other/poetry/poems/2019 May.avif"
   },
   {
     "key": "Special Edition 2019",
     "title": "Westmuir's Defibrillator",
-    "image": "./src/other/poetry/poems/2019 Defibrillator Poem.avif"
+    "image": "/other/poetry/poems/2019 Defibrillator Poem.avif"
   },
   {
     "key": "April 2019",
     "title": "April's Charm",
-    "image": "./src/other/poetry/poems/2019 April.avif"
+    "image": "/other/poetry/poems/2019 April.avif"
   },
   {
     "key": "March 2019",
     "title": "The Great Outdoors is Wakening Up",
-    "imageX": "./src/other/poetry/poems/2019 March.avif"
+    "imageX": "/other/poetry/poems/2019 March.avif"
   },
   {
     "key": "February 2019",
     "title": "The month of Subtle Change",
-    "image": "./src/other/poetry/poems/2019 February.avif"
+    "image": "/other/poetry/poems/2019 February.avif"
   },
   {
     "key": "January 2019",
     "title": "Another Year Begins",
-    "image": "./src/other/poetry/poems/2019 January.avif",
+    "image": "/other/poetry/poems/2019 January.avif",
     "endOfYear": true
   },
   {
     "key": "December 2018",
     "title": "Christmas 2018",
-    "image": "./src/other/poetry/poems/2018 December.avif"
+    "image": "/other/poetry/poems/2018 December.avif"
   },
   {
     "key": "November 2018",
     "title": "I Greet the Dawn",
-    "image": "./src/other/poetry/poems/2018 November.avif"
+    "image": "/other/poetry/poems/2018 November.avif"
   },
   {
     "key": "October 2018",
     "title": "Farming Matters",
-    "image": "./src/other/poetry/poems/2018 October.avif"
+    "image": "/other/poetry/poems/2018 October.avif"
   },
   {
     "key": "September 2018",
     "title": "Appreciation and Contentment",
-    "image": "./src/other/poetry/poems/2018 September.avif"
+    "image": "/other/poetry/poems/2018 September.avif"
   },
   {
     "key": "August 2018",
     "title": "Summer Weather",
-    "image": "./src/other/poetry/poems/2018 August.avif"
+    "image": "/other/poetry/poems/2018 August.avif"
   },
   {
     "key": "July 2018",
     "title": "Summer Relaxation & Fun",
-    "image": "./src/other/poetry/poems/2018 July.avif"
+    "image": "/other/poetry/poems/2018 July.avif"
   },
   {
     "key": "June 2018",
     "title": "All Change on the Money Front",
-    "image": "./src/other/poetry/poems/2018 June.avif"
+    "image": "/other/poetry/poems/2018 June.avif"
   },
   {
     "key": "May 2018",
     "title": "May Blossom",
-    "image": "./src/other/poetry/poems/2018 May.avif"
+    "image": "/other/poetry/poems/2018 May.avif"
   },
-
   {
     "key": "April 2018",
     "title": "Life's Race",
-    "image": "./src/other/poetry/poems/2018 April.avif"
+    "image": "/other/poetry/poems/2018 April.avif"
   },
   {
     "key": "March 2018",
     "title": "March Winds",
-    "image": "./src/other/poetry/poems/2018 March.avif"
+    "image": "/other/poetry/poems/2018 March.avif"
   },
   {
     "key": "February 2018",
     "title": "February Thoughts",
-    "image": "./src/other/poetry/poems/2018 February.avif"
+    "image": "/other/poetry/poems/2018 February.avif"
   },
   {
     "key": "January 2018",
     "title": "The New Year",
-    "image": "./src/other/poetry/poems/2018 January.avif",
+    "image": "/other/poetry/poems/2018 January.avif",
     "endOfYear": true
   },
   {
     "key": "December 2017",
     "title": "Christmas",
-    "image": "./src/other/poetry/poems/2017 December.avif"
+    "image": "/other/poetry/poems/2017 December.avif"
   },
   {
     "key": "November 2017",
     "title": "Truth or Lie ? ",
-    "image": "./src/other/poetry/poems/2017 November.avif"
+    "image": "/other/poetry/poems/2017 November.avif"
   },
   {
     "key": "October 2017",
     "title": "The Promise",
-    "image": "./src/other/poetry/poems/2017 October.avif"
+    "image": "/other/poetry/poems/2017 October.avif"
   },
   {
     "key": "September 2017",
     "title": "Just for a Laugh",
-    "image": "./src/other/poetry/poems/2017 September.avif"
+    "image": "/other/poetry/poems/2017 September.avif"
   },
   {
     "key": "August 2017",
     "title": "Always Give of Your Best",
-    "image": "./src/other/poetry/poems/2017 August.avif"
+    "image": "/other/poetry/poems/2017 August.avif"
   },
   {
     "key": "July 2017",
     "title": "At the Health Centre",
-    "image": "./src/other/poetry/poems/2017 July.avif"
+    "image": "/other/poetry/poems/2017 July.avif"
   },
   {
     "key": "June 2017",
     "title": "Free Gifts",
-    "image": "./src/other/poetry/poems/2017 June.avif"
+    "image": "/other/poetry/poems/2017 June.avif"
   },
   {
     "key": "May 2017",
     "title": "The Precious Gift",
-    "image": "./src/other/poetry/poems/2017 May.avif"
+    "image": "/other/poetry/poems/2017 May.avif"
   },
-
   {
     "key": "April 2017",
     "title": "Memories of Long Ago",
-    "image": "./src/other/poetry/poems/2017 April.avif"
+    "image": "/other/poetry/poems/2017 April.avif"
   },
   {
     "key": "March 2017",
     "title": "Snow",
-    "image": "./src/other/poetry/poems/2017 March.avif"
+    "image": "/other/poetry/poems/2017 March.avif"
   },
   {
     "key": "February 2017",
     "title": "A Sad Dog",
-    "image": "./src/other/poetry/poems/2017 February.avif"
+    "image": "/other/poetry/poems/2017 February.avif"
   },
   {
     "key": "January 2017",
     "title": "Looking to the Future",
-    "image": "./src/other/poetry/poems/2017 January.avif",
+    "image": "/other/poetry/poems/2017 January.avif",
     "endOfYear": true
   },
   {
     "key": "December 2016",
     "title": "December Celebrations",
-    "image": "./src/other/poetry/poems/2016 December.avif"
+    "image": "/other/poetry/poems/2016 December.avif"
   },
   {
     "key": "November 2016",
     "title": "November",
-    "image": "./src/other/poetry/poems/2016 November.avif"
+    "image": "/other/poetry/poems/2016 November.avif"
   },
   {
     "key": "October 2016",
     "title": "October Flashsbacks",
-    "image": "./src/other/poetry/poems/2016 October.avif"
+    "image": "/other/poetry/poems/2016 October.avif"
   },
   {
     "key": "September 2016",
     "title": "Goodbye August . . . Hello September",
-    "image": "./src/other/poetry/poems/2016 September.avif"
+    "image": "/other/poetry/poems/2016 September.avif"
   },
   {
     "key": "August 2016",
     "title": "August Reflections",
-    "image": "./src/other/poetry/poems/2016 August.avif"
+    "image": "/other/poetry/poems/2016 August.avif"
   },
   {
     "key": "July 2016",
     "title": "Midsummer Days in July",
-    "image": "./src/other/poetry/poems/2016 July.avif"
+    "image": "/other/poetry/poems/2016 July.avif"
   },
   {
     "key": "June 2016",
     "title": "The Happy Month of June",
-    "image": "./src/other/poetry/poems/2016 June.avif"
+    "image": "/other/poetry/poems/2016 June.avif"
   },
   {
     "key": "May 2016",
     "title": "May Reflections",
-    "image": "./src/other/poetry/poems/2016 May.avif"
+    "image": "/other/poetry/poems/2016 May.avif"
   },
-
   {
     "key": "April 2016",
     "title": "Spring 2016",
-    "image": "./src/other/poetry/poems/2016 April.avif"
+    "image": "/other/poetry/poems/2016 April.avif"
   },
   {
     "key": "March 2016",
     "title": "March Reflections 2016",
-    "image": "./src/other/poetry/poems/2016 March.avif"
+    "image": "/other/poetry/poems/2016 March.avif"
   },
   {
     "key": "February 2016",
     "title": "February Thoughts 2016",
-    "image": "./src/other/poetry/poems/2016 February.avif"
+    "image": "/other/poetry/poems/2016 February.avif"
   },
   {
     "key": "January 2016",
     "title": "New Year 2016",
-    "image": "./src/other/poetry/poems/2016 January.avif",
+    "image": "/other/poetry/poems/2016 January.avif",
     "endOfYear": true
   },
   {
     "key": "December 2015",
     "title": "Eila's December Reflections",
-    "image": "./src/other/poetry/poems/December Poem -Eila's Reflections.avif"
+    "image": "/other/poetry/poems/December Poem -Eila's Reflections.avif"
   },
   {
     "key": "November 2015",
     "title": "November Martinmas Winter Term",
-    "image": "./src/other/poetry/poems/November Poem - Martinmas Winter Term.avif"
+    "image": "/other/poetry/poems/November Poem - Martinmas Winter Term.avif"
   },
   {
     "key": "October 2015",
     "title": "October Tattie Holidays 2015",
-    "image": "./src/other/poetry/poems/October Website Poem 2015.avif"
+    "image": "/other/poetry/poems/October Website Poem 2015.avif"
   },
   {
     "key": "September 2015",
     "title": "September ~ My Favourite",
-    "image": "./src/other/poetry/poems/September Poem 2015.avif"
+    "image": "/other/poetry/poems/September Poem 2015.avif"
   },
   {
     "key": "August 2015",
     "title": "The Heather Hills of August",
-    "image": "./src/other/poetry/poems/August Poem - The Heather Hills of August.avif"
+    "image": "/other/poetry/poems/August Poem - The Heather Hills of August.avif"
   },
   {
     "key": "July 2015",
     "title": "The Berries in July",
-    "image": "./src/other/poetry/poems/July Poem - The Berries in July.avif"
+    "image": "/other/poetry/poems/July Poem - The Berries in July.avif"
   },
   {
     "key": "June 2015",
     "title": "June Amonst the Roses",
-    "image": "./src/other/poetry/poems/June Poem - June Amongst the Roses.avif"
+    "image": "/other/poetry/poems/June Poem - June Amongst the Roses.avif"
   },
   {
     "key": "May 2015",
     "title": "The Merry Month of May",
-    "image": "./src/other/poetry/poems/May Poem by Eila Webster.avif"
+    "image": "/other/poetry/poems/May Poem by Eila Webster.avif"
   },
-
   {
     "key": "April 2015",
     "title": "Spring Cleaning",
-    "image": "./src/other/poetry/poems/April Poem - Spring Clean.avif"
+    "image": "/other/poetry/poems/April Poem - Spring Clean.avif"
   },
   {
     "key": "March 2015",
     "title": "Eila's 90th Birthday Poem",
-    "image": "./src/other/poetry/poems/March Poem - Eila's 90th Birthday  21 02 2015.avif"
+    "image": "/other/poetry/poems/March Poem - Eila's 90th Birthday  21 02 2015.avif"
   },
   {
     "key": "February 2015",
     "title": "The Birthday Month",
-    "image": "./src/other/poetry/poems/February  Poem The Birthday Month.avif"
+    "image": "/other/poetry/poems/February  Poem The Birthday Month.avif"
   },
   {
     "key": "January 2015",
     "title": "A Moment in Time",
-    "image": "./src/other/poetry/poems/January Poem A Moment in Time.avif",
+    "image": "/other/poetry/poems/January Poem A Moment in Time.avif",
     "endOfYear": true
   },
   {
     "key": "Summer Extra 2015",
     "title": "New Year 2015",
-    "image": "./src/other/poetry/poems/Extra Poem - The Weather.avif"
+    "image": "/other/poetry/poems/Extra Poem - The Weather.avif"
   },
   {
     "key": "Christmas 2014",
     "title": "Meaningful Christmas",
-    "image": "./src/other/poetry/poems/Meaningful_Christmas_by_Eila.avif"
+    "image": "/other/poetry/poems/Meaningful_Christmas_by_Eila.avif"
   }
 ]

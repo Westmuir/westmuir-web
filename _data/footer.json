@@ -5,14 +5,17 @@
       "url": "/about/"
     },
     {
+      "hidden": true,
       "label": "Contact",
       "url": "/contact/"
     },
     {
+      "hidden": true,
       "label": "Events",
       "url": "/events/"
     },
     {
+      "hidden": true,
       "label": "News",
       "url": "/news/"
     }

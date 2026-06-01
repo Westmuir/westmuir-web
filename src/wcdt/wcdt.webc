@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content">
-    <img src="./src/wcdt/wcdt-banner.avif" alt="westmuir village" webc:is="eleventy-image" />
+    <img src="/wcdt/wcdt-banner.avif" alt="westmuir village" />
     <div class="page-header-info">
       <div class="content">
         <h2>Westmuir Community Development Trust</h2>
@@ -20,7 +20,7 @@ eleventyNavigation:
   </figure>
 
   <section class="content-text-block breakout">
-    <img class="pull-left wcdt-logo" src="./src/wcdt/wcdt-logo.avif" alt="WCDT logo" webc:is="eleventy-image" />
+    <img class="pull-left wcdt-logo" src="/wcdt/wcdt-logo.avif" alt="WCDT logo" />
     <div>
       Westmuir Community Development Trust was formed in 2004 following a strong desire for such an organisation having
       been expressed through a survey of the local community in Westmuir. Membership of the Trust, which is managed by a

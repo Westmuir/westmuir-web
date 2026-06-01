@@ -10,7 +10,7 @@ eleventyNavigation:
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content">
-    <img src="./src/woodland/walkway-1980.avif" alt="woodland walkway" webc:is="eleventy-image" />
+    <img src="/woodland/walkway-1980.avif" alt="woodland walkway" />
     <div class="page-header-info">
       <div class="content">
         <h1>Woodland park</h1>
@@ -25,12 +25,7 @@ eleventyNavigation:
   <section class="breakout content-image-text">
     <div class="content-image">
       <figure>
-        <img
-          class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="./src/woodland/woodland-park.avif"
-          alt=""
-          webc:is="eleventy-image"
-        />
+        <img class="bg-yellow-100 sm-p-3 shadow-lg" src="/woodland/woodland-park.avif" alt="" />
       </figure>
     </div>
     <div class="content-text content-text-highlight">

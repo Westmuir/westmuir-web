@@ -1,7 +1,7 @@
 <footer class="footer">
   <p>&copy; 2025 Westmuir Village. All rights reserved.</p>
   <nav webc:if="$data.footer.links">
-    <a :href="link.url" webc:for="link of $data.footer.links" @text="link.label"></a>
+    <a :href="link.url" webc:for="link of $data.footer.links" @text="link.label" webc:if="!link.hidden"></a>
   </nav>
 </footer>
 
