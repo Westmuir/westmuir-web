@@ -6,7 +6,7 @@
  */
 
 import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from '@11ty/eleventy';
-import { eleventyImagePlugin, eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
@@ -19,6 +19,7 @@ import fs from 'node:fs';
 import OpenProps from 'open-props';
 import postcss from 'postcss';
 import postcssJit from 'postcss-jit-props';
+import * as sass from 'sass';
 import pluginFilters from './_config/filters.js';
 
 function configureMarkdownIt() {
@@ -67,7 +68,7 @@ export default async function (eleventyConfig) {
   });
 
   // Watch CSS files
-  eleventyConfig.addWatchTarget('./src/css/**/*.css');
+  eleventyConfig.addWatchTarget('./src/css/**/*.{css,scss}');
 
   let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
 
@@ -89,8 +90,24 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginWebc, {
     components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
+    // ADD THIS BLOCK: Tells WebC to read .scss link imports natively
+    preprocessors: {
+      scss: src => sass.compileString(src).css,
+    },
     bundlePluginOptions: {
       transforms: [
+        async function (content) {
+          if (this.type === 'css') {
+            const result = sass.compileString(content, {
+              alertColor: true,
+              // Crucial: Tells Sass where to find files if you use @use or @import
+              loadPaths: ['./src/css', './node_modules'],
+              logger: sass.Logger.silent,
+            });
+            return result.css;
+          }
+          return content;
+        },
         async function (content) {
           if (this.type === 'css') {
             let { code } = transform({
@@ -132,21 +149,6 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(HtmlBasePlugin);
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
-
-  // Image plugin
-  eleventyConfig.addPlugin(eleventyImagePlugin, {
-    // Set global default options
-    formats: ['avif', 'webp', 'jpeg'],
-    urlPath: '/img/',
-
-    // Notably `outputDir` is resolved automatically
-    // to the project output directory
-
-    defaultAttributes: {
-      loading: 'lazy',
-      decoding: 'async',
-    },
-  });
 
   // Filters
   eleventyConfig.addPlugin(pluginFilters);
