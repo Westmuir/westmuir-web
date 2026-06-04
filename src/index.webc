@@ -17,15 +17,30 @@ hero: false
 
 <div class="container container-spacing" name="main-content">
   <div class="section">
-    <h2 class="main-heading">Quick links</h2>
+    <!-- <h2 class="main-heading">Quick links</h2> -->
     <nav-cards :@cards="$data.cards"></nav-cards>
 
-    <section class="hero" xwebc:if="false">
-      <div class="hero-content">
-        <h1>Welcome to Westmuir</h1>
-        <p>Discover the charm of our village, from events to local news.</p>
-        <a href="/about/" class="btn">Learn More</a>
+    <section class="hero-content context-text-block breakout" xwebc:if="false">
+      <div class="home-cta">
+        <h1 class="main-heading">VILLAGE HALL NEWS</h1>
+        <div class="home-cta-text">
+          What a year it has been for the hall committee! New walls, windows and doors (and soon a new roof) outside and
+          inside new curtains, chairs and crockery, much paid for through successfully applied for grants. All that's
+          needed now are some new people to join the committee to help take all the good work forward. We meet about
+          four times a year and run a few fund-raising events to keep the hall coffers in good shape. Please consider
+          joining us, we're friendly, open to new ideas and would be delighted to see you!
+          <div class="home-cta-text-footer">
+            For more information please contact Ann (
+            <a href="mailto: volunteers@westmuir.org.uk">volunteers&#64;westmuir.org.uk </a>) or join us at the AGM on
+            16th June, at 7.30pm. Thanks!
+          </div>
+        </div>
       </div>
+      <!-- <div class="hero-content"> -->
+      <!--   <h1>Welcome to Westmuir</h1> -->
+      <!--   <p>Discover the charm of our village, from events to local news.</p> -->
+      <!--   <a href="/about/" class="btn">Learn More</a> -->
+      <!-- </div> -->
     </section>
 
     <h2 class="main-heading">Latest</h2>

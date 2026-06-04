@@ -107,6 +107,24 @@ img[width][height] {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
+.home-cta {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border: 2px solid green;
+  padding: 1em;
+  border-radius: 1em;
+
+
+}
+
+.home-cta .home-cta-text {
+  padding: 1em;
+}
+
+.home-cta-text-footer {
+  margin-top: 1em;
+}
+
 .home-main {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -257,7 +275,6 @@ img[width][height] {
   margin-left: auto;
 }
 
-.craft-club-info {}
 
 .craft-club img {
   border: none;
