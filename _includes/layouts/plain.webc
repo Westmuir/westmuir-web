@@ -1,5 +1,5 @@
 ---
-layers: [openprops]
+layers: ['reset', 'openprops', 'default']
 ---
 
 <!doctype html>
@@ -14,15 +14,18 @@ layers: [openprops]
       webc:keep
     />
 
+    <!-- Explicitly route your reset to its own layered bucket -->
+    <link rel="stylesheet" href="../../src/css/reset.scss" webc:bucket="reset" />
+
     <link rel="stylesheet" href="../../node_modules/open-props/normalize.min.css" webc:bucket="openprops" />
 
     <!--- media queries cannot be in openprops bucket as 11ty needs them when it bundles css that uses them --->
     <!--- they will be optimized away in the bundling process -->
     <link rel="stylesheet" href="../../node_modules/open-props/media.min.css" />
     <link rel="stylesheet" href="../../node_modules/open-props/gradients.min.css" />
-    <link rel="stylesheet" href="../../src/css/components/layout.css" />
-    <link rel="stylesheet" href="../../src/css/base.css" />
-    <link rel="stylesheet" href="../../src/css/theme.css" />
+    <link rel="stylesheet" href="../../src/css/components/layout.scss" />
+    <link rel="stylesheet" href="../../src/css/base.scss" />
+    <link rel="stylesheet" href="../../src/css/theme.scss" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
