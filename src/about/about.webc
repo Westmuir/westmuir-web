@@ -8,6 +8,6 @@ eleventyNavigation:
 ---
 
 <div class="content-grid flow">
-  <p>Welcome to the About page. Learn about our history and values.</p>
+  <p>Welcome to the about page. Learn about our history and values.</p>
 </div>
 <!--- <my-component webc:nokeep></my-component> --->
