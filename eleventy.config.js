@@ -15,11 +15,11 @@ import { browserslistToTargets, Features, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
+import fs from 'node:fs';
 import OpenProps from 'open-props';
-import pluginFilters from './_config/filters.js';
-
 import postcss from 'postcss';
 import postcssJit from 'postcss-jit-props';
+import pluginFilters from './_config/filters.js';
 
 function configureMarkdownIt() {
   return markdownit({ html: true })
@@ -63,7 +63,7 @@ export default async function (eleventyConfig) {
   // For example, `./public/css/` ends up in `_site/css/`
   eleventyConfig.addPassthroughCopy({
     './public/pdf': '/pdf',
-    './src/css/custom.woff2': '/bundle/custom.woff2',
+    './src/css/custom.woff2': '/custom.woff2',
   });
 
   // Watch CSS files
@@ -73,9 +73,12 @@ export default async function (eleventyConfig) {
 
   // Use the native HTML transform plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    // Crucial for Cloudflare Build Cache
+    outputDir: '.cache/images/',
+    urlPath: '/img/',
     // Set your global image configurations here
     formats: ['webp', 'avif', 'jpeg'],
-    widths: ['auto'],
+    widths: [1200, 'auto'],
     htmlOptions: {
       imgAttributes: {
         loading: 'lazy',
@@ -147,4 +150,15 @@ export default async function (eleventyConfig) {
 
   // Filters
   eleventyConfig.addPlugin(pluginFilters);
+
+  // 3. Move files from Cloudflare's cache to the final build output directory
+  eleventyConfig.on('eleventy.after', async ({ dir }) => {
+    const sourceDir = '.cache/images/';
+    const destDir = `${dir.output}/img/`;
+
+    if (fs.existsSync(sourceDir)) {
+      fs.mkdirSync(destDir, { recursive: true });
+      fs.cpSync(sourceDir, destDir, { recursive: true });
+    }
+  });
 }
