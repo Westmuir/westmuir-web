@@ -46,7 +46,7 @@ If you would like more information contact Richard on [angusspeakeasy@gmail.com]
 
 ## Westmuir Village Hall
 
-**1st and 3rd Tuesday of the month**
+1st and 3rd Tuesday of the month
 
 **2 until 4pm**
 :::
