@@ -20,6 +20,7 @@ import fs from 'node:fs';
 import OpenProps from 'open-props';
 import postcss from 'postcss';
 import postcssCustomMedia from 'postcss-custom-media';
+import postcssImport from 'postcss-import';
 import postcssJit from 'postcss-jit-props';
 import * as sass from 'sass';
 import pluginFilters from './_config/filters.js';
@@ -94,9 +95,14 @@ export default async function (eleventyConfig) {
     components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
     // ADD THIS BLOCK: Tells WebC to read .scss link imports natively
     preprocessors: {
-      scss: src => sass.compileString(src).css,
+      scss: src =>
+        sass.compileString(src, {
+          loadPaths: ['./src/css', './node_modules'],
+        }).css,
     },
     bundlePluginOptions: {
+      toFileDirectory: false,
+      hoistDuplicateBundles: true,
       transforms: [
         async function (content) {
           if (this.type === 'css') {
@@ -113,6 +119,11 @@ export default async function (eleventyConfig) {
         async function (content) {
           if (this.type === 'css') {
             const result = await postcss([
+              // Inlines all remaining @import statements physically into the file
+
+              postcssImport({
+                path: ['./node_modules'],
+              }),
               // A. Load OpenProps media definitions globally for PostCSS
               postcssGlobalData({
                 files: ['./node_modules/open-props/media.min.css'],
@@ -132,19 +143,25 @@ export default async function (eleventyConfig) {
         },
         async function (content) {
           if (this.type === 'css') {
-            let { code } = transform({
-              filename: 'bundle.css',
-              code: Buffer.from(content), //r.toString()),
-              minify: false,
-              sourceMap: false,
-              targets,
-              exclude: Features.LogicalProperties,
-              drafts: {
-                customMedia: true,
-              },
-            });
+            try {
+              let { code } = transform({
+                filename: 'bundle.css',
+                code: Buffer.from(content), //r.toString()),
+                minify: false,
+                sourceMap: false,
+                targets,
+                exclude: Features.LogicalProperties,
+                drafts: {
+                  customMedia: true,
+                },
+              });
 
-            return code;
+              return code;
+            } catch (e) {
+              console.log(e.toString());
+              console.log(content.toString());
+              throw e;
+            }
           }
           return content;
         },
