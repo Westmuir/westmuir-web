@@ -1,14 +1,17 @@
 {
-  "include": ["src/**/*", "_data/**/*", "_config/**/*", "eleventy.config.js"],
-  "exclude": ["node_modules", "_site"],
+  "include": [
+    "src/**/*",
+    "_data/**/*",
+    "_config/**/*",
+    "eleventy.config.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "_site"
+  ],
   "compilerOptions": {
     "checkJs": false,
     "resolveJsonModule": true,
-    "baseUrl": "./src",
-    "paths": {
-      "~/*": ["*"]
-    },
-    "moduleResolution": "node",
     "module": "es2020",
     "target": "es2022"
   }
