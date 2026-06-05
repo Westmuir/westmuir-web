@@ -13,6 +13,11 @@
     "checkJs": false,
     "resolveJsonModule": true,
     "module": "es2020",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    },
     "target": "es2022"
   }
 }
