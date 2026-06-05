@@ -1,0 +1,14 @@
+/* src/css/main.scss */
+
+/* 1. Reset and Normalize layers */
+@import "reset.scss";
+@import "open-props/normalize.min.css";
+
+/* 2. Global Design Variables and Tokens */
+@import "open-props/media.min.css";
+@import "open-props/gradients.min.css";
+@import "theme.scss";
+
+/* 3. Layout Structure and Core Rules */
+@import "components/layout.scss";
+@import "base.scss";
