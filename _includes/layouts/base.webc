@@ -1,5 +1,5 @@
 ---
-layers: ['reset', 'openprops', 'default']
+layers: ['reset', 'openprops', 'core', 'default']
 ---
 
 <!doctype html>
@@ -23,7 +23,7 @@ layers: ['reset', 'openprops', 'default']
     <!--- they will be optimized away in the bundling process -->
     <link rel="stylesheet" href="../../node_modules/open-props/media.min.css" />
     <link rel="stylesheet" href="../../node_modules/open-props/gradients.min.css" />
-    <link rel="stylesheet" href="../../src/css/components/layout.scss" />
+    <link rel="stylesheet" href="../../src/css/components/layout.scss" webc:bucket="core" />
     <link rel="stylesheet" href="../../src/css/base.scss" />
     <link rel="stylesheet" href="../../src/css/theme.scss" />
 

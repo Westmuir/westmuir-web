@@ -10,6 +10,7 @@ import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
+import postcssGlobalData from '@csstools/postcss-global-data';
 import browserslist from 'browserslist';
 import { browserslistToTargets, Features, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
@@ -18,6 +19,7 @@ import markdownitcontainer from 'markdown-it-container';
 import fs from 'node:fs';
 import OpenProps from 'open-props';
 import postcss from 'postcss';
+import postcssCustomMedia from 'postcss-custom-media';
 import postcssJit from 'postcss-jit-props';
 import * as sass from 'sass';
 import pluginFilters from './_config/filters.js';
@@ -110,6 +112,26 @@ export default async function (eleventyConfig) {
         },
         async function (content) {
           if (this.type === 'css') {
+            const result = await postcss([
+              // A. Load OpenProps media definitions globally for PostCSS
+              postcssGlobalData({
+                files: ['./node_modules/open-props/media.min.css'],
+              }),
+              // B. Polyfill the @media (--md-n-below) strings into raw pixels
+              postcssCustomMedia(),
+              // C. Pull in standard OpenProps variables Just-In-Time
+              postcssJit(OpenProps),
+            ]).process(content, {
+              from: this.page.inputPath,
+              to: null,
+            });
+
+            return result.css;
+          }
+          return content;
+        },
+        async function (content) {
+          if (this.type === 'css') {
             let { code } = transform({
               filename: 'bundle.css',
               code: Buffer.from(content), //r.toString()),
@@ -123,17 +145,6 @@ export default async function (eleventyConfig) {
             });
 
             return code;
-          }
-          return content;
-        },
-        async function (content) {
-          if (this.type === 'css') {
-            const result = await postcss([postcssJit(OpenProps)]).process(content, {
-              from: this.page.inputPath,
-              to: null,
-            });
-
-            return result.css;
           }
           return content;
         },
