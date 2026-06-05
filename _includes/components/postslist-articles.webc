@@ -1,13 +1,9 @@
 <ol reversed class="postlist">
   <li webc:for="post of reverse(list)">
-    <article :class="`item-list section-card-page ${post.data.cardType ?? 'na'}`">
+    <article :class="`item-list ${post.data.cardType ?? 'na'}`">
       <a :href="post.url" @text="post.data.title ?? post.url"> </a>
       <div>
-        <time
-          class="postlist-date"
-          :datetime="htmlDateString(post.date)"
-          @text="readableDate(post.date,'LLLL yyyy')"
-        ></time>
+        <time :datetime="htmlDateString(post.date)" @text="readableDate(post.date,'LLLL yyyy')"></time>
         <div @html="post.content" webc:nokeep></div>
       </div>
     </article>

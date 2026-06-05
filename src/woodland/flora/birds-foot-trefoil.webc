@@ -25,7 +25,7 @@ description: Learn about the Westmuir Community Development Trust and the Woodla
         <img class="bg-yellow-100 sm-p-3 shadow-lg" src="/woodland/birds-foot-trefoil.avif" alt="" />
       </figure>
     </div>
-    <div class="content-text bg-revert species-facts">
+    <div class="content-text species-facts">
       <h4>Species Facts</h4>
       <ul>
         <li><strong>Category: </strong>Wildflower</li>

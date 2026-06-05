@@ -20,7 +20,7 @@ hero: false
     <!-- <h2 class="main-heading">Quick links</h2> -->
     <nav-cards :@cards="$data.cards"></nav-cards>
 
-    <section class="hero-content context-text-block breakout" xwebc:if="false">
+    <section class="hero-content breakout" xwebc:if="false">
       <div class="home-cta">
         <h1 class="main-heading">VILLAGE HALL NEWS</h1>
         <div class="home-cta-text">

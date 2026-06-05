@@ -24,7 +24,7 @@ layout: plain
         />
       </figure>
     </div>
-    <div class="content-text bg-revert species-facts">
+    <div class="content-text species-facts">
       <h4>Species Facts</h4>
       <ul>
         <li><strong>Category: </strong>Butterfly</li>

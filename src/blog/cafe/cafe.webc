@@ -10,8 +10,8 @@ cardType: hall
 ---
 
 <div class="content-grid flow">
-  <div class="cafe breakout">
-    <div class="cafe-wrapper">
+  <div class="breakout">
+    <div>
       <img src="/blog/cafe/popup-cafe.jpg" alt="Popup cafe"  ></img>
     </div>
 

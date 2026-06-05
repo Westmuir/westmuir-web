@@ -1,9 +1,5 @@
 <ul class="section-cards">
-  <li
-    class="section-card section-card-page na sc-bg"
-    webc:for="item of cards"
-    :style="`background-color: ${item.bg || 'inherit'}`"
-  >
+  <li class="section-card na sc-bg" webc:for="item of cards" :style="`background-color: ${item.bg || 'inherit'}`">
     <a :href="item.url">
       <div class="section-cards-title">
         <img webc:if="item.image" src="{{ item.image }}" alt="{{ item.label }} image" class="card-image" />

@@ -4,7 +4,7 @@
   "version": "202507-3",
   "scripts": {
     "start": "eleventy --serve  --quiet",
-    "serve": "serve _site",
+    "serve": "serve -l 8080 _site",
     "debug": "eleventy --serve ",
     "preview": "eleventy && serve _site",
     "build": "eleventy",
