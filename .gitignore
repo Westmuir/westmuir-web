@@ -3,6 +3,7 @@ _site/
 .cache/
 
 purge-report*
+orphan-report*
 
 # wrangler files
 .wrangler

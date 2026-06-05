@@ -36,11 +36,6 @@ hero: false
           </div>
         </div>
       </div>
-      <!-- <div class="hero-content"> -->
-      <!--   <h1>Welcome to Westmuir</h1> -->
-      <!--   <p>Discover the charm of our village, from events to local news.</p> -->
-      <!--   <a href="/about/" class="btn">Learn More</a> -->
-      <!-- </div> -->
     </section>
 
     <h2 class="main-heading">Latest</h2>
