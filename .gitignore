@@ -2,6 +2,7 @@ node_modules/
 _site/
 .cache/
 
+purge-report*
 
 # wrangler files
 .wrangler

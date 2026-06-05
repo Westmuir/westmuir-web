@@ -24,8 +24,8 @@ eleventyNavigation:
 
   <section class="breakout content-image-text">
     <div class="content-image">
-      <figure>
-        <img class="bg-yellow-100 sm-p-3 shadow-lg" src="/woodland/woodland-park.avif" alt="" />
+      <figure class="framed-photo">
+        <img class="framed" src="/woodland/woodland-park.avif" alt="Westmuir Community Woodland" />
       </figure>
     </div>
     <div class="content-text content-text-highlight">
@@ -98,13 +98,3 @@ eleventyNavigation:
     </div>
   </section>
 </div>
-
-<style>
-  /* A section to contatin single column content */
-  .content-block-one {
-    margin-top: 2rem;
-    max-width: 1200px;
-    margin-inline: auto;
-    padding: 2rem;
-  }
-</style>
