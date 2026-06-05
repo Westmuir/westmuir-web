@@ -1,0 +1,29 @@
+<script webc:type="js">
+  export default function (context) {
+    const prevPost = context.getPrev(context.$data.collections);
+    const nextPost = context.getNext(context.$data.collections);
+
+    if (!prevPost && !nextPost) return '';
+
+    let html = `<ul>`;
+
+    if (prevPost) {
+      html += `
+        <li>
+          ← Previous<br />
+          <a href="${prevPost.url}">${prevPost.data.title}</a>
+        </li>`;
+    }
+
+    if (nextPost) {
+      html += `
+        <li>
+          Next →<br />
+          <a href="${nextPost.url}">${nextPost.data.title}</a>
+        </li>`;
+    }
+
+    html += `</ul>`;
+    return html;
+  }
+</script>

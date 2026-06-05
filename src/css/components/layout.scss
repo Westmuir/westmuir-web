@@ -1,5 +1,4 @@
 /* Layout Integrity */
-
 .page-wrapper {
   display: grid;
   grid-template-columns: 100%;
@@ -45,61 +44,29 @@ footer {
     font-size: 1rem;
   }
 
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  header,
-  .nav-toggle {
+  header {
     width: 100%;
   }
 }
 
 /* Layout Utility Classes */
 
-.flex {
-  display: flex;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
 .grid {
   display: grid;
   gap: 1rem;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
+.framed-photo img {
+  /* Leverage OpenProps high-fidelity shadows */
+  box-shadow: var(--shadow-3);
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
+  border-radius: var(--radius-2);
 
-.justify-between {
-  justify-content: space-between;
-}
+  &.framed {
+    /* Use OpenProps background surface colors instead of hardcoded ivory */
+    background-color: var(--yellow-1);
 
-.items-center {
-  align-items: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.p-4 {
-  padding: 1rem;
+    /* Use fluid padding tokens instead of responsive helper classes */
+    padding: var(--size-2);
+  }
 }

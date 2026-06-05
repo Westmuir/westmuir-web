@@ -10,6 +10,51 @@ import { DateTime } from 'luxon';
  * @returns
  */
 export default function (eleventyConfig) {
+  // ONE UNIFIED HIGH-PERFORMANCE NAVIGATION FILTER:
+  eleventyConfig.addFilter('getPostNav', function (collections) {
+    if (!this.page?.inputPath || !collections?.posts) {
+      return { prev: null, next: null };
+    }
+
+    // Run the array index search exactly ONCE for this page compile pass
+    const idx = collections.posts.findIndex(post => post.inputPath === this.page.inputPath);
+
+    if (idx === -1) {
+      return { prev: null, next: null };
+    }
+
+    // Grab both elements instantly using direct, ultra-fast index offsets
+    return {
+      prev: idx > 0 ? collections.posts[idx - 1] : null,
+      next: idx < collections.posts.length - 1 ? collections.posts[idx + 1] : null,
+    };
+  });
+
+  eleventyConfig.addFilter('getPrev', function (collections) {
+    if (!this.page?.inputPath || !collections?.posts) return null;
+
+    // 1. Find the index number of the current page file inside your posts array
+    const currentIndex = collections.posts.findIndex(post => post.inputPath === this.page.inputPath);
+
+    // 2. If it's the first post, or not found, there is no previous item!
+    if (currentIndex <= 0) return null;
+
+    // 3. Return the exact previous item object array element natively
+    return collections.posts[currentIndex - 1];
+  });
+
+  eleventyConfig.addFilter('getNext', function (collections) {
+    if (!this.page?.inputPath || !collections?.posts) return null;
+
+    // 1. Find the index number of the current page file inside your posts array
+    const currentIndex = collections.posts.findIndex(post => post.inputPath === this.page.inputPath);
+
+    // 2. If it's not found or it's the absolute last post, there is no next item!
+    if (currentIndex === -1 || currentIndex === collections.posts.length - 1) return null;
+
+    // 3. Return the exact next item object array element natively
+    return collections.posts[currentIndex + 1];
+  });
   eleventyConfig.addFilter('readableDate', (dateObj, format, zone) => {
     // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
     return DateTime.fromJSDate(dateObj, { zone: zone || 'utc' }).toFormat(format || 'dd LLLL yyyy');

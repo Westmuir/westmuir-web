@@ -1,9 +1,5 @@
 <ul class="section-cards">
-  <li
-    class="section-card section-card-page na sc-bg"
-    webc:for="item of cards"
-    :style="`background-color: ${item.bg || 'inherit'}`"
-  >
+  <li class="section-card na sc-bg" webc:for="item of cards" :style="`background-color: ${item.bg || 'inherit'}`">
     <a :href="item.url">
       <div class="section-cards-title">
         <img webc:if="item.image" src="{{ item.image }}" alt="{{ item.label }} image" class="card-image" />
@@ -63,8 +59,7 @@
     border-bottom: 10px solid var(--margin-color-hall, #803f6380);
   }
 
-  .section-cards .na,
-  .postlist .n-a {
+  .section-cards .na {
     border-bottom: 10px solid var(--margin-color-na, #3f4f8080);
   }
 

@@ -6,8 +6,8 @@
   </svg>
 </button>
 
-<nav aria-label="Site navigation" class="navbar" id="site-nav">
-  <ul class="nav-list" role="list">
+<nav aria-label="Site navigation" id="site-nav">
+  <ul role="list">
     <li>
       <button id="close-nav-button" aria-label="close sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9">
@@ -17,7 +17,7 @@
         </svg>
       </button>
     </li>
-    <li class="home-li">
+    <li>
       <a href="/" :class="'/' === pageurl?'active-link':''" :aria-current="page.url === '/' ? 'page' : ''">Home</a>
     </li>
 

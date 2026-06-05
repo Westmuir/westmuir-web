@@ -68,19 +68,9 @@
     theme.value = isDark ? 'dark' : 'light';
     setPreference();
   });
-
-  document.getElementById('nav-toggle')?.addEventListener('click', () => {
-    const menu = document.getElementById('nav-menu');
-    menu.classList.toggle('open');
-  });
 </script>
 
 <style>
-  .toggle-fade {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-
   /* no way out of this duplication afaik */
   [data-theme='light'] {
     --nav-icon: var(--gray-2);

@@ -2,17 +2,6 @@
 layout: plain
 ---
 
-<script webc:setup webc:type="js">
-  // function getPrev(pg) {
-  //   const x = getPreviousCollectionItem($data.collections.posts, pg);
-  //   return x;
-  // }
-  //
-  // function getnext(pg) {
-  //   return getNextCollectionItem($data.collections.posts, pg);
-  // }
-</script>
-
 <div class="post-wrapper">
   <h1 @text="title"></h1>
 
@@ -24,14 +13,5 @@ layout: plain
   </ul>
 
   <div @raw="content" webc:nokeep></div>
-
-  <!--  <ul class="links-nextprev" webc:if="getPrev(page) || getnext(page)" webc:if="$data.collections.posts">
-    <li class="links-nextprev-prev" webc:if="getPrev(page)">
-      ← Previous<br />
-      <a :href="getPrev(page).url" @text="getPrev(page).data.title"></a>
-    </li>
-    <li class="links-nextprev-next" webc:if="getnext(page)">
-      Next →<br /><a :href="getnext(page).url" @text="getnext(page).data.title"></a>
-    </li>
-  </ul>-->
+  <posts-nav></posts-nav>
 </div>

@@ -10,6 +10,7 @@ import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
+import postcssGlobalData from '@csstools/postcss-global-data';
 import browserslist from 'browserslist';
 import { browserslistToTargets, Features, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
@@ -18,6 +19,8 @@ import markdownitcontainer from 'markdown-it-container';
 import fs from 'node:fs';
 import OpenProps from 'open-props';
 import postcss from 'postcss';
+import postcssCustomMedia from 'postcss-custom-media';
+import postcssImport from 'postcss-import';
 import postcssJit from 'postcss-jit-props';
 import * as sass from 'sass';
 import pluginFilters from './_config/filters.js';
@@ -92,9 +95,14 @@ export default async function (eleventyConfig) {
     components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
     // ADD THIS BLOCK: Tells WebC to read .scss link imports natively
     preprocessors: {
-      scss: src => sass.compileString(src).css,
+      scss: src =>
+        sass.compileString(src, {
+          loadPaths: ['./src/css', './node_modules'],
+        }).css,
     },
     bundlePluginOptions: {
+      toFileDirectory: false,
+      hoistDuplicateBundles: true,
       transforms: [
         async function (content) {
           if (this.type === 'css') {
@@ -110,30 +118,50 @@ export default async function (eleventyConfig) {
         },
         async function (content) {
           if (this.type === 'css') {
-            let { code } = transform({
-              filename: 'bundle.css',
-              code: Buffer.from(content), //r.toString()),
-              minify: false,
-              sourceMap: false,
-              targets,
-              exclude: Features.LogicalProperties,
-              drafts: {
-                customMedia: true,
-              },
-            });
+            const result = await postcss([
+              // Inlines all remaining @import statements physically into the file
 
-            return code;
-          }
-          return content;
-        },
-        async function (content) {
-          if (this.type === 'css') {
-            const result = await postcss([postcssJit(OpenProps)]).process(content, {
+              postcssImport({
+                path: ['./node_modules'],
+              }),
+              // A. Load OpenProps media definitions globally for PostCSS
+              postcssGlobalData({
+                files: ['./node_modules/open-props/media.min.css'],
+              }),
+              // B. Polyfill the @media (--md-n-below) strings into raw pixels
+              postcssCustomMedia(),
+              // C. Pull in standard OpenProps variables Just-In-Time
+              postcssJit(OpenProps),
+            ]).process(content, {
               from: this.page.inputPath,
               to: null,
             });
 
             return result.css;
+          }
+          return content;
+        },
+        async function (content) {
+          if (this.type === 'css') {
+            try {
+              let { code } = transform({
+                filename: 'bundle.css',
+                code: Buffer.from(content), //r.toString()),
+                minify: false,
+                sourceMap: false,
+                targets,
+                exclude: Features.LogicalProperties,
+                drafts: {
+                  customMedia: true,
+                },
+              });
+
+              return code;
+            } catch (e) {
+              console.log(e.toString());
+              console.log(content.toString());
+              throw e;
+            }
           }
           return content;
         },
