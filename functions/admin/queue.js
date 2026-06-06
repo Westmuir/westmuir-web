@@ -23,11 +23,11 @@ export async function onRequestGet(context) {
 
       // 2. We add 'status-${b.status}' as a class name so our CSS body filter can grab it
       html += `
-        <div class="booking-row status-${b.status}" id="booking-container-${b.id}" style="display: flex; align-items: center; justify-content: space-between; background: var(--surface-2); padding: var(--size-3); margin-bottom: var(--size-2); border-radius: var(--radius-2); border: var(--border-size-1) solid var(--surface-3);">
+        <div class="booking-row status-${b.status}" id="booking-container-${b.id}">
           <div class="booking-info">
             <span class="date" style="font-weight: bold; color: ${b.is_recurring ? 'var(--purple-6)' : 'var(--text-1)'};">${eventDetails}</span>
             <span class="name" style="color: var(--text-1);">— ${b.name} (${b.email})</span>
-            <span class="badge ${badgeClass}" style="padding: 2px 6px; border-radius: var(--radius-1); font-size: var(--font-size-0); font-weight: bold;">${statusLabel}</span>
+            <span class="badge ${badgeClass}" >${statusLabel}</span>
           </div>
           <div class="action-cell" style="display: flex; gap: var(--size-2); align-items: center;">
 
@@ -35,7 +35,11 @@ export async function onRequestGet(context) {
             ${
               b.status !== 'approved' && b.status !== 'cancelled'
                 ? `
-              <button style="background: var(--blue-6); color: white; border: none; padding: 6px 12px; border-radius: var(--radius-1); cursor: pointer;" hx-post="/admin/approve" hx-vals='{"id": ${b.id}, "status": "approved"}' hx-target="#booking-container-${b.id}" hx-swap="outerHTML">Approve</button>
+              <button class="btn-approve-action"
+                hx-post="/admin/approve"
+                hx-vals='{"id": ${b.id}, "status": "approved"}'
+                hx-target="#booking-container-${b.id}"
+                hx-swap="outerHTML">Approve</button>
             `
                 : ''
             }
@@ -43,7 +47,11 @@ export async function onRequestGet(context) {
             ${
               b.status !== 'denied' && b.status !== 'cancelled'
                 ? `
-              <button style="background: var(--red-6); color: white; border: none; padding: 6px 12px; border-radius: var(--radius-1); cursor: pointer;" hx-post="/admin/approve" hx-vals='{"id": ${b.id}, "status": "denied"}' hx-target="#booking-container-${b.id}" hx-swap="outerHTML">Deny</button>
+              <button class="btn-deny-action"
+                hx-post="/admin/approve"
+                hx-vals='{"id": ${b.id}, "status": "denied"}'
+                hx-target="#booking-container-${b.id}"
+                hx-swap="outerHTML">Deny</button>
             `
                 : ''
             }
@@ -52,7 +60,11 @@ export async function onRequestGet(context) {
             ${
               b.status !== 'tentative'
                 ? `
-              <button style="background: var(--stone-6); color: white; border: none; padding: 6px 12px; border-radius: var(--radius-1); cursor: pointer;" hx-post="/admin/approve" hx-vals='{"id": ${b.id}, "status": "tentative"}' hx-target="#booking-container-${b.id}" hx-swap="outerHTML">Reset</button>
+              <button class="btn-tentative-action"
+                hx-post="/admin/approve"
+                hx-vals='{"id": ${b.id}, "status": "tentative"}'
+                hx-target="#booking-container-${b.id}"
+                hx-swap="outerHTML">Reset</button>
             `
                 : ''
             }
@@ -61,10 +73,10 @@ export async function onRequestGet(context) {
             ${
               b.status !== 'cancelled'
                 ? `
-              <button style="background: var(--orange-7); color: white; border: none; padding: 6px 12px; border-radius: var(--radius-1); cursor: pointer;"
+              <button class="btn-cancel-action"
                 hx-post="/admin/approve"
                 hx-vals='{"id": ${b.id}, "status": "cancelled"}'
-                hx-confirm="Are you sure you want to flag this event as Cancelled?"
+                Zhx-confirm="Are you sure you want to flag this event as Cancelled?"
                 hx-target="#booking-container-${b.id}"
                 hx-swap="outerHTML">
                 Cancel Booking

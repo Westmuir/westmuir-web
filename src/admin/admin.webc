@@ -148,10 +148,67 @@ title: 'Admin Dashboard - Westmuir Village'
     user-select: none;
   }
 
+  .action-cell button {
+    border: none;
+    padding: var(--size-1) var(--size-3);
+    border-radius: var(--radius-1);
+    cursor: pointer;
+    color: white;
+  }
+  .btn-approve-action {
+    background: var(--blue-6);
+  }
+  .btn-deny-action {
+    background: var(--red-6);
+  }
+
+  .btn-cancel-action {
+    background: var(--orange-6);
+  }
+  .btn-tentative-action {
+    background: var(--stone-6);
+  }
+
+  .booking-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface-2);
+    padding: var(--size-3);
+    margin-bottom: var(--size-2);
+    border-radius: var(--radius-2);
+    border: var(--border-size-1) solid var(--surface-3);
+    .badge {
+      padding: 2px 6px;
+      border-radius: var(--radius-1);
+      font-size: var(--font-size-0);
+      font-weight: bold;
+    }
+  }
+
+  /* Dynamic Semantic Badges using Open Props colors */
+  .badge-approved {
+    background: var(--green-9);
+    color: var(--green-1);
+  }
+  .badge-tentative {
+    background: var(--yellow-9);
+    color: var(--yellow-1);
+  }
+  .badge-denied {
+    background: var(--red-9);
+    color: var(--red-1);
+  }
+
+  .badge-cancelled {
+    background: var(--stone-6);
+    color: var(--grey-12);
+  }
   /* THE MAGIC TRICK:
    When the checkbox is UNCHECKED, it turns on the .hide-cancelled class on the <body>.
    This rule instantly finds any row returned by HTMX with the status-cancelled class and wipes it from view. */
-  :global(body.hide-cancelled .status-cancelled) {
+  /* Replace your old :global line with this clean CSS alternative */
+  :root body.hide-cancelled .status-cancelled {
     display: none !important;
   }
 </style>
