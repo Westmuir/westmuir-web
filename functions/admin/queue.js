@@ -19,7 +19,7 @@ export async function onRequestGet(context) {
       if (b.status === 'cancelled') badgeClass = 'badge-cancelled';
 
       let statusLabel = b.status.charAt(0).toUpperCase() + b.status.slice(1);
-      const eventDetails = b.is_recurring ? `🔄 Weekly (Day ${b.day_of_week})` : b.date;
+      const eventDetails = b.is_recurring ? `<span class="repeat-icon">↻</span> Weekly (Day ${b.day_of_week})` : b.date;
 
       // 2. We add 'status-${b.status}' as a class name so our CSS body filter can grab it
       html += `

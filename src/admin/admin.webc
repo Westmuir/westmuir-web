@@ -211,4 +211,11 @@ title: 'Admin Dashboard - Westmuir Village'
   :root body.hide-cancelled .status-cancelled {
     display: none !important;
   }
+  .repeat-icon {
+    display: inline-block;
+    font-weight: var(--font-weight-7);
+    color: var(--purple-6); /* Matches your admin accent color */
+    margin-right: var(--size-1);
+    transform: translateY(1px);
+  }
 </style>
