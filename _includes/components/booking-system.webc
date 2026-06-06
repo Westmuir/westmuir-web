@@ -35,11 +35,17 @@
           </div>
 
           <button type="submit" class="btn-submit">Submit Tentative Booking</button>
+          <div
+            class="cf-turnstile"
+            :data-sitekey="process.env.TURNSTILE_SITEKEY || '1x00000000000000000000AA'"
+            style="margin-bottom: 1rem"
+          ></div>
         </form>
       </div>
     </details>
   </section>
 </div>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer webc:keep></script>
 
 <!-- Component-Specific Styling inside booking-system.webc -->
 <style webc:type="scss">

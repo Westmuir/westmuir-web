@@ -9,11 +9,26 @@ export async function onRequestPost(context) {
     const date = formData.get('date');
     const name = formData.get('name')?.trim();
     const email = formData.get('email')?.trim();
+    const turnstileToken = formData.get('cf-turnstile-response');
+
+    const turnstileSecret = context.env.TURNSTILE_SECRET || '1x0000000000000000000000000000000AA';
 
     // 2. Simple server-side validation check
     if (!date || !name || !email) {
       return new Response("<p class='error-msg'>⚠️ Missing required form fields. Please fill out all entries.</p>", {
         headers: { 'Content-Type': 'text/html; charset=utf-8' },
+      });
+    }
+    const verifyResult = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${turnstileSecret}&response=${turnstileToken}`,
+    });
+
+    const outcome = await verifyResult.json();
+    if (!outcome.success) {
+      return new Response("<p class='error-msg'>⚠️ Security verification failed. Please try again.</p>", {
+        status: 400,
       });
     }
 
