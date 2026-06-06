@@ -4,7 +4,11 @@ export async function onRequestGet(context) {
   try {
     // 1. Query the Cloudflare D1 database (bound to 'DB' in wrangler.json)
     // We sort the bookings by date so they display chronologically
-    const { results } = await context.env.DB.prepare('SELECT * FROM bookings ORDER BY date ASC').all();
+
+    // Inside functions/api/bookings.js
+    const { results } = await context.env.DB.prepare(
+      "SELECT * FROM bookings WHERE status = 'approved' ORDER BY is_recurring DESC, date ASC",
+    ).all();
 
     // 2. Handle the empty state gracefully
     if (!results || results.length === 0) {
@@ -16,23 +20,26 @@ export async function onRequestGet(context) {
     // 3. Build a simple HTML string to return to the browser
     // HTMX will seamlessly inject this string right into your WebC component
     let html = "<ul class='bookings-list'>";
-
-    results.forEach(booking => {
-      // Clean up the status text formatting for presentation
-      const isApproved = booking.status === 'approved';
-      const statusLabel = isApproved ? '✅ Approved' : '⏳ Pending Approval';
-
-      html += `
-        <li class="booking-item status-${booking.status}">
-          <strong class="booking-date">${booking.date}</strong>
-          <span class="booking-name">— ${booking.name}</span>
-          <span class="booking-badge">${statusLabel}</span>
-        </li>
-      `;
+    results.forEach(b => {
+      if (b.is_recurring) {
+        const days = ['Sundays', 'Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays'];
+        html += `
+      <li class="booking-item recurring" style="border-left: var(--border-size-3) solid var(--cyan-7); padding-left: var(--size-4); margin-bottom: var(--size-4);">
+        <strong>Every ${days[b.day_of_week]}</strong>
+        <span class="booking-name">— ${b.name} (Until ${b.end_date})</span>
+        <span class="badge" style="background:#edf2f7; font-size:0.8rem; padding:2px 6px; border-radius:4px;">🔄 Weekly</span>
+      </li>
+    `;
+      } else {
+        html += `
+      <li class="booking-item status-approved" style="margin-bottom: var(--size-4);">
+        <strong>${b.date}</strong> <span class="booking-name">— ${b.name}</span>
+      </li>
+    `;
+      }
     });
 
     html += '</ul>';
-
     // 4. Return the server-rendered HTML back to the browser
     return new Response(html, {
       headers: {

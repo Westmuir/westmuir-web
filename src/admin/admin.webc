@@ -1,0 +1,157 @@
+---
+layout: 'base.webc'
+title: 'Admin Dashboard - Westmuir Village'
+---
+
+<div class="admin-panel-wrapper">
+  <h1>Westmuir Village Hall Admin Panel</h1>
+  <p>Review and manage requested facility rental slots below.</p>
+
+  <!-- 1. The Weekly Block Booking Form -->
+  <div class="admin-card">
+    <h2 class="card-title">Set Up Weekly Block Booking</h2>
+    <div id="recurring-result">
+      <form hx-post="/admin/create-recurring" hx-target="#recurring-result" hx-swap="innerHTML">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rec-name">Event / Group Name</label>
+            <input type="text" id="rec-name" name="name" placeholder="e.g. Yoga Class" required />
+          </div>
+          <div class="form-group">
+            <label for="rec-day">Day of the Week</label>
+            <select id="rec-day" name="day_of_week" required>
+              <option value="1">Mondays</option>
+              <option value="2">Tuesdays</option>
+              <option value="3">Wednesdays</option>
+              <option value="4">Thursdays</option>
+              <option value="5">Fridays</option>
+              <option value="6">Saturdays</option>
+              <option value="0">Sundays</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rec-start">Start From Date</label>
+            <input type="date" id="rec-start" name="start_date" required />
+          </div>
+          <div class="form-group">
+            <label for="rec-end">End Date (Optional)</label>
+            <input type="date" id="rec-end" name="end_date" />
+          </div>
+          <button type="submit" class="btn-primary">Lock Out Schedule</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. The Dynamic Queue -->
+  <div class="admin-queue-header">
+    <h2>All Facility Rental Requests</h2>
+
+    <!-- Client-side filter switch using a tiny piece of semantic inline JS -->
+    <label class="toggle-filter-label">
+      <input
+        type="checkbox"
+        id="toggle-cancelled"
+        onchange="document.body.classList.toggle('hide-cancelled', !this.checked)"
+        checked
+      />
+      Show Cancelled Bookings
+    </label>
+  </div>
+  <!-- HTMX fetches the rows from our protected function as soon as the admin logs in -->
+  <div class="dashboard-list" hx-get="/admin/queue" hx-trigger="load" hx-swap="innerHTML">
+    <p>Loading administrative logs...</p>
+  </div>
+</div>
+
+<style webc:type="scss">
+  /* Use your Open Props variables natively here! */
+  .admin-panel-wrapper {
+    margin: var(--size-6) 0;
+    font-family: 'Merriweather Sans', sans-serif;
+  }
+
+  .admin-card {
+    background: var(--surface-2);
+    padding: var(--size-4);
+    border-radius: var(--radius-3);
+    border: var(--border-size-1) solid var(--surface-3);
+    margin-bottom: var(--size-6);
+  }
+
+  .card-title {
+    margin-top: 0;
+    color: var(--purple-6);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--size-4);
+    margin-bottom: var(--size-4);
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+
+    label {
+      font-size: var(--font-size-0);
+      font-weight: var(--font-weight-6);
+      color: var(--text-2);
+    }
+
+    input,
+    select {
+      background: var(--surface-1);
+      color: var(--text-1);
+      border: var(--border-size-1) solid var(--surface-4);
+      padding: var(--size-2);
+      border-radius: var(--radius-1);
+    }
+  }
+
+  .btn-primary {
+    background: var(--purple-6);
+    color: var(--stone-0);
+    border: none;
+    padding: var(--size-2) var(--size-4);
+    border-radius: var(--radius-2);
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-end;
+    height: fit-content;
+
+    &:hover {
+      background: var(--purple-7);
+    }
+  }
+  .admin-queue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--size-6);
+    border-bottom: var(--border-size-2) solid var(--surface-3);
+    padding-bottom: var(--size-2);
+  }
+
+  .toggle-filter-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--size-2);
+    font-size: var(--font-size-1);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* THE MAGIC TRICK:
+   When the checkbox is UNCHECKED, it turns on the .hide-cancelled class on the <body>.
+   This rule instantly finds any row returned by HTMX with the status-cancelled class and wipes it from view. */
+  :global(body.hide-cancelled .status-cancelled) {
+    display: none !important;
+  }
+</style>

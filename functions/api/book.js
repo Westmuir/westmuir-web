@@ -17,6 +17,48 @@ export async function onRequestPost(context) {
       });
     }
 
+    // 1. Calculate the day of the week for the user's requested date
+    // e.g., "2026-06-09" becomes day 2 (Tuesday)
+    const requestedDateObj = new Date(date);
+    const requestedDayOfWeek = requestedDateObj.getDay();
+
+    // 2. Scan for a conflicting SINGLE booking on that exact date
+    const singleConflict = await context.env.DB.prepare(
+      "SELECT id FROM bookings WHERE date = ? AND status = 'approved' AND is_recurring = 0",
+    )
+      .bind(date)
+      .first();
+
+    // 3. Scan for a conflicting RECURRING booking that matches this day of the week
+    // It must match the day of the week, be approved, and the requested date must fall within its start/end range
+    const recurringConflict = await context.env.DB.prepare(
+      `
+    SELECT name FROM bookings
+    WHERE is_recurring = 1
+      AND status = 'approved'
+      AND day_of_week = ?
+      AND date <= ?
+      AND (end_date IS NULL OR end_date >= ?)
+  `,
+    )
+      .bind(requestedDayOfWeek, date, date)
+      .first();
+
+    // 4. Block submission if either conflict exists
+    if (singleConflict || recurringConflict) {
+      const conflictName = recurringConflict ? recurringConflict.name : 'another reservation';
+      return new Response(
+        `
+    <div class="booking-error-message" style="border: 2px solid #e53e3e; padding: 1rem; background: #fff5f5; border-radius: 6px;">
+      <h4 style="color: #c53030; margin-top:0;">🚫 Date Unavailable</h4>
+      <p>Sorry, <strong>${date}</strong> is unavailable because it conflicts with an approved slot (${conflictName}).</p>
+      <button class="btn-submit" onclick="window.location.reload()">Choose a Different Date</button>
+    </div>
+  `,
+        { headers: { 'Content-Type': 'text/html; charset=utf-8' } },
+      );
+    }
+
     // 3. Insert the incoming booking safely using SQL parameterized variables (?)
     // This entirely blocks malicious SQL-injection attacks automatically
     await context.env.DB.prepare("INSERT INTO bookings (date, name, email, status) VALUES (?, ?, ?, 'tentative')")
@@ -27,16 +69,13 @@ export async function onRequestPost(context) {
     // HTMX replaces the whole form window with this successful block
     return new Response(
       `
-      <div class="booking-success-message">
-        <h4>🎉 Request Submitted!</h4>
-        <p>Thank you, <strong>${name}</strong>. Your tentative booking for <strong>${date}</strong> has been logged.</p>
-        <p>A village hall administrator will review this shortly. A confirmation will be sent to <em>${email}</em> once approved.</p>
-        <button class="btn-submit" onclick="window.location.reload()">Submit Another Request</button>
-      </div>
-    `,
-      {
-        headers: { 'Content-Type': 'text/html; charset=utf-8' },
-      },
+  <div class="booking-success-message" style="border: var(--border-size-2) solid var(--cyan-7); padding: var(--size-4); background: var(--surface-2); border-radius: var(--radius-2);">
+    <h4 style="color: var(--text-1); margin-top:0;">🎉 Request Logged Successfully!</h4>
+    <p style="color: var(--text-2);">Thank you, <strong>${name}</strong>. Your hold for <strong>${date}</strong> has been saved.</p>
+    <button class="btn-submit" onclick="window.location.reload()">Submit Another Request</button>
+  </div>
+`,
+      { headers: { 'Content-Type': 'text/html; charset=utf-8' } },
     );
   } catch (error) {
     console.error('Database insert failed:', error);

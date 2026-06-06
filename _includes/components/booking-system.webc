@@ -1,10 +1,8 @@
 <!-- src/_components/booking-system.webc -->
-
 <div class="booking-container">
   <h2>Village Hall Bookings</h2>
 
-  <!-- 1. The Real-Time Calendar/List View -->
-  <!-- This box automatically fetches live data from Cloudflare as soon as the page loads -->
+  <!-- 1. The Real-Time Calendar/List View (Stays Visible as the primary focus) -->
   <section class="booking-status">
     <h3>Current Bookings</h3>
     <div hx-get="/api/bookings" hx-trigger="load" hx-swap="innerHTML">
@@ -12,54 +10,45 @@
     </div>
   </section>
 
-  <!-- 2. The Tentative Booking Form -->
-  <!-- HTMX intercepts the submit, posts it, and drops the response inside #form-result -->
+  <!-- 2. The Collapsible Request Form Section -->
   <section class="booking-form-box">
-    <h3>Request a Booking</h3>
+    <!-- Native Accordion Element -->
+    <details class="booking-accordion">
+      <!-- The <summary> tag acts as the click target button to toggle visibility -->
+      <summary class="btn-toggle-form">Make a New Booking Request</summary>
 
-    <div id="form-result">
-      <!-- The server response will replace this inner content on success -->
-      <form hx-post="/api/book" hx-target="#form-result" hx-swap="innerHTML">
-        <div class="form-group">
-          <label for="booking-date">Select Date</label>
-          <input type="date" id="booking-date" name="date" required />
-        </div>
+      <div id="form-result" class="accordion-content">
+        <form hx-post="/api/book" hx-target="#form-result" hx-swap="innerHTML">
+          <div class="form-group">
+            <label for="booking-date">Select Date</label>
+            <input type="date" id="booking-date" name="date" required />
+          </div>
 
-        <div class="form-group">
-          <label for="booking-name">Your Name / Organisation</label>
-          <input
-            type="text"
-            id="booking-name"
-            name="name"
-            placeholder="e.g., W.I. Meeting"
-            required
-          />
-        </div>
+          <div class="form-group">
+            <label for="booking-name">Your Name / Organisation</label>
+            <input type="text" id="booking-name" name="name" placeholder="e.g., W.I. Meeting" required />
+          </div>
 
-        <div class="form-group">
-          <label for="booking-email">Contact Email</label>
-          <input type="email" id="booking-email" name="email" required />
-        </div>
+          <div class="form-group">
+            <label for="booking-email">Contact Email</label>
+            <input type="email" id="booking-email" name="email" required />
+          </div>
 
-        <button type="submit" class="btn-submit">
-          Submit Tentative Booking
-        </button>
-      </form>
-    </div>
+          <button type="submit" class="btn-submit">Submit Tentative Booking</button>
+        </form>
+      </div>
+    </details>
   </section>
 </div>
 
-<!-- Component-Specific Styling -->
+<!-- Component-Specific Styling inside booking-system.webc -->
 <style webc:type="scss">
-.bookings-list, .booking-success-message{
-  color:black;
-}
   .booking-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
-    font-family: "Merriweather Sans", sans-serif;
+    gap: var(--size-6);
+    margin: var(--size-6) 0;
+    font-family: 'Merriweather Sans', sans-serif;
 
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
@@ -68,65 +57,89 @@
 
   .booking-status,
   .booking-form-box {
-    background: #fdfdfd;
-    padding: 1.5rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    /* ADAPTIVE: Swaps to a dark container in dark mode, light container in light mode */
+    background: var(--surface-2);
+    padding: var(--size-5);
+    border: var(--border-size-1) solid var(--surface-3);
+    border-radius: var(--radius-3);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
   }
 
   h3 {
     margin-top: 0;
-    color: #1a202c;
-    border-bottom: 2px solid #edf2f7;
-    padding-bottom: 0.5rem;
+    /* ADAPTIVE: Changes color automatically based on global theme text selection */
+    color: var(--text-1);
+    border-bottom: var(--border-size-2) solid var(--surface-4);
+    padding-bottom: var(--size-2);
   }
 
   .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
+    gap: var(--size-2);
+    margin-bottom: var(--size-4);
 
     label {
-      font-weight: bold;
-      font-size: 0.9rem;
+      font-weight: var(--font-weight-6);
+      font-size: var(--font-size-0);
+      color: var(--text-2); /* Slightly muted text for labels */
     }
 
     input {
-      padding: 0.6rem;
-      border: 1px solid #cbd5e0;
-      border-radius: 4px;
-      font-size: 1rem;
+      padding: var(--size-2);
+      border: var(--border-size-1) solid var(--surface-4);
+      border-radius: var(--radius-1);
+      font-size: var(--font-size-1);
+
+      /* ADAPTIVE: Form fields will have dark inputs in dark mode */
+      background: var(--surface-1);
+      color: var(--text-1);
 
       &:focus {
         outline: none;
-        border-color: #3182ce;
-        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+        border-color: var(--blue-6);
+        box-shadow: 0 0 0 var(--border-size-3) var(--blue-2);
       }
     }
   }
 
   .btn-submit {
     width: 100%;
-    padding: 0.75rem;
-    background-color: #3182ce;
-    color: white;
+    padding: var(--size-3);
+    background-color: var(--blue-6);
+    color: white; /* Keeping this bright white so it stands out against the blue button background */
     border: none;
-    border-radius: 4px;
-    font-size: 1rem;
+    border-radius: var(--radius-2);
+    font-size: var(--font-size-1);
     cursor: pointer;
-    font-weight: bold;
+    font-weight: var(--font-weight-7);
     transition: background 0.2s;
 
     &:hover {
-      background-color: #2b6cb0;
+      background-color: var(--blue-7);
     }
   }
 
   .loading-text {
-    color: #718096;
+    color: var(--text-3);
     font-style: italic;
   }
-</style>
 
+  /* Styling for the list items that are fed in dynamically from your API */
+  .bookings-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .booking-item {
+    color: var(--text-1);
+    background: var(--surface-3);
+    padding: var(--size-2) var(--size-3);
+    margin-bottom: var(--size-2);
+    border-radius: var(--radius-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
