@@ -1,14 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "westmuir-web",
-  "compatibility_date": "2026-04-03",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "_site"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
+  "pages_build_output_dir": "_site",
+  "compatibility_date": "2026-06-06",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "village_hall_db",
+      "database_id": "81cbb631-f5bc-4f09-a4fb-67ddc26c58ae"
+    }
   ]
 }
