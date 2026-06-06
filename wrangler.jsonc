@@ -2,7 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "westmuir-web",
   "pages_build_output_dir": "_site",
-  "compatibility_date": "2026-06-06",
+  "compatibility_date": "2026-06-05",
   "d1_databases": [
     {
       "binding": "DB",
