@@ -1,0 +1,8 @@
+name = "westmuir-web"
+compatibility_date = "2026-06-06"
+pages_build_output_dir = "_site"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "village_hall_db"
+database_id = "81cbb631-f5bc-4f09-a4fb-67ddc26c58ae"
