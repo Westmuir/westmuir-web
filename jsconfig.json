@@ -3,6 +3,7 @@
     "src/**/*",
     "_data/**/*",
     "_config/**/*",
+    "functions/**/*",
     "eleventy.config.js"
   ],
   "exclude": [

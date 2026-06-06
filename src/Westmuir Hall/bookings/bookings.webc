@@ -1,0 +1,10 @@
+---
+layout: "base.webc"
+title: "Hall Bookings - Westmuir Village"
+---
+
+<h1>Village Hall Hire</h1>
+<p>Check availability below and submit a request to hold a date.</p>
+
+<booking-system></booking-system>
+
