@@ -13,6 +13,6 @@
   "assets": {
     "directory": "./_site",
     "run_worker_first": true,
-    "binding": "ASSETS"
+    "binding": "STATIC_ASSETS"
   }
 }
