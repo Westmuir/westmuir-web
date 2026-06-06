@@ -9,11 +9,5 @@
       "database_name": "village_hall_db",
       "database_id": "81cbb631-f5bc-4f09-a4fb-67ddc26c58ae"
     }
-  ],
-  "assets": {
-    "directory": "./_site",
-    "run_worker_first": [
-      "/api"
-    ]
-  }
+  ]
 }
