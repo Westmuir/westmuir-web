@@ -78,7 +78,7 @@ export default async function (eleventyConfig) {
   // Use the native HTML transform plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     // Crucial for Cloudflare Build Cache
-    outputDir: '.cache/images/',
+    outputDir: '.cache/@11ty/images/',
     urlPath: '/img/',
     // Set your global image configurations here
     formats: ['webp', 'avif', 'jpeg'],
@@ -183,7 +183,7 @@ export default async function (eleventyConfig) {
 
   // 3. Move files from Cloudflare's cache to the final build output directory
   eleventyConfig.on('eleventy.after', async ({ dir }) => {
-    const sourceDir = '.cache/images/';
+    const sourceDir = '.cache/@11ty/images/';
     const destDir = `${dir.output}/img/`;
 
     if (fs.existsSync(sourceDir)) {
