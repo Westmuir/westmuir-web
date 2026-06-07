@@ -10,6 +10,7 @@
     }
   ],
   "assets": {
-    "directory": "_site"
+    "directory": "_site",
+    "run_worker_first": true
   }
 }
