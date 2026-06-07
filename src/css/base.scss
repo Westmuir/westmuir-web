@@ -100,20 +100,6 @@ img[width][height] {
   align-self: center;
 }
 
-/* Tags list */
-.post-metadata {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.post-metadata time {
-  margin-right: 1em;
-}
-
 .craft-title {
   font-family: 'Comic Neue', sans-serif;
   font-size: 2rem;
@@ -394,8 +380,4 @@ img[width][height] {
   .content-image-text {
     flex-direction: column;
   }
-}
-
-.post-wrapper {
-  margin-inline: 2rem;
 }
