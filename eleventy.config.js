@@ -181,6 +181,12 @@ export default async function (eleventyConfig) {
   // Filters
   eleventyConfig.addPlugin(pluginFilters);
 
+  eleventyConfig.on('eleventy.before', async () => {
+    const cacheExists = fs.existsSync('.cache/@11ty/images/');
+    const files = cacheExists ? fs.readdirSync('.cache/@11ty/images/').length : 0;
+    console.log(`[cache check] image cache present: ${cacheExists}, files: ${files}`);
+  });
+
   // 3. Move files from Cloudflare's cache to the final build output directory
   eleventyConfig.on('eleventy.after', async ({ dir }) => {
     const sourceDir = '.cache/@11ty/images/';
