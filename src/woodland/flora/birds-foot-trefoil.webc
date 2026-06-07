@@ -36,23 +36,12 @@ description: Learn about the Westmuir Community Development Trust and the Woodla
     </div>
   </section>
 
-  <section class="breakout light-bg">
-    <div class="light-bg" name="species-information">
-      <div class="section species-information">
-        <h2>Species information</h2>
-        <div>
-          <h4>&nbsp;</h4>
-          <h4>Identification</h4>
-          <p>
-            Its yellow flowers look like little slippers and appear in small clusters. They are followed by seed pods
-            that look distinctly like bird's feet or claws, hence the common name. A low-growing plant, its leaves have
-            five leaflets and are downy.
-          </p>
-          <hr />
-          <h4>Distribution</h4>
-          <p>Widespread</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <species-info @distribution="Widespread">
+    <p>
+  Its yellow flowers look like little slippers and appear in small clusters.
+  They are followed by seed pods that look distinctly like bird's feet or claws,
+  hence the common name. A low-growing plant, its leaves have five leaflets
+  and are downy.</p>
+</species-info>
+
 </div>

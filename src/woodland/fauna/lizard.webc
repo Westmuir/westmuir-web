@@ -35,20 +35,9 @@ layout: plain
     </div>
   </section>
 
-  <section class="breakout light-bg">
-    <div class="light-bg" name="species-information">
-      <div class="section species-information">
-        <h2>Species information</h2>
-        <div>
-          <h4>&nbsp;</h4>
-          <h4>Identification</h4>
+  <species-info @distribution="Common in Scotland">
           <p>They are often found in open, sunny areas like heaths, moorlands, and dry stone walls.</p>
           <p><strong>Viviparous</strong> means they give birth to live young, not eggs.</p>
-          <hr />
-          <h4>Distribution</h4>
-          <p>Common in Scotland</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+  </species-info>
+
+ </div>

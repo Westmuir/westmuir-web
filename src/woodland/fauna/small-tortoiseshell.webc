@@ -35,22 +35,11 @@ layout: plain
     </div>
   </section>
 
-  <section class="breakout light-bg">
-    <div class="light-bg" name="species-information">
-      <div class="section species-information">
-        <h2>Species information</h2>
-        <div>
-          <h4>&nbsp;</h4>
-          <h4>Identification</h4>
+ <species-info @distribution="Common">
           <p>
             It is a medium-sized butterfly that is mainly reddish orange, with black and yellow markings on the
             forewings as well as a ring of blue spots around the edge of the wings.
           </p>
-          <hr />
-          <h4>Distribution</h4>
-          <p>Common</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </species-info>
+
 </div>
