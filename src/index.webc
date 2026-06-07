@@ -77,3 +77,56 @@ hero: false
     <cta-volunteer buttonlabel="Read more" buttonurl="/about/volunteers/" xwebc:if="cta"></cta-volunteer>
   </div>
 </div>
+
+<style webc:type="scss">
+.main-heading {
+  font-size: 2rem;
+  text-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+  border-bottom: 1px solid #313544;
+}
+
+
+.home-cta {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  border: 2px solid green;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.home-cta .home-cta-text {
+  padding: 1em;
+}
+
+.home-cta-text-footer {
+  margin-top: 1em;
+}
+
+.section-logos {
+  max-width: 75ch;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  margin-inline: auto;
+
+  .logo-item {
+    flex: 1 1 10%;
+    max-width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.container[name='logos'] > section {
+  background-color: #eec942;
+}
+
+
+
+</style>

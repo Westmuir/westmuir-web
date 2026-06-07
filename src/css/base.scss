@@ -61,16 +61,6 @@ body {
   background-color: var(--background-color);
 }
 
-.flow > * + * {
-  margin-top: var(--flow-spacing, 1em);
-}
-
-.main-heading {
-  font-size: 2rem;
-  text-shadow: rgb(0 0 0 / 20%) 0 0 3px;
-  border-bottom: 1px solid #313544;
-}
-
 .light {
   background-color: #fff;
 }
@@ -97,23 +87,6 @@ img[width][height] {
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
-
-.home-cta {
-  margin-top: 1em;
-  margin-bottom: 2em;
-  border: 2px solid green;
-  padding: 1em;
-  border-radius: 1em;
-}
-
-.home-cta .home-cta-text {
-  padding: 1em;
-}
-
-.home-cta-text-footer {
-  margin-top: 1em;
-}
-
 /* Tags */
 .post-tag {
   display: inline-flex;
@@ -255,23 +228,6 @@ img[width][height] {
   list-style-type: disc;
 }
 
-.volunteer-footer {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-
-  row-gap: var(--size-2);
-
-  color: var(--gray-10);
-}
-
-.volunteer-footer div {
-  background-color: var(--gray-3);
-  min-height: 5rem;
-  padding: var(--size-3);
-  border-radius: var(--radius-2);
-}
-
 .lh-3 {
   line-height: 3em;
 
@@ -357,37 +313,37 @@ img[width][height] {
   &[op-top] > picture > img[width][height] {
     object-position: top;
   }
-}
 
-.page-header-info {
-  justify-content: flex-start;
+  .page-header-info {
+    justify-content: flex-start;
 
-  display: flex;
-  width: 100%;
-  padding-inline: 2.25rem;
-  max-inline-size: 1200px;
-
-  .content {
-    flex: 1;
     display: flex;
-    max-width: 560px;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    z-index: 2;
-    background: var(--page-header-background-color);
-    clip-path: polygon(0 0, 100% 0, 100% 0%, 92% 100%, 0 100%);
-    clip-path: polygon(100% 0, 100% 31%, 92% 100%, 0 100%, 0 0);
+    width: 100%;
+    padding-inline: 2.25rem;
+    max-inline-size: 1200px;
 
-    padding: 24px 34px 24px 24px;
-    top: 100%;
-    left: 50%;
-    width: 95%;
+    .content {
+      flex: 1;
+      display: flex;
+      max-width: 560px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      z-index: 2;
+      background: var(--page-header-background-color);
+      clip-path: polygon(0 0, 100% 0, 100% 0%, 92% 100%, 0 100%);
+      clip-path: polygon(100% 0, 100% 31%, 92% 100%, 0 100%, 0 0);
 
-    > h1,
-    h2,
-    h3 {
-      font-family: 'Merriweather Sans', sans-serif;
+      padding: 24px 34px 24px 24px;
+      top: 100%;
+      left: 50%;
+      width: 95%;
+
+      > h1,
+      h2,
+      h3 {
+        font-family: 'Merriweather Sans', sans-serif;
+      }
     }
   }
 }
@@ -430,118 +386,14 @@ img[width][height] {
   }
 }
 
-.container-spacing[name='species-information'] {
-  margin-block: 4rem;
-}
-
 .light-bg {
   background-color: var(--content-light-bg, hsl(120, 100%, 97%));
-}
-
-.species-facts {
-  h4 {
-    font-size: var(--font-size-5);
-    font-family: var(--woodland-info-font);
-  }
-
-  ul {
-    font-size: var(--font-size-3);
-  }
-}
-
-.species-information {
-  hr {
-    margin-block: var(--size-fluid-3);
-  }
-}
-
-[name='species-information'] {
-  h2 {
-    font-size: 2.5625rem;
-  }
-
-  h4 {
-    font-size: 1.8rem;
-    line-height: 1.6;
-  }
 }
 
 @media (--md-n-below) {
   .content-image-text {
     flex-direction: column;
   }
-}
-
-/* A section to contatin single column content */
-.content-text-block {
-  div {
-    margin-block: var(--size-2);
-  }
-}
-
-.section-logos {
-  max-width: 75ch;
-}
-
-.logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 48px;
-  margin-inline: auto;
-
-  .logo-item {
-    flex: 1 1 10%;
-    max-width: 200px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.container[name='logos'] > section {
-  background-color: #eec942;
-}
-
-.content-grid {
-  --padding-inline: 1rem;
-  --content-max-width: 85ch;
-  --breakout-max-width: 105ch;
-
-  .content-text {
-    margin-block: 1rem;
-    max-inline-size: var(--breakout-max-width);
-  }
-
-  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
-
-  display: grid;
-  grid-template-columns:
-    [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size))
-    [content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width)) [content-end] minmax(
-      0,
-      var(--breakout-size)
-    )
-    [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
-}
-
-.full-width {
-  display: grid;
-}
-
-.content-grid > :not(.breakout, .full-width, .full-width-content),
-.full-width > :not(.breakout, .full-width, .full-width-content) {
-  grid-column: content;
-}
-
-.content-grid > .breakout {
-  grid-column: breakout;
-}
-
-.content-grid > .full-width,
-.content-grid > .full-width-content {
-  grid-column: full-width;
 }
 
 .post-wrapper {
