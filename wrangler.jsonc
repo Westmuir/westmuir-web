@@ -1,7 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "westmuir-web",
-  "pages_build_output_dir": "_site",
   "compatibility_date": "2026-06-05",
   "d1_databases": [
     {
@@ -9,5 +8,8 @@
       "database_name": "village_hall_db",
       "database_id": "81cbb631-f5bc-4f09-a4fb-67ddc26c58ae"
     }
-  ]
+  ],
+  "assets": {
+    "directory": "_site"
+  }
 }
