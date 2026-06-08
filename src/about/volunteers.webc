@@ -38,3 +38,24 @@ eleventyNavigation:
     </div>
   </div>
 </div>
+
+<style webc:type="scss">
+
+.volunteer-footer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  row-gap: var(--size-2);
+
+  color: var(--gray-10);
+
+  div {
+    background-color: var(--gray-3);
+    min-height: 5rem;
+    padding: var(--size-3);
+    border-radius: var(--radius-2);
+  }
+}
+
+</style>

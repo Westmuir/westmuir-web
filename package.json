@@ -9,7 +9,7 @@
     "preview": "eleventy && serve _site",
     "build": "eleventy",
     "fullclean": "del  './_site' './.cache'",
-    "clean": "del  './_site/**/*' '!./_site/img'",
+    "clean": "del  './_site/**/*' ",
     "dev:backend": "wrangler pages dev _site"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "@11ty/webc": "^0.12.0-beta.2",
     "@csstools/postcss-global-data": "^4.0.0",
     "eleventy-plugin-purgecss": "^0.6.0",
+    "fast-glob": "^3.3.3",
     "lightningcss": "^1.32.0",
     "luxon": "^3.7.2",
     "markdown-it": "^14.2.0",

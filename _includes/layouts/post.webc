@@ -15,3 +15,25 @@ layout: plain
   <div @raw="content" webc:nokeep></div>
   <posts-nav></posts-nav>
 </div>
+
+<style webc:type="scss">
+  .post-wrapper {
+    margin-inline: 2rem;
+  }
+
+  /* Tags list */
+.post-metadata {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  time {
+    margin-right: 1em;
+  }
+}
+
+
+</style>

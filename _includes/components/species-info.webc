@@ -1,0 +1,30 @@
+<!--- ./_includes/components/species-info.webc --->
+<section webc:root="override" class="breakout light-bg">
+  <div class="light-bg" name="species-information">
+    <div class="section species-information">
+      <h2>Species information</h2>
+      <div>
+        <h4>&nbsp;</h4>
+        <h4>Identification</h4>
+
+        <!-- The default slot neatly handles the multi-sentence paragraph -->
+        <slot></slot>
+
+        <hr />
+
+        <h4>Distribution</h4>
+        <!-- Dynamically outputs the distribution string -->
+        <p @text="distribution"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .species-information {
+    hr {
+      margin-block: var(--size-fluid-3);
+    }
+  }
+</style>
+

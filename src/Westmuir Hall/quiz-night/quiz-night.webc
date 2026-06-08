@@ -1,0 +1,16 @@
+---
+layout: base.webc
+title: Quiz Night Wrap-up
+---
+
+<div class="content-grid flow">
+  <p>
+    We had a packed hall for our annual community quiz night, raising vital
+    funds for the Resilience Centre repairs...
+  </p>
+
+  <!-- 🚀 Add the colon here so that the inner loop can read it -->
+  <event-gallery :name="'test-quiz-night'">
+    <h2>Quiz Night Highlights</h2>
+  </event-gallery>
+</div>

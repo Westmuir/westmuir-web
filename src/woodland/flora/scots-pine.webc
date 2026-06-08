@@ -30,23 +30,11 @@ layout: plain
       </ul>
     </div>
   </section>
-
-  <section class="breakout light-bg">
-    <div class="light-bg" name="species-information">
-      <div class="section species-information">
-        <h2>Species information</h2>
-        <div>
-          <h4>&nbsp;</h4>
-          <h4>Identification</h4>
+ <species-info @distribution="Common in Scotland">
           <p>
             An evergreen coniferous tree growing up to 35 metres. The bark is a scaly orange-brown, which develops
             plates and fissures with age. Twigs are green-brown and hairless.
           </p>
-          <hr />
-          <h4>Distribution</h4>
-          <p>Common in Scotland</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </species-info>
+
 </div>

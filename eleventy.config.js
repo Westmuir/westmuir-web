@@ -69,6 +69,11 @@ export default async function (eleventyConfig) {
     './public/pdf': '/pdf',
     './src/css/custom.woff2': '/custom.woff2',
   });
+  //  Only copy global structural assets to the build output
+  eleventyConfig.addPassthroughCopy('src/images/icons');
+  eleventyConfig.addPassthroughCopy('src/images/logos');
+
+  // Do NOT add a passthrough copy for "src/images/events/"
 
   // Watch CSS files
   eleventyConfig.addWatchTarget('./src/css/**/*.{css,scss}');

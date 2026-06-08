@@ -30,23 +30,11 @@ layout: plain
       </ul>
     </div>
   </section>
-
-  <section class="breakout light-bg">
-    <div class="light-bg" name="species-information">
-      <div class="section species-information">
-        <h2>Species information</h2>
-        <div>
-          <h4>&nbsp;</h4>
-          <h4>Identification</h4>
+ <species-info @distribution="Common in Scotland">
           <p>
             The stems of heather are woody and coarse, sometimes clumped together and close to the ground in exposed
             areas. The delicate pink flowers grow loosely up the stem and the short, narrow leaves are borne in rows.
           </p>
-          <hr />
-          <h4>Distribution</h4>
-          <p>Common in Scotland</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  </species-info>
+
 </div>
