@@ -16,14 +16,28 @@
   }
 }
 
+/* 1. Global Reset: Wipe out the narrow Open Props list item ceiling website-wide */
+:where(ol, ul) li {
+  max-inline-size: var(--size-content-3, 70ch); /* Upgrades lists from tight header size to standard text size */
+}
+/* 2. Seamless Grid Inheritance */
+/* Any text layout element that is explicitly styled as a breakout or grid wrapper
+   should automatically force all child elements to unlock and fill the space fluidly. */
+.content-grid > *,
+.content-text {
+  ol,
+  ul,
+  li {
+    max-inline-size: 100%;
+  }
+}
 .content-grid {
   --padding-inline: 1rem;
-  --content-max-width: 85ch;
+  --content-max-width: 75ch;
   --breakout-max-width: 105ch;
 
   .content-text {
-    margin-block: 1rem;
-    max-inline-size: var(--breakout-max-width);
+    margin-block: 2rem;
   }
 
   --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);

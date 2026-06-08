@@ -1,0 +1,16 @@
+<section class="breakout event-gallery-section flow">
+  <div class="gallery-intro">
+    <slot><h2>Event Gallery</h2></slot>
+  </div>
+
+  <div class="event-gallery-grid">
+    <figure
+      webc:for="(item,index) of $data.eventPhotos[name]"
+      :class="Number(index) % 5 === 0 ? 'item-wide' : (Number(index) % 3 === 0 ? 'item-tall' : '')"
+      class="gallery-item"
+    >
+      <img :src="item.src" :alt="item.alt" loading="lazy" />
+      <figcaption @text="item.alt"></figcaption>
+    </figure>
+  </div>
+</section>

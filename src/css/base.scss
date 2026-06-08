@@ -57,6 +57,10 @@ body {
   line-height: 1.6;
   font-family: var(--font-classical-humanist);
 
+  /* 2. Hardware-accelerated font smoothing for dark text themes */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   color: var(--text-color);
   background-color: var(--background-color);
 }
@@ -283,12 +287,14 @@ img[width][height] {
     left: 0;
     right: 0;
     height: 100%;
-
+    z-index: 1; /* Keeps image behind text layout */
     > img[width][height] {
       height: inherit;
+      width: 100%;
 
       object-fit: cover;
       object-position: bottom;
+      filter: brightness(0.75); /* Slight tint so white header text pops on bright images */
     }
   }
 
@@ -301,12 +307,13 @@ img[width][height] {
   }
 
   .page-header-info {
-    justify-content: flex-start;
+    /* CRITICAL: Lock the text container directly into your central layout gutters */
+    grid-column: content;
+    z-index: 2;
 
     display: flex;
     width: 100%;
-    padding-inline: 2.25rem;
-    max-inline-size: 1200px;
+    max-inline-size: 100%; /* Prevents text overflow breakout */
 
     .content {
       flex: 1;
@@ -329,6 +336,31 @@ img[width][height] {
       h2,
       h3 {
         font-family: 'Merriweather Sans', sans-serif;
+        font-size: clamp(2rem, 5vw, 3rem); /* Bumped slightly for a more impactful presence */
+        line-height: var(--font-lineheight-1, 1.1);
+
+        /* 1. CRANK UP WEIGHT: Use Extra Bold (800) since your font link supports it */
+        font-weight: 800;
+
+        /* 2. OPTIMISE TEXT CONTRAST */
+        letter-spacing: -0.03em; /* Tighter tracking looks incredibly crisp on heavy weights */
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); /* Extra protection over image highlights */
+
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      > p {
+        font-size: clamp(1rem, 2vw, 1.15rem); /* Fluid description sizing */
+        max-inline-size: 100%; /* Bypasses Open Props tight list constraints */
+
+        /* 1. Ensure high contrast against the banner overlay background */
+        color: var(--text-1, #ffffff);
+
+        /* 2. Balance the visual weight against your heavy 800 title */
+        font-weight: 500;
+
+        /* 3. Give text a safety buffer away from the sharp clip-path edge */
+        padding-inline-end: var(--size-6, 2rem);
       }
     }
   }
@@ -337,37 +369,58 @@ img[width][height] {
 /* A section to contain image beside text */
 
 .content-image-text {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  margin-block: var(--size-5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+  gap: var(--size-7, 3rem);
+  align-items: start;
+  margin-block: var(--size-8, 3rem);
 
+  @media (min-width: 900px) {
+    grid-template-columns: 4fr 6fr; /* Normal layout: Image (4fr) then Text (6fr) */
+  }
+
+  /* 🛠️ ADD THE REVERSE MODIFIER HERE */
+  &.reverse-layout {
+    @media (min-width: 900px) {
+      grid-template-columns: 6fr 4fr; /* Flips the sizing tracks: Text (6fr) then Image (4fr) */
+
+      .content-image {
+        order: 2; /* Explicitly forces the image block to visual position 2 (the right side) */
+      }
+    }
+  }
   .content-image {
-    color: var(--teal-7);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    color: var(--teal-7); /* Beautiful styled fallback for missing image alt text */
+    display: block; /* Clean default block container for grid tracks */
+    width: 100%; /* Lets the container expand to its assigned grid column fraction */
+    &.image-center {
+      align-self: center; /* Drops the image right into the vertical middle of the text height on desktop */
+    }
     img {
+      width: 100%; /* Forces the photo to fluidly fill its column width */
+      height: auto; /* Maintains the native aspect ratio of your avif photos */
       border-radius: var(--radius-2);
-      box-shadow:
-        0 10px 15px -3px rgba(0, 0, 0, 0.1),
-        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      box-shadow: var(--shadow-3); /* Gorgeous Open Props shadow layer depth */
     }
   }
 
   .content-text {
-    flex: 1;
-    color: var(--text-color, #777);
+    max-inline-size: var(--size-content-3, 70ch);
     font-size: var(--font-size-2);
-    border-radius: 5px;
-    padding: var(--size-fluid-2);
+    line-height: var(--font-lineheight-3, 1.6);
+    padding: var(--size-5, 1.5rem);
+    border-radius: var(--radius-2, 5px);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4, 1rem);
 
+    /* ✅ PLACE IT HERE: Uses the SCSS '&' to compile as '.content-text.content-text-highlight' */
     &.content-text-highlight {
       background-color: #eec942;
       color: #222;
+
+      /* Optional Open Props enhancement: */
+      box-shadow: var(--shadow-2); /* Makes the highlight card pop subtly off the page background */
     }
   }
 }
@@ -379,5 +432,92 @@ img[width][height] {
 @media (--md-n-below) {
   .content-image-text {
     flex-direction: column;
+  }
+}
+
+.event-gallery-section {
+  margin-block: var(--size-9, 4rem);
+
+  .gallery-intro {
+    max-inline-size: var(--size-content-3, 70ch);
+  }
+}
+
+.event-gallery-grid {
+  display: grid;
+  /* 1. Fluid columns that auto-wrap without media queries */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-auto-rows: 220px; /* Establishes a strict underlying grid cell height */
+  gap: var(--size-4, 1.25rem);
+
+  /* 2. Desktop Mosaic Feature Layout rules */
+  @media (min-width: 850px) {
+    grid-template-columns: repeat(4, 1fr); /* 4-column master layout */
+
+    /* Utility tracks that make specific images pop out into unique shapes */
+    .item-wide {
+      grid-column: span 2; /* Spans across two column boxes horizontally */
+    }
+
+    .item-tall {
+      grid-row: span 2; /* Stretches down through two track cells vertically */
+    }
+  }
+
+  .gallery-item {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-2);
+    cursor: pointer;
+
+    /* 3. Smooth animation triggers */
+    transition: transform 0.25s var(--ease-2);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Absolutely essential to keep images from warping */
+      object-position: center;
+      transition: filter 0.3s ease;
+    }
+
+    /* 4. Elegant Text Caption Overlays */
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+      color: #fff;
+      padding: var(--size-4) var(--size-3) var(--size-3);
+      font-size: var(--font-size-1);
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 600;
+      opacity: 0; /* Hidden by default */
+      transform: translateY(10px);
+      transition:
+        transform 0.25s var(--ease-2),
+        opacity 0.25s var(--ease-2);
+
+      /* Overriding the default Open Props narrow caption restrictions safely */
+      max-inline-size: 100% !important;
+    }
+
+    /* 5. Hover Hover Interactions */
+    &:hover {
+      transform: scale(1.015);
+      box-shadow: var(--shadow-3);
+
+      img {
+        filter: brightness(0.85);
+      }
+
+      figcaption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }
