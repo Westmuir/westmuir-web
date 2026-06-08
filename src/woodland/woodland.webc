@@ -1,6 +1,8 @@
 ---
 title: Woodland
 layout: plain
+themeColor: "light-dark(var(--green-8), var(--green-3))"
+themeBg: "light-dark(var(--red-7, red), var(--orange-6, orange)"
 description: Learn about the Westmuir Community Development Trust and the Woodland.
 eleventyNavigation:
   key: Woodland
@@ -21,6 +23,13 @@ eleventyNavigation:
       </div>
     </div>
   </figure>
+  <pre @text="currentSectionKey"></pre>
+  <section-cards
+    webc:nokeep
+    :@cards="collections.sectionCards[this.page.filePathStem.split('/').filter(Boolean)[0]] || []"
+    :@theme-color="themeColor"
+    :@theme-bg="themeBg"
+  ></section-cards>
 
   <section class="breakout content-image-text">
     <div class="content-image image-center">

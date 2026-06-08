@@ -65,7 +65,18 @@ export default function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   });
 
-  eleventyConfig.addFilter('reverse', (/** @type {[]}*/ array) => {
+  // Update your reverse filter to safely handle early build ticks
+  eleventyConfig.addFilter('reverse', function (array) {
+    // FALLBACK GUARD: If Eleventy passes an undefined list early, return an empty array
+    if (!array || !Array.isArray(array)) {
+      return [];
+    }
+
+    // Reverse a shallow copy so you don't accidentally mutate the original data stream
+    return [...array].reverse();
+  });
+
+  eleventyConfig.addFilter('reverseX', (/** @type {[]}*/ array) => {
     return [...array].reverse();
   });
 

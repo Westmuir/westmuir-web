@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  font-weight: 100 700;
-  font-display: block;
-  src: url('./custom.woff2') format('woff2');
-}
-
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: var(--font-weight-5);
@@ -28,10 +20,6 @@
     transform 0.3s ease;
 }
 
-a {
-  color: var(--link-color);
-}
-
 html {
   color-scheme: light dark;
 }
@@ -44,6 +32,16 @@ html {
 /* Dark theme override */
 [data-theme='dark'] {
   color-scheme: dark;
+}
+
+/* Apply the variables globally */
+a {
+  color: var(--link-color);
+  transition: color 0.15s var(--ease-out-2);
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
 }
 
 html,

@@ -1,6 +1,11 @@
 ---
 title: Flora & Fauna
 layout: plain
+inSectionNav: true
+# Add your dynamic Open Props colors here!
+# Light-dark syntax: (Light theme color, Dark theme color)
+themeColor: "light-dark(var(--green-8), var(--green-3))"
+themeBg: "light-dark(var(--green-0), var(--green-11))"
 description: Learn about the Westmuir Community Development Trust and the Woodland.
 eleventyNavigation:
   key: What to see
@@ -28,7 +33,11 @@ eleventyNavigation:
         <li class="grid-item">
           <a href="/woodland/flora/birds-foot-trefoil/" class="card-link">
             <figure class="figure">
-              <img class="figure-image" src="/woodland/birds-foot-trefoil.avif" alt="bird;s foot trefoil in woodland" />
+              <img
+                class="figure-image"
+                src="/woodland/birds-foot-trefoil.avif"
+                alt="bird;s foot trefoil in woodland"
+              />
               <div class="overlay"></div>
               <figcaption class="caption">
                 <div class="caption-content">
@@ -41,7 +50,11 @@ eleventyNavigation:
         <li class="grid-item">
           <a href="/woodland/flora/ling/" class="card-link">
             <figure class="figure">
-              <img class="figure-image" src="/woodland/ling.avif" alt="ling in woodland" />
+              <img
+                class="figure-image"
+                src="/woodland/ling.avif"
+                alt="ling in woodland"
+              />
               <div class="overlay"></div>
               <figcaption class="caption">
                 <div class="caption-content">
@@ -55,7 +68,11 @@ eleventyNavigation:
         <li class="grid-item">
           <a href="/woodland/flora/scots-pine/" class="card-link">
             <figure class="figure">
-              <img class="figure-image" src="/woodland/flora/scots-pine.avif" alt="Scots Pine in woodland" />
+              <img
+                class="figure-image"
+                src="/woodland/flora/scots-pine.avif"
+                alt="Scots Pine in woodland"
+              />
               <div class="overlay"></div>
               <figcaption class="caption">
                 <div class="caption-content">
@@ -69,7 +86,11 @@ eleventyNavigation:
         <li class="grid-item">
           <a href="/woodland/fauna/lizard/" class="card-link">
             <figure class="figure">
-              <img class="figure-image" src="/woodland/fauna/lizard.avif" alt="lizard on board walk" />
+              <img
+                class="figure-image"
+                src="/woodland/fauna/lizard.avif"
+                alt="lizard on board walk"
+              />
               <div class="overlay"></div>
               <figcaption class="caption">
                 <div class="caption-content">
