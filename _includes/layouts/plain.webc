@@ -41,6 +41,9 @@
   <body tabindex="-1">
     <div class="page-wrapper">
       <site-header :@pageurl="page.url"></site-header>
+      <!-- Automatically renders the path trail on all sub-pages in WebC v0.12 -->
+      <site-breadcrumbs webc:if="$data.page.url !== '/'"></site-breadcrumbs>
+
       <main class="flow" @raw="content"></main>
 
       <site-footer></site-footer>
