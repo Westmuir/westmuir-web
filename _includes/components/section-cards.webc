@@ -1,5 +1,5 @@
 <!-- _components/section-cards.webc -->
-<ul class="section-cards inline-icon-grid">
+<ul class="section-cards inline-icon-grid breakout">
   <!--
     The browser checks if an individual sub-page has an override (item.customColor).
     If not, it looks for an inherited section theme variable (--section-color).

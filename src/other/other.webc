@@ -2,10 +2,6 @@
 title: Other
 layout: plain
 description: Other stuff.
-eleventyNavigation:
-  key: Other
-  title: Archive
-  order: 5
 ---
 
 <div class="container container-spacing" name="main-content">
@@ -28,10 +24,9 @@ eleventyNavigation:
     margin-block: 2rem;
   }
 
-.main-heading {
-  font-size: 2rem;
-  text-shadow: rgb(0 0 0 / 20%) 0 0 3px;
-  border-bottom: 1px solid #313544;
-}
-
+  .main-heading {
+    font-size: 2rem;
+    text-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+    border-bottom: 1px solid #313544;
+  }
 </style>

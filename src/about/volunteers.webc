@@ -1,25 +1,13 @@
 ---
-title: Volunteering.
-description:
+title: Westmuir Volunteering
 layout: plain
-eleventyNavigation:
-  key: Volunteers
-  parent: About
+description: Contributing to the life of the village in a way that offers fun, friendship and a huge sense of satisfaction
+headerAlt: "Main road"
+headerImage: "/Westmuir Hall/defibrillator/main-road.avif"
+inSectionNav: true
 ---
 
 <div class="content-grid flow">
-  <figure class="page-header full-width-content">
-    <img src="/Westmuir Hall/defibrillator/main-road.avif" alt="Main road" />
-    <div class="page-header-info">
-      <div class="content">
-        <h1>Westmuir Volunteering</h1>
-        <p>
-          Contributing to the life of the village in a way that offers fun, friendship and a huge sense of satisfaction
-        </p>
-      </div>
-    </div>
-  </figure>
-
   <div class="breakout">
     <img src="/about/Volunteer Page.avif" alt="Volunteering" />
   </div>
@@ -27,35 +15,36 @@ eleventyNavigation:
   <div class="breakout volunteer-footer">
     <div class="lh-3">
       Just email us at
-      <a href="mailto: volunteers@westmuir.org.uk">volunteers&#64;westmuir.org.uk </a>
+      <a href="mailto: volunteers@westmuir.org.uk"
+        >volunteers&#64;westmuir.org.uk
+      </a>
 
       and we'll get right back to you.
     </div>
     <div>
-      You'll be made most welcome and you won't regret it ! Our existing volunteers are a friendly bunch of folk who
-      enjoy getting hands-on and contributing to the life of the village in a way that offers fun, friendship and a huge
-      sense of satisfaction.
+      You'll be made most welcome and you won't regret it ! Our existing
+      volunteers are a friendly bunch of folk who enjoy getting hands-on and
+      contributing to the life of the village in a way that offers fun,
+      friendship and a huge sense of satisfaction.
     </div>
   </div>
 </div>
 
 <style webc:type="scss">
+  .volunteer-footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 
-.volunteer-footer {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
+    row-gap: var(--size-2);
 
-  row-gap: var(--size-2);
+    color: var(--gray-10);
 
-  color: var(--gray-10);
-
-  div {
-    background-color: var(--gray-3);
-    min-height: 5rem;
-    padding: var(--size-3);
-    border-radius: var(--radius-2);
+    div {
+      background-color: var(--gray-3);
+      min-height: 5rem;
+      padding: var(--size-3);
+      border-radius: var(--radius-2);
+    }
   }
-}
-
 </style>

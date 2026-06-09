@@ -3,15 +3,10 @@ title: "Welcome to Westmuir"
 layout: "plain"
 cta: true
 hero: false
+description: Welcome to Westmuir Village
+headerImage: "images/east-bank.avif"
+headerAlt: "East bank, Westmuir"
 ---
-
-<page-header
-  @title="Westmuir"
-  @description="Welcome to Westmuir Village"
-  @image="images/east-bank.avif"
-  @alt="East bank, Westmuir"
->
-</page-header>
 
 <div class="container container-spacing home-container" name="main-content">
   <div class="section">

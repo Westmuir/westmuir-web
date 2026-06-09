@@ -16,8 +16,8 @@
 
 <style>
   .breadcrumbs-nav {
-    padding-block: var(--size-2);
-    margin-bottom: var(--size-4);
+    padding-block: var(--size-1);
+    margin-bottom: var(--size-1);
     font-size: var(--font-size-0);
   }
 

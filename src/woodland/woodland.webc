@@ -1,34 +1,15 @@
 ---
-title: Woodland
 layout: plain
-themeColor: "light-dark(var(--green-8), var(--green-3))"
-themeBg: "light-dark(var(--red-7, red), var(--orange-6, orange)"
-description: Learn about the Westmuir Community Development Trust and the Woodland.
-eleventyNavigation:
-  key: Woodland
-
-  order: 1
+title: Woodland park
+description: Big tussocks of moss, wet birch woodland dripping with lichen...
+headerImage: "/woodland/walkway-1980.avif"
+headerAlt: "woodland walkway"
 ---
 
-<div class="content-grid flow">
-  <figure class="page-header full-width-content">
-    <img src="/woodland/walkway-1980.avif" alt="woodland walkway" />
-    <div class="page-header-info">
-      <div class="content">
-        <h1>Woodland park</h1>
-        <p>
-          Big tussocks of moss, wet birch woodland dripping with lichen, common
-          lizards basking in the sun on the boardwalks
-        </p>
-      </div>
-    </div>
-  </figure>
-  <pre @text="currentSectionKey"></pre>
+<div class="content-grid flow home-container">
   <section-cards
     webc:nokeep
-    :@cards="collections.sectionCards[this.page.filePathStem.split('/').filter(Boolean)[0]] || []"
-    :@theme-color="themeColor"
-    :@theme-bg="themeBg"
+    :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []"
   ></section-cards>
 
   <section class="breakout content-image-text">
@@ -125,3 +106,10 @@ eleventyNavigation:
     </div>
   </section>
 </div>
+
+<style>
+  .home-container {
+    --section-color: light-dark(var(--grey-9), var(--grey-2));
+    --section-bg: light-dark(var(--cyan-2), var(--cyan-9));
+  }
+</style>

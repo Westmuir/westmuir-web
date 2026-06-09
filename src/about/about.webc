@@ -8,6 +8,11 @@ eleventyNavigation:
 ---
 
 <div class="content-grid flow">
+  <section-cards
+    webc:nokeep
+    :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []"
+  ></section-cards>
+
   <p>Welcome to the about page. Learn about our history and values.</p>
 </div>
 <!--- <my-component webc:nokeep></my-component> --->

@@ -1,32 +1,27 @@
 ---
 layout: plain
 title: Westmuir Community Development Trust
-css: ['css/wcdt.css']
-eleventyNavigation:
-  key: Westmuir Trust
-  title: Community Trust
-  order: 3
+description: To preserve, restore and improve the environment in the area.
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "westmuir village"
 ---
 
 <div class="content-grid flow">
-  <figure class="page-header full-width-content">
-    <img src="/wcdt/wcdt-banner.avif" alt="westmuir village" />
-    <div class="page-header-info">
-      <div class="content">
-        <h2>Westmuir Community Development Trust</h2>
-        <p>To preserve, restore and improve the environment in the area.</p>
-      </div>
-    </div>
-  </figure>
-
   <section class="content-text-block breakout">
-    <img class="pull-left wcdt-logo" src="/wcdt/wcdt-logo.avif" alt="WCDT logo" />
+    <img
+      class="pull-left wcdt-logo"
+      src="/wcdt/wcdt-logo.avif"
+      alt="WCDT logo"
+    />
     <div>
-      Westmuir Community Development Trust was formed in 2004 following a strong desire for such an organisation having
-      been expressed through a survey of the local community in Westmuir. Membership of the Trust, which is managed by a
-      small team of local Directors, is open to all Westmuir residents who register, with no fee required. The more
-      people who register, the stronger our voice or bargaining strength will be when dealing with organisations such as
-      the Council or when seeking funding for developments or improvements within the village.
+      Westmuir Community Development Trust was formed in 2004 following a strong
+      desire for such an organisation having been expressed through a survey of
+      the local community in Westmuir. Membership of the Trust, which is managed
+      by a small team of local Directors, is open to all Westmuir residents who
+      register, with no fee required. The more people who register, the stronger
+      our voice or bargaining strength will be when dealing with organisations
+      such as the Council or when seeking funding for developments or
+      improvements within the village.
     </div>
   </section>
   <section class="content-text-block">
@@ -35,24 +30,29 @@ eleventyNavigation:
 
       <ul class="wcdt-list">
         <li>
-          To provide, in the best interests of social welfare, facilities for recreation and other leisure time activity
-          available to the public at large in Westmuir and surrounding area.
+          To provide, in the best interests of social welfare, facilities for
+          recreation and other leisure time activity available to the public at
+          large in Westmuir and surrounding area.
         </li>
         <li>To preserve, restore and improve the environment in the area.</li>
         <li>
-          To advance education and to promote opportunities for learning and to raise awareness and interest in the
-          local environment, culture and heritage.
+          To advance education and to promote opportunities for learning and to
+          raise awareness and interest in the local environment, culture and
+          heritage.
         </li>
       </ul>
     </div>
   </section>
   <section class="content-text-block breakout">
     <h4>WCDT Statement of Finances, Balance sheet, and Notes to account</h4>
-    Here are the latest financial statements and balance sheet for WCDT as of 31st October 2024.
+    Here are the latest financial statements and balance sheet for WCDT as of
+    31st October 2024.
 
     <ul class="wcdt-list">
       <li>
-        <a href="/pdf/wcdt/Annual Report 2023 - 2024.pdf" target="_blank">Annual Report 2023-24</a>
+        <a href="/pdf/wcdt/Annual Report 2023 - 2024.pdf" target="_blank"
+          >Annual Report 2023-24</a
+        >
       </li>
       <li>
         <a href="/pdf/wcdt/financial-statement-notes.pdf" target="_blank"
@@ -60,7 +60,9 @@ eleventyNavigation:
         >
       </li>
       <li>
-        <a href="/pdf/wcdt/Balance sheet.pdf" target="_blank">WCDT Balance Sheet</a>
+        <a href="/pdf/wcdt/Balance sheet.pdf" target="_blank"
+          >WCDT Balance Sheet</a
+        >
       </li>
     </ul>
   </section>
