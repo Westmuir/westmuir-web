@@ -6,27 +6,33 @@
     "icon": "&#xea99;"
   },
   {
-    "label": "Resilience",
-    "url": "/Westmuir Hall/resilience/",
-    "description": "The resilience centre.",
-    "icon": "&#xe781;"
-  },
-  {
-    "label": "Defibrillator",
-    "url": "/Westmuir Hall/defibrillator/",
-    "description": "Westmuir's defibrillator.",
-    "icon": "&#xf501;"
+    "label": "Westmuir Hall",
+    "url": "/Westmuir Hall",
+    "description": "The village hall.",
+    "icon": "warehouse"
   },
   {
     "label": "WCDT",
     "url": "/wcdt/",
     "description": "Community Development Trust",
-    "icon": "&#xf200"
+    "icon": "nature_people"
+  },
+  {
+    "label": "Resilience",
+    "url": "/Westmuir Hall/defibrillator/",
+    "description": "Westmuir's resilience hub.",
+    "icon": "electric_bolt"
   },
   {
     "label": "Volunteer",
     "url": "/about/volunteers",
     "description": "Volunteering",
+    "icon": "person_raised_hand"
+  },
+  {
+    "label": "Archive",
+    "url": "/other",
+    "description": "Poems and archive",
     "icon": "&#xf200"
   }
 ]

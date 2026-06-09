@@ -5,15 +5,13 @@ cta: true
 hero: false
 ---
 
-<figure class="page-header">
-  <img src="images/east-bank.avif" alt="East bank, Westmuir" />
-  <div class="page-header-info">
-    <div class="content">
-      <h1>Westmuir</h1>
-      <p>Welcome to Westmuir Village</p>
-    </div>
-  </div>
-</figure>
+<page-header
+  @title="Westmuir"
+  @description="Welcome to Westmuir Village"
+  @image="images/east-bank.avif"
+  @alt="East bank, Westmuir"
+>
+</page-header>
 
 <div class="container container-spacing home-container" name="main-content">
   <div class="section">
@@ -107,8 +105,8 @@ hero: false
 
 <style webc:type="scss">
   .home-container {
-    --section-color: red;
-    --section-bg: var(--cyan-9);
+    --section-color: light-dark(var(--grey-9), var(--grey-2));
+    --section-bg: light-dark(var(--cyan-2), var(--cyan-9));
   }
   .main-heading {
     font-size: 2rem;
