@@ -29,21 +29,25 @@
 <script>
   // theme toggle
   const getColorPreference = () => {
-    if (localStorage.getItem('theme-preference')) {
-      return localStorage.getItem('theme-preference');
+    if (localStorage.getItem("theme-preference")) {
+      return localStorage.getItem("theme-preference");
     } else {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
     }
   };
 
   const setPreference = () => {
-    localStorage.setItem('theme-preference', theme.value);
+    localStorage.setItem("theme-preference", theme.value);
     reflectPreference();
   };
 
   const reflectPreference = () => {
-    document.firstElementChild.setAttribute('data-theme', theme.value);
-    document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
+    document.firstElementChild.setAttribute("data-theme", theme.value);
+    document
+      .querySelector("#theme-toggle")
+      ?.setAttribute("aria-label", theme.value);
   };
 
   const theme = {
@@ -53,35 +57,26 @@
   // set early so no page flashes
   reflectPreference();
 
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     // set on load so screen readers can see latest value on the button
     reflectPreference();
 
-    document.querySelector('#theme-toggle').addEventListener('click', e => {
-      theme.value = theme.value === 'light' ? 'dark' : 'light';
+    document.querySelector("#theme-toggle").addEventListener("click", (e) => {
+      theme.value = theme.value === "light" ? "dark" : "light";
 
       setPreference();
     });
   });
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
-    theme.value = isDark ? 'dark' : 'light';
-    setPreference();
-  });
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", ({ matches: isDark }) => {
+      theme.value = isDark ? "dark" : "light";
+      setPreference();
+    });
 </script>
 
 <style>
-  /* no way out of this duplication afaik */
-  [data-theme='light'] {
-    --nav-icon: var(--gray-2);
-    --nav-icon-hover: var(--gray-5);
-  }
-
-  [data-theme='dark'] {
-    --nav-icon: var(--indigo-2);
-    --nav-icon-hover: var(--indigo-5);
-  }
-
   .theme-toggle {
     background: none;
     margin-right: 10px;
@@ -120,7 +115,7 @@
     transition: transform 0.5s var(--ease-out-3);
   }
 
-  [data-theme='light'] {
+  [data-theme="light"] {
     & #sun {
       transform: scale(0.5);
     }
@@ -131,7 +126,7 @@
     }
   }
 
-  [data-theme='dark'] {
+  [data-theme="dark"] {
     & #moon > circle {
       transform: translateX(-20px);
     }

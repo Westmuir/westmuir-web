@@ -10,6 +10,30 @@ import { DateTime } from 'luxon';
  * @returns
  */
 export default function (eleventyConfig) {
+  // Generates a clean array of parent links for breadcrumbs
+  eleventyConfig.addFilter('getBreadcrumbs', function (pageUrl, collectionsAll) {
+    if (!pageUrl || pageUrl === '/') return [];
+
+    let parts = pageUrl.split('/').filter(Boolean);
+    let breadcrumbs = [{ label: 'Home', url: '/' }];
+    let currentPath = '';
+
+    parts.forEach((part, index) => {
+      currentPath += `/${part}/`;
+      // Find the corresponding page in Eleventy's master list to grab its true title
+      let matchedPage = collectionsAll.find(p => p.url === currentPath);
+
+      breadcrumbs.push({
+        label: matchedPage?.data?.title || matchedPage?.data?.eleventyNavigation?.key || part,
+        url: currentPath,
+        // Mark the very last item as the active page
+        isCurrent: index === parts.length - 1,
+      });
+    });
+
+    return breadcrumbs;
+  });
+
   // ONE UNIFIED HIGH-PERFORMANCE NAVIGATION FILTER:
   eleventyConfig.addFilter('getPostNav', function (collections) {
     if (!this.page?.inputPath || !collections?.posts) {
@@ -65,7 +89,18 @@ export default function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   });
 
-  eleventyConfig.addFilter('reverse', (/** @type {[]}*/ array) => {
+  // Update your reverse filter to safely handle early build ticks
+  eleventyConfig.addFilter('reverse', function (array) {
+    // FALLBACK GUARD: If Eleventy passes an undefined list early, return an empty array
+    if (!array || !Array.isArray(array)) {
+      return [];
+    }
+
+    // Reverse a shallow copy so you don't accidentally mutate the original data stream
+    return [...array].reverse();
+  });
+
+  eleventyConfig.addFilter('reverseX', (/** @type {[]}*/ array) => {
     return [...array].reverse();
   });
 

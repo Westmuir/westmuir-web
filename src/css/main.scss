@@ -1,5 +1,6 @@
 @use 'reset.scss';
 @use 'open-props/normalize.min.css';
+@use 'open-props/colors.min.css';
 
 /* 2. Global Design Variables and Tokens */
 @use 'open-props/media.min.css';
@@ -7,5 +8,5 @@
 @use 'theme.scss';
 
 /* 3. Layout Structure and Core Rules */
-@use 'components/layout.scss';
+@use 'layout.scss';
 @use 'base.scss';

@@ -1,24 +1,13 @@
 ---
 title: Flora & Fauna
 layout: plain
-description: Learn about the Westmuir Community Development Trust and the Woodland.
-eleventyNavigation:
-  key: What to see
-  parent: Woodland
-  order: 1
+inSectionNav: true
+description: Things you might see in the Woodland
+headerImage: "/woodland/woodland-oak-1980.avif"
+headerAlt: "woodland walkway"
 ---
 
 <div class="content-grid flow">
-  <figure class="page-header full-width-content">
-    <img src="/woodland/woodland-oak-1980.avif" alt="woodland walkway" />
-    <div class="page-header-info">
-      <div class="content">
-        <h1>Flora & Fauna</h1>
-        <p>Things you might see in the Woodland</p>
-      </div>
-    </div>
-  </figure>
-
   <section class="breakout">
     <div class="ff-grid-cards">
       <h2>Flora & Fauna</h2>
@@ -28,7 +17,11 @@ eleventyNavigation:
         <li class="grid-item">
           <a href="/woodland/flora/birds-foot-trefoil/" class="card-link">
             <figure class="figure">
-              <img class="figure-image" src="/woodland/birds-foot-trefoil.avif" alt="bird;s foot trefoil in woodland" />
+              <img
+                class="figure-image"
+                src="/woodland/birds-foot-trefoil.avif"
+                alt="bird;s foot trefoil in woodland"
+              />
               <div class="overlay"></div>
               <figcaption class="caption">
                 <div class="caption-content">
@@ -41,7 +34,11 @@ eleventyNavigation:
         <li class="grid-item">
           <a href="/woodland/flora/ling/" class="card-link">
             <figure class="figure">
-              <img class="figure-image" src="/woodland/ling.avif" alt="ling in woodland" />
+              <img
+                class="figure-image"
+                src="/woodland/ling.avif"
+                alt="ling in woodland"
+              />
               <div class="overlay"></div>
               <figcaption class="caption">
                 <div class="caption-content">
@@ -55,7 +52,11 @@ eleventyNavigation:
         <li class="grid-item">
           <a href="/woodland/flora/scots-pine/" class="card-link">
             <figure class="figure">
-              <img class="figure-image" src="/woodland/flora/scots-pine.avif" alt="Scots Pine in woodland" />
+              <img
+                class="figure-image"
+                src="/woodland/flora/scots-pine.avif"
+                alt="Scots Pine in woodland"
+              />
               <div class="overlay"></div>
               <figcaption class="caption">
                 <div class="caption-content">
@@ -69,7 +70,11 @@ eleventyNavigation:
         <li class="grid-item">
           <a href="/woodland/fauna/lizard/" class="card-link">
             <figure class="figure">
-              <img class="figure-image" src="/woodland/fauna/lizard.avif" alt="lizard on board walk" />
+              <img
+                class="figure-image"
+                src="/woodland/fauna/lizard.avif"
+                alt="lizard on board walk"
+              />
               <div class="overlay"></div>
               <figcaption class="caption">
                 <div class="caption-content">

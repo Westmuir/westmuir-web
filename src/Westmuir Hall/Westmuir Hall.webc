@@ -2,22 +2,16 @@
 layout: plain
 title: Westmuir Village Hall
 
-eleventyNavigation:
-  key: Westmuir Hall
-  title: About the Hall
-  order: 2
+description: A comunity space for many activities.
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "westmuir village"
 ---
 
-<div class="content-grid flow">
-  <figure class="page-header full-width-content">
-    <img src="/wcdt/wcdt-banner.avif" alt="westmuir village" />
-    <div class="page-header-info">
-      <div class="content">
-        <h2>Westmuir Village Hall</h2>
-        <p>A comunity space for many activities.</p>
-      </div>
-    </div>
-  </figure>
+<div class="content-grid flow home-container">
+  <section-cards
+    webc:nokeep
+    :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []"
+  ></section-cards>
 
   <section class="full-width">
     <div class="content">
@@ -76,6 +70,11 @@ eleventyNavigation:
 </div>
 
 <style>
+  .home-container {
+    --section-color: light-dark(var(--grey-9), var(--grey-2));
+    --section-bg: light-dark(var(--cyan-2), var(--cyan-9));
+  }
+
   .wcdt-list {
     li {
       max-inline-size: var(--size-content-3);

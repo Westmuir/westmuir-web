@@ -23,6 +23,7 @@ import postcssCustomMedia from 'postcss-custom-media';
 import postcssImport from 'postcss-import';
 import postcssJit from 'postcss-jit-props';
 import * as sass from 'sass';
+import pluginCollections from './_config/collections.js';
 import pluginFilters from './_config/filters.js';
 
 function configureMarkdownIt() {
@@ -67,7 +68,6 @@ export default async function (eleventyConfig) {
   // For example, `./public/css/` ends up in `_site/css/`
   eleventyConfig.addPassthroughCopy({
     './public/pdf': '/pdf',
-    './src/css/custom.woff2': '/custom.woff2',
   });
   //  Only copy global structural assets to the build output
   eleventyConfig.addPassthroughCopy('src/images/icons');
@@ -79,6 +79,8 @@ export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/css/**/*.{css,scss}');
 
   let targets = browserslistToTargets(browserslist('> 0.2% and not dead'));
+
+  eleventyConfig.addPlugin(pluginCollections);
 
   // Use the native HTML transform plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {

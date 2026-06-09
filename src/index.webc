@@ -1,38 +1,37 @@
 ---
-title: 'Welcome to Westmuir'
-layout: 'plain'
+title: "Welcome to Westmuir"
+layout: "plain"
 cta: true
 hero: false
+description: Welcome to Westmuir Village
+headerImage: "images/east-bank.avif"
+headerAlt: "East bank, Westmuir"
 ---
 
-<figure class="page-header">
-  <img src="images/east-bank.avif" alt="East bank, Westmuir" />
-  <div class="page-header-info">
-    <div class="content">
-      <h1>Westmuir</h1>
-      <p>Welcome to Westmuir Village</p>
-    </div>
-  </div>
-</figure>
-
-<div class="container container-spacing" name="main-content">
+<div class="container container-spacing home-container" name="main-content">
   <div class="section">
+    <section-cards webc:nokeep :@cards="homeCards"></section-cards>
+
     <!-- <h2 class="main-heading">Quick links</h2> -->
-    <nav-cards :@cards="$data.cards"></nav-cards>
+    <!-- <nav-cards :@cards="$data.cards"></nav-cards> -->
 
     <section class="hero-content breakout" xwebc:if="false">
       <div class="home-cta">
         <h1 class="main-heading">VILLAGE HALL NEWS</h1>
         <div class="home-cta-text">
-          What a year it has been for the hall committee! New walls, windows and doors (and soon a new roof) outside and
-          inside new curtains, chairs and crockery, much paid for through successfully applied for grants. All that's
-          needed now are some new people to join the committee to help take all the good work forward. We meet about
-          four times a year and run a few fund-raising events to keep the hall coffers in good shape. Please consider
-          joining us, we're friendly, open to new ideas and would be delighted to see you!
+          What a year it has been for the hall committee! New walls, windows and
+          doors (and soon a new roof) outside and inside new curtains, chairs
+          and crockery, much paid for through successfully applied for grants.
+          All that's needed now are some new people to join the committee to
+          help take all the good work forward. We meet about four times a year
+          and run a few fund-raising events to keep the hall coffers in good
+          shape. Please consider joining us, we're friendly, open to new ideas
+          and would be delighted to see you!
           <div class="home-cta-text-footer">
             For more information please contact Ann (
-            <a href="mailto: volunteers@westmuir.org.uk">volunteers&#64;westmuir.org.uk </a>) or join us at the AGM on
-            16th June, at 7.30pm. Thanks!
+            <a href="mailto: volunteers@westmuir.org.uk"
+              >volunteers&#64;westmuir.org.uk </a
+            >) or join us at the AGM on 16th June, at 7.30pm. Thanks!
           </div>
         </div>
       </div>
@@ -40,32 +39,49 @@ hero: false
 
     <h2 class="main-heading">Latest</h2>
 
-    <postslist-articles :list="head(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-articles>
-    <postslist-cards :list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"></postslist-cards>
+    <postslist-articles
+      :list="head(categoryFilter($data.collections.posts, 'featured'), -2)"
+    ></postslist-articles>
+    <postslist-cards
+      :list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"
+    ></postslist-cards>
   </div>
 </div>
 
 <div class="container" name="logos">
   <div class="section section-logos">
     <p>
-      Westmuir is host to a number of successful companies which operate throughout Angus and much further afield. The
-      links below offer contact details and may also lead to further information or to the relevant company website
-      where appropriate.
+      Westmuir is host to a number of successful companies which operate
+      throughout Angus and much further afield. The links below offer contact
+      details and may also lead to further information or to the relevant
+      company website where appropriate.
     </p>
     <div class="logos">
       <div class="logo-item">
         <a href="https://www.plovermuircottages.co.uk" target="_blank">
-          <img src="images/Plovermuir_1.jpg" alt="Plovermuir cottages" width="200" />
+          <img
+            src="images/Plovermuir_1.jpg"
+            alt="Plovermuir cottages"
+            width="200"
+          />
         </a>
       </div>
       <div class="logo-item">
         <a href="https://www.garysinclairarchitecture.com/" target="_blank">
-          <img src="images/Gary_Sinclair_1.jpg" alt="Gary Sinclair architecture" width="200" />
+          <img
+            src="images/Gary_Sinclair_1.jpg"
+            alt="Gary Sinclair architecture"
+            width="200"
+          />
         </a>
       </div>
       <div class="logo-item">
         <a href="https://angusscaffolding.co.uk/" target="_blank">
-          <img src="images/Angus Scaffold.1.png" alt="Angus Scaffolding Ltd" width="200" />
+          <img
+            src="images/Angus Scaffold.1.png"
+            alt="Angus Scaffolding Ltd"
+            width="200"
+          />
         </a>
       </div>
     </div>
@@ -74,59 +90,63 @@ hero: false
 
 <div class="container container-spacing" name="main-content">
   <div class="section">
-    <cta-volunteer buttonlabel="Read more" buttonurl="/about/volunteers/" xwebc:if="cta"></cta-volunteer>
+    <cta-volunteer
+      buttonlabel="Read more"
+      buttonurl="/about/volunteers/"
+      xwebc:if="cta"
+    ></cta-volunteer>
   </div>
 </div>
 
 <style webc:type="scss">
-.main-heading {
-  font-size: 2rem;
-  text-shadow: rgb(0 0 0 / 20%) 0 0 3px;
-  border-bottom: 1px solid #313544;
-}
-
-
-.home-cta {
-  margin-top: 1em;
-  margin-bottom: 2em;
-  border: 2px solid green;
-  padding: 1em;
-  border-radius: 1em;
-}
-
-.home-cta .home-cta-text {
-  padding: 1em;
-}
-
-.home-cta-text-footer {
-  margin-top: 1em;
-}
-
-.section-logos {
-  max-width: 75ch;
-}
-
-.logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 48px;
-  margin-inline: auto;
-
-  .logo-item {
-    flex: 1 1 10%;
-    max-width: 200px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  .home-container {
+    --section-color: light-dark(var(--grey-9), var(--grey-2));
+    --section-bg: light-dark(var(--cyan-2), var(--cyan-9));
   }
-}
+  .main-heading {
+    font-size: 2rem;
+    text-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+    border-bottom: 1px solid #313544;
+  }
 
-.container[name='logos'] > section {
-  background-color: #eec942;
-}
+  .home-cta {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border: 2px solid green;
+    padding: 1em;
+    border-radius: 1em;
+  }
 
+  .home-cta .home-cta-text {
+    padding: 1em;
+  }
 
+  .home-cta-text-footer {
+    margin-top: 1em;
+  }
 
+  .section-logos {
+    max-width: 75ch;
+  }
+
+  .logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    margin-inline: auto;
+
+    .logo-item {
+      flex: 1 1 10%;
+      max-width: 200px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .container[name="logos"] > section {
+    background-color: #eec942;
+  }
 </style>

@@ -1,0 +1,56 @@
+<nav aria-label="Breadcrumb" class="breadcrumbs-nav">
+  <ol class="breadcrumbs-list">
+    <!-- Pulling arguments directly out of $data for the filter function -->
+    <li
+      webc:for="crumb of (getBreadcrumbs($data.page.url, $data.collections.all))"
+    >
+      <a webc:if="!crumb.isCurrent" :href="crumb.url" @text="crumb.label"></a>
+      <span
+        webc:if="crumb.isCurrent"
+        aria-current="page"
+        @text="crumb.label"
+      ></span>
+    </li>
+  </ol>
+</nav>
+
+<style>
+  .breadcrumbs-nav {
+    padding-block: var(--size-1);
+    margin-bottom: var(--size-1);
+    font-size: var(--font-size-0);
+  }
+
+  .breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--size-2);
+    color: var(--text-2);
+
+    li:not(:last-child)::after {
+      /* Uses standard text color for the separator symbol */
+      content: "/";
+      margin-left: var(--size-2);
+      color: var(--stone-5);
+    }
+
+    a {
+      /* Uses your newly fixed light-dark link token */
+      color: var(--link-color);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--link-hover-color);
+      }
+    }
+
+    span {
+      color: var(--text-1);
+      font-weight: var(--font-weight-5);
+    }
+  }
+</style>

@@ -1,27 +1,13 @@
 ---
 title: Resilience
 layout: base
-description: Learn about the Westmuir Village Resilience centre.
-eleventyNavigation:
-  key: Resilience
-  parent: Westmuir Hall
-  order: 2
+inSectionNav: true
+description: A warm place for the community in challenging conditions
+headerImage: "/Westmuir Hall/resilience/generator.avif"
+headerAlt: "Backup generator"
 ---
 
 <div class="content-grid flow">
-  <figure class="page-header full-width-content">
-    <img
-      src="/Westmuir Hall/resilience/generator.avif"
-      alt="Backup generator"
-    />
-    <div class="page-header-info">
-      <div class="content">
-        <h1>Westmuir Resilience Centre</h1>
-        <p>A warm place for the community in challenging conditions</p>
-      </div>
-    </div>
-  </figure>
-
   <section class="breakout content-image-text">
     <div class="content-image image-center">
       <figure class="framed-photo">
