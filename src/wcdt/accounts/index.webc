@@ -1,0 +1,58 @@
+---
+layout: plain
+title: Westmuir Community Development Trust
+description: Annual accounts archive.
+headerImage: '/wcdt/wcdt-banner.avif'
+headerAlt: 'westmuir village'
+---
+
+<div class="content-grid flow">
+  <section class="content-text-block breakout">
+    <h4>WCDT Statement of Finances, Balance sheet, and Notes to account</h4>
+    Here are the latest financial statements and balance sheet for WCDT.
+
+<ul>
+  <li>
+    <div>October 2024<div>
+
+    <ul class="wcdt-list">
+      <li>
+        <a href="/pdf/wcdt/Annual Report 2023 - 2024.pdf" target="_blank"
+          >Annual Report 2023-24</a
+        >
+      </li>
+      <li>
+        <a href="/pdf/wcdt/financial-statement-notes.pdf" target="_blank"
+          >Statement of financial activities and notes.</a
+        >
+      </li>
+      <li>
+        <a href="/pdf/wcdt/Balance sheet.pdf" target="_blank"
+          >WCDT Balance Sheet</a
+        >
+      </li>
+    </ul>
+
+  </li>
+</ul>
+
+
+</section>
+</div>
+
+<style>
+  .wcdt-list {
+    li {
+      max-inline-size: var(--size-content-3);
+    }
+  }
+  .wcdt-logo {
+    max-width: 100px;
+  }
+
+  .pull-left {
+    float: left;
+    margin-inline-end: 1.5rem;
+    margin-block-end: 0.5rem;
+  }
+</style>

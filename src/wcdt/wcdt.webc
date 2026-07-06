@@ -2,8 +2,8 @@
 layout: plain
 title: Westmuir Community Development Trust
 description: To preserve, restore and improve the environment in the area.
-headerImage: "/wcdt/wcdt-banner.avif"
-headerAlt: "westmuir village"
+headerImage: '/wcdt/wcdt-banner.avif'
+headerAlt: 'westmuir village'
 ---
 
 <div class="content-grid flow">
@@ -45,24 +45,38 @@ headerAlt: "westmuir village"
   </section>
   <section class="content-text-block breakout">
     <h4>WCDT Statement of Finances, Balance sheet, and Notes to account</h4>
-    Here are the latest financial statements and balance sheet for WCDT as of
-    31st October 2024.
+    Here are the latest financial statements and balance sheet for WCDT.
 
-    <ul class="wcdt-list">
+    <ul>
       <li>
-        <a href="/pdf/wcdt/Annual Report 2023 - 2024.pdf" target="_blank"
-          >Annual Report 2023-24</a
-        >
+        October 2025
+
+        <ul class="wcdt-list">
+          <li>
+            <a
+              href="/pdf/wcdt/Annual AGM Report 2024 - 2025.pdf"
+              target="_blank"
+              >Annual Report 2024-25</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pdf/wcdt/WCDT Accounts for 2024-25 signed off p3.pdf"
+              target="_blank"
+              >Statement of financial activities and notes.</a
+            >
+          </li>
+          <li>
+            <a
+              href="/pdf/wcdt/WCDT Accounts for 2024-25 signed off p1.pdf"
+              target="_blank"
+              >WCDT Balance Sheet</a
+            >
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="/pdf/wcdt/financial-statement-notes.pdf" target="_blank"
-          >Statement of financial activities and notes.</a
-        >
-      </li>
-      <li>
-        <a href="/pdf/wcdt/Balance sheet.pdf" target="_blank"
-          >WCDT Balance Sheet</a
-        >
+        <a href="/wcdt/accounts/" title="archive accounts">Archive accounts</a>
       </li>
     </ul>
   </section>
