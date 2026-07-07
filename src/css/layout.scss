@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
-  min-block-size: 100%;
+  min-block-size: 100vh; /* Using vh ensures it stretches to the full viewport height */
 }
 
 .container {

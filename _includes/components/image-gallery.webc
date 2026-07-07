@@ -1,0 +1,19 @@
+<!-- image-gallery.webc -->
+<section class="breakout image-gallery-section flow">
+  <div class="gallery-intro">
+    <!-- The slot allows you to change the title per page -->
+    <slot><h2>Gallery</h2></slot>
+  </div>
+
+  <div class="image-gallery-grid">
+    <!-- Changed to loop over a generic collection attribute -->
+    <figure
+      webc:for="(item, index) of collection"
+      :class="Number(index) % 5 === 0 ? 'item-wide' : (Number(index) % 3 === 0 ? 'item-tall' : '')"
+      class="gallery-item"
+    >
+      <img :src="item.src" :alt="item.alt" loading="lazy" />
+      <figcaption @text="item.alt"></figcaption>
+    </figure>
+  </div>
+</section>

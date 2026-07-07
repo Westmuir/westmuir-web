@@ -2,8 +2,8 @@
 layout: plain
 title: Westmuir Community Development Trust
 description: To preserve, restore and improve the environment in the area.
-headerImage: '/wcdt/wcdt-banner.avif'
-headerAlt: 'westmuir village'
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "westmuir village"
 ---
 
 <div class="content-grid flow">
@@ -79,6 +79,11 @@ headerAlt: 'westmuir village'
         <a href="/wcdt/accounts/" title="archive accounts">Archive accounts</a>
       </li>
     </ul>
+  </section>
+  <section class="content-text-block breakout">
+    <image-gallery :collection="$data.galleries['woodland-hedge-laying']">
+      <h2>Hedge laying</h2>
+    </image-gallery>
   </section>
 </div>
 
