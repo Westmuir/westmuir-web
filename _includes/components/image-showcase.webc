@@ -1,15 +1,18 @@
+<!-- Pass layout="strip" or layout="grid" when using the component -->
 <section class="breakout image-gallery-section flow">
   <div class="gallery-intro">
     <slot><h2>Gallery</h2></slot>
   </div>
 
-  <image-lightbox-gallery>
-    <!-- Your clean webc:for loop structure -->
-    <div class="image-gallery-grid">
+  <!-- We pass the layout attribute down to control our CSS styling -->
+  <image-lightbox-gallery
+    :class="layout === 'strip' ? 'layout-strip' : 'layout-grid'"
+  >
+    <!-- The exact same DOM structure for images -->
+    <div class="image-gallery-container">
       <figure
         webc:for="(item, index) of collection"
-        :class="Number(index) % 5 === 0 ? 'item-wide' : (Number(index) % 3 === 0 ? 'item-tall' : '')"
-        class="gallery-item"
+        :class="`gallery-item ${layout !== 'strip' ? (Number(index) % 5 === 0 ? 'item-wide' : (Number(index) % 3 === 0 ? 'item-tall' : '')) : ''}`"
       >
         <button
           type="button"
@@ -23,7 +26,7 @@
       </figure>
     </div>
 
-    <!-- The Lightbox Modal Structure -->
+    <!-- The exact same Lightbox Modal is preserved here -->
     <dialog class="lightbox-modal">
       <form method="dialog">
         <button class="close-btn" aria-label="Close modal">✕</button>
@@ -51,11 +54,12 @@
   </image-lightbox-gallery>
 </section>
 
-<!-- Client-side script handling browser runtime -->
+<!-- The Client-Side JavaScript remains 100% identical and unchanged -->
 <script>
   class ImageLightboxGallery extends HTMLElement {
     connectedCallback() {
-      this.grid = this.querySelector(".image-gallery-grid");
+      // We update this target selector to use the generic container class
+      this.grid = this.querySelector(".image-gallery-container");
       this.dialog = this.querySelector(".lightbox-modal");
       this.lightboxImg = this.querySelector(".lightbox-img");
       this.lightboxCaption = this.querySelector(".lightbox-caption");
@@ -65,12 +69,9 @@
       this.items = [];
       this.currentIndex = 0;
 
-      // Let JavaScript index the items safely based on their actual DOM loop order
       const triggers = this.grid.querySelectorAll(".gallery-trigger");
       triggers.forEach((btn, index) => {
         const liveImg = btn.querySelector("img");
-
-        // Explicitly set the DOM attribute to guarantee it is there for the click event
         btn.setAttribute("data-index", index);
 
         this.items.push({
@@ -129,6 +130,7 @@
 </script>
 
 <style>
+  /* --- REUSABLE UTILITIES & LIGHTBOX VISUALS --- */
   .gallery-trigger {
     background: none;
     border: none;
@@ -138,29 +140,18 @@
     display: block;
   }
 
-  /* Lightbox Backdrop Styling */
   .lightbox-modal::backdrop {
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(2px);
   }
 
-  /*
-    MODAL POSITION FIX:
-    Browsers use default absolute centring for <dialog>.
-    We override margins to force horizontal centering and set an explicit top offset.
-  */
   .lightbox-modal {
     border: none;
     background: transparent;
     padding: 0;
-
-    /* Center horizontally, offset 100px from top viewport boundary */
     margin: 100px auto auto auto;
-
     max-width: 90vw;
-    max-height: calc(
-      100vh - 150px
-    ); /* Keeps image contained above viewport fold */
+    max-height: calc(100vh - 150px);
     color: white;
     overflow: visible;
   }
@@ -173,7 +164,6 @@
     position: relative;
   }
 
-  /* Keep the primary rendering bounds snappy and contained */
   .lightbox-content figure {
     margin: 0;
     display: flex;
@@ -183,9 +173,7 @@
 
   .lightbox-content img {
     max-width: 75vw;
-    max-height: calc(
-      100vh - 220px
-    ); /* Scales cleanly across small/large screen heights */
+    max-height: calc(100vh - 220px);
     object-fit: contain;
     border-radius: 4px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -197,7 +185,6 @@
     font-size: 1.1rem;
   }
 
-  /* Buttons Styling */
   .close-btn,
   .nav-btn {
     background: rgba(255, 255, 255, 0.1);
@@ -218,11 +205,64 @@
     background: rgba(255, 255, 255, 0.3);
   }
 
-  /* Position close button beautifully right above the wrapper frame */
   .close-btn {
     position: absolute;
     top: -3.5rem;
     right: 0;
     z-index: 10;
+  }
+
+  /* --- VARIANT 1: GRID MODE --- */
+  .layout-grid .image-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  /* --- VARIANT 2: HORIZONTAL STRIP MODE --- */
+  .layout-strip .image-gallery-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem; /* Tighter gaps for a cleaner strip look */
+    padding-bottom: 0.75rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+
+  .layout-strip .gallery-item {
+    flex: 0 0 auto;
+
+    /*
+      FLUID WIDTH CALCULATION:
+      - 100% / 5.5 means exactly 5 full images fit on screen,
+        and the 6th is cut in half to visually hint that it's scrollable!
+    */
+    width: calc(100% / 5.5);
+
+    scroll-snap-align: start;
+  }
+
+  /* Make sure it handles smaller mobile screens elegantly */
+  @media (max-width: 768px) {
+    .layout-strip .gallery-item {
+      width: calc(100% / 3.5); /* Shows ~3.5 images on mobile */
+    }
+  }
+
+  .layout-strip .gallery-item img {
+    height: 110px; /* Shorter height to match the smaller width footprint */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+  }
+
+  .layout-strip .gallery-item img:hover {
+    transform: scale(1.03); /* Subtle interactive hint */
+  }
+
+  /* Hide captions in the compact strip view to keep it minimal */
+  .layout-strip figcaption {
+    display: none;
   }
 </style>

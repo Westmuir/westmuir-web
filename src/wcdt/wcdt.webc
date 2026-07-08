@@ -81,7 +81,10 @@ headerAlt: "westmuir village"
     </ul>
   </section>
   <section class="content-text-block breakout">
-    <image-showcase :collection="$data.galleries['woodland-hedge-laying']">
+    <image-showcase
+      :collection="$data.galleries['woodland-hedge-laying']"
+      layout="strip"
+    >
       <h2>Hedge laying</h2>
     </image-showcase>
   </section>
