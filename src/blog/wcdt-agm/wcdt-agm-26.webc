@@ -1,0 +1,31 @@
+---
+title: WCDT AGM 2026.
+description: Thursday 16th July 2026.
+date: 2026-07-16
+expires: 2026-07-17
+tags:
+  - hall
+categories:
+  - hall
+  - featured
+cardType: hall
+---
+
+<div class="agm-info">
+  <h1 class="agm-heading">Westmuir Community Development Trust</h1>
+
+  <div class="agm-title">AGM 2026</div>
+
+  <p class="agm-info-text">
+    Please come along to support the Westmuir Community Development Trust and
+    find out about plans for the Woodland.
+  </p>
+
+  <hr />
+  <div class="agm-time">
+    <p>Thursday 16th July</p>
+    <p>19:30</p>
+  </div>
+</div>
+
+<style webc:type="scss"></style>
