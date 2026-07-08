@@ -40,22 +40,24 @@
 
   <body tabindex="-1">
     <div class="page-wrapper">
-      <!-- 1. The layout automatically renders the header component using page front matter -->
-      <page-header
-        webc:if="$data.headerImage"
-        :@title="$data.title"
-        :@description="$data.description"
-        :@image="$data.headerImage"
-        :@alt="$data.headerAlt || 'Section header graphic'"
-      >
-      </page-header>
+      <header>
+        <!-- 1. The layout automatically renders the header component using page front matter -->
+        <page-header
+          webc:if="$data.headerImage"
+          :@title="$data.title"
+          :@description="$data.description"
+          :@image="$data.headerImage"
+          :@alt="$data.headerAlt || 'Section header graphic'"
+        >
+        </page-header>
 
-      <!-- 2. The layout drops the breadcrumbs automatically right below it,
+        <!-- 2. The layout drops the breadcrumbs automatically right below it,
          unless it's the home page or a 'noBreadcrumbs' flag is explicitly set -->
-      <site-breadcrumbs
-        webc:if="$data.page.url !== '/' && !$data.noBreadcrumbs"
-      >
-      </site-breadcrumbs>
+        <site-breadcrumbs
+          webc:if="$data.page.url !== '/' && !$data.noBreadcrumbs"
+        >
+        </site-breadcrumbs>
+      </header>
       <main class="flow" @raw="content"></main>
 
       <site-footer></site-footer>

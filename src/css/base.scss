@@ -418,3 +418,89 @@ img[width][height] {
     }
   }
 }
+.image-gallery-section {
+  margin-block: var(--size-9, 4rem);
+
+  .gallery-intro {
+    max-inline-size: var(--size-content-3, 70ch);
+  }
+}
+
+.image-gallery-grid {
+  display: grid;
+  /* 1. Fluid columns that auto-wrap without media queries */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-auto-rows: 220px; /* Establishes a strict underlying grid cell height */
+  gap: var(--size-4, 1.25rem);
+
+  /* 2. Desktop Mosaic Feature Layout rules */
+  @media (min-width: 850px) {
+    grid-template-columns: repeat(4, 1fr); /* 4-column master layout */
+
+    /* Utility tracks that make specific images pop out into unique shapes */
+    .item-wide {
+      grid-column: span 2; /* Spans across two column boxes horizontally */
+    }
+
+    .item-tall {
+      grid-row: span 2; /* Stretches down through two track cells vertically */
+    }
+  }
+
+  .gallery-item {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-2);
+    cursor: pointer;
+
+    /* 3. Smooth animation triggers */
+    transition: transform 0.25s var(--ease-2);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Absolutely essential to keep images from warping */
+      object-position: center;
+      transition: filter 0.3s ease;
+    }
+
+    /* 4. Elegant Text Caption Overlays */
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+      color: #fff;
+      padding: var(--size-4) var(--size-3) var(--size-3);
+      font-size: var(--font-size-1);
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 600;
+      opacity: 0; /* Hidden by default */
+      transform: translateY(10px);
+      transition:
+        transform 0.25s var(--ease-2),
+        opacity 0.25s var(--ease-2);
+
+      /* Overriding the default Open Props narrow caption restrictions safely */
+      max-inline-size: 100% !important;
+    }
+
+    /* 5. Hover Hover Interactions */
+    &:hover {
+      transform: scale(1.015);
+      box-shadow: var(--shadow-3);
+
+      img {
+        filter: brightness(0.85);
+      }
+
+      figcaption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}

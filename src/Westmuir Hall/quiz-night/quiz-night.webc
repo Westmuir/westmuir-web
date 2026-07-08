@@ -9,8 +9,7 @@ title: Quiz Night Wrap-up
     funds for the Resilience Centre repairs...
   </p>
 
-  <!-- 🚀 Add the colon here so that the inner loop can read it -->
-  <event-gallery :name="'test-quiz-night'">
+  <image-gallery :collection="$data.galleries['test-quiz-night']">
     <h2>Quiz Night Highlights</h2>
-  </event-gallery>
+  </image-gallery>
 </div>
