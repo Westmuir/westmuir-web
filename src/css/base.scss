@@ -224,14 +224,18 @@ img[width][height] {
   }
 }
 
+/* A section to contain image beside text */
 .dark .agm-info {
   --agm-border-color: yellow;
 }
 
 .agm-info {
+  display: flex;
+  flex-direction: column;
   border: 2px solid var(--agm-border-color, purple);
   border-radius: 15px;
   padding: 2rem;
+  align-items: center;
 
   hr {
     margin-top: 1rem;
@@ -262,8 +266,6 @@ img[width][height] {
   font-size: 4rem;
   font-weight: 700;
 }
-
-/* A section to contain image beside text */
 
 .content-image-text {
   display: grid;
