@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Westmuir"
-layout: "plain"
+layout: "base"
 cta: true
 hero: false
 description: Welcome to Westmuir Village

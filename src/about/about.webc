@@ -1,6 +1,6 @@
 ---
 title: About
-layout: plain
+layout: base
 eleventyNavigation:
   key: About
   title: About Us

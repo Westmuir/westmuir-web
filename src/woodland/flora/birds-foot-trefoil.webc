@@ -1,6 +1,6 @@
 ---
 title: Flora & Fauna
-layout: plain
+layout: base
 description: Learn about the Westmuir Community Development Trust and the Woodland.
 ---
 
@@ -22,7 +22,11 @@ description: Learn about the Westmuir Community Development Trust and the Woodla
   <section class="breakout content-image-text">
     <div class="content-image">
       <figure>
-        <img class="bg-yellow-100 sm-p-3 shadow-lg" src="/woodland/birds-foot-trefoil.avif" alt="" />
+        <img
+          class="bg-yellow-100 sm-p-3 shadow-lg"
+          src="/woodland/birds-foot-trefoil.avif"
+          alt=""
+        />
       </figure>
     </div>
     <div class="content-text species-facts">
@@ -38,10 +42,10 @@ description: Learn about the Westmuir Community Development Trust and the Woodla
 
   <species-info @distribution="Widespread">
     <p>
-  Its yellow flowers look like little slippers and appear in small clusters.
-  They are followed by seed pods that look distinctly like bird's feet or claws,
-  hence the common name. A low-growing plant, its leaves have five leaflets
-  and are downy.</p>
-</species-info>
-
+      Its yellow flowers look like little slippers and appear in small clusters.
+      They are followed by seed pods that look distinctly like bird's feet or
+      claws, hence the common name. A low-growing plant, its leaves have five
+      leaflets and are downy.
+    </p>
+  </species-info>
 </div>

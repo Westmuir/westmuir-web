@@ -1,11 +1,13 @@
 ---
-layout: plain
+layout: base
 ---
 
 <h1>Tags</h1>
 
 <ul>
-  <li webc:for="tag of sortAlphabetically(filterTagList(getKeys($data.collections)))">
+  <li
+    webc:for="tag of sortAlphabetically(filterTagList(getKeys($data.collections)))"
+  >
     <a :href="'/tags/'+slugify(tag)" class="post-tag" @text="tag"></a>
   </li>
 </ul>

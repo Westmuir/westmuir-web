@@ -26,6 +26,11 @@
     <meta name="description" content="Westmuir Village Website" />
     <title @text="title ?? 'Westmuir Village'"></title>
 
+    <!-- 1. CRUCIAL: Establish layer order explicitly in raw HTML -->
+    <style webc:keep>
+      @layer openprops, theme, normalize, components.root, components.extended, utils;
+    </style>
+
     <style webc:type="scss" webc:bucket="main">
       @import "../../src/css/main.scss";
     </style>
@@ -36,6 +41,21 @@
       @raw="`@import url(${getBundleFileUrl('css','main')});`"
     ></style>
     <style webc:keep @raw="`@import url(${getBundleFileUrl('css')});`"></style>
+    <!-- Critical inline initialization to prevent dark-mode page flash -->
+    <script>
+      const savedTheme = localStorage.getItem("theme-preference");
+
+      // FIXED: If prefers-color-scheme is dark, default to dark; otherwise light.
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+
+      document.documentElement.setAttribute(
+        "data-theme",
+        savedTheme || systemTheme,
+      );
+    </script>
   </head>
 
   <body tabindex="-1">
@@ -58,8 +78,10 @@
         >
         </site-breadcrumbs>
       </header>
-      <main class="flow" @raw="content"></main>
-
+      <!-- This main tag acts as the smart layout grid -->
+      <main class="flow page-layout">
+        <template webc:type="11ty" 11ty:type="liquid"> {{ content }} </template>
+      </main>
       <site-footer></site-footer>
     </div>
     <script :src="getBundleFileUrl('js')" webc:keep></script>

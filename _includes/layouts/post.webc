@@ -1,5 +1,5 @@
 ---
-layout: plain
+layout: base
 ---
 
 <div class="post-wrapper">
@@ -7,9 +7,14 @@ layout: plain
 
   <ul class="post-metadata">
     <li>
-      <time :datetime="page.date | htmlDateString(page.date)" @text="readableDate(page.date)"></time>
+      <time
+        :datetime="page.date | htmlDateString(page.date)"
+        @text="readableDate(page.date)"
+      ></time>
     </li>
-    <li webc:for="tag of filterTagList(tags)"><a :href="`/tags/${slugify(tag)}`" class="post-tag" @text="tag"></a>,</li>
+    <li webc:for="tag of filterTagList(tags)">
+      <a :href="`/tags/${slugify(tag)}`" class="post-tag" @text="tag"></a>,
+    </li>
   </ul>
 
   <div @raw="content" webc:nokeep></div>
@@ -22,18 +27,16 @@ layout: plain
   }
 
   /* Tags list */
-.post-metadata {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  .post-metadata {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-  time {
-    margin-right: 1em;
+    time {
+      margin-right: 1em;
+    }
   }
-}
-
-
 </style>

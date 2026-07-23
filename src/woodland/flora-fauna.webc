@@ -1,6 +1,6 @@
 ---
 title: Flora & Fauna
-layout: plain
+layout: base
 inSectionNav: true
 description: Things you might see in the Woodland
 headerImage: "/woodland/woodland-oak-1980.avif"

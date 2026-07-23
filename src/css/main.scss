@@ -1,9 +1,10 @@
 @use 'reset.scss';
 @use 'open-props/normalize.min.css';
+@use 'open-props/borders.min.css';
 @use 'open-props/colors.min.css';
-
-/* 2. Global Design Variables and Tokens */
+@use 'open-props/fonts.min.css';
 @use 'open-props/media.min.css';
+@use 'open-props/sizes.min.css';
 @use 'open-props/gradients.min.css';
 @use 'theme.scss';
 
