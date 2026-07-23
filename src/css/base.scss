@@ -20,22 +20,8 @@
     transform 0.3s ease;
 }
 
-html {
-  color-scheme: light dark;
-}
-
-/* Light theme override */
-[data-theme='light'] {
-  color-scheme: light;
-}
-
-/* Dark theme override */
-[data-theme='dark'] {
-  color-scheme: dark;
-}
-
 /* Apply the variables globally */
-a {
+aa {
   color: var(--link-color);
   transition: color 0.15s var(--ease-out-2);
 
@@ -48,23 +34,93 @@ html,
 body {
   block-size: 100%;
   overflow-x: hidden;
+  --size-content-3: 75ch;
+  /* Create your own dynamic, theme-aware equivalent string */
+  --theme-gradient: linear-gradient(135deg, var(--color-3), var(--color-9));
 }
-
 body {
   margin: 0;
   line-height: 1.6;
-  font-family: var(--font-classical-humanist);
+  font-family: var(--font-humanist);
 
-  /* 2. Hardware-accelerated font smoothing for dark text themes */
+  /* Hardware-accelerated font smoothing */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color: var(--text-color);
-  background-color: var(--background-color);
+  /* Enables your sticky footer mechanism to stretch perfectly */
+  min-height: 100vh;
 }
 
-.light {
-  background-color: #fff;
+h1,
+h2,
+h3,
+.club-title {
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-7); /* Pure Open Props weight */
+  letter-spacing: var(--font-letterspacing-1); /* Tighter spacing token */
+}
+/* Center all basic content elements within the grid track */
+.page-layout > p,
+.page-layout > ul,
+.page-layout > ol,
+.page-layout > h1,
+.page-layout > h2 {
+  grid-column: content;
+  max-inline-size: var(--size-content-3); /* Keeps sentences easy to read */
+
+  /*  margin-inline: auto; /* Forces left and right margins to balance, centering the text */
+  width: 100%; /* Allows the element to take full available track width up to its max-inline-size */
+}
+
+body {
+  background-color: var(--surface-default);
+  color: var(--text-primary); /* Natively links paragraph text to your theme-ui tokens */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Ensure headings default to your crisp primary color layer */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+/* Style secondary text elements easily */
+small,
+.muted,
+.text-muted {
+  color: var(--text-muted);
+}
+/* Inside your src/css/base.scss (Safe modern additions) */
+
+/* 1. Prevent text inflation issues on mobile orientation changes */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* 2. Accessible list handling for unstyled semantic lists */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 3. Text balancing for cleaner headlines */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
 }
 
 img {
@@ -81,6 +137,65 @@ img[width][height] {
 
 .logo {
   max-width: 100px;
+}
+
+/* Layout Wrapper applied to the <main> container */
+.page-layout {
+  display: grid;
+
+  /*
+       This tells the CSS Grid engine to stack all rows tightly
+       at the top of the container, leaving any extra "filler space" at the bottom!
+    */
+  align-content: start;
+
+  /* 1. Edges | 2. Breakout Track | 3. Center Content Track */
+  grid-template-columns:
+    [full-width-start] minmax(var(--size-5), 1fr)
+    [breakout-start] minmax(0, var(--size-5))
+    [content-start] min(100% - (var(--size-5) * 2), var(--size-lg)) [content-end]
+    minmax(0, var(--size-5)) [breakout-end]
+    minmax(var(--size-5), 1fr) [full-width-end];
+}
+
+/* Everything defaults to the center content track */
+.page-layout > * {
+  grid-column: content;
+}
+
+/* 2. Classes you can apply to make elements break out */
+.breakout {
+  grid-column: breakout;
+}
+
+.full-width {
+  grid-column: full-width;
+}
+
+/* Inside your layout stylesheet or base.scss */
+
+.full-width.with-bg {
+  grid-column: full-width;
+  background-color: var(--with-bg-color, --surface-2);
+  padding-block: var(--size-8);
+  display: grid;
+  grid-template-columns: inherit; /* Inherits your exact layout tracks */
+
+  /* 1. Structural layout components (like <two-columns>) default to full track width */
+  & > * {
+    grid-column: content;
+  }
+
+  /* 2. Pure text elements inherit readable text boundaries, matching your main layout */
+  & > p,
+  & > ul,
+  & > ol,
+  & > h1,
+  & > h2 {
+    grid-column: content;
+    max-inline-size: var(--size-content-3); /* Keeps line-lengths easy to read */
+    width: 100%;
+  }
 }
 
 .item-list {
