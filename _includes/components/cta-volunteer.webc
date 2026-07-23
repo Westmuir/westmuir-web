@@ -1,13 +1,24 @@
 <section class="cta">
   <a :href="buttonurl">
     <h2 @text="heading ?? 'Join the Westmuir Community'"></h2>
-    <p @text="description ?? 'Get involved with events, news, and village life.'"></p>
-    <a :href="buttonurl" class="btn" @text="buttonlabel" webc:if="buttonlabel && buttonurl"></a>
+    <p
+      @text="description ?? 'Get involved with events, news, and village life.'"
+    ></p>
+    <a
+      :href="buttonurl"
+      class="btn"
+      @text="buttonlabel"
+      webc:if="buttonlabel && buttonurl"
+    ></a>
   </a>
 </section>
 
 <style>
-  .cta {
+  :where(.cta) {
+    --cta-background-color: light-dark(var(--camo-9), var(--camo-11));
+    --header-background-color: light-dark(var(--camo-8), var(--camo-9));
+    --header-text-color: light-dark(var(--camo-1), var(--camo-1));
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,44 +32,44 @@
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
-  }
 
-  .cta a {
-    padding: 2rem;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-  }
+    a {
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
 
-  .cta-l {
-    margin-left: inherit;
-  }
+    .cta-l {
+      margin-left: inherit;
+    }
 
-  .cta-sm {
-    padding: 1rem;
-    margin: 1rem;
-    max-width: 500px;
-  }
-  .cta.cta-post {
-    background-color: var(--cta-background-color, #222);
-  }
+    .cta-sm {
+      padding: 1rem;
+      margin: 1rem;
+      max-width: 500px;
+    }
+    .cta-post {
+      background-color: var(--cta-background-color, #222);
+    }
 
-  .cta h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
 
-  .cta p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
 
-  .cta .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.2rem;
-    background-color: var(--cyan-10);
-    color: var(--header-text-color);
-    border-radius: 10px;
-    margin-bottom: 1rem;
+    .btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1.2rem;
+      background-color: var(--cyan-10);
+      color: var(--header-text-color);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
   }
 </style>

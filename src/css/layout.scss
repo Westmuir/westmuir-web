@@ -1,5 +1,5 @@
 /* Layout Integrity */
-.page-wrapper {
+.page-wrapperX {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
@@ -16,22 +16,18 @@
   }
 }
 
-/* 1. Global Reset: Wipe out the narrow Open Props list item ceiling website-wide */
-:where(ol, ul) li {
-  max-inline-size: var(--size-content-3, 70ch); /* Upgrades lists from tight header size to standard text size */
-}
 /* 2. Seamless Grid Inheritance */
 /* Any text layout element that is explicitly styled as a breakout or grid wrapper
    should automatically force all child elements to unlock and fill the space fluidly. */
-.content-grid > *,
-.content-text {
+.content-gridX > *,
+.content-textX {
   ol,
   ul,
   li {
     max-inline-size: 100%;
   }
 }
-.content-grid {
+.content-gridX {
   --padding-inline: 1rem;
   --content-max-width: 75ch;
   --breakout-max-width: 105ch;
@@ -63,21 +59,21 @@
   }
 }
 
-.full-width {
+.full-widthX {
   display: grid;
 }
 
-.content-grid > :not(.breakout, .full-width, .full-width-content),
-.full-width > :not(.breakout, .full-width, .full-width-content) {
+.content-gridX > :not(.breakout, .full-width, .full-width-content),
+.full-widthX > :not(.breakout, .full-width, .full-width-content) {
   grid-column: content;
 }
 
-.content-grid > .breakout {
+.content-gridX > .breakout {
   grid-column: breakout;
 }
 
-.content-grid > .full-width,
-.content-grid > .full-width-content {
+.content-gridX > .full-width,
+.content-gridX > .full-width-content {
   grid-column: full-width;
 }
 
@@ -142,7 +138,7 @@ footer {
 
 /* Layout Utility Classes */
 
-.grid {
+.gridX {
   display: grid;
   gap: 1rem;
 }

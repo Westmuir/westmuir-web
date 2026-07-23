@@ -19,7 +19,9 @@
     opacity 0.3s ease,
     transform 0.3s ease;
 }
-
+:root {
+  --woodland-info-font: 'Merriweather Sans', sans-serif;
+}
 /* Apply the variables globally */
 aa {
   color: var(--link-color);
@@ -103,6 +105,10 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+}
+/* 1. Global Reset: Wipe out the narrow Open Props list item ceiling website-wide */
+:where(ol, ul) li {
+  max-inline-size: var(--size-content-3, 70ch); /* Upgrades lists from tight header size to standard text size */
 }
 
 /* 2. Accessible list handling for unstyled semantic lists */
@@ -437,10 +443,6 @@ img[width][height] {
       box-shadow: var(--shadow-2); /* Makes the highlight card pop subtly off the page background */
     }
   }
-}
-
-.light-bg {
-  background-color: var(--content-light-bg, hsl(120, 100%, 97%));
 }
 
 @media (--md-n-below) {

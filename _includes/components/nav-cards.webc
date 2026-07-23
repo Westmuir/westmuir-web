@@ -24,7 +24,19 @@
   </li>
 </ul>
 
-<style>
+<style webc:type:"scss">
+  :where(.section-cards) {
+    --margin-color-hall: light-dark(#d073d4, #864a89);
+    --margin-color-na: light-dark(#3f4f8080, #3f4f8080);
+    .hall,
+    .postlist .hall {
+      border-bottom: 10px solid var(--margin-color-hall, #803f6380);
+    }
+
+    .na {
+      border-bottom: 10px solid var(--margin-color-na, #3f4f8080);
+    }
+  }
   .sc-bg {
     background-color: red;
   }
@@ -67,19 +79,10 @@
     }
   }
 
-  .section-cards .hall,
-  .postlist .hall {
-    border-bottom: 10px solid var(--margin-color-hall, #803f6380);
-  }
-
-  .section-cards .na {
-    border-bottom: 10px solid var(--margin-color-na, #3f4f8080);
-  }
-
   .section-card {
     width: 18ch;
     overflow: hidden;
-    background-color: var(--background-color, #fff);
+    background-color: var(--surface-default, #fff);
 
     &:hover {
       transform: translateY(-2px);

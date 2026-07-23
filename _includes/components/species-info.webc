@@ -21,10 +21,14 @@
 </section>
 
 <style lang="scss">
+  .light-bg {
+    --content-light-bg: light-dark(hsl(120, 100%, 97%), hsl(120, 12%, 27%));
+    background-color: var(--content-light-bg);
+  }
+
   .species-information {
     hr {
       margin-block: var(--size-fluid-3);
     }
   }
 </style>
-
