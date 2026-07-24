@@ -1,6 +1,7 @@
 node_modules/
 _site/
 .cache/
+poems/
 
 purge-report*
 orphan-report*
