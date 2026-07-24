@@ -1,98 +1,106 @@
 ---
 layout: "base.webc"
 title: "2016 August"
-poemTitle: "2016 August"
+poemTitle: "August Reflections"
 author: "Eila Webster"
 bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <img src="/poems/2016-august/image-1.png" alt="" />
+      <img src="/poems/2016-august/image-14.png" alt="" />
+    </div>
+    <div slot="header-tr">
+      <img src="/poems/2016-august/image-13.png" alt="" />
+      <img src="/poems/2016-august/image-2.png" alt="" />
+    </div>
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2016-august/image-9.png" alt="" />
+      <img src="/poems/2016-august/image-4.png" alt="" />
+      <img src="/poems/2016-august/image-6.png" alt="" />
+      <img src="/poems/2016-august/image-3.png" alt="" />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/2016-august/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2016-august/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        August brings a subtle change <br />
+        Summer begins to fade away; <br />
+        Daylight hours are shortening <br />
+        Gold is showing on grain and hay.
+      </p>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2016-august/image-6.png" alt="" />
-    <img src="/poems/2016-august/image-8.png" alt="" />
-    <img src="/poems/2016-august/image-10.png" alt="" />
-    <img src="/poems/2016-august/image-12.png" alt="" />
-    <img src="/poems/2016-august/image-14.png" alt="" />
-  </div>
+      <p>
+        Early crops that were drying <br />
+        Are ready now to store; <br />
+        Jam made from July berries <br />
+        Line the kitchen shelves once more.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      August brings a subtle change
-      Summer begins to fade away;
-      Daylight hours are shortening
-      Gold is showing on grain and hay.
-    </p>
+      <p>
+        Orchard fruit showing a rosy tint <br />
+        Are tempting boys to the loot; <br />
+        Heather now blooming on the hills <br />
+        As huntsmen begin to shoot.
+      </p>
 
-    <p>
-      Early crops that were drying
-      Are ready now to store;
-      Jam made from July berries
-      Line the kitchen shelves once more.
-    </p>
+      <p>
+        This went on for countless years <br />
+        And it always served us well; <br />
+        Waiting eagerly to taste the fruit <br />
+        As we watched the berries swell.
+      </p>
+    </div>
 
-    <p>
-      Orchard fruit showing a rosy tint
-      Are tempting boys to the loot;
-      Heather now blooming on the hills
-      As huntsmen begin to shoot.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2016-august/image-0.png" alt="" />
+      <img src="/poems/2016-august/image-3.png" alt="" />
+      <img src="/poems/2016-august/image-4.png" alt="" />
+      <img src="/poems/2016-august/image-5.png" alt="" />
+    </div>
 
-    <p>
-      This went on for countless years
-      And it always served us well;
-      Waiting eagerly to taste the fruit
-      As we watched the berries swell.
-    </p>
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        But as modern ideas filtered in <br />
+        Fruit is bought now when you shop; <br />
+        Always available all year through <br />
+        So berry picking came to a stop.
+      </p>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2016-august/image-2.png" alt="" />
-    <img src="/poems/2016-august/image-3.png" alt="" />
-    <img src="/poems/2016-august/image-4.png" alt="" />
-  </div>
+      <p>
+        Why bother with this senseless task <br />
+        Was the general modern view; <br />
+        Mass production brought lack of taste <br />
+        Greatly missed by quite a few.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      But as modern ideas filtered in
-      Fruit is bought now when you shop;
-      Always available all year through
-      So berry picking came to a stop.
-    </p>
+      <p>
+        I think that this is very sad <br />
+        That children now may never know; <br />
+        The special taste of home grown fruit <br />
+        And the chance to see it grow.
+      </p>
+    </div>
 
-    <p>
-      Why bother with this senseless task
-      Was the general modern view;
-      Mass production brought lack of taste
-      Greatly missed by quite a few.
-    </p>
-
-    <p>
-      I think that this is very sad
-      That children now may never know;
-      The special taste of home grown fruit
-      And the chance to see it grow.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2016-august/image-5.png" alt="" />
-    <img src="/poems/2016-august/image-7.png" alt="" />
-    <img src="/poems/2016-august/image-9.png" alt="" />
-    <img src="/poems/2016-august/image-11.png" alt="" />
-    <img src="/poems/2016-august/image-13.png" alt="" />
-    <img src="/poems/2016-august/image-15.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2016-august/image-10.png" alt="" />
+      <img src="/poems/2016-august/image-12.png" alt="" />
+      <img src="/poems/2016-august/image-11.png" alt="" />
+      <img src="/poems/2016-august/image-15.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+
+<style webc:scoped>
+  :where(poem-grid) {
+    --border-theme: green;
+  }
+</style>

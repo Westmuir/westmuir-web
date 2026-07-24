@@ -25,23 +25,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      It’s the little things that bring joy,
-      As we journey on through life;
-      Which are often over shadowed by,
+      It’s the little things that bring joy, <br />
+      As we journey on through life; <br />
+      Which are often over shadowed by, <br />
       Years of discontent and strife.
     </p>
 
     <p>
-      We struggle on wanting more and more,
-      Hate and envy rear their head;
-      What could have been a cheerful World,
+      We struggle on wanting more and more, <br />
+      Hate and envy rear their head; <br />
+      What could have been a cheerful World, <br />
       Is full of wars and crime instead.
     </p>
 
     <p>
-      Now! Where do we go from here?
-      We must all stop and think;
-      How can we salvage our lovely home,
+      Now! Where do we go from here? <br />
+      We must all stop and think; <br />
+      How can we salvage our lovely home, <br />
       And pull it from the brink.
     </p>
   </div>
@@ -56,16 +56,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Start by being contented,
-      And happy with your lot;
-      A Heavenly hand will guide you,
+      Start by being contented, <br />
+      And happy with your lot; <br />
+      A Heavenly hand will guide you, <br />
       To improve on what you’ve got.
     </p>
 
     <p>
-      Many hands make light work,
-      If we all do the best we can;
-      We will have a home again,
+      Many hands make light work, <br />
+      If we all do the best we can; <br />
+      We will have a home again, <br />
       That’s fit for our fellow man.
     </p>
   </div>

@@ -27,23 +27,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      May is the month of blossom,
-      Flowers are blooming everywhere;
-      Urging us to get outdoors,
+      May is the month of blossom, <br />
+      Flowers are blooming everywhere; <br />
+      Urging us to get outdoors, <br />
       As their perfume fills the air.
     </p>
 
     <p>
-      To tidy the winter garden,
-      You get out spade, graip and hoe;
-      And find a surge of energy,
+      To tidy the winter garden, <br />
+      You get out spade, graip and hoe; <br />
+      And find a surge of energy, <br />
       With new strength to have a go.
     </p>
 
     <p>
-      There is healing in a garden,
-      For as you till the soil;
-      You feel the pull of nature,
+      There is healing in a garden, <br />
+      For as you till the soil; <br />
+      You feel the pull of nature, <br />
       And touch the hand of God.
     </p>
   </div>
@@ -58,23 +58,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      As you sow weed reap and hoe,
-      Your pain and troubles cease;
-      You blend in with the Universe,
+      As you sow weed reap and hoe, <br />
+      Your pain and troubles cease; <br />
+      You blend in with the Universe, <br />
       And find an inner peace.
     </p>
 
     <p>
-      Like an ever-beating heart,
-      That surges through your veins;
-      Taking away impurities,
+      Like an ever-beating heart, <br />
+      That surges through your veins; <br />
+      Taking away impurities, <br />
       ‘til only the good remains.
     </p>
 
     <p>
-      The here and now just fade away,
-      Forgotten as you toil;
-      Caught up in an ageless time,
+      The here and now just fade away, <br />
+      Forgotten as you toil; <br />
+      Caught up in an ageless time, <br />
       To find healing in the soil.
     </p>
   </div>

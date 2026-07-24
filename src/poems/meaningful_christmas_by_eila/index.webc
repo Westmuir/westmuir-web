@@ -21,37 +21,37 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Meaningful Christmas	Meaningful Christmas	Meaningful Christmas	Meaningful Christmas
-      The old year’s ending and thoughts return
-      to the Christmas we knew long ago
+      Meaningful Christmas	Meaningful Christmas	Meaningful Christmas	Meaningful Christmas <br />
+      The old year’s ending and thoughts return <br />
+      to the Christmas we knew long ago <br />
       Before commercial bodies took hold
     </p>
 
     <p>
-      With lavish gifts and tinsel show.
-      *****
-      Christmas held some meaning then
+      With lavish gifts and tinsel show. <br />
+      ***** <br />
+      Christmas held some meaning then <br />
       Singing Carols, hearts warmed by praise
     </p>
 
     <p>
-      Christmas greetings are no longer used
-      recently changed to Happy Holidays.
-      *****
+      Christmas greetings are no longer used <br />
+      recently changed to Happy Holidays. <br />
+      ***** <br />
       From late September in all the Stores
     </p>
 
     <p>
-      Christmas gifts glitter to catch the eye
-      As youngsters see the gadgets galore
-      that they want their kinfolk to buy.
+      Christmas gifts glitter to catch the eye <br />
+      As youngsters see the gadgets galore <br />
+      that they want their kinfolk to buy. <br />
       *****
     </p>
 
     <p>
-      It is like a competition for parents
-      All wanting the most expensive gift
-      The old year’s ending and thoughts return
+      It is like a competition for parents <br />
+      All wanting the most expensive gift <br />
+      The old year’s ending and thoughts return <br />
       Stretching and spending beyond means
     </p>
   </div>
@@ -64,30 +64,30 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Never giving a real thought to thrift
-      *****
-      Things then begin spinning out of control
+      Never giving a real thought to thrift <br />
+      ***** <br />
+      Things then begin spinning out of control <br />
       New Year brings a real mess of debt
     </p>
 
     <p>
-      Trying to impress in this modern world
-      Can land you with lots of regret
-      *****
+      Trying to impress in this modern world <br />
+      Can land you with lots of regret <br />
+      ***** <br />
       What is wrong with a simple meal
     </p>
 
     <p>
-      A small gift picked from the tree
-      When generations joined in party games
-      the joy there, was plain to see
+      A small gift picked from the tree <br />
+      When generations joined in party games <br />
+      the joy there, was plain to see <br />
       *****
     </p>
 
     <p>
-      You can’t delete the Real Christmas
-      Nor the bright shining star in the sky
-      GOD keeps on sending us precious gifts
+      You can’t delete the Real Christmas <br />
+      Nor the bright shining star in the sky <br />
+      GOD keeps on sending us precious gifts <br />
       the ones that no money can buy.
     </p>
   </div>

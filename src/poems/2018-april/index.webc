@@ -24,23 +24,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Carry the torch with head held high,
-      The flame grows brighter as the miles go by;
-      Through the longest day and darkest night,
+      Carry the torch with head held high, <br />
+      The flame grows brighter as the miles go by; <br />
+      Through the longest day and darkest night, <br />
       The torch you hold will give you light.
     </p>
 
     <p>
-      To show you clearly what lies ahead,
-      On the path of life you daily tread;
-      Our role in life is to help each other ,
+      To show you clearly what lies ahead, <br />
+      On the path of life you daily tread; <br />
+      Our role in life is to help each other , <br />
       A father mother, sister or brother.
     </p>
 
     <p>
-      But if anyone keeps pushing kind aid aside,
-      Just let it flow off on the morning tide;
-      And carry on leaving those fetters behind,
+      But if anyone keeps pushing kind aid aside, <br />
+      Just let it flow off on the morning tide; <br />
+      And carry on leaving those fetters behind, <br />
       Gaining courage strength and peace of mind.
     </p>
   </div>
@@ -55,16 +55,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Still remember when running your life through,
-      All the new friends made from help by you;
-      So carry on running with patience and grace,
+      Still remember when running your life through, <br />
+      All the new friends made from help by you; <br />
+      So carry on running with patience and grace, <br />
       Showing how you can make Earth a better place.
     </p>
 
     <p>
-      The seeds have been sown you have passed the test,
-      And someday you will be truly blessed;
-      When the race is won and the torch is laid down,
+      The seeds have been sown you have passed the test, <br />
+      And someday you will be truly blessed; <br />
+      When the race is won and the torch is laid down, <br />
       You will get the honour of wearing a crown.
     </p>
   </div>

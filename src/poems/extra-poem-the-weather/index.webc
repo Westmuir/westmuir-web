@@ -21,51 +21,51 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      What has happened to the Summer
-      In this year of Twenty Fifteen;
-      Leaving a trail of mass destruction
+      What has happened to the Summer <br />
+      In this year of Twenty Fifteen; <br />
+      Leaving a trail of mass destruction <br />
       maybe the worst you’ve ever seen.
     </p>
 
     <p>
-      July was windy, cold and wet
-      kept raining like cats and dogs;
-      The land soon became raging rivers
+      July was windy, cold and wet <br />
+      kept raining like cats and dogs; <br />
+      The land soon became raging rivers <br />
       even managed to drown the frogs.
     </p>
 
     <p>
-      They couldn’t swim against the floods
-      no dry land to hop upon;
-      Still struggling they got swept away
+      They couldn’t swim against the floods <br />
+      no dry land to hop upon; <br />
+      Still struggling they got swept away <br />
       and in a moment they were gone.
     </p>
 
     <p>
-      At first flowers slowly hung their heads
-      their petals broken as they were tossed
-      in the strong winds and bitter nights
+      At first flowers slowly hung their heads <br />
+      their petals broken as they were tossed <br />
+      in the strong winds and bitter nights <br />
       they just finally gave up the ghost.
     </p>
 
     <p>
-      Berries turned rotten on the bushes
-      lacking sunshine and always wet;
-      Root crops in the garden failed to grow
+      Berries turned rotten on the bushes <br />
+      lacking sunshine and always wet; <br />
+      Root crops in the garden failed to grow <br />
       The Weather	The Weather	The Weather	The Weather
     </p>
 
     <p>
-      They couldn’t swim against the floods
-      At first flowers slowly hung their heads
-      petals broken as they were tossed;
+      They couldn’t swim against the floods <br />
+      At first flowers slowly hung their heads <br />
+      petals broken as they were tossed; <br />
       Root crops in the garden failed to grow
     </p>
 
     <p>
-      and peas and beans refused to s
-      Greenhouse tomatoes were slow to ripen
-      grain was all flattened to the ground
+      and peas and beans refused to s <br />
+      Greenhouse tomatoes were slow to ripen <br />
+      grain was all flattened to the ground <br />
       Pleasure in the local summer breaks
     </p>
   </div>
@@ -78,51 +78,51 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      was pretty difficult to be found
-      We’re into the month of August now
-      but the forecast is ‘more of the same’
+      was pretty difficult to be found <br />
+      We’re into the month of August now <br />
+      but the forecast is ‘more of the same’ <br />
       Folk are fed up with the
     </p>
 
     <p>
-      which I feel is quite a shame
-      It’s known as a lush green fertile land
-      and the weeds have proved the point
+      which I feel is quite a shame <br />
+      It’s known as a lush green fertile land <br />
+      and the weeds have proved the point <br />
       growing in every available space
     </p>
 
     <p>
-      strong and healthy
-      But this doesn’t happen every year
-      many hearts it still begui
+      strong and healthy <br />
+      But this doesn’t happen every year <br />
+      many hearts it still begui <br />
       For visiting tourists tend to return
     </p>
 
     <p>
-      to our homeland, The British Isles
-      The Weather	The Weather	The Weather	The Weather –	–	–	– Summer 2015	Summer 2015	Summer 2015	Summer 2015
-      and peas and beans refused to set.
+      to our homeland, The British Isles <br />
+      The Weather	The Weather	The Weather	The Weather –	–	–	– Summer 2015	Summer 2015	Summer 2015	Summer 2015 <br />
+      and peas and beans refused to set. <br />
       Greenhouse tomatoes were slow to ripen
     </p>
 
     <p>
-      grain was all flattened to the ground;
-      Pleasure in the local summer breaks
-      was pretty difficult to be found.
+      grain was all flattened to the ground; <br />
+      Pleasure in the local summer breaks <br />
+      was pretty difficult to be found. <br />
       We’re into the month of August now
     </p>
 
     <p>
-      but the forecast is ‘more of the same’;
-      Folk are fed up with the British weather
-      which I feel is quite a shame.
+      but the forecast is ‘more of the same’; <br />
+      Folk are fed up with the British weather <br />
+      which I feel is quite a shame. <br />
       It’s known as a lush green fertile land
     </p>
 
     <p>
-      and the weeds have proved the point,
-      growing in every available space
-      strong and healthy - a large amount.
+      and the weeds have proved the point, <br />
+      growing in every available space <br />
+      strong and healthy - a large amount. <br />
       But this doesn’t happen every year
     </p>
   </div>

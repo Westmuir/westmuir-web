@@ -22,30 +22,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      June is the month of Roses,
-      Blooming freely everywhere;
-      Filling hearts this joyful season,
+      June is the month of Roses, <br />
+      Blooming freely everywhere; <br />
+      Filling hearts this joyful season, <br />
       When love is in the air.
     </p>
 
     <p>
-      As we leave the winter behind,
-      For warm and dry days in the sun;
-      You find the benefit is remarkable,
+      As we leave the winter behind, <br />
+      For warm and dry days in the sun; <br />
+      You find the benefit is remarkable, <br />
       It is pure joy for everyone.
     </p>
 
     <p>
-      Suddenly your energy is restored,
-      And ready to tackle anything;
-      Eager now to do your best,
+      Suddenly your energy is restored, <br />
+      And ready to tackle anything; <br />
+      Eager now to do your best, <br />
       Whatever the day may bring.
     </p>
 
     <p>
-      You are sure to find a niche in life,
-      In which you can excel;
-      Keep on trying different things,
+      You are sure to find a niche in life, <br />
+      In which you can excel; <br />
+      Keep on trying different things, <br />
       Till you find what you do well.
     </p>
   </div>
@@ -60,23 +60,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Maybe you’ll never become a star,
-      With letters attached to your name;
-      But in real life you are a Doer,
+      Maybe you’ll never become a star, <br />
+      With letters attached to your name; <br />
+      But in real life you are a Doer, <br />
       And so worthy of a claim.
     </p>
 
     <p>
-      You carry on year after year,
-      Working happily with your lot;
-      You are loved and respected,
+      You carry on year after year, <br />
+      Working happily with your lot; <br />
+      You are loved and respected, <br />
       So you will never be forgot.
     </p>
 
     <p>
-      Much better than letters top of a page,
-      That can forgotten lie;
-      You’ll keep on blooming like the Rose,
+      Much better than letters top of a page, <br />
+      That can forgotten lie; <br />
+      You’ll keep on blooming like the Rose, <br />
       For your roots will never die.
     </p>
   </div>

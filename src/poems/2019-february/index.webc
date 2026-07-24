@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      February brings a subtle change,
-      From January’s dark, wet, windy days;
-      Bringing a strong surge of growth,
+      February brings a subtle change, <br />
+      From January’s dark, wet, windy days; <br />
+      Bringing a strong surge of growth, <br />
       In a lot of different ways.
     </p>
 
     <p>
-      Seeds are now sprouting strongly,
-      Tiny flowers are in bloom;
-      Winter sun is stronger now,
+      Seeds are now sprouting strongly, <br />
+      Tiny flowers are in bloom; <br />
+      Winter sun is stronger now, <br />
       And can chase away the gloom.
     </p>
 
     <p>
-      But winter isn’t over yet,
-      We could still get ice and snow;
-      Just dress warm on sunny days,
+      But winter isn’t over yet, <br />
+      We could still get ice and snow; <br />
+      Just dress warm on sunny days, <br />
       Go out – let the cobwebs blow.
     </p>
   </div>
@@ -53,23 +53,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Spring is just around the corner,
-      There’s no need to hibernate;
-      A brisk walk on a bright day,
+      Spring is just around the corner, <br />
+      There’s no need to hibernate; <br />
+      A brisk walk on a bright day, <br />
       Will leave you feeling great.
     </p>
 
     <p>
-      February is the shortest month,
-      Make the most of every minute;
-      It will be so worthwhile,
+      February is the shortest month, <br />
+      Make the most of every minute; <br />
+      It will be so worthwhile, <br />
       If you put your whole heart in it.
     </p>
 
     <p>
-      Don’t strive for fame and fortune though,
-      Happiness is the key;
-      It is God’s choice from Heaven,
+      Don’t strive for fame and fortune though, <br />
+      Happiness is the key; <br />
+      It is God’s choice from Heaven, <br />
       Sent down for you and me.
     </p>
   </div>

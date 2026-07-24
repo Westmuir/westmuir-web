@@ -25,30 +25,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Now that we are into June
-      The year is almost half way through;
-      Thinking back to resolutions made
+      Now that we are into June <br />
+      The year is almost half way through; <br />
+      Thinking back to resolutions made <br />
       Have you all learned something new?
     </p>
 
     <p>
-      Thoughts are now fixed on holidays
-      All the excitement out there to find;
-      But when the short break is over
+      Thoughts are now fixed on holidays <br />
+      All the excitement out there to find; <br />
+      But when the short break is over <br />
       It’s just back to the daily grind.
     </p>
 
     <p>
-      To earn a wage may be necessary
-      But what is important too;
-      Is to find out that special talent
+      To earn a wage may be necessary <br />
+      But what is important too; <br />
+      Is to find out that special talent <br />
       You can cultivate all life through.
     </p>
 
     <p>
-      People were meant to be happy
-      Enjoying a full interesting life;
-      Proud of all their attainments
+      People were meant to be happy <br />
+      Enjoying a full interesting life; <br />
+      Proud of all their attainments <br />
       Not bogged down with care and strife.
     </p>
   </div>
@@ -63,23 +63,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      But if you have no real incentive
-      Holding new interests to fill your days;
-      Keeping your grey cells active
+      But if you have no real incentive <br />
+      Holding new interests to fill your days; <br />
+      Keeping your grey cells active <br />
       In a great many different ways.
     </p>
 
     <p>
-      As you settle down into a rut
-      You would soon fail to realise;
-      How fast the years are passing
+      As you settle down into a rut <br />
+      You would soon fail to realise; <br />
+      How fast the years are passing <br />
       ‘til a slow bent frame catches your eyes.
     </p>
 
     <p>
-      Fulfil all your ambitions now
-      You’ll succeed if you really try;
-      You have lost the first five months
+      Fulfil all your ambitions now <br />
+      You’ll succeed if you really try; <br />
+      You have lost the first five months <br />
       Don’t let the whole year pass you by.
     </p>
   </div>

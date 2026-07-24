@@ -24,37 +24,37 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      July to me was berry time
-      When we got oor school summer holidays;
-      School uniforms were hung up
+      July to me was berry time <br />
+      When we got oor school summer holidays; <br />
+      School uniforms were hung up <br />
       And we put on oor auldest claes.
     </p>
 
     <p>
-      And set aff to the berry picking
-      In the fruit farms for a wage;
-      It made us feel so grown up
+      And set aff to the berry picking <br />
+      In the fruit farms for a wage; <br />
+      It made us feel so grown up <br />
       Even at that young tender age.
     </p>
 
     <p>
-      There was lots of fruit to choose from
-      But we liked the raspberries best;
-      For strawberries you had to bend doon
+      There was lots of fruit to choose from <br />
+      But we liked the raspberries best; <br />
+      For strawberries you had to bend doon <br />
       And gooseberry thorns were a pest.
     </p>
 
     <p>
-      Red and blackcurrants took an age
-      To get oor wee punnets to fill;
-      And they felt sour, untempting to eat
+      Red and blackcurrants took an age <br />
+      To get oor wee punnets to fill; <br />
+      And they felt sour, untempting to eat <br />
       And fair mair likely for us to spill.
     </p>
 
     <p>
-      But we thought picking rasps was fun
-      As we chattered with pals through the day;
-      And for every pound we got weighed
+      But we thought picking rasps was fun <br />
+      As we chattered with pals through the day; <br />
+      And for every pound we got weighed <br />
       put a halfpenny on to oor pay.
     </p>
   </div>
@@ -69,30 +69,30 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Long before decimal currency came
-      we had twelve pennies in a shilling;
-      but you could still make a few ba-bees
+      Long before decimal currency came <br />
+      we had twelve pennies in a shilling; <br />
+      but you could still make a few ba-bees <br />
       if you were really willing.
     </p>
 
     <p>
-      I could manage in my hey days
-      To pick 120 pounds in a long day;
-      At the height of the raspberry season
+      I could manage in my hey days <br />
+      To pick 120 pounds in a long day; <br />
+      At the height of the raspberry season <br />
       And that put five shillings on my pay.
     </p>
 
     <p>
-      I’m glad I lived back in the past
-      I’ve got so many happy memories;
-      The berry fields are now long gone
+      I’m glad I lived back in the past <br />
+      I’ve got so many happy memories; <br />
+      The berry fields are now long gone <br />
       Life has changed in so many ways.
     </p>
 
     <p>
-      I’ve tasted the old days and the new
-      And both have warmed my heart;
-      But to me July is still berry time
+      I’ve tasted the old days and the new <br />
+      And both have warmed my heart; <br />
+      But to me July is still berry time <br />
       As it has been right from the start.
     </p>
   </div>

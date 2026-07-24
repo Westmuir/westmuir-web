@@ -22,30 +22,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      June is a romantic month
-      Filled with the sight and scent of roses,
-      When males splash out on a bunch
+      June is a romantic month <br />
+      Filled with the sight and scent of roses, <br />
+      When males splash out on a bunch <br />
       then on bended knee proposes.
     </p>
 
     <p>
-      Weddings too take centre stage
-      As the sun shines on bride and groom;
-      A perfect time for holidays
+      Weddings too take centre stage <br />
+      As the sun shines on bride and groom; <br />
+      A perfect time for holidays <br />
       Or to have a honeymoon.
     </p>
 
     <p>
-      Yet we should not forget the rain
-      that sneaks in to wreck what is planned;
-      But without its presence in our lives
+      Yet we should not forget the rain <br />
+      that sneaks in to wreck what is planned; <br />
+      But without its presence in our lives <br />
       We wouldn’t have a lush green fertile land.
     </p>
 
     <p>
-      The envy of all our neighbours
-      In their dry baked summers o’er the sea;
-      As we sit outside in a dappled shade
+      The envy of all our neighbours <br />
+      In their dry baked summers o’er the sea; <br />
+      As we sit outside in a dappled shade <br />
       of some large bushes or a tree.
     </p>
   </div>
@@ -60,23 +60,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      ***
-      If you choose to go and chase the sun
-      And leave all this beauty behind;
+      *** <br />
+      If you choose to go and chase the sun <br />
+      And leave all this beauty behind; <br />
       Things may not live up to expectations
     </p>
 
     <p>
-      There could be many snags to find.
-      You’ll soon tire of all this constant heat
-      Dry colourless deserts and burning sand;
+      There could be many snags to find. <br />
+      You’ll soon tire of all this constant heat <br />
+      Dry colourless deserts and burning sand; <br />
       You’ll be glad to be back amongst the roses
     </p>
 
     <p>
-      In June’s fragrant dew spangled land.
-      Coming in the middle of the year
-      June really does hold the key;
+      In June’s fragrant dew spangled land. <br />
+      Coming in the middle of the year <br />
+      June really does hold the key; <br />
       When you are looking for perfection
     </p>
   </div>

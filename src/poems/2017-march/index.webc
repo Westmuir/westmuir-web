@@ -25,30 +25,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      December was fresh and open,
-      And January was quite mild;
-      Mostly dry and sunny days,
+      December was fresh and open, <br />
+      And January was quite mild; <br />
+      Mostly dry and sunny days, <br />
       Although gale force winds were wild.
     </p>
 
     <p>
-      Our seasons are all changing,
-      Some days it feels like spring;
-      The sunshine is now warming up,
+      Our seasons are all changing, <br />
+      Some days it feels like spring; <br />
+      The sunshine is now warming up, <br />
       And the birds are on the wing.
     </p>
 
     <p>
-      To be outdoors is tempting,
-      Yes! optimists may be forgiven;
-      For thinking winter is at an end,
+      To be outdoors is tempting, <br />
+      Yes! optimists may be forgiven; <br />
+      For thinking winter is at an end, <br />
       Cast your mind back to 1947.
     </p>
 
     <p>
-      After a mild start in January,
-      Came blocked roads for weeks on end;
-      Snow seemingly piled up to the sky,
+      After a mild start in January, <br />
+      Came blocked roads for weeks on end; <br />
+      Snow seemingly piled up to the sky, <br />
       It nearly drove folk round the bend!
     </p>
   </div>
@@ -63,23 +63,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      ‘This won’t happen now’ the experts say,
-      New equipment will keep roads clear;
-      But no human hand is able to,
+      ‘This won’t happen now’ the experts say, <br />
+      New equipment will keep roads clear; <br />
+      But no human hand is able to, <br />
       When storms unexpectedly appear.
     </p>
 
     <p>
-      A higher power is in control,
-      And we must accept what comes;
-      And like the birds be grateful,
+      A higher power is in control, <br />
+      And we must accept what comes; <br />
+      And like the birds be grateful, <br />
       For the day’s we’re given crumbs.
     </p>
 
     <p>
-      Check the months on the calendar,
-      Spring will come in its own time;
-      All the sweeter for the waiting,
+      Check the months on the calendar, <br />
+      Spring will come in its own time; <br />
+      All the sweeter for the waiting, <br />
       And bringing an end to this rhyme.
     </p>
   </div>

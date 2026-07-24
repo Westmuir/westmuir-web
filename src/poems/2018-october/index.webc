@@ -26,23 +26,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Farming is so healthy and rewarding,
-      For as the soil you till;
-      You are living close to nature,
+      Farming is so healthy and rewarding, <br />
+      For as the soil you till; <br />
+      You are living close to nature, <br />
       As you perform our Saviour’s will.
     </p>
 
     <p>
-      We’ve been put upon this planet,
-      To cultivate the land;
-      Sowing, tending, harvesting,
+      We’ve been put upon this planet, <br />
+      To cultivate the land; <br />
+      Sowing, tending, harvesting, <br />
       Guided by our Maker’s hand.
     </p>
 
     <p>
-      He who guides the growing force,
-      The sunshine and the rain;
-      Filling streams with water,
+      He who guides the growing force, <br />
+      The sunshine and the rain; <br />
+      Filling streams with water, <br />
       And swelling ears of grain.
     </p>
   </div>
@@ -57,23 +57,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Ripening fruit and vegetables,
-      Grown for us all to eat;
-      The grass for sheep and cattle,
+      Ripening fruit and vegetables, <br />
+      Grown for us all to eat; <br />
+      The grass for sheep and cattle, <br />
       A source of milk and meat.
     </p>
 
     <p>
-      Wool for coats and blankets,
-      To keep out the winter chill;
-      If we work with our Provider,
+      Wool for coats and blankets, <br />
+      To keep out the winter chill; <br />
+      If we work with our Provider, <br />
       He will all our needs fulfil.
     </p>
 
     <p>
-      Yes! Farming families down the years,
-      Have been our Earth’s mainstay;
-      So we thank our Lord for the Harvest,
+      Yes! Farming families down the years, <br />
+      Have been our Earth’s mainstay; <br />
+      So we thank our Lord for the Harvest, <br />
       In our heartfelt prayers today.
     </p>
   </div>

@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      The year is coming to an end,
-      And whether it be good or ill;
-      Leave the past behind pick up the reins,
+      The year is coming to an end, <br />
+      And whether it be good or ill; <br />
+      Leave the past behind pick up the reins, <br />
       And plough a fresh new drill.
     </p>
 
     <p>
-      For a New Year is the perfect time,
-      As the slate has been wiped clean;
-      So square your shoulders and march on,
+      For a New Year is the perfect time, <br />
+      As the slate has been wiped clean; <br />
+      So square your shoulders and march on, <br />
       Leave behind what might have been.
     </p>
 
     <p>
-      You don’t know yet what lies in store,
-      Or to where your footsteps may lead;
-      Open your eyes to the possibilities,
+      You don’t know yet what lies in store, <br />
+      Or to where your footsteps may lead; <br />
+      Open your eyes to the possibilities, <br />
       And you could be surprised indeed.
     </p>
   </div>
@@ -53,16 +53,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Life’s journey is how you take it,
-      When a storm comes out of the blue;
-      Do you calmly put an umbrella up,
+      Life’s journey is how you take it, <br />
+      When a storm comes out of the blue; <br />
+      Do you calmly put an umbrella up, <br />
       Or curse fate till you’re soaked through.
     </p>
 
     <p>
-      Yes, there are two sides to everything,
-      Waiting right there for you to find;
-      For it all depends on how you respond,
+      Yes, there are two sides to everything, <br />
+      Waiting right there for you to find; <br />
+      For it all depends on how you respond, <br />
       To Life’s journey where your footsteps wind.
     </p>
   </div>

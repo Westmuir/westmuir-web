@@ -22,37 +22,37 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      March weather is unpredictable
-      It holds winter by the tail;
-      Though daylight hours are longer
+      March weather is unpredictable <br />
+      It holds winter by the tail; <br />
+      Though daylight hours are longer <br />
       It can bring sleet, snow and hail.
     </p>
 
     <p>
-      There’s little heat in sunshine
-      As you shiver in the blast;
-      All too soon it disappears
+      There’s little heat in sunshine <br />
+      As you shiver in the blast; <br />
+      All too soon it disappears <br />
       And the sky gets overcast.
     </p>
 
     <p>
-      You long to dig the garden
-      Which is still a sea of mud;
-      A night frost suddenly arrives
+      You long to dig the garden <br />
+      Which is still a sea of mud; <br />
+      A night frost suddenly arrives <br />
       To nip that in the bud.
     </p>
 
     <p>
-      Farmers look for a dry spell
-      To get cropping on the way;
-      Next day there comes a gale
+      Farmers look for a dry spell <br />
+      To get cropping on the way; <br />
+      Next day there comes a gale <br />
       That blows the seeds away.
     </p>
 
     <p>
-      Are you glad when March ends
-      But it still leaves its sting;
-      Borrowing three days from April ***
+      Are you glad when March ends <br />
+      But it still leaves its sting; <br />
+      Borrowing three days from April *** <br />
       That must pass e’er we get to Spring.
     </p>
   </div>
@@ -67,30 +67,30 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      There’s some truth in old legends
-      That still stand from bygone days;
-      Forecasts were made too back then
+      There’s some truth in old legends <br />
+      That still stand from bygone days; <br />
+      Forecasts were made too back then <br />
       Only looked for in different ways.
     </p>
 
     <p>
-      Depending on signs and sayings
-      Not like all this modern gear;
-      So it was studied tirelessly
+      Depending on signs and sayings <br />
+      Not like all this modern gear; <br />
+      So it was studied tirelessly <br />
       To make their forecast clear.
     </p>
 
     <p>
-      Sometimes put into a rhyme
-      That would stay in the memory;
-      And has proved quite reliable
+      Sometimes put into a rhyme <br />
+      That would stay in the memory; <br />
+      And has proved quite reliable <br />
       Even up to the present day.
     </p>
 
     <p>
-      I cannot forecast the weather
-      NO! I wouldn’t even try;
-      I check it daily in the press
+      I cannot forecast the weather <br />
+      NO! I wouldn’t even try; <br />
+      I check it daily in the press <br />
       And with old Rhymes I get by.
     </p>
   </div>

@@ -21,30 +21,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      February is the birthday month
-      Though the earth is cold and bare
-      Lying underneath the snow and Ice
+      February is the birthday month <br />
+      Though the earth is cold and bare <br />
+      Lying underneath the snow and Ice <br />
       New growth is now stirring there.
     </p>
 
     <p>
-      Far down below and still unseen
-      Under the winter’s ice and snow
-      There comes a large surge of rebirth
+      Far down below and still unseen <br />
+      Under the winter’s ice and snow <br />
+      There comes a large surge of rebirth <br />
       When bulbs and seeds begin to grow.
     </p>
 
     <p>
-      It affects all of us here as well
-      You can feel its power in your heart
-      You find new energy and joy returns
+      It affects all of us here as well <br />
+      You can feel its power in your heart <br />
+      You find new energy and joy returns <br />
       As the dark and dreary days depart.
     </p>
 
     <p>
-      For the sun is getting stronger now
-      Snowdrops pop up through the snow
-      The signs of new life are beckoning
+      For the sun is getting stronger now <br />
+      Snowdrops pop up through the snow <br />
+      The signs of new life are beckoning <br />
       You’ll find this wherever you go.
     </p>
   </div>
@@ -59,23 +59,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Birds are singing now in the trees
-      Gardens are showing a hint of green
-      Nature is busy painting pictures
+      Birds are singing now in the trees <br />
+      Gardens are showing a hint of green <br />
+      Nature is busy painting pictures <br />
       That are so tranquil and serene.
     </p>
 
     <p>
-      February is the shortest month
-      Yet it is the one that holds the key
-      That wakens up a whole new world
+      February is the shortest month <br />
+      Yet it is the one that holds the key <br />
+      That wakens up a whole new world <br />
       To folk just like you and me.
     </p>
 
     <p>
-      Yes! February has a special role
-      For a month not just for a day
-      It keeps on bringing us new life
+      Yes! February has a special role <br />
+      For a month not just for a day <br />
+      It keeps on bringing us new life <br />
       A yearly lasting Real Birthday.
     </p>
   </div>

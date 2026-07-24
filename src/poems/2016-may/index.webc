@@ -24,30 +24,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      I think of May as blossom time
-      Trees all decked in pink and white;
-      In Parks and lining pathways
+      I think of May as blossom time <br />
+      Trees all decked in pink and white; <br />
+      In Parks and lining pathways <br />
       They create a breath-taking sight.
     </p>
 
     <p>
-      Bringing thought of first love
-      Fragile, wonderful and new;
-      It didn’t matter how it ended
+      Bringing thought of first love <br />
+      Fragile, wonderful and new; <br />
+      It didn’t matter how it ended <br />
       The memories live on all life through.
     </p>
 
     <p>
-      There is no emotion greater
-      Even though it ends in tears;
-      It is something you don’t feel again
+      There is no emotion greater <br />
+      Even though it ends in tears; <br />
+      It is something you don’t feel again <br />
       Through all your adult years.
     </p>
 
     <p>
-      Love in later years is different
-      May brings a bright new start;
-      Now is the time to take control
+      Love in later years is different <br />
+      May brings a bright new start; <br />
+      Now is the time to take control <br />
       Yes! We can all take part.
     </p>
   </div>
@@ -62,23 +62,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      It doesn’t matter about age
-      Or all the silver in your hair;
-      May gives that vital spark
+      It doesn’t matter about age <br />
+      Or all the silver in your hair; <br />
+      May gives that vital spark <br />
       To all hearts beating there.
     </p>
 
     <p>
-      Women would wash their faces
-      In dew on the 1st of May;
-      T’was said to make them beautiful
+      Women would wash their faces <br />
+      In dew on the 1st of May; <br />
+      T’was said to make them beautiful <br />
       A ritual unknown today.
     </p>
 
     <p>
-      Studying the months is fascinating
-      Each one has a tale to tell;
-      Pulling you closer to nature
+      Studying the months is fascinating <br />
+      Each one has a tale to tell; <br />
+      Pulling you closer to nature <br />
       To find they all serve you well.
     </p>
   </div>

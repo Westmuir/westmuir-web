@@ -26,30 +26,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      When asked what is my favourite month
-      You will hear me say September;
-      It is the month I always chose
+      When asked what is my favourite month <br />
+      You will hear me say September; <br />
+      It is the month I always chose <br />
       Back as far as I remember.
     </p>
 
     <p>
-      Like an oasis in the desert
-      Through a long and busy life style;
-      ‘twas a welcome chance to escape
+      Like an oasis in the desert <br />
+      Through a long and busy life style; <br />
+      ‘twas a welcome chance to escape <br />
       from work and struggles for a while.
     </p>
 
     <p>
-      It’s really the perfect time you see
-      In so many different ways;
-      not having the strong heat of summer
+      It’s really the perfect time you see <br />
+      In so many different ways; <br />
+      not having the strong heat of summer <br />
       More the warm and mellow days.
     </p>
 
     <p>
-      Tree leaves begin to change colour
-      In the garden growth slows down;
-      Country life seems more relaxed
+      Tree leaves begin to change colour <br />
+      In the garden growth slows down; <br />
+      Country life seems more relaxed <br />
       than what you’ll find in the town.
     </p>
   </div>
@@ -64,30 +64,30 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      As a dedicated tender of the soil
-      I need my rest and to have fun;
-      September gives that welcome break
+      As a dedicated tender of the soil <br />
+      I need my rest and to have fun; <br />
+      September gives that welcome break <br />
       before more work needs to be done.
     </p>
 
     <p>
-      Earlier crops are all gathered in
-      there is a pause now taking place;
-      Late potato crops are still growing
+      Earlier crops are all gathered in <br />
+      there is a pause now taking place; <br />
+      Late potato crops are still growing <br />
       giving more leisure hours of grace.
     </p>
 
     <p>
-      To enjoy flowers blooming now
-      richer than the summer show;
-      Chrysanthemums and dahlias
+      To enjoy flowers blooming now <br />
+      richer than the summer show; <br />
+      Chrysanthemums and dahlias <br />
       in the softer sunlight seem to glow.
     </p>
 
     <p>
-      Soon this break will come to an end
-      But I am now ready for work you see;
-      Being cosseted by my favourite month
+      Soon this break will come to an end <br />
+      But I am now ready for work you see; <br />
+      Being cosseted by my favourite month <br />
       That still means so much to me.
     </p>
   </div>

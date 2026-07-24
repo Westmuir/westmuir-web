@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Tempting offers of wealth are increasing,
-      You can see this happening everywhere;
-      Just buy something and win cash,
+      Tempting offers of wealth are increasing, <br />
+      You can see this happening everywhere; <br />
+      Just buy something and win cash, <br />
       It could be a scam – so beware!
     </p>
 
     <p>
-      Although this is above board normally,
-      Just hoping this will increase the demands;
-      And you could still get a real bargain,
+      Although this is above board normally, <br />
+      Just hoping this will increase the demands; <br />
+      And you could still get a real bargain, <br />
       On wares that are left in their hands.
     </p>
 
     <p>
-      But when offers seem too good to be true,
-      Although tempting it could be just that;
-      Not many would give cash so freely’
+      But when offers seem too good to be true, <br />
+      Although tempting it could be just that; <br />
+      Not many would give cash so freely’ <br />
       You can’t take a mouse from a cat!
     </p>
   </div>
@@ -53,16 +53,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      But one money cheque will be paid out,
-      At the end to keep promises true;
-      But out from a million hopefuls there,
+      But one money cheque will be paid out, <br />
+      At the end to keep promises true; <br />
+      But out from a million hopefuls there, <br />
       It’s unlikely to be for me or for you.
     </p>
 
     <p>
-      Be prepared to work hard all your life,
-      For most things don’t work out as planned;
-      Remember the best things in life are free,
+      Be prepared to work hard all your life, <br />
+      For most things don’t work out as planned; <br />
+      Remember the best things in life are free, <br />
       And you are holding them now in your hand.
     </p>
   </div>

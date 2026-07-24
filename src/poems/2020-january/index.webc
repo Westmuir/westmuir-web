@@ -24,23 +24,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      As the old year slips away,
-      A new day takes its place;
-      A yearly gift from the Lord,
+      As the old year slips away, <br />
+      A new day takes its place; <br />
+      A yearly gift from the Lord, <br />
       Given to the Human Race.
     </p>
 
     <p>
-      We take it all for granted,
-      We don’t give it a thought;
-      Yet we should be so grateful,
+      We take it all for granted, <br />
+      We don’t give it a thought; <br />
+      Yet we should be so grateful, <br />
       And give thanks as we ought.
     </p>
 
     <p>
-      Without Divine help we are powerless,
-      So take the time to pray;
-      And give a humble Thank you,
+      Without Divine help we are powerless, <br />
+      So take the time to pray; <br />
+      And give a humble Thank you, <br />
       That’s all you need to say.
     </p>
   </div>
@@ -55,23 +55,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      You’ll enjoy the year ahead,
-      And all the blessings we are given;
-      Make the most of natural gifts,
+      You’ll enjoy the year ahead, <br />
+      And all the blessings we are given; <br />
+      Make the most of natural gifts, <br />
       Sent down with love from Heaven.
     </p>
 
     <p>
-      Why keep crying out for more’
-      A simple life is best;
-      Just have faith in your Maker,
+      Why keep crying out for more’ <br />
+      A simple life is best; <br />
+      Just have faith in your Maker, <br />
       And you will be truly blessed.
     </p>
 
     <p>
-      May the days that lie ahead,
-      Give wings to your feet;
-      Making this a special year,
+      May the days that lie ahead, <br />
+      Give wings to your feet; <br />
+      Making this a special year, <br />
       That is wonderfully sweet.
     </p>
   </div>

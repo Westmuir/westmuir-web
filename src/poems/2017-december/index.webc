@@ -26,23 +26,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      We’re in the last month of the year,
-      It’s time to get out the pen;
-      Cards are sent to family and friends,
+      We’re in the last month of the year, <br />
+      It’s time to get out the pen; <br />
+      Cards are sent to family and friends, <br />
       With Festive Wishes once again.
     </p>
 
     <p>
-      This job done you pat your back.
-      You’re free, your conscience clear;
-      Now it’s time to have some fun ,
+      This job done you pat your back. <br />
+      You’re free, your conscience clear; <br />
+      Now it’s time to have some fun , <br />
       And relax for another year.
     </p>
 
     <p>
-      Stop! and think of the other end ,
-      Someone who’d love a newsy letter;
-      A visit from you through the year,
+      Stop! and think of the other end , <br />
+      Someone who’d love a newsy letter; <br />
+      A visit from you through the year, <br />
       And a chat is even better.
     </p>
   </div>
@@ -57,16 +57,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Christmas is all about Love and Joy,
-      Freely given from a Baby Boy;
-      Who grew up and died that we could live,
+      Christmas is all about Love and Joy, <br />
+      Freely given from a Baby Boy; <br />
+      Who grew up and died that we could live, <br />
       Go patch up your quarrels and forgive.
     </p>
 
     <p>
-      This Christmas give thought to others too,
-      Show kindness ‘twill come back to you;
-      May this festive season bring you cheer,
+      This Christmas give thought to others too, <br />
+      Show kindness ‘twill come back to you; <br />
+      May this festive season bring you cheer, <br />
       With Good Health to all …from your Bard here.
     </p>
   </div>

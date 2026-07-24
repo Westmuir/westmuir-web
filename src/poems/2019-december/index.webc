@@ -24,23 +24,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Where have all the days gone,
-      The year is just slipping away;
-      And December is fast approaching,
+      Where have all the days gone, <br />
+      The year is just slipping away; <br />
+      And December is fast approaching, <br />
       Towards the thrills of Christmas Day.
     </p>
 
     <p>
-      Looking back do you sometimes wonder,
-      On how you used your time;
-      Did you always do your very best?
+      Looking back do you sometimes wonder, <br />
+      On how you used your time; <br />
+      Did you always do your very best? <br />
       I just wrote mine in a rhyme.
     </p>
 
     <p>
-      Now the years are catching up on me,
-      It’s difficult to keep up the pace;
-      But I am doing a web verse,
+      Now the years are catching up on me, <br />
+      It’s difficult to keep up the pace; <br />
+      But I am doing a web verse, <br />
       For Decembers’ Westmuir space.
     </p>
   </div>
@@ -55,16 +55,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      This keeps the old brain active,
-      I still hope to carry on;
-      It gives me lots of pleasure,
+      This keeps the old brain active, <br />
+      I still hope to carry on; <br />
+      It gives me lots of pleasure, <br />
       Writing verses – when alone.
     </p>
 
     <p>
-      May you have a jolly Christmas,
-      And Good Wishes for the New Year;
-      And if I’m spared to carry on,
+      May you have a jolly Christmas, <br />
+      And Good Wishes for the New Year; <br />
+      And if I’m spared to carry on, <br />
       I’ll write verses for you next year.
     </p>
   </div>

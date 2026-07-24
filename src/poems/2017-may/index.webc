@@ -26,30 +26,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      A young maid stood in the garden,
-      Filled with wonder in the sun;
-      That shone down on the brilliant flowers,
+      A young maid stood in the garden, <br />
+      Filled with wonder in the sun; <br />
+      That shone down on the brilliant flowers, <br />
       As she studied everyone.
     </p>
 
     <p>
-      She bent and picked a blush pink rose,
-      And as she held the stem;
-      She gazed upon the dewdrop there,
+      She bent and picked a blush pink rose, <br />
+      And as she held the stem; <br />
+      She gazed upon the dewdrop there, <br />
       Shining brightly like a gem.
     </p>
 
     <p>
-      She scanned the purple heather hills,
-      The valley lush and green;
-      And shining like a silver band,
+      She scanned the purple heather hills, <br />
+      The valley lush and green; <br />
+      And shining like a silver band, <br />
       The sunlight on a stream.
     </p>
 
     <p>
-      She looked up at the fleecy clouds,
-      Skimming o’er the blue;
-      Butterflies all fluttering round,
+      She looked up at the fleecy clouds, <br />
+      Skimming o’er the blue; <br />
+      Butterflies all fluttering round, <br />
       Was fascinating for her too .
     </p>
   </div>
@@ -64,23 +64,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Why do I tell this simple tale,
-      Of things so common place?
-      A night of stars, a garden gay,
+      Why do I tell this simple tale, <br />
+      Of things so common place? <br />
+      A night of stars, a garden gay, <br />
       Or the rapture on a face.
     </p>
 
     <p>
-      These things we take for granted,
-      Often unnoticed you will find;
-      Unless by someone like this maid,
+      These things we take for granted, <br />
+      Often unnoticed you will find; <br />
+      Unless by someone like this maid, <br />
       Who until today was blind.
     </p>
 
     <p>
-      The skill of a surgeon gave her sight,
-      And brought this thought to me;
-      Just how little we appreciate the gifts,
+      The skill of a surgeon gave her sight, <br />
+      And brought this thought to me; <br />
+      Just how little we appreciate the gifts, <br />
       The ones we are given free.
     </p>
   </div>

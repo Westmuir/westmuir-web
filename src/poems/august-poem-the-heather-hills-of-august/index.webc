@@ -24,30 +24,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      When purple heather clothes the hills
-      They are an awe inspiring sight
-      That keeps bringing back the exiles
+      When purple heather clothes the hills <br />
+      They are an awe inspiring sight <br />
+      That keeps bringing back the exiles <br />
       Filling hearts of tourists with delight.
     </p>
 
     <p>
-      This month of colourful glory comes
-      Before the Scottish summer’s end;
-      Bringing a hint of autumn too
+      This month of colourful glory comes <br />
+      Before the Scottish summer’s end; <br />
+      Bringing a hint of autumn too <br />
       As Harvesters homeward wend.
     </p>
 
     <p>
-      In the orchards, fruit is ripening
-      Swallows are ready for the flight;
-      Daylight hours are growing shorter
+      In the orchards, fruit is ripening <br />
+      Swallows are ready for the flight; <br />
+      Daylight hours are growing shorter <br />
       And hoards of midges start to bite.
     </p>
 
     <p>
-      Fresh vegetables are still plentiful
-      Growing for use in soups and stews;
-      Peas, beans, carrots and courgettes
+      Fresh vegetables are still plentiful <br />
+      Growing for use in soups and stews; <br />
+      Peas, beans, carrots and courgettes <br />
       Are still growing for us to use.
     </p>
   </div>
@@ -62,23 +62,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Flowers in tubs and borders
-      All standing stately and tall;
-      While giving a colourful showing
+      Flowers in tubs and borders <br />
+      All standing stately and tall; <br />
+      While giving a colourful showing <br />
       Can’t compete with one quite small.
     </p>
 
     <p>
-      This little native plant of ours
-      That keeps growing wild and free;
-      Still bringing folk here from afar
+      This little native plant of ours <br />
+      That keeps growing wild and free; <br />
+      Still bringing folk here from afar <br />
       It’s wondrous beauty for to see.
     </p>
 
     <p>
-      Each month has a special something
-      That is quite different from the rest;
-      And miles of heather in full bloom
+      Each month has a special something <br />
+      That is quite different from the rest; <br />
+      And miles of heather in full bloom <br />
       Now see’s August at its best.
     </p>
   </div>

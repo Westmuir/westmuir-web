@@ -110,7 +110,7 @@ async function processSingleFile(file) {
         break;
       }
 
-      const stanzaHtml = `    <p>\n      ${stanzaLines.join('\n      ')}\n    </p>`;
+      const stanzaHtml = `    <p>\n      ${stanzaLines.join(' <br />\n      ')}\n    </p>`;
       formattedStanzas.push(stanzaHtml);
     }
 

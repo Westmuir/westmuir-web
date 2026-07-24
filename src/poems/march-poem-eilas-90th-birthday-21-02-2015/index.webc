@@ -22,37 +22,37 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      I’ve reached my 90th birthday,
-      I never thought I’d live so long;
-      Seldom took drugs and no vitamin pills,
+      I’ve reached my 90th birthday, <br />
+      I never thought I’d live so long; <br />
+      Seldom took drugs and no vitamin pills, <br />
       Yet I can’t have gone too far wrong.
     </p>
 
     <p>
-      Oh, I may be as deaf as a door nail
-      And my eyesight is fast growing dim;
-      Though I can’t dance all the jigs and the reels,
+      Oh, I may be as deaf as a door nail <br />
+      And my eyesight is fast growing dim; <br />
+      Though I can’t dance all the jigs and the reels, <br />
       The ones I can do keeps me in trim.
     </p>
 
     <p>
-      I’ve never been outside Scotland’s soil,
-      As far as holidays go, I’ve had none;
-      But I’ve got all I need here in Westmuir,
+      I’ve never been outside Scotland’s soil, <br />
+      As far as holidays go, I’ve had none; <br />
+      But I’ve got all I need here in Westmuir, <br />
       With the scenic hills, my job and my home.
     </p>
 
     <p>
-      I’m back in the house where I was born,
-      Got married in this hall so dear to me;
-      And our honeymoon was spent ‘up the brae’,
+      I’m back in the house where I was born, <br />
+      Got married in this hall so dear to me; <br />
+      And our honeymoon was spent ‘up the brae’, <br />
       In a wee house behind my ain folk, you see.
     </p>
 
     <p>
-      I fell heir to my Dad’s market garden,
-      And enjoy growing fruit and veg in my plot;
-      Along with my computer, music and verse,
+      I fell heir to my Dad’s market garden, <br />
+      And enjoy growing fruit and veg in my plot; <br />
+      Along with my computer, music and verse, <br />
       I’m really happy and content with my lot.
     </p>
   </div>
@@ -67,30 +67,30 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Today I’ll be making lots of sweet memories,
-      While surrounded by my dearest friends,
-      Who stand by me through thick and thin,
+      Today I’ll be making lots of sweet memories, <br />
+      While surrounded by my dearest friends, <br />
+      Who stand by me through thick and thin, <br />
       Whenever one of life’s storms descend.
     </p>
 
     <p>
-      Always willing to help so I don’t feel alone
-      I’m sure to find someone there if I call;
-      Transport laid on, and there at my gate,
+      Always willing to help so I don’t feel alone <br />
+      I’m sure to find someone there if I call; <br />
+      Transport laid on, and there at my gate, <br />
       Keeping an eye out for me should I fall.
     </p>
 
     <p>
-      So, let’s make this a real joyful fun day,
-      The very best ever seen in this hall;
-      As I include in my 90th B	B	B	Birthday spree,
+      So, let’s make this a real joyful fun day, <br />
+      The very best ever seen in this hall; <br />
+      As I include in my 90th B	B	B	Birthday spree, <br />
       A great big THANK YOU now to you all!
     </p>
 
     <p>
-      Eila’s 90	Eila’s 90	Eila’s 90	Eila’s 90th	th	th	th Birth	Birth	Birth	Birthda	da	da	day Poem	y Poem	y Poem	y Poem
-      Eila recited her poem in
-      the Westmuir hall at her
+      Eila’s 90	Eila’s 90	Eila’s 90	Eila’s 90th	th	th	th Birth	Birth	Birth	Birthda	da	da	day Poem	y Poem	y Poem	y Poem <br />
+      Eila recited her poem in <br />
+      the Westmuir hall at her <br />
       90th Birthday party.
     </p>
   </div>

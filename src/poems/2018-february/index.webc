@@ -25,23 +25,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      February brings a special gift,
-      To dark days of ice and snow;
-      Down in the bosom of the earth,
+      February brings a special gift, <br />
+      To dark days of ice and snow; <br />
+      Down in the bosom of the earth, <br />
       Dormant seed begins to grow.
     </p>
 
     <p>
-      Spring will come full of glory,
-      It’s all mapped out and planned;
-      It’s there for us and given free,
+      Spring will come full of glory, <br />
+      It’s all mapped out and planned; <br />
+      It’s there for us and given free, <br />
       By our Heavenly Fathers’ hand.
     </p>
 
     <p>
-      As the seasons go on unchanging,
-      We never give it a thought you see;
-      We keep complaining about the weather,
+      As the seasons go on unchanging, <br />
+      We never give it a thought you see; <br />
+      We keep complaining about the weather, <br />
       More ungrateful than we ought to be.
     </p>
   </div>
@@ -56,23 +56,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      We need a Higher Hand to guide us,
-      One that can benefit us all;
-      Warm summers and cold winters,
+      We need a Higher Hand to guide us, <br />
+      One that can benefit us all; <br />
+      Warm summers and cold winters, <br />
       A fresh Spring and pleasant Fall.
     </p>
 
     <p>
-      We don’t need to lift a finger,
-      As dawn opens our sleepy eyes;
-      Every day in our life’s a bonus,
+      We don’t need to lift a finger, <br />
+      As dawn opens our sleepy eyes; <br />
+      Every day in our life’s a bonus, <br />
       And could bring a nice surprise.
     </p>
 
     <p>
-      Accept your gift and be grateful,
-      It’s done for us all with Love;
-      Making our life on earth sweeter,
+      Accept your gift and be grateful, <br />
+      It’s done for us all with Love; <br />
+      Making our life on earth sweeter, <br />
       This Special Gift sent from Above.
     </p>
   </div>

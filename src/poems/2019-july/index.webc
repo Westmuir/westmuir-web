@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      July brings the Summer,
-      Time for holidays and fun;
-      Strawberries are in season,
+      July brings the Summer, <br />
+      Time for holidays and fun; <br />
+      Strawberries are in season, <br />
       A real treat for everyone.
     </p>
 
     <p>
-      Growing in the garden,
-      And eaten on the spot;
-      Have a delicious flavour,
+      Growing in the garden, <br />
+      And eaten on the spot; <br />
+      Have a delicious flavour, <br />
       That bought ones haven’t got.
     </p>
 
     <p>
-      But in this modern way of life,
-      Things all depend on speed;
-      Grown in fancy containers,
+      But in this modern way of life, <br />
+      Things all depend on speed; <br />
+      Grown in fancy containers, <br />
       Where you never see a weed.
     </p>
   </div>
@@ -53,16 +53,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      But what we lose in flavour,
-      We gain with more leisure time;
-      And things are a lot better,
+      But what we lose in flavour, <br />
+      We gain with more leisure time; <br />
+      And things are a lot better, <br />
       Than in those days lang syne.
     </p>
 
     <p>
-      So put on your glad rags,
-      And live life to the full;
-      It’s time to renew your youth,
+      So put on your glad rags, <br />
+      And live life to the full; <br />
+      It’s time to renew your youth, <br />
       When the kids are out from school.
     </p>
   </div>

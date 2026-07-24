@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      September to me is special,
-      With its soft warm sunny days;
-      The searing heat of summer‘s gone,
+      September to me is special, <br />
+      With its soft warm sunny days; <br />
+      The searing heat of summer‘s gone, <br />
       This is worthy of our praise.
     </p>
 
     <p>
-      Just slow your pace a little,
-      Take time to enjoy the view;
-      We weren’t meant to rush through life,
+      Just slow your pace a little, <br />
+      Take time to enjoy the view; <br />
+      We weren’t meant to rush through life, <br />
       So make time just for you.
     </p>
 
     <p>
-      Go do what makes you happy,
-      It doesn’t need to cost a bean;
-      For simple pleasures are the best,
+      Go do what makes you happy, <br />
+      It doesn’t need to cost a bean; <br />
+      For simple pleasures are the best, <br />
       And they stay evergreen.
     </p>
   </div>
@@ -53,16 +53,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      There’s no rush and no packing,
-      Or struggling with your gear;
-      Meals are easy, within reach,
+      There’s no rush and no packing, <br />
+      Or struggling with your gear; <br />
+      Meals are easy, within reach, <br />
       And all you need is here.
     </p>
 
     <p>
-      So this month take a holiday,
-      Just go outside your door;
-      And let September cast her spell,
+      So this month take a holiday, <br />
+      Just go outside your door; <br />
+      And let September cast her spell, <br />
       You have no need for more.
     </p>
   </div>

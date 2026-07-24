@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Away back in my early days,
-      We still had Pounds, Shillings and Pence;
-      This served us well for countless years,
+      Away back in my early days, <br />
+      We still had Pounds, Shillings and Pence; <br />
+      This served us well for countless years, <br />
       To change it didn’t make sense.
     </p>
 
     <p>
-      But the higher powers went ahead,
-      And changed to decimal currency;
-      Then all the money value changed,
+      But the higher powers went ahead, <br />
+      And changed to decimal currency; <br />
+      Then all the money value changed, <br />
       When the familiar was taken away.
     </p>
 
     <p>
-      Young folk got on with it quite well,
-      But the older folk got confused;
-      The value and shape changed so much,
+      Young folk got on with it quite well, <br />
+      But the older folk got confused; <br />
+      The value and shape changed so much, <br />
       From the cash they had always used.
     </p>
   </div>
@@ -53,23 +53,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      The look of money is changing again,
-      The £1 coin has flat bits on the rim;
-      Paper £5 notes have been replaced,
+      The look of money is changing again, <br />
+      The £1 coin has flat bits on the rim; <br />
+      Paper £5 notes have been replaced, <br />
       By beautiful strong ones, not so slim.
     </p>
 
     <p>
-      Other changes are likely to follow,
-      This is really quite good in a way;
-      They are so bright and cheerful now,
+      Other changes are likely to follow, <br />
+      This is really quite good in a way; <br />
+      They are so bright and cheerful now, <br />
       From the ones we had in Granny’s day.
     </p>
 
     <p>
-      Old now, I look back on sweet memories,
-      For nothing brought as much pleasure you see;
-      As running an errand for Granny back then,
+      Old now, I look back on sweet memories, <br />
+      For nothing brought as much pleasure you see; <br />
+      As running an errand for Granny back then, <br />
       And the thrill spending the treasured Bawbie.
     </p>
   </div>

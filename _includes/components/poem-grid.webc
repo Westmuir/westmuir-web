@@ -43,32 +43,34 @@
 </div>
 
 <style webc:type="scss">
-  .poem-wrapper {
-    max-width: 1400px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    color: #000;
+      .poem-wrapper {
+        max-width: 1400px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        color: #000;
 
-    // Assigning the dynamic theme fallback token
-    --bg-color: var(--poem-bg, antiquewhite);
+        // Assigning the dynamic theme fallback token
+        --bg-color: var(--poem-bg, antiquewhite);
 
-    h2 {
-      color: #000;
-      font-family: "Comic Neue";
-    }
-  }
+        h2 {
+          color: #000;
+          font-family: "Comic Neue";
+        }
+      }
 
-  /* The Unified Card Container handles the border radius safely */
-  .poem-card {
-    background-color: var(--bg-color);
-    border-radius: var(--radius-2, 12px);
-    overflow: hidden; /* Automatically cuts off row backgrounds perfectly */
-    display: flex;
-    flex-direction: column;
-  }
+      /* The Unified Card Container handles the border radius safely */
+      .poem-card {
+        background-color: var(--bg-color);
+        border: var(--border-size-3) solid var(--border-theme, red);
+        border-radius: var(--radius-2, 12px);
+        overflow: hidden; /* Automatically cuts off row backgrounds perfectly */
+        display: flex;
+        flex-direction: column;
+      }
 
-  /* Row 1: Symmetrical Flex Header */
+
+  /* Row 1: Symmetrical Flex Header Container */
   .row-header {
     display: flex;
     justify-content: space-between;
@@ -78,110 +80,155 @@
     font-family: var(--font-handwritten, sans-serif);
   }
 
+  /* 🔒 PURE TITLE CENTERING INSURANCE */
+  .poem-title {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+
+    /* Ensure the title occupies a completely stable, centered column track footprint */
+    position: relative;
+    z-index: 2;
+  }
+
+  /* FIXED BOX TRACKS FOR SIDE CONTENT */
   .header-left-images,
   .header-right-images {
     display: flex;
-    gap: 0.5rem;
-    max-width: 20%;
+    align-items: center;
+    gap: 5rem;
+
+    /* Strictly lock both side widths to match Column 1/5 layout footprints */
+    width: 15%;
+    min-width: 120px; /* Prevents columns from collapsing on smaller screens */
+    flex-shrink: 0;
   }
 
-  .row-header img {
-    height: 80px;
+  .header-right-images {
+    justify-content: flex-end;
+  }
+
+  /* 🚀 STRIP WRAPPER DIV LAYOUT INTERFERENCE */
+  .header-left-images div,
+  .header-right-images div {
+    display: contents; /* Dissolves the wrapper div, making inner images act as direct flex items */
+  }
+
+  /* CONSTRAIN INDIVIDUAL GRAPHICS GENERATION */
+  .row-header img,
+  .row-header picture img {
+    height: 150px;
     width: auto;
+    max-width: 150px; /* Constrains multiple items safely side-by-side */
     object-fit: contain;
+    flex-shrink: 0;
   }
 
-  /* Row 2: 5-Column Grid */
-  .grid-body {
-    display: grid;
-    grid-template-columns: 15% 1fr 1fr 1fr 15%;
-    gap: 1rem;
-    align-items: start;
-    padding: 1rem;
-    font-family: "Comic Neue";
-  }
 
-  .col-outer,
-  .col-inner {
-    height: 100%;
-  }
+      /* Row 2: 5-Column Grid */
+      .grid-body {
+        display: grid;
+        grid-template-columns: 15% 1fr 1fr 1fr 15%;
+        gap: 1rem;
+        align-items: start;
+        padding: 1rem;
+        font-family: "Comic Neue";
+      }
 
-  .col-inner {
-    display: flex;
-    div {
-      margin-block: auto;
+      .col-outer,
+      .col-inner {
+        height: 100%;
+      }
+
+      .col-inner {
+        display: flex;
+        div {
+          margin-block: auto;
+        }
+      }
+
+      /* Target the injected slot container divs directly */
+      .col-outer.col-left-pics div,
+      .col-inner.col-mid-pics div,
+      .col-outer.col-right-pics div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      /* Image limits */
+      .col-mid-pics img,
+      .col-mid-pics picture img {
+        width: 100%;
+        max-width: 200px;
+        max-height: 200px;
+        object-fit: contain;
+        margin: 0 auto;
+      }
+
+      .grid-body img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 4px;
+        object-fit: contain;
+        max-width: 180px;
+      }
+
+
+    .col-left-text p,
+    .col-right-text p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+
+      /* 1. Safe layout: Let code formatters add spaces without affecting the browser */
+      white-space: normal;
+
+      /* 2. Precision control: Tighten or loosen the space between your stanzas here */
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+
+      /* Reset internal spacing rules */
+      br {
+        content: "";
+        margin: 0;
+      }
     }
-  }
 
-  /* Target the injected slot container divs directly */
-  .col-outer.col-left-pics div,
-  .col-inner.col-mid-pics div,
-  .col-outer.col-right-pics div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
+      /* Signature Layout styling */
+      .grid-straddle-signature {
+        grid-column: 4 / 6;
+        margin-top: 1rem;
+        text-align: left;
+        padding-left: 2rem;
+      }
 
-  /* Image limits */
-  .col-mid-pics img,
-  .col-mid-pics picture img {
-    width: 100%;
-    max-width: 200px;
-    max-height: 200px;
-    object-fit: contain;
-    margin: 0 auto;
-  }
+      .signature {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.25rem;
+        margin: 0;
+      }
 
-  .grid-body img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-    object-fit: contain;
-  }
-
-  .col-left-text p,
-  .col-right-text p {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    white-space: pre-line;
-  }
-
-  /* Signature Layout styling */
-  .grid-straddle-signature {
-    grid-column: 4 / 6;
-    margin-top: 1rem;
-    text-align: left;
-    padding-left: 2rem;
-  }
-
-  .signature {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.25rem;
-    margin: 0;
-  }
-
-  /* Responsive Fallback: Collapse on smaller devices */
-  @media (max-width: 1024px) {
-    .grid-body {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    .grid-straddle-signature {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding-left: 0;
-    }
-    /* Mobile-first flow controls... */
-    .col-left-text { grid-row: 1; }
-    .col-right-text { grid-row: 2; }
-    .col-mid-pics { grid-row: 3; flex-direction: row; flex-wrap: wrap; justify-content: center; }
-    .col-mid-pics img { max-width: 200px; }
-    .col-left-pics { grid-row: 4; flex-direction: row; }
-    .col-left-pics img, .col-right-pics img { max-width: 100px; }
-    .col-right-pics { grid-row: 5; flex-direction: row; }
-  }
+      /* Responsive Fallback: Collapse on smaller devices */
+      @media (max-width: 1024px) {
+        .grid-body {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .grid-straddle-signature {
+          grid-column: 1 / -1;
+          text-align: center;
+          padding-left: 0;
+        }
+        /* Mobile-first flow controls... */
+        .col-left-text { grid-row: 1; }
+        .col-right-text { grid-row: 2; }
+        .col-mid-pics { grid-row: 3; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+        .col-mid-pics img { max-width: 200px; }
+        .col-left-pics { grid-row: 4; flex-direction: row; }
+        .col-left-pics img, .col-right-pics img { max-width: 100px; }
+        .col-right-pics { grid-row: 5; flex-direction: row; }
+      }
 </style>

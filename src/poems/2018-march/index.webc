@@ -26,23 +26,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      March month brings stormy weather,
-      That can have an icy blast;
-      So oatmeal is the perfect choice,
+      March month brings stormy weather, <br />
+      That can have an icy blast; <br />
+      So oatmeal is the perfect choice, <br />
       On which to break our fast.
     </p>
 
     <p>
-      Back in old time Bothy days,
-      Lads would start the day on brose;
-      Farm hands’ wives made porridge,
+      Back in old time Bothy days, <br />
+      Lads would start the day on brose; <br />
+      Farm hands’ wives made porridge, <br />
       For their menfolk when they rose.
     </p>
 
     <p>
-      But in the modern way of life,
-      Oatmeal went out of favour;
-      Kids have so much to choose from,
+      But in the modern way of life, <br />
+      Oatmeal went out of favour; <br />
+      Kids have so much to choose from, <br />
       With a sweet and chocolate flavour.
     </p>
   </div>
@@ -57,23 +57,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Yet porridge is the perfect dish,
-      You’ll find it so versatile;
-      It gives you lots of stamina,
+      Yet porridge is the perfect dish, <br />
+      You’ll find it so versatile; <br />
+      It gives you lots of stamina, <br />
       To help go that extra mile.
     </p>
 
     <p>
-      Keep giving it a new flavour,
-      Add fruit and berries to the mix;
-      And breakfast will become a treat,
+      Keep giving it a new flavour, <br />
+      Add fruit and berries to the mix; <br />
+      And breakfast will become a treat, <br />
       As you get perfect with the fix.
     </p>
 
     <p>
-      Be ready for what March may bring,
-      Just keep the porridge pot handy;
-      ’Cause when you dine on Scotland’s fare,
+      Be ready for what March may bring, <br />
+      Just keep the porridge pot handy; <br />
+      ’Cause when you dine on Scotland’s fare, <br />
       You will stay warm and dandy.
     </p>
   </div>

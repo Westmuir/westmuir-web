@@ -25,23 +25,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      If it’s no ae thing it’s anither,
-      Like bein annoyed by a sister or brither;
-      Or coupin a cup o tea in yer lap,
+      If it’s no ae thing it’s anither, <br />
+      Like bein annoyed by a sister or brither; <br />
+      Or coupin a cup o tea in yer lap, <br />
       Fa’in aff the chair fan haein a nap.
     </p>
 
     <p>
-      Preparin for freens that dinna come,
-      Gettin a sooty blaw doon frae the lum;
-      Growin fruit that the birds keep eatin,
+      Preparin for freens that dinna come, <br />
+      Gettin a sooty blaw doon frae the lum; <br />
+      Growin fruit that the birds keep eatin, <br />
       They nab them a’ I feel like greetin.
     </p>
 
     <p>
-      The weeds keep on growin it maks me seek,
-      Havin tae clear the same bit ulky week;
-      Aines I canna dae for I’m no able,
+      The weeds keep on growin it maks me seek, <br />
+      Havin tae clear the same bit ulky week; <br />
+      Aines I canna dae for I’m no able, <br />
       Are tourin as high as the tower o Babel.
     </p>
   </div>
@@ -56,16 +56,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Noo the grapes still sma are roasted green,
-      Some days the temperature is extreme;
-      I canna understand this summer ava,
+      Noo the grapes still sma are roasted green, <br />
+      Some days the temperature is extreme; <br />
+      I canna understand this summer ava, <br />
       It seems tae gie us athing but sna.
     </p>
 
     <p>
-      Roasted ae meenit syne soaked tae the skin,
-      Whatever I dae I jist canna win;
-      This maks we winder is it me or the weather,
+      Roasted ae meenit syne soaked tae the skin, <br />
+      Whatever I dae I jist canna win; <br />
+      This maks we winder is it me or the weather, <br />
       For if it’s no the tae thing it’s the tither.
     </p>
   </div>

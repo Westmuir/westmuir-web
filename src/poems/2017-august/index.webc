@@ -25,16 +25,16 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Hopes and dreams can be fulfilled,
-      Just don’t give up the fight;
-      But carry on and do your Best,
+      Hopes and dreams can be fulfilled, <br />
+      Just don’t give up the fight; <br />
+      But carry on and do your Best, <br />
       They’ll come when time is right .
     </p>
 
     <p>
-      Trials and struggles are not in vain,
-      Though sometimes the journey’s hard;
-      Make the effort you won’t fail,
+      Trials and struggles are not in vain, <br />
+      Though sometimes the journey’s hard; <br />
+      Make the effort you won’t fail, <br />
       You will get your just reward .
     </p>
   </div>
@@ -49,16 +49,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Don’t look for it tomorrow though;
-      Next week? Next month? Next year?
-      Have patience. One day it will come
+      Don’t look for it tomorrow though; <br />
+      Next week? Next month? Next year? <br />
+      Have patience. One day it will come <br />
       To fill your heart with cheer.
     </p>
 
     <p>
-      A good job done is never wasted,
-      Whether it be large or small;
-      It can hold countless blessings,
+      A good job done is never wasted, <br />
+      Whether it be large or small; <br />
+      It can hold countless blessings, <br />
       Bringing great benefit to all.
     </p>
   </div>

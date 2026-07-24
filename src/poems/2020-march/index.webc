@@ -22,30 +22,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      As February comes to an end,
-      Tears just fill my eyes;
-      On the 20th of this month,
+      As February comes to an end, <br />
+      Tears just fill my eyes; <br />
+      On the 20th of this month, <br />
       I turned…. Ninety Five!
     </p>
 
     <p>
-      I never thought I’d cope so long,
-      I’ve known some bad times now and then;
-      But after a rest I battled back,
+      I never thought I’d cope so long, <br />
+      I’ve known some bad times now and then; <br />
+      But after a rest I battled back, <br />
       More than ready - new rhymes to pen!
     </p>
 
     <p>
-      Lately, I seem to be slowing down,
-      But I still hope to carry on;
-      With some assistance from above,
+      Lately, I seem to be slowing down, <br />
+      But I still hope to carry on; <br />
+      With some assistance from above, <br />
       Thoughts come ‘ I’m not alone’.
     </p>
 
     <p>
-      As we go forward into March,
-      Temperatures may rise a degree or two;
-      Let’s go on out and find fresh air,
+      As we go forward into March, <br />
+      Temperatures may rise a degree or two; <br />
+      Let’s go on out and find fresh air, <br />
       A walk is really good for you.
     </p>
   </div>
@@ -60,23 +60,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Unseen the earth is waking us,
-      As seeds sewn begin to grow;
-      Pop their heads up through the soil,
+      Unseen the earth is waking us, <br />
+      As seeds sewn begin to grow; <br />
+      Pop their heads up through the soil, <br />
       As snowdrops put on a show.
     </p>
 
     <p>
-      But winter isn’t over yet,
-      It could change to ice and rain;
-      March month is unpredictable,
+      But winter isn’t over yet, <br />
+      It could change to ice and rain; <br />
+      March month is unpredictable, <br />
       It can really be a pain.
     </p>
 
     <p>
-      But some years it can surprise us,
-      Let’s hope this is the one ;
-      That chases all the blues away,
+      But some years it can surprise us, <br />
+      Let’s hope this is the one ; <br />
+      That chases all the blues away, <br />
       To bring joy to everyone.
     </p>
   </div>

@@ -24,23 +24,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      I look forward to September
-      With its warm mellow days;
-      Trees full of radiant colours
+      I look forward to September <br />
+      With its warm mellow days; <br />
+      Trees full of radiant colours <br />
       Breathtaking, worthy of praise.
     </p>
 
     <p>
-      Perfect time to take a Holiday
-      No need to travel far;
-      Enjoy the beauty of your Homeland
+      Perfect time to take a Holiday <br />
+      No need to travel far; <br />
+      Enjoy the beauty of your Homeland <br />
       Easily reached by train or car.
     </p>
 
     <p>
-      Why struggle with loads of luggage,
-      Getting passports booking a plane;
-      Exchanging currency, getting jags
+      Why struggle with loads of luggage, <br />
+      Getting passports booking a plane; <br />
+      Exchanging currency, getting jags <br />
       Gives you lots of stress that’s plain.
     </p>
   </div>
@@ -55,23 +55,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      You can be in another world
-      Just staying a few miles away;
-      There’s so much beauty lurking there
+      You can be in another world <br />
+      Just staying a few miles away; <br />
+      There’s so much beauty lurking there <br />
       Wherever you choose to stay.
     </p>
 
     <p>
-      Holidays should not be competitive
-      Boasting to others where you’ve been;
-      They are meant to restore and relax you
+      Holidays should not be competitive <br />
+      Boasting to others where you’ve been; <br />
+      They are meant to restore and relax you <br />
       By the restful sights you’ve seen.
     </p>
 
     <p>
-      Coming at this time of year
-      Showing nature at its best;
-      September in all its glory
+      Coming at this time of year <br />
+      Showing nature at its best; <br />
+      September in all its glory <br />
       Stands well above the rest .
     </p>
   </div>

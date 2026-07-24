@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      As 2018 fades away,
-      And we step into the new;
-      We wonder what it will hold,
+      As 2018 fades away, <br />
+      And we step into the new; <br />
+      We wonder what it will hold, <br />
       But this all depends on you.
     </p>
 
     <p>
-      The years go on unchanging,
-      Still we go our chosen way;
-      And just because we are human,
+      The years go on unchanging, <br />
+      Still we go our chosen way; <br />
+      And just because we are human, <br />
       There’s a big chance to go astray.
     </p>
 
     <p>
-      Consider your options carefully,
-      There’s no hurry - take your time;
-      Twelve months lie before you,
+      Consider your options carefully, <br />
+      There’s no hurry - take your time; <br />
+      Twelve months lie before you, <br />
       And to hesitate is no crime.
     </p>
   </div>
@@ -53,16 +53,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Success is still worth waiting for,
-      And this could be the year;
-      Keep on giving your very best,
+      Success is still worth waiting for, <br />
+      And this could be the year; <br />
+      Keep on giving your very best, <br />
       And you have nought to fear.
     </p>
 
     <p>
-      Even when the going’s hard,
-      If you can raise a smile;
-      You will find the strength you need,
+      Even when the going’s hard, <br />
+      If you can raise a smile; <br />
+      You will find the strength you need, <br />
       To go that extra mile.
     </p>
   </div>

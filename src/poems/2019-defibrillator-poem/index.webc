@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      When Westmuir Defibrillator Group joined up,
-      With the Community Heartbeat Trust ;
-      In the old phone box at the Shoppie,
+      When Westmuir Defibrillator Group joined up, <br />
+      With the Community Heartbeat Trust ; <br />
+      In the old phone box at the Shoppie, <br />
       To give your support now is a MUST.
     </p>
 
     <p>
-      Getting it up and running,
-      Would be a great day for us all;
-      If everyone gave their very best,
+      Getting it up and running, <br />
+      Would be a great day for us all; <br />
+      If everyone gave their very best, <br />
       Whether it be large or small.
     </p>
 
     <p>
-      Financial help is still needed,
-      And gifts of kind are welcome too;
-      Ideas to brighten up the site,
+      Financial help is still needed, <br />
+      And gifts of kind are welcome too; <br />
+      Ideas to brighten up the site, <br />
       To make it fresh and new.
     </p>
   </div>
@@ -53,16 +53,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      No longer a sleepy village,
-      We could save a life you see;
-      Having the equipment here,
+      No longer a sleepy village, <br />
+      We could save a life you see; <br />
+      Having the equipment here, <br />
       A great achievement you’ll agree.
     </p>
 
     <p>
-      So throw your whole self in it,
-      Work on it with a smile;
-      I know you won’t regret it,
+      So throw your whole self in it, <br />
+      Work on it with a smile; <br />
+      I know you won’t regret it, <br />
       When you go that extra mile.
     </p>
   </div>

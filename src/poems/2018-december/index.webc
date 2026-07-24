@@ -23,30 +23,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Christmas is fast approaching,
-      But the outlook is bleak this year;
-      So many Firms going to the wall,
+      Christmas is fast approaching, <br />
+      But the outlook is bleak this year; <br />
+      So many Firms going to the wall, <br />
       There is little left to cheer.
     </p>
 
     <p>
-      In this modern way of life,
-      When there’s a drop in cash;
-      How can they celebrate Christmas,
+      In this modern way of life, <br />
+      When there’s a drop in cash; <br />
+      How can they celebrate Christmas, <br />
       When they cannot make a splash?
     </p>
 
     <p>
-      Well! Forget about money for a while,
-      We are celebrating Our Saviour’s Birth;
-      Born among the animals, in a stable,
+      Well! Forget about money for a while, <br />
+      We are celebrating Our Saviour’s Birth; <br />
+      Born among the animals, in a stable, <br />
       There was no place there… for mirth.
     </p>
 
     <p>
-      Years ago life was so different,
-      Folk toiled on throughout the year;
-      Storing special bits and bobs,
+      Years ago life was so different, <br />
+      Folk toiled on throughout the year; <br />
+      Storing special bits and bobs, <br />
       As Christmas was drawing near.
     </p>
   </div>
@@ -61,23 +61,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      The housewife would boil a dumpling,
-      Father would fatten a hen or goose;
-      Ready to cook for Christmas Day,
+      The housewife would boil a dumpling, <br />
+      Father would fatten a hen or goose; <br />
+      Ready to cook for Christmas Day, <br />
       When the family held ‘open hoose’.
     </p>
 
     <p>
-      All age groups came together,
-      To enjoy the home cooked fare;
-      Then played party games together,
+      All age groups came together, <br />
+      To enjoy the home cooked fare; <br />
+      Then played party games together, <br />
       That all age groups could share.
     </p>
 
     <p>
-      Stacks of money won’t make you happy,
-      But having fun together will live on;
-      Leaving a lot of happy memories,
+      Stacks of money won’t make you happy, <br />
+      But having fun together will live on; <br />
+      Leaving a lot of happy memories, <br />
       Long after Christmas day is gone.
     </p>
   </div>

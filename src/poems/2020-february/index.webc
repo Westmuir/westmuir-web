@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Our seasons now are changing,
-      It seems like that to me,
-      January already half-way in,
+      Our seasons now are changing, <br />
+      It seems like that to me, <br />
+      January already half-way in, <br />
       And still no snow you see.
     </p>
 
     <p>
-      Oh! I am not complaining,
-      But I still think it is queer;
-      To not see any white stuff,
+      Oh! I am not complaining, <br />
+      But I still think it is queer; <br />
+      To not see any white stuff, <br />
       Lying on the ground this year.
     </p>
 
     <p>
-      There’ll be time for ice and shivers,
-      E’er February gets a hold;
-      Filling Lakes and Rivers,
+      There’ll be time for ice and shivers, <br />
+      E’er February gets a hold; <br />
+      Filling Lakes and Rivers, <br />
       As it has done in days of ‘Olde’.
     </p>
   </div>
@@ -53,23 +53,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Yes! The years go on unending,
-      They are all mapped out and planned;
-      Given to the human race,
+      Yes! The years go on unending, <br />
+      They are all mapped out and planned; <br />
+      Given to the human race, <br />
       From our Heavenly Father’s hand.
     </p>
 
     <p>
-      But care doesn’t stop there,
-      It carries on all year;
-      Bringing lighter moments too,
+      But care doesn’t stop there, <br />
+      It carries on all year; <br />
+      Bringing lighter moments too, <br />
       To fill our hearts with cheer.
     </p>
 
     <p>
-      Growth is now in evidence,
-      As plants begin to grow;
-      Spring is round the corner,
+      Growth is now in evidence, <br />
+      As plants begin to grow; <br />
+      Spring is round the corner, <br />
       So let’s – Get Up and Go !
     </p>
   </div>

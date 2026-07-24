@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      The Year will soon be twa thirds in,
-      And we’ve a got a roasted skin;
-      For weeks we sweltered in the heat,
+      The Year will soon be twa thirds in, <br />
+      And we’ve a got a roasted skin; <br />
+      For weeks we sweltered in the heat, <br />
       A shower o’ rain wad hae bin a treat.
     </p>
 
     <p>
-      But drizzles forecast failed tae arrive,
-      Gairdan plants struggled tae survive;
-      But to gie them watter – twas goodbye,
+      But drizzles forecast failed tae arrive, <br />
+      Gairdan plants struggled tae survive; <br />
+      But to gie them watter – twas goodbye, <br />
       For even the loch was gaein dry.
     </p>
 
     <p>
-      I canna recall the like ye see,
-      Through a’ my years up tae Ninety-three;
-      We had hot spells ‘dinna get me wrang’,
+      I canna recall the like ye see, <br />
+      Through a’ my years up tae Ninety-three; <br />
+      We had hot spells ‘dinna get me wrang’, <br />
       But no sae intensive nor sae lang.
     </p>
   </div>
@@ -53,23 +53,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      We are getting back tae normal noo,
-      As cloudy skies cover up the blue;
-      Wi’ drizzly rain the plants survive,
+      We are getting back tae normal noo, <br />
+      As cloudy skies cover up the blue; <br />
+      Wi’ drizzly rain the plants survive, <br />
       And towerin’ weeds stretch tae the skies.
     </p>
 
     <p>
-      As we gae frae ae thing tae another,
-      It’s best we canna control the weather;
-      It’ll change when the nicht time comes,
+      As we gae frae ae thing tae another, <br />
+      It’s best we canna control the weather; <br />
+      It’ll change when the nicht time comes, <br />
       So there’s nae need tae bite yer thumbs.
     </p>
 
     <p>
-      Just carry on, keep daein’ yer best,
-      Leave a higher Power tae dae the rest;
-      His Heavenly hand is there ye see,
+      Just carry on, keep daein’ yer best, <br />
+      Leave a higher Power tae dae the rest; <br />
+      His Heavenly hand is there ye see, <br />
       Guiding Earth mortals like you and me.
     </p>
   </div>

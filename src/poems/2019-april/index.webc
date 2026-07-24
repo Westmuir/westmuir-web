@@ -22,16 +22,16 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      The daffodils are blooming freely,
-      You’ll find them everywhere;
-      And other buds are opening up’
+      The daffodils are blooming freely, <br />
+      You’ll find them everywhere; <br />
+      And other buds are opening up’ <br />
       As perfume fills the air.
     </p>
 
     <p>
-      The daylight hours are longer,
-      And as you find the temperature rise;
-      The speed the grass is growing,
+      The daylight hours are longer, <br />
+      And as you find the temperature rise; <br />
+      The speed the grass is growing, <br />
       Could take you by surprise.
     </p>
   </div>
@@ -46,16 +46,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Yet April is a happy month,
-      Birds fill the air with song;
-      Courting freely with their mates,
+      Yet April is a happy month, <br />
+      Birds fill the air with song; <br />
+      Courting freely with their mates, <br />
       They sing the whole day long.
     </p>
 
     <p>
-      Yes! April is truly magical,
-      A special gift that’s given free;
-      With love from our maker,
+      Yes! April is truly magical, <br />
+      A special gift that’s given free; <br />
+      With love from our maker, <br />
       Every spring for you and me.
     </p>
   </div>

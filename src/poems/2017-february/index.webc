@@ -24,37 +24,37 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      You chose me a little Pup,
-      And took me to your home;
-      I became part of the family,
+      You chose me a little Pup, <br />
+      And took me to your home; <br />
+      I became part of the family, <br />
       Who took me out to roam.
     </p>
 
     <p>
-      Oh the happy times we had,
-      It made me jump for joy;
-      You bought me a bouncy ball,
+      Oh the happy times we had, <br />
+      It made me jump for joy; <br />
+      You bought me a bouncy ball, <br />
       And a little squeaky toy.
     </p>
 
     <p>
-      But the good times didn’t last,
-      E’er I was fully grown;
-      You left me cold and hungry,
+      But the good times didn’t last, <br />
+      E’er I was fully grown; <br />
+      You left me cold and hungry, <br />
       Bewildered and alone.
     </p>
 
     <p>
-      When I saw you drive away,
-      I tried the car to chase;
-      But I got so tired and weary,
+      When I saw you drive away, <br />
+      I tried the car to chase; <br />
+      But I got so tired and weary, <br />
       I just couldn’t keep the pace.
     </p>
 
     <p>
-      Why did you go and leave me,
-      May your heart hear my cries;
-      And remember the adoration,
+      Why did you go and leave me, <br />
+      May your heart hear my cries; <br />
+      And remember the adoration, <br />
       That shone out of my eyes.
     </p>
   </div>
@@ -69,30 +69,30 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Please come back and find me,
-      I have so much love to give;
-      If only you would take me,
+      Please come back and find me, <br />
+      I have so much love to give; <br />
+      If only you would take me, <br />
       Back to your home to live.
     </p>
 
     <p>
-      This is just one doggie’s story,
-      Alas there are many more;
-      When the novelty has worn off,
+      This is just one doggie’s story, <br />
+      Alas there are many more; <br />
+      When the novelty has worn off, <br />
       They are just thrown out the door.
     </p>
 
     <p>
-      How can humans’ be so cruel,
-      To what’s termed as man’s best friend;
-      Serving it’s master willingly,
+      How can humans’ be so cruel, <br />
+      To what’s termed as man’s best friend; <br />
+      Serving it’s master willingly, <br />
       It’s so hard to comprehend.
     </p>
 
     <p>
-      Not a toy to be cast aside,
-      It should be classed as family;
-      A true and faithful companion,
+      Not a toy to be cast aside, <br />
+      It should be classed as family; <br />
+      A true and faithful companion, <br />
       Right up to it’s dying day.
     </p>
   </div>

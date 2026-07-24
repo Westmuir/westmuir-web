@@ -22,23 +22,23 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      August is the month for fruit,
-      Apples, Damson, Pears and Plums;
-      Late berries are ripe and some grow wild,
+      August is the month for fruit, <br />
+      Apples, Damson, Pears and Plums; <br />
+      Late berries are ripe and some grow wild, <br />
       So out you go and fill your tums.
     </p>
 
     <p>
-      Make the most of nature’s bounty,
-      Like folk did in days gone by;
-      To store up for the winter months,
+      Make the most of nature’s bounty, <br />
+      Like folk did in days gone by; <br />
+      To store up for the winter months, <br />
       On what they could rely.
     </p>
 
     <p>
-      This went on for countless years,
-      This served us well you will agree;
-      From generation to generation,
+      This went on for countless years, <br />
+      This served us well you will agree; <br />
+      From generation to generation, <br />
       As far back as I can see.
     </p>
   </div>
@@ -53,23 +53,23 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      So different to the modern trend,
-      That we all use today;
-      We pop into the local shop,
+      So different to the modern trend, <br />
+      That we all use today; <br />
+      We pop into the local shop, <br />
       For what we need day by day.
     </p>
 
     <p>
-      Loss of flavour is accepted,
-      It’s only known now by a few;
-      From the older generations,
+      Loss of flavour is accepted, <br />
+      It’s only known now by a few; <br />
+      From the older generations, <br />
       When food was rich and true.
     </p>
 
     <p>
-      You have the best of both times now,
-      With easy shopping and lots of fun;
-      And healthy berries ripe for you to eat,
+      You have the best of both times now, <br />
+      With easy shopping and lots of fun; <br />
+      And healthy berries ripe for you to eat, <br />
       When all your chores are done .
     </p>
   </div>

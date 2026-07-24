@@ -21,16 +21,16 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      A Moment in Time	A Moment in Time	A Moment in Time	A Moment in Time
-      Grasp the moment – Savour it,
-      Don’t ever let it pass by;
+      A Moment in Time	A Moment in Time	A Moment in Time	A Moment in Time <br />
+      Grasp the moment – Savour it, <br />
+      Don’t ever let it pass by; <br />
       We cannot turn back the clock
     </p>
 
     <p>
-      no matter how we try.
-      The past’s behind, the future’s veiled,
-      the present’s ours alone;
+      no matter how we try. <br />
+      The past’s behind, the future’s veiled, <br />
+      the present’s ours alone; <br />
       Don’t sigh (if only) with regret,
     </p>
   </div>
@@ -44,9 +44,9 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      for all those hours now flown.
-      Let us use our time wisely,
-      this priceless gift from Heaven
+      for all those hours now flown. <br />
+      Let us use our time wisely, <br />
+      this priceless gift from Heaven <br />
       Treasure the hours and never waste
     </p>
   </div>

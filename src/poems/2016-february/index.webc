@@ -26,51 +26,51 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      The first month of the year has gone
-      Does it hold precious memories,
-      Or filled with doom and gloom
+      The first month of the year has gone <br />
+      Does it hold precious memories, <br />
+      Or filled with doom and gloom <br />
       Through the dark winter days?
     </p>
 
     <p>
-      It really all depends on how
-      You chose to spend the hours;
-      Sitting deep in total misery
+      It really all depends on how <br />
+      You chose to spend the hours; <br />
+      Sitting deep in total misery <br />
       Or out looking for the flowers.
     </p>
 
     <p>
-      The pretty snowdrops and aconite
-      Can cheer hearts with their show;
-      Still blooming to perfection
+      The pretty snowdrops and aconite <br />
+      Can cheer hearts with their show; <br />
+      Still blooming to perfection <br />
       No matter what the elements throw
     </p>
 
     <p>
-      The sun is shining somewhere
-      And ‘twill shine here, as before;
-      The waiting will be worth it
+      The sun is shining somewhere <br />
+      And ‘twill shine here, as before; <br />
+      The waiting will be worth it <br />
       We will enjoy it all the more.
     </p>
 
     <p>
-      February Thoughts	February Thoughts	February Thoughts	February Thoughts
-      The first month of the year has gone
-      The pretty snowdrops and aconite
+      February Thoughts	February Thoughts	February Thoughts	February Thoughts <br />
+      The first month of the year has gone <br />
+      The pretty snowdrops and aconite <br />
       ;
     </p>
 
     <p>
-      No matter what the elements throw.
-      In the past folk had the patience
-      So lacking in this modern age
+      No matter what the elements throw. <br />
+      In the past folk had the patience <br />
+      So lacking in this modern age <br />
       With no time to enjoy the day
     </p>
 
     <p>
-      As they turn another page
-      Nature doesn’t work that way
-      The old rules still hold fast
+      As they turn another page <br />
+      Nature doesn’t work that way <br />
+      The old rules still hold fast <br />
       The four seasons come and go
     </p>
   </div>
@@ -85,44 +85,44 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      As they have done in the past
-      Man has changed so many things
-      With power and rules they scheme
+      As they have done in the past <br />
+      Man has changed so many things <br />
+      With power and rules they scheme <br />
       Yet are unable to change the laws
     </p>
 
     <p>
-      The ones that are Supreme
-      And this is as it should be
-      We still need Our Father’s hand
+      The ones that are Supreme <br />
+      And this is as it should be <br />
+      We still need Our Father’s hand <br />
       To guide us on our journey
     </p>
 
     <p>
-      Through life spent in our birth land
-      February Thoughts	February Thoughts	February Thoughts	February Thoughts
-      In the past folk had the patience
+      Through life spent in our birth land <br />
+      February Thoughts	February Thoughts	February Thoughts	February Thoughts <br />
+      In the past folk had the patience <br />
       So lacking in this modern age;
     </p>
 
     <p>
-      With no time to enjoy the day
-      As they turn another page.
-      Nature doesn’t work that way
+      With no time to enjoy the day <br />
+      As they turn another page. <br />
+      Nature doesn’t work that way <br />
       The old rules still hold fast;
     </p>
 
     <p>
-      The four seasons come and go
-      As they have done in the past.
-      changed so many things
+      The four seasons come and go <br />
+      As they have done in the past. <br />
+      changed so many things <br />
       With power and rules they scheme;
     </p>
 
     <p>
-      Yet are unable to change the laws
-      The ones that are Supreme.
-      And this is as it should be
+      Yet are unable to change the laws <br />
+      The ones that are Supreme. <br />
+      And this is as it should be <br />
       We still need Our Father’s hand;
     </p>
   </div>

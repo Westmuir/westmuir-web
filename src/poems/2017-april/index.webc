@@ -24,30 +24,30 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      Young folk say that they are bored,
-      Yet they have got so much;
-      With all the gadgets they have now,
+      Young folk say that they are bored, <br />
+      Yet they have got so much; <br />
+      With all the gadgets they have now, <br />
       No trouble keeping in touch.
     </p>
 
     <p>
-      Entertainment is laid on for them,
-      No need even to think;
-      Yet many seem to lose the way,
+      Entertainment is laid on for them, <br />
+      No need even to think; <br />
+      Yet many seem to lose the way, <br />
       And take to drugs and drink.
     </p>
 
     <p>
-      So different now from days gone by,
-      You’d to seek out your own treasure;
-      And it always was the simplest things,
+      So different now from days gone by, <br />
+      You’d to seek out your own treasure; <br />
+      And it always was the simplest things, <br />
       That brought the greatest pleasure.
     </p>
 
     <p>
-      I still remember as a small child,
-      I would sit by the warm coal fire;
-      And listen to the kettle hum,
+      I still remember as a small child, <br />
+      I would sit by the warm coal fire; <br />
+      And listen to the kettle hum, <br />
       Of its soft sound I’d never tire.
     </p>
   </div>
@@ -62,30 +62,30 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Fascinated by changing pictures,
-      I could see in the firelight glow;
-      To me it was like fairyland,
+      Fascinated by changing pictures, <br />
+      I could see in the firelight glow; <br />
+      To me it was like fairyland, <br />
       Oh…. How I loved it so.
     </p>
 
     <p>
-      Yes, I have my coal fire yet,
-      Though I am now old and grey;
-      It transports me into another world,
+      Yes, I have my coal fire yet, <br />
+      Though I am now old and grey; <br />
+      It transports me into another world, <br />
       As I dream the hours away.
     </p>
 
     <p>
-      Still finding pleasure in the things,
-      That I did when I was small;
-      Reliving the happy memories too,
+      Still finding pleasure in the things, <br />
+      That I did when I was small; <br />
+      Reliving the happy memories too, <br />
       As those fire pictures I recall.
     </p>
 
     <p>
-      My message is simple - Go out and play,
-      The time spent will all be gain;
-      The young will remember it in years to come,
+      My message is simple - Go out and play, <br />
+      The time spent will all be gain; <br />
+      The young will remember it in years to come, <br />
       Just as I do … with the firelight flame.
     </p>
   </div>

@@ -21,16 +21,16 @@ endOfYear: false
   <!-- Column 2 Text -->
   <div slot="col-2-text">
     <p>
-      I Greet the Dawn
-      I greet the dawn – a streak of light,
-      Waking from slumbers of the night;
+      I Greet the Dawn <br />
+      I greet the dawn – a streak of light, <br />
+      Waking from slumbers of the night; <br />
       To see unfold a new born day,
     </p>
 
     <p>
-      That is mine to use now as I may;
-      Will my chosen path be right,
-      For it is still veiled from sight;
+      That is mine to use now as I may; <br />
+      Will my chosen path be right, <br />
+      For it is still veiled from sight; <br />
       Even if some unknown plight,
     </p>
   </div>
@@ -43,16 +43,16 @@ endOfYear: false
   <!-- Column 4 Text -->
   <div slot="col-4-text">
     <p>
-      Put plans in disarray,
-      I greet the Dawn.
-      Gallantly life’s trials I’ll fight,
+      Put plans in disarray, <br />
+      I greet the Dawn. <br />
+      Gallantly life’s trials I’ll fight, <br />
       And do my best to get it right;
     </p>
 
     <p>
-      For tomorrow is another day,
-      When everything may go my way;
-      Rising refreshed and with Delight,
+      For tomorrow is another day, <br />
+      When everything may go my way; <br />
+      Rising refreshed and with Delight, <br />
       I greet the Dawn.
     </p>
   </div>
