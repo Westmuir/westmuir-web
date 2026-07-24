@@ -1,0 +1,237 @@
+<!--- src/_components/poem-grid.webc --->
+<div class="poem-wrapper">
+  <!-- ROW 1: HEADER BANNER -->
+  <header class="row-header">
+    <div class="header-left-images">
+      <slot name="header-tl"></slot>
+    </div>
+
+    <h2 class="poem-title" @text="title"></h2>
+
+    <div class="header-right-images">
+      <slot name="header-tr"></slot>
+    </div>
+  </header>
+
+  <!-- ROW 2: THE 5-COLUMN CONTENT MESH -->
+  <div class="grid-body">
+    <aside class="col-outer col-left-pics">
+      <slot name="col-1-images"></slot>
+    </aside>
+    <section class="col-inner col-left-text">
+      <slot name="col-2-text"></slot>
+    </section>
+    <aside class="col-inner col-mid-pics">
+      <slot name="col-3-images"></slot>
+    </aside>
+    <section class="col-inner col-right-text">
+      <slot name="col-4-text"></slot>
+    </section>
+    <aside class="col-outer col-right-pics">
+      <slot name="col-5-images"></slot>
+    </aside>
+
+    <!-- STRADDLE FOOTER: Sits safely at the end of the grid container -->
+    <footer webc:if="author" class="grid-straddle-signature">
+      <p class="signature" @text="`— ${author}`"></p>
+    </footer>
+  </div>
+</div>
+
+<style webc:type="scss">
+  .poem-wrapper {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    color: #000;
+    h2 {
+      color: #000;
+      font-family: "Comic Neue";
+    }
+  }
+
+  /* Row 1: Symmetrical Flex Header */
+  .row-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 0;
+    /* border-bottom: 1px dashed #ccc; */
+    padding-bottom: 1.5rem;
+    background-color: antiquewhite;
+    padding-inline: 1rem;
+    font-family: var(--font-handwritten);
+  }
+
+  .header-left-images,
+  .header-right-images {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 20%;
+  }
+  .row-header img {
+    height: 80px; /* Constrain header icons cleanly */
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Row 2: 5-Column Grid */
+  .grid-body {
+    display: grid;
+    /* Col 1 & 5 = 15% each. Remaining 70% split into 3 equal tracks (approx 23.3% each) */
+    grid-template-columns: 15% 1fr 1fr 1fr 15%;
+    gap: 1rem;
+    align-items: start;
+    background-color: antiquewhite;
+    padding-inline: 1rem;
+    font-family: "Comic Neue";
+  }
+  .col-outer,
+  .col-inner {
+    height: 100%;
+  }
+  .col-inner {
+    display: flex;
+    div {
+      margin-block: auto;
+    }
+  }
+
+  /* Target the injected slot container div directly */
+  .col-outer.col-left-pics div,
+  .col-inner.col-mid-pics div,
+  .col-outer.col-right-pics div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Force this inner div to match the full height too */
+  }
+  /* Target the middle column wrapper or images directly */
+  .col-mid-pics img,
+  .col-mid-pics picture img {
+    width: 100%;
+    max-width: 100%;
+
+    /* Set your preferred height ceiling (e.g., 300px to 400px works great for square/landscape graphics) */
+    max-height: 200px;
+
+    /* Contain preserves the aspect ratio without cropping anything out */
+    object-fit: contain;
+
+    /* Optional: Center the graphic horizontally if it shrinks away from edges */
+    margin: 0 auto;
+  }
+  /* Column 5 wrapper stretches to full grid height */
+  .col-5-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  /* Keeps your column 5 image container flexible, but lets it shrink slightly if the text needs room */
+  .col-right-pics {
+    flex-grow: 1;
+    /* Your existing space-between rules stay here and work perfectly! */
+  }
+
+  /* Formats the signature cleanly at the bottom right corner */
+  .col-5-author {
+    margin-top: 1.5rem;
+    text-align: right;
+  }
+
+  /* Make sure internal content assets resize properly */
+  .grid-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: contain;
+  }
+
+  /* Typography formatting for native text insertions */
+  .col-left-text p,
+  .col-right-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    white-space: pre-line;
+  }
+
+  /* Row 3: Footer Layout */
+  .row-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #ccc;
+    text-align: center;
+  }
+  .signature {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  /* Responsive Fallback: Collapse on smaller devices */
+  @media (max-width: 1024px) {
+    .grid-body {
+      grid-template-columns: 1fr; /* Switch to modern vertical stack stack */
+      gap: 2rem;
+    }
+
+    /* Re-order elements logically for a linear mobile stream */
+    .col-left-text {
+      grid-row: 1;
+    }
+    .col-right-text {
+      grid-row: 2;
+    }
+    .col-mid-pics {
+      grid-row: 3;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .col-mid-pics img {
+      max-width: 200px;
+    }
+    .col-left-pics {
+      grid-row: 4;
+      flex-direction: row;
+    }
+    .col-left-pics img,
+    .col-right-pics img {
+      max-width: 100px;
+    }
+    .col-right-pics {
+      grid-row: 5;
+      flex-direction: row;
+    }
+  }
+  /* Tell the signature to straddle across columns 4 and 5 */
+  .grid-straddle-signature {
+    grid-column: 4 / 6;
+    margin-top: 0;
+    text-align: right; /* Aligns the signature toward the right edge of column 5 */
+    padding-right: 1rem; /* Keeps it slightly padded from the absolute edge if needed */
+    margin-right: 40%;
+  }
+
+  .signature {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  /* Responsive adjust: ensure it spans full width on mobile viewports */
+  @media (max-width: 1024px) {
+    .grid-straddle-signature {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding-right: 0;
+    }
+  }
+</style>

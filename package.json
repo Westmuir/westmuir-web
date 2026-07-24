@@ -31,6 +31,7 @@
     "markdown-it-footnote": "^4.0.0",
     "material-symbols": "^0.44.10",
     "open-props": "^1.7.23",
+    "pdf-parse": "^2.4.5",
     "postcss": "^8.5.15",
     "postcss-custom-media": "^12.0.1",
     "postcss-import": "^16.1.1",
