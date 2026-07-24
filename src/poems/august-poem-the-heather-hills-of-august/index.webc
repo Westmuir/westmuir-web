@@ -1,0 +1,96 @@
+---
+layout: "base.webc"
+title: "August Poem - The Heather Hills of August"
+poemTitle: "August Poem - The Heather Hills of August"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/august-poem-the-heather-hills-of-august/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/august-poem-the-heather-hills-of-august/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-6.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-8.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-10.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-12.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      When purple heather clothes the hills
+      They are an awe inspiring sight
+      That keeps bringing back the exiles
+      Filling hearts of tourists with delight.
+    </p>
+
+    <p>
+      This month of colourful glory comes
+      Before the Scottish summer’s end;
+      Bringing a hint of autumn too
+      As Harvesters homeward wend.
+    </p>
+
+    <p>
+      In the orchards, fruit is ripening
+      Swallows are ready for the flight;
+      Daylight hours are growing shorter
+      And hoards of midges start to bite.
+    </p>
+
+    <p>
+      Fresh vegetables are still plentiful
+      Growing for use in soups and stews;
+      Peas, beans, carrots and courgettes
+      Are still growing for us to use.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-2.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-3.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Flowers in tubs and borders
+      All standing stately and tall;
+      While giving a colourful showing
+      Can’t compete with one quite small.
+    </p>
+
+    <p>
+      This little native plant of ours
+      That keeps growing wild and free;
+      Still bringing folk here from afar
+      It’s wondrous beauty for to see.
+    </p>
+
+    <p>
+      Each month has a special something
+      That is quite different from the rest;
+      And miles of heather in full bloom
+      Now see’s August at its best.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-5.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-7.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-9.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-11.png" alt="" />
+    <img src="/poems/august-poem-the-heather-hills-of-august/image-13.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

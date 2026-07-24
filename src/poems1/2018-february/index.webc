@@ -1,0 +1,87 @@
+---
+layout: "base.webc"
+title: "2018 February"
+poemTitle: "2018 February"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2018-february/image-0.png" alt="" />
+     <img src="/src/poems/2018-february/image-1.png" alt="" />
+     <img src="/src/poems/2018-february/image-2.png" alt="" />
+     <img src="/src/poems/2018-february/image-3.png" alt="" />
+     <img src="/src/poems/2018-february/image-4.png" alt="" />
+     <img src="/src/poems/2018-february/image-5.png" alt="" />
+     <img src="/src/poems/2018-february/image-6.png" alt="" />
+     <img src="/src/poems/2018-february/image-7.png" alt="" />
+     <img src="/src/poems/2018-february/image-8.png" alt="" />
+     <img src="/src/poems/2018-february/image-9.png" alt="" />
+     <img src="/src/poems/2018-february/image-10.png" alt="" />
+     <img src="/src/poems/2018-february/image-11.png" alt="" />
+     <img src="/src/poems/2018-february/image-12.png" alt="" />
+     <img src="/src/poems/2018-february/image-13.png" alt="" />
+     <img src="/src/poems/2018-february/image-14.png" alt="" />
+     <img src="/src/poems/2018-february/image-15.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      February brings a special gift,<br>
+      To dark days of ice and snow;<br>
+      Down in the bosom of the earth,<br>
+      Dormant seed begins to grow.<br>
+      Spring will come full of glory,<br>
+      It’s all mapped out and planned;<br>
+      It’s there for us and given free,<br>
+      By our Heavenly Fathers’ hand.<br>
+      As the seasons go on unchanging,<br>
+      We never give it a thought you see;<br>
+      We keep complaining about the weather,<br>
+      More ungrateful than we ought to be.<br>
+      We need a Higher Hand to guide us,<br>
+      One that can benefit us all;<br>
+      Warm summers and cold winters,<br>
+      A fresh Spring and pleasant Fall.<br>
+      We don’t need to lift a finger,<br>
+      As dawn opens our sleepy eyes;<br>
+      Every day in our life’s a bonus,<br>
+      And could bring a nice surprise.<br>
+      Accept your gift and be grateful,<br>
+      It’s done for us all with Love;<br>
+      Making our life on earth sweeter,<br>
+      This Special Gift sent from Above.<br>
+      February Thoughts<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

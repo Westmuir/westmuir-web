@@ -1,0 +1,99 @@
+---
+layout: "base.webc"
+title: "2017 November"
+poemTitle: "2017 November"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2017-november/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2017-november/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2017-november/image-6.png" alt="" />
+    <img src="/poems/2017-november/image-8.png" alt="" />
+    <img src="/poems/2017-november/image-10.png" alt="" />
+    <img src="/poems/2017-november/image-12.png" alt="" />
+    <img src="/poems/2017-november/image-14.png" alt="" />
+    <img src="/poems/2017-november/image-16.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      You should always tell the truth,
+      We were taught when we were young!
+      Lies were dangerous and evil,
+      When they rolled off your tongue.
+    </p>
+
+    <p>
+      Very reliable, Yes in theory,
+      But in practice this doesn’t fit;
+      We all lie from day to day,
+      Without being aware we’re doing it.
+    </p>
+
+    <p>
+      Oh! Not in an earth shattering way,
+      But it is a lie just the same;
+      Yet sometimes it turns out better,
+      To tell a small one without shame.
+    </p>
+
+    <p>
+      Consider all your words with care,
+      Will they open a wound or heal?
+      Should we keep using cold hard truth,
+      When kind words have more appeal.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2017-november/image-2.png" alt="" />
+    <img src="/poems/2017-november/image-3.png" alt="" />
+    <img src="/poems/2017-november/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Yes! We all live in an evil world,
+      Where harsh truth must be applied;
+      Trying to shake hardened criminals,
+      To confess that they had lied.
+    </p>
+
+    <p>
+      Remember where there’s life there’s hope,
+      And miracles do happen sometimes;
+      So when in doubt give comfort,
+      And read again these lines.
+    </p>
+
+    <p>
+      We cannot foresee the future,
+      Or how any situation will end;
+      So never hesitate to pass on hope,
+      To warm the bosom of a friend.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2017-november/image-5.png" alt="" />
+    <img src="/poems/2017-november/image-7.png" alt="" />
+    <img src="/poems/2017-november/image-9.png" alt="" />
+    <img src="/poems/2017-november/image-11.png" alt="" />
+    <img src="/poems/2017-november/image-13.png" alt="" />
+    <img src="/poems/2017-november/image-15.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

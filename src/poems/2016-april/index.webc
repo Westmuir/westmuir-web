@@ -1,0 +1,98 @@
+---
+layout: "base.webc"
+title: "2016 April"
+poemTitle: "2016 April"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2016-april/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2016-april/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2016-april/image-6.png" alt="" />
+    <img src="/poems/2016-april/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      It’s Official! Spring is here
+      What we’ve been waiting for;
+      Days of blue skies and sunshine
+      Right outside our front door.
+    </p>
+
+    <p>
+      Birds singing the dawn chorus
+      Bees venture out from the hive,
+      Buds are bursting all around
+      It feels good to be alive.
+    </p>
+
+    <p>
+      Throwing off the winter gloom
+      As daylight hours increase;
+      You get a surge of energy
+      And troubles seem to cease.
+    </p>
+
+    <p>
+      We take so much for granted
+      Seasons change without a thought;
+      Do we appreciate this timely gift
+      As gratefully as we ought?
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2016-april/image-2.png" alt="" />
+    <img src="/poems/2016-april/image-3.png" alt="" />
+    <img src="/poems/2016-april/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      We need rain as well as sunshine
+      To get plants and seeds to grow;
+      Frost is sent to kill some buds
+      Stopping fruit trees overflow.
+    </p>
+
+    <p>
+      Summer heat ripens the berries
+      Drying root crops for winter store;
+      Just a few examples here
+      Think about it you’ll find more.
+    </p>
+
+    <p>
+      No human hand is able
+      To do what must be done;
+      To keep things working smoothly
+      Here on earth for everyone.
+    </p>
+
+    <p>
+      We need this power to guide us
+      Even on hard paths it would seem;
+      Let us be forever grateful
+      For the laws that are supreme.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2016-april/image-5.png" alt="" />
+    <img src="/poems/2016-april/image-7.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

@@ -1,0 +1,105 @@
+---
+layout: "base.webc"
+title: "2016 March"
+poemTitle: "2016 March"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2016-march/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2016-march/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2016-march/image-6.png" alt="" />
+    <img src="/poems/2016-march/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      March weather is unpredictable
+      It holds winter by the tail;
+      Though daylight hours are longer
+      It can bring sleet, snow and hail.
+    </p>
+
+    <p>
+      There’s little heat in sunshine
+      As you shiver in the blast;
+      All too soon it disappears
+      And the sky gets overcast.
+    </p>
+
+    <p>
+      You long to dig the garden
+      Which is still a sea of mud;
+      A night frost suddenly arrives
+      To nip that in the bud.
+    </p>
+
+    <p>
+      Farmers look for a dry spell
+      To get cropping on the way;
+      Next day there comes a gale
+      That blows the seeds away.
+    </p>
+
+    <p>
+      Are you glad when March ends
+      But it still leaves its sting;
+      Borrowing three days from April ***
+      That must pass e’er we get to Spring.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2016-march/image-2.png" alt="" />
+    <img src="/poems/2016-march/image-3.png" alt="" />
+    <img src="/poems/2016-march/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      There’s some truth in old legends
+      That still stand from bygone days;
+      Forecasts were made too back then
+      Only looked for in different ways.
+    </p>
+
+    <p>
+      Depending on signs and sayings
+      Not like all this modern gear;
+      So it was studied tirelessly
+      To make their forecast clear.
+    </p>
+
+    <p>
+      Sometimes put into a rhyme
+      That would stay in the memory;
+      And has proved quite reliable
+      Even up to the present day.
+    </p>
+
+    <p>
+      I cannot forecast the weather
+      NO! I wouldn’t even try;
+      I check it daily in the press
+      And with old Rhymes I get by.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2016-march/image-5.png" alt="" />
+    <img src="/poems/2016-march/image-7.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

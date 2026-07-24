@@ -1,0 +1,136 @@
+---
+layout: "base.webc"
+title: "April Poem - Spring Clean"
+poemTitle: "April Poem - Spring Clean"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <!-- No side images -->
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      When the sun shows up the cobwebs
+      and spring is in the air
+      Women’s thoughts turn to the thing
+      That can make a guid man swear.
+    </p>
+
+    <p>
+      As their wives put on a pinny
+      and begin to scrub and clean
+      I’m shair that a’ their men fowk here
+      will ken fine what this’ll mean.
+    </p>
+
+    <p>
+      “Will ye help to shift the sideboard Dear”
+      and then as sure as fate
+      She will see the wa’paper has faded
+      “Oh! We’ll hae tae decorate”!
+    </p>
+
+    <p>
+      Men who can read the signs
+      claim they have an important meeting
+      and if they’re wise their wives ignore
+      the fact their men are cheating.
+    </p>
+
+    <p>
+      Others work aff their frustration
+      digging o’er the their garden plot
+      sure that like the mad march hare
+      their wives mind’s have gone tae pot
+    </p>
+
+    <p>
+      I’m shair that a’ their men fowk here
+      “Will ye help to shift the sideboard Dear”
+      claim they have an important meeting
+      r wives ignore
+    </p>
+
+    <p>
+      their wives mind’s have gone tae pot.
+      Washin’ runners, curtains, covers
+      ‘til the clothes rope is overflowin’
+      Then the sun hides behind a cloud
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <!-- No center images -->
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      and suddenly it is snowin’
+      Yet women still dae spring cleaning
+      Though they get aching backs
+      Scrubbing, hanging washing on the line
+    </p>
+
+    <p>
+      ‘til their hands are fu’ o’ hacks
+      This self inflicted torture noo
+      The men just canna understand
+      Their wives crazy obsession
+    </p>
+
+    <p>
+      Has it a’ got oot o’ hand?
+      Aye they are fair bamboozled
+      with a’ the frantic steer
+      That invades their peaceful hame life
+    </p>
+
+    <p>
+      In the Springtime of the Year
+      Spring Cleaning	Spring Cleaning	Spring Cleaning	Spring Cleaning
+      Washin’ runners, curtains, covers
+      the clothes rope is overflowin’
+    </p>
+
+    <p>
+      Then the sun hides behind a cloud
+      and suddenly it is snowin’.
+      Yet women still dae spring cleaning
+      Though they get aching backs
+    </p>
+
+    <p>
+      Scrubbing, hanging washing on the line
+      ‘til their hands are fu’ o’ hacks.
+      d torture noo
+      The men just canna understand
+    </p>
+
+    <p>
+      Their wives crazy obsession
+      Has it a’ got oot o’ hand?
+      Aye they are fair bamboozled
+      with a’ the frantic steer
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <!-- No side images -->
+  </div>
+
+</poem-grid>
+</div>

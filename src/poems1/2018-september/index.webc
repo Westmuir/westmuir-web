@@ -1,0 +1,82 @@
+---
+layout: "base.webc"
+title: "2018 September"
+poemTitle: "2018 September"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2018-september/image-0.png" alt="" />
+     <img src="/src/poems/2018-september/image-1.png" alt="" />
+     <img src="/src/poems/2018-september/image-2.png" alt="" />
+     <img src="/src/poems/2018-september/image-3.png" alt="" />
+     <img src="/src/poems/2018-september/image-4.png" alt="" />
+     <img src="/src/poems/2018-september/image-5.png" alt="" />
+     <img src="/src/poems/2018-september/image-6.png" alt="" />
+     <img src="/src/poems/2018-september/image-7.png" alt="" />
+     <img src="/src/poems/2018-september/image-8.png" alt="" />
+     <img src="/src/poems/2018-september/image-9.png" alt="" />
+     <img src="/src/poems/2018-september/image-10.png" alt="" />
+     <img src="/src/poems/2018-september/image-11.png" alt="" />
+     <img src="/src/poems/2018-september/image-12.png" alt="" />
+     <img src="/src/poems/2018-september/image-13.png" alt="" />
+     <img src="/src/poems/2018-september/image-14.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      It’s the little things that bring joy,<br>
+      As we journey on through life;<br>
+      Which are often over shadowed by,<br>
+      Years of discontent and strife.<br>
+      We struggle on wanting more and more,<br>
+      Hate and envy rear their head;<br>
+      What could have been a cheerful World,<br>
+      Is full of wars and crime instead.<br>
+      Now! Where do we go from here?<br>
+      We must all stop and think;<br>
+      How can we salvage our lovely home,<br>
+      And pull it from the brink.<br>
+      Start by being contented,<br>
+      And happy with your lot;<br>
+      A Heavenly hand will guide you,<br>
+      To improve on what you’ve got.<br>
+      Many hands make light work,<br>
+      If we all do the best we can;<br>
+      We will have a home again,<br>
+      That’s fit for our fellow man.<br>
+      Appreciation & Contentment<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

@@ -1,0 +1,77 @@
+---
+layout: "base.webc"
+title: "2017 January"
+poemTitle: "2017 January"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2017-january/image-0.png" alt="" />
+     <img src="/src/poems/2017-january/image-1.png" alt="" />
+     <img src="/src/poems/2017-january/image-2.png" alt="" />
+     <img src="/src/poems/2017-january/image-3.png" alt="" />
+     <img src="/src/poems/2017-january/image-4.png" alt="" />
+     <img src="/src/poems/2017-january/image-5.png" alt="" />
+     <img src="/src/poems/2017-january/image-6.png" alt="" />
+     <img src="/src/poems/2017-january/image-7.png" alt="" />
+     <img src="/src/poems/2017-january/image-8.png" alt="" />
+     <img src="/src/poems/2017-january/image-9.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      The year is coming to an end,<br>
+      And whether it be good or ill;<br>
+      Leave the past behind pick up the reins,<br>
+      And plough a fresh new drill.<br>
+      For a New Year is the perfect time,<br>
+      As the slate has been wiped clean;<br>
+      So square your shoulders and march on,<br>
+      Leave behind what might have been.<br>
+      You don’t know yet what lies in store,<br>
+      Or to where your footsteps may lead;<br>
+      Open your eyes to the possibilities,<br>
+      And you could be surprised indeed.<br>
+      Life’s journey is how you take it,<br>
+      When a storm comes out of the blue;<br>
+      Do you calmly put an umbrella up,<br>
+      Or curse fate till you’re soaked through.<br>
+      Yes, there are two sides to everything,<br>
+      Waiting right there for you to find;<br>
+      For it all depends on how you respond,<br>
+      To Life’s journey where your footsteps wind.<br>
+      Looking to the Future<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

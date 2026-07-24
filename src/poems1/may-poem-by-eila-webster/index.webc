@@ -1,0 +1,82 @@
+---
+layout: "base.webc"
+title: "May Poem by Eila Webster"
+poemTitle: "May Poem by Eila Webster"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/may-poem-by-eila-webster/image-0.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-1.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-2.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-3.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-4.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-5.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-6.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-7.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-8.png" alt="" />
+     <img src="/src/poems/may-poem-by-eila-webster/image-9.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      May month is the stepping stone<br>
+      into Summer from the Spring.<br>
+      Covering trees with fragrant blossom<br>
+      and feathered friends are on the wing.<br>
+      Time to hang up overcoat and scarf<br>
+      get outside now and explore.<br>
+      There is a wealth of interest there<br>
+      Lying right outside your front door.<br>
+      Butterflies look as if they are dancing<br>
+      to the humming of the bumble bees.<br>
+      The birds are all singing their dawn<br>
+      chorus<br>
+      that wafts on the sweet perfumed breeze .<br>
+      Bulbs are bursting into flower<br>
+      showing many different kinds of hue.<br>
+      It is nature's free gift to everyone<br>
+      a real Spring tonic for me and you.<br>
+      From this modern hectic lifestyle now<br>
+      Stop! and linger - then take note<br>
+      of the beauty all around you here<br>
+      in your own special little spot.<br>
+      You'll feel the tension in your body ease<br>
+      refreshed and happy ready for the day<br>
+      as you find out life can be quite sweet<br>
+      Through the Merry Month of May.<br>
+      The Merry Month of May	The Merry Month of May	The Merry Month of May	The Merry Month of May<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

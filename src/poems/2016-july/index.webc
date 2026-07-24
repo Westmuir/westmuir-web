@@ -1,0 +1,96 @@
+---
+layout: "base.webc"
+title: "2016 July"
+poemTitle: "2016 July"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2016-july/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2016-july/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2016-july/image-6.png" alt="" />
+    <img src="/poems/2016-july/image-8.png" alt="" />
+    <img src="/poems/2016-july/image-10.png" alt="" />
+    <img src="/poems/2016-july/image-12.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Its July we’re in mid-summer
+      Full of happy halcyon days;
+      Filling all the leisure hours
+      In many different ways.
+    </p>
+
+    <p>
+      Seaside joys are calling
+      Building castles in the sand;
+      Getting on your bikini now
+      Hoping you’ll soon get tanned.
+    </p>
+
+    <p>
+      Or attending fete’s and fairs
+      Eating ice cream and candy floss;
+      Just doing what you fancy
+      As you give the coins a toss.
+    </p>
+
+    <p>
+      Or climbing up a mountain
+      Admiring the wonderful view;
+      Maybe sailing in calm waters
+      When the sea and skies are blue.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2016-july/image-2.png" alt="" />
+    <img src="/poems/2016-july/image-3.png" alt="" />
+    <img src="/poems/2016-july/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      We all need a while just to relax
+      And July seems the perfect time;
+      To dump bad habits, fear and woe
+      So read this simple rhyme.
+    </p>
+
+    <p>
+      Folk say that I am good with words
+      They just come out of the blue;
+      So I thought I would pen these lines
+      Hoping they might benefit you.
+    </p>
+
+    <p>
+      When taking up the oar again
+      Leave behind all care and strife;
+      You’ll be refreshed and ready
+      To face the challenges of life.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2016-july/image-5.png" alt="" />
+    <img src="/poems/2016-july/image-7.png" alt="" />
+    <img src="/poems/2016-july/image-9.png" alt="" />
+    <img src="/poems/2016-july/image-11.png" alt="" />
+    <img src="/poems/2016-july/image-13.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

@@ -1,0 +1,80 @@
+---
+layout: "base.webc"
+title: "2019 August"
+poemTitle: "2019 August"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2019-august/image-0.png" alt="" />
+     <img src="/src/poems/2019-august/image-1.png" alt="" />
+     <img src="/src/poems/2019-august/image-2.png" alt="" />
+     <img src="/src/poems/2019-august/image-3.png" alt="" />
+     <img src="/src/poems/2019-august/image-4.png" alt="" />
+     <img src="/src/poems/2019-august/image-5.png" alt="" />
+     <img src="/src/poems/2019-august/image-6.png" alt="" />
+     <img src="/src/poems/2019-august/image-7.png" alt="" />
+     <img src="/src/poems/2019-august/image-8.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      August is the month for fruit,<br>
+      Apples, Damson, Pears and Plums;<br>
+      Late berries are ripe and some grow wild,<br>
+      So out you go and fill your tums.<br>
+      Make the most of nature’s bounty,<br>
+      Like folk did in days gone by;<br>
+      To store up for the winter months,<br>
+      On what they could rely.<br>
+      This went on for countless years,<br>
+      This served us well you will agree;<br>
+      From generation to generation,<br>
+      As far back as I can see.<br>
+      So different to the modern trend,<br>
+      That we all use today;<br>
+      We pop into the local shop,<br>
+      For what we need day by day.<br>
+      Loss of flavour is accepted,<br>
+      It’s only known now by a few;<br>
+      From the older generations,<br>
+      When food was rich and true.<br>
+      You have the best of both times now,<br>
+      With easy shopping and lots of fun;<br>
+      And healthy berries ripe for you to eat,<br>
+      When all your chores are done .<br>
+      August is the Month for Fruit<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

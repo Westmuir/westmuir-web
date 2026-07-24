@@ -1,0 +1,93 @@
+---
+layout: "base.webc"
+title: "2017 May"
+poemTitle: "2017 May"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2017-may/image-0.png" alt="" />
+     <img src="/src/poems/2017-may/image-1.png" alt="" />
+     <img src="/src/poems/2017-may/image-2.png" alt="" />
+     <img src="/src/poems/2017-may/image-3.png" alt="" />
+     <img src="/src/poems/2017-may/image-4.png" alt="" />
+     <img src="/src/poems/2017-may/image-5.png" alt="" />
+     <img src="/src/poems/2017-may/image-6.png" alt="" />
+     <img src="/src/poems/2017-may/image-7.png" alt="" />
+     <img src="/src/poems/2017-may/image-8.png" alt="" />
+     <img src="/src/poems/2017-may/image-9.png" alt="" />
+     <img src="/src/poems/2017-may/image-10.png" alt="" />
+     <img src="/src/poems/2017-may/image-11.png" alt="" />
+     <img src="/src/poems/2017-may/image-12.png" alt="" />
+     <img src="/src/poems/2017-may/image-13.png" alt="" />
+     <img src="/src/poems/2017-may/image-14.png" alt="" />
+     <img src="/src/poems/2017-may/image-15.png" alt="" />
+     <img src="/src/poems/2017-may/image-16.png" alt="" />
+     <img src="/src/poems/2017-may/image-17.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      A young maid stood in the garden,<br>
+      Filled with wonder in the sun;<br>
+      That shone down on the brilliant flowers,<br>
+      As she studied everyone.<br>
+      She bent and picked a blush pink rose,<br>
+      And as she held the stem;<br>
+      She gazed upon the dewdrop there,<br>
+      Shining brightly like a gem.<br>
+      She scanned the purple heather hills,<br>
+      The valley lush and green;<br>
+      And shining like a silver band,<br>
+      The sunlight on a stream.<br>
+      She looked up at the fleecy clouds,<br>
+      Skimming o’er the blue;<br>
+      Butterflies all fluttering round,<br>
+      Was fascinating for her too .<br>
+      Why do I tell this simple tale,<br>
+      Of things so common place?<br>
+      A night of stars, a garden gay,<br>
+      Or the rapture on a face.<br>
+      These things we take for granted,<br>
+      Often unnoticed you will find;<br>
+      Unless by someone like this maid,<br>
+      Who until today was blind.<br>
+      The skill of a surgeon gave her sight,<br>
+      And brought this thought to me;<br>
+      Just how little we appreciate the gifts,<br>
+      The ones we are given free.<br>
+      The Precious Gift<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

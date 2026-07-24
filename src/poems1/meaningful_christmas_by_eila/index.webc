@@ -1,0 +1,101 @@
+---
+layout: "base.webc"
+title: "Meaningful_Christmas_by_Eila"
+poemTitle: "Meaningful_Christmas_by_Eila"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <!-- No images extracted -->
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Meaningful Christmas	Meaningful Christmas	Meaningful Christmas	Meaningful Christmas<br>
+      The old year’s ending and thoughts return<br>
+      to the Christmas we knew long ago<br>
+      Before commercial bodies took hold<br>
+      With lavish gifts and tinsel show.<br>
+      *****<br>
+      Christmas held some meaning then<br>
+      Singing Carols, hearts warmed by praise<br>
+      Christmas greetings are no longer used<br>
+      recently changed to Happy Holidays.<br>
+      *****<br>
+      From late September in all the Stores<br>
+      Christmas gifts glitter to catch the eye<br>
+      As youngsters see the gadgets galore<br>
+      that they want their kinfolk to buy.<br>
+      *****<br>
+      It is like a competition for parents<br>
+      All wanting the most expensive gift<br>
+      The old year’s ending and thoughts return<br>
+      Stretching and spending beyond means<br>
+      Never giving a real thought to thrift<br>
+      *****<br>
+      Things then begin spinning out of control<br>
+      New Year brings a real mess of debt<br>
+      Trying to impress in this modern world<br>
+      Can land you with lots of regret<br>
+      *****<br>
+      What is wrong with a simple meal<br>
+      A small gift picked from the tree<br>
+      When generations joined in party games<br>
+      the joy there, was plain to see<br>
+      *****<br>
+      You can’t delete the Real Christmas<br>
+      Nor the bright shining star in the sky<br>
+      GOD keeps on sending us precious gifts<br>
+      the ones that no money can buy.<br>
+      By Eila Webster<br>
+      Stretching and spending beyond means<br>
+      Never giving a real thought to thrift.<br>
+      *<br>
+      spinning out of control<br>
+      brings a real mess of debt<br>
+      Trying to impress in this modern world<br>
+      an land you with lots of regret.<br>
+      *****<br>
+      What is wrong with a simple meal<br>
+      A small gift picked from the tree<br>
+      When generations joined in party games<br>
+      plain to see.<br>
+      *****<br>
+      You can’t delete the Real Christmas<br>
+      Nor the bright shining star in the sky<br>
+      GOD keeps on sending us precious gifts<br>
+      he ones that no money can buy.<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

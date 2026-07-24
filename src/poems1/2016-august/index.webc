@@ -1,0 +1,91 @@
+---
+layout: "base.webc"
+title: "2016 August"
+poemTitle: "2016 August"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2016-august/image-0.png" alt="" />
+     <img src="/src/poems/2016-august/image-1.png" alt="" />
+     <img src="/src/poems/2016-august/image-2.png" alt="" />
+     <img src="/src/poems/2016-august/image-3.png" alt="" />
+     <img src="/src/poems/2016-august/image-4.png" alt="" />
+     <img src="/src/poems/2016-august/image-5.png" alt="" />
+     <img src="/src/poems/2016-august/image-6.png" alt="" />
+     <img src="/src/poems/2016-august/image-7.png" alt="" />
+     <img src="/src/poems/2016-august/image-8.png" alt="" />
+     <img src="/src/poems/2016-august/image-9.png" alt="" />
+     <img src="/src/poems/2016-august/image-10.png" alt="" />
+     <img src="/src/poems/2016-august/image-11.png" alt="" />
+     <img src="/src/poems/2016-august/image-12.png" alt="" />
+     <img src="/src/poems/2016-august/image-13.png" alt="" />
+     <img src="/src/poems/2016-august/image-14.png" alt="" />
+     <img src="/src/poems/2016-august/image-15.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      August brings a subtle change<br>
+      Summer begins to fade away;<br>
+      Daylight hours are shortening<br>
+      Gold is showing on grain and hay.<br>
+      Early crops that were drying<br>
+      Are ready now to store;<br>
+      Jam made from July berries<br>
+      Line the kitchen shelves once more.<br>
+      Orchard fruit showing a rosy tint<br>
+      Are tempting boys to the loot;<br>
+      Heather now blooming on the hills<br>
+      As huntsmen begin to shoot.<br>
+      This went on for countless years<br>
+      And it always served us well;<br>
+      Waiting eagerly to taste the fruit<br>
+      As we watched the berries swell.<br>
+      But as modern ideas filtered in<br>
+      Fruit is bought now when you shop;<br>
+      Always available all year through<br>
+      So berry picking came to a stop.<br>
+      Why bother with this senseless task<br>
+      Was the general modern view;<br>
+      Mass production brought lack of taste<br>
+      Greatly missed by quite a few.<br>
+      I think that this is very sad<br>
+      That children now may never know;<br>
+      The special taste of home grown fruit<br>
+      And the chance to see it grow.<br>
+      August Reflections<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

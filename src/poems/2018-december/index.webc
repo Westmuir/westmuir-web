@@ -1,0 +1,94 @@
+---
+layout: "base.webc"
+title: "2018 December"
+poemTitle: "2018 December"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2018-december/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2018-december/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2018-december/image-6.png" alt="" />
+    <img src="/poems/2018-december/image-8.png" alt="" />
+    <img src="/poems/2018-december/image-10.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Christmas is fast approaching,
+      But the outlook is bleak this year;
+      So many Firms going to the wall,
+      There is little left to cheer.
+    </p>
+
+    <p>
+      In this modern way of life,
+      When there’s a drop in cash;
+      How can they celebrate Christmas,
+      When they cannot make a splash?
+    </p>
+
+    <p>
+      Well! Forget about money for a while,
+      We are celebrating Our Saviour’s Birth;
+      Born among the animals, in a stable,
+      There was no place there… for mirth.
+    </p>
+
+    <p>
+      Years ago life was so different,
+      Folk toiled on throughout the year;
+      Storing special bits and bobs,
+      As Christmas was drawing near.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2018-december/image-2.png" alt="" />
+    <img src="/poems/2018-december/image-3.png" alt="" />
+    <img src="/poems/2018-december/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      The housewife would boil a dumpling,
+      Father would fatten a hen or goose;
+      Ready to cook for Christmas Day,
+      When the family held ‘open hoose’.
+    </p>
+
+    <p>
+      All age groups came together,
+      To enjoy the home cooked fare;
+      Then played party games together,
+      That all age groups could share.
+    </p>
+
+    <p>
+      Stacks of money won’t make you happy,
+      But having fun together will live on;
+      Leaving a lot of happy memories,
+      Long after Christmas day is gone.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2018-december/image-5.png" alt="" />
+    <img src="/poems/2018-december/image-7.png" alt="" />
+    <img src="/poems/2018-december/image-9.png" alt="" />
+    <img src="/poems/2018-december/image-11.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

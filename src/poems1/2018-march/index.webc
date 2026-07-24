@@ -1,0 +1,89 @@
+---
+layout: "base.webc"
+title: "2018 March"
+poemTitle: "2018 March"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2018-march/image-0.png" alt="" />
+     <img src="/src/poems/2018-march/image-1.png" alt="" />
+     <img src="/src/poems/2018-march/image-2.png" alt="" />
+     <img src="/src/poems/2018-march/image-3.png" alt="" />
+     <img src="/src/poems/2018-march/image-4.png" alt="" />
+     <img src="/src/poems/2018-march/image-5.png" alt="" />
+     <img src="/src/poems/2018-march/image-6.png" alt="" />
+     <img src="/src/poems/2018-march/image-7.png" alt="" />
+     <img src="/src/poems/2018-march/image-8.png" alt="" />
+     <img src="/src/poems/2018-march/image-9.png" alt="" />
+     <img src="/src/poems/2018-march/image-10.png" alt="" />
+     <img src="/src/poems/2018-march/image-11.png" alt="" />
+     <img src="/src/poems/2018-march/image-12.png" alt="" />
+     <img src="/src/poems/2018-march/image-13.png" alt="" />
+     <img src="/src/poems/2018-march/image-14.png" alt="" />
+     <img src="/src/poems/2018-march/image-15.png" alt="" />
+     <img src="/src/poems/2018-march/image-16.png" alt="" />
+     <img src="/src/poems/2018-march/image-17.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      March month brings stormy weather,<br>
+      That can have an icy blast;<br>
+      So oatmeal is the perfect choice,<br>
+      On which to break our fast.<br>
+      Back in old time Bothy days,<br>
+      Lads would start the day on brose;<br>
+      Farm hands’ wives made porridge,<br>
+      For their menfolk when they rose.<br>
+      But in the modern way of life,<br>
+      Oatmeal went out of favour;<br>
+      Kids have so much to choose from,<br>
+      With a sweet and chocolate flavour.<br>
+      Yet porridge is the perfect dish,<br>
+      You’ll find it so versatile;<br>
+      It gives you lots of stamina,<br>
+      To help go that extra mile.<br>
+      Keep giving it a new flavour,<br>
+      Add fruit and berries to the mix;<br>
+      And breakfast will become a treat,<br>
+      As you get perfect with the fix.<br>
+      Be ready for what March may bring,<br>
+      Just keep the porridge pot handy;<br>
+      ’Cause when you dine on Scotland’s fare,<br>
+      You will stay warm and dandy.<br>
+      March Winds<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

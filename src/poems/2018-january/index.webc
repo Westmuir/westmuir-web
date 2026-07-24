@@ -1,0 +1,90 @@
+---
+layout: "base.webc"
+title: "2018 January"
+poemTitle: "2018 January"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2018-january/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2018-january/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2018-january/image-6.png" alt="" />
+    <img src="/poems/2018-january/image-8.png" alt="" />
+    <img src="/poems/2018-january/image-10.png" alt="" />
+    <img src="/poems/2018-january/image-12.png" alt="" />
+    <img src="/poems/2018-january/image-14.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      As the old year fades away,
+      Another comes fresh and new;
+      We wonder what it will hold,
+      But it really is up to you.
+    </p>
+
+    <p>
+      Do you welcome it with open arms,
+      Full of exciting vim and vigour;
+      You’re the one at the helm,
+      Being ready to pull the trigger.
+    </p>
+
+    <p>
+      Or do you sit down and moan,
+      To shiver in the winter cold;
+      Stop feeling sorry for yourself,
+      Just get up and dance – be bold.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2018-january/image-2.png" alt="" />
+    <img src="/poems/2018-january/image-3.png" alt="" />
+    <img src="/poems/2018-january/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      You can be active all your life,
+      Don’t let your body rot;
+      You’ll be surprised and happy,
+      If you use the strength you’ve got.
+    </p>
+
+    <p>
+      In later years use a cane,
+      To dance with it makes sense;
+      It is there to give you support,
+      And you’ll gain confidence.
+    </p>
+
+    <p>
+      Go and make your resolutions now,
+      This will make your moments sweet;
+      Making sure this will be the year,
+      That will keep you on your feet.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2018-january/image-5.png" alt="" />
+    <img src="/poems/2018-january/image-7.png" alt="" />
+    <img src="/poems/2018-january/image-9.png" alt="" />
+    <img src="/poems/2018-january/image-11.png" alt="" />
+    <img src="/poems/2018-january/image-13.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

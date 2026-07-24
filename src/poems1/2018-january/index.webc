@@ -1,0 +1,86 @@
+---
+layout: "base.webc"
+title: "2018 January"
+poemTitle: "2018 January"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2018-january/image-0.png" alt="" />
+     <img src="/src/poems/2018-january/image-1.png" alt="" />
+     <img src="/src/poems/2018-january/image-2.png" alt="" />
+     <img src="/src/poems/2018-january/image-3.png" alt="" />
+     <img src="/src/poems/2018-january/image-4.png" alt="" />
+     <img src="/src/poems/2018-january/image-5.png" alt="" />
+     <img src="/src/poems/2018-january/image-6.png" alt="" />
+     <img src="/src/poems/2018-january/image-7.png" alt="" />
+     <img src="/src/poems/2018-january/image-8.png" alt="" />
+     <img src="/src/poems/2018-january/image-9.png" alt="" />
+     <img src="/src/poems/2018-january/image-10.png" alt="" />
+     <img src="/src/poems/2018-january/image-11.png" alt="" />
+     <img src="/src/poems/2018-january/image-12.png" alt="" />
+     <img src="/src/poems/2018-january/image-13.png" alt="" />
+     <img src="/src/poems/2018-january/image-14.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      As the old year fades away,<br>
+      Another comes fresh and new;<br>
+      We wonder what it will hold,<br>
+      But it really is up to you.<br>
+      Do you welcome it with open arms,<br>
+      Full of exciting vim and vigour;<br>
+      You’re the one at the helm,<br>
+      Being ready to pull the trigger.<br>
+      Or do you sit down and moan,<br>
+      To shiver in the winter cold;<br>
+      Stop feeling sorry for yourself,<br>
+      Just get up and dance – be bold.<br>
+      You can be active all your life,<br>
+      Don’t let your body rot;<br>
+      You’ll be surprised and happy,<br>
+      If you use the strength you’ve got.<br>
+      In later years use a cane,<br>
+      To dance with it makes sense;<br>
+      It is there to give you support,<br>
+      And you’ll gain confidence.<br>
+      Go and make your resolutions now,<br>
+      This will make your moments sweet;<br>
+      Making sure this will be the year,<br>
+      That will keep you on your feet.<br>
+      The New Year<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

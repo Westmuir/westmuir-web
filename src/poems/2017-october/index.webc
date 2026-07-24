@@ -1,0 +1,71 @@
+---
+layout: "base.webc"
+title: "2017 October"
+poemTitle: "2017 October"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2017-october/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2017-october/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2017-october/image-6.png" alt="" />
+    <img src="/poems/2017-october/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Come everyone hold your head up high,
+      The sun shines somewhere in a blue sky;
+      Shedding her ray on some distant shore,
+      And one day soon it will shine once more.
+    </p>
+
+    <p>
+      On our own Scottish lush and fertile land,
+      Though Universal Law’s hard to understand;
+      When the wind and rain ‘neath darkened skies,
+      And our flooded garden before us lies.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2017-october/image-2.png" alt="" />
+    <img src="/poems/2017-october/image-3.png" alt="" />
+    <img src="/poems/2017-october/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      How we long to change it if only we could,
+      But the Law still remains firm for our good;
+      As death and birth go on unchanging,
+      This Higher Power does the arranging.
+    </p>
+
+    <p>
+      We will get sunshine when the time is right,
+      Filling our days with her wonderful light;
+      A rich coloured arc will appear in the blue’
+      The Promise that all will come right for you.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2017-october/image-5.png" alt="" />
+    <img src="/poems/2017-october/image-7.png" alt="" />
+    <img src="/poems/2017-october/image-9.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

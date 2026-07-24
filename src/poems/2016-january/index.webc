@@ -1,0 +1,101 @@
+---
+layout: "base.webc"
+title: "2016 January"
+poemTitle: "2016 January"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <!-- No side images -->
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      At New Year as you stand on the threshold
+      Of a pathway that is still unknown;
+      Will you grasp the welcome unseen hand
+      Or will you just keep on struggling alone
+    </p>
+
+    <p>
+      The road ahead is not always smooth
+      There will be some pitfalls along the way
+      And when you come to the first crossroads
+      You are lost – and look on with dismay.
+    </p>
+
+    <p>
+      For you didn’t stop to view the signs
+      That were put there for you to use;
+      But no pressure is put upon you
+      You can still take the way you choose.
+    </p>
+
+    <p>
+      You may start with many resolutions
+      As the bright New Year begins;
+      But in a short week or two you’ll find
+      It’s the same old way – that wins.
+    </p>
+
+    <p>
+      At New Year as you stand on the threshold
+      seen hand
+      struggling alone.
+      here will be some pitfalls along the way;
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <!-- No center images -->
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      nd when you come to the first crossroads
+      Now! Just look at what is really important
+      The things
+      You Want
+    </p>
+
+    <p>
+      Is it more power – or large stacks of wealth
+      Luxurious holidays for your family and wife
+      Or striving for that special trophy or cup
+      That always seems to be out of reach
+    </p>
+
+    <p>
+      Or maybe like the young plain girl now
+      Who wants a soft skin just like a peach
+      Why keep on struggling through the years
+      Be content and happy now
+    </p>
+
+    <p>
+      Everyone born here on earth is unique
+      Created like the bright shining star
+      Material things have a role to play
+      But are flirting for they’re not Divine
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <!-- No side images -->
+  </div>
+
+</poem-grid>
+</div>

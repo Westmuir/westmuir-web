@@ -1,0 +1,80 @@
+---
+layout: "base.webc"
+title: "2018 August"
+poemTitle: "2018 August"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2018-august/image-0.png" alt="" />
+     <img src="/src/poems/2018-august/image-1.png" alt="" />
+     <img src="/src/poems/2018-august/image-2.png" alt="" />
+     <img src="/src/poems/2018-august/image-3.png" alt="" />
+     <img src="/src/poems/2018-august/image-4.png" alt="" />
+     <img src="/src/poems/2018-august/image-5.png" alt="" />
+     <img src="/src/poems/2018-august/image-6.png" alt="" />
+     <img src="/src/poems/2018-august/image-7.png" alt="" />
+     <img src="/src/poems/2018-august/image-8.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      The Year will soon be twa thirds in,<br>
+      And we’ve a got a roasted skin;<br>
+      For weeks we sweltered in the heat,<br>
+      A shower o’ rain wad hae bin a treat.<br>
+      But drizzles forecast failed tae arrive,<br>
+      Gairdan plants struggled tae survive;<br>
+      But to gie them watter – twas goodbye,<br>
+      For even the loch was gaein dry.<br>
+      I canna recall the like ye see,<br>
+      Through a’ my years up tae Ninety-three;<br>
+      We had hot spells ‘dinna get me wrang’,<br>
+      But no sae intensive nor sae lang.<br>
+      We are getting back tae normal noo,<br>
+      As cloudy skies cover up the blue;<br>
+      Wi’ drizzly rain the plants survive,<br>
+      And towerin’ weeds stretch tae the skies.<br>
+      As we gae frae ae thing tae another,<br>
+      It’s best we canna control the weather;<br>
+      It’ll change when the nicht time comes,<br>
+      So there’s nae need tae bite yer thumbs.<br>
+      Just carry on, keep daein’ yer best,<br>
+      Leave a higher Power tae dae the rest;<br>
+      His Heavenly hand is there ye see,<br>
+      Guiding Earth mortals like you and me.<br>
+      Summer Weather<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

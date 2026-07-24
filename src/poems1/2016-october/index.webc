@@ -1,0 +1,89 @@
+---
+layout: "base.webc"
+title: "2016 October"
+poemTitle: "2016 October"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2016-october/image-0.png" alt="" />
+     <img src="/src/poems/2016-october/image-1.png" alt="" />
+     <img src="/src/poems/2016-october/image-2.png" alt="" />
+     <img src="/src/poems/2016-october/image-3.png" alt="" />
+     <img src="/src/poems/2016-october/image-4.png" alt="" />
+     <img src="/src/poems/2016-october/image-5.png" alt="" />
+     <img src="/src/poems/2016-october/image-6.png" alt="" />
+     <img src="/src/poems/2016-october/image-7.png" alt="" />
+     <img src="/src/poems/2016-october/image-8.png" alt="" />
+     <img src="/src/poems/2016-october/image-9.png" alt="" />
+     <img src="/src/poems/2016-october/image-10.png" alt="" />
+     <img src="/src/poems/2016-october/image-11.png" alt="" />
+     <img src="/src/poems/2016-october/image-12.png" alt="" />
+     <img src="/src/poems/2016-october/image-13.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      I can’t believe this is October,<br>
+      We’re in mid-Autumn once again;<br>
+      Oh! How quickly time has flown,<br>
+      Since I took up my pen.<br>
+      To herald in a bright New Year,<br>
+      With possibilities that caught attention;<br>
+      Better get your skates on quick,<br>
+      Before you are on the pension.<br>
+      Don’t leave it for retiral years,<br>
+      That’s classed as a bed of roses;<br>
+      Nobody mentions the many thorns,<br>
+      And failing energy in small doses.<br>
+      Do the things you wish for Now,<br>
+      Not on some far off future date;<br>
+      Go on! Start to tick them off,<br>
+      ‘til you clean up the slate.<br>
+      You’ll get a glow of satisfaction,<br>
+      And life will be a lot more fun;<br>
+      You’ll be storing up sweet memories,<br>
+      Wage earning jobs will still get done.<br>
+      Although this is a busy time,<br>
+      If you have a large garden plot;<br>
+      Earthing up carrots, neeps and leeks,<br>
+      Storing tatties for the soup pot!<br>
+      In the changing tapestry of life,<br>
+      Each month has a role to play;<br>
+      Keep looking for all the benefits,<br>
+      You could find along the way.<br>
+      October Flashbacks<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

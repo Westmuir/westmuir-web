@@ -1,0 +1,84 @@
+---
+layout: "base.webc"
+title: "2019 August"
+poemTitle: "2019 August"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2019-august/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2019-august/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2019-august/image-6.png" alt="" />
+    <img src="/poems/2019-august/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      August is the month for fruit,
+      Apples, Damson, Pears and Plums;
+      Late berries are ripe and some grow wild,
+      So out you go and fill your tums.
+    </p>
+
+    <p>
+      Make the most of nature’s bounty,
+      Like folk did in days gone by;
+      To store up for the winter months,
+      On what they could rely.
+    </p>
+
+    <p>
+      This went on for countless years,
+      This served us well you will agree;
+      From generation to generation,
+      As far back as I can see.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2019-august/image-2.png" alt="" />
+    <img src="/poems/2019-august/image-3.png" alt="" />
+    <img src="/poems/2019-august/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      So different to the modern trend,
+      That we all use today;
+      We pop into the local shop,
+      For what we need day by day.
+    </p>
+
+    <p>
+      Loss of flavour is accepted,
+      It’s only known now by a few;
+      From the older generations,
+      When food was rich and true.
+    </p>
+
+    <p>
+      You have the best of both times now,
+      With easy shopping and lots of fun;
+      And healthy berries ripe for you to eat,
+      When all your chores are done .
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2019-august/image-5.png" alt="" />
+    <img src="/poems/2019-august/image-7.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

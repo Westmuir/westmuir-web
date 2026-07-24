@@ -1,0 +1,76 @@
+---
+layout: "base.webc"
+title: "2019 July"
+poemTitle: "2019 July"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2019-july/image-0.png" alt="" />
+     <img src="/src/poems/2019-july/image-1.png" alt="" />
+     <img src="/src/poems/2019-july/image-2.png" alt="" />
+     <img src="/src/poems/2019-july/image-3.png" alt="" />
+     <img src="/src/poems/2019-july/image-4.png" alt="" />
+     <img src="/src/poems/2019-july/image-5.png" alt="" />
+     <img src="/src/poems/2019-july/image-6.png" alt="" />
+     <img src="/src/poems/2019-july/image-7.png" alt="" />
+     <img src="/src/poems/2019-july/image-8.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      July brings the Summer,<br>
+      Time for holidays and fun;<br>
+      Strawberries are in season,<br>
+      A real treat for everyone.<br>
+      Growing in the garden,<br>
+      And eaten on the spot;<br>
+      Have a delicious flavour,<br>
+      That bought ones haven’t got.<br>
+      But in this modern way of life,<br>
+      Things all depend on speed;<br>
+      Grown in fancy containers,<br>
+      Where you never see a weed.<br>
+      But what we lose in flavour,<br>
+      We gain with more leisure time;<br>
+      And things are a lot better,<br>
+      Than in those days lang syne.<br>
+      So put on your glad rags,<br>
+      And live life to the full;<br>
+      It’s time to renew your youth,<br>
+      When the kids are out from school.<br>
+      July’s Long Summer Days<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

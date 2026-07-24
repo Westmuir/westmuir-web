@@ -1,0 +1,88 @@
+---
+layout: "base.webc"
+title: "2016 December"
+poemTitle: "2016 December"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2016-december/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2016-december/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2016-december/image-6.png" alt="" />
+    <img src="/poems/2016-december/image-8.png" alt="" />
+    <img src="/poems/2016-december/image-10.png" alt="" />
+    <img src="/poems/2016-december/image-12.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      It’s the last month of the year
+      What does it mean to you;
+      Not enough hours in the day
+      For the things you have to do.
+    </p>
+
+    <p>
+      Cakes to bake plum pudding to make
+      Christmas cards and presents to buy;
+      Stretching beyond financial means
+      No matter how hard you may try.
+    </p>
+
+    <p>
+      After a massive long tiring trip
+      You struggle on home exhausted;
+      Now all the things you bought await
+      To be written, wrapped and posted.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2016-december/image-2.png" alt="" />
+    <img src="/poems/2016-december/image-3.png" alt="" />
+    <img src="/poems/2016-december/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      No time left for newsy letters
+      Festive greetings will have to do;
+      Will another full year pass by
+      E’er they hear again from you?
+    </p>
+
+    <p>
+      Getting cards and expensive gifts
+      May be lovely to behold;
+      But newsy letters from the heart
+      To friends -- are richer than gold.
+    </p>
+
+    <p>
+      Forget the trimmings and relax
+      Recall the good times you are given;
+      Share memories with those you love
+      Of blessings sent down from Heaven.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2016-december/image-5.png" alt="" />
+    <img src="/poems/2016-december/image-7.png" alt="" />
+    <img src="/poems/2016-december/image-9.png" alt="" />
+    <img src="/poems/2016-december/image-11.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

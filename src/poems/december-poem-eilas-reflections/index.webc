@@ -1,0 +1,157 @@
+---
+layout: "base.webc"
+title: "December Poem -Eila's Reflections"
+poemTitle: "December Poem -Eila's Reflections"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <!-- No side images -->
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      It’s December and I am remembering
+      The promise that I made last year
+      To write a special poem about each month
+      For the Westmuir Web Page here.
+    </p>
+
+    <p>
+      I always tried to make them interesting
+      Touching on things you may not know
+      Yet keeping to the appropriate season
+      And how country folk fared long ago
+    </p>
+
+    <p>
+      I found it was a really big challenge
+      A bit of research, much thought, but fun
+      The great feeling too of achievement
+      When I saw the finished article spun.
+    </p>
+
+    <p>
+      It soon put a new spark into my life
+      Being a small part of this great team
+      I am willing to help out in any way
+      Because I hold them in high esteem.
+    </p>
+
+    <p>
+      Long before December month arrives
+      Shops were stacked with Christmas fare
+      Soon Santa sits in all his splendour
+      Beside a large mountain of toys there
+    </p>
+
+    <p>
+      Posters appear – ‘Book your Holidays’
+      Time to jet off and soak up the sun;
+      Celebrating your winter break now
+      Being pampered and having fun.
+    </p>
+
+    <p>
+      Eila’s December Reflections	Eila’s December Reflections	Eila’s December Reflections	Eila’s December Reflections
+      It’s December and I am remembering
+      To write a special poem about each month
+      I always tried to make them interesting
+    </p>
+
+    <p>
+      know;
+      Yet keeping to the appropriate season
+      And how country folk fared long ago.
+      A bit of research, much thought, but fun;
+    </p>
+
+    <p>
+      .
+      Being a small part of this great team;
+      Long before December month arrives
+      Shops were stacked with Christmas fare;
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <!-- No center images -->
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      large mountain of toys there.
+      ‘Book your Holidays’
+      Far different from days when I was young
+      We still worked here on Christmas Day
+    </p>
+
+    <p>
+      In Scotland there were no holidays then
+      till we stopped off on Hogmanay
+      Things gradually changed after the war years
+      Soon more breaks became common place
+    </p>
+
+    <p>
+      But the true meaning of this festive month
+      has gone without leaving a trace
+      It could be the result of modern traits
+      Living the fast life never stopping a minute
+    </p>
+
+    <p>
+      There’s so much out there every day
+      To see and do and cram in it
+      No time to ponder, relax and reflect
+      As the years keep speeding on their way
+    </p>
+
+    <p>
+      Still grasping at the Earthly pleasures
+      Lacking the Celestial joy of Christmas Day
+      Eila’s December Reflections	Eila’s December Reflections	Eila’s December Reflections	Eila’s December Reflections
+      Far different from days when I was young
+    </p>
+
+    <p>
+      We still worked here on Christmas Day;
+      In Scotland there were no holidays then
+      till we stopped off on Hogmanay.
+      Things gradually changed after the war years
+    </p>
+
+    <p>
+      s became common place;
+      But the true meaning of this festive month
+      has gone without leaving a trace.
+      sult of modern traits
+    </p>
+
+    <p>
+      Living the fast life never stopping a minute;
+      There’s so much out there every day
+      o see and do and cram in it.
+      No time to ponder, relax and reflect
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <!-- No side images -->
+  </div>
+
+</poem-grid>
+</div>

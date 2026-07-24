@@ -1,0 +1,106 @@
+---
+layout: "base.webc"
+title: "March Poem - Eila's 90th Birthday  21 02 2015"
+poemTitle: "March Poem - Eila's 90th Birthday  21 02 2015"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-6.png" alt="" />
+    <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      I’ve reached my 90th birthday,
+      I never thought I’d live so long;
+      Seldom took drugs and no vitamin pills,
+      Yet I can’t have gone too far wrong.
+    </p>
+
+    <p>
+      Oh, I may be as deaf as a door nail
+      And my eyesight is fast growing dim;
+      Though I can’t dance all the jigs and the reels,
+      The ones I can do keeps me in trim.
+    </p>
+
+    <p>
+      I’ve never been outside Scotland’s soil,
+      As far as holidays go, I’ve had none;
+      But I’ve got all I need here in Westmuir,
+      With the scenic hills, my job and my home.
+    </p>
+
+    <p>
+      I’m back in the house where I was born,
+      Got married in this hall so dear to me;
+      And our honeymoon was spent ‘up the brae’,
+      In a wee house behind my ain folk, you see.
+    </p>
+
+    <p>
+      I fell heir to my Dad’s market garden,
+      And enjoy growing fruit and veg in my plot;
+      Along with my computer, music and verse,
+      I’m really happy and content with my lot.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-2.png" alt="" />
+    <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-3.png" alt="" />
+    <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Today I’ll be making lots of sweet memories,
+      While surrounded by my dearest friends,
+      Who stand by me through thick and thin,
+      Whenever one of life’s storms descend.
+    </p>
+
+    <p>
+      Always willing to help so I don’t feel alone
+      I’m sure to find someone there if I call;
+      Transport laid on, and there at my gate,
+      Keeping an eye out for me should I fall.
+    </p>
+
+    <p>
+      So, let’s make this a real joyful fun day,
+      The very best ever seen in this hall;
+      As I include in my 90th B	B	B	Birthday spree,
+      A great big THANK YOU now to you all!
+    </p>
+
+    <p>
+      Eila’s 90	Eila’s 90	Eila’s 90	Eila’s 90th	th	th	th Birth	Birth	Birth	Birthda	da	da	day Poem	y Poem	y Poem	y Poem
+      Eila recited her poem in
+      the Westmuir hall at her
+      90th Birthday party.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-5.png" alt="" />
+    <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-7.png" alt="" />
+    <img src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-9.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

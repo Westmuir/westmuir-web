@@ -1,0 +1,95 @@
+---
+layout: "base.webc"
+title: "2016 May"
+poemTitle: "2016 May"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2016-may/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2016-may/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2016-may/image-6.png" alt="" />
+    <img src="/poems/2016-may/image-8.png" alt="" />
+    <img src="/poems/2016-may/image-10.png" alt="" />
+    <img src="/poems/2016-may/image-12.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      I think of May as blossom time
+      Trees all decked in pink and white;
+      In Parks and lining pathways
+      They create a breath-taking sight.
+    </p>
+
+    <p>
+      Bringing thought of first love
+      Fragile, wonderful and new;
+      It didn’t matter how it ended
+      The memories live on all life through.
+    </p>
+
+    <p>
+      There is no emotion greater
+      Even though it ends in tears;
+      It is something you don’t feel again
+      Through all your adult years.
+    </p>
+
+    <p>
+      Love in later years is different
+      May brings a bright new start;
+      Now is the time to take control
+      Yes! We can all take part.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2016-may/image-2.png" alt="" />
+    <img src="/poems/2016-may/image-3.png" alt="" />
+    <img src="/poems/2016-may/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      It doesn’t matter about age
+      Or all the silver in your hair;
+      May gives that vital spark
+      To all hearts beating there.
+    </p>
+
+    <p>
+      Women would wash their faces
+      In dew on the 1st of May;
+      T’was said to make them beautiful
+      A ritual unknown today.
+    </p>
+
+    <p>
+      Studying the months is fascinating
+      Each one has a tale to tell;
+      Pulling you closer to nature
+      To find they all serve you well.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2016-may/image-5.png" alt="" />
+    <img src="/poems/2016-may/image-7.png" alt="" />
+    <img src="/poems/2016-may/image-9.png" alt="" />
+    <img src="/poems/2016-may/image-11.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

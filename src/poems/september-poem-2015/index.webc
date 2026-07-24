@@ -1,0 +1,106 @@
+---
+layout: "base.webc"
+title: "September Poem 2015"
+poemTitle: "September Poem 2015"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/september-poem-2015/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/september-poem-2015/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/september-poem-2015/image-6.png" alt="" />
+    <img src="/poems/september-poem-2015/image-8.png" alt="" />
+    <img src="/poems/september-poem-2015/image-10.png" alt="" />
+    <img src="/poems/september-poem-2015/image-12.png" alt="" />
+    <img src="/poems/september-poem-2015/image-14.png" alt="" />
+    <img src="/poems/september-poem-2015/image-16.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      When asked what is my favourite month
+      You will hear me say September;
+      It is the month I always chose
+      Back as far as I remember.
+    </p>
+
+    <p>
+      Like an oasis in the desert
+      Through a long and busy life style;
+      ‘twas a welcome chance to escape
+      from work and struggles for a while.
+    </p>
+
+    <p>
+      It’s really the perfect time you see
+      In so many different ways;
+      not having the strong heat of summer
+      More the warm and mellow days.
+    </p>
+
+    <p>
+      Tree leaves begin to change colour
+      In the garden growth slows down;
+      Country life seems more relaxed
+      than what you’ll find in the town.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/september-poem-2015/image-2.png" alt="" />
+    <img src="/poems/september-poem-2015/image-3.png" alt="" />
+    <img src="/poems/september-poem-2015/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      As a dedicated tender of the soil
+      I need my rest and to have fun;
+      September gives that welcome break
+      before more work needs to be done.
+    </p>
+
+    <p>
+      Earlier crops are all gathered in
+      there is a pause now taking place;
+      Late potato crops are still growing
+      giving more leisure hours of grace.
+    </p>
+
+    <p>
+      To enjoy flowers blooming now
+      richer than the summer show;
+      Chrysanthemums and dahlias
+      in the softer sunlight seem to glow.
+    </p>
+
+    <p>
+      Soon this break will come to an end
+      But I am now ready for work you see;
+      Being cosseted by my favourite month
+      That still means so much to me.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/september-poem-2015/image-5.png" alt="" />
+    <img src="/poems/september-poem-2015/image-7.png" alt="" />
+    <img src="/poems/september-poem-2015/image-9.png" alt="" />
+    <img src="/poems/september-poem-2015/image-11.png" alt="" />
+    <img src="/poems/september-poem-2015/image-13.png" alt="" />
+    <img src="/poems/september-poem-2015/image-15.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

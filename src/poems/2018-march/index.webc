@@ -1,0 +1,93 @@
+---
+layout: "base.webc"
+title: "2018 March"
+poemTitle: "2018 March"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2018-march/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2018-march/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2018-march/image-6.png" alt="" />
+    <img src="/poems/2018-march/image-8.png" alt="" />
+    <img src="/poems/2018-march/image-10.png" alt="" />
+    <img src="/poems/2018-march/image-12.png" alt="" />
+    <img src="/poems/2018-march/image-14.png" alt="" />
+    <img src="/poems/2018-march/image-16.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      March month brings stormy weather,
+      That can have an icy blast;
+      So oatmeal is the perfect choice,
+      On which to break our fast.
+    </p>
+
+    <p>
+      Back in old time Bothy days,
+      Lads would start the day on brose;
+      Farm hands’ wives made porridge,
+      For their menfolk when they rose.
+    </p>
+
+    <p>
+      But in the modern way of life,
+      Oatmeal went out of favour;
+      Kids have so much to choose from,
+      With a sweet and chocolate flavour.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2018-march/image-2.png" alt="" />
+    <img src="/poems/2018-march/image-3.png" alt="" />
+    <img src="/poems/2018-march/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Yet porridge is the perfect dish,
+      You’ll find it so versatile;
+      It gives you lots of stamina,
+      To help go that extra mile.
+    </p>
+
+    <p>
+      Keep giving it a new flavour,
+      Add fruit and berries to the mix;
+      And breakfast will become a treat,
+      As you get perfect with the fix.
+    </p>
+
+    <p>
+      Be ready for what March may bring,
+      Just keep the porridge pot handy;
+      ’Cause when you dine on Scotland’s fare,
+      You will stay warm and dandy.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2018-march/image-5.png" alt="" />
+    <img src="/poems/2018-march/image-7.png" alt="" />
+    <img src="/poems/2018-march/image-9.png" alt="" />
+    <img src="/poems/2018-march/image-11.png" alt="" />
+    <img src="/poems/2018-march/image-13.png" alt="" />
+    <img src="/poems/2018-march/image-15.png" alt="" />
+    <img src="/poems/2018-march/image-17.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

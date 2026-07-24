@@ -1,0 +1,117 @@
+---
+layout: "base.webc"
+title: "2016 February"
+poemTitle: "2016 February"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2016-february/image-0.png" alt="" />
+     <img src="/src/poems/2016-february/image-1.png" alt="" />
+     <img src="/src/poems/2016-february/image-2.png" alt="" />
+     <img src="/src/poems/2016-february/image-3.png" alt="" />
+     <img src="/src/poems/2016-february/image-4.png" alt="" />
+     <img src="/src/poems/2016-february/image-5.png" alt="" />
+     <img src="/src/poems/2016-february/image-6.png" alt="" />
+     <img src="/src/poems/2016-february/image-7.png" alt="" />
+     <img src="/src/poems/2016-february/image-8.png" alt="" />
+     <img src="/src/poems/2016-february/image-9.png" alt="" />
+     <img src="/src/poems/2016-february/image-10.png" alt="" />
+     <img src="/src/poems/2016-february/image-11.png" alt="" />
+     <img src="/src/poems/2016-february/image-12.png" alt="" />
+     <img src="/src/poems/2016-february/image-13.png" alt="" />
+     <img src="/src/poems/2016-february/image-14.png" alt="" />
+     <img src="/src/poems/2016-february/image-15.png" alt="" />
+     <img src="/src/poems/2016-february/image-16.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      The first month of the year has gone<br>
+      Does it hold precious memories,<br>
+      Or filled with doom and gloom<br>
+      Through the dark winter days?<br>
+      It really all depends on how<br>
+      You chose to spend the hours;<br>
+      Sitting deep in total misery<br>
+      Or out looking for the flowers.<br>
+      The pretty snowdrops and aconite<br>
+      Can cheer hearts with their show;<br>
+      Still blooming to perfection<br>
+      No matter what the elements throw<br>
+      The sun is shining somewhere<br>
+      And ‘twill shine here, as before;<br>
+      The waiting will be worth it<br>
+      We will enjoy it all the more.<br>
+      February Thoughts	February Thoughts	February Thoughts	February Thoughts<br>
+      The first month of the year has gone<br>
+      The pretty snowdrops and aconite<br>
+      ;<br>
+      No matter what the elements throw.<br>
+      In the past folk had the patience<br>
+      So lacking in this modern age<br>
+      With no time to enjoy the day<br>
+      As they turn another page<br>
+      Nature doesn’t work that way<br>
+      The old rules still hold fast<br>
+      The four seasons come and go<br>
+      As they have done in the past<br>
+      Man has changed so many things<br>
+      With power and rules they scheme<br>
+      Yet are unable to change the laws<br>
+      The ones that are Supreme<br>
+      And this is as it should be<br>
+      We still need Our Father’s hand<br>
+      To guide us on our journey<br>
+      Through life spent in our birth land<br>
+      February Thoughts	February Thoughts	February Thoughts	February Thoughts<br>
+      In the past folk had the patience<br>
+      So lacking in this modern age;<br>
+      With no time to enjoy the day<br>
+      As they turn another page.<br>
+      Nature doesn’t work that way<br>
+      The old rules still hold fast;<br>
+      The four seasons come and go<br>
+      As they have done in the past.<br>
+      changed so many things<br>
+      With power and rules they scheme;<br>
+      Yet are unable to change the laws<br>
+      The ones that are Supreme.<br>
+      And this is as it should be<br>
+      We still need Our Father’s hand;<br>
+      To guide us on our journey<br>
+      Through life spent in our birth land.<br>
+      By Eila Webster 2016
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

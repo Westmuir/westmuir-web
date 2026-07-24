@@ -1,0 +1,96 @@
+---
+layout: "base.webc"
+title: "2017 February"
+poemTitle: "2017 February"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2017-february/image-0.png" alt="" />
+     <img src="/src/poems/2017-february/image-1.png" alt="" />
+     <img src="/src/poems/2017-february/image-2.png" alt="" />
+     <img src="/src/poems/2017-february/image-3.png" alt="" />
+     <img src="/src/poems/2017-february/image-4.png" alt="" />
+     <img src="/src/poems/2017-february/image-5.png" alt="" />
+     <img src="/src/poems/2017-february/image-6.png" alt="" />
+     <img src="/src/poems/2017-february/image-7.png" alt="" />
+     <img src="/src/poems/2017-february/image-8.png" alt="" />
+     <img src="/src/poems/2017-february/image-9.png" alt="" />
+     <img src="/src/poems/2017-february/image-10.png" alt="" />
+     <img src="/src/poems/2017-february/image-11.png" alt="" />
+     <img src="/src/poems/2017-february/image-12.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      You chose me a little Pup,<br>
+      And took me to your home;<br>
+      I became part of the family,<br>
+      Who took me out to roam.<br>
+      Oh the happy times we had,<br>
+      It made me jump for joy;<br>
+      You bought me a bouncy ball,<br>
+      And a little squeaky toy.<br>
+      But the good times didn’t last,<br>
+      E’er I was fully grown;<br>
+      You left me cold and hungry,<br>
+      Bewildered and alone.<br>
+      When I saw you drive away,<br>
+      I tried the car to chase;<br>
+      But I got so tired and weary,<br>
+      I just couldn’t keep the pace.<br>
+      Why did you go and leave me,<br>
+      May your heart hear my cries;<br>
+      And remember the adoration,<br>
+      That shone out of my eyes.<br>
+      Please come back and find me,<br>
+      I have so much love to give;<br>
+      If only you would take me,<br>
+      Back to your home to live.<br>
+      This is just one doggie’s story,<br>
+      Alas there are many more;<br>
+      When the novelty has worn off,<br>
+      They are just thrown out the door.<br>
+      How can humans’ be so cruel,<br>
+      To what’s termed as man’s best friend;<br>
+      Serving it’s master willingly,<br>
+      It’s so hard to comprehend.<br>
+      Not a toy to be cast aside,<br>
+      It should be classed as family;<br>
+      A true and faithful companion,<br>
+      Right up to it’s dying day.<br>
+      A Sad Dog<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

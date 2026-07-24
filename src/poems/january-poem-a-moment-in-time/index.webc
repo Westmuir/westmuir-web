@@ -1,0 +1,60 @@
+---
+layout: "base.webc"
+title: "January Poem A Moment in Time"
+poemTitle: "January Poem A Moment in Time"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/january-poem-a-moment-in-time/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/january-poem-a-moment-in-time/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <!-- No side images -->
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      A Moment in Time	A Moment in Time	A Moment in Time	A Moment in Time
+      Grasp the moment – Savour it,
+      Don’t ever let it pass by;
+      We cannot turn back the clock
+    </p>
+
+    <p>
+      no matter how we try.
+      The past’s behind, the future’s veiled,
+      the present’s ours alone;
+      Don’t sigh (if only) with regret,
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/january-poem-a-moment-in-time/image-2.png" alt="" />
+    <img src="/poems/january-poem-a-moment-in-time/image-3.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      for all those hours now flown.
+      Let us use our time wisely,
+      this priceless gift from Heaven
+      Treasure the hours and never waste
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <!-- No side images -->
+  </div>
+
+</poem-grid>
+</div>

@@ -1,0 +1,77 @@
+---
+layout: "base.webc"
+title: "2017 June"
+poemTitle: "2017 June"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2017-june/image-0.png" alt="" />
+     <img src="/src/poems/2017-june/image-1.png" alt="" />
+     <img src="/src/poems/2017-june/image-2.png" alt="" />
+     <img src="/src/poems/2017-june/image-3.png" alt="" />
+     <img src="/src/poems/2017-june/image-4.png" alt="" />
+     <img src="/src/poems/2017-june/image-5.png" alt="" />
+     <img src="/src/poems/2017-june/image-6.png" alt="" />
+     <img src="/src/poems/2017-june/image-7.png" alt="" />
+     <img src="/src/poems/2017-june/image-8.png" alt="" />
+     <img src="/src/poems/2017-june/image-9.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Tempting offers of wealth are increasing,<br>
+      You can see this happening everywhere;<br>
+      Just buy something and win cash,<br>
+      It could be a scam – so beware!<br>
+      Although this is above board normally,<br>
+      Just hoping this will increase the demands;<br>
+      And you could still get a real bargain,<br>
+      On wares that are left in their hands.<br>
+      But when offers seem too good to be true,<br>
+      Although tempting it could be just that;<br>
+      Not many would give cash so freely’<br>
+      You can’t take a mouse from a cat!<br>
+      But one money cheque will be paid out,<br>
+      At the end to keep promises true;<br>
+      But out from a million hopefuls there,<br>
+      It’s unlikely to be for me or for you.<br>
+      Be prepared to work hard all your life,<br>
+      For most things don’t work out as planned;<br>
+      Remember the best things in life are free,<br>
+      And you are holding them now in your hand.<br>
+      Free Gifts<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

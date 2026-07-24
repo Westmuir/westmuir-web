@@ -1,0 +1,81 @@
+---
+layout: "base.webc"
+title: "2020 February"
+poemTitle: "2020 February"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2020-february/image-0.png" alt="" />
+     <img src="/src/poems/2020-february/image-1.png" alt="" />
+     <img src="/src/poems/2020-february/image-2.png" alt="" />
+     <img src="/src/poems/2020-february/image-3.png" alt="" />
+     <img src="/src/poems/2020-february/image-4.png" alt="" />
+     <img src="/src/poems/2020-february/image-5.png" alt="" />
+     <img src="/src/poems/2020-february/image-6.png" alt="" />
+     <img src="/src/poems/2020-february/image-7.png" alt="" />
+     <img src="/src/poems/2020-february/image-8.png" alt="" />
+     <img src="/src/poems/2020-february/image-9.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Our seasons now are changing,<br>
+      It seems like that to me,<br>
+      January already half-way in,<br>
+      And still no snow you see.<br>
+      Oh! I am not complaining,<br>
+      But I still think it is queer;<br>
+      To not see any white stuff,<br>
+      Lying on the ground this year.<br>
+      There’ll be time for ice and shivers,<br>
+      E’er February gets a hold;<br>
+      Filling Lakes and Rivers,<br>
+      As it has done in days of ‘Olde’.<br>
+      Yes! The years go on unending,<br>
+      They are all mapped out and planned;<br>
+      Given to the human race,<br>
+      From our Heavenly Father’s hand.<br>
+      But care doesn’t stop there,<br>
+      It carries on all year;<br>
+      Bringing lighter moments too,<br>
+      To fill our hearts with cheer.<br>
+      Growth is now in evidence,<br>
+      As plants begin to grow;<br>
+      Spring is round the corner,<br>
+      So let’s – Get Up and Go !<br>
+      Our Changing Seasons<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

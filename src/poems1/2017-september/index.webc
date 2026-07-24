@@ -1,0 +1,83 @@
+---
+layout: "base.webc"
+title: "2017 September"
+poemTitle: "2017 September"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2017-september/image-0.png" alt="" />
+     <img src="/src/poems/2017-september/image-1.png" alt="" />
+     <img src="/src/poems/2017-september/image-2.png" alt="" />
+     <img src="/src/poems/2017-september/image-3.png" alt="" />
+     <img src="/src/poems/2017-september/image-4.png" alt="" />
+     <img src="/src/poems/2017-september/image-5.png" alt="" />
+     <img src="/src/poems/2017-september/image-6.png" alt="" />
+     <img src="/src/poems/2017-september/image-7.png" alt="" />
+     <img src="/src/poems/2017-september/image-8.png" alt="" />
+     <img src="/src/poems/2017-september/image-9.png" alt="" />
+     <img src="/src/poems/2017-september/image-10.png" alt="" />
+     <img src="/src/poems/2017-september/image-11.png" alt="" />
+     <img src="/src/poems/2017-september/image-12.png" alt="" />
+     <img src="/src/poems/2017-september/image-13.png" alt="" />
+     <img src="/src/poems/2017-september/image-14.png" alt="" />
+     <img src="/src/poems/2017-september/image-15.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      If it’s no ae thing it’s anither,<br>
+      Like bein annoyed by a sister or brither;<br>
+      Or coupin a cup o tea in yer lap,<br>
+      Fa’in aff the chair fan haein a nap.<br>
+      Preparin for freens that dinna come,<br>
+      Gettin a sooty blaw doon frae the lum;<br>
+      Growin fruit that the birds keep eatin,<br>
+      They nab them a’ I feel like greetin.<br>
+      The weeds keep on growin it maks me seek,<br>
+      Havin tae clear the same bit ulky week;<br>
+      Aines I canna dae for I’m no able,<br>
+      Are tourin as high as the tower o Babel.<br>
+      Noo the grapes still sma are roasted green,<br>
+      Some days the temperature is extreme;<br>
+      I canna understand this summer ava,<br>
+      It seems tae gie us athing but sna.<br>
+      Roasted ae meenit syne soaked tae the skin,<br>
+      Whatever I dae I jist canna win;<br>
+      This maks we winder is it me or the weather,<br>
+      For if it’s no the tae thing it’s the tither.<br>
+      Just for a laugh<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

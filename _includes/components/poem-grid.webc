@@ -1,40 +1,44 @@
 <!--- src/_components/poem-grid.webc --->
-<div class="poem-wrapper">
-  <!-- ROW 1: HEADER BANNER -->
-  <header class="row-header">
-    <div class="header-left-images">
-      <slot name="header-tl"></slot>
+<!-- Bind the theme token directly as an inline style variable fallback -->
+<div class="poem-wrapper" :style="`--poem-bg: ${theme || 'antiquewhite'};`">
+  <!-- The Unified Card Shell houses both components -->
+  <div class="poem-card">
+    <!-- ROW 1: HEADER BANNER -->
+    <header class="row-header">
+      <div class="header-left-images">
+        <slot name="header-tl"></slot>
+      </div>
+
+      <h2 class="poem-title" @text="title"></h2>
+
+      <div class="header-right-images">
+        <slot name="header-tr"></slot>
+      </div>
+    </header>
+
+    <!-- ROW 2: THE 5-COLUMN CONTENT MESH -->
+    <div class="grid-body">
+      <aside class="col-outer col-left-pics">
+        <slot name="col-1-images"></slot>
+      </aside>
+      <section class="col-inner col-left-text">
+        <slot name="col-2-text"></slot>
+      </section>
+      <aside class="col-inner col-mid-pics">
+        <slot name="col-3-images"></slot>
+      </aside>
+      <section class="col-inner col-right-text">
+        <slot name="col-4-text"></slot>
+      </section>
+      <aside class="col-outer col-right-pics">
+        <slot name="col-5-images"></slot>
+      </aside>
+
+      <!-- STRADDLE FOOTER -->
+      <footer webc:if="author" class="grid-straddle-signature">
+        <p class="signature" @text="`— ${author}`"></p>
+      </footer>
     </div>
-
-    <h2 class="poem-title" @text="title"></h2>
-
-    <div class="header-right-images">
-      <slot name="header-tr"></slot>
-    </div>
-  </header>
-
-  <!-- ROW 2: THE 5-COLUMN CONTENT MESH -->
-  <div class="grid-body">
-    <aside class="col-outer col-left-pics">
-      <slot name="col-1-images"></slot>
-    </aside>
-    <section class="col-inner col-left-text">
-      <slot name="col-2-text"></slot>
-    </section>
-    <aside class="col-inner col-mid-pics">
-      <slot name="col-3-images"></slot>
-    </aside>
-    <section class="col-inner col-right-text">
-      <slot name="col-4-text"></slot>
-    </section>
-    <aside class="col-outer col-right-pics">
-      <slot name="col-5-images"></slot>
-    </aside>
-
-    <!-- STRADDLE FOOTER: Sits safely at the end of the grid container -->
-    <footer webc:if="author" class="grid-straddle-signature">
-      <p class="signature" @text="`— ${author}`"></p>
-    </footer>
   </div>
 </div>
 
@@ -45,10 +49,23 @@
     padding: 0 1rem;
     box-sizing: border-box;
     color: #000;
+
+    // Assigning the dynamic theme fallback token
+    --bg-color: var(--poem-bg, antiquewhite);
+
     h2 {
       color: #000;
       font-family: "Comic Neue";
     }
+  }
+
+  /* The Unified Card Container handles the border radius safely */
+  .poem-card {
+    background-color: var(--bg-color);
+    border-radius: var(--radius-2, 12px);
+    overflow: hidden; /* Automatically cuts off row backgrounds perfectly */
+    display: flex;
+    flex-direction: column;
   }
 
   /* Row 1: Symmetrical Flex Header */
@@ -57,14 +74,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 0;
-    /* border-bottom: 1px dashed #ccc; */
-    padding-bottom: 1.5rem;
-    background-color: antiquewhite;
-    padding-inline: 1rem;
-    font-family: var(--font-handwritten);
-    border-top-left-radius: var(--radius-2);
-    border-top-right-radius: var(--radius-2);
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    font-family: var(--font-handwritten, sans-serif);
   }
 
   .header-left-images,
@@ -73,8 +84,9 @@
     gap: 0.5rem;
     max-width: 20%;
   }
+
   .row-header img {
-    height: 80px; /* Constrain header icons cleanly */
+    height: 80px;
     width: auto;
     object-fit: contain;
   }
@@ -82,20 +94,18 @@
   /* Row 2: 5-Column Grid */
   .grid-body {
     display: grid;
-    /* Col 1 & 5 = 15% each. Remaining 70% split into 3 equal tracks (approx 23.3% each) */
     grid-template-columns: 15% 1fr 1fr 1fr 15%;
     gap: 1rem;
     align-items: start;
-    background-color: antiquewhite;
-    padding-inline: 1rem;
+    padding: 1rem;
     font-family: "Comic Neue";
-    border-bottom-left-radius: var(--radius-2);
-    border-bottom-right-radius: var(--radius-2);
   }
+
   .col-outer,
   .col-inner {
     height: 100%;
   }
+
   .col-inner {
     display: flex;
     div {
@@ -103,7 +113,7 @@
     }
   }
 
-  /* Update your inner slot targets to explicitly enforce scaling boundaries */
+  /* Target the injected slot container divs directly */
   .col-outer.col-left-pics div,
   .col-inner.col-mid-pics div,
   .col-outer.col-right-pics div {
@@ -111,32 +121,18 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    min-height: -webkit-fill-available; /* Ensures deep layout filling */
-    gap: 1.5rem; /* Fallback padding if there's no extra space to distribute */
   }
-  /* Target the middle column wrapper or images directly */
+
+  /* Image limits */
   .col-mid-pics img,
   .col-mid-pics picture img {
     width: 100%;
-    max-width: 100%;
-
-    /* Set your preferred height ceiling (e.g., 300px to 400px works great for square/landscape graphics) */
-    max-height: 200px;
     max-width: 200px;
-
-    /* Contain preserves the aspect ratio without cropping anything out */
+    max-height: 200px;
     object-fit: contain;
-
-    /* Optional: Center the graphic horizontally if it shrinks away from edges */
     margin: 0 auto;
   }
 
-  /* Keeps your column 5 image container flexible, but lets it shrink slightly if the text needs room */
-  .col-right-pics {
-    flex-grow: 1;
-    /* Your existing space-between rules stay here and work perfectly! */
-  }
-  /* Make sure internal content assets resize properly */
   .grid-body img {
     width: 100%;
     height: auto;
@@ -145,7 +141,6 @@
     object-fit: contain;
   }
 
-  /* Typography formatting for native text insertions */
   .col-left-text p,
   .col-right-text p {
     font-size: 1.2rem;
@@ -154,47 +149,12 @@
     white-space: pre-line;
   }
 
-  .signature {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 1.25rem;
-  }
-
-  /* Responsive Fallback: Collapse on smaller devices */
-  @media (max-width: 1024px) {
-    .grid-body {
-      grid-template-columns: 1fr; /* Switch to modern vertical stack stack */
-      gap: 2rem;
-    }
-
-    /* Re-order elements logically for a linear mobile stream */
-    .col-left-text {
-      grid-row: 1;
-    }
-    .col-right-text {
-      grid-row: 2;
-    }
-    .col-mid-pics {
-      grid-row: 3;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .col-mid-pics img {
-      max-width: 200px;
-    }
-    .col-left-pics {
-      grid-row: 4;
-      flex-direction: row;
-    }
-    .col-left-pics img,
-    .col-right-pics img {
-      max-width: 100px;
-    }
-    .col-right-pics {
-      grid-row: 5;
-      flex-direction: row;
-    }
+  /* Signature Layout styling */
+  .grid-straddle-signature {
+    grid-column: 4 / 6;
+    margin-top: 1rem;
+    text-align: left;
+    padding-left: 2rem;
   }
 
   .signature {
@@ -203,20 +163,25 @@
     font-size: 1.25rem;
     margin: 0;
   }
-  /* Cleaned up and predictable signature grid rules */
-  .grid-straddle-signature {
-    grid-column: 4 / 6;
-    margin-top: 0;
-    text-align: left; /* Dynamically pulls it leftward into the column 4 lane */
-    padding-left: 2rem; /* Keeps it neatly separated from the middle images */
-  }
 
-  /* Responsive adjust: ensure it spans full width on mobile viewports */
+  /* Responsive Fallback: Collapse on smaller devices */
   @media (max-width: 1024px) {
+    .grid-body {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
     .grid-straddle-signature {
       grid-column: 1 / -1;
       text-align: center;
-      padding-right: 0;
+      padding-left: 0;
     }
+    /* Mobile-first flow controls... */
+    .col-left-text { grid-row: 1; }
+    .col-right-text { grid-row: 2; }
+    .col-mid-pics { grid-row: 3; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    .col-mid-pics img { max-width: 200px; }
+    .col-left-pics { grid-row: 4; flex-direction: row; }
+    .col-left-pics img, .col-right-pics img { max-width: 100px; }
+    .col-right-pics { grid-row: 5; flex-direction: row; }
   }
 </style>

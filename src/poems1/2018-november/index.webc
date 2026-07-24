@@ -1,0 +1,64 @@
+---
+layout: "base.webc"
+title: "2018 November"
+poemTitle: "2018 November"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2018-november/image-0.png" alt="" />
+     <img src="/src/poems/2018-november/image-1.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      I Greet the Dawn<br>
+      I greet the dawn – a streak of light,<br>
+      Waking from slumbers of the night;<br>
+      To see unfold a new born day,<br>
+      That is mine to use now as I may;<br>
+      Will my chosen path be right,<br>
+      For it is still veiled from sight;<br>
+      Even if some unknown plight,<br>
+      Put plans in disarray,<br>
+      I greet the Dawn.<br>
+      Gallantly life’s trials I’ll fight,<br>
+      And do my best to get it right;<br>
+      For tomorrow is another day,<br>
+      When everything may go my way;<br>
+      Rising refreshed and with Delight,<br>
+      I greet the Dawn.<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

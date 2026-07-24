@@ -1,0 +1,85 @@
+---
+layout: "base.webc"
+title: "2016 September"
+poemTitle: "2016 September"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2016-september/image-0.png" alt="" />
+     <img src="/src/poems/2016-september/image-1.png" alt="" />
+     <img src="/src/poems/2016-september/image-2.png" alt="" />
+     <img src="/src/poems/2016-september/image-3.png" alt="" />
+     <img src="/src/poems/2016-september/image-4.png" alt="" />
+     <img src="/src/poems/2016-september/image-5.png" alt="" />
+     <img src="/src/poems/2016-september/image-6.png" alt="" />
+     <img src="/src/poems/2016-september/image-7.png" alt="" />
+     <img src="/src/poems/2016-september/image-8.png" alt="" />
+     <img src="/src/poems/2016-september/image-9.png" alt="" />
+     <img src="/src/poems/2016-september/image-10.png" alt="" />
+     <img src="/src/poems/2016-september/image-11.png" alt="" />
+     <img src="/src/poems/2016-september/image-12.png" alt="" />
+     <img src="/src/poems/2016-september/image-13.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      I look forward to September<br>
+      With its warm mellow days;<br>
+      Trees full of radiant colours<br>
+      Breathtaking, worthy of praise.<br>
+      Perfect time to take a Holiday<br>
+      No need to travel far;<br>
+      Enjoy the beauty of your Homeland<br>
+      Easily reached by train or car.<br>
+      Why struggle with loads of luggage,<br>
+      Getting passports booking a plane;<br>
+      Exchanging currency, getting jags<br>
+      Gives you lots of stress that’s plain.<br>
+      You can be in another world<br>
+      Just staying a few miles away;<br>
+      There’s so much beauty lurking there<br>
+      Wherever you choose to stay.<br>
+      Holidays should not be competitive<br>
+      Boasting to others where you’ve been;<br>
+      They are meant to restore and relax you<br>
+      By the restful sights you’ve seen.<br>
+      Coming at this time of year<br>
+      Showing nature at its best;<br>
+      September in all its glory<br>
+      Stands well above the rest .<br>
+      Goodbye August …. Hello September<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

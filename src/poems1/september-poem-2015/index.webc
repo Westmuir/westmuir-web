@@ -1,0 +1,96 @@
+---
+layout: "base.webc"
+title: "September Poem 2015"
+poemTitle: "September Poem 2015"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/september-poem-2015/image-0.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-1.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-2.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-3.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-4.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-5.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-6.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-7.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-8.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-9.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-10.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-11.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-12.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-13.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-14.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-15.png" alt="" />
+     <img src="/src/poems/september-poem-2015/image-16.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      When asked what is my favourite month<br>
+      You will hear me say September;<br>
+      It is the month I always chose<br>
+      Back as far as I remember.<br>
+      Like an oasis in the desert<br>
+      Through a long and busy life style;<br>
+      ‘twas a welcome chance to escape<br>
+      from work and struggles for a while.<br>
+      It’s really the perfect time you see<br>
+      In so many different ways;<br>
+      not having the strong heat of summer<br>
+      More the warm and mellow days.<br>
+      Tree leaves begin to change colour<br>
+      In the garden growth slows down;<br>
+      Country life seems more relaxed<br>
+      than what you’ll find in the town.<br>
+      As a dedicated tender of the soil<br>
+      I need my rest and to have fun;<br>
+      September gives that welcome break<br>
+      before more work needs to be done.<br>
+      Earlier crops are all gathered in<br>
+      there is a pause now taking place;<br>
+      Late potato crops are still growing<br>
+      giving more leisure hours of grace.<br>
+      To enjoy flowers blooming now<br>
+      richer than the summer show;<br>
+      Chrysanthemums and dahlias<br>
+      in the softer sunlight seem to glow.<br>
+      Soon this break will come to an end<br>
+      But I am now ready for work you see;<br>
+      Being cosseted by my favourite month<br>
+      That still means so much to me.<br>
+      By Eila Webster in 2015<br>
+      September ….. My Favourite	September ….. My Favourite	September ….. My Favourite	September ….. My Favourite
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

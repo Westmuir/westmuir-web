@@ -1,0 +1,81 @@
+---
+layout: "base.webc"
+title: "2018 July"
+poemTitle: "2018 July"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2018-july/image-0.png" alt="" />
+     <img src="/src/poems/2018-july/image-1.png" alt="" />
+     <img src="/src/poems/2018-july/image-2.png" alt="" />
+     <img src="/src/poems/2018-july/image-3.png" alt="" />
+     <img src="/src/poems/2018-july/image-4.png" alt="" />
+     <img src="/src/poems/2018-july/image-5.png" alt="" />
+     <img src="/src/poems/2018-july/image-6.png" alt="" />
+     <img src="/src/poems/2018-july/image-7.png" alt="" />
+     <img src="/src/poems/2018-july/image-8.png" alt="" />
+     <img src="/src/poems/2018-july/image-9.png" alt="" />
+     <img src="/src/poems/2018-july/image-10.png" alt="" />
+     <img src="/src/poems/2018-july/image-11.png" alt="" />
+     <img src="/src/poems/2018-july/image-12.png" alt="" />
+     <img src="/src/poems/2018-july/image-13.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      July brings holidays and fun,<br>
+      A time for relaxing in the sun;<br>
+      Leaving work and worries far behind,<br>
+      Go paddle with the children to unwind.<br>
+      There’s no need to be stripped of cash,<br>
+      On expensive trips to make a splash;<br>
+      You have it all outside your door,<br>
+      Plenty places here you can explore.<br>
+      Stop rushing around – just stand and stare,<br>
+      Soak up the beauty that lies there;<br>
+      This is the spot where you belong,<br>
+      The place you chose to make home.<br>
+      In your heart nothing can compare,<br>
+      With all the happiness you have there;<br>
+      Why go away to other lands,<br>
+      You have it all here in your hands.<br>
+      Just down tools and pack them all away,<br>
+      Put on your glad rags and holiday;<br>
+      With ice cream, meals out, a bus to town,<br>
+      Your holiday at home won’t let you down.<br>
+      By Eila Webster<br>
+      Summer Relaxation & Fun
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

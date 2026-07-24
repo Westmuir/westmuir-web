@@ -1,0 +1,89 @@
+---
+layout: "base.webc"
+title: "2019 November"
+poemTitle: "2019 November"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2019-november/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2019-november/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2019-november/image-6.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Tattie time is roon again , auld claes get lookit oot,
+      So aince again it gets the air – my yellow trouser suit.
+      The sun for us it fairly shone, I got my pinny aff;
+      But my jacket it flew ower my heid , and Ena had tae laugh.
+    </p>
+
+    <p>
+      My yellow bum stuck in the air, I very nearly drappit,
+      Being ane o’ the modest kind, I like my backend happit.
+      Yet the lads micht fancy me , the thought warmed my heart;
+      But ae look gave them the jaundice, a’ the lads upon the cart.
+    </p>
+
+    <p>
+      I dinna really ken the lads, that’s throwin creels this year;
+      They are a lot o’ swinginn guys wi’ a’ their grand mod gear.
+      In pink cords and fancy shirts, hair curly, straight and lang;
+      Reedie fair turns the lassies on, we sic a glamourous gang.
+    </p>
+
+    <p>
+      But there’s a lad that I ken fine, my heart throb Willie Hume;
+      And every time he smiles to me, my heart sings a love tune.
+      Noo Harry ... he likes to grab a leg, ... it is a great temptation;
+      A lassie in a mini skirt could be his ruination.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2019-november/image-2.png" alt="" />
+    <img src="/poems/2019-november/image-3.png" alt="" />
+    <img src="/poems/2019-november/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Then there’s Bob ... a cheery chap, though you wouldna’ ca’ him
+      bonny;
+      He wears his bonnet tae the side, just like an ‘onion Johnie.’
+      In a’ the years I hae come here, I’ve never seen the like;
+    </p>
+
+    <p>
+      For maist days its been warm, and the sun for us would shine,
+      Makin it a pleasure to work here this tattie time.
+      So here’s ‘Guid Health’ to Fermer Bill, and ‘Guid Luck’ to the
+      Bairn;
+    </p>
+
+    <p>
+      Hoo I will miss your jolly crew and wonder hoo you’re farin.
+      But though this season’s near an end if I am spared and weel,
+      Next year will see me back again pickin tatties on my creel.
+      Reedie’s Tatties 1971
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2019-november/image-5.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

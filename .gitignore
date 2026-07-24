@@ -1,7 +1,7 @@
 node_modules/
 _site/
 .cache/
-poems/
+/poems/
 pdf-source/
 
 purge-report*

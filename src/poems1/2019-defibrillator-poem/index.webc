@@ -1,0 +1,77 @@
+---
+layout: "base.webc"
+title: "2019 Defibrillator Poem"
+poemTitle: "2019 Defibrillator Poem"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2019-defibrillator-poem/image-0.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-1.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-2.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-3.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-4.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-5.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-6.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-7.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-8.png" alt="" />
+     <img src="/src/poems/2019-defibrillator-poem/image-9.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      When Westmuir Defibrillator Group joined up,<br>
+      With the Community Heartbeat Trust ;<br>
+      In the old phone box at the Shoppie,<br>
+      To give your support now is a MUST.<br>
+      Getting it up and running,<br>
+      Would be a great day for us all;<br>
+      If everyone gave their very best,<br>
+      Whether it be large or small.<br>
+      Financial help is still needed,<br>
+      And gifts of kind are welcome too;<br>
+      Ideas to brighten up the site,<br>
+      To make it fresh and new.<br>
+      No longer a sleepy village,<br>
+      We could save a life you see;<br>
+      Having the equipment here,<br>
+      A great achievement you’ll agree.<br>
+      So throw your whole self in it,<br>
+      Work on it with a smile;<br>
+      I know you won’t regret it,<br>
+      When you go that extra mile.<br>
+      Westmuir’s Defibrillator<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

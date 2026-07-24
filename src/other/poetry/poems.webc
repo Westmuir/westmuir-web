@@ -9,7 +9,7 @@ const pagination = {
 const eleventyExcludeFromCollections = true;
 
 const permalink = function(data) {
-	return `/other/poems/${this.slugify(data.poem.title)}/`;
+	return `/other/poems/${this.slugify(data.poem.title)+'-1'}/`;
 };
 
 const eleventyComputed = {

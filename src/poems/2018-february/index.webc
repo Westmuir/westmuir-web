@@ -1,0 +1,91 @@
+---
+layout: "base.webc"
+title: "2018 February"
+poemTitle: "2018 February"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2018-february/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2018-february/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2018-february/image-6.png" alt="" />
+    <img src="/poems/2018-february/image-8.png" alt="" />
+    <img src="/poems/2018-february/image-10.png" alt="" />
+    <img src="/poems/2018-february/image-12.png" alt="" />
+    <img src="/poems/2018-february/image-14.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      February brings a special gift,
+      To dark days of ice and snow;
+      Down in the bosom of the earth,
+      Dormant seed begins to grow.
+    </p>
+
+    <p>
+      Spring will come full of glory,
+      It’s all mapped out and planned;
+      It’s there for us and given free,
+      By our Heavenly Fathers’ hand.
+    </p>
+
+    <p>
+      As the seasons go on unchanging,
+      We never give it a thought you see;
+      We keep complaining about the weather,
+      More ungrateful than we ought to be.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2018-february/image-2.png" alt="" />
+    <img src="/poems/2018-february/image-3.png" alt="" />
+    <img src="/poems/2018-february/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      We need a Higher Hand to guide us,
+      One that can benefit us all;
+      Warm summers and cold winters,
+      A fresh Spring and pleasant Fall.
+    </p>
+
+    <p>
+      We don’t need to lift a finger,
+      As dawn opens our sleepy eyes;
+      Every day in our life’s a bonus,
+      And could bring a nice surprise.
+    </p>
+
+    <p>
+      Accept your gift and be grateful,
+      It’s done for us all with Love;
+      Making our life on earth sweeter,
+      This Special Gift sent from Above.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2018-february/image-5.png" alt="" />
+    <img src="/poems/2018-february/image-7.png" alt="" />
+    <img src="/poems/2018-february/image-9.png" alt="" />
+    <img src="/poems/2018-february/image-11.png" alt="" />
+    <img src="/poems/2018-february/image-13.png" alt="" />
+    <img src="/poems/2018-february/image-15.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

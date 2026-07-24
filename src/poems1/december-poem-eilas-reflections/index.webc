@@ -1,0 +1,119 @@
+---
+layout: "base.webc"
+title: "December Poem -Eila's Reflections"
+poemTitle: "December Poem -Eila's Reflections"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <!-- No images extracted -->
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      It’s December and I am remembering<br>
+      The promise that I made last year<br>
+      To write a special poem about each month<br>
+      For the Westmuir Web Page here.<br>
+      I always tried to make them interesting<br>
+      Touching on things you may not know<br>
+      Yet keeping to the appropriate season<br>
+      And how country folk fared long ago<br>
+      I found it was a really big challenge<br>
+      A bit of research, much thought, but fun<br>
+      The great feeling too of achievement<br>
+      When I saw the finished article spun.<br>
+      It soon put a new spark into my life<br>
+      Being a small part of this great team<br>
+      I am willing to help out in any way<br>
+      Because I hold them in high esteem.<br>
+      Long before December month arrives<br>
+      Shops were stacked with Christmas fare<br>
+      Soon Santa sits in all his splendour<br>
+      Beside a large mountain of toys there<br>
+      Posters appear – ‘Book your Holidays’<br>
+      Time to jet off and soak up the sun;<br>
+      Celebrating your winter break now<br>
+      Being pampered and having fun.<br>
+      Eila’s December Reflections	Eila’s December Reflections	Eila’s December Reflections	Eila’s December Reflections<br>
+      It’s December and I am remembering<br>
+      To write a special poem about each month<br>
+      I always tried to make them interesting<br>
+      know;<br>
+      Yet keeping to the appropriate season<br>
+      And how country folk fared long ago.<br>
+      A bit of research, much thought, but fun;<br>
+      .<br>
+      Being a small part of this great team;<br>
+      Long before December month arrives<br>
+      Shops were stacked with Christmas fare;<br>
+      large mountain of toys there.<br>
+      ‘Book your Holidays’<br>
+      Far different from days when I was young<br>
+      We still worked here on Christmas Day<br>
+      In Scotland there were no holidays then<br>
+      till we stopped off on Hogmanay<br>
+      Things gradually changed after the war years<br>
+      Soon more breaks became common place<br>
+      But the true meaning of this festive month<br>
+      has gone without leaving a trace<br>
+      It could be the result of modern traits<br>
+      Living the fast life never stopping a minute<br>
+      There’s so much out there every day<br>
+      To see and do and cram in it<br>
+      No time to ponder, relax and reflect<br>
+      As the years keep speeding on their way<br>
+      Still grasping at the Earthly pleasures<br>
+      Lacking the Celestial joy of Christmas Day<br>
+      Eila’s December Reflections	Eila’s December Reflections	Eila’s December Reflections	Eila’s December Reflections<br>
+      Far different from days when I was young<br>
+      We still worked here on Christmas Day;<br>
+      In Scotland there were no holidays then<br>
+      till we stopped off on Hogmanay.<br>
+      Things gradually changed after the war years<br>
+      s became common place;<br>
+      But the true meaning of this festive month<br>
+      has gone without leaving a trace.<br>
+      sult of modern traits<br>
+      Living the fast life never stopping a minute;<br>
+      There’s so much out there every day<br>
+      o see and do and cram in it.<br>
+      No time to ponder, relax and reflect<br>
+      As the years keep speeding on their way;<br>
+      till grasping at the Earthly pleasures<br>
+      Lacking the Celestial joy of Christmas Day.<br>
+      Eila Webster<br>
+      December 2015
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

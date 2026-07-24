@@ -1,0 +1,88 @@
+---
+layout: "base.webc"
+title: "2016 April"
+poemTitle: "2016 April"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2016-april/image-0.png" alt="" />
+     <img src="/src/poems/2016-april/image-1.png" alt="" />
+     <img src="/src/poems/2016-april/image-2.png" alt="" />
+     <img src="/src/poems/2016-april/image-3.png" alt="" />
+     <img src="/src/poems/2016-april/image-4.png" alt="" />
+     <img src="/src/poems/2016-april/image-5.png" alt="" />
+     <img src="/src/poems/2016-april/image-6.png" alt="" />
+     <img src="/src/poems/2016-april/image-7.png" alt="" />
+     <img src="/src/poems/2016-april/image-8.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      It’s Official! Spring is here<br>
+      What we’ve been waiting for;<br>
+      Days of blue skies and sunshine<br>
+      Right outside our front door.<br>
+      Birds singing the dawn chorus<br>
+      Bees venture out from the hive,<br>
+      Buds are bursting all around<br>
+      It feels good to be alive.<br>
+      Throwing off the winter gloom<br>
+      As daylight hours increase;<br>
+      You get a surge of energy<br>
+      And troubles seem to cease.<br>
+      We take so much for granted<br>
+      Seasons change without a thought;<br>
+      Do we appreciate this timely gift<br>
+      As gratefully as we ought?<br>
+      We need rain as well as sunshine<br>
+      To get plants and seeds to grow;<br>
+      Frost is sent to kill some buds<br>
+      Stopping fruit trees overflow.<br>
+      Summer heat ripens the berries<br>
+      Drying root crops for winter store;<br>
+      Just a few examples here<br>
+      Think about it you’ll find more.<br>
+      No human hand is able<br>
+      To do what must be done;<br>
+      To keep things working smoothly<br>
+      Here on earth for everyone.<br>
+      We need this power to guide us<br>
+      Even on hard paths it would seem;<br>
+      Let us be forever grateful<br>
+      For the laws that are supreme.<br>
+      Spring …. April 2016<br>
+      Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

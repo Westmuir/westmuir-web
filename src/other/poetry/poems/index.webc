@@ -6,91 +6,60 @@ headerAlt: "abstract background"
 headerImage: "/other/poetry/banner-poet.avif"
 ---
 
-<div class="breakout">
-  <img class="pull-left" src="/other/poetry/eila-webster.avif" alt="" />
-  <div>
-    Born in 1925, Eila Webster has spent her entire life living in Westmuir.
-    Blessed with a fine memory, Eila was encouraged to write us a regular
-    monthly poem which we featured on our website starting at Christmas in 2014.
-    Since then Eila has kept on writing for us and we are now in our 5th year of
-    capturing this wonderful collection of her poetry for all to enjoy !
-  </div>
-  <div>
-    As well as her poems listed below, you can also read about Eila the Pianist,
-    the Poet, the Performer, the Published Writer and multiple Prize Winner as
-    she recalls local people and memorable events decade by decade. Now 95 years
-    young, this is a fascinating and poignant personal account of a lifetime in
-    Westmuir and is not to be missed.
-  </div>
+<div class="content-grid flow">
+  <section class="full-width">
+    <div class="content">
+      <img class="pull-left" src="/other/poetry/eila-webster.avif" alt="" />
+      <div class="content-text">
+        Born in 1925, Eila Webster has spent her entire life living in Westmuir.
+        Blessed with a fine memory, Eila was encouraged to write us a regular
+        monthly poem which we featured on our website starting at Christmas in
+        2014. Since then Eila has kept on writing for us and we are now in our
+        5th year of capturing this wonderful collection of her poetry for all to
+        enjoy !
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content-list-grid">
+      <!-- High-performance collection loop natively bound in WebC 0.12 -->
+      <template webc:for="post of $data.collections.writtenPoems" webc:nokeep>
+        <!-- Left Track: Displays the Month/Year date tracker -->
+        <div @text="post.data.title"></div>
+
+        <!-- Right Track: Links cleanly to your responsive 5-column page layout -->
+        <a
+          :class="post.data.endOfYear ? 'end-of-year' : ''"
+          :href="post.url"
+          @text="post.data.poemTitle || post.data.title"
+        ></a>
+      </template>
+    </div>
+  </section>
 </div>
 
-<div class="full-width">
-  <h2 class="ui-h2">Test</h2>
+<style>
+  .end-of-year {
+    margin-block-end: 2rem;
+  }
+  .pull-left {
+    float: left;
+    margin-inline-end: 1.5rem;
+    margin-block-end: 0.5rem;
+  }
 
-  <poem-grid title="thoughts for the new year" author="Eila Webster"
-    ><!-- Header Images -->
-    <img src="/images/poems/happy-2020.png" alt="happy-2020" slot="header-tl" />
-    <img src="/images/poems/happy-2020.png" alt="happy-2020" slot="header-tr" />
-    <!-- Column 1 Images (15%) -->
-    <div slot="col-1-images">
-      <img
-        src="/images/poems/count-your-blessings.png"
-        alt="count-your-blessings"
-      />
-      <img src="/images/poems/all-good-gifts.png" alt="all-good-gifts" />
-    </div>
-    <!-- Column 2 Text -->
-    <div slot="col-2-text">
-      <p>
-        As the old year slips away, A new day takes its place; A yearly gift
-        from the Lord, Given to the Human Race.
-      </p>
-      <p>
-        We take it all for granted, We don’t give it a thought; Yet we should be
-        so grateful, And give thanks as we ought.
-      </p>
-      <p>
-        Without Divine help we are powerless, So take the time to pray; And give
-        a humble Thank you, That’s all you need to say.
-      </p>
-      <p>
-        You’ll enjoy the year ahead, And all the blessings we are given; Make
-        the most of natural gifts, Sent down with love from Heaven.
-      </p>
-    </div>
-    <!-- Column 3 Middle Images -->
-    <div slot="col-3-images">
-      <img src="/images/poems/sparkler.png" alt="sparkler" />
-      <img src="/images/poems/every-good.png" alt="Every Good" />
-      <img src="/images/poems/taste-and-see.png" alt="Taste and see" />
-      <img src="/images/poems/interest-ability.png" alt="Interest ability" />
-    </div>
-    <!-- Column 4 Text -->
-    <div slot="col-4-text">
-      <p>
-        Why keep crying out for more’ A simple life is best; Just have faith in
-        your Maker, And you will be truly blessed.
-      </p>
-      <p>
-        May the days that lie ahead, Give wings to your feet; Making this a
-        special year, That is wonderfully sweet. Thoughts for the New Year
-      </p>
-    </div>
-    <!-- Column 5 Images (15%) -->
-    <div slot="col-5-images">
-      <img src="/images/poems/keep-your-head-up.png" alt="Keep your head" />
-      <img
-        src="/images/poems/the-best-preparation.png"
-        alt="The best preparation"
-      />
-    </div>
-  </poem-grid>
-
-  <style>
-    .pull-left {
-      float: left;
-      margin-inline-end: 1.5rem;
-      margin-block-end: 0.5rem;
+  .content-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    a {
+      color: light-dark(var(--teal-10), var(--teal-4));
     }
-  </style>
-</div>
+
+    div:nth-child(odd) {
+      justify-self: end;
+      padding-right: 3rem;
+    }
+  }
+</style>

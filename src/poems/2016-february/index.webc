@@ -1,0 +1,141 @@
+---
+layout: "base.webc"
+title: "2016 February"
+poemTitle: "2016 February"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2016-february/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2016-february/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2016-february/image-6.png" alt="" />
+    <img src="/poems/2016-february/image-8.png" alt="" />
+    <img src="/poems/2016-february/image-10.png" alt="" />
+    <img src="/poems/2016-february/image-12.png" alt="" />
+    <img src="/poems/2016-february/image-14.png" alt="" />
+    <img src="/poems/2016-february/image-16.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      The first month of the year has gone
+      Does it hold precious memories,
+      Or filled with doom and gloom
+      Through the dark winter days?
+    </p>
+
+    <p>
+      It really all depends on how
+      You chose to spend the hours;
+      Sitting deep in total misery
+      Or out looking for the flowers.
+    </p>
+
+    <p>
+      The pretty snowdrops and aconite
+      Can cheer hearts with their show;
+      Still blooming to perfection
+      No matter what the elements throw
+    </p>
+
+    <p>
+      The sun is shining somewhere
+      And ‘twill shine here, as before;
+      The waiting will be worth it
+      We will enjoy it all the more.
+    </p>
+
+    <p>
+      February Thoughts	February Thoughts	February Thoughts	February Thoughts
+      The first month of the year has gone
+      The pretty snowdrops and aconite
+      ;
+    </p>
+
+    <p>
+      No matter what the elements throw.
+      In the past folk had the patience
+      So lacking in this modern age
+      With no time to enjoy the day
+    </p>
+
+    <p>
+      As they turn another page
+      Nature doesn’t work that way
+      The old rules still hold fast
+      The four seasons come and go
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2016-february/image-2.png" alt="" />
+    <img src="/poems/2016-february/image-3.png" alt="" />
+    <img src="/poems/2016-february/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      As they have done in the past
+      Man has changed so many things
+      With power and rules they scheme
+      Yet are unable to change the laws
+    </p>
+
+    <p>
+      The ones that are Supreme
+      And this is as it should be
+      We still need Our Father’s hand
+      To guide us on our journey
+    </p>
+
+    <p>
+      Through life spent in our birth land
+      February Thoughts	February Thoughts	February Thoughts	February Thoughts
+      In the past folk had the patience
+      So lacking in this modern age;
+    </p>
+
+    <p>
+      With no time to enjoy the day
+      As they turn another page.
+      Nature doesn’t work that way
+      The old rules still hold fast;
+    </p>
+
+    <p>
+      The four seasons come and go
+      As they have done in the past.
+      changed so many things
+      With power and rules they scheme;
+    </p>
+
+    <p>
+      Yet are unable to change the laws
+      The ones that are Supreme.
+      And this is as it should be
+      We still need Our Father’s hand;
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2016-february/image-5.png" alt="" />
+    <img src="/poems/2016-february/image-7.png" alt="" />
+    <img src="/poems/2016-february/image-9.png" alt="" />
+    <img src="/poems/2016-february/image-11.png" alt="" />
+    <img src="/poems/2016-february/image-13.png" alt="" />
+    <img src="/poems/2016-february/image-15.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

@@ -1,0 +1,92 @@
+---
+layout: "base.webc"
+title: "2020 March"
+poemTitle: "2020 March"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2020-march/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2020-march/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2020-march/image-6.png" alt="" />
+    <img src="/poems/2020-march/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      As February comes to an end,
+      Tears just fill my eyes;
+      On the 20th of this month,
+      I turned…. Ninety Five!
+    </p>
+
+    <p>
+      I never thought I’d cope so long,
+      I’ve known some bad times now and then;
+      But after a rest I battled back,
+      More than ready - new rhymes to pen!
+    </p>
+
+    <p>
+      Lately, I seem to be slowing down,
+      But I still hope to carry on;
+      With some assistance from above,
+      Thoughts come ‘ I’m not alone’.
+    </p>
+
+    <p>
+      As we go forward into March,
+      Temperatures may rise a degree or two;
+      Let’s go on out and find fresh air,
+      A walk is really good for you.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2020-march/image-2.png" alt="" />
+    <img src="/poems/2020-march/image-3.png" alt="" />
+    <img src="/poems/2020-march/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Unseen the earth is waking us,
+      As seeds sewn begin to grow;
+      Pop their heads up through the soil,
+      As snowdrops put on a show.
+    </p>
+
+    <p>
+      But winter isn’t over yet,
+      It could change to ice and rain;
+      March month is unpredictable,
+      It can really be a pain.
+    </p>
+
+    <p>
+      But some years it can surprise us,
+      Let’s hope this is the one ;
+      That chases all the blues away,
+      To bring joy to everyone.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2020-march/image-5.png" alt="" />
+    <img src="/poems/2020-march/image-7.png" alt="" />
+    <img src="/poems/2020-march/image-9.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

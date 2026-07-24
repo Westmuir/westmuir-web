@@ -1,0 +1,100 @@
+---
+layout: "base.webc"
+title: "2017 May"
+poemTitle: "2017 May"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2017-may/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2017-may/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2017-may/image-6.png" alt="" />
+    <img src="/poems/2017-may/image-8.png" alt="" />
+    <img src="/poems/2017-may/image-10.png" alt="" />
+    <img src="/poems/2017-may/image-12.png" alt="" />
+    <img src="/poems/2017-may/image-14.png" alt="" />
+    <img src="/poems/2017-may/image-16.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      A young maid stood in the garden,
+      Filled with wonder in the sun;
+      That shone down on the brilliant flowers,
+      As she studied everyone.
+    </p>
+
+    <p>
+      She bent and picked a blush pink rose,
+      And as she held the stem;
+      She gazed upon the dewdrop there,
+      Shining brightly like a gem.
+    </p>
+
+    <p>
+      She scanned the purple heather hills,
+      The valley lush and green;
+      And shining like a silver band,
+      The sunlight on a stream.
+    </p>
+
+    <p>
+      She looked up at the fleecy clouds,
+      Skimming o’er the blue;
+      Butterflies all fluttering round,
+      Was fascinating for her too .
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2017-may/image-2.png" alt="" />
+    <img src="/poems/2017-may/image-3.png" alt="" />
+    <img src="/poems/2017-may/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Why do I tell this simple tale,
+      Of things so common place?
+      A night of stars, a garden gay,
+      Or the rapture on a face.
+    </p>
+
+    <p>
+      These things we take for granted,
+      Often unnoticed you will find;
+      Unless by someone like this maid,
+      Who until today was blind.
+    </p>
+
+    <p>
+      The skill of a surgeon gave her sight,
+      And brought this thought to me;
+      Just how little we appreciate the gifts,
+      The ones we are given free.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2017-may/image-5.png" alt="" />
+    <img src="/poems/2017-may/image-7.png" alt="" />
+    <img src="/poems/2017-may/image-9.png" alt="" />
+    <img src="/poems/2017-may/image-11.png" alt="" />
+    <img src="/poems/2017-may/image-13.png" alt="" />
+    <img src="/poems/2017-may/image-15.png" alt="" />
+    <img src="/poems/2017-may/image-17.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

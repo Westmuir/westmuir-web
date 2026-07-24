@@ -1,0 +1,93 @@
+---
+layout: "base.webc"
+title: "2018 October"
+poemTitle: "2018 October"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2018-october/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2018-october/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2018-october/image-6.png" alt="" />
+    <img src="/poems/2018-october/image-8.png" alt="" />
+    <img src="/poems/2018-october/image-10.png" alt="" />
+    <img src="/poems/2018-october/image-12.png" alt="" />
+    <img src="/poems/2018-october/image-14.png" alt="" />
+    <img src="/poems/2018-october/image-16.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Farming is so healthy and rewarding,
+      For as the soil you till;
+      You are living close to nature,
+      As you perform our Saviour’s will.
+    </p>
+
+    <p>
+      We’ve been put upon this planet,
+      To cultivate the land;
+      Sowing, tending, harvesting,
+      Guided by our Maker’s hand.
+    </p>
+
+    <p>
+      He who guides the growing force,
+      The sunshine and the rain;
+      Filling streams with water,
+      And swelling ears of grain.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2018-october/image-2.png" alt="" />
+    <img src="/poems/2018-october/image-3.png" alt="" />
+    <img src="/poems/2018-october/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Ripening fruit and vegetables,
+      Grown for us all to eat;
+      The grass for sheep and cattle,
+      A source of milk and meat.
+    </p>
+
+    <p>
+      Wool for coats and blankets,
+      To keep out the winter chill;
+      If we work with our Provider,
+      He will all our needs fulfil.
+    </p>
+
+    <p>
+      Yes! Farming families down the years,
+      Have been our Earth’s mainstay;
+      So we thank our Lord for the Harvest,
+      In our heartfelt prayers today.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2018-october/image-5.png" alt="" />
+    <img src="/poems/2018-october/image-7.png" alt="" />
+    <img src="/poems/2018-october/image-9.png" alt="" />
+    <img src="/poems/2018-october/image-11.png" alt="" />
+    <img src="/poems/2018-october/image-13.png" alt="" />
+    <img src="/poems/2018-october/image-15.png" alt="" />
+    <img src="/poems/2018-october/image-17.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

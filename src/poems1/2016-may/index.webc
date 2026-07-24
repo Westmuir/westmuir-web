@@ -1,0 +1,88 @@
+---
+layout: "base.webc"
+title: "2016 May"
+poemTitle: "2016 May"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
+  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+
+  <!-- Extracted Assets Reference Library:
+       Rearrange these tags into their correct slots below!
+     <img src="/src/poems/2016-may/image-0.png" alt="" />
+     <img src="/src/poems/2016-may/image-1.png" alt="" />
+     <img src="/src/poems/2016-may/image-2.png" alt="" />
+     <img src="/src/poems/2016-may/image-3.png" alt="" />
+     <img src="/src/poems/2016-may/image-4.png" alt="" />
+     <img src="/src/poems/2016-may/image-5.png" alt="" />
+     <img src="/src/poems/2016-may/image-6.png" alt="" />
+     <img src="/src/poems/2016-may/image-7.png" alt="" />
+     <img src="/src/poems/2016-may/image-8.png" alt="" />
+     <img src="/src/poems/2016-may/image-9.png" alt="" />
+     <img src="/src/poems/2016-may/image-10.png" alt="" />
+     <img src="/src/poems/2016-may/image-11.png" alt="" />
+     <img src="/src/poems/2016-may/image-12.png" alt="" />
+  -->
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      I think of May as blossom time<br>
+      Trees all decked in pink and white;<br>
+      In Parks and lining pathways<br>
+      They create a breath-taking sight.<br>
+      Bringing thought of first love<br>
+      Fragile, wonderful and new;<br>
+      It didn’t matter how it ended<br>
+      The memories live on all life through.<br>
+      There is no emotion greater<br>
+      Even though it ends in tears;<br>
+      It is something you don’t feel again<br>
+      Through all your adult years.<br>
+      Love in later years is different<br>
+      May brings a bright new start;<br>
+      Now is the time to take control<br>
+      Yes! We can all take part.<br>
+      It doesn’t matter about age<br>
+      Or all the silver in your hair;<br>
+      May gives that vital spark<br>
+      To all hearts beating there.<br>
+      Women would wash their faces<br>
+      In dew on the 1st of May;<br>
+      T’was said to make them beautiful<br>
+      A ritual unknown today.<br>
+      Studying the months is fascinating<br>
+      Each one has a tale to tell;<br>
+      Pulling you closer to nature<br>
+      To find they all serve you well.<br>
+      May Reflections<br>
+      By Eila Webster
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      -- 1 of 1 --
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+  </div>
+
+</poem-grid>

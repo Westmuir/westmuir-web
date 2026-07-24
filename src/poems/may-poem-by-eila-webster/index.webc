@@ -1,0 +1,85 @@
+---
+layout: "base.webc"
+title: "May Poem by Eila Webster"
+poemTitle: "May Poem by Eila Webster"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/may-poem-by-eila-webster/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/may-poem-by-eila-webster/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/may-poem-by-eila-webster/image-6.png" alt="" />
+    <img src="/poems/may-poem-by-eila-webster/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      May month is the stepping stone
+      into Summer from the Spring.
+      Covering trees with fragrant blossom
+      and feathered friends are on the wing.
+    </p>
+
+    <p>
+      Time to hang up overcoat and scarf
+      get outside now and explore.
+      There is a wealth of interest there
+      Lying right outside your front door.
+    </p>
+
+    <p>
+      Butterflies look as if they are dancing
+      to the humming of the bumble bees.
+      The birds are all singing their dawn
+      chorus
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/may-poem-by-eila-webster/image-2.png" alt="" />
+    <img src="/poems/may-poem-by-eila-webster/image-3.png" alt="" />
+    <img src="/poems/may-poem-by-eila-webster/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      that wafts on the sweet perfumed breeze .
+      Bulbs are bursting into flower
+      showing many different kinds of hue.
+      It is nature's free gift to everyone
+    </p>
+
+    <p>
+      a real Spring tonic for me and you.
+      From this modern hectic lifestyle now
+      Stop! and linger - then take note
+      of the beauty all around you here
+    </p>
+
+    <p>
+      in your own special little spot.
+      You'll feel the tension in your body ease
+      refreshed and happy ready for the day
+      as you find out life can be quite sweet
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/may-poem-by-eila-webster/image-5.png" alt="" />
+    <img src="/poems/may-poem-by-eila-webster/image-7.png" alt="" />
+    <img src="/poems/may-poem-by-eila-webster/image-9.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

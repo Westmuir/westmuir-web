@@ -17,11 +17,9 @@ import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
 import fs from 'node:fs';
-import OpenProps from 'open-props';
 import postcss from 'postcss';
 import postcssCustomMedia from 'postcss-custom-media';
 import postcssImport from 'postcss-import';
-import postcssJit from 'postcss-jit-props';
 import * as sass from 'sass';
 import pluginCollections from './_config/collections.js';
 import pluginFilters from './_config/filters.js';
@@ -81,11 +79,11 @@ export default async function (eleventyConfig) {
 
   // Use the native HTML transform plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    // Crucial for Cloudflare Build Cache
     outputDir: '.cache/@11ty/images/',
     urlPath: '/img/',
-    // Set your global image configurations here
-    formats: ['webp', 'avif', 'jpeg'],
+
+    // 🚀 DROP LATEST JPEG: WebP and AVIF handle 100% of modern web layout demands!
+    formats: ['avif', 'webp'],
     widths: [1200, 'auto'],
     htmlOptions: {
       imgAttributes: {

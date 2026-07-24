@@ -1,0 +1,97 @@
+---
+layout: "base.webc"
+title: "2017 March"
+poemTitle: "2017 March"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2017-march/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2017-march/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2017-march/image-6.png" alt="" />
+    <img src="/poems/2017-march/image-8.png" alt="" />
+    <img src="/poems/2017-march/image-10.png" alt="" />
+    <img src="/poems/2017-march/image-12.png" alt="" />
+    <img src="/poems/2017-march/image-14.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      December was fresh and open,
+      And January was quite mild;
+      Mostly dry and sunny days,
+      Although gale force winds were wild.
+    </p>
+
+    <p>
+      Our seasons are all changing,
+      Some days it feels like spring;
+      The sunshine is now warming up,
+      And the birds are on the wing.
+    </p>
+
+    <p>
+      To be outdoors is tempting,
+      Yes! optimists may be forgiven;
+      For thinking winter is at an end,
+      Cast your mind back to 1947.
+    </p>
+
+    <p>
+      After a mild start in January,
+      Came blocked roads for weeks on end;
+      Snow seemingly piled up to the sky,
+      It nearly drove folk round the bend!
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2017-march/image-2.png" alt="" />
+    <img src="/poems/2017-march/image-3.png" alt="" />
+    <img src="/poems/2017-march/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      ‘This won’t happen now’ the experts say,
+      New equipment will keep roads clear;
+      But no human hand is able to,
+      When storms unexpectedly appear.
+    </p>
+
+    <p>
+      A higher power is in control,
+      And we must accept what comes;
+      And like the birds be grateful,
+      For the day’s we’re given crumbs.
+    </p>
+
+    <p>
+      Check the months on the calendar,
+      Spring will come in its own time;
+      All the sweeter for the waiting,
+      And bringing an end to this rhyme.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2017-march/image-5.png" alt="" />
+    <img src="/poems/2017-march/image-7.png" alt="" />
+    <img src="/poems/2017-march/image-9.png" alt="" />
+    <img src="/poems/2017-march/image-11.png" alt="" />
+    <img src="/poems/2017-march/image-13.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

@@ -1,0 +1,89 @@
+---
+layout: "base.webc"
+title: "2016 September"
+poemTitle: "2016 September"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2016-september/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2016-september/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2016-september/image-6.png" alt="" />
+    <img src="/poems/2016-september/image-8.png" alt="" />
+    <img src="/poems/2016-september/image-10.png" alt="" />
+    <img src="/poems/2016-september/image-12.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      I look forward to September
+      With its warm mellow days;
+      Trees full of radiant colours
+      Breathtaking, worthy of praise.
+    </p>
+
+    <p>
+      Perfect time to take a Holiday
+      No need to travel far;
+      Enjoy the beauty of your Homeland
+      Easily reached by train or car.
+    </p>
+
+    <p>
+      Why struggle with loads of luggage,
+      Getting passports booking a plane;
+      Exchanging currency, getting jags
+      Gives you lots of stress that’s plain.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2016-september/image-2.png" alt="" />
+    <img src="/poems/2016-september/image-3.png" alt="" />
+    <img src="/poems/2016-september/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      You can be in another world
+      Just staying a few miles away;
+      There’s so much beauty lurking there
+      Wherever you choose to stay.
+    </p>
+
+    <p>
+      Holidays should not be competitive
+      Boasting to others where you’ve been;
+      They are meant to restore and relax you
+      By the restful sights you’ve seen.
+    </p>
+
+    <p>
+      Coming at this time of year
+      Showing nature at its best;
+      September in all its glory
+      Stands well above the rest .
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2016-september/image-5.png" alt="" />
+    <img src="/poems/2016-september/image-7.png" alt="" />
+    <img src="/poems/2016-september/image-9.png" alt="" />
+    <img src="/poems/2016-september/image-11.png" alt="" />
+    <img src="/poems/2016-september/image-13.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

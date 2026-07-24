@@ -1,0 +1,97 @@
+---
+layout: "base.webc"
+title: "2016 June"
+poemTitle: "2016 June"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2016-june/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2016-june/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2016-june/image-6.png" alt="" />
+    <img src="/poems/2016-june/image-8.png" alt="" />
+    <img src="/poems/2016-june/image-10.png" alt="" />
+    <img src="/poems/2016-june/image-12.png" alt="" />
+    <img src="/poems/2016-june/image-14.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Now that we are into June
+      The year is almost half way through;
+      Thinking back to resolutions made
+      Have you all learned something new?
+    </p>
+
+    <p>
+      Thoughts are now fixed on holidays
+      All the excitement out there to find;
+      But when the short break is over
+      It’s just back to the daily grind.
+    </p>
+
+    <p>
+      To earn a wage may be necessary
+      But what is important too;
+      Is to find out that special talent
+      You can cultivate all life through.
+    </p>
+
+    <p>
+      People were meant to be happy
+      Enjoying a full interesting life;
+      Proud of all their attainments
+      Not bogged down with care and strife.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2016-june/image-2.png" alt="" />
+    <img src="/poems/2016-june/image-3.png" alt="" />
+    <img src="/poems/2016-june/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      But if you have no real incentive
+      Holding new interests to fill your days;
+      Keeping your grey cells active
+      In a great many different ways.
+    </p>
+
+    <p>
+      As you settle down into a rut
+      You would soon fail to realise;
+      How fast the years are passing
+      ‘til a slow bent frame catches your eyes.
+    </p>
+
+    <p>
+      Fulfil all your ambitions now
+      You’ll succeed if you really try;
+      You have lost the first five months
+      Don’t let the whole year pass you by.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2016-june/image-5.png" alt="" />
+    <img src="/poems/2016-june/image-7.png" alt="" />
+    <img src="/poems/2016-june/image-9.png" alt="" />
+    <img src="/poems/2016-june/image-11.png" alt="" />
+    <img src="/poems/2016-june/image-13.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>
