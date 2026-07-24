@@ -63,6 +63,8 @@
     background-color: antiquewhite;
     padding-inline: 1rem;
     font-family: var(--font-handwritten);
+    border-top-left-radius: var(--radius-2);
+    border-top-right-radius: var(--radius-2);
   }
 
   .header-left-images,
@@ -87,6 +89,8 @@
     background-color: antiquewhite;
     padding-inline: 1rem;
     font-family: "Comic Neue";
+    border-bottom-left-radius: var(--radius-2);
+    border-bottom-right-radius: var(--radius-2);
   }
   .col-outer,
   .col-inner {
@@ -99,14 +103,16 @@
     }
   }
 
-  /* Target the injected slot container div directly */
+  /* Update your inner slot targets to explicitly enforce scaling boundaries */
   .col-outer.col-left-pics div,
   .col-inner.col-mid-pics div,
   .col-outer.col-right-pics div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%; /* Force this inner div to match the full height too */
+    height: 100%;
+    min-height: -webkit-fill-available; /* Ensures deep layout filling */
+    gap: 1.5rem; /* Fallback padding if there's no extra space to distribute */
   }
   /* Target the middle column wrapper or images directly */
   .col-mid-pics img,
@@ -116,6 +122,7 @@
 
     /* Set your preferred height ceiling (e.g., 300px to 400px works great for square/landscape graphics) */
     max-height: 200px;
+    max-width: 200px;
 
     /* Contain preserves the aspect ratio without cropping anything out */
     object-fit: contain;
@@ -123,26 +130,12 @@
     /* Optional: Center the graphic horizontally if it shrinks away from edges */
     margin: 0 auto;
   }
-  /* Column 5 wrapper stretches to full grid height */
-  .col-5-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-  }
 
   /* Keeps your column 5 image container flexible, but lets it shrink slightly if the text needs room */
   .col-right-pics {
     flex-grow: 1;
     /* Your existing space-between rules stay here and work perfectly! */
   }
-
-  /* Formats the signature cleanly at the bottom right corner */
-  .col-5-author {
-    margin-top: 1.5rem;
-    text-align: right;
-  }
-
   /* Make sure internal content assets resize properly */
   .grid-body img {
     width: 100%;
@@ -161,13 +154,6 @@
     white-space: pre-line;
   }
 
-  /* Row 3: Footer Layout */
-  .row-footer {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px dashed #ccc;
-    text-align: center;
-  }
   .signature {
     font-style: italic;
     font-weight: bold;
@@ -210,20 +196,19 @@
       flex-direction: row;
     }
   }
-  /* Tell the signature to straddle across columns 4 and 5 */
-  .grid-straddle-signature {
-    grid-column: 4 / 6;
-    margin-top: 0;
-    text-align: right; /* Aligns the signature toward the right edge of column 5 */
-    padding-right: 1rem; /* Keeps it slightly padded from the absolute edge if needed */
-    margin-right: 40%;
-  }
 
   .signature {
     font-style: italic;
     font-weight: bold;
     font-size: 1.25rem;
     margin: 0;
+  }
+  /* Cleaned up and predictable signature grid rules */
+  .grid-straddle-signature {
+    grid-column: 4 / 6;
+    margin-top: 0;
+    text-align: left; /* Dynamically pulls it leftward into the column 4 lane */
+    padding-left: 2rem; /* Keeps it neatly separated from the middle images */
   }
 
   /* Responsive adjust: ensure it spans full width on mobile viewports */
