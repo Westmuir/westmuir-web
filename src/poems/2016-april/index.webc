@@ -9,13 +9,21 @@ endOfYear: false
 <div class="full-width">
   <poem-grid :title="poemTitle" :author="author">
     <!-- Header Section -->
-    <img src="/poems/2016-april/image-4.png" alt="" slot="header-tl" />
-    <img src="/poems/2016-april/image-5.png" alt="" slot="header-tr" />
+    <poem-img
+      src="/poems/2016-april/image-4.png"
+      alt=""
+      slot="header-tl"
+    ></poem-img>
+    <poem-img
+      src="/poems/2016-april/image-5.png"
+      alt=""
+      slot="header-tr"
+    ></poem-img>
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2016-april/image-8.png" alt="" />
-      <img src="/poems/2016-april/image-3.png" alt="" />
+      <poem-img src="/poems/2016-april/image-8.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-3.png" alt=""></poem-img>
     </div>
 
     <!-- Column 2 Text -->
@@ -51,9 +59,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2016-april/image-0.png" alt="" />
-      <img src="/poems/2016-april/image-1.png" alt="" />
-      <img src="/poems/2016-april/image-2.png" alt="" />
+      <poem-img src="/poems/2016-april/image-0.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-1.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-2.png" alt=""></poem-img>
     </div>
 
     <!-- Column 4 Text -->
@@ -89,8 +97,8 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2016-april/image-6.png" alt="" />
-      <img src="/poems/2016-april/image-7.png" alt="" />
+      <poem-img src="/poems/2016-april/image-6.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-7.png" alt=""></poem-img>
     </div>
   </poem-grid>
 </div>

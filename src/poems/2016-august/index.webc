@@ -11,19 +11,19 @@ endOfYear: false
   <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
     <!-- Header Section -->
     <div slot="header-tl">
-      <img src="/poems/2016-august/image-1.png" alt="" />
-      <img src="/poems/2016-august/image-14.png" alt="" />
+      <poem-img src="/poems/2016-august/image-1.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-14.png" alt=""></poem-img>
     </div>
     <div slot="header-tr">
-      <img src="/poems/2016-august/image-13.png" alt="" />
-      <img src="/poems/2016-august/image-2.png" alt="" />
+      <poem-img src="/poems/2016-august/image-13.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-2.png" alt=""></poem-img>
     </div>
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2016-august/image-9.png" alt="" />
-      <img src="/poems/2016-august/image-4.png" alt="" />
-      <img src="/poems/2016-august/image-6.png" alt="" />
-      <img src="/poems/2016-august/image-3.png" alt="" />
+      <poem-img src="/poems/2016-august/image-9.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-4.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-6.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-3.png" alt=""></poem-img>
     </div>
 
     <!-- Column 2 Text -->
@@ -59,10 +59,10 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2016-august/image-0.png" alt="" />
-      <img src="/poems/2016-august/image-3.png" alt="" />
-      <img src="/poems/2016-august/image-4.png" alt="" />
-      <img src="/poems/2016-august/image-5.png" alt="" />
+      <poem-img src="/poems/2016-august/image-0.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-3.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-4.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-5.png" alt=""></poem-img>
     </div>
 
     <!-- Column 4 Text -->
@@ -91,16 +91,17 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2016-august/image-10.png" alt="" />
-      <img src="/poems/2016-august/image-12.png" alt="" />
-      <img src="/poems/2016-august/image-11.png" alt="" />
-      <img src="/poems/2016-august/image-15.png" alt="" />
+      <poem-img src="/poems/2016-august/image-10.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-12.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-11.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-15.png" alt=""></poem-img>
     </div>
   </poem-grid>
 </div>
 
 <style webc:scoped>
-  :where(poem-grid) {
-    --border-theme: green;
+  :host {
+    --local-bg: #f8cbac;
+    --local-title-color: #c95906;
   }
 </style>

@@ -58,267 +58,269 @@
 </template>
 
 <style webc:type="scss">
-                   .poem-wrapper {
-                     max-width: 1400px;
-                     margin: 2rem auto;
-                     padding: 0 1rem;
-                     box-sizing: border-box;
-                     color: #000;
+                       .poem-wrapper {
+                         max-width: 1400px;
+                         margin: 2rem auto;
+                         padding: 0 1rem;
+                         box-sizing: border-box;
+                         color: #000;
 
-                     // 1. CAPTURE THE CASCADE FALLBACKS
-                    // If the page defines --local-bg, use it; otherwise fallback to antiquewhite
-                    --bg-color: var(--local-bg, antiquewhite);
+                         // 1. CAPTURE THE CASCADE FALLBACKS
+                        // If the page defines --local-bg, use it; otherwise fallback to antiquewhite
+                        --bg-color: var(--local-bg, antiquewhite);
 
-                    // Isolate text color overriders
-                    --title-color: var(--local-title-color, #000);
-                    --stanza-color: var(--local-stanza-color, #000);
+                        // Isolate text color overriders
+                        --title-color: var(--local-title-color, #000);
+                        --stanza-color: var(--local-stanza-color, #000);
 
-                     // 🚀 BULLETPROOF SPECTRUM BORDER
-                     // 1. "from var(--bg-color)" establishes the color source track context
-                     // 2. "calc(l * 0.65)" multiplies the existing lightness to drop it safely by 35%
-                     // 3. "calc(c * 1.2)" boosts the saturation slightly so it doesn't wash out
-                     // 4. "h" passes the raw, unchanged original hue angle straight through
-                     --border-theme: oklch(from var(--bg-color) calc(l * 0.65) calc(c * 1.2) h);
-
-
-                     h2 {
-                       color: var(--title-color);
-                       font-family: "Kalam", var(--font-humanist);
-                     }
-                   }
+                         // 🚀 BULLETPROOF SPECTRUM BORDER
+                         // 1. "from var(--bg-color)" establishes the color source track context
+                         // 2. "calc(l * 0.65)" multiplies the existing lightness to drop it safely by 35%
+                         // 3. "calc(c * 1.2)" boosts the saturation slightly so it doesn't wash out
+                         // 4. "h" passes the raw, unchanged original hue angle straight through
+                         --border-theme: oklch(from var(--bg-color) calc(l * 0.65) calc(c * 1.2) h);
 
 
-       .poem-card {
-           background-color: var(--bg-color);
-           border: var(--border-size-3, 3px) solid var(--border-theme);
-           border-radius: var(--radius-2, 12px);
-           overflow: hidden;
-           display: flex;
-           flex-direction: column;
-         }
+                         h2 {
+                           color: var(--title-color);
+                           font-family: "Kalam", var(--font-humanist);
+                         }
+  img {border: 0.2rem solid var(--title-color); border-radius:var(--radius-2);}
+                       }
 
 
-               /* Row 1: Symmetrical Flex Header Container */
-               .row-header {
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 gap: 1.5rem;
-                 padding: 1.5rem 1rem 0.5rem 1rem;
-                 font-family: var(--font-handwritten, sans-serif);
-               }
-
-  .poem-title {
-    flex-shrink: 0; /* Prevents the title text from being squeezed by the sides */
-    max-width: 50%; /* Caps the width so long titles wrap elegantly in the center area */
-    text-align: center;
-    margin: 0;
-    font-family: "Kalam", var(--font-humanist);
-  }
-  /* 🚀 ELASTIC SIDE HEADER BOXES (LHS -> Title & RHS -> Title) */
-  .header-left-images,
-  .header-right-images {
-    display: flex;
-    align-items: center;
-
-    // These three rules force the side boxes to fill the entire remaining edge space equally
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
-
-    min-width: 120px; /* Prevents columns from collapsing into nothing on narrow layouts */
-  }
-
-  .header-right-images {
-    justify-content: flex-end; /* Anchors the right-side images to the outer right edge */
-  }
-
-  /* 🚀 DISSOLVE SLOT WRAPPER DIV INTERFERENCE */
-  .header-left-images div,
-  .header-right-images div {
-    display: flex;
-    align-items: center;
-    width: 100%; /* Forces the slot wrapper div to stretch full-width inside the elastic box */
-  }
-
-  .header-right-images div {
-    justify-content: flex-end;
-  }
-
-  /* 🚀 THE DYNAMIC MARGIN-AUTO SEPARATION TRICK */
-  // Tells the browser to push the second image inside your left slot div as far right as possible
-  .header-left-images div img:nth-child(2),
-  .header-left-images div picture:nth-child(2) {
-    margin-inline: auto;
-  }
-
-  // Tells the browser to push the first image inside your right slot div as far left as possible
-  .header-right-images div img:nth-child(2),
-  .header-right-images div picture:nth-child(2) {
-    margin-inline: auto;
-    order: -1; /* Flips visual execution stacking order cleanly if needed */
-  }
-
-  /* IMAGE LIMITS */
-  .row-header img,
-  .row-header picture img {
-    height: 120px;
-    width: auto;
-    max-width: 120px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
+           .poem-card {
+               background-color: var(--bg-color);
+               border: var(--border-size-3, 3px) solid var(--border-theme);
+               border-radius: var(--radius-2, 12px);
+               overflow: hidden;
+               display: flex;
+               flex-direction: column;
+             }
 
 
-
-                   /* Row 2: 5-Column Grid */
-                   .grid-body {
-                     display: grid;
-                     grid-template-columns: 15% 1fr minmax(0, 200px) 1fr 15%;
-                     gap: 1rem;
-                     align-items: start;
-                     padding: 1rem;
-                     font-family: "Kalam", var(--font-humanist);
-
-                   }
-
-                   .col-outer,
-                   .col-inner {
-                     height: 100%;
-                   }
-
-                   .col-inner {
+                   /* Row 1: Symmetrical Flex Header Container */
+                   .row-header {
                      display: flex;
-                     justify-content: center;
-                     div {
-                       margin-block: auto;
-                     }
-                   }
-
-                   /* Target the injected slot container divs directly */
-                   .col-outer.col-left-pics div,
-                   .col-inner.col-mid-pics div,
-                   .col-outer.col-right-pics div {
-                     display: flex;
-                     flex-direction: column;
                      justify-content: space-between;
-                     height: 100%;
+                     align-items: center;
+                     gap: 1.5rem;
+                     padding: 1.5rem 1rem 0.5rem 1rem;
+                     font-family: var(--font-handwritten, sans-serif);
                    }
 
-                   /* Image limits */
-                   .col-mid-pics img,
-                   .col-mid-pics picture img {
+      .poem-title {
+        flex-shrink: 0; /* Prevents the title text from being squeezed by the sides */
+        max-width: 50%; /* Caps the width so long titles wrap elegantly in the center area */
+        text-align: center;
+        margin: 0;
+        font-family: "Kalam", var(--font-humanist);
+    color:var(--title-color);
+      }
+      /* 🚀 ELASTIC SIDE HEADER BOXES (LHS -> Title & RHS -> Title) */
+      .header-left-images,
+      .header-right-images {
+        display: flex;
+        align-items: center;
+
+        // These three rules force the side boxes to fill the entire remaining edge space equally
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+
+        min-width: 120px; /* Prevents columns from collapsing into nothing on narrow layouts */
+      }
+
+      .header-right-images {
+        justify-content: flex-end; /* Anchors the right-side images to the outer right edge */
+      }
+
+      /* 🚀 DISSOLVE SLOT WRAPPER DIV INTERFERENCE */
+      .header-left-images div,
+      .header-right-images div {
+        display: flex;
+        align-items: center;
+        width: 100%; /* Forces the slot wrapper div to stretch full-width inside the elastic box */
+      }
+
+      .header-right-images div {
+        justify-content: flex-end;
+      }
+
+      /* 🚀 THE DYNAMIC MARGIN-AUTO SEPARATION TRICK */
+      // Tells the browser to push the second image inside your left slot div as far right as possible
+      .header-left-images div img:nth-child(2),
+      .header-left-images div picture:nth-child(2) {
+        margin-inline: auto;
+      }
+
+      // Tells the browser to push the first image inside your right slot div as far left as possible
+      .header-right-images div img:nth-child(2),
+      .header-right-images div picture:nth-child(2) {
+        margin-inline: auto;
+        order: -1; /* Flips visual execution stacking order cleanly if needed */
+      }
+
+      /* IMAGE LIMITS */
+      .row-header img,
+      .row-header picture img {
+        height: 120px;
+        width: auto;
+        max-width: 120px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+
+
+                       /* Row 2: 5-Column Grid */
+                       .grid-body {
+                         display: grid;
+                         grid-template-columns: 15% 1fr minmax(0, 200px) 1fr 15%;
+                         gap: 1rem;
+                         align-items: start;
+                         padding: 1rem;
+                         font-family: "Kalam", var(--font-humanist);
+
+                       }
+
+                       .col-outer,
+                       .col-inner {
+                         height: 100%;
+                       }
+
+                       .col-inner {
+                         display: flex;
+                         justify-content: center;
+                         div {
+                           margin-block: auto;
+                         }
+                       }
+
+                       /* Target the injected slot container divs directly */
+                       .col-outer.col-left-pics div,
+                       .col-inner.col-mid-pics div,
+                       .col-outer.col-right-pics div {
+                         display: flex;
+                         flex-direction: column;
+                         justify-content: space-between;
+                         height: 100%;
+                       }
+
+                       /* Image limits */
+                       .col-mid-pics img,
+                       .col-mid-pics picture img {
+                         width: 100%;
+                         max-width: 200px;
+                         max-height: 200px;
+                         object-fit: contain;
+                         margin: 0 auto;
+                       }
+
+                       .grid-body img {
+                         width: 100%;
+                         height: auto;
+                         display: block;
+                         border-radius: 4px;
+                         object-fit: contain;
+                         max-width: 180px;
+                         margin-block:var(--size-2);
+                       }
+
+
+                     .col-left-text p,
+                     .col-right-text p {
+                         // 🚀 CORRECT OPEN PROPS FLUID CLAMP TOKEN
+                         font-size: clamp(0.8rem, 2vw, 1.2rem);
+                       line-height: 1.7;
+
+                       /* 1. Safe layout: Let code formatters add spaces without affecting the browser */
+                       white-space: normal;
+
+                       /* 2. Precision control: Tighten or loosen the space between your stanzas here */
+                       margin-top: 0;
+                       margin-bottom: 1.5rem;
+
+                     // 3. Map the local stanza variable
+                      color: var(--stanza-color);
+
+                       /* Reset internal spacing rules */
+                       br {
+                         content: "";
+                         margin: 0;
+                       }
+                     }
+
+                       /* Signature Layout styling */
+                       .grid-straddle-signature {
+                         grid-column: 4 / 6;
+                         margin-top: 1rem;
+                         text-align: left;
+                         padding-left: 2rem;
+                       }
+
+                       .signature {
+                         font-style: italic;
+                         font-weight: bold;
+                         // Scales slightly ahead of the body text for clear visual separation
+                   font-size: var(--font-size-fluid-1);
+                         margin: 0;
+                       }
+
+                       /* Responsive Fallback: Collapse on smaller devices */
+                       @media (max-width: 1024px) {
+                         .grid-body {
+                           grid-template-columns: 1fr;
+                           gap: 2rem;
+                         }
+                         .grid-straddle-signature {
+                           grid-column: 1 / -1;
+                           text-align: center;
+                           padding-left: 0;
+                         }
+                         /* Mobile-first flow controls... */
+                         .col-left-text { grid-row: 1; }
+                         .col-right-text { grid-row: 2; }
+                         .col-mid-pics { grid-row: 3; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+                         .col-mid-pics img { max-width: 200px; }
+                         .col-left-pics { grid-row: 4; flex-direction: row; }
+                         .col-left-pics img, .col-right-pics img { max-width: 100px; }
+                         .col-right-pics { grid-row: 5; flex-direction: row; }
+                       }
+
+                 .poem-navigation {
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     margin-top: var(--size-4, 2rem);
+                     padding-top: var(--size-2, 1rem);
+                     border-top: 1px solid oklch(from var(--bg-color) calc(l * 0.8) c h);
                      width: 100%;
-                     max-width: 200px;
-                     max-height: 200px;
-                     object-fit: contain;
-                     margin: 0 auto;
+
+                     .nav-link {
+                       font-family: sans-serif;
+                       font-size: var(--font-size-1, 0.95rem);
+                       text-transform: uppercase;
+                       font-weight: bold;
+                       letter-spacing: 0.05em;
+                       text-decoration: none;
+                       color: var(--local-title-color, #1a365d);
+                       transition: color 0.2s ease;
+
+                       &:hover {
+                         color: oklch(from var(--local-title-color) calc(l * 1.4) c h);
+                       }
+                     }
+                     .nav-disabled {
+               visibility: hidden;
+                     }
                    }
 
-                   .grid-body img {
-                     width: 100%;
-                     height: auto;
-                     display: block;
-                     border-radius: 4px;
-                     object-fit: contain;
-                     max-width: 180px;
-                     margin-block:var(--size-2);
-                   }
-
-
-                 .col-left-text p,
-                 .col-right-text p {
-                     // 🚀 CORRECT OPEN PROPS FLUID CLAMP TOKEN
-                     font-size: clamp(0.8rem, 2vw, 1.2rem);
-                   line-height: 1.7;
-
-                   /* 1. Safe layout: Let code formatters add spaces without affecting the browser */
-                   white-space: normal;
-
-                   /* 2. Precision control: Tighten or loosen the space between your stanzas here */
-                   margin-top: 0;
-                   margin-bottom: 1.5rem;
-
-                 // 3. Map the local stanza variable
-                  color: var(--stanza-color);
-
-                   /* Reset internal spacing rules */
-                   br {
-                     content: "";
-                     margin: 0;
-                   }
-                 }
-
-                   /* Signature Layout styling */
-                   .grid-straddle-signature {
-                     grid-column: 4 / 6;
-                     margin-top: 1rem;
-                     text-align: left;
-                     padding-left: 2rem;
-                   }
-
-                   .signature {
-                     font-style: italic;
-                     font-weight: bold;
-                     // Scales slightly ahead of the body text for clear visual separation
-               font-size: var(--font-size-fluid-1);
-                     margin: 0;
-                   }
-
-                   /* Responsive Fallback: Collapse on smaller devices */
                    @media (max-width: 1024px) {
-                     .grid-body {
-                       grid-template-columns: 1fr;
+                     .poem-navigation {
+                       flex-direction: row;
+                       justify-content: space-around;
                        gap: 2rem;
                      }
-                     .grid-straddle-signature {
-                       grid-column: 1 / -1;
-                       text-align: center;
-                       padding-left: 0;
-                     }
-                     /* Mobile-first flow controls... */
-                     .col-left-text { grid-row: 1; }
-                     .col-right-text { grid-row: 2; }
-                     .col-mid-pics { grid-row: 3; flex-direction: row; flex-wrap: wrap; justify-content: center; }
-                     .col-mid-pics img { max-width: 200px; }
-                     .col-left-pics { grid-row: 4; flex-direction: row; }
-                     .col-left-pics img, .col-right-pics img { max-width: 100px; }
-                     .col-right-pics { grid-row: 5; flex-direction: row; }
-                   }
-
-             .poem-navigation {
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 margin-top: var(--size-4, 2rem);
-                 padding-top: var(--size-2, 1rem);
-                 border-top: 1px solid oklch(from var(--bg-color) calc(l * 0.8) c h);
-                 width: 100%;
-
-                 .nav-link {
-                   font-family: sans-serif;
-                   font-size: var(--font-size-1, 0.95rem);
-                   text-transform: uppercase;
-                   font-weight: bold;
-                   letter-spacing: 0.05em;
-                   text-decoration: none;
-                   color: var(--local-title-color, #1a365d);
-                   transition: color 0.2s ease;
-
-                   &:hover {
-                     color: oklch(from var(--local-title-color) calc(l * 1.4) c h);
-                   }
-                 }
-                 .nav-disabled {
-           visibility: hidden;
-                 }
-               }
-
-               @media (max-width: 1024px) {
-                 .poem-navigation {
-                   flex-direction: row;
-                   justify-content: space-around;
-                   gap: 2rem;
-                 }
-               };
+                   };
 </style>
