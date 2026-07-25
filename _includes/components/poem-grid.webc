@@ -1,234 +1,314 @@
-<!--- src/_components/poem-grid.webc --->
-<!-- Bind the theme token directly as an inline style variable fallback -->
-<div class="poem-wrapper" :style="`--poem-bg: ${theme || 'antiquewhite'};`">
-  <!-- The Unified Card Shell houses both components -->
-  <div class="poem-card">
-    <!-- ROW 1: HEADER BANNER -->
-    <header class="row-header">
-      <div class="header-left-images">
-        <slot name="header-tl"></slot>
+<template webc:type="js" webc:nokeep>
+  export default ({ author, title, $data }) => { const list =
+  $data.collections.writtenPoems || []; const currentUrl = $data.page.url; const
+  currentIdx = list.findIndex(item => item.url === currentUrl); const prev=
+  currentIdx > 0 ? list[currentIdx - 1].url : null; const next= currentIdx <
+  list.length - 1 ? list[currentIdx + 1].url : null; return `
+  <div class="poem-wrapper">
+    <div class="poem-card">
+      <!-- ROW 1: HEADER BANNER -->
+      <header class="row-header">
+        <div class="header-left-images">
+          <slot name="header-tl"></slot>
+        </div>
+        <h2 class="poem-title">${title}</h2>
+        <div class="header-right-images">
+          <slot name="header-tr"></slot>
+        </div>
+      </header>
+
+      <!-- ROW 2: THE 5-COLUMN CONTENT MESH -->
+      <div class="grid-body">
+        <aside class="col-outer col-left-pics">
+          <slot name="col-1-images"></slot>
+        </aside>
+        <section class="col-inner col-left-text">
+          <slot name="col-2-text"></slot>
+        </section>
+        <aside class="col-inner col-mid-pics">
+          <slot name="col-3-images"></slot>
+        </aside>
+        <section class="col-inner col-right-text">
+          <slot name="col-4-text"></slot>
+        </section>
+        <aside class="col-outer col-right-pics">
+          <slot name="col-5-images"></slot>
+        </aside>
+
+        <!-- STRADDLE FOOTER & NAVIGATION LINKS -->
+        <footer class="grid-straddle-signature">
+          ${author ? `
+          <p class="signature">— ${author}</p>
+          ` : ''}
+
+          <nav class="poem-navigation" aria-label="Poem pagination navigation">
+            ${prev ? `<a href="${prev}" class="nav-link prev-link"
+              >← Previous Poem</a
+            >` : '<span class="nav-disabled"></span>'} ${next ? `<a
+              href="${next}"
+              class="nav-link next-link"
+              >Next Poem →</a
+            >` : '<span class="nav-disabled"></span>'}
+          </nav>
+        </footer>
       </div>
-
-      <h2 class="poem-title" @text="title"></h2>
-
-      <div class="header-right-images">
-        <slot name="header-tr"></slot>
-      </div>
-    </header>
-
-    <!-- ROW 2: THE 5-COLUMN CONTENT MESH -->
-    <div class="grid-body">
-      <aside class="col-outer col-left-pics">
-        <slot name="col-1-images"></slot>
-      </aside>
-      <section class="col-inner col-left-text">
-        <slot name="col-2-text"></slot>
-      </section>
-      <aside class="col-inner col-mid-pics">
-        <slot name="col-3-images"></slot>
-      </aside>
-      <section class="col-inner col-right-text">
-        <slot name="col-4-text"></slot>
-      </section>
-      <aside class="col-outer col-right-pics">
-        <slot name="col-5-images"></slot>
-      </aside>
-
-      <!-- STRADDLE FOOTER -->
-      <footer webc:if="author" class="grid-straddle-signature">
-        <p class="signature" @text="`— ${author}`"></p>
-      </footer>
     </div>
   </div>
-</div>
+  `;}
+</template>
 
 <style webc:type="scss">
-      .poem-wrapper {
-        max-width: 1400px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-        box-sizing: border-box;
-        color: #000;
+                 .poem-wrapper {
+                   max-width: 1400px;
+                   margin: 2rem auto;
+                   padding: 0 1rem;
+                   box-sizing: border-box;
+                   color: #000;
 
-        // Assigning the dynamic theme fallback token
-        --bg-color: var(--poem-bg, antiquewhite);
+                   // 1. CAPTURE THE CASCADE FALLBACKS
+                  // If the page defines --local-bg, use it; otherwise fallback to antiquewhite
+                  --bg-color: var(--local-bg, antiquewhite);
 
-        h2 {
-          color: #000;
-          font-family: "Comic Neue";
-        }
-      }
+                  // Isolate text color overriders
+                  --title-color: var(--local-title-color, #000);
+                  --stanza-color: var(--local-stanza-color, #000);
 
-      /* The Unified Card Container handles the border radius safely */
-      .poem-card {
-        background-color: var(--bg-color);
-        border: var(--border-size-3) solid var(--border-theme, red);
-        border-radius: var(--radius-2, 12px);
-        overflow: hidden; /* Automatically cuts off row backgrounds perfectly */
-        display: flex;
-        flex-direction: column;
-      }
+                   // 🚀 BULLETPROOF SPECTRUM BORDER
+                   // 1. "from var(--bg-color)" establishes the color source track context
+                   // 2. "calc(l * 0.65)" multiplies the existing lightness to drop it safely by 35%
+                   // 3. "calc(c * 1.2)" boosts the saturation slightly so it doesn't wash out
+                   // 4. "h" passes the raw, unchanged original hue angle straight through
+                   --border-theme: oklch(from var(--bg-color) calc(l * 0.65) calc(c * 1.2) h);
 
 
-  /* Row 1: Symmetrical Flex Header Container */
-  .row-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem 1rem 0.5rem 1rem;
-    font-family: var(--font-handwritten, sans-serif);
-  }
+                   h2 {
+                     color: var(--title-color);
+                     font-family: "Kalam", var(--font-humanist);
+                   }
+                 }
 
-  /* 🔒 PURE TITLE CENTERING INSURANCE */
-  .poem-title {
-    flex-grow: 1;
-    text-align: center;
-    margin: 0;
 
-    /* Ensure the title occupies a completely stable, centered column track footprint */
-    position: relative;
-    z-index: 2;
-  }
+     .poem-card {
+         background-color: var(--bg-color);
+         border: var(--border-size-3, 3px) solid var(--border-theme);
+         border-radius: var(--radius-2, 12px);
+         overflow: hidden;
+         display: flex;
+         flex-direction: column;
+       }
+
+
+             /* Row 1: Symmetrical Flex Header Container */
+             .row-header {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               gap: 1.5rem;
+               padding: 1.5rem 1rem 0.5rem 1rem;
+               font-family: var(--font-handwritten, sans-serif);
+             }
+
+             /* 🔒 PURE TITLE CENTERING INSURANCE */
+             .poem-title {
+               flex-grow: 1;
+               text-align: center;
+               margin: 0;
+
+               /* Ensure the title occupies a completely stable, centered column track footprint */
+               position: relative;
+               z-index: 2;
+             }
+
+
 
   /* FIXED BOX TRACKS FOR SIDE CONTENT */
   .header-left-images,
   .header-right-images {
     display: flex;
     align-items: center;
-    gap: 5rem;
-
-    /* Strictly lock both side widths to match Column 1/5 layout footprints */
     width: 15%;
-    min-width: 120px; /* Prevents columns from collapsing on smaller screens */
+    min-width: 120px;
     flex-shrink: 0;
+    gap: 0; /* Reset raw gap to let margin auto handle the calculation */
   }
 
   .header-right-images {
     justify-content: flex-end;
   }
 
-  /* 🚀 STRIP WRAPPER DIV LAYOUT INTERFERENCE */
-  .header-left-images div,
-  .header-right-images div {
-    display: contents; /* Dissolves the wrapper div, making inner images act as direct flex items */
-  }
-
-  /* CONSTRAIN INDIVIDUAL GRAPHICS GENERATION */
-  .row-header img,
-  .row-header picture img {
-    height: 150px;
-    width: auto;
-    max-width: 150px; /* Constrains multiple items safely side-by-side */
-    object-fit: contain;
-    flex-shrink: 0;
+  /* 🚀 DYNAMIC ALIGNMENT INSIDE THE LEFT HEADER TRACK */
+  .header-left-images img:nth-child(2),
+  .header-left-images picture:nth-child(2) {
+    // Automatically pushes the second header graphic exactly to the Column 2 boundary!
+    margin-left: auto;
   }
 
 
-      /* Row 2: 5-Column Grid */
-      .grid-body {
-        display: grid;
-        grid-template-columns: 15% 1fr 1fr 1fr 15%;
-        gap: 1rem;
-        align-items: start;
-        padding: 1rem;
-        font-family: "Comic Neue";
-      }
+             /* 🚀 STRIP WRAPPER DIV LAYOUT INTERFERENCE */
+             .header-left-images div,
+             .header-right-images div {
+               display: contents; /* Dissolves the wrapper div, making inner images act as direct flex items */
+             }
 
-      .col-outer,
-      .col-inner {
-        height: 100%;
-      }
-
-      .col-inner {
-        display: flex;
-        div {
-          margin-block: auto;
-        }
-      }
-
-      /* Target the injected slot container divs directly */
-      .col-outer.col-left-pics div,
-      .col-inner.col-mid-pics div,
-      .col-outer.col-right-pics div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-      }
-
-      /* Image limits */
-      .col-mid-pics img,
-      .col-mid-pics picture img {
-        width: 100%;
-        max-width: 200px;
-        max-height: 200px;
-        object-fit: contain;
-        margin: 0 auto;
-      }
-
-      .grid-body img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 4px;
-        object-fit: contain;
-        max-width: 180px;
-      }
+             /* CONSTRAIN INDIVIDUAL GRAPHICS GENERATION */
+             .row-header img,
+             .row-header picture img {
+               height: 150px;
+               width: auto;
+               max-width: 150px; /* Constrains multiple items safely side-by-side */
+               object-fit: contain;
+               flex-shrink: 0;
+             }
 
 
-    .col-left-text p,
-    .col-right-text p {
-      font-size: 1.2rem;
-      line-height: 1.7;
+                 /* Row 2: 5-Column Grid */
+                 .grid-body {
+                   display: grid;
+                   grid-template-columns: 15% 1fr minmax(0, 200px) 1fr 15%;
+                   gap: 1rem;
+                   align-items: start;
+                   padding: 1rem;
+                   font-family: "Kalam", var(--font-humanist);
 
-      /* 1. Safe layout: Let code formatters add spaces without affecting the browser */
-      white-space: normal;
+                 }
 
-      /* 2. Precision control: Tighten or loosen the space between your stanzas here */
-      margin-top: 0;
-      margin-bottom: 1.5rem;
+                 .col-outer,
+                 .col-inner {
+                   height: 100%;
+                 }
 
-      /* Reset internal spacing rules */
-      br {
-        content: "";
-        margin: 0;
-      }
-    }
+                 .col-inner {
+                   display: flex;
+                   justify-content: center;
+                   div {
+                     margin-block: auto;
+                   }
+                 }
 
-      /* Signature Layout styling */
-      .grid-straddle-signature {
-        grid-column: 4 / 6;
-        margin-top: 1rem;
-        text-align: left;
-        padding-left: 2rem;
-      }
+                 /* Target the injected slot container divs directly */
+                 .col-outer.col-left-pics div,
+                 .col-inner.col-mid-pics div,
+                 .col-outer.col-right-pics div {
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: space-between;
+                   height: 100%;
+                 }
 
-      .signature {
-        font-style: italic;
-        font-weight: bold;
-        font-size: 1.25rem;
-        margin: 0;
-      }
+                 /* Image limits */
+                 .col-mid-pics img,
+                 .col-mid-pics picture img {
+                   width: 100%;
+                   max-width: 200px;
+                   max-height: 200px;
+                   object-fit: contain;
+                   margin: 0 auto;
+                 }
 
-      /* Responsive Fallback: Collapse on smaller devices */
-      @media (max-width: 1024px) {
-        .grid-body {
-          grid-template-columns: 1fr;
-          gap: 2rem;
-        }
-        .grid-straddle-signature {
-          grid-column: 1 / -1;
-          text-align: center;
-          padding-left: 0;
-        }
-        /* Mobile-first flow controls... */
-        .col-left-text { grid-row: 1; }
-        .col-right-text { grid-row: 2; }
-        .col-mid-pics { grid-row: 3; flex-direction: row; flex-wrap: wrap; justify-content: center; }
-        .col-mid-pics img { max-width: 200px; }
-        .col-left-pics { grid-row: 4; flex-direction: row; }
-        .col-left-pics img, .col-right-pics img { max-width: 100px; }
-        .col-right-pics { grid-row: 5; flex-direction: row; }
-      }
+                 .grid-body img {
+                   width: 100%;
+                   height: auto;
+                   display: block;
+                   border-radius: 4px;
+                   object-fit: contain;
+                   max-width: 180px;
+                   margin-block:var(--size-2);
+                 }
+
+
+               .col-left-text p,
+               .col-right-text p {
+                   // 🚀 CORRECT OPEN PROPS FLUID CLAMP TOKEN
+                   font-size: clamp(0.8rem, 2vw, 1.2rem);
+                 line-height: 1.7;
+
+                 /* 1. Safe layout: Let code formatters add spaces without affecting the browser */
+                 white-space: normal;
+
+                 /* 2. Precision control: Tighten or loosen the space between your stanzas here */
+                 margin-top: 0;
+                 margin-bottom: 1.5rem;
+
+               // 3. Map the local stanza variable
+                color: var(--stanza-color);
+
+                 /* Reset internal spacing rules */
+                 br {
+                   content: "";
+                   margin: 0;
+                 }
+               }
+
+                 /* Signature Layout styling */
+                 .grid-straddle-signature {
+                   grid-column: 4 / 6;
+                   margin-top: 1rem;
+                   text-align: left;
+                   padding-left: 2rem;
+                 }
+
+                 .signature {
+                   font-style: italic;
+                   font-weight: bold;
+                   // Scales slightly ahead of the body text for clear visual separation
+             font-size: var(--font-size-fluid-1);
+                   margin: 0;
+                 }
+
+                 /* Responsive Fallback: Collapse on smaller devices */
+                 @media (max-width: 1024px) {
+                   .grid-body {
+                     grid-template-columns: 1fr;
+                     gap: 2rem;
+                   }
+                   .grid-straddle-signature {
+                     grid-column: 1 / -1;
+                     text-align: center;
+                     padding-left: 0;
+                   }
+                   /* Mobile-first flow controls... */
+                   .col-left-text { grid-row: 1; }
+                   .col-right-text { grid-row: 2; }
+                   .col-mid-pics { grid-row: 3; flex-direction: row; flex-wrap: wrap; justify-content: center; }
+                   .col-mid-pics img { max-width: 200px; }
+                   .col-left-pics { grid-row: 4; flex-direction: row; }
+                   .col-left-pics img, .col-right-pics img { max-width: 100px; }
+                   .col-right-pics { grid-row: 5; flex-direction: row; }
+                 }
+
+           .poem-navigation {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               margin-top: var(--size-4, 2rem);
+               padding-top: var(--size-2, 1rem);
+               border-top: 1px solid oklch(from var(--bg-color) calc(l * 0.8) c h);
+               width: 100%;
+
+               .nav-link {
+                 font-family: sans-serif;
+                 font-size: var(--font-size-1, 0.95rem);
+                 text-transform: uppercase;
+                 font-weight: bold;
+                 letter-spacing: 0.05em;
+                 text-decoration: none;
+                 color: var(--local-title-color, #1a365d);
+                 transition: color 0.2s ease;
+
+                 &:hover {
+                   color: oklch(from var(--local-title-color) calc(l * 1.4) c h);
+                 }
+               }
+               .nav-disabled {
+         visibility: hidden;
+               }
+             }
+
+             @media (max-width: 1024px) {
+               .poem-navigation {
+                 flex-direction: row;
+                 justify-content: space-around;
+                 gap: 2rem;
+               }
+             };
 </style>

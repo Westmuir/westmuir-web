@@ -3,12 +3,11 @@ layout: "base.webc"
 title: "2016 April"
 poemTitle: "2016 April"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
 
 <div class="full-width">
-  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid :title="poemTitle" :author="author">
     <!-- Header Section -->
     <img src="/poems/2016-april/image-4.png" alt="" slot="header-tl" />
     <img src="/poems/2016-april/image-5.png" alt="" slot="header-tr" />
@@ -95,3 +94,11 @@ endOfYear: false
     </div>
   </poem-grid>
 </div>
+<!-- 🚀 SCOPED STYLE BLOCK: Clean, organized, and isolated to this page -->
+<style webc:scoped>
+  :host {
+    --local-bg: #c5e0b4;
+    --local-title-color: #1a365d;
+    --local-stanza-color: #2c5282;
+  }
+</style>
