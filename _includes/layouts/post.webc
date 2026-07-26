@@ -21,7 +21,7 @@ layout: base
   <posts-nav></posts-nav>
 </div>
 
-<style webc:type="scss">
+<style>
   .post-wrapper {
     margin-inline: 2rem;
   }

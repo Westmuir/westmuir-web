@@ -90,7 +90,7 @@ headerAlt: "East bank, Westmuir"
   </div>
 </div>
 
-<style webc:type="scss">
+<style >
 .color-outline
 { --border-color: var(--primary);
   border-radius: var(--radius-3);

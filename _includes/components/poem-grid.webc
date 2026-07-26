@@ -57,7 +57,13 @@
   `;}
 </template>
 
-<style webc:type="scss">
+<style webc:bucket="main">
+  /* The browser handles this isolation natively */
+  @scope (.poem-wrapper) {
+    :scope {
+      --border-theme: cyan; /* The default fallback color */
+    }
+  }
   .poem-wrapper {
     max-width: 1400px;
     margin: 2rem auto;
@@ -65,24 +71,16 @@
     box-sizing: border-box;
     color: #000;
 
-    // 1. CAPTURE THE CASCADE FALLBACKS
-    // If the page defines --local-bg, use it; otherwise fallback to antiquewhite
     --bg-color: var(--local-bg, antiquewhite);
 
-    // Isolate text color overriders
     --title-color: var(--local-title-color, #000);
     --stanza-color: var(--local-stanza-color, #000);
 
-    // 🚀 BULLETPROOF SPECTRUM BORDER
-    // 1. "from var(--bg-color)" establishes the color source track context
-    // 2. "calc(l * 0.65)" multiplies the existing lightness to drop it safely by 35%
-    // 3. "calc(c * 1.2)" boosts the saturation slightly so it doesn't wash out
-    // 4. "h" passes the raw, unchanged original hue angle straight through
-    --border-theme: oklch(from var(--bg-color) calc(l * 0.65) calc(c * 1.2) h);
+    --border-themeX: oklch(from var(--bg-color) calc(l * 0.65) calc(c * 1.2) h);
 
     h2 {
       color: var(--title-color);
-      font-family: 'Kalam', var(--font-humanist);
+      font-family: "Kalam", var(--font-humanist);
     }
     img {
       border: 0.2rem solid var(--title-color);
@@ -114,7 +112,7 @@
     max-width: 50%; /* Caps the width so long titles wrap elegantly in the center area */
     text-align: center;
     margin: 0;
-    font-family: 'Kalam', var(--font-humanist);
+    font-family: "Kalam", var(--font-humanist);
     color: var(--title-color);
   }
   /* 🚀 ELASTIC SIDE HEADER BOXES (LHS -> Title & RHS -> Title) */
@@ -123,7 +121,6 @@
     display: flex;
     align-items: center;
 
-    // These three rules force the side boxes to fill the entire remaining edge space equally
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 0;
@@ -148,13 +145,11 @@
   }
 
   /* 🚀 THE DYNAMIC MARGIN-AUTO SEPARATION TRICK */
-  // Tells the browser to push the second image inside your left slot div as far right as possible
   .header-left-images div img:nth-child(2),
   .header-left-images div picture:nth-child(2) {
     margin-inline: auto;
   }
 
-  // Tells the browser to push the first image inside your right slot div as far left as possible
   .header-right-images div img:nth-child(2),
   .header-right-images div picture:nth-child(2) {
     margin-inline: auto;
@@ -178,7 +173,7 @@
     gap: 1rem;
     align-items: start;
     padding: 1rem;
-    font-family: 'Kalam', var(--font-humanist);
+    font-family: "Kalam", var(--font-humanist);
   }
 
   .col-outer,
@@ -226,7 +221,6 @@
 
   .col-left-text p,
   .col-right-text p {
-    // 🚀 CORRECT OPEN PROPS FLUID CLAMP TOKEN
     font-size: clamp(0.8rem, 2vw, 1.2rem);
     line-height: 1.7;
 
@@ -237,12 +231,11 @@
     margin-top: 0;
     margin-bottom: 1.5rem;
 
-    // 3. Map the local stanza variable
     color: var(--stanza-color);
 
     /* Reset internal spacing rules */
     br {
-      content: '';
+      content: "";
       margin: 0;
     }
   }
@@ -262,7 +255,6 @@
   .signature {
     font-style: italic;
     font-weight: bold;
-    // Scales slightly ahead of the body text for clear visual separation
     font-size: var(--font-size-fluid-1);
     margin: 0;
   }

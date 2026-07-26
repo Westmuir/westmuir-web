@@ -30,15 +30,16 @@
     <style webc:keep>
       @layer openprops, theme, normalize, components.root, components.extended, utils;
     </style>
+<link rel="stylesheet" href="/css/main.css" webc:keep>
 
-    <style webc:type="scss" webc:bucket="main">
-      @import "../../src/css/main.scss";
-    </style>
-
-    <!-- This single line writes out your entire main.scss layout AND any tiny component <style> blocks -->
+    <!-- This single line writes out your entire main.css layout AND any tiny component <style> blocks -->
     <style
       webc:keep
       @raw="`@import url(${getBundleFileUrl('css','main')});`"
+    ></style>
+    <style
+      webc:keep
+      @raw="`@import url(${getBundleFileUrl('css','other')});`"
     ></style>
     <style webc:keep @raw="`@import url(${getBundleFileUrl('css')});`"></style>
     <!-- Critical inline initialization to prevent dark-mode page flash -->

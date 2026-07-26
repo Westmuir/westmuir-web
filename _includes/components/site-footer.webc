@@ -11,7 +11,7 @@
 </footer>
 
 <style>
-  :with(.footer) {
+  :where(.footer) {
     --footer-background-color: light-dark(#f1f1f1, #1a1a1a);
     --footer-text-color: light-dark(#424242, #bdbdbd);
     --footer-link-color: light-dark(#1b70df, #82b1ff);

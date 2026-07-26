@@ -14,7 +14,7 @@
   </ol>
 </nav>
 
-<style webc:type="scss">
+<style>
   :where(.breadcrumbs-nav) {
     --link-color: light-dark(var(--cyan-9), var(--cyan-3));
     --hover-color: var(--primary);

@@ -24,7 +24,7 @@
   </li>
 </ul>
 
-<style webc:type:"scss">
+<style>
   :where(.section-cards) {
     --margin-color-hall: light-dark(#d073d4, #864a89);
     --margin-color-na: light-dark(#3f4f8080, #3f4f8080);

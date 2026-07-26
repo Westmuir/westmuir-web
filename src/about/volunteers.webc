@@ -30,7 +30,7 @@ inSectionNav: true
   </div>
 </div>
 
-<style webc:type="scss">
+<style>
   .volunteer-footer {
     margin-top: 2rem;
     display: flex;

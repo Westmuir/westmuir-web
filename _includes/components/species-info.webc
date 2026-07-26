@@ -20,7 +20,7 @@
   </div>
 </section>
 
-<style lang="scss">
+<style>
   .light-bg {
     --content-light-bg: light-dark(hsl(120, 100%, 97%), hsl(120, 12%, 27%));
     background-color: var(--content-light-bg);

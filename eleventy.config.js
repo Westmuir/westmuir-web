@@ -10,17 +10,13 @@ import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
-import postcssGlobalData from '@csstools/postcss-global-data';
 import browserslist from 'browserslist';
 import { browserslistToTargets, Features, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
 import fs from 'node:fs';
-import postcss from 'postcss';
-import postcssCustomMedia from 'postcss-custom-media';
-import postcssImport from 'postcss-import';
-import * as sass from 'sass';
+import path from 'path';
 import pluginCollections from './_config/collections.js';
 import pluginFilters from './_config/filters.js';
 
@@ -92,79 +88,99 @@ export default async function (eleventyConfig) {
       },
     },
   });
+  eleventyConfig.on('eleventy.before', async () => {
+    try {
+      const inputPath = path.resolve('./src/css/main.css');
+      const outputPath = path.resolve('./_site/css/main.css');
+      const projectRoot = process.cwd();
+
+      // Ensure the destination folder exists on disk
+      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+
+      // A highly robust JavaScript flattener that resolves @imports natively into one string
+      function flattenStylesheets(filePath, currentDir = './src/css') {
+        const rawContent = fs.readFileSync(filePath, 'utf8');
+
+        // Regex to match both plain and functional url() @import syntax
+        return rawContent.replace(/@import\s+(?:url\()?['"]([^'"]+)['"]\)?\s*([^;]*);/g, (match, importTarget) => {
+          // Clean up paths exactly like before
+          let cleanedPath = importTarget.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+
+          const pathsToSearch = [
+            path.resolve(projectRoot, 'node_modules', cleanedPath),
+            path.resolve(projectRoot, 'src/css', cleanedPath),
+            path.resolve(currentDir, cleanedPath),
+          ];
+
+          let foundPath = null;
+          for (const p of pathsToSearch) {
+            if (fs.existsSync(p) && fs.statSync(p).isFile()) {
+              foundPath = p;
+              break;
+            }
+          }
+
+          if (!foundPath) {
+            console.warn(`⚠️ Global CSS build could not find: ${cleanedPath}`);
+            return match; // Keep original rule if file is missing
+          }
+
+          // Recursively read and flatten child stylesheets into this exact string position
+          return flattenStylesheets(foundPath, path.dirname(foundPath));
+        });
+      }
+
+      // 1. Generate one single flattened CSS string in RAM
+      const completelyFlattenedCss = flattenStylesheets(inputPath, path.dirname(inputPath));
+
+      // 2. Run LightningCSS transform() on the unified string context
+      let { code } = transform({
+        filename: 'global-main.css', // Memory anchor prevents os error 2
+        code: Buffer.from(completelyFlattenedCss),
+        minify: process.env.NODE_ENV === 'production',
+        sourceMap: false,
+        targets,
+        exclude: Features.LogicalProperties | Features.LightDark | Features.LabColors,
+        drafts: {
+          customMedia: true, // Natively converts your Open Props --md-n-below queries to pixels!
+        },
+      });
+
+      // 3. Write the fully processed code straight to your build directory
+      fs.writeFileSync(outputPath, code);
+      console.log(`✅ Global CSS bundle compiled successfully directly to ${outputPath}`);
+    } catch (e) {
+      console.error(`\n❌ Global CSS Pipeline Crash: ${e.message}\n`);
+    }
+  });
 
   eleventyConfig.addPlugin(pluginWebc, {
     components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
-    // ADD THIS BLOCK: Tells WebC to read .scss link imports natively
-    preprocessors: {
-      scss: src =>
-        sass.compileString(src, {
-          loadPaths: ['./src/css', './node_modules'],
-        }).css,
-    },
     bundlePluginOptions: {
       toFileDirectory: false,
       hoistDuplicateBundles: true,
       transforms: [
         async function (content) {
           if (this.type === 'css') {
-            const result = sass.compileString(content, {
-              alertColor: true,
-              // Crucial: Tells Sass where to find files if you use @use or @import
-              loadPaths: ['./src/css', './node_modules'],
-              logger: sass.Logger.silent,
-            });
-            return result.css;
-          }
-          return content;
-        },
-        async function (content) {
-          if (this.type === 'css') {
-            const result = await postcss([
-              // Inlines all remaining @import statements physically into the file
+            if (!content || !content.trim()) return '';
 
-              postcssImport({
-                path: ['./src/css', './node_modules'],
-              }),
-              // A. Load OpenProps media definitions globally for PostCSS
-              postcssGlobalData({
-                files: ['./node_modules/open-props/media.min.css'],
-              }),
-              // B. Polyfill the @media (--md-n-below) strings into raw pixels
-              postcssCustomMedia(),
-              // // // C. Pull in standard OpenProps variables Just-In-Time
-              // postcssJit({
-              //   ...OpenProps,
-              // }),
-            ]).process(content, {
-              from: this.page.inputPath,
-              to: null,
-            });
-
-            return result.css;
-          }
-          return content;
-        },
-        async function (content) {
-          if (this.type === 'css') {
             try {
+              // Read ONLY the Open Props media tokens so component media queries function
+              const mediaPath = path.resolve('./node_modules/open-props/media.min.css');
+              const mediaQueries = fs.existsSync(mediaPath) ? fs.readFileSync(mediaPath, 'utf8') : '';
+
               let { code } = transform({
-                filename: 'bundle.css',
-                code: Buffer.from(content), //r.toString()),
-                minify: false,
-                sourceMap: false,
+                filename: 'components.css',
+                code: Buffer.from(`${mediaQueries}\n${content}`),
+                minify: process.env.NODE_ENV === 'production',
                 targets,
                 exclude: Features.LogicalProperties | Features.LightDark | Features.LabColors,
-                drafts: {
-                  customMedia: true,
-                },
+                drafts: { customMedia: true },
               });
-
-              return code;
+              return code.toString();
             } catch (e) {
-              console.log(e.toString());
-              console.log(content.toString());
-              throw e;
+              console.error(`❌ WebC Component CSS Error: ${e.message}`);
+              return content;
             }
           }
           return content;

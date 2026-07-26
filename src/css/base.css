@@ -98,7 +98,7 @@ small,
 .text-muted {
   color: var(--text-muted);
 }
-/* Inside your src/css/base.scss (Safe modern additions) */
+/* Inside your src/css/base.css (Safe modern additions) */
 
 /* 1. Prevent text inflation issues on mobile orientation changes */
 html {
@@ -178,7 +178,7 @@ img[width][height] {
   grid-column: full-width;
 }
 
-/* Inside your layout stylesheet or base.scss */
+/* Inside your layout stylesheet or base.css */
 
 .full-width.with-bg {
   grid-column: full-width;
@@ -434,7 +434,7 @@ img[width][height] {
     flex-direction: column;
     gap: var(--size-4, 1rem);
 
-    /* ✅ PLACE IT HERE: Uses the SCSS '&' to compile as '.content-text.content-text-highlight' */
+    /* ✅ PLACE IT HERE: Uses the CSS '&' to compile as '.content-text.content-text-highlight' */
     &.content-text-highlight {
       background-color: #eec942;
       color: #222;
