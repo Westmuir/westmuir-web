@@ -168,74 +168,19 @@ export default async function (eleventyConfig) {
     },
   });
 
-  // eleventyConfig.on('eleventy.before', async () => {
-  //   try {
-  //     const inputPath = path.resolve('./src/css/main.css');
-  //     const outputPath = path.resolve('./_site/css/main.css');
-  //     const projectRoot = process.cwd();
-  //
-  //     // Ensure the destination folder exists on disk
-  //     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  //
-  //     // A highly robust JavaScript flattener that resolves @imports natively into one string
-  //     function flattenStylesheets(filePath, currentDir = './src/css') {
-  //       const rawContent = fs.readFileSync(filePath, 'utf8');
-  //
-  //       // Regex to match both plain and functional url() @import syntax
-  //       return rawContent.replace(/@import\s+(?:url\()?['"]([^'"]+)['"]\)?\s*([^;]*);/g, (match, importTarget) => {
-  //         // Clean up paths exactly like before
-  //         let cleanedPath = importTarget.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
-  //
-  //         const pathsToSearch = [
-  //           path.resolve(projectRoot, 'node_modules', cleanedPath),
-  //           path.resolve(projectRoot, 'src/css', cleanedPath),
-  //           path.resolve(currentDir, cleanedPath),
-  //         ];
-  //
-  //         let foundPath = null;
-  //         for (const p of pathsToSearch) {
-  //           if (fs.existsSync(p) && fs.statSync(p).isFile()) {
-  //             foundPath = p;
-  //             break;
-  //           }
-  //         }
-  //
-  //         if (!foundPath) {
-  //           console.warn(`⚠️ Global CSS build could not find: ${cleanedPath}`);
-  //           return match; // Keep original rule if file is missing
-  //         }
-  //
-  //         // Recursively read and flatten child stylesheets into this exact string position
-  //         return flattenStylesheets(foundPath, path.dirname(foundPath));
-  //       });
-  //     }
-  //
-  //     // 1. Generate one single flattened CSS string in RAM
-  //     const completelyFlattenedCss = flattenStylesheets(inputPath, path.dirname(inputPath));
-  //
-  //     // 2. Run LightningCSS transform() on the unified string context
-  //     let { code } = transform({
-  //       filename: 'global-main.css', // Memory anchor prevents os error 2
-  //       code: Buffer.from(completelyFlattenedCss),
-  //       minify: process.env.NODE_ENV === 'production',
-  //       sourceMap: false,
-  //       targets,
-  //       exclude: Features.LogicalProperties | Features.LightDark | Features.LabColors,
-  //       drafts: {
-  //         customMedia: true, // Natively converts your Open Props --md-n-below queries to pixels!
-  //       },
-  //     });
-  //
-  //     // 3. Write the fully processed code straight to your build directory
-  //     fs.writeFileSync(outputPath, code);
-  //     console.log(`✅ Global CSS bundle compiled successfully directly to ${outputPath}`);
-  //   } catch (e) {
-  //     console.error(`\n❌ Global CSS Pipeline Crash: ${e.message}\n`);
+  // eleventyConfig.addTransform('force-global-component-bucket', function (content) {
+  //   // Only target your WebC template files during compilation passes
+  //   if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {
+  //     // STOPS THE 19 FILES BUG: Intercept raw template strings and rewrite
+  //     // un-bucketed <style> blocks to explicitly belong to "main" before WebC groups them!
+  //     return content.replace(/<style(?![\s>]*webc:bucket=)>/g, '<style webc:bucket="main">');
   //   }
+  //   return content;
   // });
 
   eleventyConfig.addPlugin(pluginWebc, {
     components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
+
     bundlePluginOptions: {
       toFileDirectory: false,
       hoistDuplicateBundles: true,
