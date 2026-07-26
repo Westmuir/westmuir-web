@@ -1,6 +1,7 @@
 ---
 layout: "base.webc"
 title: "2016 August"
+id: "201608"
 poemTitle: "August Reflections"
 author: "Eila Webster"
 bgTheme: "antiquewhite"

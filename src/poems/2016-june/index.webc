@@ -1,6 +1,7 @@
 ---
 layout: "base.webc"
 title: "2016 June"
+id: "201606"
 poemTitle: "The Happy Month of June!"
 author: "Eila Webster"
 bgTheme: "antiquewhite"

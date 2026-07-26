@@ -1,6 +1,7 @@
 ---
 layout: "base.webc"
 title: "2016 December"
+id: "201612"
 poemTitle: "December Celebrations"
 author: "Eila Webster"
 bgTheme: "antiquewhite"

@@ -1,6 +1,7 @@
 ---
 layout: "base.webc"
 title: "2016 July"
+id: "201607"
 poemTitle: "The Mid-Summer Days in July"
 author: "Eila Webster"
 bgTheme: "antiquewhite"
