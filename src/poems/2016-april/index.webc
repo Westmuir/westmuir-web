@@ -7,7 +7,7 @@ endOfYear: false
 ---
 
 <div class="full-width">
-  <poem-grid class="poem" :title="poemTitle" :author="author">
+  <poem-grid :title="poemTitle" :author="author">
     <!-- Header Section -->
     <poem-img
       src="/poems/2016-april/image-4.png"
@@ -103,13 +103,10 @@ endOfYear: false
   </poem-grid>
 </div>
 <!-- 🚀 SCOPED STYLE BLOCK: Clean, organized, and isolated to this page -->
-<style webc:bucket="other">
-  .poem {
-    --border-theme: red;
+<style>
+  :where(poem-grid) {
+    --bg-color: #c5e0b4;
+    --title-color: #1a365d;
+    --stanza-color: #2c5282;
   }
-  /* :host { */
-  /*   --local-bg: #c5e0b4; */
-  /*   --local-title-color: #1a365d; */
-  /*   --local-stanza-color: #2c5282; */
-  /* } */
 </style>

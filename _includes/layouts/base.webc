@@ -31,6 +31,9 @@
       @layer openprops, theme, normalize, components.root, components.extended, utils;
     </style>
     <link rel="stylesheet" href="/css/main.css" webc:keep />
+
+    <!-- this produces the bundled component css needed for the particular page so will be optimized and small-->
+
     <link rel="stylesheet" :href="getBundleFileUrl('css' )" webc:keep />
 
     <!-- Critical inline initialization to prevent dark-mode page flash -->

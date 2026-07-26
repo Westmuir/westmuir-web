@@ -1,97 +1,107 @@
 ---
 layout: "base.webc"
 title: "2016 June"
-poemTitle: "2016 June"
+poemTitle: "The Happy Month of June!"
 author: "Eila Webster"
 bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <img src="/poems/2016-june/image-12.png" alt="" />
+      < <img src="/poems/2016-june/image-14.png" alt="" />
+    </div>
+    <div slot="header-tr">
+      <img src="/poems/2016-june/image-13.png" alt="" />
+      < <img src="/poems/2016-june/image-10.png" alt="" />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/2016-june/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2016-june/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2016-june/image-2.png" alt="" />
+      <img src="/poems/2016-june/image-4.png" alt="" />
+      <img src="/poems/2016-june/image-6.png" alt="" />
+      <img src="/poems/2016-june/image-0.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2016-june/image-6.png" alt="" />
-    <img src="/poems/2016-june/image-8.png" alt="" />
-    <img src="/poems/2016-june/image-10.png" alt="" />
-    <img src="/poems/2016-june/image-12.png" alt="" />
-    <img src="/poems/2016-june/image-14.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Now that we are into June <br />
+        The year is almost half way through; <br />
+        Thinking back to resolutions made <br />
+        Have you all learned something new?
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Now that we are into June <br />
-      The year is almost half way through; <br />
-      Thinking back to resolutions made <br />
-      Have you all learned something new?
-    </p>
+      <p>
+        Thoughts are now fixed on holidays <br />
+        All the excitement out there to find; <br />
+        But when the short break is over <br />
+        It’s just back to the daily grind.
+      </p>
 
-    <p>
-      Thoughts are now fixed on holidays <br />
-      All the excitement out there to find; <br />
-      But when the short break is over <br />
-      It’s just back to the daily grind.
-    </p>
+      <p>
+        To earn a wage may be necessary <br />
+        But what is important too; <br />
+        Is to find out that special talent <br />
+        You can cultivate all life through.
+      </p>
 
-    <p>
-      To earn a wage may be necessary <br />
-      But what is important too; <br />
-      Is to find out that special talent <br />
-      You can cultivate all life through.
-    </p>
+      <p>
+        People were meant to be happy <br />
+        Enjoying a full interesting life; <br />
+        Proud of all their attainments <br />
+        Not bogged down with care and strife.
+      </p>
+    </div>
 
-    <p>
-      People were meant to be happy <br />
-      Enjoying a full interesting life; <br />
-      Proud of all their attainments <br />
-      Not bogged down with care and strife.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2016-june/image-1.png" alt="" />
+      <img src="/poems/2016-june/image-9.png" alt="" />
+      <img src="/poems/2016-june/image-3.png" alt="" />
+      <img src="/poems/2016-june/image-11.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2016-june/image-2.png" alt="" />
-    <img src="/poems/2016-june/image-3.png" alt="" />
-    <img src="/poems/2016-june/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        But if you have no real incentive <br />
+        Holding new interests to fill your days; <br />
+        Keeping your grey cells active <br />
+        In a great many different ways.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      But if you have no real incentive <br />
-      Holding new interests to fill your days; <br />
-      Keeping your grey cells active <br />
-      In a great many different ways.
-    </p>
+      <p>
+        As you settle down into a rut <br />
+        You would soon fail to realise; <br />
+        How fast the years are passing <br />
+        ‘til a slow bent frame catches your eyes.
+      </p>
 
-    <p>
-      As you settle down into a rut <br />
-      You would soon fail to realise; <br />
-      How fast the years are passing <br />
-      ‘til a slow bent frame catches your eyes.
-    </p>
+      <p>
+        Fulfil all your ambitions now <br />
+        You’ll succeed if you really try; <br />
+        You have lost the first five months <br />
+        Don’t let the whole year pass you by.
+      </p>
+    </div>
 
-    <p>
-      Fulfil all your ambitions now <br />
-      You’ll succeed if you really try; <br />
-      You have lost the first five months <br />
-      Don’t let the whole year pass you by.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2016-june/image-5.png" alt="" />
-    <img src="/poems/2016-june/image-7.png" alt="" />
-    <img src="/poems/2016-june/image-9.png" alt="" />
-    <img src="/poems/2016-june/image-11.png" alt="" />
-    <img src="/poems/2016-june/image-13.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2016-june/image-8.png" alt="" />
+      <img src="/poems/2016-june/image-7.png" alt="" />
+      <img src="/poems/2016-june/image-5.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+
+<style>
+  :where(poem-grid) {
+    --bg-color: #c5e0b4;
+    --title-color: #ff0000;
+  }
+</style>

@@ -90,10 +90,10 @@ endOfYear: false
     </div>
   </poem-grid>
 </div>
-<style webc:scoped>
-  :host {
-    --local-bg: #c5e0b4;
-    --local-title-color: #fe0002;
-    --local-stanza-color: #2c5282;
+<style>
+  :where(poem-grid) {
+    --bg-color: #c5e0b4;
+    --title-color: #fe0002;
+    --stanza-color: #2c5282;
   }
 </style>

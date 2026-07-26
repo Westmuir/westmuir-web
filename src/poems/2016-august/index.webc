@@ -99,18 +99,9 @@ endOfYear: false
   </poem-grid>
 </div>
 
-<style webc:bucket="other">
-  /* :host { */
-  /*   --local-bg: #f8cbac; */
-  /*   --local-title-color: #c95906; */
-  /* } */
-
-  .poem {
-    --border-theme: yellow;
+<style>
+  :where(poem-grid) {
+    --bg-color: #f8cbac;
+    --stanza-color: #2c5282;
   }
-  /* :host { */
-  /*   --local-bg: #c5e0b4; */
-  /*   --local-title-color: #1a365d; */
-  /*   --local-stanza-color: #2c5282; */
-  /* } */
 </style>
