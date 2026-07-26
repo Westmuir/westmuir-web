@@ -11,7 +11,7 @@ import pluginNavigation from '@11ty/eleventy-navigation';
 import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import pluginWebc from '@11ty/eleventy-plugin-webc';
 import browserslist from 'browserslist';
-import { browserslistToTargets, Features, transform } from 'lightningcss';
+import { browserslistToTargets, bundleAsync, Features, transform } from 'lightningcss';
 import markdownit from 'markdown-it';
 import markdownitattrs from 'markdown-it-attrs';
 import markdownitcontainer from 'markdown-it-container';
@@ -88,71 +88,151 @@ export default async function (eleventyConfig) {
       },
     },
   });
-  eleventyConfig.on('eleventy.before', async () => {
-    try {
-      const inputPath = path.resolve('./src/css/main.css');
-      const outputPath = path.resolve('./_site/css/main.css');
-      const projectRoot = process.cwd();
 
-      // Ensure the destination folder exists on disk
-      fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  // Recognize CSS as a "template language"
+  eleventyConfig.addTemplateFormats('css');
 
-      // A highly robust JavaScript flattener that resolves @imports natively into one string
-      function flattenStylesheets(filePath, currentDir = './src/css') {
-        const rawContent = fs.readFileSync(filePath, 'utf8');
-
-        // Regex to match both plain and functional url() @import syntax
-        return rawContent.replace(/@import\s+(?:url\()?['"]([^'"]+)['"]\)?\s*([^;]*);/g, (match, importTarget) => {
-          // Clean up paths exactly like before
-          let cleanedPath = importTarget.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
-
-          const pathsToSearch = [
-            path.resolve(projectRoot, 'node_modules', cleanedPath),
-            path.resolve(projectRoot, 'src/css', cleanedPath),
-            path.resolve(currentDir, cleanedPath),
-          ];
-
-          let foundPath = null;
-          for (const p of pathsToSearch) {
-            if (fs.existsSync(p) && fs.statSync(p).isFile()) {
-              foundPath = p;
-              break;
-            }
-          }
-
-          if (!foundPath) {
-            console.warn(`⚠️ Global CSS build could not find: ${cleanedPath}`);
-            return match; // Keep original rule if file is missing
-          }
-
-          // Recursively read and flatten child stylesheets into this exact string position
-          return flattenStylesheets(foundPath, path.dirname(foundPath));
-        });
+  // Process CSS with LightningCSS
+  // Process CSS with LightningCSS
+  eleventyConfig.addExtension('css', {
+    outputFileExtension: 'css',
+    useLayouts: false, // Cleanly stops Eleventy from wrapping CSS in HTML layout tags
+    compile: async function (inputContent, inputPath) {
+      let parsed = path.parse(inputPath);
+      if (parsed.name.startsWith('_')) {
+        return; // Ignore internal utility partials
       }
 
-      // 1. Generate one single flattened CSS string in RAM
-      const completelyFlattenedCss = flattenStylesheets(inputPath, path.dirname(inputPath));
+      // Modern regex that cleanly captures the file targets from @import statements
+      const importRuleRegex = /@import\s+(?:url\()?['"]?([^'"\);]+)['"]?\)?.*;/g;
+      const fileList = [];
+      let match;
 
-      // 2. Run LightningCSS transform() on the unified string context
-      let { code } = transform({
-        filename: 'global-main.css', // Memory anchor prevents os error 2
-        code: Buffer.from(completelyFlattenedCss),
-        minify: process.env.NODE_ENV === 'production',
-        sourceMap: false,
-        targets,
-        exclude: Features.LogicalProperties | Features.LightDark | Features.LabColors,
-        drafts: {
-          customMedia: true, // Natively converts your Open Props --md-n-below queries to pixels!
-        },
-      });
+      while ((match = importRuleRegex.exec(inputContent))) {
+        // Safely map the dependency path relative to the entry directory
+        fileList.push(path.join(parsed.dir, match[1]));
+      }
 
-      // 3. Write the fully processed code straight to your build directory
-      fs.writeFileSync(outputPath, code);
-      console.log(`✅ Global CSS bundle compiled successfully directly to ${outputPath}`);
-    } catch (e) {
-      console.error(`\n❌ Global CSS Pipeline Crash: ${e.message}\n`);
-    }
+      if (fileList.length > 0) {
+        this.addDependencies(inputPath, fileList); // Native 11ty watcher reload watch hook
+      }
+
+      return async () => {
+        let { code } = await bundleAsync({
+          filename: inputPath,
+          minify: true, // Switched on for production-ready size optimizations
+          sourceMap: false,
+          targets,
+          resolver: {
+            read(filePath, from) {
+              // 1. Clean browser functional syntax url() or quotes out of path names
+              let cleanedPath = filePath.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+
+              const projectRoot = process.cwd();
+              const localCssPrefix = path.resolve(projectRoot, 'src/css');
+
+              // 2. Normalize package paths (e.g. removes './src/css/' prefix safely if it sneaks in)
+              let normalizedSubPath = cleanedPath;
+              if (cleanedPath.startsWith('./src/css/')) {
+                normalizedSubPath = cleanedPath.replace('./src/css/', '');
+              } else if (path.isAbsolute(cleanedPath) && cleanedPath.startsWith(localCssPrefix)) {
+                normalizedSubPath = path.relative(localCssPrefix, cleanedPath);
+              } else if (path.isAbsolute(cleanedPath) && cleanedPath.startsWith(projectRoot)) {
+                normalizedSubPath = path.relative(projectRoot, cleanedPath);
+              }
+
+              // 3. Sequentially trace file targets across valid project structures
+              const pathsToSearch = [
+                path.resolve(localCssPrefix, normalizedSubPath), // Local workspace stylesheets
+                path.resolve(projectRoot, 'node_modules', normalizedSubPath), // OpenProps & packages
+                path.isAbsolute(cleanedPath) ? cleanedPath : null,
+                from ? path.resolve(path.dirname(from), cleanedPath) : null,
+              ].filter(Boolean);
+
+              for (const absolutePath of pathsToSearch) {
+                if (fs.existsSync(absolutePath) && fs.statSync(absolutePath).isFile()) {
+                  return fs.readFileSync(absolutePath, 'utf8');
+                }
+              }
+
+              throw new Error(`Global CSS bundle could not trace: ${normalizedSubPath}`);
+            },
+          },
+          drafts: {
+            nesting: true,
+            customMedia: true, // Successfully unrolls your OpenProps dimensions down to pixels
+          },
+        });
+        return code;
+      };
+    },
   });
+
+  // eleventyConfig.on('eleventy.before', async () => {
+  //   try {
+  //     const inputPath = path.resolve('./src/css/main.css');
+  //     const outputPath = path.resolve('./_site/css/main.css');
+  //     const projectRoot = process.cwd();
+  //
+  //     // Ensure the destination folder exists on disk
+  //     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  //
+  //     // A highly robust JavaScript flattener that resolves @imports natively into one string
+  //     function flattenStylesheets(filePath, currentDir = './src/css') {
+  //       const rawContent = fs.readFileSync(filePath, 'utf8');
+  //
+  //       // Regex to match both plain and functional url() @import syntax
+  //       return rawContent.replace(/@import\s+(?:url\()?['"]([^'"]+)['"]\)?\s*([^;]*);/g, (match, importTarget) => {
+  //         // Clean up paths exactly like before
+  //         let cleanedPath = importTarget.replace(/^url\(['"]?/, '').replace(/['"]?\)$/, '');
+  //
+  //         const pathsToSearch = [
+  //           path.resolve(projectRoot, 'node_modules', cleanedPath),
+  //           path.resolve(projectRoot, 'src/css', cleanedPath),
+  //           path.resolve(currentDir, cleanedPath),
+  //         ];
+  //
+  //         let foundPath = null;
+  //         for (const p of pathsToSearch) {
+  //           if (fs.existsSync(p) && fs.statSync(p).isFile()) {
+  //             foundPath = p;
+  //             break;
+  //           }
+  //         }
+  //
+  //         if (!foundPath) {
+  //           console.warn(`⚠️ Global CSS build could not find: ${cleanedPath}`);
+  //           return match; // Keep original rule if file is missing
+  //         }
+  //
+  //         // Recursively read and flatten child stylesheets into this exact string position
+  //         return flattenStylesheets(foundPath, path.dirname(foundPath));
+  //       });
+  //     }
+  //
+  //     // 1. Generate one single flattened CSS string in RAM
+  //     const completelyFlattenedCss = flattenStylesheets(inputPath, path.dirname(inputPath));
+  //
+  //     // 2. Run LightningCSS transform() on the unified string context
+  //     let { code } = transform({
+  //       filename: 'global-main.css', // Memory anchor prevents os error 2
+  //       code: Buffer.from(completelyFlattenedCss),
+  //       minify: process.env.NODE_ENV === 'production',
+  //       sourceMap: false,
+  //       targets,
+  //       exclude: Features.LogicalProperties | Features.LightDark | Features.LabColors,
+  //       drafts: {
+  //         customMedia: true, // Natively converts your Open Props --md-n-below queries to pixels!
+  //       },
+  //     });
+  //
+  //     // 3. Write the fully processed code straight to your build directory
+  //     fs.writeFileSync(outputPath, code);
+  //     console.log(`✅ Global CSS bundle compiled successfully directly to ${outputPath}`);
+  //   } catch (e) {
+  //     console.error(`\n❌ Global CSS Pipeline Crash: ${e.message}\n`);
+  //   }
+  // });
 
   eleventyConfig.addPlugin(pluginWebc, {
     components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
