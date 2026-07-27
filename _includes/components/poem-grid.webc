@@ -11,7 +11,9 @@
         <div class="header-left-images">
           <slot name="header-tl"></slot>
         </div>
-        <h2 class="poem-title">${title}</h2>
+        <slot name="header-title">
+          <h2 class="poem-title">${title}</h2>
+        </slot>
         <div class="header-right-images">
           <slot name="header-tr"></slot>
         </div>
@@ -122,6 +124,24 @@
     flex-basis: 0;
 
     min-width: 120px; /* Prevents columns from collapsing into nothing on narrow layouts */
+  }
+
+  .poem-wrapper .no-border {
+    img {
+      border: none;
+    }
+  }
+  .row-header .header-title-images {
+    flex-shrink: 0;
+    flex: 1;
+    margin: 0;
+    picture {
+      img {
+        max-width: 50%;
+        margin-inline: auto;
+        border: none;
+      }
+    }
   }
 
   .header-right-images {
