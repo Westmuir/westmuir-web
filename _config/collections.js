@@ -36,12 +36,9 @@ export default function (eleventyConfig) {
 
   // Register a beautifully sorted collection of your poems
   eleventyConfig.addCollection('writtenPoems', function (collectionApi) {
-    const xx = collectionApi.getFilteredByTag('writtenPoems').sort((a, b) => {
+    return collectionApi.getFilteredByTag('writtenPoems').sort((a, b) => {
       // Natural alphabetical/string sorting matches chronological progression perfectly!
       return (a.data.id ?? '2222').localeCompare(b.data.id ?? '9999');
     });
-
-    console.log(xx.map(i => i.data.id));
-    return xx;
   });
 }
