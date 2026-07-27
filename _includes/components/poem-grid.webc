@@ -66,11 +66,13 @@
     color: #000;
 
     --_bg-color: var(--bg-color, antiquewhite);
-
     --_title-color: var(--title-color, #000);
     --_stanza-color: var(--stanza-color, #000);
     --_img-color: var(--img-color, var(--_title-color));
-    --border-theme: oklch(from var(--_bg-color) calc(l * 0.65) calc(c * 1.2) h);
+    --border-theme: var(
+      --card-border-color,
+      oklch(from var(--_bg-color) calc(l * 0.65) calc(c * 1.2) h)
+    );
 
     h2 {
       color: var(--_title-color);
