@@ -2,13 +2,6 @@
   {
     "label": "Poetry",
     "url": "/other/poetry/",
-    "description": "Poetry from our poet in residence.",
-    "iconx": "&#xea99;",
-    "bg": "rgb(12,166,120)"
-  },
-  {
-    "label": "Poetry",
-    "url": "/other/poetry/poems/",
     "description": "Poems from our poet in residence.",
     "iconx": "&#xea99;",
     "bg": "rgb(12,166,120)"

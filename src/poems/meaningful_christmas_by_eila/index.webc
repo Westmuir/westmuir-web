@@ -1,101 +1,127 @@
 ---
 layout: "base.webc"
-title: "Meaningful_Christmas_by_Eila"
-poemTitle: "Meaningful_Christmas_by_Eila"
+title: "2014 December"
+id: "201412"
+poemTitle: "Meaningful Christmas"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid class="wide" :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
 
-  <!-- Header Section -->
-  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
-  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+    <poem-img
+      src="/poems/meaningful_christmas_by_eila/image_5.png"
+      alt=""
+      slot="header-tl"
+    ></poem-img>
+    <poem-img
+      src="/poems/meaningful_christmas_by_eila/image_6.png"
+      alt=""
+      slot="header-tr"
+    ></poem-img>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <!-- No side images -->
-  </div>
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images"></div>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Meaningful Christmas	Meaningful Christmas	Meaningful Christmas	Meaningful Christmas <br />
-      The old year’s ending and thoughts return <br />
-      to the Christmas we knew long ago <br />
-      Before commercial bodies took hold
-    </p>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        The old year’s ending and thoughts return <br />
+        to the Christmas we knew long ago <br />
+        Before commercial bodies took hold <br />
+        With lavish gifts and tinsel show. <br />
+        *****<br />
+      </p>
 
-    <p>
-      With lavish gifts and tinsel show. <br />
-      ***** <br />
-      Christmas held some meaning then <br />
-      Singing Carols, hearts warmed by praise
-    </p>
+      <p>
+        Christmas held some meaning then <br />
+        Singing Carols, hearts warmed by praise<br />
+        Christmas greetings are no longer used <br />
+        recently changed to Happy Holidays. <br />
+        ***** <br />
+      </p>
 
-    <p>
-      Christmas greetings are no longer used <br />
-      recently changed to Happy Holidays. <br />
-      ***** <br />
-      From late September in all the Stores
-    </p>
+      <p>
+        From late September in all the Stores<br />
+        Christmas gifts glitter to catch the eye <br />
+        As youngsters see the gadgets galore <br />
+        that they want their kinfolk to buy. <br />
+        *****
+      </p>
 
-    <p>
-      Christmas gifts glitter to catch the eye <br />
-      As youngsters see the gadgets galore <br />
-      that they want their kinfolk to buy. <br />
-      *****
-    </p>
+      <p>
+        It is like a competition for parents <br />
+        All wanting the most expensive gift <br />
+        Stretching and spending beyond means<br />
+        Never giving a real thought to thrift <br />
+      </p>
+    </div>
 
-    <p>
-      It is like a competition for parents <br />
-      All wanting the most expensive gift <br />
-      The old year’s ending and thoughts return <br />
-      Stretching and spending beyond means
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <poem-img
+        src="/poems/meaningful_christmas_by_eila/image_4.png"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/meaningful_christmas_by_eila/image_3.png"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/meaningful_christmas_by_eila/decs.png"
+        style="border: none"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/meaningful_christmas_by_eila/manger.png"
+        style="border: none"
+        alt=""
+      ></poem-img>
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <!-- No center images -->
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Things then begin spinning out of control <br />
+        New Year brings a real mess of debt<br />
+        Trying to impress in this modern world <br />
+        Can land you with lots of regret <br />
+        ***** <br />
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Never giving a real thought to thrift <br />
-      ***** <br />
-      Things then begin spinning out of control <br />
-      New Year brings a real mess of debt
-    </p>
+      <p>
+        What is wrong with a simple meal<br />
+        A small gift picked from the tree <br />
+        When generations joined in party games <br />
+        the joy there, was plain to see <br />
+        *****
+      </p>
 
-    <p>
-      Trying to impress in this modern world <br />
-      Can land you with lots of regret <br />
-      ***** <br />
-      What is wrong with a simple meal
-    </p>
+      <p>
+        You can’t delete the Real Christmas <br />
+        Nor the bright shining star in the sky <br />
+        GOD keeps on sending us precious gifts <br />
+        the ones that no money can buy.
+      </p>
+    </div>
 
-    <p>
-      A small gift picked from the tree <br />
-      When generations joined in party games <br />
-      the joy there, was plain to see <br />
-      *****
-    </p>
-
-    <p>
-      You can’t delete the Real Christmas <br />
-      Nor the bright shining star in the sky <br />
-      GOD keeps on sending us precious gifts <br />
-      the ones that no money can buy.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <!-- No side images -->
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <poem-img
+        src="/poems/meaningful_christmas_by_eila/image.png"
+        alt=""
+      ></poem-img>
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #b6dde8;
+    --stanza-color: #2c5282;
+    --title-color: #ff0000;
+    --card-border-color: #76923c;
+    --img-color: #76923c;
+  }
+</style>

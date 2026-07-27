@@ -11,9 +11,11 @@
         <div class="header-left-images">
           <slot name="header-tl"></slot>
         </div>
-        <slot name="header-title">
-          <h2 class="poem-title">${title}</h2>
-        </slot>
+        <div class="header-title-text">
+          <slot name="header-title">
+            <h2 class="poem-title">${title}</h2>
+          </slot>
+        </div>
         <div class="header-right-images">
           <slot name="header-tr"></slot>
         </div>
@@ -126,6 +128,20 @@
     min-width: 120px; /* Prevents columns from collapsing into nothing on narrow layouts */
   }
 
+  .header-title-text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    h2 {
+      max-width: 100%;
+    }
+  }
+  .small-title {
+    h2 {
+      font-size: var(--font-size-fluid-1);
+    }
+  }
+
   .poem-wrapper .no-border {
     img {
       border: none;
@@ -190,6 +206,10 @@
     align-items: start;
     padding: 1rem;
     font-family: "Kalam", var(--font-humanist);
+  }
+
+  .wide .grid-body {
+    grid-template-columns: 1% 1fr minmax(0, 200px) 1fr 15%;
   }
 
   .col-outer,

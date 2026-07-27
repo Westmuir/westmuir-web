@@ -4,7 +4,7 @@ export default {
   eleventyComputed: {
     permalink: data => {
       // Safely read the parent folder slug using the dynamic data cascade
-      return `/other/poems/${data.page.fileSlug}/index.html`;
+      return `/poems/${data.page.fileSlug}/index.html`;
     },
   },
 };
