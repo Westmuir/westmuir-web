@@ -1,0 +1,82 @@
+---
+layout: "base.webc"
+title: "2019 December"
+poemTitle: "2019 December"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2019-december/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2019-december/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2019-december/image-6.png" alt="" />
+    <img src="/poems/2019-december/image-8.png" alt="" />
+    <img src="/poems/2019-december/image-10.png" alt="" />
+    <img src="/poems/2019-december/image-12.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Where have all the days gone, <br />
+      The year is just slipping away; <br />
+      And December is fast approaching, <br />
+      Towards the thrills of Christmas Day.
+    </p>
+
+    <p>
+      Looking back do you sometimes wonder, <br />
+      On how you used your time; <br />
+      Did you always do your very best? <br />
+      I just wrote mine in a rhyme.
+    </p>
+
+    <p>
+      Now the years are catching up on me, <br />
+      It’s difficult to keep up the pace; <br />
+      But I am doing a web verse, <br />
+      For Decembers’ Westmuir space.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2019-december/image-2.png" alt="" />
+    <img src="/poems/2019-december/image-3.png" alt="" />
+    <img src="/poems/2019-december/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      This keeps the old brain active, <br />
+      I still hope to carry on; <br />
+      It gives me lots of pleasure, <br />
+      Writing verses – when alone.
+    </p>
+
+    <p>
+      May you have a jolly Christmas, <br />
+      And Good Wishes for the New Year; <br />
+      And if I’m spared to carry on, <br />
+      I’ll write verses for you next year.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2019-december/image-5.png" alt="" />
+    <img src="/poems/2019-december/image-7.png" alt="" />
+    <img src="/poems/2019-december/image-9.png" alt="" />
+    <img src="/poems/2019-december/image-11.png" alt="" />
+    <img src="/poems/2019-december/image-13.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

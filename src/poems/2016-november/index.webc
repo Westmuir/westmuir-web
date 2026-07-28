@@ -1,0 +1,103 @@
+---
+layout: "base.webc"
+title: "2016 November"
+id: "201611"
+poemTitle: "November"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<div class="full-width">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <div class="header-title-images" slot="header-title">
+      <img src="/poems/2016-november/image-9.png" alt="" />
+    </div>
+    <div class="no-border" slot="header-tl">
+      <img src="/poems/2016-november/image-6.png" alt="" />
+      <img src="/poems/2016-november/image-3.png" alt="" />
+    </div>
+    <div class="no-border" slot="header-tr">
+      <img src="/poems/2016-november/image-4.png" alt="" />
+      <img src="/poems/2016-november/image.png" alt="" />
+    </div>
+
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2016-november/image-12.png" alt="" />
+      <img src="/poems/2016-november/image-10.png" alt="" />
+      <img src="/poems/2016-november/image-13.png" alt="" />
+    </div>
+
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        We are into November now, <br />
+        It is so hard to comprehend; <br />
+        How fast the months are passing, <br />
+        The Year will soon be at an end.
+      </p>
+
+      <p>
+        Gale force winds are now blowing, <br />
+        Stripping many trees completely bare; <br />
+        The falling leaves form a soft carpet, <br />
+        From what’s been tossed into the air.
+      </p>
+
+      <p>
+        Time now to get pot plants indoors, <br />
+        For an extended floral treat; <br />
+        If you want to save their show, <br />
+        Give them some gentle heat.
+      </p>
+    </div>
+
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2016-november/image-0.png" style="border: none" alt="" />
+      <img src="/poems/2016-november/image-1.png" alt="" />
+      <img src="/poems/2016-november/image-2.png" alt="" />
+    </div>
+
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Keep what you value most of all, <br />
+        You would be sad if they were lost; <br />
+        Yet the seeded black grapes now, <br />
+        Are sweeter when touched by frost.
+      </p>
+
+      <p>
+        You may sometimes take a gamble, <br />
+        And do things that make you quake; <br />
+        You could still be on a winner, <br />
+        Just by making some small mistake.
+      </p>
+
+      <p>
+        So! Do something in November, <br />
+        To cause some laughter and a smile; <br />
+        Helping to recharge batteries, <br />
+        When you go that extra mile.
+      </p>
+    </div>
+
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2016-november/image-7.png" alt="" />
+      <img src="/poems/2016-november/image-11.png" alt="" />
+      <img src="/poems/2016-november/image-8.png" alt="" />
+    </div>
+  </poem-grid>
+</div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #c5e0b4;
+    --title-color: #ff0000;
+    --card-border-color: #00b050;
+    --img-color: #000;
+  }
+</style>

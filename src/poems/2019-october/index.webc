@@ -1,0 +1,98 @@
+---
+layout: "base.webc"
+title: "2019 October"
+poemTitle: "2019 October"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2019-october/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2019-october/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2019-october/image-6.png" alt="" />
+    <img src="/poems/2019-october/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Well Bill this is to say goodbye, <br />
+      For tattie time is o’er; <br />
+      You won’t be going to Kirrie, <br />
+      With the ‘bogey’ any more.
+    </p>
+
+    <p>
+      Now that the season’s at an end, <br />
+      I’m sure you will be glad; <br />
+      But you have done real well this year, <br />
+      As Gaffer of the squad.
+    </p>
+
+    <p>
+      Although we’ve had our ups and downs, <br />
+      This tattie time’s been fun; <br />
+      You really are a jolly sport, <br />
+      To be the farmer’s son.
+    </p>
+
+    <p>
+      You show no airs and graces, <br />
+      You never make a fuss; <br />
+      It’s fine to feel at tattie time, <br />
+      That you are one of us.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2019-october/image-2.png" alt="" />
+    <img src="/poems/2019-october/image-3.png" alt="" />
+    <img src="/poems/2019-october/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Now that your tatties are all in, <br />
+      Have some pity for poor me; <br />
+      For I am just beginning, <br />
+      The tattie time you see.
+    </p>
+
+    <p>
+      Before we plough our tatties out, <br />
+      WE have to pull each shaw; <br />
+      So spare a thought for me my friend, <br />
+      And bring along some straw.
+    </p>
+
+    <p>
+      Well it’s with a struggle, Bill, <br />
+      We end this tattie time; <br />
+      Its also been a struggle, <br />
+      For me to end this rhyme.
+    </p>
+
+    <p>
+      But we have had a happy time, <br />
+      A’working here for you; <br />
+      So this comes with best wishes from, <br />
+      Your faithful bogey crew.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2019-october/image-5.png" alt="" />
+    <img src="/poems/2019-october/image-7.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

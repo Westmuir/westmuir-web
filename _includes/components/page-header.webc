@@ -26,14 +26,16 @@
 <style>
   .page-header {
     height: 220px;
-    background-color: var(--camo-8);
-    background-image: var(--gradient-30);
-    color: #fff;
+    background-color: var(--primary);
+    background-image: var(--themed-gradient-30);
     display: flex;
     align-items: center;
     position: relative;
     margin-bottom: var(--size-1);
+    /* Prevent text hugging the screen edges on small viewports */
+    padding-inline: var(--size-5);
 
+    /* ... picture and theme-toggle styles stay exactly the same ... */
     .theme-toggle {
       position: absolute;
       top: var(--size-3);
@@ -43,22 +45,6 @@
       padding: var(--size-2);
       border-radius: var(--radius-round, 1e5px);
       cursor: pointer;
-      background: color-mix(in srgb, var(--sand-12), transparent 90%);
-      backdrop-filter: blur(4px);
-      border: 1px solid color-mix(in srgb, var(--sand-0), transparent 90%);
-      transition:
-        background-color 0.2s var(--ease-out-2),
-        transform 0.15s var(--ease-out-2);
-      --nav-icon: color-mix(in srgb, var(--sand-0), transparent 15%);
-      --nav-icon-hover: var(--sand-0);
-
-      &:hover {
-        background: color-mix(in srgb, var(--sand-12), transparent 75%);
-        transform: scale(1.05);
-      }
-      &:active {
-        transform: scale(0.95);
-      }
     }
 
     > picture {
@@ -79,11 +65,13 @@
     }
 
     .page-header-info {
-      grid-column: content;
       z-index: 2;
       display: flex;
       width: 100%;
-      max-inline-size: 100%;
+
+      /* MATCH YOUR CENTRAL GRID BOUNDARIES: */
+      /* Set this max-width to match whatever your main content well is (e.g., 1200px or 1440px) */
+      max-inline-size: var(--size-content-3, 1200px);
 
       .content {
         flex: 1;
@@ -91,30 +79,28 @@
         max-width: 560px;
         flex-direction: column;
         justify-content: center;
-        gap: var(--size-2, 8px); /* Tighten the gap slightly */
+        gap: var(--size-2, 8px);
         z-index: 2;
-        background: var(--page-header-background-color);
+        background: var(--color-8);
         clip-path: polygon(100% 0, 100% 31%, 92% 100%, 0 100%, 0 0);
-        /* MODIFICATION: Reduce top/bottom padding slightly to fit the 220px container perfectly */
-        padding: var(--size-3, 16px) var(--size-5, 32px) var(--size-3, 16px)
-          var(--size-4, 24px);
-
+        padding: var(--size-3) var(--size-5) var(--size-3) var(--size-4);
         width: 95%;
 
         > h1 {
           font-family: "Merriweather Sans", sans-serif;
-          /* Slightly lower the fluid roof sizing from 3rem to 2.5rem for a punchy, compact look */
           font-size: clamp(1.75rem, 4vw, 2.5rem);
           line-height: var(--font-lineheight-1, 1.1);
           font-weight: 800;
           letter-spacing: -0.03em;
-          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+          color: var(--gray-2);
+          text-shadow: 0 var(--size-1) var(--size-2)
+            color-mix(in oklch, var(--color-1) 35%, transparent);
         }
+
         > p {
-          /* Drop down slightly for tighter alignment harmony */
           font-size: clamp(0.95rem, 1.8vw, 1.1rem);
           max-inline-size: 100%;
-          color: var(--text-1, #ffffff);
+          color: var(--gray-2);
           font-weight: 500;
           padding-inline-end: var(--size-6, 2rem);
         }

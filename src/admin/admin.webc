@@ -1,6 +1,6 @@
 ---
-layout: 'base.webc'
-title: 'Admin Dashboard - Westmuir Village'
+layout: "base.webc"
+title: "Admin Dashboard - Westmuir Village"
 ---
 
 <div class="admin-panel-wrapper">
@@ -11,11 +11,21 @@ title: 'Admin Dashboard - Westmuir Village'
   <div class="admin-card">
     <h2 class="card-title">Set Up Weekly Block Booking</h2>
     <div id="recurring-result">
-      <form hx-post="/admin/create-recurring" hx-target="#recurring-result" hx-swap="innerHTML">
+      <form
+        hx-post="/admin/create-recurring"
+        hx-target="#recurring-result"
+        hx-swap="innerHTML"
+      >
         <div class="form-row">
           <div class="form-group">
             <label for="rec-name">Event / Group Name</label>
-            <input type="text" id="rec-name" name="name" placeholder="e.g. Yoga Class" required />
+            <input
+              type="text"
+              id="rec-name"
+              name="name"
+              placeholder="e.g. Yoga Class"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="rec-day">Day of the Week</label>
@@ -55,23 +65,30 @@ title: 'Admin Dashboard - Westmuir Village'
       <input
         type="checkbox"
         id="toggle-cancelled"
-        onchange="document.body.classList.toggle('hide-cancelled', !this.checked)"
+        onchange="
+          document.body.classList.toggle('hide-cancelled', !this.checked)
+        "
         checked
       />
       Show Cancelled Bookings
     </label>
   </div>
   <!-- HTMX fetches the rows from our protected function as soon as the admin logs in -->
-  <div class="dashboard-list" hx-get="/admin/queue" hx-trigger="load" hx-swap="innerHTML">
+  <div
+    class="dashboard-list"
+    hx-get="/admin/queue"
+    hx-trigger="load"
+    hx-swap="innerHTML"
+  >
     <p>Loading administrative logs...</p>
   </div>
 </div>
 
-<style webc:type="scss">
+<style>
   /* Use your Open Props variables natively here! */
   .admin-panel-wrapper {
     margin: var(--size-6) 0;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: "Merriweather Sans", sans-serif;
   }
 
   .admin-card {

@@ -1,0 +1,77 @@
+---
+layout: "base.webc"
+title: "2019 January"
+poemTitle: "2019 January"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2019-january/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2019-january/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2019-january/image-6.png" alt="" />
+    <img src="/poems/2019-january/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      As 2018 fades away, <br />
+      And we step into the new; <br />
+      We wonder what it will hold, <br />
+      But this all depends on you.
+    </p>
+
+    <p>
+      The years go on unchanging, <br />
+      Still we go our chosen way; <br />
+      And just because we are human, <br />
+      There’s a big chance to go astray.
+    </p>
+
+    <p>
+      Consider your options carefully, <br />
+      There’s no hurry - take your time; <br />
+      Twelve months lie before you, <br />
+      And to hesitate is no crime.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2019-january/image-2.png" alt="" />
+    <img src="/poems/2019-january/image-3.png" alt="" />
+    <img src="/poems/2019-january/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Success is still worth waiting for, <br />
+      And this could be the year; <br />
+      Keep on giving your very best, <br />
+      And you have nought to fear.
+    </p>
+
+    <p>
+      Even when the going’s hard, <br />
+      If you can raise a smile; <br />
+      You will find the strength you need, <br />
+      To go that extra mile.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2019-january/image-5.png" alt="" />
+    <img src="/poems/2019-january/image-7.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

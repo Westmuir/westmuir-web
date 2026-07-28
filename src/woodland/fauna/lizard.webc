@@ -1,6 +1,6 @@
 ---
 title: Lizards
-layout: plain
+layout: base
 ---
 
 <div class="content-grid flow">
@@ -36,8 +36,12 @@ layout: plain
   </section>
 
   <species-info @distribution="Common in Scotland">
-          <p>They are often found in open, sunny areas like heaths, moorlands, and dry stone walls.</p>
-          <p><strong>Viviparous</strong> means they give birth to live young, not eggs.</p>
+    <p>
+      They are often found in open, sunny areas like heaths, moorlands, and dry
+      stone walls.
+    </p>
+    <p>
+      <strong>Viviparous</strong> means they give birth to live young, not eggs.
+    </p>
   </species-info>
-
- </div>
+</div>

@@ -26,7 +26,13 @@
 
           <div class="form-group">
             <label for="booking-name">Your Name / Organisation</label>
-            <input type="text" id="booking-name" name="name" placeholder="e.g., W.I. Meeting" required />
+            <input
+              type="text"
+              id="booking-name"
+              name="name"
+              placeholder="e.g., W.I. Meeting"
+              required
+            />
           </div>
 
           <div class="form-group">
@@ -34,7 +40,9 @@
             <input type="email" id="booking-email" name="email" required />
           </div>
 
-          <button type="submit" class="btn-submit">Submit Tentative Booking</button>
+          <button type="submit" class="btn-submit">
+            Submit Tentative Booking
+          </button>
           <div
             class="cf-turnstile"
             :data-sitekey="process.env.TURNSTILE_SITEKEY || '1x00000000000000000000AA'"
@@ -45,23 +53,32 @@
     </details>
   </section>
 </div>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer webc:keep></script>
+<script
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+  async
+  defer
+  webc:keep
+></script>
 
 <!-- Component-Specific Styling inside booking-system.webc -->
-<style webc:type="scss">
+<style>
   .repeat-icon {
     display: inline-block;
     font-weight: var(--font-weight-7);
     color: inherit; /* Natively inherits the high-contrast text color of the badge wrapper */
-    margin-right: var(--size-1); /* Adds clean spacing to the right before the text begins */
-    transform: translateY(1px); /* Finely realigns the height on the text baseline row */
+    margin-right: var(
+      --size-1
+    ); /* Adds clean spacing to the right before the text begins */
+    transform: translateY(
+      1px
+    ); /* Finely realigns the height on the text baseline row */
   }
   .booking-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--size-6);
     margin: var(--size-6) 0;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: "Merriweather Sans", sans-serif;
 
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;

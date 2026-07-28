@@ -33,4 +33,12 @@ export default function (eleventyConfig) {
 
     return sectionsMap;
   });
+
+  // Register a beautifully sorted collection of your poems
+  eleventyConfig.addCollection('writtenPoems', function (collectionApi) {
+    return collectionApi.getFilteredByTag('writtenPoems').sort((a, b) => {
+      // Natural alphabetical/string sorting matches chronological progression perfectly!
+      return (b.data.id ?? '2222').localeCompare(a.data.id ?? '9999');
+    });
+  });
 }

@@ -1,0 +1,100 @@
+---
+layout: "base.webc"
+title: "2016 October"
+id: "201610"
+poemTitle: "October Flashbacks"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<div class="full-width">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <img src="/poems/2016-october/image-9.png" alt="" slot="header-tl" />
+    <img src="/poems/2016-october/image-1.png" alt="" slot="header-tr" />
+
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2016-october/image-10.png" alt="" />
+      <img src="/poems/2016-october/image-8.png" alt="" />
+      <img src="/poems/2016-october/image-4.png" alt="" />
+    </div>
+
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        I can’t believe this is October, <br />
+        We’re in mid-Autumn once again; <br />
+        Oh! How quickly time has flown, <br />
+        Since I took up my pen.
+      </p>
+
+      <p>
+        To herald in a bright New Year, <br />
+        With possibilities that caught attention; <br />
+        Better get your skates on quick, <br />
+        Before you are on the pension.
+      </p>
+
+      <p>
+        Don’t leave it for retiral years, <br />
+        That’s classed as a bed of roses; <br />
+        Nobody mentions the many thorns, <br />
+        And failing energy in small doses.
+      </p>
+
+      <p>
+        Do the things you wish for Now, <br />
+        Not on some far off future date; <br />
+        Go on! Start to tick them off, <br />
+        ‘til you clean up the slate.
+      </p>
+    </div>
+
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2016-october/image-0.png" alt="" />
+      <img src="/poems/2016-october/image-6.png" alt="" />
+      <img src="/poems/2016-october/image-3.png" alt="" />
+    </div>
+
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        You’ll get a glow of satisfaction, <br />
+        And life will be a lot more fun; <br />
+        You’ll be storing up sweet memories, <br />
+        Wage earning jobs will still get done.
+      </p>
+
+      <p>
+        Although this is a busy time, <br />
+        If you have a large garden plot; <br />
+        Earthing up carrots, neeps and leeks, <br />
+        Storing tatties for the soup pot!
+      </p>
+
+      <p>
+        In the changing tapestry of life, <br />
+        Each month has a role to play; <br />
+        Keep looking for all the benefits, <br />
+        You could find along the way.
+      </p>
+    </div>
+
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2016-october/image-5.png" alt="" />
+      <img src="/poems/2016-october/image-9.png" alt="" />
+      <img src="/poems/2016-october/image-11.png" alt="" />
+    </div>
+  </poem-grid>
+</div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #ffe699;
+    --title-color: #833c0b;
+    --img-color: #000;
+  }
+</style>

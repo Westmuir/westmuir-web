@@ -1,0 +1,113 @@
+---
+layout: "base.webc"
+title: "2016 April"
+id: "201604"
+poemTitle: "2016 April"
+author: "Eila Webster"
+endOfYear: false
+---
+
+<div class="full-width">
+  <poem-grid :title="poemTitle" :author="author">
+    <!-- Header Section -->
+    <poem-img
+      src="/poems/2016-april/image-4.png"
+      alt=""
+      slot="header-tl"
+    ></poem-img>
+    <poem-img
+      src="/poems/2016-april/image-5.png"
+      alt=""
+      slot="header-tr"
+    ></poem-img>
+
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <poem-img src="/poems/2016-april/image-8.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-3.png" alt=""></poem-img>
+    </div>
+
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        It’s Official! Spring is here <br />
+        What we’ve been waiting for; <br />
+        Days of blue skies and sunshine <br />
+        Right outside our front door.
+      </p>
+
+      <p>
+        Birds singing the dawn chorus <br />
+        Bees venture out from the hive, <br />
+        Buds are bursting all around <br />
+        It feels good to be alive.
+      </p>
+
+      <p>
+        Throwing off the winter gloom <br />
+        As daylight hours increase; <br />
+        You get a surge of energy <br />
+        And troubles seem to cease.
+      </p>
+
+      <p>
+        We take so much for granted <br />
+        Seasons change without a thought; <br />
+        Do we appreciate this timely gift <br />
+        As gratefully as we ought?
+      </p>
+    </div>
+
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <poem-img src="/poems/2016-april/image-0.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-1.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-2.png" alt=""></poem-img>
+    </div>
+
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        We need rain as well as sunshine <br />
+        To get plants and seeds to grow; <br />
+        Frost is sent to kill some buds <br />
+        Stopping fruit trees overflow.
+      </p>
+
+      <p>
+        Summer heat ripens the berries <br />
+        Drying root crops for winter store; <br />
+        Just a few examples here <br />
+        Think about it you’ll find more.
+      </p>
+
+      <p>
+        No human hand is able <br />
+        To do what must be done; <br />
+        To keep things working smoothly <br />
+        Here on earth for everyone.
+      </p>
+
+      <p>
+        We need this power to guide us <br />
+        Even on hard paths it would seem; <br />
+        Let us be forever grateful <br />
+        For the laws that are supreme.
+      </p>
+    </div>
+
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <poem-img src="/poems/2016-april/image-6.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-7.png" alt=""></poem-img>
+    </div>
+  </poem-grid>
+</div>
+<!-- 🚀 SCOPED STYLE BLOCK: Clean, organized, and isolated to this page -->
+<style>
+  :where(poem-grid) {
+    --bg-color: #c5e0b4;
+    --title-color: #1a365d;
+    --stanza-color: #2c5282;
+  }
+</style>

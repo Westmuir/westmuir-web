@@ -1,0 +1,93 @@
+---
+layout: "base.webc"
+title: "2019 May"
+poemTitle: "2019 May"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2019-may/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2019-may/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2019-may/image-6.png" alt="" />
+    <img src="/poems/2019-may/image-8.png" alt="" />
+    <img src="/poems/2019-may/image-10.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      May is the month of blossom, <br />
+      You find it everywhere; <br />
+      On shrubs on trees and gardens, <br />
+      Proclaiming spring is in the air.
+    </p>
+
+    <p>
+      Daylight hours are warmer, <br />
+      With sunlight shining bright; <br />
+      Early in the morning now, <br />
+      To fill hearts with delight.
+    </p>
+
+    <p>
+      Roll up your sleeves – get busy, <br />
+      Now there is lots to do; <br />
+      Growing fruit and vegetables, <br />
+      To last the whole year through.
+    </p>
+
+    <p>
+      The lawn just keeps on growing, <br />
+      And weeds – they never fade ; <br />
+      It’s time for the garden tools, <br />
+      So out comes the hoe and spade .
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2019-may/image-2.png" alt="" />
+    <img src="/poems/2019-may/image-3.png" alt="" />
+    <img src="/poems/2019-may/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Preparing the ground for planting , <br />
+      Potatoes, beans and peas; <br />
+      There’s no time here this month, <br />
+      To take things at your ease.
+    </p>
+
+    <p>
+      But hard work now is worth it, <br />
+      When you have your winter store; <br />
+      All fresh and home grown, <br />
+      Now who could wish for more.
+    </p>
+
+    <p>
+      So do your very best this month, <br />
+      And carry on with a smile; <br />
+      Enjoying your home-grown harvest, <br />
+      Makes everything worthwhile.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2019-may/image-5.png" alt="" />
+    <img src="/poems/2019-may/image-7.png" alt="" />
+    <img src="/poems/2019-may/image-9.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

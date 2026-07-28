@@ -1,0 +1,111 @@
+---
+layout: "base.webc"
+title: "November Poem - Martinmas Winter Term"
+poemTitle: "November Poem - Martinmas Winter Term"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/november-poem-martinmas-winter-term/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/november-poem-martinmas-winter-term/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/november-poem-martinmas-winter-term/image-6.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      The winter ‘Farming Fee-ing’ day <br />
+      So important in a farm hand’s life <br />
+      When hired by a farmer for a full year <br />
+      He’d have wage and home for his wife.
+    </p>
+
+    <p>
+      Farmers and farm workers would appear <br />
+      And if on terms they did agree <br />
+      To stay and work there for a year <br />
+      It was soon all sealed by taking a Fee.
+    </p>
+
+    <p>
+      Married men lived in cottar hooses <br />
+      For perks they got milk and meal <br />
+      Many renewed their yearly contract <br />
+      When a’body got on rale weel.
+    </p>
+
+    <p>
+      For man and horse became a team <br />
+      As they kept turning o’er the soil <br />
+      Bonding together - perfect dream <br />
+      That nothing could ever spoil.
+    </p>
+
+    <p>
+      Single men lived in a bothy there <br />
+      And were aye mair ready for a flit <br />
+      Moving at the spring May term <br />
+      Just to spread their wings a bit.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/november-poem-martinmas-winter-term/image-2.png" alt="" />
+    <img src="/poems/november-poem-martinmas-winter-term/image-3.png" alt="" />
+    <img src="/poems/november-poem-martinmas-winter-term/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Remembering, when just a wee lassie <br />
+      The Term fun day in Kirrie Square <br />
+      Spending a ha’penny at the Muckley <br />
+      At the stalls all erected there.
+    </p>
+
+    <p>
+      Walking in wi’ my Gran and Grandy <br />
+      To me it was a real holiday <br />
+      Toddling hame tired but happy <br />
+      Clutching toys at the close of day.
+    </p>
+
+    <p>
+      Gone now are those simple joys <br />
+      That filled 0ur hearts with delight <br />
+      To see a field of horses now <br />
+      And men ploughing – a lovely sight.
+    </p>
+
+    <p>
+      Fields of stooks drying in the sunshine <br />
+      High stacks built up in farm yards <br />
+      Are some things you no longer see now <br />
+      Yet was real fodder to the Bard.
+    </p>
+
+    <p>
+      Life no doubt is much easier now <br />
+      The old Term dates met their fate <br />
+      But I’m glad that I was born back then <br />
+      Such Happy Memories they still create.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/november-poem-martinmas-winter-term/image-5.png" alt="" />
+    <img src="/poems/november-poem-martinmas-winter-term/image-7.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

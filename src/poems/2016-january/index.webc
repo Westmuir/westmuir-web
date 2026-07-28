@@ -1,0 +1,118 @@
+---
+layout: "base.webc"
+title: "2016 January"
+id: "201601"
+poemTitle: "New Year 2016"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<div class="full-width">
+  <poem-grid class="small" :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <poem-img
+      src="/poems/2016-january/image-17.png"
+      alt=""
+      slot="header-tl"
+    ></poem-img>
+    <poem-img
+      src="/poems/2016-january/image_8.png"
+      alt=""
+      slot="header-tr"
+    ></poem-img>
+
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <poem-img src="/poems/2016-january/image_1.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_9.png" alt=""></poem-img>
+    </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        At New Year as you stand on the threshold <br />
+        Of a pathway that is still unknown; <br />
+        Will you grasp the welcome unseen hand <br />
+        Or will you just keep on struggling alone.
+      </p>
+
+      <p>
+        The road ahead is not always smooth <br />
+        There will be some pitfalls along the way <br />
+        And when you come to the first crossroads <br />
+        You are lost – and look on with dismay.
+      </p>
+
+      <p>
+        For you didn’t stop to view the signs <br />
+        That were put there for you to use; <br />
+        But no pressure is put upon you <br />
+        You can still take the way you choose.
+      </p>
+
+      <p>
+        You may start with many resolutions <br />
+        As the bright New Year begins; <br />
+        But in a short week or two you’ll find <br />
+        It’s the same old way – that wins.
+      </p>
+    </div>
+
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <poem-img src="/poems/2016-january/image_2.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_3.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_4.png" alt=""></poem-img>
+    </div>
+
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Now! Just look at what is really important <br />
+        The things You Want the most in your life; Is it more power – or large
+        stacks of wealth <br />
+        Luxurious holidays for your family and wife <br />
+      </p>
+
+      <p>
+        Or striving for that special trophy or cup <br />
+        That always seems to be out of reach; Or maybe like the young plain girl
+        now <br />
+        Who wants a soft skin just like a peach. <br />
+      </p>
+
+      <p>
+        Why keep on struggling through the years <br />
+        Be content and happy now as your are; <br />
+        Everyone born here on earth is unique <br />
+        Created like the bright shining star <br />
+      </p>
+
+      <p>
+        Material things have a role to play <br />
+        But are flirting for they’re not Divine; <br />
+        You may find out it's only Love and Joy <br />
+        That can withstand the real test of time.
+      </p>
+    </div>
+
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <poem-img src="/poems/2016-january/image_7.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_6.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_5.png" alt=""></poem-img>
+    </div>
+  </poem-grid>
+</div>
+<style>
+  :host {
+    --local-bg: #92cddc;
+    --local-title-color: #365f91;
+    --local-stanza-color: #000;
+  }
+  :where(poem-grid) {
+    --bg-color: #92cddc;
+    --title-color: #365f91;
+    --stanza-color: #000;
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
 title: Ling heather
-layout: plain
+layout: base
 ---
 
 <div class="content-grid flow">
@@ -17,7 +17,11 @@ layout: plain
   <section class="breakout content-image-text">
     <div class="content-image">
       <figure>
-        <img class="bg-yellow-100 sm-p-3 shadow-lg" src="/woodland/ling.avif" alt="" />
+        <img
+          class="bg-yellow-100 sm-p-3 shadow-lg"
+          src="/woodland/ling.avif"
+          alt=""
+        />
       </figure>
     </div>
     <div class="content-text species-facts">
@@ -30,11 +34,11 @@ layout: plain
       </ul>
     </div>
   </section>
- <species-info @distribution="Common in Scotland">
-          <p>
-            The stems of heather are woody and coarse, sometimes clumped together and close to the ground in exposed
-            areas. The delicate pink flowers grow loosely up the stem and the short, narrow leaves are borne in rows.
-          </p>
+  <species-info @distribution="Common in Scotland">
+    <p>
+      The stems of heather are woody and coarse, sometimes clumped together and
+      close to the ground in exposed areas. The delicate pink flowers grow
+      loosely up the stem and the short, narrow leaves are borne in rows.
+    </p>
   </species-info>
-
 </div>

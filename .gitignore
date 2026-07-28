@@ -1,6 +1,8 @@
 node_modules/
 _site/
 .cache/
+/poems/
+pdf-source/
 
 purge-report*
 orphan-report*

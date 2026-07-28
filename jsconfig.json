@@ -4,7 +4,8 @@
     "_data/**/*",
     "_config/**/*",
     "functions/**/*",
-    "eleventy.config.js"
+    "eleventy.config.js",
+    "poems"
   ],
   "exclude": [
     "node_modules",

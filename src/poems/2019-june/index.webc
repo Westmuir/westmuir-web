@@ -1,0 +1,91 @@
+---
+layout: "base.webc"
+title: "2019 June"
+poemTitle: "2019 June"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2019-june/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2019-june/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2019-june/image-6.png" alt="" />
+    <img src="/poems/2019-june/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      June is the month of Roses, <br />
+      Blooming freely everywhere; <br />
+      Filling hearts this joyful season, <br />
+      When love is in the air.
+    </p>
+
+    <p>
+      As we leave the winter behind, <br />
+      For warm and dry days in the sun; <br />
+      You find the benefit is remarkable, <br />
+      It is pure joy for everyone.
+    </p>
+
+    <p>
+      Suddenly your energy is restored, <br />
+      And ready to tackle anything; <br />
+      Eager now to do your best, <br />
+      Whatever the day may bring.
+    </p>
+
+    <p>
+      You are sure to find a niche in life, <br />
+      In which you can excel; <br />
+      Keep on trying different things, <br />
+      Till you find what you do well.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2019-june/image-2.png" alt="" />
+    <img src="/poems/2019-june/image-3.png" alt="" />
+    <img src="/poems/2019-june/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      Maybe you’ll never become a star, <br />
+      With letters attached to your name; <br />
+      But in real life you are a Doer, <br />
+      And so worthy of a claim.
+    </p>
+
+    <p>
+      You carry on year after year, <br />
+      Working happily with your lot; <br />
+      You are loved and respected, <br />
+      So you will never be forgot.
+    </p>
+
+    <p>
+      Much better than letters top of a page, <br />
+      That can forgotten lie; <br />
+      You’ll keep on blooming like the Rose, <br />
+      For your roots will never die.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2019-june/image-5.png" alt="" />
+    <img src="/poems/2019-june/image-7.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

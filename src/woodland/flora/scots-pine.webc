@@ -1,6 +1,6 @@
 ---
 title: Scots Pine
-layout: plain
+layout: base
 ---
 
 <div class="content-grid flow">
@@ -17,7 +17,11 @@ layout: plain
   <section class="breakout content-image-text">
     <div class="content-image">
       <figure>
-        <img class="bg-yellow-100 sm-p-3 shadow-lg" src="/woodland/flora/scots-pine.avif" alt="Scots Pine" />
+        <img
+          class="bg-yellow-100 sm-p-3 shadow-lg"
+          src="/woodland/flora/scots-pine.avif"
+          alt="Scots Pine"
+        />
       </figure>
     </div>
     <div class="content-text species-facts">
@@ -30,11 +34,11 @@ layout: plain
       </ul>
     </div>
   </section>
- <species-info @distribution="Common in Scotland">
-          <p>
-            An evergreen coniferous tree growing up to 35 metres. The bark is a scaly orange-brown, which develops
-            plates and fissures with age. Twigs are green-brown and hairless.
-          </p>
+  <species-info @distribution="Common in Scotland">
+    <p>
+      An evergreen coniferous tree growing up to 35 metres. The bark is a scaly
+      orange-brown, which develops plates and fissures with age. Twigs are
+      green-brown and hairless.
+    </p>
   </species-info>
-
 </div>

@@ -1,0 +1,99 @@
+---
+layout: "base.webc"
+title: "2015 February"
+id: "201502"
+poemTitle: "February ... The Birthday Month"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<div class="full-width">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/february-poem-the-birthday-month/image-3.png" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-6.png" alt="" />
+    </div>
+
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        February is the birthday month <br />
+        Though the earth is cold and bare <br />
+        Lying underneath the snow and Ice <br />
+        New growth is now stirring there.
+      </p>
+
+      <p>
+        Far down below and still unseen <br />
+        Under the winter’s ice and snow <br />
+        There comes a large surge of rebirth <br />
+        When bulbs and seeds begin to grow.
+      </p>
+
+      <p>
+        It affects all of us here as well <br />
+        You can feel its power in your heart <br />
+        You find new energy and joy returns <br />
+        As the dark and dreary days depart.
+      </p>
+
+      <p>
+        For the sun is getting stronger now <br />
+        Snowdrops pop up through the snow <br />
+        The signs of new life are beckoning <br />
+        You’ll find this wherever you go.
+      </p>
+    </div>
+
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/february-poem-the-birthday-month/image-4.png" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-1.png" alt="" />
+
+      <img src="/poems/february-poem-the-birthday-month/image-2.png" alt="" />
+    </div>
+
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Birds are singing now in the trees <br />
+        Gardens are showing a hint of green <br />
+        Nature is busy painting pictures <br />
+        That are so tranquil and serene.
+      </p>
+
+      <p>
+        February is the shortest month <br />
+        Yet it is the one that holds the key <br />
+        That wakens up a whole new world <br />
+        To folk just like you and me.
+      </p>
+
+      <p>
+        Yes! February has a special role <br />
+        For a month not just for a day <br />
+        It keeps on bringing us new life <br />
+        A yearly lasting Real Birthday.
+      </p>
+    </div>
+
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/february-poem-the-birthday-month/image-5.png" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-0.png" alt="" />
+    </div>
+  </poem-grid>
+</div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fff;
+    --title-color: #ff0000;
+    --img-color: #000;
+
+    --card-border-color: #000;
+  }
+</style>

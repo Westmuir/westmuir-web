@@ -1,0 +1,157 @@
+---
+layout: "base.webc"
+title: "2015 March"
+id: "201503"
+poemTitle: "Eila's 90th Birthday Poem"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<div class="full-width">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <div slot="header-tl"></div>
+    <div slot="header-tr">
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-8.png"
+        alt=""
+      />
+    </div>
+
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-5.png"
+        alt=""
+      />
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-6.png"
+        alt=""
+      />
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-4.png"
+        alt=""
+      />
+    </div>
+
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        I’ve reached my 90th birthday, <br />
+        I never thought I’d live so long; <br />
+        Seldom took drugs and no vitamin pills, <br />
+        Yet I can’t have gone too far wrong.
+      </p>
+
+      <p>
+        Oh, I may be as deaf as a door nail <br />
+        And my eyesight is fast growing dim; <br />
+        Though I can’t dance all the jigs and the reels, <br />
+        The ones I can do keeps me in trim.
+      </p>
+
+      <p>
+        I’ve never been outside Scotland’s soil, <br />
+        As far as holidays go, I’ve had none; <br />
+        But I’ve got all I need here in Westmuir, <br />
+        With the scenic hills, my job and my home.
+      </p>
+
+      <p>
+        I’m back in the house where I was born, <br />
+        Got married in this hall so dear to me; <br />
+        And our honeymoon was spent ‘up the brae’, <br />
+        In a wee house behind my ain folk, you see.
+      </p>
+    </div>
+
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-2.png"
+        alt=""
+      />
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-3.png"
+        alt=""
+      />
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-1.png"
+        alt=""
+      />
+    </div>
+
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        I fell heir to my Dad’s market garden, <br />
+        And enjoy growing fruit and veg in my plot; <br />
+        Along with my computer, music and verse, <br />
+        I’m really happy and content with my lot.
+      </p>
+
+      <p>
+        Today I’ll be making lots of sweet memories, <br />
+        While surrounded by my dearest friends, <br />
+        Who stand by me through thick and thin, <br />
+        Whenever one of life’s storms descend.
+      </p>
+
+      <p>
+        Always willing to help so I don’t feel alone <br />
+        I’m sure to find someone there if I call; <br />
+        Transport laid on, and there at my gate, <br />
+        Keeping an eye out for me should I fall.
+      </p>
+
+      <p>
+        So, let’s make this a real joyful fun day, <br />
+        The very best ever seen in this hall; <br />
+        As I include in my 90th B B B Birthday spree, <br />
+        A great big THANK YOU now to you all! <br />
+        &nbsp;<br />
+        <span class="poem-credit"
+          >Eila recited her poem in<br />
+          the Westmuir hall at her<br />
+          90th Birthday party.</span
+        >
+      </p>
+    </div>
+
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-0.png"
+        alt=""
+      />
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-9.png"
+        alt=""
+      />
+
+      <img
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-7.png"
+        alt=""
+      />
+    </div>
+  </poem-grid>
+</div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #ccc0d9;
+    --title-color: #ff0000;
+    --img-color: #000;
+
+    .poem-credit {
+      text-align: right;
+      display: block;
+      font-size: var(--font-size-fluid-0);
+    }
+  }
+</style>

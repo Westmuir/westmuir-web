@@ -1,0 +1,65 @@
+---
+title: Poet in Residence
+layout: base
+description: A collection of Reflective Poems by Eila Webster
+headerAlt: "abstract background"
+headerImage: "/other/poetry/banner-poet.avif"
+---
+
+<div class="content-grid flow">
+  <section class="full-width">
+    <div class="content">
+      <img class="pull-left" src="/other/poetry/eila-webster.avif" alt="" />
+      <div class="content-text">
+        Born in 1925, Eila Webster has spent her entire life living in Westmuir.
+        Blessed with a fine memory, Eila was encouraged to write us a regular
+        monthly poem which we featured on our website starting at Christmas in
+        2014. Since then Eila has kept on writing for us and we are now in our
+        5th year of capturing this wonderful collection of her poetry for all to
+        enjoy !
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="content-list-grid">
+      <!-- High-performance collection loop natively bound in WebC 0.12 -->
+      <template webc:for="post of $data.collections.writtenPoems" webc:nokeep>
+        <!-- Left Track: Displays the Month/Year date tracker -->
+        <div @text="post.data.title"></div>
+
+        <!-- Right Track: Links cleanly to your responsive 5-column page layout -->
+        <a
+          :class="post.data.endOfYear ? 'end-of-year' : ''"
+          :href="post.url"
+          @text="post.data.poemTitle || post.data.title"
+        ></a>
+      </template>
+    </div>
+  </section>
+</div>
+
+<style>
+  .end-of-year {
+    margin-block-end: 2rem;
+  }
+  .pull-left {
+    float: left;
+    margin-inline-end: 1.5rem;
+    margin-block-end: 0.5rem;
+  }
+
+  .content-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+    a {
+      color: light-dark(var(--teal-10), var(--teal-4));
+    }
+
+    div:nth-child(odd) {
+      justify-self: end;
+      padding-right: 3rem;
+    }
+  }
+</style>

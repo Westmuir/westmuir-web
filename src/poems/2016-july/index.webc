@@ -1,0 +1,100 @@
+---
+layout: "base.webc"
+title: "2016 July"
+id: "201607"
+poemTitle: "The Mid-Summer Days in July"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<div class="full-width">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <img src="/poems/2016-july/image-11.png" alt="" slot="header-tl" />
+    <img src="/poems/2016-july/image-7.png" alt="" slot="header-tr" />
+
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2016-july/image-6.png" alt="" />
+      <img src="/poems/2016-july/image-8.png" alt="" />
+      <img src="/poems/2016-july/image-10.png" alt="" />
+    </div>
+
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Its July we’re in mid-summer <br />
+        Full of happy halcyon days; <br />
+        Filling all the leisure hours <br />
+        In many different ways.
+      </p>
+
+      <p>
+        Seaside joys are calling <br />
+        Building castles in the sand; <br />
+        Getting on your bikini now <br />
+        Hoping you’ll soon get tanned.
+      </p>
+
+      <p>
+        Or attending fete’s and fairs <br />
+        Eating ice cream and candy floss; <br />
+        Just doing what you fancy <br />
+        As you give the coins a toss.
+      </p>
+
+      <p>
+        Or climbing up a mountain <br />
+        Admiring the wonderful view; <br />
+        Maybe sailing in calm waters <br />
+        When the sea and skies are blue.
+      </p>
+    </div>
+
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2016-july/image-2.png" alt="" />
+      <img src="/poems/2016-july/image-3.png" alt="" />
+      <img src="/poems/2016-july/image-4.png" alt="" />
+    </div>
+
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        We all need a while just to relax <br />
+        And July seems the perfect time; <br />
+        To dump bad habits, fear and woe <br />
+        So read this simple rhyme.
+      </p>
+
+      <p>
+        Folk say that I am good with words <br />
+        They just come out of the blue; <br />
+        So I thought I would pen these lines <br />
+        Hoping they might benefit you.
+      </p>
+
+      <p>
+        When taking up the oar again <br />
+        Leave behind all care and strife; <br />
+        You’ll be refreshed and ready <br />
+        To face the challenges of life.
+      </p>
+    </div>
+
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2016-july/image-13.png" alt="" />
+      <img src="/poems/2016-july/image-5.png" alt="" />
+      <img src="/poems/2016-july/image-9.png" alt="" />
+    </div>
+  </poem-grid>
+</div>
+
+<style>
+  :where(poem-grid) {
+    --bg-color: #fbe5d6;
+    --title-color: #f09968;
+  }
+</style>

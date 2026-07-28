@@ -1,0 +1,84 @@
+---
+layout: "base.webc"
+title: "2018 June"
+poemTitle: "2018 June"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+<div class="full-width">
+<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+
+  <!-- Header Section -->
+  <img src="/poems/2018-june/image-0.png" alt="" slot="header-tl" />
+  <img src="/poems/2018-june/image-1.png" alt="" slot="header-tr" />
+
+  <!-- Column 1 Images (15%) -->
+  <div slot="col-1-images">
+    <img src="/poems/2018-june/image-6.png" alt="" />
+    <img src="/poems/2018-june/image-8.png" alt="" />
+  </div>
+
+  <!-- Column 2 Text -->
+  <div slot="col-2-text">
+    <p>
+      Away back in my early days, <br />
+      We still had Pounds, Shillings and Pence; <br />
+      This served us well for countless years, <br />
+      To change it didn’t make sense.
+    </p>
+
+    <p>
+      But the higher powers went ahead, <br />
+      And changed to decimal currency; <br />
+      Then all the money value changed, <br />
+      When the familiar was taken away.
+    </p>
+
+    <p>
+      Young folk got on with it quite well, <br />
+      But the older folk got confused; <br />
+      The value and shape changed so much, <br />
+      From the cash they had always used.
+    </p>
+  </div>
+
+  <!-- Column 3 Middle Images -->
+  <div slot="col-3-images">
+    <img src="/poems/2018-june/image-2.png" alt="" />
+    <img src="/poems/2018-june/image-3.png" alt="" />
+    <img src="/poems/2018-june/image-4.png" alt="" />
+  </div>
+
+  <!-- Column 4 Text -->
+  <div slot="col-4-text">
+    <p>
+      The look of money is changing again, <br />
+      The £1 coin has flat bits on the rim; <br />
+      Paper £5 notes have been replaced, <br />
+      By beautiful strong ones, not so slim.
+    </p>
+
+    <p>
+      Other changes are likely to follow, <br />
+      This is really quite good in a way; <br />
+      They are so bright and cheerful now, <br />
+      From the ones we had in Granny’s day.
+    </p>
+
+    <p>
+      Old now, I look back on sweet memories, <br />
+      For nothing brought as much pleasure you see; <br />
+      As running an errand for Granny back then, <br />
+      And the thrill spending the treasured Bawbie.
+    </p>
+  </div>
+
+  <!-- Column 5 Images (15%) -->
+  <div slot="col-5-images">
+    <img src="/poems/2018-june/image-5.png" alt="" />
+    <img src="/poems/2018-june/image-7.png" alt="" />
+  </div>
+
+</poem-grid>
+</div>

@@ -1,11 +1,14 @@
 ---
 title: Butterflies
-layout: plain
+layout: base
 ---
 
 <div class="content-grid flow">
   <figure class="page-header full-width-content" op-center>
-    <img src="/woodland/fauna/small-tortoiseshell.avif" alt="Small Tortoiseshell" />
+    <img
+      src="/woodland/fauna/small-tortoiseshell.avif"
+      alt="Small Tortoiseshell"
+    />
     <div class="page-header-info">
       <div class="content">
         <h1>Small Tortoiseshell Butterfly</h1>
@@ -35,11 +38,11 @@ layout: plain
     </div>
   </section>
 
- <species-info @distribution="Common">
-          <p>
-            It is a medium-sized butterfly that is mainly reddish orange, with black and yellow markings on the
-            forewings as well as a ring of blue spots around the edge of the wings.
-          </p>
+  <species-info @distribution="Common">
+    <p>
+      It is a medium-sized butterfly that is mainly reddish orange, with black
+      and yellow markings on the forewings as well as a ring of blue spots
+      around the edge of the wings.
+    </p>
   </species-info>
-
 </div>

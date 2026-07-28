@@ -1,0 +1,111 @@
+---
+layout: "base.webc"
+title: "2016 February"
+id: "201602"
+poemTitle: "February Thoughts"
+author: "Eila Webster"
+bgTheme: "antiquewhite"
+endOfYear: false
+---
+
+<div class="full-width">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <poem-img src="/poems/2016-february/image-6.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-february/image-0.png" alt=""></poem-img>
+    </div>
+    <div slot="header-tr">
+      <poem-img src="/poems/2016-february/image-16.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-february/image-9.png" alt=""></poem-img>
+    </div>
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <poem-img src="/poems/2016-february/image-2a.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-february/image-3.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-february/image-4a.png" alt=""></poem-img>
+    </div>
+
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        The first month of the year has gone <br />
+        Does it hold precious memories, <br />
+        Or filled with doom and gloom <br />
+        Through the dark winter days?
+      </p>
+
+      <p>
+        It really all depends on how <br />
+        You chose to spend the hours; <br />
+        Sitting deep in total misery <br />
+        Or out looking for the flowers.
+      </p>
+
+      <p>
+        The pretty snowdrops and aconite <br />
+        Can cheer hearts with their show; <br />
+        Still blooming to perfection <br />
+        No matter what the elements throw.
+      </p>
+
+      <p>
+        The sun is shining somewhere <br />
+        And ‘twill shine here, as before; <br />
+        The waiting will be worth it <br />
+        We will enjoy it all the more.
+      </p>
+    </div>
+
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <poem-img src="/poems/2016-february/image-7.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-february/image-10a.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-february/image-8.png" alt=""></poem-img>
+    </div>
+
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        In the past folk had the patience <br />
+        So lacking in this modern age; <br />
+        With no time to enjoy the day <br />
+        As they turn another page.
+      </p>
+
+      <p>
+        Nature doesn’t work that way <br />
+        The old rules still hold fast <br />
+        The four seasons come and go <br />
+        As they have done in the past.
+      </p>
+      <p>
+        Man has changed so many things <br />
+        With power and rules they scheme <br />
+        Yet are unable to change the laws <br />
+        The ones that are Supreme.
+      </p>
+
+      <p>
+        And this is as it should be <br />
+        We still need Our Father’s hand <br />
+        To guide us on our journey <br />
+        Through life spent in our birth land <br />
+      </p>
+    </div>
+
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <poem-img src="/poems/2016-february/image-14a.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-february/image-13.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-february/image-12.png" alt=""></poem-img>
+    </div>
+  </poem-grid>
+</div>
+
+<style webc:scoped>
+  :where(poem-grid) {
+    --bg-color: #ccc0d8;
+    --title-color: #2772bc;
+  }
+</style>

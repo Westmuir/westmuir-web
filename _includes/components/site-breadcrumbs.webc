@@ -15,42 +15,45 @@
 </nav>
 
 <style>
-  .breadcrumbs-nav {
+  :where(.breadcrumbs-nav) {
+    --link-color: light-dark(var(--cyan-9), var(--cyan-3));
+    --hover-color: var(--primary);
+
     padding-block: var(--size-1);
     margin-bottom: var(--size-1);
     font-size: var(--font-size-0);
-  }
 
-  .breadcrumbs-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: var(--size-2);
-    color: var(--text-2);
+    .breadcrumbs-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: var(--size-2);
+      color: var(--text-2);
 
-    li:not(:last-child)::after {
-      /* Uses standard text color for the separator symbol */
-      content: "/";
-      margin-left: var(--size-2);
-      color: var(--stone-5);
-    }
-
-    a {
-      /* Uses your newly fixed light-dark link token */
-      color: var(--link-color);
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-        color: var(--link-hover-color);
+      li:not(:last-child)::after {
+        /* Uses standard text color for the separator symbol */
+        content: "/";
+        margin-left: var(--size-2);
+        color: var(--text-primary);
       }
-    }
 
-    span {
-      color: var(--text-1);
-      font-weight: var(--font-weight-5);
+      a {
+        /* Uses your newly fixed light-dark link token */
+        color: var(--link-color);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--hover-color);
+        }
+      }
+
+      span {
+        color: var(--text-primary);
+        font-weight: var(--font-weight-5);
+      }
     }
   }
 </style>
