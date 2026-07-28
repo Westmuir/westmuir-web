@@ -1,60 +1,82 @@
 ---
 layout: "base.webc"
-title: "January Poem A Moment in Time"
-poemTitle: "January Poem A Moment in Time"
+title: "2015 January"
+id: "201501"
+poemTitle: "A Moment in Time"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="no-middle-images"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
 
-  <!-- Header Section -->
-  <img src="/poems/january-poem-a-moment-in-time/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/january-poem-a-moment-in-time/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <poem-img
+        src="/poems/january-poem-a-moment-in-time/image-1.png"
+        alt=""
+      ></poem-img>
+      ><poem-img
+        src="/poems/january-poem-a-moment-in-time/image-2.png"
+        alt=""
+      ></poem-img>
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <!-- No side images -->
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Grasp the moment – Savour it, <br />
+        Don’t ever let it pass by; <br />
+        We cannot turn back the clock<br />
+        no matter how we try. <br />
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      A Moment in Time	A Moment in Time	A Moment in Time	A Moment in Time <br />
-      Grasp the moment – Savour it, <br />
-      Don’t ever let it pass by; <br />
-      We cannot turn back the clock
-    </p>
+      <p>
+        The past’s behind, the future’s veiled, <br />
+        the present’s ours alone; <br />
+        Don’t sigh (if only) with regret,<br />
+        for all those hours now flown. <br />
+      </p>
+    </div>
 
-    <p>
-      no matter how we try. <br />
-      The past’s behind, the future’s veiled, <br />
-      the present’s ours alone; <br />
-      Don’t sigh (if only) with regret,
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images"></div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/january-poem-a-moment-in-time/image-2.png" alt="" />
-    <img src="/poems/january-poem-a-moment-in-time/image-3.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Let us use our time wisely, <br />
+        this priceless gift from Heaven <br />
+        Treasure the hours and never waste <br />
+        the new day we are given.
+      </p>
+    </div>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      for all those hours now flown. <br />
-      Let us use our time wisely, <br />
-      this priceless gift from Heaven <br />
-      Treasure the hours and never waste
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <!-- No side images -->
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <poem-img
+        src="/poems/january-poem-a-moment-in-time/image-3.png"
+        alt=""
+      ></poem-img>
+      ><poem-img
+        src="/poems/january-poem-a-moment-in-time/image-0.png"
+        alt=""
+      ></poem-img>
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fff;
+    --title-color: #ff0000;
+    --img-color: #00b050;
+
+    --card-border-color: #00b050;
+  }
+</style>
