@@ -1,136 +1,160 @@
 ---
 layout: "base.webc"
 title: "Extra Poem - The Weather"
+id: "201507-1"
 poemTitle: "Extra Poem - The Weather"
 author: "Eila Webster"
 bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-1.png"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-2.png"
+        alt=""
+      ></poem-img>
+    </div>
+    <div slot="header-tr">
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-9.png"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/extra-poem-the-weather/weather.png"
+        alt=""
+      ></poem-img>
+    </div>
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-3.png"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-4.png"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-5.png"
+        alt=""
+      ></poem-img>
+    </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        What has happened to the Summer <br />
+        In this year of Twenty Fifteen; <br />
+        Leaving a trail of mass destruction <br />
+        maybe the worst you’ve ever seen.
+      </p>
 
-  <!-- Header Section -->
-  <img src="/images/poems/happy-2020.png" alt="" slot="header-tl" />
-  <img src="/images/poems/happy-2020.png" alt="" slot="header-tr" />
+      <p>
+        July was windy, cold and wet <br />
+        kept raining like cats and dogs; <br />
+        The land soon became raging rivers <br />
+        even managed to drown the frogs.
+      </p>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <!-- No side images -->
-  </div>
+      <p>
+        They couldn’t swim against the floods <br />
+        no dry land to hop upon; <br />
+        Still struggling they got swept away <br />
+        and in a moment they were gone.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      What has happened to the Summer <br />
-      In this year of Twenty Fifteen; <br />
-      Leaving a trail of mass destruction <br />
-      maybe the worst you’ve ever seen.
-    </p>
+      <p>
+        At first flowers slowly hung their heads <br />
+        their petals broken as they were tossed <br />
+        in the strong winds and bitter nights <br />
+        they just finally gave up the ghost.
+      </p>
 
-    <p>
-      July was windy, cold and wet <br />
-      kept raining like cats and dogs; <br />
-      The land soon became raging rivers <br />
-      even managed to drown the frogs.
-    </p>
+      <p>
+        Berries turned rotten on the bushes <br />
+        lacking sunshine and always wet; <br />
+        Root crops in the garden failed to grow <br />
+        and peas and beans refused to set. <br />
+      </p>
+    </div>
 
-    <p>
-      They couldn’t swim against the floods <br />
-      no dry land to hop upon; <br />
-      Still struggling they got swept away <br />
-      and in a moment they were gone.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-8.png"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-7.png"
+        alt=""
+      ></poem-img>
+      <poem-img
+        src="/poems/extra-poem-the-weather/image-6.png"
+        alt=""
+      ></poem-img>
+    </div>
 
-    <p>
-      At first flowers slowly hung their heads <br />
-      their petals broken as they were tossed <br />
-      in the strong winds and bitter nights <br />
-      they just finally gave up the ghost.
-    </p>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Greenhouse tomatoes were slow to ripen <br />
+        grain was all flattened to the ground <br />
+        Pleasure in the local summer breaks <br />
+        was pretty difficult to be found. <br />
+      </p>
+      <p>
+        We’re into the month of August now <br />
+        but the forecast is ‘more of the same’ <br />
+        Folk are fed up with the British weather <br />
+        which I feel is quite a shame. <br />
+      </p>
 
-    <p>
-      Berries turned rotten on the bushes <br />
-      lacking sunshine and always wet; <br />
-      Root crops in the garden failed to grow <br />
-      The Weather	The Weather	The Weather	The Weather
-    </p>
+      <p>
+        It’s known as a lush green fertile land <br />
+        and the weeds have proved the point <br />
+        growing in every available space <br />
+        strong and healthy - a large amout.<br />
+      </p>
 
-    <p>
-      They couldn’t swim against the floods <br />
-      At first flowers slowly hung their heads <br />
-      petals broken as they were tossed; <br />
-      Root crops in the garden failed to grow
-    </p>
+      <p>
+        But this doesn’t happen every year <br />
+        many hearts it still begui <br />
+        For visiting tourists tend to return <br />
+        to our homeland, The British Isles <br />
+      </p>
+    </div>
 
-    <p>
-      and peas and beans refused to s <br />
-      Greenhouse tomatoes were slow to ripen <br />
-      grain was all flattened to the ground <br />
-      Pleasure in the local summer breaks
-    </p>
-  </div>
-
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <!-- No center images -->
-  </div>
-
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      was pretty difficult to be found <br />
-      We’re into the month of August now <br />
-      but the forecast is ‘more of the same’ <br />
-      Folk are fed up with the
-    </p>
-
-    <p>
-      which I feel is quite a shame <br />
-      It’s known as a lush green fertile land <br />
-      and the weeds have proved the point <br />
-      growing in every available space
-    </p>
-
-    <p>
-      strong and healthy <br />
-      But this doesn’t happen every year <br />
-      many hearts it still begui <br />
-      For visiting tourists tend to return
-    </p>
-
-    <p>
-      to our homeland, The British Isles <br />
-      The Weather	The Weather	The Weather	The Weather –	–	–	– Summer 2015	Summer 2015	Summer 2015	Summer 2015 <br />
-      and peas and beans refused to set. <br />
-      Greenhouse tomatoes were slow to ripen
-    </p>
-
-    <p>
-      grain was all flattened to the ground; <br />
-      Pleasure in the local summer breaks <br />
-      was pretty difficult to be found. <br />
-      We’re into the month of August now
-    </p>
-
-    <p>
-      but the forecast is ‘more of the same’; <br />
-      Folk are fed up with the British weather <br />
-      which I feel is quite a shame. <br />
-      It’s known as a lush green fertile land
-    </p>
-
-    <p>
-      and the weeds have proved the point, <br />
-      growing in every available space <br />
-      strong and healthy - a large amount. <br />
-      But this doesn’t happen every year
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <!-- No side images -->
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <poem-img
+        src="/poems/extra-poem-the-weather/sun-cloud.png"
+        alt=""
+      ></poem-img
+      ><poem-img
+        src="/poems/extra-poem-the-weather/image-11.png"
+        alt=""
+      ></poem-img
+      ><poem-img
+        src="/poems/extra-poem-the-weather/image-12.png"
+        alt=""
+      ></poem-img>
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #b6dde8;
+    --title-color: #0070c0;
+  }
+</style>
