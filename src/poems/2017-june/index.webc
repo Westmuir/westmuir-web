@@ -1,78 +1,89 @@
 ---
 layout: "base.webc"
 title: "2017 June"
-poemTitle: "2017 June"
+id: "201706"
+poemTitle: "Free Gifts"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/2017-june/image-0.png" alt="" slot="header-tl" />
+    <img src="/poems/2017-june/image-2.png" alt="" slot="header-tr" />
 
-  <!-- Header Section -->
-  <img src="/poems/2017-june/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2017-june/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2017-june/image-6.png" alt="" />
+      <img src="/poems/2017-june/image-8.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2017-june/image-6.png" alt="" />
-    <img src="/poems/2017-june/image-8.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Tempting offers of wealth are increasing, <br />
+        You can see this happening everywhere; <br />
+        Just buy something and win cash, <br />
+        It could be a scam – so beware!
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Tempting offers of wealth are increasing, <br />
-      You can see this happening everywhere; <br />
-      Just buy something and win cash, <br />
-      It could be a scam – so beware!
-    </p>
+      <p>
+        Although this is above board normally, <br />
+        Just hoping this will increase the demands; <br />
+        And you could still get a real bargain, <br />
+        On wares that are left in their hands.
+      </p>
 
-    <p>
-      Although this is above board normally, <br />
-      Just hoping this will increase the demands; <br />
-      And you could still get a real bargain, <br />
-      On wares that are left in their hands.
-    </p>
+      <p>
+        But when offers seem too good to be true, <br />
+        Although tempting it could be just that; <br />
+        Not many would give cash so freely’ <br />
+        You can’t take a mouse from a cat!
+      </p>
+    </div>
 
-    <p>
-      But when offers seem too good to be true, <br />
-      Although tempting it could be just that; <br />
-      Not many would give cash so freely’ <br />
-      You can’t take a mouse from a cat!
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2017-june/image-2.png" alt="" />
+      <img src="/poems/2017-june/image-1.png" alt="" />
+      <img src="/poems/2017-june/image-7.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2017-june/image-2.png" alt="" />
-    <img src="/poems/2017-june/image-3.png" alt="" />
-    <img src="/poems/2017-june/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        But one money cheque will be paid out, <br />
+        At the end to keep promises true; <br />
+        But out from a million hopefuls there, <br />
+        It’s unlikely to be for me or for you.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      But one money cheque will be paid out, <br />
-      At the end to keep promises true; <br />
-      But out from a million hopefuls there, <br />
-      It’s unlikely to be for me or for you.
-    </p>
+      <p>
+        Be prepared to work hard all your life, <br />
+        For most things don’t work out as planned; <br />
+        Remember the best things in life are free, <br />
+        And you are holding them now in your hand.
+      </p>
+    </div>
 
-    <p>
-      Be prepared to work hard all your life, <br />
-      For most things don’t work out as planned; <br />
-      Remember the best things in life are free, <br />
-      And you are holding them now in your hand.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2017-june/image-5.png" alt="" />
-    <img src="/poems/2017-june/image-7.png" alt="" />
-    <img src="/poems/2017-june/image-9.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2017-june/image-5.png" alt="" />
+      <img src="/poems/2017-june/image-3.png" alt="" />
+      <img src="/poems/2017-june/image-9.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #c5e0b4;
+    --title-color: #ff0000;
+    --img-color: transparent;
+  }
+</style>
