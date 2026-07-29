@@ -1,109 +1,128 @@
 ---
 layout: "base.webc"
-title: "July Poem - The Berries in July"
-poemTitle: "July Poem - The Berries in July"
+title: "The Berries in July"
+id: "201507"
+poemTitle: "The Berries in July"
 author: "Eila Webster"
 bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid class="small" :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <img
+        src="/poems/july-poem-the-berries-in-july/image-4.png"
+        alt=""
+        slot="header-tl"
+      />
+      <img
+        src="/poems/july-poem-the-berries-in-july/image-11.png"
+        alt=""
+        slot="header-tl"
+      />
+    </div>
+    <img
+      src="/poems/july-poem-the-berries-in-july/image-8.png"
+      alt=""
+      slot="header-tr"
+    />
 
-  <!-- Header Section -->
-  <img src="/poems/july-poem-the-berries-in-july/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/july-poem-the-berries-in-july/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/july-poem-the-berries-in-july/image-5.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-6.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-7.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/july-poem-the-berries-in-july/image-6.png" alt="" />
-    <img src="/poems/july-poem-the-berries-in-july/image-8.png" alt="" />
-    <img src="/poems/july-poem-the-berries-in-july/image-10.png" alt="" />
-    <img src="/poems/july-poem-the-berries-in-july/image-12.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        July to me was berry time <br />
+        When we got oor school summer holidays; <br />
+        School uniforms were hung up <br />
+        And we put on oor auldest claes.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      July to me was berry time <br />
-      When we got oor school summer holidays; <br />
-      School uniforms were hung up <br />
-      And we put on oor auldest claes.
-    </p>
+      <p>
+        And set aff to the berry picking <br />
+        In the fruit farms for a wage; <br />
+        It made us feel so grown up <br />
+        Even at that young tender age.
+      </p>
 
-    <p>
-      And set aff to the berry picking <br />
-      In the fruit farms for a wage; <br />
-      It made us feel so grown up <br />
-      Even at that young tender age.
-    </p>
+      <p>
+        There was lots of fruit to choose from <br />
+        But we liked the raspberries best; <br />
+        For strawberries you had to bend doon <br />
+        And gooseberry thorns were a pest.
+      </p>
 
-    <p>
-      There was lots of fruit to choose from <br />
-      But we liked the raspberries best; <br />
-      For strawberries you had to bend doon <br />
-      And gooseberry thorns were a pest.
-    </p>
+      <p>
+        Red and blackcurrants took an age <br />
+        To get oor wee punnets to fill; <br />
+        And they felt sour, untempting to eat <br />
+        And fair mair likely for us to spill.
+      </p>
 
-    <p>
-      Red and blackcurrants took an age <br />
-      To get oor wee punnets to fill; <br />
-      And they felt sour, untempting to eat <br />
-      And fair mair likely for us to spill.
-    </p>
+      <p>
+        But we thought picking rasps was fun <br />
+        As we chattered with pals through the day; <br />
+        And for every pound we got weighed <br />
+        put a halfpenny on to oor pay.
+      </p>
+    </div>
 
-    <p>
-      But we thought picking rasps was fun <br />
-      As we chattered with pals through the day; <br />
-      And for every pound we got weighed <br />
-      put a halfpenny on to oor pay.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/july-poem-the-berries-in-july/image-0.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-3.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-1.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/july-poem-the-berries-in-july/image-2.png" alt="" />
-    <img src="/poems/july-poem-the-berries-in-july/image-3.png" alt="" />
-    <img src="/poems/july-poem-the-berries-in-july/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Long before decimal currency came <br />
+        we had twelve pennies in a shilling; <br />
+        but you could still make a few ba-bees <br />
+        if you were really willing.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Long before decimal currency came <br />
-      we had twelve pennies in a shilling; <br />
-      but you could still make a few ba-bees <br />
-      if you were really willing.
-    </p>
+      <p>
+        I could manage in my hey days <br />
+        To pick 120 pounds in a long day; <br />
+        At the height of the raspberry season <br />
+        And that put five shillings on my pay.
+      </p>
 
-    <p>
-      I could manage in my hey days <br />
-      To pick 120 pounds in a long day; <br />
-      At the height of the raspberry season <br />
-      And that put five shillings on my pay.
-    </p>
+      <p>
+        I’m glad I lived back in the past <br />
+        I’ve got so many happy memories; <br />
+        The berry fields are now long gone <br />
+        Life has changed in so many ways.
+      </p>
 
-    <p>
-      I’m glad I lived back in the past <br />
-      I’ve got so many happy memories; <br />
-      The berry fields are now long gone <br />
-      Life has changed in so many ways.
-    </p>
+      <p>
+        I’ve tasted the old days and the new <br />
+        And both have warmed my heart; <br />
+        But to me July is still berry time <br />
+        As it has been right from the start.
+      </p>
+    </div>
 
-    <p>
-      I’ve tasted the old days and the new <br />
-      And both have warmed my heart; <br />
-      But to me July is still berry time <br />
-      As it has been right from the start.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/july-poem-the-berries-in-july/image-5.png" alt="" />
-    <img src="/poems/july-poem-the-berries-in-july/image-7.png" alt="" />
-    <img src="/poems/july-poem-the-berries-in-july/image-9.png" alt="" />
-    <img src="/poems/july-poem-the-berries-in-july/image-11.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/july-poem-the-berries-in-july/image-12.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-10.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-9.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #c2d69b;
+    --title-color: #4f6227;
+  }
+</style>
