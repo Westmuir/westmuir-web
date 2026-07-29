@@ -64,6 +64,7 @@
         :@alt="$data.headerAlt || 'Section header graphic'"
       >
       </page-header>
+      <site-nav></site-nav>
 
       <!-- 2. The layout drops the breadcrumbs automatically right below it,
          unless it's the home page or a 'noBreadcrumbs' flag is explicitly set -->

@@ -1,28 +1,30 @@
-<ul class="section-cards">
-  <li
-    class="section-card na sc-bg"
-    webc:for="item of cards"
-    :style="`background-color: ${item.bg || 'inherit'}`"
-  >
-    <a :href="item.url">
-      <div class="section-cards-title">
-        <img
-          webc:if="item.image"
-          src="{{ item.image }}"
-          alt="{{ item.label }} image"
-          class="card-image"
-        />
-        <div
-          webc:elseif="item.icon"
-          class="material-symbols-outlined"
-          @raw="item.icon"
-        ></div>
-        <h3 @text="item.label"></h3>
-      </div>
-      <p @text="item.description"></p>
-    </a>
-  </li>
-</ul>
+<div class="nav-wrapper">
+  <ul class="section-cards">
+    <li
+      class="section-card na sc-bg"
+      webc:for="item of cards"
+      :style="`background-color: ${item.bg || 'inherit'}`"
+    >
+      <a :href="item.url">
+        <div class="section-cards-title">
+          <img
+            webc:if="item.image"
+            src="{{ item.image }}"
+            alt="{{ item.label }} image"
+            class="card-image"
+          />
+          <div
+            webc:elseif="item.icon"
+            class="material-symbols-outlined"
+            @raw="item.icon"
+          ></div>
+          <h3 @text="item.label"></h3>
+        </div>
+        <p @text="item.description"></p>
+      </a>
+    </li>
+  </ul>
+</div>
 
 <style>
   :where(.section-cards) {

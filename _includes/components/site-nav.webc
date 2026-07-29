@@ -1,0 +1,185 @@
+<nav class="navigation-lane">
+  <!-- Mobile Menu Hamburger Button -->
+  <button
+    id="menu-toggle"
+    class="menu-button"
+    aria-expanded="false"
+    aria-controls="nav-links-box"
+    aria-label="Toggle navigation menu"
+  >
+    <svg
+      class="hamburger-icon"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      stroke="currentColor"
+      stroke-width="2.5"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line class="line-top" x1="3" y1="12" x2="21" y2="12"></line>
+      <line class="line-mid" x1="3" y1="6" x2="21" y2="6"></line>
+      <line class="line-bot" x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+
+  <!-- Content Links Target Wrapper -->
+  <div id="nav-links-box" class="nav-links">
+    <a href="/" :class="$data.page.url === '/' ? 'active' : ''">Home </a>
+    <a
+      href="/woodland/"
+      :class="$data.page.url === '/woodland/' ? 'active' : ''"
+      >Woodland</a
+    >
+    <a
+      href="/Westmuir Hall/"
+      :class="$data.page.url === '/Westmuir Hall/' ? 'active' : ''"
+      >Village Hall</a
+    >
+    <a href="/wcdt/" :class="$data.page.url.includes('/wcdt/') ? 'active' : ''"
+      >WCDT</a
+    >
+    <a
+      href="/Westmuir Hall/defibrillator/"
+      :class="$data.page.url === '/Westmuir Hall/defibrillator/' ? 'active' : ''"
+      >Resilience</a
+    >
+    <a
+      href="/volunteers/"
+      :class="$data.page.url === '/volunteers/' ? 'active' : ''"
+      >Volunteer</a
+    >
+    <a href="/other/" :class="$data.page.url === '/volunteers/' ? 'active' : ''"
+      >Archive</a
+    >
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.querySelector("#menu-toggle");
+    const linksContainer = document.querySelector("#nav-links-box");
+
+    if (!toggleBtn || !linksContainer) return;
+
+    toggleBtn.addEventListener("click", () => {
+      const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
+
+      // Update state for accessibility and visual layout engine hooks
+      toggleBtn.setAttribute("aria-expanded", !isExpanded);
+      linksContainer.classList.toggle("open", !isExpanded);
+    });
+
+    // Close mobile drawer automatically if user resizes back up to desktop viewports
+    window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
+      if (e.matches) {
+        toggleBtn.setAttribute("aria-expanded", "false");
+        linksContainer.classList.remove("open");
+      }
+    });
+  });
+</script>
+<style webc:type="scss">
+  /* Inside your site-nav style block */
+
+  :where(.navigation-lane) {
+    justify-content: center;
+    /* 1. SEPARATE CORE PARAMETERS LIKE THE FRAMEWORK BUTTON */
+    --_accent: var(
+      --primary
+    ); /* Anchors straight to your global --blue-8 theme */
+
+    /* 2. MATCH THE EXACT ACCENT CONTRAST RULE YOU FOUND IN THE DOCS */
+    --_accent-contrast: var(
+      --gray-1
+    ); /* Clean, high-contrast text on solid blue backdrops */
+
+    /* 3. SIMPLIFIED CHROMATIC HOVER BLEND (Original OPUI calculation block) */
+    --_hover-color: var(--primary-hover);
+
+    display: flex;
+    align-items: center;
+  }
+
+  /* 1. Desktop Defaults */
+  .menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--_accent-contrast);
+    cursor: pointer;
+    padding: var(--size-2);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--size-5);
+  }
+
+  .nav-links a {
+    /* Links now natively pull the unified grey-1 text overlay color specification */
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-6);
+    padding-block: var(--size-2);
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    /* Smoothly lightens up your bright blue theme color on link hover states */
+    color: var(--_hover-color);
+  }
+
+  .nav-links a.active {
+    color: var(--text-contrast);
+    font-weight: var(--font-weight-7);
+    text-decoration: underline;
+    text-underline-offset: var(--size-1);
+  }
+
+  /* 2. Responsive Mobile Layout Overrides */
+  @media (max-width: 767px) {
+    .menu-button {
+      display: block;
+      z-index: 100;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--surface-filled);
+      padding: var(--size-4) var(--size-5);
+      border-top: 1px solid var(--border);
+      box-shadow: var(--shadow-3);
+      gap: var(--size-2);
+      z-index: 90;
+    }
+
+    .nav-links.open {
+      display: flex;
+    }
+
+    .nav-links a {
+      padding-block: var(--size-3);
+      width: 100%;
+      border-bottom: none;
+      border-left: 4px solid transparent;
+      padding-left: var(--size-3);
+
+      /* Drops back to the global page theme color when inside the mobile slide panel drawer */
+      color: var(--text-1);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-left-color: var(--primary);
+      background: var(--surface-elevated);
+      color: var(--text-1);
+    }
+  }
+</style>
