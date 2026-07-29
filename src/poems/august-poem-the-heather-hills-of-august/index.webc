@@ -1,96 +1,147 @@
 ---
 layout: "base.webc"
-title: "August Poem - The Heather Hills of August"
-poemTitle: "August Poem - The Heather Hills of August"
+title: "The Heather Hills of August"
+id: "201508"
+poemTitle: "The Heather Hills of August"
 author: "Eila Webster"
 bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/heather.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-8.png"
+        alt=""
+      />
+    </div>
+    <div slot="header-tr">
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-1.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-7.png"
+        alt=""
+      />
+    </div>
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-3.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-6.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-4.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/ling.png"
+        alt=""
+      />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/august-poem-the-heather-hills-of-august/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/august-poem-the-heather-hills-of-august/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        When purple heather clothes the hills <br />
+        They are an awe inspiring sight <br />
+        That keeps bringing back the exiles <br />
+        Filling hearts of tourists with delight.
+      </p>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-6.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-8.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-10.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-12.png" alt="" />
-  </div>
+      <p>
+        This month of colourful glory comes <br />
+        Before the Scottish summer’s end; <br />
+        Bringing a hint of autumn too <br />
+        As Harvesters homeward wend.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      When purple heather clothes the hills <br />
-      They are an awe inspiring sight <br />
-      That keeps bringing back the exiles <br />
-      Filling hearts of tourists with delight.
-    </p>
+      <p>
+        In the orchards, fruit is ripening <br />
+        Swallows are ready for the flight; <br />
+        Daylight hours are growing shorter <br />
+        And hoards of midges start to bite.
+      </p>
 
-    <p>
-      This month of colourful glory comes <br />
-      Before the Scottish summer’s end; <br />
-      Bringing a hint of autumn too <br />
-      As Harvesters homeward wend.
-    </p>
+      <p>
+        Fresh vegetables are still plentiful <br />
+        Growing for use in soups and stews; <br />
+        Peas, beans, carrots and courgettes <br />
+        Are still growing for us to use.
+      </p>
+    </div>
 
-    <p>
-      In the orchards, fruit is ripening <br />
-      Swallows are ready for the flight; <br />
-      Daylight hours are growing shorter <br />
-      And hoards of midges start to bite.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-2.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-3.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-5.png"
+        alt=""
+      />
+    </div>
 
-    <p>
-      Fresh vegetables are still plentiful <br />
-      Growing for use in soups and stews; <br />
-      Peas, beans, carrots and courgettes <br />
-      Are still growing for us to use.
-    </p>
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Flowers in tubs and borders <br />
+        All standing stately and tall; <br />
+        While giving a colourful showing <br />
+        Can’t compete with one quite small.
+      </p>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-2.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-3.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-4.png" alt="" />
-  </div>
+      <p>
+        This little native plant of ours <br />
+        That keeps growing wild and free; <br />
+        Still bringing folk here from afar <br />
+        It’s wondrous beauty for to see.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Flowers in tubs and borders <br />
-      All standing stately and tall; <br />
-      While giving a colourful showing <br />
-      Can’t compete with one quite small.
-    </p>
+      <p>
+        Each month has a special something <br />
+        That is quite different from the rest; <br />
+        And miles of heather in full bloom <br />
+        Now see’s August at its best.
+      </p>
+    </div>
 
-    <p>
-      This little native plant of ours <br />
-      That keeps growing wild and free; <br />
-      Still bringing folk here from afar <br />
-      It’s wondrous beauty for to see.
-    </p>
-
-    <p>
-      Each month has a special something <br />
-      That is quite different from the rest; <br />
-      And miles of heather in full bloom <br />
-      Now see’s August at its best.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-5.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-7.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-9.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-11.png" alt="" />
-    <img src="/poems/august-poem-the-heather-hills-of-august/image-13.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-11.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-9.png"
+        alt=""
+      />
+      <img
+        src="/poems/august-poem-the-heather-hills-of-august/image-13.png"
+        alt=""
+      />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #ccc0d9;
+    --title-color: #7030a0;
+  }
+</style>

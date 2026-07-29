@@ -1,106 +1,113 @@
 ---
 layout: "base.webc"
-title: "September Poem 2015"
-poemTitle: "September Poem 2015"
+title: "2015 September"
+id: "201509"
+poemTitle: "My Favourite"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/september-poem-2015/image-1.png" alt="" slot="header-tl" />
+    <img src="/poems/september-poem-2015/image-2.png" alt="" slot="header-tr" />
 
-  <!-- Header Section -->
-  <img src="/poems/september-poem-2015/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/september-poem-2015/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/september-poem-2015/image-14.png" alt="" />
+      <img src="/poems/september-poem-2015/image-13.png" alt="" />
+      <img src="/poems/september-poem-2015/image-10.png" alt="" />
+      <img src="/poems/september-poem-2015/image-11.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/september-poem-2015/image-6.png" alt="" />
-    <img src="/poems/september-poem-2015/image-8.png" alt="" />
-    <img src="/poems/september-poem-2015/image-10.png" alt="" />
-    <img src="/poems/september-poem-2015/image-12.png" alt="" />
-    <img src="/poems/september-poem-2015/image-14.png" alt="" />
-    <img src="/poems/september-poem-2015/image-16.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        When asked what is my favourite month <br />
+        You will hear me say September; <br />
+        It is the month I always chose <br />
+        Back as far as I remember.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      When asked what is my favourite month <br />
-      You will hear me say September; <br />
-      It is the month I always chose <br />
-      Back as far as I remember.
-    </p>
+      <p>
+        Like an oasis in the desert <br />
+        Through a long and busy life style; <br />
+        ‘twas a welcome chance to escape <br />
+        from work and struggles for a while.
+      </p>
 
-    <p>
-      Like an oasis in the desert <br />
-      Through a long and busy life style; <br />
-      ‘twas a welcome chance to escape <br />
-      from work and struggles for a while.
-    </p>
+      <p>
+        It’s really the perfect time you see <br />
+        In so many different ways; <br />
+        not having the strong heat of summer <br />
+        More the warm and mellow days.
+      </p>
 
-    <p>
-      It’s really the perfect time you see <br />
-      In so many different ways; <br />
-      not having the strong heat of summer <br />
-      More the warm and mellow days.
-    </p>
+      <p>
+        Tree leaves begin to change colour <br />
+        In the garden growth slows down; <br />
+        Country life seems more relaxed <br />
+        than what you’ll find in the town.
+      </p>
+    </div>
 
-    <p>
-      Tree leaves begin to change colour <br />
-      In the garden growth slows down; <br />
-      Country life seems more relaxed <br />
-      than what you’ll find in the town.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/september-poem-2015/image-0.png" alt="" />
+      <img src="/poems/september-poem-2015/image-15.png" alt="" />
+      <img src="/poems/september-poem-2015/image-7.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/september-poem-2015/image-2.png" alt="" />
-    <img src="/poems/september-poem-2015/image-3.png" alt="" />
-    <img src="/poems/september-poem-2015/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        As a dedicated tender of the soil <br />
+        I need my rest and to have fun; <br />
+        September gives that welcome break <br />
+        before more work needs to be done.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      As a dedicated tender of the soil <br />
-      I need my rest and to have fun; <br />
-      September gives that welcome break <br />
-      before more work needs to be done.
-    </p>
+      <p>
+        Earlier crops are all gathered in <br />
+        there is a pause now taking place; <br />
+        Late potato crops are still growing <br />
+        giving more leisure hours of grace.
+      </p>
 
-    <p>
-      Earlier crops are all gathered in <br />
-      there is a pause now taking place; <br />
-      Late potato crops are still growing <br />
-      giving more leisure hours of grace.
-    </p>
+      <p>
+        To enjoy flowers blooming now <br />
+        richer than the summer show; <br />
+        Chrysanthemums and dahlias <br />
+        in the softer sunlight seem to glow.
+      </p>
 
-    <p>
-      To enjoy flowers blooming now <br />
-      richer than the summer show; <br />
-      Chrysanthemums and dahlias <br />
-      in the softer sunlight seem to glow.
-    </p>
+      <p>
+        Soon this break will come to an end <br />
+        But I am now ready for work you see; <br />
+        Being cosseted by my favourite month <br />
+        That still means so much to me.
+      </p>
+    </div>
 
-    <p>
-      Soon this break will come to an end <br />
-      But I am now ready for work you see; <br />
-      Being cosseted by my favourite month <br />
-      That still means so much to me.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/september-poem-2015/image-5.png" alt="" />
-    <img src="/poems/september-poem-2015/image-7.png" alt="" />
-    <img src="/poems/september-poem-2015/image-9.png" alt="" />
-    <img src="/poems/september-poem-2015/image-11.png" alt="" />
-    <img src="/poems/september-poem-2015/image-13.png" alt="" />
-    <img src="/poems/september-poem-2015/image-15.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/september-poem-2015/image-8.png" alt="" />
+      <img src="/poems/september-poem-2015/image-9.png" alt="" />
+      <img src="/poems/september-poem-2015/image-16.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fbd4b4;
+    --title-color: #000;
+
+    --card-border-color: #e36c0a;
+  }
+</style>

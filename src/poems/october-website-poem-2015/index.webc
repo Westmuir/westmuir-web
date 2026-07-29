@@ -1,111 +1,119 @@
 ---
 layout: "base.webc"
-title: "October Website Poem 2015"
-poemTitle: "October Website Poem 2015"
+title: "October Tattie Holidays"
+id: "201510"
+poemTitle: "October Tattie Holidays"
 author: "Eila Webster"
 bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/october-website-poem-2015/image-6.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image-7.png" alt="" />
+      <img src="/poems/october-website-poem-2015/apples.png" alt="" />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/october-website-poem-2015/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/october-website-poem-2015/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        We piled intae the bogie <br />
+        wi’ oor piecies and set aff <br />
+        Tae the yearly tattie gaithering <br />
+        For a fortnicht we were Staff.
+      </p>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/october-website-poem-2015/image-6.png" alt="" />
-  </div>
+      <p>
+        The gaffer he marked aff the bits <br />
+        The strip we had tae gaither; <br />
+        As the digger passed, we a’ tore in <br />
+        Hopin’ for a chance tae blether.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      We piled intae the bogie <br />
-      wi’ oor piecies and set aff <br />
-      Tae the yearly tattie gaithering <br />
-      For a fortnicht we were Staff.
-    </p>
+      <p>
+        The first day or twa it was ‘teuch’ <br />
+        we were hippit and backs were sair; <br />
+        But aince we got intae oor stride <br />
+        we didna ache nae mair.
+      </p>
 
-    <p>
-      The gaffer he marked aff the bits <br />
-      The strip we had tae gaither; <br />
-      As the digger passed, we a’ tore in <br />
-      Hopin’ for a chance tae blether.
-    </p>
+      <p>
+        The tattie gaitherin’ it was fun <br />
+        especially at piecie time; <br />
+        Wi paper and pencil, sittin’ on a creel <br />
+        On a’ the fowk I’d pen a line.
+      </p>
 
-    <p>
-      The first day or twa it was ‘teuch’ <br />
-      we were hippit and backs were sair; <br />
-      But aince we got intae oor stride <br />
-      we didna ache nae mair.
-    </p>
+      <p>
+        For as I got tae ken them a’ <br />
+        the wirds jist seemed tae fit; <br />
+        Even the verse on the fermer <br />
+        I’m shair I made a hit.
+      </p>
+    </div>
 
-    <p>
-      The tattie gaitherin’ it was fun <br />
-      especially at piecie time; <br />
-      Wi paper and pencil, sittin’ on a creel <br />
-      On a’ the fowk I’d pen a line.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/october-website-poem-2015/image-1.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image-0.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image-2.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image-3.png" alt="" />
+    </div>
 
-    <p>
-      For as I got tae ken them a’ <br />
-      the wirds jist seemed tae fit; <br />
-      Even the verse on the fermer <br />
-      I’m shair I made a hit.
-    </p>
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        He wanted tae get a copy <br />
+        Alang wi’ a’ the rest; <br />
+        when packed up for the season <br />
+        So I must hae passed the test!
+      </p>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/october-website-poem-2015/image-2.png" alt="" />
-    <img src="/poems/october-website-poem-2015/image-3.png" alt="" />
-    <img src="/poems/october-website-poem-2015/image-4.png" alt="" />
-  </div>
+      <p>
+        But there’s nae tattie gaitherin’ noo <br />
+        Wi’ machines the job gets done; <br />
+        Noo this is just the Autumn break <br />
+        when fowk jet aff tae the sun.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      He wanted tae get a copy <br />
-      Alang wi’ a’ the rest; <br />
-      when packed up for the season <br />
-      So I must hae passed the test!
-    </p>
+      <p>
+        Aye life has changed in many ways <br />
+        compared to the days of yore; <br />
+        It was plain and simple back then <br />
+        happiness near oor ain front door.
+      </p>
 
-    <p>
-      But there’s nae tattie gaitherin’ noo <br />
-      Wi’ machines the job gets done; <br />
-      Noo this is just the Autumn break <br />
-      when fowk jet aff tae the sun.
-    </p>
+      <p>
+        But living in the fast lane noo <br />
+        There’s nae chance tae unwind; <br />
+        Rushin’ on frae morn tae nicht <br />
+        tae nature’s beauty folk are blind.
+      </p>
 
-    <p>
-      Aye life has changed in many ways <br />
-      compared to the days of yore; <br />
-      It was plain and simple back then <br />
-      happiness near oor ain front door.
-    </p>
+      <p>
+        It’s in the name of progress <br />
+        And modern ways have great appeal; <br />
+        But naething beats sweet memories made <br />
+        While sittin’ on my tattie creel.
+      </p>
+    </div>
 
-    <p>
-      But living in the fast lane noo <br />
-      There’s nae chance tae unwind; <br />
-      Rushin’ on frae morn tae nicht <br />
-      tae nature’s beauty folk are blind.
-    </p>
-
-    <p>
-      It’s in the name of progress <br />
-      And modern ways have great appeal; <br />
-      But naething beats sweet memories made <br />
-      While sittin’ on my tattie creel.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/october-website-poem-2015/image-5.png" alt="" />
-    <img src="/poems/october-website-poem-2015/image-7.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/october-website-poem-2015/image-4.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image-5.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fabf8f;
+    --title-color: #000;
+
+    --card-border-color: #e36c0a;
+  }
+</style>
