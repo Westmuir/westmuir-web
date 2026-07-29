@@ -1,99 +1,104 @@
 ---
 layout: "base.webc"
 title: "2017 November"
-poemTitle: "2017 November"
+id: "201711"
+poemTitle: "Truth or Lie"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/2017-november/image-13.png" alt="" slot="header-tl" />
+    <img src="/poems/2017-november/image-12.png" alt="" slot="header-tr" />
 
-  <!-- Header Section -->
-  <img src="/poems/2017-november/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2017-november/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2017-november/image-14.png" alt="" />
+      <img src="/poems/2017-november/image-15.png" alt="" />
+      <img src="/poems/2017-november/image-3.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2017-november/image-6.png" alt="" />
-    <img src="/poems/2017-november/image-8.png" alt="" />
-    <img src="/poems/2017-november/image-10.png" alt="" />
-    <img src="/poems/2017-november/image-12.png" alt="" />
-    <img src="/poems/2017-november/image-14.png" alt="" />
-    <img src="/poems/2017-november/image-16.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        You should always tell the truth, <br />
+        We were taught when we were young! <br />
+        Lies were dangerous and evil, <br />
+        When they rolled off your tongue.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      You should always tell the truth, <br />
-      We were taught when we were young! <br />
-      Lies were dangerous and evil, <br />
-      When they rolled off your tongue.
-    </p>
+      <p>
+        Very reliable, Yes in theory, <br />
+        But in practice this doesn’t fit; <br />
+        We all lie from day to day, <br />
+        Without being aware we’re doing it.
+      </p>
 
-    <p>
-      Very reliable, Yes in theory, <br />
-      But in practice this doesn’t fit; <br />
-      We all lie from day to day, <br />
-      Without being aware we’re doing it.
-    </p>
+      <p>
+        Oh! Not in an earth shattering way, <br />
+        But it is a lie just the same; <br />
+        Yet sometimes it turns out better, <br />
+        To tell a small one without shame.
+      </p>
 
-    <p>
-      Oh! Not in an earth shattering way, <br />
-      But it is a lie just the same; <br />
-      Yet sometimes it turns out better, <br />
-      To tell a small one without shame.
-    </p>
+      <p>
+        Consider all your words with care, <br />
+        Will they open a wound or heal? <br />
+        Should we keep using cold hard truth, <br />
+        When kind words have more appeal.
+      </p>
+    </div>
 
-    <p>
-      Consider all your words with care, <br />
-      Will they open a wound or heal? <br />
-      Should we keep using cold hard truth, <br />
-      When kind words have more appeal.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2017-november/image-1.png" alt="" />
+      <img src="/poems/2017-november/image-11.png" alt="" />
+      <img src="/poems/2017-november/image-4.png" alt="" />
+      <img src="/poems/2017-november/image-16.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2017-november/image-2.png" alt="" />
-    <img src="/poems/2017-november/image-3.png" alt="" />
-    <img src="/poems/2017-november/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Yes! We all live in an evil world, <br />
+        Where harsh truth must be applied; <br />
+        Trying to shake hardened criminals, <br />
+        To confess that they had lied.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Yes! We all live in an evil world, <br />
-      Where harsh truth must be applied; <br />
-      Trying to shake hardened criminals, <br />
-      To confess that they had lied.
-    </p>
+      <p>
+        Remember where there’s life there’s hope, <br />
+        And miracles do happen sometimes; <br />
+        So when in doubt give comfort, <br />
+        And read again these lines.
+      </p>
 
-    <p>
-      Remember where there’s life there’s hope, <br />
-      And miracles do happen sometimes; <br />
-      So when in doubt give comfort, <br />
-      And read again these lines.
-    </p>
+      <p>
+        We cannot foresee the future, <br />
+        Or how any situation will end; <br />
+        So never hesitate to pass on hope, <br />
+        To warm the bosom of a friend.
+      </p>
+    </div>
 
-    <p>
-      We cannot foresee the future, <br />
-      Or how any situation will end; <br />
-      So never hesitate to pass on hope, <br />
-      To warm the bosom of a friend.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2017-november/image-5.png" alt="" />
-    <img src="/poems/2017-november/image-7.png" alt="" />
-    <img src="/poems/2017-november/image-9.png" alt="" />
-    <img src="/poems/2017-november/image-11.png" alt="" />
-    <img src="/poems/2017-november/image-13.png" alt="" />
-    <img src="/poems/2017-november/image-15.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2017-november/image-6.png" alt="" />
+      <img src="/poems/2017-november/image-8.png" alt="" />
+      <img src="/poems/2017-november/image-10.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #b4c7e7;
+    --title-color: #2f5597;
+  }
+</style>
