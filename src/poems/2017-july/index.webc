@@ -91,5 +91,6 @@ endOfYear: false
     --bg-color: #e7e6e6;
     --title-color: #ff0000;
     --img-color: transparent;
+    --card-border-color: #ff0000;
   }
 </style>
