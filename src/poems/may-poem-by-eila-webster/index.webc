@@ -1,85 +1,100 @@
 ---
 layout: "base.webc"
 title: "May Poem by Eila Webster"
-poemTitle: "May Poem by Eila Webster"
+id: "201505"
+poemTitle: "The Merry Month of May"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <img
+      src="/poems/may-poem-by-eila-webster/image-1.png"
+      alt=""
+      slot="header-tl"
+    />
+    <!-- <img -->
+    <!--   src="/poems/may-poem-by-eila-webster/image-1.png" -->
+    <!--   alt="" -->
+    <!--   slot="header-tr" -->
+    <!-- /> -->
 
-  <!-- Header Section -->
-  <img src="/poems/may-poem-by-eila-webster/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/may-poem-by-eila-webster/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/may-poem-by-eila-webster/image-0.png" alt="" />
+      <img src="/poems/may-poem-by-eila-webster/image-8.png" alt="" />
+      <img src="/poems/may-poem-by-eila-webster/image-2.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/may-poem-by-eila-webster/image-6.png" alt="" />
-    <img src="/poems/may-poem-by-eila-webster/image-8.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        May month is the stepping stone <br />
+        into Summer from the Spring. <br />
+        Covering trees with fragrant blossom <br />
+        and feathered friends are on the wing.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      May month is the stepping stone <br />
-      into Summer from the Spring. <br />
-      Covering trees with fragrant blossom <br />
-      and feathered friends are on the wing.
-    </p>
+      <p>
+        Time to hang up overcoat and scarf <br />
+        get outside now and explore. <br />
+        There is a wealth of interest there <br />
+        Lying right outside your front door.
+      </p>
 
-    <p>
-      Time to hang up overcoat and scarf <br />
-      get outside now and explore. <br />
-      There is a wealth of interest there <br />
-      Lying right outside your front door.
-    </p>
+      <p>
+        Butterflies look as if they are dancing <br />
+        to the humming of the bumble bees. <br />
+        The birds are all singing their dawn <br />
+        chorus that wafts on the sweet perfumed breeze . <br />
+      </p>
+    </div>
 
-    <p>
-      Butterflies look as if they are dancing <br />
-      to the humming of the bumble bees. <br />
-      The birds are all singing their dawn <br />
-      chorus
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/may-poem-by-eila-webster/image-4.png" alt="" />
+      <img src="/poems/may-poem-by-eila-webster/image-3.png" alt="" />
+      <img src="/poems/may-poem-by-eila-webster/image-5.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/may-poem-by-eila-webster/image-2.png" alt="" />
-    <img src="/poems/may-poem-by-eila-webster/image-3.png" alt="" />
-    <img src="/poems/may-poem-by-eila-webster/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Bulbs are bursting into flower <br />
+        showing many different kinds of hue. <br />
+        It is nature's free gift to everyone<br />
+        a real Spring tonic for me and you. <br />
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      that wafts on the sweet perfumed breeze . <br />
-      Bulbs are bursting into flower <br />
-      showing many different kinds of hue. <br />
-      It is nature's free gift to everyone
-    </p>
+      <p>
+        From this modern hectic lifestyle now <br />
+        Stop! and linger - then take note <br />
+        of the beauty all around you here<br />
+        in your own special little spot. <br />
+      </p>
 
-    <p>
-      a real Spring tonic for me and you. <br />
-      From this modern hectic lifestyle now <br />
-      Stop! and linger - then take note <br />
-      of the beauty all around you here
-    </p>
+      <p>
+        You'll feel the tension in your body ease <br />
+        refreshed and happy ready for the day <br />
+        as you find out life can be quite sweet<br />
+        Through the Merry Month of May.
+      </p>
+    </div>
 
-    <p>
-      in your own special little spot. <br />
-      You'll feel the tension in your body ease <br />
-      refreshed and happy ready for the day <br />
-      as you find out life can be quite sweet
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/may-poem-by-eila-webster/image-5.png" alt="" />
-    <img src="/poems/may-poem-by-eila-webster/image-7.png" alt="" />
-    <img src="/poems/may-poem-by-eila-webster/image-9.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/may-poem-by-eila-webster/image-6.png" alt="" />
+      <img src="/poems/may-poem-by-eila-webster/image-7.png" alt="" />
+      <img src="/poems/may-poem-by-eila-webster/image-9.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #e5b8b7;
+    --title-color: #ff0000;
+    --img-color: oklch(0.534446 0.0626364 19.7579);
+  }
+</style>
