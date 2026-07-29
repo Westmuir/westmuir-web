@@ -1,71 +1,82 @@
 ---
 layout: "base.webc"
 title: "2017 October"
-poemTitle: "2017 October"
+id: "201710"
+poemTitle: "The Promise"
 author: "Eila Webster"
 bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <!-- <img src="/poems/2017-october/image-0.png" alt="" slot="header-tl" /> -->
+    <!-- <img src="/poems/2017-october/image-1.png" alt="" slot="header-tr" /> -->
 
-  <!-- Header Section -->
-  <img src="/poems/2017-october/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2017-october/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2017-october/image-1.png" alt="" />
+      <img src="/poems/2017-october/image-3.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2017-october/image-6.png" alt="" />
-    <img src="/poems/2017-october/image-8.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Come everyone hold your head up high, <br />
+        The sun shines somewhere in a blue sky; <br />
+        Shedding her ray on some distant shore, <br />
+        And one day soon it will shine once more.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Come everyone hold your head up high, <br />
-      The sun shines somewhere in a blue sky; <br />
-      Shedding her ray on some distant shore, <br />
-      And one day soon it will shine once more.
-    </p>
+      <p>
+        On our own Scottish lush and fertile land, <br />
+        Though Universal Law’s hard to understand; <br />
+        When the wind and rain ‘neath darkened skies, <br />
+        And our flooded garden before us lies.
+      </p>
+    </div>
 
-    <p>
-      On our own Scottish lush and fertile land, <br />
-      Though Universal Law’s hard to understand; <br />
-      When the wind and rain ‘neath darkened skies, <br />
-      And our flooded garden before us lies.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <div></div>
+      <img src="/poems/2017-october/image-9.png" alt="" />
+      <div></div>
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2017-october/image-2.png" alt="" />
-    <img src="/poems/2017-october/image-3.png" alt="" />
-    <img src="/poems/2017-october/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        How we long to change it if only we could, <br />
+        But the Law still remains firm for our good; <br />
+        As death and birth go on unchanging, <br />
+        This Higher Power does the arranging.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      How we long to change it if only we could, <br />
-      But the Law still remains firm for our good; <br />
-      As death and birth go on unchanging, <br />
-      This Higher Power does the arranging.
-    </p>
+      <p>
+        We will get sunshine when the time is right, <br />
+        Filling our days with her wonderful light; <br />
+        A rich coloured arc will appear in the blue’ <br />
+        The Promise that all will come right for you.
+      </p>
+    </div>
 
-    <p>
-      We will get sunshine when the time is right, <br />
-      Filling our days with her wonderful light; <br />
-      A rich coloured arc will appear in the blue’ <br />
-      The Promise that all will come right for you.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2017-october/image-5.png" alt="" />
-    <img src="/poems/2017-october/image-7.png" alt="" />
-    <img src="/poems/2017-october/image-9.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2017-october/image-5.png" alt="" />
+      <img src="/poems/2017-october/image-7.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fbe5d6;
+    --title-color: #ff0000;
+    --stanza-color: #ff0000;
+  }
+</style>
