@@ -1,88 +1,96 @@
 ---
 layout: "base.webc"
 title: "2017 July"
-poemTitle: "2017 July"
+id: "201707"
+poemTitle: "At the Health Centre"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <img src="/poems/2017-july/image-3.png" alt="" />
+      <img src="/poems/2017-july/image-18.png" alt="" />
+    </div>
+    <div slot="header-tr">
+      <img src="/poems/2017-july/image-5.png" alt="" />
+      <img src="/poems/2017-july/image-9.png" alt="" />
+    </div>
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2017-july/image-1.png" alt="" />
+      <img src="/poems/2017-july/image-10.png" alt="" />
+      <img src="/poems/2017-july/image-7.png" alt="" />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/2017-july/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2017-july/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Sitting in the Health Centre car park, <br />
+        Whilst waiting for my friends; <br />
+        I spent the time just studying, <br />
+        All the sick people who attend.
+      </p>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2017-july/image-6.png" alt="" />
-    <img src="/poems/2017-july/image-8.png" alt="" />
-    <img src="/poems/2017-july/image-10.png" alt="" />
-    <img src="/poems/2017-july/image-12.png" alt="" />
-    <img src="/poems/2017-july/image-14.png" alt="" />
-    <img src="/poems/2017-july/image-16.png" alt="" />
-    <img src="/poems/2017-july/image-18.png" alt="" />
-  </div>
+      <p>
+        Some old couples linked together, <br />
+        Showing a lifetime of true love; <br />
+        A young woman with babe in arms, <br />
+        Softly cooing like a dove.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Sitting in the Health Centre car park, <br />
-      Whilst waiting for my friends; <br />
-      I spent the time just studying, <br />
-      All the sick people who attend.
-    </p>
+      <p>
+        A Doctor comes in hectic rush, <br />
+        Banged the car door shut and flew; <br />
+        There must be an emergency here, <br />
+        And the Staff had got news through.
+      </p>
+    </div>
 
-    <p>
-      Some old couples linked together, <br />
-      Showing a lifetime of true love; <br />
-      A young woman with babe in arms, <br />
-      Softly cooing like a dove.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2017-july/image-15.png" alt="" />
+      <img src="/poems/2017-july/image-17.png" alt="" />
+      <img src="/poems/2017-july/image-8.png" alt="" />
+    </div>
 
-    <p>
-      A Doctor comes in hectic rush, <br />
-      Banged the car door shut and flew; <br />
-      There must be an emergency here, <br />
-      And the Staff had got news through.
-    </p>
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        The car park was quickly filling up, <br />
+        And too many folk now to mention; <br />
+        For earlier patients were coming out, <br />
+        After they had prime attention.
+      </p>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2017-july/image-2.png" alt="" />
-    <img src="/poems/2017-july/image-3.png" alt="" />
-    <img src="/poems/2017-july/image-4.png" alt="" />
-  </div>
+      <p>
+        My friends too will soon be here, <br />
+        And we’ll get on our way; <br />
+        But I’d rather be a spectator – Yes! <br />
+        Than a sick patient any day.
+      </p>
+    </div>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      The car park was quickly filling up, <br />
-      And too many folk now to mention; <br />
-      For earlier patients were coming out, <br />
-      After they had prime attention.
-    </p>
-
-    <p>
-      My friends too will soon be here, <br />
-      And we’ll get on our way; <br />
-      But I’d rather be a spectator – Yes! <br />
-      Than a sick patient any day.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2017-july/image-5.png" alt="" />
-    <img src="/poems/2017-july/image-7.png" alt="" />
-    <img src="/poems/2017-july/image-9.png" alt="" />
-    <img src="/poems/2017-july/image-11.png" alt="" />
-    <img src="/poems/2017-july/image-13.png" alt="" />
-    <img src="/poems/2017-july/image-15.png" alt="" />
-    <img src="/poems/2017-july/image-17.png" alt="" />
-    <img src="/poems/2017-july/image-19.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2017-july/image-13.png" alt="" />
+      <img src="/poems/2017-july/image-16.png" alt="" />
+      <img src="/poems/2017-july/image-12.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #e7e6e6;
+    --title-color: #ff0000;
+    --img-color: transparent;
+    --card-border-color: #ff0000;
+  }
+</style>

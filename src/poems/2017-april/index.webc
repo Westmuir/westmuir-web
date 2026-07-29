@@ -1,102 +1,112 @@
 ---
 layout: "base.webc"
 title: "2017 April"
-poemTitle: "2017 April"
+id: "201704"
+poemTitle: "Memories of Long Ago"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/2017-april/image-0.png" alt="" slot="header-tl" />
+    <img src="/poems/2017-april/image-12.png" alt="" slot="header-tr" />
 
-  <!-- Header Section -->
-  <img src="/poems/2017-april/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2017-april/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2017-april/image-2.png" alt="" />
+      <img src="/poems/2017-april/image-5.png" alt="" />
+      <img src="/poems/2017-april/image-7.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2017-april/image-6.png" alt="" />
-    <img src="/poems/2017-april/image-8.png" alt="" />
-    <img src="/poems/2017-april/image-10.png" alt="" />
-    <img src="/poems/2017-april/image-12.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Young folk say that they are bored, <br />
+        Yet they have got so much; <br />
+        With all the gadgets they have now, <br />
+        No trouble keeping in touch.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Young folk say that they are bored, <br />
-      Yet they have got so much; <br />
-      With all the gadgets they have now, <br />
-      No trouble keeping in touch.
-    </p>
+      <p>
+        Entertainment is laid on for them, <br />
+        No need even to think; <br />
+        Yet many seem to lose the way, <br />
+        And take to drugs and drink.
+      </p>
 
-    <p>
-      Entertainment is laid on for them, <br />
-      No need even to think; <br />
-      Yet many seem to lose the way, <br />
-      And take to drugs and drink.
-    </p>
+      <p>
+        So different now from days gone by, <br />
+        You’d to seek out your own treasure; <br />
+        And it always was the simplest things, <br />
+        That brought the greatest pleasure.
+      </p>
 
-    <p>
-      So different now from days gone by, <br />
-      You’d to seek out your own treasure; <br />
-      And it always was the simplest things, <br />
-      That brought the greatest pleasure.
-    </p>
+      <p>
+        I still remember as a small child, <br />
+        I would sit by the warm coal fire; <br />
+        And listen to the kettle hum, <br />
+        Of its soft sound I’d never tire.
+      </p>
+    </div>
 
-    <p>
-      I still remember as a small child, <br />
-      I would sit by the warm coal fire; <br />
-      And listen to the kettle hum, <br />
-      Of its soft sound I’d never tire.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2017-april/image-1.png" alt="" />
+      <img src="/poems/2017-april/image-3.png" alt="" />
+      <img src="/poems/2017-april/image-4.png" alt="" />
+      <img src="/poems/2017-april/image-6.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2017-april/image-2.png" alt="" />
-    <img src="/poems/2017-april/image-3.png" alt="" />
-    <img src="/poems/2017-april/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Fascinated by changing pictures, <br />
+        I could see in the firelight glow; <br />
+        To me it was like fairyland, <br />
+        Oh…. How I loved it so.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Fascinated by changing pictures, <br />
-      I could see in the firelight glow; <br />
-      To me it was like fairyland, <br />
-      Oh…. How I loved it so.
-    </p>
+      <p>
+        Yes, I have my coal fire yet, <br />
+        Though I am now old and grey; <br />
+        It transports me into another world, <br />
+        As I dream the hours away.
+      </p>
 
-    <p>
-      Yes, I have my coal fire yet, <br />
-      Though I am now old and grey; <br />
-      It transports me into another world, <br />
-      As I dream the hours away.
-    </p>
+      <p>
+        Still finding pleasure in the things, <br />
+        That I did when I was small; <br />
+        Reliving the happy memories too, <br />
+        As those fire pictures I recall.
+      </p>
 
-    <p>
-      Still finding pleasure in the things, <br />
-      That I did when I was small; <br />
-      Reliving the happy memories too, <br />
-      As those fire pictures I recall.
-    </p>
+      <p>
+        My message is simple - Go out and play, <br />
+        The time spent will all be gain; <br />
+        The young will remember it in years to come, <br />
+        Just as I do … with the firelight flame.
+      </p>
+    </div>
 
-    <p>
-      My message is simple - Go out and play, <br />
-      The time spent will all be gain; <br />
-      The young will remember it in years to come, <br />
-      Just as I do … with the firelight flame.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2017-april/image-5.png" alt="" />
-    <img src="/poems/2017-april/image-7.png" alt="" />
-    <img src="/poems/2017-april/image-9.png" alt="" />
-    <img src="/poems/2017-april/image-11.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2017-april/image-8.png" alt="" />
+      <img src="/poems/2017-april/image-11.png" alt="" />
+      <img src="/poems/2017-april/image-10.png" alt="" />
+      <img src="/poems/2017-april/image-9.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #ffe699;
+    --title-color: #c55a11;
+  }
+</style>
