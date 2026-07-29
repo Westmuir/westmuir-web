@@ -8,7 +8,7 @@ headerImage: "images/east-bank.avif"
 headerAlt: "East bank, Westmuir"
 ---
 
-<section-cards webc:nokeep :@cards="homeCards" class="breakout"></section-cards>
+<!-- <section-cards webc:nokeep :@cards="homeCards" class="breakout"></section-cards> -->
 
 <div class="ui-card ui-outlined color-outline breakout">
   <hgroup>
