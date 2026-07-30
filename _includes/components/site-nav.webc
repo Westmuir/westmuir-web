@@ -108,9 +108,9 @@
     display: none;
     background: none;
     border: none;
-    color: var(--_accent-contrast);
     cursor: pointer;
     padding: var(--size-2);
+    color: var(--primary);
   }
 
   .nav-links {
@@ -153,12 +153,12 @@
       top: 100%;
       left: 0;
       right: 0;
-      background-color: var(--surface-filled);
       padding: var(--size-4) var(--size-5);
       border-top: 1px solid var(--border);
       box-shadow: var(--shadow-3);
       gap: var(--size-2);
       z-index: 90;
+      background-color: var(--primary);
     }
 
     .nav-links.open {
@@ -179,8 +179,8 @@
     .nav-links a:hover,
     .nav-links a.active {
       border-left-color: var(--primary);
-      background: var(--surface-elevated);
-      color: var(--text-1);
+      background: var(--surface-default);
+      color: var(--primary);
     }
   }
 </style>
