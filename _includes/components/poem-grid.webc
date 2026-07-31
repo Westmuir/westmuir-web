@@ -319,7 +319,7 @@
   /* Responsive Fallback: Collapse on smaller devices */
   @media (max-width: 1024px) {
     .grid-body {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 200px;
       gap: 2rem;
     }
     .grid-straddle-signature {
