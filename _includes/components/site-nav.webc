@@ -68,72 +68,96 @@
 
 <style>
   :where(.navigation-lane) {
-    justify-content: center;
-    --_accent: var(--primary);
-
-    --_accent-contrast: var(--gray-1);
-
-    --_hover-color: var(--primary-hover);
-
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
+
+    /* 1. Use your theme's native primary color tokens */
     background-color: var(--primary);
+    color: var(--primary-contrast);
+    /* Dynamic background: Brand color in light mode, Dark surface color in dark mode */
+    background-color: light-dark(var(--primary), var(--surface-filled));
+
+    /* Dynamic text: High-contrast light gray on light mode, Default text on dark mode */
+    color: light-dark(var(--primary-contrast), var(--text-primary));
   }
 
-  /* 1. Desktop Defaults */
+  /* Update the Desktop Defaults to look for the dynamic container color */
   .menu-button {
     background: none;
     border: none;
     cursor: pointer;
     padding: var(--size-2);
-    color: var(--primary-contrast);
+    color: inherit; /* Inherits the dynamic text color from .navigation-lane */
   }
-
+  /* FORCE THE FLEX ROW GAP BACK ON STANDARD SCREENS */
   .nav-links {
     display: flex;
+    flex-direction: row;
     gap: var(--size-5);
   }
 
   .nav-links a {
-    /* Links now natively pull the unified grey-1 text overlay color specification */
-    color: var(--text-primary-contrast);
+    color: inherit; /* Inherits the dynamic text color */
     text-decoration: none;
     font-weight: var(--font-weight-6);
     padding-block: var(--size-2);
-    transition: color 0.2s ease;
-  }
-
-  .nav-links a:hover {
-    /* Smoothly lightens up your bright blue theme color on link hover states */
-    color: var(--_hover-color);
+    transition: opacity 0.2s ease;
   }
 
   .nav-links a.active {
-    color: var(--text-contrast);
+    /* Active underline color switches contextually */
+    color: light-dark(var(--primary-contrast), var(--primary));
     font-weight: var(--font-weight-7);
     text-decoration: underline;
     text-underline-offset: var(--size-1);
   }
 
-  dialog.ui-drawer .nav-links {
-    background-color: var(--primary);
-    flex-direction: column;
-    gap: var(--size-4);
-    padding: var(--size-5);
-    width: 100%;
+  .nav-links a:hover {
+    /* Instead of tracking a broken hover variable, a clean opacity drop
+       safely handles any theme background color */
+    opacity: 0.8;
   }
+  /* Open Props Drawer Specific Overrides */
+  dialog.ui-drawer {
+    /* Uses your system surfaces token to respect system Light/Dark settings */
+    background-color: var(--surface-default);
+
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: var(--size-4);
+      padding: var(--size-5);
+      width: 100%;
+      background: none; /* Let the parent dialog fill the background surface */
+    }
+
+    .nav-links a {
+      /* Flips links back to standard high-contrast text since the
+         drawer background is a surface layout layer, not solid --primary */
+      color: var(--text-primary);
+    }
+
+    .nav-links a.active {
+      /* Underline active layout options in the standard primary brand color */
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  }
+
+  /* Responsive Display Rules */
   @media (min-width: 768px) {
-    /* Hide the drawer toggle button on desktop */
+    /* Hide the drawer hamburger button on desktop viewports */
     .menu-toggle-btn {
-      display: none;
+      display: none !important;
     }
   }
 
   @media (max-width: 767px) {
-    /* Hide the raw inline header nav on mobile */
+    /* Hide the desktop nav bar links box on narrow mobile viewports */
     .navigation-lane .nav-links {
-      display: none;
+      display: none !important;
     }
   }
 </style>
