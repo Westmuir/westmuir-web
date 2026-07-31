@@ -1,82 +1,87 @@
 ---
 layout: "base.webc"
 title: "2018 April"
-poemTitle: "2018 April"
+id: "201804"
+poemTitle: "Life’s Race"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/2018-april/image-13.png" alt="" slot="header-tl" />
+    <img src="/poems/2018-april/image-12.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2018-april/image-1.png" alt="" />
+      <img src="/poems/2018-april/image-5.png" alt="" />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/2018-april/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2018-april/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Carry the torch with head held high, <br />
+        The flame grows brighter as the miles go by; <br />
+        Through the longest day and darkest night, <br />
+        The torch you hold will give you light.
+      </p>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2018-april/image-6.png" alt="" />
-    <img src="/poems/2018-april/image-8.png" alt="" />
-    <img src="/poems/2018-april/image-10.png" alt="" />
-    <img src="/poems/2018-april/image-12.png" alt="" />
-  </div>
+      <p>
+        To show you clearly what lies ahead, <br />
+        On the path of life you daily tread; <br />
+        Our role in life is to help each other , <br />
+        A father mother, sister or brother.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Carry the torch with head held high, <br />
-      The flame grows brighter as the miles go by; <br />
-      Through the longest day and darkest night, <br />
-      The torch you hold will give you light.
-    </p>
+      <p>
+        But if anyone keeps pushing kind aid aside, <br />
+        Just let it flow off on the morning tide; <br />
+        And carry on leaving those fetters behind, <br />
+        Gaining courage strength and peace of mind.
+      </p>
+    </div>
 
-    <p>
-      To show you clearly what lies ahead, <br />
-      On the path of life you daily tread; <br />
-      Our role in life is to help each other , <br />
-      A father mother, sister or brother.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2018-april/image-2.png" alt="" />
+      <img src="/poems/2018-april/image-4.png" alt="" />
+      <img src="/poems/2018-april/image-11.png" alt="" />
+    </div>
 
-    <p>
-      But if anyone keeps pushing kind aid aside, <br />
-      Just let it flow off on the morning tide; <br />
-      And carry on leaving those fetters behind, <br />
-      Gaining courage strength and peace of mind.
-    </p>
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Still remember when running your life through, <br />
+        All the new friends made from help by you; <br />
+        So carry on running with patience and grace, <br />
+        Showing how you can make Earth a better place.
+      </p>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2018-april/image-2.png" alt="" />
-    <img src="/poems/2018-april/image-3.png" alt="" />
-    <img src="/poems/2018-april/image-4.png" alt="" />
-  </div>
+      <p>
+        The seeds have been sown you have passed the test, <br />
+        And someday you will be truly blessed; <br />
+        When the race is won and the torch is laid down, <br />
+        You will get the honour of wearing a crown.
+      </p>
+    </div>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Still remember when running your life through, <br />
-      All the new friends made from help by you; <br />
-      So carry on running with patience and grace, <br />
-      Showing how you can make Earth a better place.
-    </p>
-
-    <p>
-      The seeds have been sown you have passed the test, <br />
-      And someday you will be truly blessed; <br />
-      When the race is won and the torch is laid down, <br />
-      You will get the honour of wearing a crown.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2018-april/image-5.png" alt="" />
-    <img src="/poems/2018-april/image-7.png" alt="" />
-    <img src="/poems/2018-april/image-9.png" alt="" />
-    <img src="/poems/2018-april/image-11.png" alt="" />
-    <img src="/poems/2018-april/image-13.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2018-april/image-9.png" alt="" />
+      <img src="/poems/2018-april/image-7.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #a9d18e;
+    --title-color: #385623;
+    --img-color: transparent;
+  }
+</style>
