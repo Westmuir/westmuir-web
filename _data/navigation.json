@@ -1,0 +1,33 @@
+[
+  {
+    "url": "/",
+    "label": "Home",
+    "exact": true
+  },
+  {
+    "url": "/woodland/",
+    "label": "Woodland",
+    "includes": true
+  },
+  {
+    "url": "/Westmuir Hall/",
+    "label": "Village Hall"
+  },
+  {
+    "url": "/wcdt/",
+    "label": "WCDT",
+    "includes": true
+  },
+  {
+    "url": "/Westmuir Hall/defibrillator/",
+    "label": "Resilience"
+  },
+  {
+    "url": "/volunteers/",
+    "label": "Volunteer"
+  },
+  {
+    "url": "/other/",
+    "label": "Archive"
+  }
+]
