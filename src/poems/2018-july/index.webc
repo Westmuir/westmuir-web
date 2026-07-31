@@ -1,82 +1,91 @@
 ---
 layout: "base.webc"
 title: "2018 July"
-poemTitle: "2018 July"
+id: "201807"
+poemTitle: "Summer Relaxation & Fun"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/2018-july/image-1.png" alt="" slot="header-tl" />
+    <img src="/poems/2018-july/image-3.png" alt="" slot="header-tr" />
 
-  <!-- Header Section -->
-  <img src="/poems/2018-july/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2018-july/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2018-july/image-8.png" alt="" />
+      <img src="/poems/2018-july/image-13.png" alt="" />
+      <img src="/poems/2018-july/image-5.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2018-july/image-6.png" alt="" />
-    <img src="/poems/2018-july/image-8.png" alt="" />
-    <img src="/poems/2018-july/image-10.png" alt="" />
-    <img src="/poems/2018-july/image-12.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        July brings holidays and fun, <br />
+        A time for relaxing in the sun; <br />
+        Leaving work and worries far behind, <br />
+        Go paddle with the children to unwind.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      July brings holidays and fun, <br />
-      A time for relaxing in the sun; <br />
-      Leaving work and worries far behind, <br />
-      Go paddle with the children to unwind.
-    </p>
+      <p>
+        There’s no need to be stripped of cash, <br />
+        On expensive trips to make a splash; <br />
+        You have it all outside your door, <br />
+        Plenty places here you can explore.
+      </p>
 
-    <p>
-      There’s no need to be stripped of cash, <br />
-      On expensive trips to make a splash; <br />
-      You have it all outside your door, <br />
-      Plenty places here you can explore.
-    </p>
+      <p>
+        Stop rushing around – just stand and stare, <br />
+        Soak up the beauty that lies there; <br />
+        This is the spot where you belong, <br />
+        The place you chose to make home.
+      </p>
+    </div>
 
-    <p>
-      Stop rushing around – just stand and stare, <br />
-      Soak up the beauty that lies there; <br />
-      This is the spot where you belong, <br />
-      The place you chose to make home.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2018-july/image-4.png" alt="" />
+      <img src="/poems/2018-july/image-8.png" alt="" />
+      <img src="/poems/2018-july/image-7.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2018-july/image-2.png" alt="" />
-    <img src="/poems/2018-july/image-3.png" alt="" />
-    <img src="/poems/2018-july/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        In your heart nothing can compare, <br />
+        With all the happiness you have there; <br />
+        Why go away to other lands, <br />
+        You have it all here in your hands.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      In your heart nothing can compare, <br />
-      With all the happiness you have there; <br />
-      Why go away to other lands, <br />
-      You have it all here in your hands.
-    </p>
+      <p>
+        Just down tools and pack them all away, <br />
+        Put on your glad rags and holiday; <br />
+        With ice cream, meals out, a bus to town, <br />
+        Your holiday at home won’t let you down.
+      </p>
+    </div>
 
-    <p>
-      Just down tools and pack them all away, <br />
-      Put on your glad rags and holiday; <br />
-      With ice cream, meals out, a bus to town, <br />
-      Your holiday at home won’t let you down.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2018-july/image-5.png" alt="" />
-    <img src="/poems/2018-july/image-7.png" alt="" />
-    <img src="/poems/2018-july/image-9.png" alt="" />
-    <img src="/poems/2018-july/image-11.png" alt="" />
-    <img src="/poems/2018-july/image-13.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2018-july/image-12.png" alt="" />
+      <img src="/poems/2018-july/image-9.png" alt="" />
+      <img src="/poems/2018-july/image-11.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #c5e0b4;
+    --title-color: #ff0000;
+    --stanza-color: #ff0000;
+    --img-color: transparent;
+  }
+</style>

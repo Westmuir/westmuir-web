@@ -1,93 +1,106 @@
 ---
 layout: "base.webc"
 title: "2018 March"
-poemTitle: "2018 March"
+id: "201803"
+poemTitle: "March Winds"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <img src="/poems/2018-march/image-1.png" alt="" />
+      <img src="/poems/2018-march/image-2.png" alt="" />
+    </div>
+    <div slot="header-tr">
+      <img src="/poems/2018-march/image-7.png" alt="" />
+      <img src="/poems/2018-march/image-9.png" alt="" />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/2018-march/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2018-march/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2018-march/image-4.png" alt="" />
+      <img src="/poems/2018-march/image-11.png" alt="" />
+      <img src="/poems/2018-march/image-12.png" alt="" />
+      <img src="/poems/2018-march/image-15.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2018-march/image-6.png" alt="" />
-    <img src="/poems/2018-march/image-8.png" alt="" />
-    <img src="/poems/2018-march/image-10.png" alt="" />
-    <img src="/poems/2018-march/image-12.png" alt="" />
-    <img src="/poems/2018-march/image-14.png" alt="" />
-    <img src="/poems/2018-march/image-16.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        March month brings stormy weather, <br />
+        That can have an icy blast; <br />
+        So oatmeal is the perfect choice, <br />
+        On which to break our fast.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      March month brings stormy weather, <br />
-      That can have an icy blast; <br />
-      So oatmeal is the perfect choice, <br />
-      On which to break our fast.
-    </p>
+      <p>
+        Back in old time Bothy days, <br />
+        Lads would start the day on brose; <br />
+        Farm hands’ wives made porridge, <br />
+        For their menfolk when they rose.
+      </p>
 
-    <p>
-      Back in old time Bothy days, <br />
-      Lads would start the day on brose; <br />
-      Farm hands’ wives made porridge, <br />
-      For their menfolk when they rose.
-    </p>
+      <p>
+        But in the modern way of life, <br />
+        Oatmeal went out of favour; <br />
+        Kids have so much to choose from, <br />
+        With a sweet and chocolate flavour.
+      </p>
+    </div>
 
-    <p>
-      But in the modern way of life, <br />
-      Oatmeal went out of favour; <br />
-      Kids have so much to choose from, <br />
-      With a sweet and chocolate flavour.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2018-march/image-3.png" alt="" />
+      <img src="/poems/2018-march/image-8.png" alt="" />
+      <img src="/poems/2018-march/image-14.png" alt="" />
+      <img src="/poems/2018-march/image-13.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2018-march/image-2.png" alt="" />
-    <img src="/poems/2018-march/image-3.png" alt="" />
-    <img src="/poems/2018-march/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Yet porridge is the perfect dish, <br />
+        You’ll find it so versatile; <br />
+        It gives you lots of stamina, <br />
+        To help go that extra mile.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Yet porridge is the perfect dish, <br />
-      You’ll find it so versatile; <br />
-      It gives you lots of stamina, <br />
-      To help go that extra mile.
-    </p>
+      <p>
+        Keep giving it a new flavour, <br />
+        Add fruit and berries to the mix; <br />
+        And breakfast will become a treat, <br />
+        As you get perfect with the fix.
+      </p>
 
-    <p>
-      Keep giving it a new flavour, <br />
-      Add fruit and berries to the mix; <br />
-      And breakfast will become a treat, <br />
-      As you get perfect with the fix.
-    </p>
+      <p>
+        Be ready for what March may bring, <br />
+        Just keep the porridge pot handy; <br />
+        ’Cause when you dine on Scotland’s fare, <br />
+        You <strong>will</strong> stay warm and dandy.
+      </p>
+    </div>
 
-    <p>
-      Be ready for what March may bring, <br />
-      Just keep the porridge pot handy; <br />
-      ’Cause when you dine on Scotland’s fare, <br />
-      You will stay warm and dandy.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2018-march/image-5.png" alt="" />
-    <img src="/poems/2018-march/image-7.png" alt="" />
-    <img src="/poems/2018-march/image-9.png" alt="" />
-    <img src="/poems/2018-march/image-11.png" alt="" />
-    <img src="/poems/2018-march/image-13.png" alt="" />
-    <img src="/poems/2018-march/image-15.png" alt="" />
-    <img src="/poems/2018-march/image-17.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2018-march/image-10.png" alt="" />
+      <img src="/poems/2018-march/image-5.png" alt="" />
+      <img src="/poems/2018-march/image-16.png" alt="" />
+      <img src="/poems/2018-march/image-17.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #dbdbdb;
+    --title-color: #0070c0;
+    --img-color: transparent;
+  }
+</style>

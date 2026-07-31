@@ -1,11 +1,10 @@
-<nav class="navigation-lane">
-  <!-- Mobile Menu Hamburger Button -->
+<nav class="navigation-lane" webc:root="override">
   <button
-    id="menu-toggle"
-    class="menu-button"
-    aria-expanded="false"
-    aria-controls="nav-links-box"
-    aria-label="Toggle navigation menu"
+    class="ui-button top menu-toggle-btn menu-button"
+    commandfor="drawer-inline-start-html"
+    command="show-modal"
+    aria-haspopup="dialog"
+    aria-controls="drawer-inline-start-html"
   >
     <svg
       class="hamburger-icon"
@@ -23,164 +22,142 @@
       <line class="line-bot" x1="3" y1="18" x2="21" y2="18"></line>
     </svg>
   </button>
-
-  <!-- Content Links Target Wrapper -->
-  <div id="nav-links-box" class="nav-links">
-    <a href="/" :class="$data.page.url === '/' ? 'active' : ''">Home </a>
-    <a
-      href="/woodland/"
-      :class="$data.page.url === '/woodland/' ? 'active' : ''"
-      >Woodland</a
-    >
-    <a
-      href="/Westmuir Hall/"
-      :class="$data.page.url === '/Westmuir Hall/' ? 'active' : ''"
-      >Village Hall</a
-    >
-    <a href="/wcdt/" :class="$data.page.url.includes('/wcdt/') ? 'active' : ''"
-      >WCDT</a
-    >
-    <a
-      href="/Westmuir Hall/defibrillator/"
-      :class="$data.page.url === '/Westmuir Hall/defibrillator/' ? 'active' : ''"
-      >Resilience</a
-    >
-    <a
-      href="/volunteers/"
-      :class="$data.page.url === '/volunteers/' ? 'active' : ''"
-      >Volunteer</a
-    >
-    <a href="/other/" :class="$data.page.url === '/volunteers/' ? 'active' : ''"
-      >Archive</a
-    >
-  </div>
+  <nav-links></nav-links>
 </nav>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.querySelector("#menu-toggle");
-    const linksContainer = document.querySelector("#nav-links-box");
+<dialog
+  class="ui-drawer ui-scroll-lock ui-inline-start"
+  id="drawer-inline-start-html"
+  closedby="any"
+>
+  <div class="ui-header">
+    <span>Inline Start</span>
+    <button
+      class="ui-icon-button"
+      title="Close"
+      onclick="this.closest('dialog').close()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+      >
+        <path
+          fill="currentColor"
+          d="M26.29 4.293a1 1 0 1 1 1.414 1.414L17.413 16l10.291 10.29a1 1 0 1 1-1.414 1.414L16 17.413L5.707 27.704a1 1 0 0 1-1.414-1.414L14.585 16L4.293 5.707a1 1 0 0 1 1.414-1.414L16 14.584z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div class="ui-content">
+    <nav class="mobile-only-menu">
+      <nav-links></nav-links>
+    </nav>
+  </div>
+  <div class="ui-footer">
+    <button
+      class="ui-button ui-small"
+      commandfor="drawer-inline-start-html"
+      command="close"
+    >
+      Close
+    </button>
+  </div>
+</dialog>
 
-    if (!toggleBtn || !linksContainer) return;
-
-    toggleBtn.addEventListener("click", () => {
-      const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
-
-      // Update state for accessibility and visual layout engine hooks
-      toggleBtn.setAttribute("aria-expanded", !isExpanded);
-      linksContainer.classList.toggle("open", !isExpanded);
-    });
-
-    // Close mobile drawer automatically if user resizes back up to desktop viewports
-    window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
-      if (e.matches) {
-        toggleBtn.setAttribute("aria-expanded", "false");
-        linksContainer.classList.remove("open");
-      }
-    });
-  });
-</script>
-<style webc:type="scss">
-  /* Inside your site-nav style block */
-
+<style>
   :where(.navigation-lane) {
-    justify-content: center;
-    /* 1. SEPARATE CORE PARAMETERS LIKE THE FRAMEWORK BUTTON */
-    --_accent: var(
-      --primary
-    ); /* Anchors straight to your global --blue-8 theme */
-
-    /* 2. MATCH THE EXACT ACCENT CONTRAST RULE YOU FOUND IN THE DOCS */
-    --_accent-contrast: var(
-      --gray-1
-    ); /* Clean, high-contrast text on solid blue backdrops */
-
-    /* 3. SIMPLIFIED CHROMATIC HOVER BLEND (Original OPUI calculation block) */
-    --_hover-color: var(--primary-hover);
-
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
+
+    /* 1. Use your theme's native primary color tokens */
+    background-color: var(--primary);
+    color: var(--primary-contrast);
+    /* Dynamic background: Brand color in light mode, Dark surface color in dark mode */
+    background-color: light-dark(var(--primary), var(--surface-filled));
+
+    /* Dynamic text: High-contrast light gray on light mode, Default text on dark mode */
+    color: light-dark(var(--primary-contrast), var(--text-primary));
   }
 
-  /* 1. Desktop Defaults */
+  /* Update the Desktop Defaults to look for the dynamic container color */
   .menu-button {
-    display: none;
     background: none;
     border: none;
     cursor: pointer;
     padding: var(--size-2);
-    color: var(--primary);
+    color: inherit; /* Inherits the dynamic text color from .navigation-lane */
   }
-
+  /* FORCE THE FLEX ROW GAP BACK ON STANDARD SCREENS */
   .nav-links {
     display: flex;
+    flex-direction: row;
     gap: var(--size-5);
   }
 
   .nav-links a {
-    /* Links now natively pull the unified grey-1 text overlay color specification */
-    color: var(--text-primary);
+    color: inherit; /* Inherits the dynamic text color */
     text-decoration: none;
     font-weight: var(--font-weight-6);
     padding-block: var(--size-2);
-    transition: color 0.2s ease;
-  }
-
-  .nav-links a:hover {
-    /* Smoothly lightens up your bright blue theme color on link hover states */
-    color: var(--_hover-color);
+    transition: opacity 0.2s ease;
   }
 
   .nav-links a.active {
-    color: var(--text-contrast);
+    /* Active underline color switches contextually */
+    color: light-dark(var(--primary-contrast), var(--primary));
     font-weight: var(--font-weight-7);
     text-decoration: underline;
     text-underline-offset: var(--size-1);
   }
 
-  /* 2. Responsive Mobile Layout Overrides */
-  @media (max-width: 767px) {
-    .menu-button {
-      display: block;
-      z-index: 100;
-    }
+  .nav-links a:hover {
+    /* Instead of tracking a broken hover variable, a clean opacity drop
+       safely handles any theme background color */
+    opacity: 0.8;
+  }
+  /* Open Props Drawer Specific Overrides */
+  dialog.ui-drawer {
+    /* Uses your system surfaces token to respect system Light/Dark settings */
+    background-color: var(--surface-default);
 
     .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      padding: var(--size-4) var(--size-5);
-      border-top: 1px solid var(--border);
-      box-shadow: var(--shadow-3);
-      gap: var(--size-2);
-      z-index: 90;
-      background-color: var(--primary);
-    }
-
-    .nav-links.open {
       display: flex;
+      flex-direction: column;
+      gap: var(--size-4);
+      padding: var(--size-5);
+      width: 100%;
+      background: none; /* Let the parent dialog fill the background surface */
     }
 
     .nav-links a {
-      padding-block: var(--size-3);
-      width: 100%;
-      border-bottom: none;
-      border-left: 4px solid transparent;
-      padding-left: var(--size-3);
-
-      /* Drops back to the global page theme color when inside the mobile slide panel drawer */
-      color: var(--text-1);
+      /* Flips links back to standard high-contrast text since the
+         drawer background is a surface layout layer, not solid --primary */
+      color: var(--text-primary);
     }
 
-    .nav-links a:hover,
     .nav-links a.active {
-      border-left-color: var(--primary);
-      background: var(--surface-default);
+      /* Underline active layout options in the standard primary brand color */
       color: var(--primary);
+      text-decoration: underline;
+    }
+  }
+
+  /* Responsive Display Rules */
+  @media (min-width: 768px) {
+    /* Hide the drawer hamburger button on desktop viewports */
+    .menu-toggle-btn {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    /* Hide the desktop nav bar links box on narrow mobile viewports */
+    .navigation-lane .nav-links {
+      display: none !important;
     }
   }
 </style>
