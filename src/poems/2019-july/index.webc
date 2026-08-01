@@ -1,77 +1,86 @@
 ---
 layout: "base.webc"
 title: "2019 July"
-poemTitle: "2019 July"
+id: "201907"
+poemTitle: "July’s Long Summer Days"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2019-july/image-0.png" alt="" />
+      <img src="/poems/2019-july/image-2.png" alt="" />
+      <img src="/poems/2019-july/image-4.png" alt="" />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/2019-july/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2019-july/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        July brings the Summer, <br />
+        Time for holidays and fun; <br />
+        Strawberries are in season, <br />
+        A real treat for everyone.
+      </p>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2019-july/image-6.png" alt="" />
-    <img src="/poems/2019-july/image-8.png" alt="" />
-  </div>
+      <p>
+        Growing in the garden, <br />
+        And eaten on the spot; <br />
+        Have a delicious flavour, <br />
+        That bought ones haven’t got.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      July brings the Summer, <br />
-      Time for holidays and fun; <br />
-      Strawberries are in season, <br />
-      A real treat for everyone.
-    </p>
+      <p>
+        But in this modern way of life, <br />
+        Things all depend on speed; <br />
+        Grown in fancy containers, <br />
+        Where you never see a weed.
+      </p>
+    </div>
 
-    <p>
-      Growing in the garden, <br />
-      And eaten on the spot; <br />
-      Have a delicious flavour, <br />
-      That bought ones haven’t got.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2019-july/image-1.png" alt="" />
+      <img src="/poems/2019-july/image-3.png" alt="" />
+      <img src="/poems/2019-july/image-5.png" alt="" />
+    </div>
 
-    <p>
-      But in this modern way of life, <br />
-      Things all depend on speed; <br />
-      Grown in fancy containers, <br />
-      Where you never see a weed.
-    </p>
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        But what we lose in flavour, <br />
+        We gain with more leisure time; <br />
+        And things are a lot better, <br />
+        Than in those days lang syne.
+      </p>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2019-july/image-2.png" alt="" />
-    <img src="/poems/2019-july/image-3.png" alt="" />
-    <img src="/poems/2019-july/image-4.png" alt="" />
-  </div>
+      <p>
+        So put on your glad rags, <br />
+        And live life to the full; <br />
+        It’s time to renew your youth, <br />
+        When the kids are out from school.
+      </p>
+    </div>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      But what we lose in flavour, <br />
-      We gain with more leisure time; <br />
-      And things are a lot better, <br />
-      Than in those days lang syne.
-    </p>
-
-    <p>
-      So put on your glad rags, <br />
-      And live life to the full; <br />
-      It’s time to renew your youth, <br />
-      When the kids are out from school.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2019-july/image-5.png" alt="" />
-    <img src="/poems/2019-july/image-7.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2019-july/image-6.png" alt="" />
+      <img src="/poems/2019-july/image-7.png" alt="" />
+      <img src="/poems/2019-july/image-8.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #dae3f3;
+    --title-color: #ff0000;
+    --img-color: transparent;
+  }
+</style>

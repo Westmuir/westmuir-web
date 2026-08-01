@@ -1,70 +1,79 @@
 ---
 layout: "base.webc"
 title: "2019 April"
-poemTitle: "2019 April"
+id: "201904"
+poemTitle: "April’s Charm"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2019-april/image-0.png" alt="" />
+      <img src="/poems/2019-april/image-8.png" alt="" />
+      <img src="/poems/2019-april/image-2.png" alt="" />
+    </div>
 
-  <!-- Header Section -->
-  <img src="/poems/2019-april/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2019-april/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        The daffodils are blooming freely, <br />
+        You’ll find them everywhere; <br />
+        And other buds are opening up’ <br />
+        As perfume fills the air.
+      </p>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2019-april/image-6.png" alt="" />
-    <img src="/poems/2019-april/image-8.png" alt="" />
-  </div>
+      <p>
+        The daylight hours are longer, <br />
+        And as you find the temperature rise; <br />
+        The speed the grass is growing, <br />
+        Could take you by surprise.
+      </p>
+    </div>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      The daffodils are blooming freely, <br />
-      You’ll find them everywhere; <br />
-      And other buds are opening up’ <br />
-      As perfume fills the air.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2019-april/image-1.png" alt="" />
+      <img src="/poems/2019-april/image-5.png" alt="" />
+      <img src="/poems/2019-april/image-4.png" alt="" />
+    </div>
 
-    <p>
-      The daylight hours are longer, <br />
-      And as you find the temperature rise; <br />
-      The speed the grass is growing, <br />
-      Could take you by surprise.
-    </p>
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Yet April is a happy month, <br />
+        Birds fill the air with song; <br />
+        Courting freely with their mates, <br />
+        They sing the whole day long.
+      </p>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2019-april/image-2.png" alt="" />
-    <img src="/poems/2019-april/image-3.png" alt="" />
-    <img src="/poems/2019-april/image-4.png" alt="" />
-  </div>
+      <p>
+        Yes! April is truly magical, <br />
+        A special gift that’s given free; <br />
+        With love from our maker, <br />
+        Every spring for you and me.
+      </p>
+    </div>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Yet April is a happy month, <br />
-      Birds fill the air with song; <br />
-      Courting freely with their mates, <br />
-      They sing the whole day long.
-    </p>
-
-    <p>
-      Yes! April is truly magical, <br />
-      A special gift that’s given free; <br />
-      With love from our maker, <br />
-      Every spring for you and me.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2019-april/image-5.png" alt="" />
-    <img src="/poems/2019-april/image-7.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2019-april/image-3.png" alt="" />
+      <img src="/poems/2019-april/image-7.png" alt="" />
+      <img src="/poems/2019-april/image-6.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #c5e0b4;
+    --title-color: #538135;
+    --img-color: transparent;
+  }
+</style>
