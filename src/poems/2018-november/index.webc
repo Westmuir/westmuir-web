@@ -1,66 +1,79 @@
 ---
 layout: "base.webc"
 title: "2018 November"
-poemTitle: "2018 November"
+id: "201811"
+poemTitle: "I Greet the Dawn"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
 
-  <!-- Header Section -->
-  <img src="/poems/2018-november/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2018-november/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <!-- No side images -->
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <!-- No side images -->
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        I Greet the Dawn <br />
+        I greet the dawn – a streak of light, <br />
+        Waking from slumbers of the night; <br />
+      </p>
+      <p>
+        To see unfold a new born day,<br />
+        That is mine to use now as I may; <br />
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      I Greet the Dawn <br />
-      I greet the dawn – a streak of light, <br />
-      Waking from slumbers of the night; <br />
-      To see unfold a new born day,
-    </p>
+      <p>
+        Will my chosen path be right, <br />
+        For it is still veiled from sight; <br />
+      </p>
+    </div>
 
-    <p>
-      That is mine to use now as I may; <br />
-      Will my chosen path be right, <br />
-      For it is still veiled from sight; <br />
-      Even if some unknown plight,
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <div></div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <!-- No center images -->
-  </div>
+      <img src="/poems/2018-november/image-1.png" alt="" slot="header-tr" />
+      <div></div>
+    </div>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Put plans in disarray, <br />
-      I greet the Dawn. <br />
-      Gallantly life’s trials I’ll fight, <br />
-      And do my best to get it right;
-    </p>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Even if some unknown plight,<br />
+        Put plans in disarray, <br />
+        I greet the Dawn. <br />
+      </p>
+      <p>
+        Gallantly life’s trials I’ll fight, <br />
+        And do my best to get it right;
+      </p>
 
-    <p>
-      For tomorrow is another day, <br />
-      When everything may go my way; <br />
-      Rising refreshed and with Delight, <br />
-      I greet the Dawn.
-    </p>
-  </div>
+      <p>
+        For tomorrow is another day, <br />
+        When everything may go my way; <br />
+      </p>
+      <p>
+        Rising refreshed and with Delight, <br />
+        I greet the Dawn.
+      </p>
+    </div>
 
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <!-- No side images -->
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <!-- No side images -->
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #ff972a;
+    --title-color: #000;
+    --img-color: transparent;
+  }
+</style>

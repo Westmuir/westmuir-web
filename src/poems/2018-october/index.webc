@@ -1,93 +1,162 @@
 ---
 layout: "base.webc"
 title: "2018 October"
-poemTitle: "2018 October"
+id: "201810"
+poemTitle: "Farming Matters"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid class="wide-text" :title="poemTitle" :author="author" :theme="bgTheme">
+    <!-- Header Section -->
+    <div slot="header-tl">
+      <img src="/poems/2018-october/image-1.png" alt="" " />
 
-  <!-- Header Section -->
-  <img src="/poems/2018-october/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2018-october/image-1.png" alt="" slot="header-tr" />
+      <svg width="158.33" height="79.333" version="1.1" viewBox="0 0 158.33 79.333" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clipPath143">
+      <path d="m-8.6 36.4h111.02v-44.8h-111.02z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath144">
+      <path d="m-19.4 24.6h111.02v-44.8h-111.02z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath145">
+      <path d="m-22.2 12.8h111.02v-44.8h-111.02z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath146">
+      <path d="m-14.6 1h111.02v-44.8h-111.02z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath147">
+      <path d="m-96.23 1h111.02v-44.8h-111.02z" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g transform="translate(-257.33 -48.333)">
+    <path transform="matrix(1.3333 0 0 -1.3333 0 793.87)" d="m193.5 548.9c0 5.38 4.37 9.75 9.75 9.75h98.25c5.38 0 9.75-4.37 9.75-9.75v-39c0-5.38-4.37-9.75-9.75-9.75h-98.25c-5.38 0-9.75 4.37-9.75 9.75v14.63z" fill="#f4b183" fill-rule="evenodd" stroke="#2f528f" stroke-miterlimit="10"/>
+    <text transform="matrix(1.3333 0 0 1.3333 273.93 69.36)" clip-path="url(#clipPath143)" xml:space="preserve"><tspan x="0" y="0" dx="0 0.079999998 0 -0.079999998 -0.096000001 0 0.032000002 0.079999998 -0.096000001 -0.032000002 -0.048 0 0 -0.079999998 0.064000003 -0.096000001 0.056000002 -0.056000002 0.079999998" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">The hot summer and </tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 288.33 85.093)" clip-path="url(#clipPath144)" xml:space="preserve"><tspan x="0" y="0" dx="0 -0.048 0.056000002 0.024 0 -0.079999998 0.032000002 -0.088 -0.096000001 0.064000003 0.056000002 0.048 -0.056000002 -0.096000001 0 0.056000002 -0.032000002" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">lack of rain has </tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 292.07 100.83)" clip-path="url(#clipPath145)" xml:space="preserve"><tspan x="0" y="0" dx="0 0 0.056000002 0.079999998 -0.079999998 -0.096000001 -0.088 0.056000002 0.064000003 0 0.048 -0.056000002 0.079999998" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">made farming </tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 281.93 116.56)" clip-path="url(#clipPath146)" xml:space="preserve"><tspan x="0" y="0" dx="0 0.079999998 0.048 -0.088 -0.088 0.048 0.024 -0.048 -0.048 0.079999998 -0.096000001 0.079999998 0 0.048 -0.032000002 -0.096000001 0 -0.079999998 0.056000002 0.064000003" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">difficult this year!</tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 390.77 116.56)" clip-path="url(#clipPath147)" xml:space="preserve"><tspan x="0" y="0" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic"> </tspan></text>
+  </g>
+</svg>
+    </div>
+    <div slot="header-tr">
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2018-october/image-6.png" alt="" />
-    <img src="/poems/2018-october/image-8.png" alt="" />
-    <img src="/poems/2018-october/image-10.png" alt="" />
-    <img src="/poems/2018-october/image-12.png" alt="" />
-    <img src="/poems/2018-october/image-14.png" alt="" />
-    <img src="/poems/2018-october/image-16.png" alt="" />
-  </div>
+      <svg width="158.33" height="79.333" version="1.1" viewBox="0 0 158.33 79.333" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clipPath150">
+      <path d="m-11.41 36.21h111.03v-44.6h-111.03z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath151">
+      <path d="m-17 24.41h111.03v-44.6h-111.03z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath152">
+      <path d="m-10 12.81h111.03v-44.6h-111.03z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath153">
+      <path d="m-22.41 12.81h111.03v-44.6h-111.03z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath154">
+      <path d="m-34.21 12.81h111.03v-44.6h-111.03z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath155">
+      <path d="m-22.61 1.01h111.03v-44.6h-111.03z" clip-rule="evenodd"/>
+    </clipPath>
+    <clipPath id="clipPath156">
+      <path d="m-88.23 1.01h111.03v-44.6h-111.03z" clip-rule="evenodd"/>
+    </clipPath>
+  </defs>
+  <g transform="translate(-713.33 -47.333)">
+    <g transform="matrix(.99156 0 0 .99156 7.3608 1.0696)">
+      <path transform="matrix(1.3333 0 0 -1.3333 0 793.87)" d="m535.5 549.65c0 5.38 4.37 9.75 9.75 9.75h98.25c5.38 0 9.75-4.37 9.75-9.75v-39c0-5.38-4.37-9.75-9.75-9.75h-98.25c-5.38 0-9.75 4.37-9.75 9.75v14.63z" fill="#f4b183" fill-rule="evenodd" stroke="#2f528f" stroke-miterlimit="10"/>
+    </g>
+    <text transform="matrix(1.3333 0 0 1.3333 733.77 68.56)" clip-path="url(#clipPath150)" xml:space="preserve"><tspan x="0" y="0" dx="0 -0.064000003 -0.048 0.048 0 0.056000002 0.079999998 -0.079999998 -0.096000001 0.024 0 0.056000002 -0.056000002 0.079999998 -0.079999998 -0.032000002 -0.096000001 0.048 -0.056000002" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">Climate changes in </tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 741.23 84.293)" clip-path="url(#clipPath151)" xml:space="preserve"><tspan x="0" y="0" dx="0 0.079999998 0 -0.079999998 -0.096000001 -0.048 0.056000002 -0.032000002 0.079999998 -0.096000001 0.079999998 -0.079999998 -0.056000002 -0.096000001 0.192 -0.079999998 0.056000002 0.064000003 -0.032000002" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">the last ten years </tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 731.89 99.76)" clip-path="url(#clipPath152)" xml:space="preserve"><tspan x="0" y="0" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">ha</tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 748.44 99.76)" clip-path="url(#clipPath153)" xml:space="preserve"><tspan x="0" y="0" dx="0 0.079999998 -0.079999998" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">ve </tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 764.17 99.76)" clip-path="url(#clipPath154)" xml:space="preserve"><tspan x="0" y="0" dx="0 0 0.056000002 0.079999998 -0.079999998 -0.096000001 -0.088 0.056000002 0.064000003 0 0.048 -0.056000002 0.079999998" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">made farming </tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 748.71 115.49)" clip-path="url(#clipPath155)" xml:space="preserve"><tspan x="0" y="0" dx="0 0 0.032000002 0.064000003 -0.079999998 -0.096000001 0.079999998 0.048 -0.088 -0.088 0.048 0.024 -0.048 -0.048 0.079999998" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic">more difficult!</tspan></text>
+    <text transform="matrix(1.3333 0 0 1.3333 836.2 115.49)" clip-path="url(#clipPath156)" xml:space="preserve"><tspan x="0" y="0" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic"> </tspan></text>
+  </g>
+</svg>
+      <img src="/poems/2018-october/image-7.png" alt=""  />
+    </div>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Farming is so healthy and rewarding, <br />
-      For as the soil you till; <br />
-      You are living close to nature, <br />
-      As you perform our Saviour’s will.
-    </p>
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2018-october/image-8.png" alt="" />
+      <img src="/poems/2018-october/image-17.png" alt="" />
+      <img src="/poems/2018-october/image-3.png" alt="" />
+    </div>
 
-    <p>
-      We’ve been put upon this planet, <br />
-      To cultivate the land; <br />
-      Sowing, tending, harvesting, <br />
-      Guided by our Maker’s hand.
-    </p>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Farming is so healthy and rewarding, <br />
+        For as the soil you till; <br />
+        You are living close to nature, <br />
+        As you perform our Saviour’s will.
+      </p>
 
-    <p>
-      He who guides the growing force, <br />
-      The sunshine and the rain; <br />
-      Filling streams with water, <br />
-      And swelling ears of grain.
-    </p>
-  </div>
+      <p>
+        We’ve been put upon this planet, <br />
+        To cultivate the land; <br />
+        Sowing, tending, harvesting, <br />
+      </p>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2018-october/image-2.png" alt="" />
-    <img src="/poems/2018-october/image-3.png" alt="" />
-    <img src="/poems/2018-october/image-4.png" alt="" />
-  </div>
+      <p>
+        He who guides the growing force, <br />
+        The sunshine and the rain; <br />
+        Filling streams with water, <br />
+        And swelling ears of grain.
+      </p>
+    </div>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Ripening fruit and vegetables, <br />
-      Grown for us all to eat; <br />
-      The grass for sheep and cattle, <br />
-      A source of milk and meat.
-    </p>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2018-october/image-10.png" alt="" />
+      <img src="/poems/2018-october/image-5.png" alt="" />
+      <img src="/poems/2018-october/image-12.png" alt="" />
+    </div>
 
-    <p>
-      Wool for coats and blankets, <br />
-      To keep out the winter chill; <br />
-      If we work with our Provider, <br />
-      He will all our needs fulfil.
-    </p>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Ripening fruit and vegetables, <br />
+        Grown for us all to eat; <br />
+        The grass for sheep and cattle, <br />
+        A source of milk and meat.
+      </p>
 
-    <p>
-      Yes! Farming families down the years, <br />
-      Have been our Earth’s mainstay; <br />
-      So we thank our Lord for the Harvest, <br />
-      In our heartfelt prayers today.
-    </p>
-  </div>
+      <p>
+        Wool for coats and blankets, <br />
+        To keep out the winter chill; <br />
+        If we work with our Provider, <br />
+        He will all our needs fulfil.
+      </p>
 
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2018-october/image-5.png" alt="" />
-    <img src="/poems/2018-october/image-7.png" alt="" />
-    <img src="/poems/2018-october/image-9.png" alt="" />
-    <img src="/poems/2018-october/image-11.png" alt="" />
-    <img src="/poems/2018-october/image-13.png" alt="" />
-    <img src="/poems/2018-october/image-15.png" alt="" />
-    <img src="/poems/2018-october/image-17.png" alt="" />
-  </div>
+      <p>
+        Yes! Farming families down the years, <br />
+        Have been our Earth’s mainstay; <br />
+        So we thank our Lord for the Harvest, <br />
+        In our heartfelt prayers today.
+      </p>
+    </div>
 
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2018-october/image-13.png" alt="" />
+      <img src="/poems/2018-october/image-14.png" alt="" />
+      <img src="/poems/2018-october/image-16.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fff2cc;
+    --title-color: #833c0b;
+    --stanza-color: #833c0b;
+    --img-color: transparent;
+  }
+</style>
