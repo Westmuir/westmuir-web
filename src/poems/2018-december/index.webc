@@ -1,94 +1,106 @@
 ---
 layout: "base.webc"
 title: "2018 December"
-poemTitle: "2018 December"
+id: "201812"
+poemTitle: "Christmas 2018"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/2018-december/image-0.png" alt="" slot="header-tl" />
+    <img src="/poems/2018-december/image-2.png" alt="" slot="header-tr" />
 
-  <!-- Header Section -->
-  <img src="/poems/2018-december/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2018-december/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2018-december/image-3.png" alt="" />
+      <img src="/poems/2018-december/image-1.png" alt="" />
+      <img src="/poems/2018-december/image-6.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2018-december/image-6.png" alt="" />
-    <img src="/poems/2018-december/image-8.png" alt="" />
-    <img src="/poems/2018-december/image-10.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Christmas is fast approaching, <br />
+        But the outlook is bleak this year; <br />
+        So many Firms going to the wall, <br />
+        There is little left to cheer.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Christmas is fast approaching, <br />
-      But the outlook is bleak this year; <br />
-      So many Firms going to the wall, <br />
-      There is little left to cheer.
-    </p>
+      <p>
+        In this modern way of life, <br />
+        When there’s a drop in cash; <br />
+        How can they celebrate Christmas, <br />
+        When they cannot make a splash?
+      </p>
 
-    <p>
-      In this modern way of life, <br />
-      When there’s a drop in cash; <br />
-      How can they celebrate Christmas, <br />
-      When they cannot make a splash?
-    </p>
+      <p>
+        Well! Forget about money for a while, <br />
+        We are celebrating Our Saviour’s Birth; <br />
+        Born among the animals, in a stable, <br />
+        There was no place there… for mirth.
+      </p>
 
-    <p>
-      Well! Forget about money for a while, <br />
-      We are celebrating Our Saviour’s Birth; <br />
-      Born among the animals, in a stable, <br />
-      There was no place there… for mirth.
-    </p>
+      <p>
+        Years ago life was so different, <br />
+        Folk toiled on throughout the year; <br />
+        Storing special bits and bobs, <br />
+        As Christmas was drawing near.
+      </p>
+    </div>
 
-    <p>
-      Years ago life was so different, <br />
-      Folk toiled on throughout the year; <br />
-      Storing special bits and bobs, <br />
-      As Christmas was drawing near.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2018-december/image-4.png" alt="" />
+      <img src="/poems/2018-december/image-5.png" alt="" />
+      <img src="/poems/2018-december/image-7.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2018-december/image-2.png" alt="" />
-    <img src="/poems/2018-december/image-3.png" alt="" />
-    <img src="/poems/2018-december/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        The housewife would boil a dumpling, <br />
+        Father would fatten a hen or goose; <br />
+        Ready to cook for Christmas Day, <br />
+        When the family held ‘open hoose’.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      The housewife would boil a dumpling, <br />
-      Father would fatten a hen or goose; <br />
-      Ready to cook for Christmas Day, <br />
-      When the family held ‘open hoose’.
-    </p>
+      <p>
+        All age groups came together, <br />
+        To enjoy the home cooked fare; <br />
+        Then played party games together, <br />
+        That all age groups could share.
+      </p>
 
-    <p>
-      All age groups came together, <br />
-      To enjoy the home cooked fare; <br />
-      Then played party games together, <br />
-      That all age groups could share.
-    </p>
+      <p>
+        Stacks of money won’t make you happy, <br />
+        But having fun together will live on; <br />
+        Leaving a lot of happy memories, <br />
+        Long after Christmas day is gone.
+      </p>
+    </div>
 
-    <p>
-      Stacks of money won’t make you happy, <br />
-      But having fun together will live on; <br />
-      Leaving a lot of happy memories, <br />
-      Long after Christmas day is gone.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2018-december/image-5.png" alt="" />
-    <img src="/poems/2018-december/image-7.png" alt="" />
-    <img src="/poems/2018-december/image-9.png" alt="" />
-    <img src="/poems/2018-december/image-11.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2018-december/image-8.png" alt="" />
+      <img src="/poems/2018-december/image-11.png" alt="" />
+      <img src="/poems/2018-december/image-10.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #f9cbad;
+    --title-color: #ff0000;
+    --stanza-color: #ff0000;
+    --img-color: transparent;
+    --card-border-color: #ff0000;
+  }
+</style>
