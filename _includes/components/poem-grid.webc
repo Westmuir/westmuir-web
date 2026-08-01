@@ -187,6 +187,13 @@
     margin-inline: auto;
     order: -1; /* Flips visual execution stacking order cleanly if needed */
   }
+  .header-left-images div svg {
+    margin-inline: auto;
+  }
+  .header-right-images div svg {
+    margin-inline: auto;
+    order: -1;
+  }
 
   /* IMAGE LIMITS */
   .row-header img,
