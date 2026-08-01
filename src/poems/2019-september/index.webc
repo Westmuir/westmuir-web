@@ -1,78 +1,90 @@
 ---
 layout: "base.webc"
 title: "2019 September"
-poemTitle: "2019 September"
+id: "201909"
+poemTitle: "September … A Special
+Month"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/2019-september/image-0.png" alt="" slot="header-tl" />
 
-  <!-- Header Section -->
-  <img src="/poems/2019-september/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2019-september/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2019-september/image-1.png" alt="" />
+      <img src="/poems/2019-september/image-9.png" alt="" />
+      <img src="/poems/2019-september/image-5.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2019-september/image-6.png" alt="" />
-    <img src="/poems/2019-september/image-8.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        September to me is special, <br />
+        With its soft warm sunny days; <br />
+        The searing heat of summer‘s gone, <br />
+        This is worthy of our praise.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      September to me is special, <br />
-      With its soft warm sunny days; <br />
-      The searing heat of summer‘s gone, <br />
-      This is worthy of our praise.
-    </p>
+      <p>
+        Just slow your pace a little, <br />
+        Take time to enjoy the view; <br />
+        We weren’t meant to rush through life, <br />
+        So make time just for you.
+      </p>
 
-    <p>
-      Just slow your pace a little, <br />
-      Take time to enjoy the view; <br />
-      We weren’t meant to rush through life, <br />
-      So make time just for you.
-    </p>
+      <p>
+        Go do what makes you happy, <br />
+        It doesn’t need to cost a bean; <br />
+        For simple pleasures are the best, <br />
+        And they stay evergreen.
+      </p>
+    </div>
 
-    <p>
-      Go do what makes you happy, <br />
-      It doesn’t need to cost a bean; <br />
-      For simple pleasures are the best, <br />
-      And they stay evergreen.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2019-september/image-2.png" alt="" />
+      <img src="/poems/2019-september/image-3.png" alt="" />
+      <img src="/poems/2019-september/image-6.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2019-september/image-2.png" alt="" />
-    <img src="/poems/2019-september/image-3.png" alt="" />
-    <img src="/poems/2019-september/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        There’s no rush and no packing, <br />
+        Or struggling with your gear; <br />
+        Meals are easy, within reach, <br />
+        And all you need is here.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      There’s no rush and no packing, <br />
-      Or struggling with your gear; <br />
-      Meals are easy, within reach, <br />
-      And all you need is here.
-    </p>
+      <p>
+        So this month take a holiday, <br />
+        Just go outside your door; <br />
+        And let September cast her spell, <br />
+        You have no need for more.
+      </p>
+    </div>
 
-    <p>
-      So this month take a holiday, <br />
-      Just go outside your door; <br />
-      And let September cast her spell, <br />
-      You have no need for more.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2019-september/image-5.png" alt="" />
-    <img src="/poems/2019-september/image-7.png" alt="" />
-    <img src="/poems/2019-september/image-9.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2019-september/image-8.png" alt="" />
+      <img src="/poems/2019-september/image-7.png" alt="" />
+      <img src="/poems/2019-september/image-4.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fff2cc;
+    --title-color: #cc6600;
+    --img-color: transparent;
+  }
+</style>
