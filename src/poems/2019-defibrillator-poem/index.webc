@@ -2,30 +2,30 @@
 layout: "base.webc"
 title: "2019 Defibrillator Poem"
 id: "20190401"
-poemTitle: "2019 Defibrillator Poem"
+poemTitle: "Westmuir’s Defibrillator"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
 
 <div class="full-width">
-  <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
     <!-- Header Section -->
     <img
-      src="/poems/2019-defibrillator-poem/image-0.png"
+      src="/poems/2019-defibrillator-poem/image-8.png"
       alt=""
       slot="header-tl"
-    />
-    <img
-      src="/poems/2019-defibrillator-poem/image-1.png"
-      alt=""
-      slot="header-tr"
     />
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2019-defibrillator-poem/image-6.png" alt="" />
-      <img src="/poems/2019-defibrillator-poem/image-8.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-9.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-4.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-3.png" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -54,9 +54,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2019-defibrillator-poem/image-2.png" alt="" />
-      <img src="/poems/2019-defibrillator-poem/image-3.png" alt="" />
-      <img src="/poems/2019-defibrillator-poem/image-4.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-7.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-0.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-1.png" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -79,8 +79,16 @@ endOfYear: false
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
       <img src="/poems/2019-defibrillator-poem/image-5.png" alt="" />
-      <img src="/poems/2019-defibrillator-poem/image-7.png" alt="" />
-      <img src="/poems/2019-defibrillator-poem/image-9.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-6.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-2.png" alt="" />
     </div>
   </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fbe5d6;
+    --title-color: #ff0000;
+    --card-border-color: #ff0000;
+    --img-color: transparent;
+  }
+</style>
