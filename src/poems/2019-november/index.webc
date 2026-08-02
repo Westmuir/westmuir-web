@@ -1,89 +1,115 @@
 ---
 layout: "base.webc"
 title: "2019 November"
-poemTitle: "2019 November"
+id: "201911"
+poemTitle: "Reedie’s Tatties 1971"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text small"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img src="/poems/2019-november/image-2.png" alt="" slot="header-tl" />
 
-  <!-- Header Section -->
-  <img src="/poems/2019-november/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2019-november/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2019-november/image-1.png" alt="" />
+      <img src="/poems/2019-november/image-4.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2019-november/image-6.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        Tattie time is roon again , auld claes get lookit oot, <br />
+        So aince again it gets the air – my yellow trouser suit. <br />
+      </p>
+      <p>
+        The sun for us it fairly shone, I got my pinny aff; <br />
+        But my jacket it flew ower my heid , and Ena had tae laugh.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      Tattie time is roon again , auld claes get lookit oot, <br />
-      So aince again it gets the air – my yellow trouser suit. <br />
-      The sun for us it fairly shone, I got my pinny aff; <br />
-      But my jacket it flew ower my heid , and Ena had tae laugh.
-    </p>
+      <p>
+        My yellow bum stuck in the air, I very nearly drappit, <br />
+        Being ane o’ the modest kind, I like my backend happit. <br />
+      </p>
+      <p>
+        Yet the lads micht fancy me , the thought warmed my heart; <br />
+        But ae look gave them the jaundice, a’ the lads upon the cart.
+      </p>
 
-    <p>
-      My yellow bum stuck in the air, I very nearly drappit, <br />
-      Being ane o’ the modest kind, I like my backend happit. <br />
-      Yet the lads micht fancy me , the thought warmed my heart; <br />
-      But ae look gave them the jaundice, a’ the lads upon the cart.
-    </p>
+      <p>
+        I dinna really ken the lads, that’s throwin creels this year; <br />
+        They are a lot o’ swinginn guys wi’ a’ their grand mod gear. <br />
+      </p>
+      <p>
+        In pink cords and fancy shirts, hair curly, straight and lang; <br />
+        Reedie fair turns the lassies on, we sic a glamourous gang.
+      </p>
 
-    <p>
-      I dinna really ken the lads, that’s throwin creels this year; <br />
-      They are a lot o’ swinginn guys wi’ a’ their grand mod gear. <br />
-      In pink cords and fancy shirts, hair curly, straight and lang; <br />
-      Reedie fair turns the lassies on, we sic a glamourous gang.
-    </p>
+      <p>
+        But there’s a lad that I ken fine, my heart throb Willie Hume; <br />
+        And every time he smiles to me, my heart sings a love tune. <br />
+      </p>
+    </div>
 
-    <p>
-      But there’s a lad that I ken fine, my heart throb Willie Hume; <br />
-      And every time he smiles to me, my heart sings a love tune. <br />
-      Noo Harry ... he likes to grab a leg, ... it is a great temptation; <br />
-      A lassie in a mini skirt could be his ruination.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2019-november/image-6.png" alt="" />
+      <img src="/poems/2019-november/image-0.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2019-november/image-2.png" alt="" />
-    <img src="/poems/2019-november/image-3.png" alt="" />
-    <img src="/poems/2019-november/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        Noo Harry ... he likes to grab a leg, ... it is a great temptation;
+        <br />
+        A lassie in a mini skirt could be his ruination.
+      </p>
+      <p>
+        Then there’s Bob ... a cheery chap, though you wouldna’ ca’ him <br />
+        bonny; <br />
+      </p>
+      <p>
+        He wears his bonnet tae the side, just like an ‘onion Johnie.’ <br />
+        In a’ the years I hae come here, I’ve never seen the like;
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      Then there’s Bob ... a cheery chap, though you wouldna’ ca’ him <br />
-      bonny; <br />
-      He wears his bonnet tae the side, just like an ‘onion Johnie.’ <br />
-      In a’ the years I hae come here, I’ve never seen the like;
-    </p>
+      <p>
+        For maist days its been warm, and the sun for us would shine, <br />
+        Makin it a pleasure to work here this tattie time. <br />
+      </p>
+      <p>
+        So here’s ‘Guid Health’ to Fermer Bill, and ‘Guid Luck’ to the <br />
+        Bairn;
+      </p>
 
-    <p>
-      For maist days its been warm, and the sun for us would shine, <br />
-      Makin it a pleasure to work here this tattie time. <br />
-      So here’s ‘Guid Health’ to Fermer Bill, and ‘Guid Luck’ to the <br />
-      Bairn;
-    </p>
+      <p>
+        Hoo I will miss your jolly crew and wonder hoo you’re farin. <br />
+        But though this season’s near an end if I am spared and weel, <br />
+      </p>
+      <p>
+        Next year will see me back again pickin tatties on my creel. <br />
+        Reedie’s Tatties 1971
+      </p>
+    </div>
 
-    <p>
-      Hoo I will miss your jolly crew and wonder hoo you’re farin. <br />
-      But though this season’s near an end if I am spared and weel, <br />
-      Next year will see me back again pickin tatties on my creel. <br />
-      Reedie’s Tatties 1971
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2019-november/image-5.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2019-november/image-3.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fbe5d6;
+    --title-color: #000;
+    --card-border-color: #c55a11;
+    --img-color: transparent;
+  }
+</style>

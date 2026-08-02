@@ -1,78 +1,94 @@
 ---
 layout: "base.webc"
 title: "2019 Defibrillator Poem"
-poemTitle: "2019 Defibrillator Poem"
+id: "20190401"
+poemTitle: "Westmuir’s Defibrillator"
 author: "Eila Webster"
-bgTheme: "antiquewhite"
 endOfYear: false
 ---
+
 <div class="full-width">
-<poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
+  <poem-grid
+    class="wide-text"
+    :title="poemTitle"
+    :author="author"
+    :theme="bgTheme"
+  >
+    <!-- Header Section -->
+    <img
+      src="/poems/2019-defibrillator-poem/image-8.png"
+      alt=""
+      slot="header-tl"
+    />
 
-  <!-- Header Section -->
-  <img src="/poems/2019-defibrillator-poem/image-0.png" alt="" slot="header-tl" />
-  <img src="/poems/2019-defibrillator-poem/image-1.png" alt="" slot="header-tr" />
+    <!-- Column 1 Images (15%) -->
+    <div slot="col-1-images">
+      <img src="/poems/2019-defibrillator-poem/image-9.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-4.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-3.png" alt="" />
+    </div>
 
-  <!-- Column 1 Images (15%) -->
-  <div slot="col-1-images">
-    <img src="/poems/2019-defibrillator-poem/image-6.png" alt="" />
-    <img src="/poems/2019-defibrillator-poem/image-8.png" alt="" />
-  </div>
+    <!-- Column 2 Text -->
+    <div slot="col-2-text">
+      <p>
+        When Westmuir Defibrillator Group joined up, <br />
+        With the Community Heartbeat Trust ; <br />
+        In the old phone box at the Shoppie, <br />
+        To give your support now is a MUST.
+      </p>
 
-  <!-- Column 2 Text -->
-  <div slot="col-2-text">
-    <p>
-      When Westmuir Defibrillator Group joined up, <br />
-      With the Community Heartbeat Trust ; <br />
-      In the old phone box at the Shoppie, <br />
-      To give your support now is a MUST.
-    </p>
+      <p>
+        Getting it up and running, <br />
+        Would be a great day for us all; <br />
+        If everyone gave their very best, <br />
+        Whether it be large or small.
+      </p>
 
-    <p>
-      Getting it up and running, <br />
-      Would be a great day for us all; <br />
-      If everyone gave their very best, <br />
-      Whether it be large or small.
-    </p>
+      <p>
+        Financial help is still needed, <br />
+        And gifts of kind are welcome too; <br />
+        Ideas to brighten up the site, <br />
+        To make it fresh and new.
+      </p>
+    </div>
 
-    <p>
-      Financial help is still needed, <br />
-      And gifts of kind are welcome too; <br />
-      Ideas to brighten up the site, <br />
-      To make it fresh and new.
-    </p>
-  </div>
+    <!-- Column 3 Middle Images -->
+    <div slot="col-3-images">
+      <img src="/poems/2019-defibrillator-poem/image-7.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-0.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-1.png" alt="" />
+    </div>
 
-  <!-- Column 3 Middle Images -->
-  <div slot="col-3-images">
-    <img src="/poems/2019-defibrillator-poem/image-2.png" alt="" />
-    <img src="/poems/2019-defibrillator-poem/image-3.png" alt="" />
-    <img src="/poems/2019-defibrillator-poem/image-4.png" alt="" />
-  </div>
+    <!-- Column 4 Text -->
+    <div slot="col-4-text">
+      <p>
+        No longer a sleepy village, <br />
+        We could save a life you see; <br />
+        Having the equipment here, <br />
+        A great achievement you’ll agree.
+      </p>
 
-  <!-- Column 4 Text -->
-  <div slot="col-4-text">
-    <p>
-      No longer a sleepy village, <br />
-      We could save a life you see; <br />
-      Having the equipment here, <br />
-      A great achievement you’ll agree.
-    </p>
+      <p>
+        So throw your whole self in it, <br />
+        Work on it with a smile; <br />
+        I know you won’t regret it, <br />
+        When you go that extra mile.
+      </p>
+    </div>
 
-    <p>
-      So throw your whole self in it, <br />
-      Work on it with a smile; <br />
-      I know you won’t regret it, <br />
-      When you go that extra mile.
-    </p>
-  </div>
-
-  <!-- Column 5 Images (15%) -->
-  <div slot="col-5-images">
-    <img src="/poems/2019-defibrillator-poem/image-5.png" alt="" />
-    <img src="/poems/2019-defibrillator-poem/image-7.png" alt="" />
-    <img src="/poems/2019-defibrillator-poem/image-9.png" alt="" />
-  </div>
-
-</poem-grid>
+    <!-- Column 5 Images (15%) -->
+    <div slot="col-5-images">
+      <img src="/poems/2019-defibrillator-poem/image-5.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-6.png" alt="" />
+      <img src="/poems/2019-defibrillator-poem/image-2.png" alt="" />
+    </div>
+  </poem-grid>
 </div>
+<style>
+  :where(poem-grid) {
+    --bg-color: #fbe5d6;
+    --title-color: #ff0000;
+    --card-border-color: #ff0000;
+    --img-color: transparent;
+  }
+</style>
