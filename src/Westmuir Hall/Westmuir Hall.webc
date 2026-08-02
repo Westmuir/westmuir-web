@@ -8,10 +8,10 @@ headerAlt: "westmuir village"
 ---
 
 <div class="content-grid flow home-container">
-  <section-cards
-    webc:nokeep
-    :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []"
-  ></section-cards>
+  <!-- <section-cards -->
+  <!--   webc:nokeep -->
+  <!--   :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []" -->
+  <!-- ></section-cards> -->
 
   <section class="full-width">
     <div class="content">

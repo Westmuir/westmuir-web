@@ -11,7 +11,8 @@
   },
   {
     "url": "/Westmuir Hall/",
-    "label": "Village Hall"
+    "label": "Village Hall",
+    "includes": true
   },
   {
     "url": "/wcdt/",
@@ -23,7 +24,7 @@
     "label": "Resilience"
   },
   {
-    "url": "/volunteers/",
+    "url": "/about/volunteers/",
     "label": "Volunteer"
   },
   {

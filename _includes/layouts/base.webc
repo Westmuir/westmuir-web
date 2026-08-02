@@ -68,10 +68,10 @@
 
       <!-- 2. The layout drops the breadcrumbs automatically right below it,
          unless it's the home page or a 'noBreadcrumbs' flag is explicitly set -->
-      <site-breadcrumbs
-        webc:if="$data.page.url !== '/' && !$data.noBreadcrumbs"
-      >
-      </site-breadcrumbs>
+      <!-- <site-breadcrumbs -->
+      <!--   webc:if="$data.page.url !== '/' && !$data.noBreadcrumbs" -->
+      <!-- > -->
+      <!-- </site-breadcrumbs> -->
     </header>
     <main class="page-layout">
       <template webc:nokeep @raw="content"></template>

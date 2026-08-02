@@ -1,7 +1,7 @@
 <div id="nav-links-box" class="nav-links">
-  <!--- Loop over the global navigation JSON array --->
+  <!--- Dynamically select the list data array based on the passed tier prop --->
   <a
-    webc:for="item of $data.navigation"
+    webc:for="item of (tier === 'context' ? $data.contextNavigation : $data.navigation)"
     :href="item.url"
     :class="item.exact && $data.page.url === item.url ? 'active' :
       item.includes && $data.page.url.includes(item.url) ? 'active' :

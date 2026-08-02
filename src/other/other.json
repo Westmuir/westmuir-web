@@ -1,0 +1,9 @@
+{
+  "contextNavigation": [
+    {
+      "label": "Poetry",
+      "url": "/other/poetry/",
+      "exact": true
+    }
+  ]
+}
