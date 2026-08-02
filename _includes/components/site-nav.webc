@@ -102,8 +102,9 @@
   /* --- TIER 2: CONTEXT LANE VISUAL WEIGHTS --- */
   .context-lane {
     justify-content: center;
-    background-color: var(
-      --surface-default
+    background-color: light-dark(
+      var(--color-4),
+      var(--color-13)
     ); /* Matches standard layout surface */
     color: var(--text-primary);
     border-block-end: 1px solid var(--border-dim); /* Flat divider strip instead of shadow */
@@ -146,8 +147,11 @@
   }
 
   .context-lane .nav-links a {
-    font-size: var(--font-size-0); /* Scaled down sub-links */
+    font-size: var(--font-size-1); /* Scaled down sub-links */
     font-weight: var(--font-weight-4);
+    /* Generous horizontal area for easy clicking, keeping it slim vertically */
+    padding-block: var(--size-1); /* Slim top/bottom padding */
+    padding-inline: var(--size-3); /* Wider side padding */
   }
   .context-lane .nav-links a.active {
     color: var(--primary);

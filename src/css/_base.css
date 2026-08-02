@@ -53,6 +53,10 @@ body {
   min-height: 100vh;
 }
 
+main {
+  margin-block-start: var(--size-fluid-2);
+}
+
 h1,
 h2,
 h3,
