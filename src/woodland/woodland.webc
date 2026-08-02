@@ -7,10 +7,10 @@ headerAlt: "woodland walkway"
 ---
 
 <div class="content-grid flow home-container">
-  <section-cards
-    webc:nokeep
-    :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []"
-  ></section-cards>
+  <!-- <section-cards -->
+  <!--   webc:nokeep -->
+  <!--   :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []" -->
+  <!-- ></section-cards> -->
 
   <section class="breakout content-image-text">
     <div class="content-image image-center">

@@ -1,6 +1,9 @@
 ---
 title: About
 layout: base
+description: General information
+headerAlt: "Main road"
+headerImage: "/Westmuir Hall/defibrillator/main-road.avif"
 eleventyNavigation:
   key: About
   title: About Us
@@ -8,11 +11,17 @@ eleventyNavigation:
 ---
 
 <div class="content-grid flow">
-  <section-cards
-    webc:nokeep
-    :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []"
-  ></section-cards>
-
   <p>Welcome to the about page. Learn about our history and values.</p>
+  <div>
+    <ul>
+      <li>
+        <p>
+          <a href="/about/volunteers/" title="Poems">
+            Volunteering in Westmuir.</a
+          >
+        </p>
+      </li>
+    </ul>
+  </div>
 </div>
 <!--- <my-component webc:nokeep></my-component> --->

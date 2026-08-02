@@ -1,0 +1,14 @@
+{
+  "contextNavigation": [
+    {
+      "label": "Resilience",
+      "url": "/Westmuir Hall/resilience/",
+      "exact": true
+    },
+    {
+      "label": "Westmuir Defibrillator",
+      "url": "/Westmuir Hall/defibrillator/",
+      "exact": true
+    }
+  ]
+}

@@ -1,5 +1,4 @@
-<!-- 1. GLOBAL NAV LANE (Heavy, elevated structure) -->
-<nav class="navigation-lane global-lane" webc:root="override">
+<nav class="navigation-lane" webc:root="override">
   <button
     class="ui-button top menu-toggle-btn menu-button"
     commandfor="drawer-inline-start-html"
@@ -23,28 +22,16 @@
       <line class="line-bot" x1="3" y1="18" x2="21" y2="18"></line>
     </svg>
   </button>
-
-  <!-- Pass tier="global" down to isolate data parsing -->
-  <nav-links :@tier="'global'"></nav-links>
+  <nav-links></nav-links>
 </nav>
 
-<!-- 2. CONTEXT NAV LANE (Light, flat child layout) -->
-<!-- Only renders if context navigation items exist in the data cascade -->
-<nav
-  class="navigation-lane context-lane"
-  webc:if="$data.contextNavigation && $data.contextNavigation.length > 0"
->
-  <nav-links :@tier="'context'"></nav-links>
-</nav>
-
-<!-- MOBILE DRAWER (For top-level global links only) -->
 <dialog
   class="ui-drawer ui-scroll-lock ui-inline-start"
   id="drawer-inline-start-html"
   closedby="any"
 >
   <div class="ui-header">
-    <span>Menu</span>
+    <span>Inline Start</span>
     <button
       class="ui-icon-button"
       title="Close"
@@ -65,7 +52,7 @@
   </div>
   <div class="ui-content">
     <nav class="mobile-only-menu">
-      <nav-links :@tier="'global'"></nav-links>
+      <nav-links></nav-links>
     </nav>
   </div>
   <div class="ui-footer">
@@ -80,46 +67,31 @@
 </dialog>
 
 <style>
-  /* Base structural lanes */
   :where(.navigation-lane) {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    width: 100%;
-  }
 
-  /* --- TIER 1: GLOBAL LANE VISUAL WEIGHTS --- */
-  .global-lane {
-    justify-content: center;
+    /* 1. Use your theme's native primary color tokens */
+    background-color: var(--primary);
+    color: var(--primary-contrast);
+    /* Dynamic background: Brand color in light mode, Dark surface color in dark mode */
     background-color: light-dark(var(--primary), var(--surface-filled));
+
+    /* Dynamic text: High-contrast light gray on light mode, Default text on dark mode */
     color: light-dark(var(--primary-contrast), var(--text-primary));
-    box-shadow: var(
-      --shadow-2
-    ); /* Elevates global block from background layers */
-    z-index: var(--layer-3);
   }
 
-  /* --- TIER 2: CONTEXT LANE VISUAL WEIGHTS --- */
-  .context-lane {
-    justify-content: center;
-    background-color: var(
-      --surface-default
-    ); /* Matches standard layout surface */
-    color: var(--text-primary);
-    border-block-end: 1px solid var(--border-dim); /* Flat divider strip instead of shadow */
-    z-index: var(--layer-2);
-  }
-
-  /* Shared formatting and layout properties */
+  /* Update the Desktop Defaults to look for the dynamic container color */
   .menu-button {
     background: none;
     border: none;
     cursor: pointer;
     padding: var(--size-2);
-    color: inherit;
+    color: inherit; /* Inherits the dynamic text color from .navigation-lane */
   }
-
-  /* Desktop Defaults */
+  /* FORCE THE FLEX ROW GAP BACK ON STANDARD SCREENS */
   .nav-links {
     display: flex;
     flex-direction: row;
@@ -127,40 +99,29 @@
   }
 
   .nav-links a {
-    color: inherit;
+    color: inherit; /* Inherits the dynamic text color */
     text-decoration: none;
+    font-weight: var(--font-weight-6);
     padding-block: var(--size-2);
     transition: opacity 0.2s ease;
   }
 
-  /* Distinct Tier Active Styling */
-  .global-lane .nav-links a {
-    font-size: var(--font-size-2);
-    font-weight: var(--font-weight-6);
-  }
-  .global-lane .nav-links a.active {
+  .nav-links a.active {
+    /* Active underline color switches contextually */
     color: light-dark(var(--primary-contrast), var(--primary));
     font-weight: var(--font-weight-7);
     text-decoration: underline;
     text-underline-offset: var(--size-1);
   }
 
-  .context-lane .nav-links a {
-    font-size: var(--font-size-0); /* Scaled down sub-links */
-    font-weight: var(--font-weight-4);
-  }
-  .context-lane .nav-links a.active {
-    color: var(--primary);
-    font-weight: var(--font-weight-6);
-    border-bottom: 2px solid var(--primary); /* Tab style active layout marker instead */
-  }
-
   .nav-links a:hover {
+    /* Instead of tracking a broken hover variable, a clean opacity drop
+       safely handles any theme background color */
     opacity: 0.8;
   }
-
-  /* Open Props Drawer Custom Formatting override styles */
+  /* Open Props Drawer Specific Overrides */
   dialog.ui-drawer {
+    /* Uses your system surfaces token to respect system Light/Dark settings */
     background-color: var(--surface-default);
 
     .nav-links {
@@ -169,15 +130,17 @@
       gap: var(--size-4);
       padding: var(--size-5);
       width: 100%;
-      background: none;
+      background: none; /* Let the parent dialog fill the background surface */
     }
 
     .nav-links a {
+      /* Flips links back to standard high-contrast text since the
+         drawer background is a surface layout layer, not solid --primary */
       color: var(--text-primary);
-      font-size: var(--font-size-2);
     }
 
     .nav-links a.active {
+      /* Underline active layout options in the standard primary brand color */
       color: var(--primary);
       text-decoration: underline;
     }
@@ -185,31 +148,16 @@
 
   /* Responsive Display Rules */
   @media (min-width: 768px) {
+    /* Hide the drawer hamburger button on desktop viewports */
     .menu-toggle-btn {
       display: none !important;
     }
   }
 
   @media (max-width: 767px) {
-    /* Hide the global header layout row items on small mobile screens */
-    .global-lane .nav-links {
+    /* Hide the desktop nav bar links box on narrow mobile viewports */
+    .navigation-lane .nav-links {
       display: none !important;
-    }
-
-    /* Transform Context Lane into a clean horizontal swiping tray on mobile */
-    .context-lane {
-      justify-content: flex-start;
-      overflow-x: auto;
-      white-space: nowrap;
-      scrollbar-width: none; /* Hide standard ugly scrollbar tracking */
-      -webkit-overflow-scrolling: touch;
-      padding-inline: var(--size-3);
-    }
-    .context-lane::-webkit-scrollbar {
-      display: none;
-    }
-    .context-lane .nav-links {
-      gap: var(--size-4);
     }
   }
 </style>
