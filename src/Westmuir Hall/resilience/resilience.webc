@@ -2,9 +2,10 @@
 title: Resilience
 layout: base
 inSectionNav: true
+inContextNav: true
 description: A warm place for the community in challenging conditions
-headerImage: "/Westmuir Hall/resilience/generator.avif"
-headerAlt: "Backup generator"
+headerImage: '/Westmuir Hall/resilience/generator.avif'
+headerAlt: 'Backup generator'
 ---
 
 <div class="content-grid flow">

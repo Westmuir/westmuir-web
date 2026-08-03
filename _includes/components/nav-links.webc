@@ -1,11 +1,69 @@
 <div id="nav-links-box" class="nav-links">
-  <!--- Dynamically select the list data array based on the passed tier prop --->
-  <a
-    webc:for="item of (tier === 'context' ? $data.contextNavigation : $data.navigation)"
-    :href="item.url"
-    :class="item.exact && $data.page.url === item.url ? 'active' :
-      item.includes && $data.page.url.includes(item.url) ? 'active' :
-      !item.exact && !item.includes && $data.page.url === item.url ? 'active' : '' "
-    @text="item.label"
-  ></a>
+  <script webc:type="js">
+    export default function () {
+      // 1. GLOBAL TIER RENDERING
+      if (this.tier !== "context") {
+        if (!this.$data.navigation) return "";
+
+        return this.$data.navigation
+          .map((item) => {
+            const isActive =
+              item.exact && this.$data.page.url === item.url
+                ? "active"
+                : item.includes && this.$data.page.url.includes(item.url)
+                  ? "active"
+                  : !item.exact &&
+                      !item.includes &&
+                      this.$data.page.url === item.url
+                    ? "active"
+                    : "";
+            return `<a href="${item.url}" class="${isActive}">${item.label}</a>`;
+          })
+          .join("");
+      }
+
+      // 2. CONTEXT TIER RENDERING
+      const subItems = this.$data.contextNavigation;
+      if (!subItems || subItems.length === 0) return "";
+
+      // Target the first item in the array to read the URL string
+      const firstItemUrl = subItems[0].url;
+
+      // Safely parse out the root section folder (e.g. "/Westmuir Hall/")
+      const paths = firstItemUrl.split("/").filter(Boolean);
+      const parentUrl = paths.length > 0 ? `/${paths[0]}/` : "/";
+
+      // DYNAMIC LOOKUP: Find the matching top-level menu item to get its real label
+      const parentMenuMatch = this.$data.navigation?.find(
+        (item) => item.url === parentUrl,
+      );
+      // Fallback to the folder name text if no matching menu item is found in JSON
+      const parentLabel = parentMenuMatch ? parentMenuMatch.label : paths[0];
+
+      // Check if the user is sitting exactly on the section landing root page
+      const isParentActive = this.$data.page.url === parentUrl ? "active" : "";
+
+      // Build the context parent anchor link using the category name and an arrow character
+      const parentLinkHtml = `<a href="${parentUrl}" class="overview-link ${isParentActive}">${parentLabel} &nbsp; &gt;</a>`;
+
+      // Map out the sibling child pages
+      const childLinksHtml = subItems
+        .map((item) => {
+          const isActive =
+            item.exact && this.$data.page.url === item.url
+              ? "active"
+              : item.includes && this.$data.page.url.includes(item.url)
+                ? "active"
+                : !item.exact &&
+                    !item.includes &&
+                    this.$data.page.url === item.url
+                  ? "active"
+                  : "";
+          return `<a href="${item.url}" class="${isActive}">${item.label}</a>`;
+        })
+        .join("");
+
+      return parentLinkHtml + childLinksHtml;
+    }
+  </script>
 </div>

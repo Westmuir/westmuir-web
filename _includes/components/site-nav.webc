@@ -89,7 +89,7 @@
     width: 100%;
     padding-inline: var(--size-fluid-3);
     /* Ensure a reliable uniform height layer so absolute items line up cleanly */
-    min-height: var(--size-9);
+    min-height: var(--size-6);
   }
 
   /* --- TIER 1: GLOBAL LANE VISUAL WEIGHTS --- */
@@ -105,7 +105,7 @@
   /* Ensure the central desktop link box stretches smoothly */
   .global-lane .nav-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
   }
 
@@ -136,15 +136,83 @@
     );
   }
   /* --- TIER 2: CONTEXT LANE VISUAL WEIGHTS --- */
+
   .context-lane {
-    justify-content: center;
-    background-color: light-dark(
-      var(--color-4),
-      var(--color-13)
-    ); /* Matches standard layout surface */
+    /* CHANGE THIS: Switch from center to flex-start alignment */
+    justify-content: flex-start;
+    background-color: light-dark(var(--color-4), var(--color-13));
     color: var(--text-primary);
-    border-block-end: 1px solid var(--border-dim); /* Flat divider strip instead of shadow */
+    border-block-end: 1px solid var(--border-dim);
     z-index: var(--layer-2);
+
+    /* Matches standard page margins so links line up with your main paragraphs */
+    padding-inline: var(--size-fluid-3);
+  }
+
+  /* Ensure the sub-links frame stays flush left */
+  .context-lane .nav-links {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    gap: 0; /* Reset raw gap since we are using explicit padding and dividers */
+  }
+
+  /* Base link architecture */
+  .context-lane .nav-links a {
+    text-decoration: none;
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-4);
+    color: var(--text-primary);
+
+    /* Generous side margins give targets clickability while maintaining slim heights */
+    padding-block: var(--size-2);
+    padding-inline: var(--size-3);
+
+    /* Using a matching color instead of transparent prevents bottom border layout shifts */
+    border-bottom: 2px solid transparent;
+
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+  }
+
+  /* 1. RESTORE BALANCED PADDING TO THE OVERVIEW LINK */
+  .context-lane .nav-links a.overview-link {
+    font-weight: var(--font-weight-6);
+    padding-inline-start: 0; /* Keeps the main text flush left */
+    padding-inline-end: var(
+      --size-3
+    ); /* Pushes the > safely away from the absolute edge */
+    margin-inline-end: 0; /* Clear the old margin block completely */
+  }
+
+  /* 2. OPTIMIZE THE PIPE INTERACTION FOR THE FIRST ITEM */
+  /* This ensures the vertical pipe sits exactly at the container edge
+     without crowding the arrows or the following text links */
+  .context-lane .nav-links a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0; /* Keep it locked to the bounding edge */
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background-color: var(--color-9);
+    opacity: 0.8;
+  }
+
+  /* Clean Active Borders */
+  .context-lane .nav-links a.active {
+    color: var(--primary);
+    font-weight: var(--font-weight-6);
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 2px;
+
+    /* border-bottom: 2px solid var(--primary); */
+  }
+
+  .context-lane .nav-links a:hover {
+    opacity: 0.8;
   }
 
   /* Shared formatting and layout properties */
@@ -180,19 +248,6 @@
     font-weight: var(--font-weight-7);
     text-decoration: underline;
     text-underline-offset: var(--size-1);
-  }
-
-  .context-lane .nav-links a {
-    font-size: var(--font-size-1); /* Scaled down sub-links */
-    font-weight: var(--font-weight-4);
-    /* Generous horizontal area for easy clicking, keeping it slim vertically */
-    padding-block: var(--size-1); /* Slim top/bottom padding */
-    padding-inline: var(--size-3); /* Wider side padding */
-  }
-  .context-lane .nav-links a.active {
-    color: var(--primary);
-    font-weight: var(--font-weight-6);
-    border-bottom: 2px solid var(--primary); /* Tab style active layout marker instead */
   }
 
   .nav-links a:hover {
@@ -241,15 +296,34 @@
       justify-content: flex-start;
       overflow-x: auto;
       white-space: nowrap;
-      scrollbar-width: none; /* Hide standard ugly scrollbar tracking */
+      scrollbar-width: none;
       -webkit-overflow-scrolling: touch;
       padding-inline: var(--size-3);
     }
     .context-lane::-webkit-scrollbar {
       display: none;
     }
+
+    /* 1. TIGHTEN THE FLEX CONTAINER GAP */
     .context-lane .nav-links {
-      gap: var(--size-4);
+      /* Dropping this down from size-4 minimizes the blank space between items */
+      gap: var(--size-1);
+    }
+
+    /* 2. SCALE DOWN THE SIDE PADDING ON MOBILE */
+    .context-lane .nav-links a {
+      /* Slightly less inner padding makes tap targets efficient without wasting space */
+      padding-inline: var(--size-2);
+    }
+
+    /* Keep your main overview-link aligned cleanly with your page margin */
+    .context-lane .nav-links a.overview-link {
+      padding-inline-start: 0;
+    }
+
+    /* Hide the vertical pipe lines on mobile devices to prevent layout clutter */
+    .context-lane .nav-links a::after {
+      display: none !important;
     }
   }
 </style>
