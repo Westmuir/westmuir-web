@@ -1,67 +1,72 @@
 <div id="nav-links-box" class="nav-links">
   <script webc:type="js">
     export default function () {
-      // 1. GLOBAL TIER RENDERING
-      if (this.tier !== "context") {
-        if (!this.$data.navigation) return "";
+      // 1. GLOBAL NAVIGATION TIER RENDERING
+      if (this.tier !== 'context') {
+        if (!this.$data.navigation) return '';
 
         return this.$data.navigation
-          .map((item) => {
+          .map(item => {
             const isActive =
               item.exact && this.$data.page.url === item.url
-                ? "active"
+                ? 'active'
                 : item.includes && this.$data.page.url.includes(item.url)
-                  ? "active"
+                  ? 'active'
                   : !item.exact &&
                       !item.includes &&
                       this.$data.page.url === item.url
-                    ? "active"
-                    : "";
+                    ? 'active'
+                    : '';
             return `<a href="${item.url}" class="${isActive}">${item.label}</a>`;
           })
-          .join("");
+          .join('');
       }
 
-      // 2. CONTEXT TIER RENDERING
-      const subItems = this.$data.contextNavigation;
-      if (!subItems || subItems.length === 0) return "";
+      // 2. CONTEXT NAVIGATION TIER RENDERING
+      // A. MANUAL OVERRIDE CHECK: First priority goes to manual data front matter arrays
+      let subItems = this.$data.contextNavigation;
 
-      // Target the first item in the array to read the URL string
+      // B. AUTOMATION FALLBACK: If no manual front matter array exists, use the passed collection prop
+      if (!subItems && this.customLinks) {
+        subItems = this.customLinks;
+      }
+
+      // If both tracks turn up empty, strip out the HTML rendering loop
+      if (!subItems || subItems.length === 0) return '';
+
+      // Target the first item in the array to calculate paths safely
       const firstItemUrl = subItems[0].url;
+      const paths = firstItemUrl.split('/').filter(Boolean);
+      const parentUrl = paths.length > 0 ? `/${paths[0]}/` : '/';
 
-      // Safely parse out the root section folder (e.g. "/Westmuir Hall/")
-      const paths = firstItemUrl.split("/").filter(Boolean);
-      const parentUrl = paths.length > 0 ? `/${paths[0]}/` : "/";
+      // Check if the user is sitting exactly on the section landing root folder page
+      const isParentActive = this.$data.page.url === parentUrl ? 'active' : '';
 
-      // DYNAMIC LOOKUP: Find the matching top-level menu item to get its real label
+      // Cross-reference top-level menus to fetch the exact visual category label
       const parentMenuMatch = this.$data.navigation?.find(
-        (item) => item.url === parentUrl,
+        item => item.url === parentUrl,
       );
-      // Fallback to the folder name text if no matching menu item is found in JSON
       const parentLabel = parentMenuMatch ? parentMenuMatch.label : paths[0];
 
-      // Check if the user is sitting exactly on the section landing root page
-      const isParentActive = this.$data.page.url === parentUrl ? "active" : "";
+      // Build the breadcrumb root anchor link
+      const parentLinkHtml = `<a href="${parentUrl}" class="overview-link ${isParentActive}">${parentLabel}&nbsp;&nbsp;&gt;</a>`;
 
-      // Build the context parent anchor link using the category name and an arrow character
-      const parentLinkHtml = `<a href="${parentUrl}" class="overview-link ${isParentActive}">${parentLabel} &nbsp; &gt;</a>`;
-
-      // Map out the sibling child pages
+      // Map out the rest of the sibling pages
       const childLinksHtml = subItems
-        .map((item) => {
+        .map(item => {
           const isActive =
             item.exact && this.$data.page.url === item.url
-              ? "active"
+              ? 'active'
               : item.includes && this.$data.page.url.includes(item.url)
-                ? "active"
+                ? 'active'
                 : !item.exact &&
                     !item.includes &&
                     this.$data.page.url === item.url
-                  ? "active"
-                  : "";
+                  ? 'active'
+                  : '';
           return `<a href="${item.url}" class="${isActive}">${item.label}</a>`;
         })
-        .join("");
+        .join('');
 
       return parentLinkHtml + childLinksHtml;
     }

@@ -28,17 +28,19 @@
   <nav-links :@tier="'global'"></nav-links>
   <theme-toggle></theme-toggle>
 </nav>
-
-<!-- 2. CONTEXT NAV LANE (Light, flat child layout) -->
-<!-- Only renders if context navigation items exist in the data cascade -->
+<!-- CONTEXT NAV LANE -->
 <nav
   class="navigation-lane context-lane"
-  webc:if="$data.contextNavigation && $data.contextNavigation.length > 0"
+  webc:if="$data.contextNavigation?.length > 0 || $data.collections.autoContext?.[$data.page.url.split('/').filter(Boolean)[0]]?.length > 0"
 >
-  <nav-links :@tier="'context'"></nav-links>
+  <nav-links
+    :@tier="'context'"
+    :@custom-links="$data.collections.autoContext?.[$data.page.url.split('/').filter(Boolean)[0]]"
+  ></nav-links>
 </nav>
 
 <!-- MOBILE DRAWER (For top-level global links only) -->
+
 <dialog
   class="ui-drawer ui-scroll-lock ui-inline-start"
   id="drawer-inline-start-html"
@@ -190,7 +192,7 @@
   /* This ensures the vertical pipe sits exactly at the container edge
      without crowding the arrows or the following text links */
   .context-lane .nav-links a:not(:last-child)::after {
-    content: "";
+    content: '';
     position: absolute;
     right: 0; /* Keep it locked to the bounding edge */
     top: 25%;
