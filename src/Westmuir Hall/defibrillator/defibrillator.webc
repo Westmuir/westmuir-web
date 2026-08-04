@@ -2,9 +2,10 @@
 title: Westmuir Defibrillator
 layout: base
 inSectionNav: true
+inContextNav: true
 description: Community Public Access Defibrillator (CPAD)
-headerImage: "/wcdt/wcdt-banner.avif"
-headerAlt: "Main road"
+headerImage: '/wcdt/wcdt-banner.avif'
+headerAlt: 'Main road'
 ---
 
 <div class="content-grid flow">

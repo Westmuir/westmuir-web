@@ -17,9 +17,6 @@
       <p webc:if="description" @text="description"></p>
     </div>
   </div>
-
-  <!-- 3. Your newly perfected translucent theme toggle stays anchored in the top right -->
-  <theme-toggle></theme-toggle>
 </figure>
 
 <!-- Move your existing .page-header CSS nested block right in here! -->
@@ -33,18 +30,6 @@
     position: relative;
     /* Prevent text hugging the screen edges on small viewports */
     padding-inline: var(--size-5);
-
-    /* ... picture and theme-toggle styles stay exactly the same ... */
-    .theme-toggle {
-      position: absolute;
-      top: var(--size-3);
-      right: var(--size-3);
-      z-index: 3;
-      margin: 0;
-      padding: var(--size-2);
-      border-radius: var(--radius-round, 1e5px);
-      cursor: pointer;
-    }
 
     > picture {
       position: absolute;
