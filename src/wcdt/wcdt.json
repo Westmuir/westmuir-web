@@ -1,9 +1,0 @@
-{
-  "contextNavigation": [
-    {
-      "label": "Accounts",
-      "url": "/wcdt/accounts/",
-      "exact": true
-    }
-  ]
-}
