@@ -1,7 +1,7 @@
 ---
 title: Flora & Fauna
 layout: base
-inSectionNav: true
+inContextNav: true
 description: Things you might see in the Woodland
 headerImage: "/woodland/woodland-oak-1980.avif"
 headerAlt: "woodland walkway"

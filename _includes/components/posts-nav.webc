@@ -3,9 +3,9 @@
     const prevPost = context.getPrev(context.$data.collections);
     const nextPost = context.getNext(context.$data.collections);
 
-    if (!prevPost && !nextPost) return '';
+    if (!prevPost && !nextPost) return "";
 
-    let html = `<ul>`;
+    let html = `<ul class="post-nav-list">`;
 
     if (prevPost) {
       html += `
@@ -27,3 +27,9 @@
     return html;
   }
 </script>
+
+<style webc:scoped>
+  .post-nav-list {
+    margin-block: var(--size-5);
+  }
+</style>

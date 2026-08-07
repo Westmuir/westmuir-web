@@ -4,11 +4,10 @@
     <slot><h2>Gallery</h2></slot>
   </div>
 
-  <!-- We pass the layout attribute down to control our CSS styling -->
   <image-lightbox-gallery
     :class="layout === 'strip' ? 'layout-strip' : 'layout-grid'"
   >
-    <!-- The exact same DOM structure for images -->
+    <!-- Reusable flexible structural box -->
     <div class="image-gallery-container">
       <figure
         webc:for="(item, index) of collection"
@@ -26,27 +25,40 @@
       </figure>
     </div>
 
-    <!-- The exact same Lightbox Modal is preserved here -->
-    <dialog class="lightbox-modal">
-      <form method="dialog">
-        <button class="close-btn" aria-label="Close modal">✕</button>
-      </form>
+    <!-- REFACTOR: Replaced with clean Open Props UI class patterns -->
+    <dialog class="ui-dialog lightbox-modal" closedby="any">
+      <!-- OpUI Standard Header controls -->
+      <div class="ui-header">
+        <span class="lightbox-caption">Image View</span>
+        <button
+          class="ui-icon-button close-btn"
+          title="Close"
+          onclick="this.closest('dialog').close()"
+        >
+          <svg xmlns="http://w3.org" width="32" height="32" viewBox="0 0 32 32">
+            <path
+              fill="currentColor"
+              d="M26.29 4.293a1 1 0 1 1 1.414 1.414L17.413 16l10.291 10.29a1 1 0 1 1-1.414 1.414L16 17.413L5.707 27.704a1 1 0 0 1-1.414-1.414L14.585 16L4.293 5.707a1 1 0 0 1 1.414-1.414L16 14.584z"
+            />
+          </svg>
+        </button>
+      </div>
 
-      <div class="lightbox-content">
+      <!-- Main Layout Body Box -->
+      <div class="ui-content lightbox-content">
         <button
           type="button"
-          class="nav-btn prev-btn"
+          class="ui-icon-button nav-btn prev-btn"
           aria-label="Previous image"
         >
           ‹
         </button>
-
-        <figure>
-          <img class="lightbox-img" src="" alt="" />
-          <figcaption class="lightbox-caption"></figcaption>
-        </figure>
-
-        <button type="button" class="nav-btn next-btn" aria-label="Next image">
+        <img class="lightbox-img" src="" alt="" />
+        <button
+          type="button"
+          class="ui-icon-button nav-btn next-btn"
+          aria-label="Next image"
+        >
           ›
         </button>
       </div>
@@ -54,11 +66,9 @@
   </image-lightbox-gallery>
 </section>
 
-<!-- The Client-Side JavaScript remains 100% identical and unchanged -->
 <script>
   class ImageLightboxGallery extends HTMLElement {
     connectedCallback() {
-      // We update this target selector to use the generic container class
       this.grid = this.querySelector(".image-gallery-container");
       this.dialog = this.querySelector(".lightbox-modal");
       this.lightboxImg = this.querySelector(".lightbox-img");
@@ -69,6 +79,7 @@
       this.items = [];
       this.currentIndex = 0;
 
+      // Extract details mapping securely
       const triggers = this.grid.querySelectorAll(".gallery-trigger");
       triggers.forEach((btn, index) => {
         const liveImg = btn.querySelector("img");
@@ -83,9 +94,7 @@
       this.grid.addEventListener("click", (e) => this.handleImageClick(e));
       this.prevBtn.addEventListener("click", () => this.navigate(-1));
       this.nextBtn.addEventListener("click", () => this.navigate(1));
-
       this.dialog.addEventListener("keydown", (e) => this.handleKeyDown(e));
-      this.dialog.addEventListener("click", (e) => this.handleBackdropClick(e));
     }
 
     updateLightbox(index) {
@@ -93,7 +102,7 @@
       const item = this.items[this.currentIndex];
       this.lightboxImg.src = item.src;
       this.lightboxImg.alt = item.alt;
-      this.lightboxCaption.textContent = item.alt;
+      this.lightboxCaption.textContent = item.alt || "Image View";
     }
 
     navigate(direction) {
@@ -115,10 +124,6 @@
       if (e.key === "ArrowLeft") this.navigate(-1);
       if (e.key === "ArrowRight") this.navigate(1);
     }
-
-    handleBackdropClick(e) {
-      if (e.target === this.dialog) this.dialog.close();
-    }
   }
 
   if (
@@ -130,7 +135,14 @@
 </script>
 
 <style>
-  /* --- REUSABLE UTILITIES & LIGHTBOX VISUALS --- */
+  .image-gallery-section {
+    margin-block: var(--size-9, 4rem);
+
+    .gallery-intro {
+      max-inline-size: var(--size-content-3, 70ch);
+    }
+  }
+  /* --- OPEN PROPS TOKEN INTEGRATION --- */
   .gallery-trigger {
     background: none;
     border: none;
@@ -138,130 +150,94 @@
     cursor: pointer;
     width: 100%;
     display: block;
+    border-radius: var(--radius-2);
+    overflow: hidden;
   }
 
-  .lightbox-modal::backdrop {
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(2px);
-  }
-
-  .lightbox-modal {
-    border: none;
-    background: transparent;
+  /* Refined Lightbox Container Modal */
+  dialog.lightbox-modal {
+    background-color: var(--surface-default);
+    box-shadow: var(--shadow-5);
+    border-radius: var(--radius-3);
+    max-width: var(--size-md);
+    width: 90vw;
     padding: 0;
-    margin: 100px auto auto auto;
-    max-width: 90vw;
-    max-height: calc(100vh - 150px);
-    color: white;
-    overflow: visible;
+    overflow: hidden;
+
+    /* Elegant native Open Props transition profiles */
+    transition: transform var(--transition-fade-duration) var(--ease-out);
   }
 
   .lightbox-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    position: relative;
+    justify-content: space-between;
+    gap: var(--size-4);
+    padding: var(--size-4);
   }
 
-  .lightbox-content figure {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .lightbox-content img {
-    max-width: 75vw;
-    max-height: calc(100vh - 220px);
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 60vh;
     object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-3);
   }
 
-  .lightbox-content figcaption {
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.1rem;
-  }
-
-  .close-btn,
+  /* Format explicit control icons */
   .nav-btn {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-    transition: background 0.2s;
-  }
-
-  .close-btn:hover,
-  .nav-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
-
-  .close-btn {
-    position: absolute;
-    top: -3.5rem;
-    right: 0;
-    z-index: 10;
+    font-size: var(--font-size-4);
+    background-color: var(--surface-filled);
+    color: var(--text-primary);
+    flex-shrink: 0;
   }
 
   /* --- VARIANT 1: GRID MODE --- */
   .layout-grid .image-gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: var(--size-4);
   }
 
-  /* --- VARIANT 2: HORIZONTAL STRIP MODE --- */
+  /* --- VARIANT 2: OPEN PROPS SWIPING STRIP --- */
   .layout-strip .image-gallery-container {
     display: flex;
     overflow-x: auto;
-    gap: 0.5rem; /* Tighter gaps for a cleaner strip look */
-    padding-bottom: 0.75rem;
+    gap: var(--size-2);
+    padding-bottom: var(--size-3);
     scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
+    scrollbar-width: none; /* Keeps tracking clean and minimalist */
+  }
+  .layout-strip .image-gallery-container::-webkit-scrollbar {
+    display: none;
   }
 
   .layout-strip .gallery-item {
     flex: 0 0 auto;
-
-    /*
-      FLUID WIDTH CALCULATION:
-      - 100% / 5.5 means exactly 5 full images fit on screen,
-        and the 6th is cut in half to visually hint that it's scrollable!
-    */
     width: calc(100% / 5.5);
-
     scroll-snap-align: start;
   }
 
-  /* Make sure it handles smaller mobile screens elegantly */
   @media (max-width: 768px) {
     .layout-strip .gallery-item {
-      width: calc(100% / 3.5); /* Shows ~3.5 images on mobile */
+      width: calc(100% / 2.5); /* Optimized thumbnail balance on viewports */
     }
   }
 
   .layout-strip .gallery-item img {
-    height: 110px; /* Shorter height to match the smaller width footprint */
+    height: var(
+      --size-11
+    ); /* Switched hard values for responsive Open Props sizing */
     width: 100%;
     object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
+    border-radius: var(--radius-2);
+    transition: transform 0.2s var(--ease-out);
   }
 
   .layout-strip .gallery-item img:hover {
-    transform: scale(1.03); /* Subtle interactive hint */
+    transform: scale(var(--scale-1));
   }
 
-  /* Hide captions in the compact strip view to keep it minimal */
   .layout-strip figcaption {
     display: none;
   }

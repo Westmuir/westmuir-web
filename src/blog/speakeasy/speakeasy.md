@@ -13,9 +13,9 @@ cardType: hall
 
 # Men's Speakeasy
 
-  <figure class="figure ml-12 max-w-lg d-ib">
+  <figure class="figure">
     <img
-      class="bg-yellow-100 sm-p-3 shadow-lg"
+      class=""
       src="/blog/speakeasy/speakeasy-group.png"
       alt="A speakeasy group"
     />
@@ -33,8 +33,10 @@ cardType: hall
 ## **Meeting Dates for the Summer:**
 
 ::: mb-2
+
 **May 6th and 20th; June 3rd and 17th; July 1st and 15th; August 5th
 and 19th; finally September 2nd and 16th.**
+
 :::
 
 Please come along, say hello and join us for a cup of
@@ -50,3 +52,16 @@ If you would like more information contact Richard on [angusspeakeasy@gmail.com]
 
 **2 until 4pm**
 :::
+
+<style webc:scoped>
+.mb-2{margin-bottom: 2em;}
+
+.post-list {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.post-list li {
+  list-style-type: disc;
+}
+  </style>

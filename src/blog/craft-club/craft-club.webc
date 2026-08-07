@@ -8,33 +8,118 @@ cover: /blog/craft-club/craft-wool.png
 cardType: hall
 ---
 
-<div class="content-grid flow">
-  <div class="craft-club breakout">
-    <h2 class="craft-title">Westmuir Hall</h2>
+<div class="craft-club">
+  <h2 class="cc-craft-title">Westmuir Hall</h2>
 
-    <div class="craft-club-wrapper">
-      <div>
-        <strong>Weekly from Monday 4th September, 2023</strong>
-        <img src="/blog/craft-club/craft-wool.png" alt="Craft wool" />
+  <div class="cc-image-left right">
+    <div>
+      <strong>Weekly from Monday 4th September, 2023</strong>
+      <img src="/blog/craft-club/craft-wool.png" alt="Craft wool" />
 
-        <div class="ci-strong">2pm - 4pm</div>
-        <div class="ci-strong">Refreshments available</div>
-        <div>Tel. 01575 573314 for more details.</div>
-      </div>
-      <figure class="figure ml-12 max-w-sm d-ib">
-        <img class="bg-yellow-100 sm-p-3 shadow-lg rotate-r" src="/blog/craft-club/craft-sew-2.png" alt="Craft sew" />
-      </figure>
+      <div class="ci-strong">2pm - 4pm</div>
+      <div class="ci-strong">Refreshments available</div>
+      <div>Tel. 01575 573314 for more details.</div>
     </div>
+    <figure class="figure rotate-r">
+      <img
+        class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
+        src="/blog/craft-club/craft-sew-2.png"
+        alt="Craft sew"
+      />
+    </figure>
+  </div>
 
-    <figure class="lg-fl figure mr-12 max-w-sm">
-      <img class="bg-yellow-100 sm-p-3 shadow-lg rotate-l" src="/blog/craft-club/craft-paint-2.png" alt="Craft paint" />
+  <div class="cc-image-left">
+    <figure class="figure rotate-l">
+      <img
+        class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
+        src="/blog/craft-club/craft-paint-2.png"
+        alt="Craft paint"
+      />
     </figure>
 
-    <div class="mt-3">
-      This is a group by Lillian McDownie and Christine Cobb who run a Creative craft club in the village hall on Monday
-      afternoons.
+    <div>
+      This is a group by Lillian McDownie and Christine Cobb who run a Creative
+      craft club in the village hall on Monday afternoons.
     </div>
-
-    <div class="clear-both"></div>
   </div>
 </div>
+
+<style webc:scoped webc:keep>
+  .ci-strong {
+    font-family: "Comic Neue", "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: larger;
+  }
+
+  .craft-club {
+    margin-top: 2rem;
+    font-size: larger;
+  }
+
+  .craft-club-wrapper {
+    display: flex;
+  }
+
+  .craft-club-wrapper figure {
+    margin-top: -1rem;
+    margin-left: auto;
+  }
+
+  .craft-club img {
+    border: none;
+  }
+
+  .cc-craft-title {
+    font-family: "Comic Neue", sans-serif;
+    font-size: 2rem;
+  }
+  .cc-image-right {
+    display: grid;
+    gap: var(--size-7);
+    align-items: center;
+    margin-block-start: var(--size-5);
+    @media (min-width: 700px) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .cc-image-left {
+    display: grid;
+    gap: var(--size-7);
+    align-items: center;
+    margin-block-start: var(--size-5);
+
+    .figure {
+      --bg-opacity: 1;
+      background-color: ivory;
+      background-color: rgba(255, 255, 240, var(--bg-opacity));
+      padding: 0.5rem;
+      box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    > .rotate-l {
+      transform: rotate(-3deg);
+    }
+    > .rotate-r {
+      transform: rotate(3deg);
+    }
+
+    @media (min-width: 700px) {
+      grid-template-columns: 1fr 2fr;
+      > figure {
+        max-width: 20ch;
+      }
+
+      &.right {
+        grid-template-columns: 2fr 1fr;
+        > figure {
+          max-width: 20ch;
+          justify-self: end;
+        }
+      }
+    }
+  }
+</style>

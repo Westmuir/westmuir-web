@@ -25,19 +25,19 @@ headerAlt: "East bank, Westmuir"
         For more information please contact Ann (
         <a href="mailto: volunteers@westmuir.org.uk"
           >volunteers&#64;westmuir.org.uk </a
-        >) or join us at the AGM on 16th June, at 7.30pm. Thanks!
+        >)
+      <!-- or join us at the AGM on 16th June, at 7.30pm. Thanks! -->
       </div>
     </p>
-  </hgroup>
-</div>
+  </hgroupiv>
 
 <h2 class="main-heading">Latest</h2>
 
 <postslist-articles
-  :list="head(categoryFilter($data.collections.posts, 'featured'), -2)"
+  :@list="head(categoryFilter($data.collections.posts, 'featured'), -2)"
 ></postslist-articles>
 <postslist-cards
-  :list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"
+  :@list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"
 ></postslist-cards>
 
 <div class="container" name="logos">
@@ -85,7 +85,6 @@ headerAlt: "East bank, Westmuir"
     <cta-volunteer
       buttonlabel="Read more"
       buttonurl="/about/volunteers/"
-      xwebc:if="cta"
     ></cta-volunteer>
   </div>
 </div>
@@ -95,7 +94,7 @@ headerAlt: "East bank, Westmuir"
 { --border-color: var(--primary);
   border-radius: var(--radius-3);
   p {max-inline-size:95ch;}
-margin-block: var(--size-fluid-3);
+  margin-block: var(--size-fluid-3);
 }
   .section-cards {
     --section-color: light-dark(var(--grey-9), var(--grey-2));

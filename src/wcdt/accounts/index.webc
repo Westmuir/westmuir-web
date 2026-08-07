@@ -1,9 +1,10 @@
 ---
 layout: base
-title: Westmuir Community Development Trust
+title: Annual accounts archive
 description: Annual accounts archive.
 headerImage: '/wcdt/wcdt-banner.avif'
 headerAlt: 'westmuir village'
+inContextNav: true
 ---
 
 <div class="content-grid flow">
