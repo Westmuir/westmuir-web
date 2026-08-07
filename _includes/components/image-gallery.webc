@@ -135,6 +135,13 @@
 </script>
 
 <style>
+  .image-gallery-section {
+    margin-block: var(--size-9, 4rem);
+
+    .gallery-intro {
+      max-inline-size: var(--size-content-3, 70ch);
+    }
+  }
   /* --- OPEN PROPS TOKEN INTEGRATION --- */
   .gallery-trigger {
     background: none;
