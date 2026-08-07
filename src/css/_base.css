@@ -1,44 +1,6 @@
 main {
   margin-block-start: var(--size-fluid-2);
 }
-body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
-/* 1. Global Reset: Wipe out the narrow Open Props list item ceiling website-wide */
-:where(ol, ul) li {
-  max-inline-size: var(--max-inline-size, 95ch); /* Upgrades lists from tight header size to standard text size */
-}
-
-.logo {
-  max-width: 100px;
-}
-/* Inside your layout stylesheet or base.css */
-
-.full-width.with-bg {
-  grid-column: full-width;
-  background-color: var(--with-bg-color, --surface-2);
-  padding-block: var(--size-8);
-  display: grid;
-  grid-template-columns: inherit; /* Inherits your exact layout tracks */
-
-  /* 1. Structural layout components (like <two-columns>) default to full track width */
-  & > * {
-    grid-column: content;
-  }
-
-  /* 2. Pure text elements inherit readable text boundaries, matching your main layout */
-  & > p,
-  & > ul,
-  & > ol,
-  & > h1,
-  & > h2 {
-    grid-column: content;
-    max-inline-size: var(--max-inline-size, 95ch); /* Keeps line-lengths easy to read */
-    width: 100%;
-  }
-}
-
 /* Tags */
 .post-tag {
   display: inline-flex;
