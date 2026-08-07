@@ -13,9 +13,9 @@ cardType: hall
 
 # Men's Speakeasy
 
-  <figure class="figure ml-12 max-w-lg d-ib">
+  <figure class="figure">
     <img
-      class="bg-yellow-100 sm-p-3 shadow-lg"
+      class=""
       src="/blog/speakeasy/speakeasy-group.png"
       alt="A speakeasy group"
     />
@@ -53,4 +53,15 @@ If you would like more information contact Richard on [angusspeakeasy@gmail.com]
 **2 until 4pm**
 :::
 
-<style>.mb-2{margin-bottom: 2em;}</style>
+<style webc:scoped>
+.mb-2{margin-bottom: 2em;}
+
+.post-list {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.post-list li {
+  list-style-type: disc;
+}
+  </style>

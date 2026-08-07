@@ -9,20 +9,5 @@ cover: src/blog/cafe/cafe.png
 cardType: hall
 ---
 
-<div class="content-grid flow">
-  <div class="breakout">
-    <div>
-      <img src="/blog/cafe/popup-cafe.jpg" alt="Popup cafe"  ></img>
-    </div>
+<img src="/blog/cafe/popup-cafe.jpg" alt="Popup cafe"  ></img>
 
-    <div class="mt-3"></div>
-
-    <div class="clear-both"></div>
-  </div>
-</div>
-
-
-<!-- This script block is required by WebC v0.12.x to satisfy the ESM compiler -->
-<script webc:type="js">
-export default {};
-</script>

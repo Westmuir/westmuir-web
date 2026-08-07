@@ -4,23 +4,21 @@ layout: base
 inSectionNav: true
 inContextNav: true
 description: Community Public Access Defibrillator (CPAD)
-headerImage: '/wcdt/wcdt-banner.avif'
-headerAlt: 'Main road'
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "Main road"
 ---
 
 <div class="content-grid flow">
   <section class="breakout content-image-text">
     <div class="content-image">
-      <figure class="figure ml-12 max-w-sm d-ib as-start">
+      <figure class="figure">
         <img
-          class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
           src="/Westmuir Hall/defibrillator/defibrillator.avif"
           alt="Community defibrillator"
         />
       </figure>
-      <figure class="figure ml-12 max-w-sm d-ib">
+      <figure class="figure">
         <img
-          class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
           src="/Westmuir Hall/defibrillator/kiosk.avif"
           alt="Phone kiosk housing defibrillator"
         />
@@ -98,3 +96,13 @@ headerAlt: 'Main road'
     </div>
   </section>
 </div>
+<style webc:scoped>
+  .figure {
+    max-inline-size: 25ch;
+  }
+  .content-image {
+    display: flex;
+    flex-direction: column;
+    place-items: end;
+  }
+</style>

@@ -25,7 +25,8 @@ headerAlt: "East bank, Westmuir"
         For more information please contact Ann (
         <a href="mailto: volunteers@westmuir.org.uk"
           >volunteers&#64;westmuir.org.uk </a
-        >) or join us at the AGM on 16th June, at 7.30pm. Thanks!
+        >)
+      <!-- or join us at the AGM on 16th June, at 7.30pm. Thanks! -->
       </div>
     </p>
   </hgroup>
@@ -34,10 +35,10 @@ headerAlt: "East bank, Westmuir"
 <h2 class="main-heading">Latest</h2>
 
 <postslist-articles
-  :list="head(categoryFilter($data.collections.posts, 'featured'), -2)"
+  :@list="head(categoryFilter($data.collections.posts, 'featured'), -2)"
 ></postslist-articles>
 <postslist-cards
-  :list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"
+  :@list="slice(categoryFilter($data.collections.posts, 'featured'), -2)"
 ></postslist-cards>
 
 <div class="container" name="logos">
