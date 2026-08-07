@@ -2,51 +2,17 @@ main {
   margin-block-start: var(--size-fluid-2);
 }
 
-h1,
-h2,
-h3,
-.club-title {
-  font-family: var(--font-sans);
-  font-weight: var(--font-weight-7); /* Pure Open Props weight */
-  letter-spacing: var(--font-letterspacing-1); /* Tighter spacing token */
-}
-
-body {
-  background-color: var(--surface-default);
-  color: var(--text-primary); /* Natively links paragraph text to your theme-ui tokens */
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
-
-/* Ensure headings default to your crisp primary color layer */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--text-primary);
-}
-
 /* Style secondary text elements easily */
 small,
 .muted,
 .text-muted {
   color: var(--text-muted);
 }
-/* Inside your src/css/base.css (Safe modern additions) */
-
-/* 1. Prevent text inflation issues on mobile orientation changes */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
 /* 1. Global Reset: Wipe out the narrow Open Props list item ceiling website-wide */
 :where(ol, ul) li {
-  max-inline-size: var(--size-content-3, 70ch); /* Upgrades lists from tight header size to standard text size */
+  max-inline-size: var(--max-inline-size, 95ch); /* Upgrades lists from tight header size to standard text size */
 }
+
 .logo {
   max-width: 100px;
 }
@@ -71,17 +37,11 @@ html {
   & > h1,
   & > h2 {
     grid-column: content;
-    max-inline-size: var(--size-content-3); /* Keeps line-lengths easy to read */
+    max-inline-size: var(--max-inline-size, 95ch); /* Keeps line-lengths easy to read */
     width: 100%;
   }
 }
 
-.item-list {
-  margin: 0 0 1rem 0;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-}
 /* Tags */
 .post-tag {
   display: inline-flex;
@@ -89,15 +49,6 @@ html {
   justify-content: center;
   text-transform: capitalize;
   font-style: italic;
-}
-
-.postlist-item > .post-tag {
-  align-self: center;
-}
-
-.craft-title {
-  font-family: 'Comic Neue', sans-serif;
-  font-size: 2rem;
 }
 
 .figure {
@@ -112,10 +63,6 @@ html {
 
 .d-ib {
   display: inline-block;
-}
-
-.mb-2 {
-  margin-bottom: 1rem;
 }
 
 .mt-3 {
@@ -209,57 +156,6 @@ html {
   list-style-type: disc;
 }
 
-.lh-3 {
-  line-height: 3em;
-
-  a {
-    color: var(--red-6);
-  }
-}
-
-/* A section to contain image beside text */
-.dark .agm-info {
-  --agm-border-color: yellow;
-}
-
-.agm-info {
-  display: flex;
-  flex-direction: column;
-  border: 2px solid var(--agm-border-color, purple);
-  border-radius: 15px;
-  padding: 2rem;
-  align-items: center;
-
-  hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .agm-info-text {
-    font-size: 1.5rem;
-  }
-
-  p {
-    text-align: center;
-  }
-
-  .agm-time {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-}
-
-.agm-heading {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.agm-title {
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 700;
-}
-
 .content-image-text {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
@@ -297,7 +193,7 @@ html {
   }
 
   .content-text {
-    max-inline-size: var(--size-content-3, 70ch);
+    max-inline-size: var(--max-inline-size, 95ch);
     font-size: var(--font-size-2);
     line-height: var(--font-lineheight-3, 1.6);
     padding: var(--size-5, 1.5rem);
@@ -323,89 +219,12 @@ html {
   }
 }
 
-.event-gallery-section {
-  margin-block: var(--size-9, 4rem);
+.image-left {
+  gap: var(--size-7);
+  place-items: center;
+  margin-block-start: var(--size-5);
 
-  .gallery-intro {
-    max-inline-size: var(--size-content-3, 70ch);
-  }
-}
-
-.event-gallery-grid {
-  display: grid;
-  /* 1. Fluid columns that auto-wrap without media queries */
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  grid-auto-rows: 220px; /* Establishes a strict underlying grid cell height */
-  gap: var(--size-4, 1.25rem);
-
-  /* 2. Desktop Mosaic Feature Layout rules */
-  @media (min-width: 850px) {
-    grid-template-columns: repeat(4, 1fr); /* 4-column master layout */
-
-    /* Utility tracks that make specific images pop out into unique shapes */
-    .item-wide {
-      grid-column: span 2; /* Spans across two column boxes horizontally */
-    }
-
-    .item-tall {
-      grid-row: span 2; /* Stretches down through two track cells vertically */
-    }
-  }
-
-  .gallery-item {
-    position: relative;
-    margin: 0;
-    overflow: hidden;
-    border-radius: var(--radius-2);
-    box-shadow: var(--shadow-2);
-    cursor: pointer;
-
-    /* 3. Smooth animation triggers */
-    transition: transform 0.25s var(--ease-2);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Absolutely essential to keep images from warping */
-      object-position: center;
-      transition: filter 0.3s ease;
-    }
-
-    /* 4. Elegant Text Caption Overlays */
-    figcaption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-      color: #fff;
-      padding: var(--size-4) var(--size-3) var(--size-3);
-      font-size: var(--font-size-1);
-      font-family: 'Merriweather Sans', sans-serif;
-      font-weight: 600;
-      opacity: 0; /* Hidden by default */
-      transform: translateY(10px);
-      transition:
-        transform 0.25s var(--ease-2),
-        opacity 0.25s var(--ease-2);
-
-      /* Overriding the default Open Props narrow caption restrictions safely */
-      max-inline-size: 100% !important;
-    }
-
-    /* 5. Hover Hover Interactions */
-    &:hover {
-      transform: scale(1.015);
-      box-shadow: var(--shadow-3);
-
-      img {
-        filter: brightness(0.85);
-      }
-
-      figcaption {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+  @media (min-width: 560px) {
+    grid-template-columns: 1fr 2fr;
   }
 }

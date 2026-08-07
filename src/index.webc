@@ -85,7 +85,6 @@ headerAlt: "East bank, Westmuir"
     <cta-volunteer
       buttonlabel="Read more"
       buttonurl="/about/volunteers/"
-      xwebc:if="cta"
     ></cta-volunteer>
   </div>
 </div>
@@ -95,7 +94,7 @@ headerAlt: "East bank, Westmuir"
 { --border-color: var(--primary);
   border-radius: var(--radius-3);
   p {max-inline-size:95ch;}
-margin-block: var(--size-fluid-3);
+  margin-block: var(--size-fluid-3);
 }
   .section-cards {
     --section-color: light-dark(var(--grey-9), var(--grey-2));

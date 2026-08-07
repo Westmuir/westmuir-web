@@ -10,7 +10,7 @@ cardType: hall
 
 <div class="content-grid flow">
   <div class="craft-club breakout">
-    <h2 class="craft-title">Westmuir Hall</h2>
+    <h2 class="cc-craft-title">Westmuir Hall</h2>
 
     <div class="craft-club-wrapper">
       <div>
@@ -22,19 +22,44 @@ cardType: hall
         <div>Tel. 01575 573314 for more details.</div>
       </div>
       <figure class="figure ml-12 max-w-sm d-ib">
-        <img class="bg-yellow-100 sm-p-3 shadow-lg rotate-r" src="/blog/craft-club/craft-sew-2.png" alt="Craft sew" />
+        <img
+          class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
+          src="/blog/craft-club/craft-sew-2.png"
+          alt="Craft sew"
+        />
       </figure>
     </div>
 
-    <figure class="lg-fl figure mr-12 max-w-sm">
-      <img class="bg-yellow-100 sm-p-3 shadow-lg rotate-l" src="/blog/craft-club/craft-paint-2.png" alt="Craft paint" />
-    </figure>
+    <div class="cc-image-left">
+      <figure class="figure">
+        <img
+          class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
+          src="/blog/craft-club/craft-paint-2.png"
+          alt="Craft paint"
+        />
+      </figure>
 
-    <div class="mt-3">
-      This is a group by Lillian McDownie and Christine Cobb who run a Creative craft club in the village hall on Monday
-      afternoons.
+      <div>
+        This is a group by Lillian McDownie and Christine Cobb who run a
+        Creative craft club in the village hall on Monday afternoons.
+      </div>
     </div>
-
-    <div class="clear-both"></div>
   </div>
 </div>
+
+<style webc:keep>
+  .cc-craft-title {
+    font-family: "Comic Neue", sans-serif;
+    font-size: 2rem;
+  }
+
+  .cc-image-left {
+    display: grid;
+    gap: var(--size-7);
+    place-items: center;
+    margin-block-start: var(--size-5);
+    @media (min-width: 700px) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+</style>

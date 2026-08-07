@@ -27,3 +27,48 @@ cardType: hall
     <p>19:30</p>
   </div>
 </div>
+
+<style>
+  /* A section to contain image beside text */
+  .dark .agm-info {
+    --agm-border-color: yellow;
+  }
+
+  .agm-info {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--agm-border-color, purple);
+    border-radius: 15px;
+    padding: 2rem;
+    align-items: center;
+
+    hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .agm-info-text {
+      font-size: 1.5rem;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .agm-time {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  .agm-heading {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .agm-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+</style>

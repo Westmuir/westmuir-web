@@ -8,6 +8,11 @@
     scroll-behavior: smooth;
     /* The Modern Safetynet: Stops horizontal "waggle" on mobile */
     overflow-x: clip;
+    color-scheme: light dark;
+
+    /* 2. Text Inflation Defenses */
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
   }
 
   img,
@@ -54,6 +59,7 @@
   :root {
     --woodland-info-font: 'Merriweather Sans', sans-serif;
     --size-content-3: 75ch;
+    --max-inline-size: 95ch;
     /* Create your own dynamic, theme-aware equivalent string */
     --theme-gradient: linear-gradient(135deg, var(--color-3), var(--color-9));
   }
@@ -62,14 +68,26 @@
     min-block-size: 100svh;
     font-family: var(--font-humanist);
     line-height: var(--font-lineheight-3, 1.6);
-    color: var(--text-1);
-    background-color: var(--surface-1);
-    /*
-      Keep this manually.
-      It ensures Mac users see your Humanist font rendered beautifully
-      and uniformly without the artificial subpixel bulk.
-    */
+
+    /* 1. OPUI Automated Color Pairings */
+    background-color: var(--surface-default);
+    color: var(--text-primary);
+
+    /* 2. Smooth Light/Dark Mode Ambient Transition */
+    transition:
+      background-color 0.2s var(--ease-2, ease),
+      color 0.2s var(--ease-2, ease);
+
+    /* 3. Rendering Enhancements */
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Inherits your organic humanist font, while stabilizing mobile layout bounds */
+  h1,
+  h2,
+  h3 {
+    font-weight: var(--font-weight-7); /* Resolves irradiation issues on OLED/Retina displays */
+    letter-spacing: var(--font-letterspacing-1); /* Conserves horizontal space, preventing bad line-wraps on mobile */
   }
 
   .page-layout {
@@ -85,7 +103,8 @@
     grid-template-columns:
       [full-width-start] minmax(var(--size-5), 1fr)
       [breakout-start] minmax(0, var(--size-10))
-      [content-start] minmax(0, 75ch) [content-end]
+      [content-start] minmax(0, var(--max-inline-size))
+      [content-end]
       minmax(0, var(--size-10)) [breakout-end]
       minmax(var(--size-5), 1fr) [full-width-end];
   }
