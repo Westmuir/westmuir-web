@@ -58,6 +58,7 @@
       <!-- 1. The layout automatically renders the header component using page front matter -->
       <page-header
         webc:if="$data.headerImage"
+        :@pos="$data.headerPosition"
         :@title="$data.title"
         :@description="$data.description"
         :@image="$data.headerImage"

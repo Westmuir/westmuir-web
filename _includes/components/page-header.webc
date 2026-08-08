@@ -1,12 +1,13 @@
 <!-- _components/page-header.webc -->
-<figure class="page-header" webc:root="override">
-  <!-- 1. Render the background image layer only if a path is provided -->
+<figure class="page-header" :position="pos" webc:root="override">
+  <!-- _components/page-header.webc -->
   <picture webc:if="image">
     <img
       :src="image"
       :alt="alt || 'Section header graphic'"
-      width="1200"
-      height="300"
+      width="1980"
+      height="337"
+      sizes="100vw"
     />
   </picture>
 
@@ -31,21 +32,35 @@
     /* Prevent text hugging the screen edges on small viewports */
     padding-inline: var(--size-5);
 
-    > picture {
+    /* > picture { */
+    /*   position: absolute; */
+    /*   top: 0; */
+    /*   left: 0; */
+    /*   right: 0; */
+    /*   height: 100%; */
+    /*   z-index: 1; */
+    /* } */
+
+    img {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
+      bottom: 0; /* Replaces height: 100% to fill the bounding relative box cleanly */
+      width: 100%;
       height: 100%;
       z-index: 1;
+      object-fit: cover;
+      filter: brightness(0.75);
+      object-position: bottom; /* Fallback default */
+    }
+    /* Keep your custom attribute position selectors working nicely */
 
-      > img[width][height] {
-        height: 100%; /* Or height: inherit; */
-        width: 100%;
-        object-fit: cover;
-        object-position: bottom;
-        filter: brightness(0.75);
-      }
+    &[position="top"] img {
+      object-position: top;
+    }
+    &[position="center"] img {
+      object-position: center;
     }
 
     .page-header-info {
