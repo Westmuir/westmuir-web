@@ -11,25 +11,26 @@ headerPosition: center
 
 <!-- <section-cards webc:nokeep :@cards="homeCards" class="breakout"></section-cards> -->
 
-<div class="ui-card ui-outlined color-outline breakout">
-  <hgroup>
-    <h3>VILLAGE HALL NEWS</h3>
-    <p>What a year it has been for the hall committee! New walls, windows and
-      doors (and soon a new roof) outside and inside new curtains, chairs and
-      crockery, much paid for through successfully applied for grants. All
-      that's needed now are some new people to join the committee to help take
-      all the good work forward. We meet about four times a year and run a few
-      fund-raising events to keep the hall coffers in good shape. Please
-      consider joining us, we're friendly, open to new ideas and would be
-      delighted to see you!
-      <div class="home-cta-text-footer">
-        For more information please contact Ann (
-        <a href="mailto: volunteers@westmuir.org.uk"
-          >volunteers&#64;westmuir.org.uk </a
-        >)
-      <!-- or join us at the AGM on 16th June, at 7.30pm. Thanks! -->
-    </p>
-  </hgroup></div>
+<!-- <div class="ui-card ui-outlined color-outline breakout"> -->
+<!--   <hgroup> -->
+<!--     <h3>VILLAGE HALL NEWS</h3> -->
+<!--     <p>What a year it has been for the hall committee! New walls, windows and -->
+<!--       doors (and soon a new roof) outside and inside new curtains, chairs and -->
+<!--       crockery, much paid for through successfully applied for grants. All -->
+<!--       that's needed now are some new people to join the committee to help take -->
+<!--       all the good work forward. We meet about four times a year and run a few -->
+<!--       fund-raising events to keep the hall coffers in good shape. Please -->
+<!--       consider joining us, we're friendly, open to new ideas and would be -->
+<!--       delighted to see you! -->
+<!--       <div class="home-cta-text-footer"> -->
+<!--         For more information please contact Ann ( -->
+<!--         <a href="mailto: volunteers@westmuir.org.uk" -->
+<!--           >volunteers&#64;westmuir.org.uk </a -->
+<!--         >) -->
+<!--       <!-- or join us at the AGM on 16th June, at 7.30pm. Thanks! -->
+-->
+<!--     </p> -->
+<!--   </hgroup></div> -->
 <h2 class="main-heading">Latest</h2>
 
 <postslist-articles
@@ -88,13 +89,15 @@ headerPosition: center
   </div>
 </div>
 
-<style >
-.color-outline
-{ --border-color: var(--primary);
-  border-radius: var(--radius-3);
-  p {max-inline-size:95ch;}
-  margin-block: var(--size-fluid-3);
-}
+<style>
+  .color-outline {
+    --border-color: var(--primary);
+    border-radius: var(--radius-3);
+    p {
+      max-inline-size: 95ch;
+    }
+    margin-block: var(--size-fluid-3);
+  }
   .section-cards {
     --section-color: light-dark(var(--grey-9), var(--grey-2));
     --section-bg: light-dark(var(--cyan-2), var(--cyan-9));
@@ -109,7 +112,6 @@ headerPosition: center
     text-shadow: rgb(0 0 0 / 20%) 0 0 3px;
     border-bottom: 1px solid #313544;
   }
-
 
   .section-logos {
     max-width: 75ch;
@@ -132,5 +134,4 @@ headerPosition: center
       justify-content: center;
     }
   }
-
 </style>
