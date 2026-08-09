@@ -77,6 +77,7 @@
     aspect-ratio: var(--ratio-landscape);
     border-radius: var(--radius-2);
     box-shadow: var(--shadow-3);
+    max-inline-size: 30ch;
   }
 
   .editorial-mesh figcaption {

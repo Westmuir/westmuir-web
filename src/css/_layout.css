@@ -114,6 +114,15 @@
       [content-end]
       minmax(0, var(--size-10)) [breakout-end]
       minmax(var(--size-5), 1fr) [full-width-end];
+
+    @media (max-width: 600px) {
+      grid-template-columns:
+        [full-width-start] minmax(1rem, 1fr)
+        [breakout-start] 0
+        [content-start] minmax(0, 100%) [content-end]
+        0 [breakout-end]
+        minmax(1rem, 1fr) [full-width-end];
+    }
   }
 
   .page-layout > * {
