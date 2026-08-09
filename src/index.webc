@@ -9,8 +9,6 @@ headerAlt: "East bank, Westmuir"
 headerPosition: center
 ---
 
-<!-- <section-cards webc:nokeep :@cards="homeCards" class="breakout"></section-cards> -->
-
 <!-- <div class="ui-card ui-outlined color-outline breakout"> -->
 <!--   <hgroup> -->
 <!--     <h3>VILLAGE HALL NEWS</h3> -->
