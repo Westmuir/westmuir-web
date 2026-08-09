@@ -16,9 +16,9 @@ endOfYear: false
   >
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2018-february/image-1.png" alt="" />
-      <img src="/poems/2018-february/image-6.png" alt="" />
-      <img src="/poems/2018-february/image-8.png" alt="" />
+      <img src="/poems/2018-february/image-1.avif" alt="" />
+      <img src="/poems/2018-february/image-6.avif" alt="" />
+      <img src="/poems/2018-february/image-8.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -47,9 +47,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2018-february/image-3.png" alt="" />
-      <img src="/poems/2018-february/image-5.png" alt="" />
-      <img src="/poems/2018-february/image-9.png" alt="" />
+      <img src="/poems/2018-february/image-3.avif" alt="" />
+      <img src="/poems/2018-february/image-5.avif" alt="" />
+      <img src="/poems/2018-february/image-9.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -78,9 +78,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2018-february/image-11.png" alt="" />
-      <img src="/poems/2018-february/image-13.png" alt="" />
-      <img src="/poems/2018-february/image-15.png" alt="" />
+      <img src="/poems/2018-february/image-11.avif" alt="" />
+      <img src="/poems/2018-february/image-13.avif" alt="" />
+      <img src="/poems/2018-february/image-15.avif" alt="" />
     </div>
   </poem-grid>
 </div>

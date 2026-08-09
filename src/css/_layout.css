@@ -58,8 +58,9 @@
 
   :root {
     --woodland-info-font: 'Merriweather Sans', sans-serif;
-    --size-content-3: 75ch;
-    --max-inline-size: 95ch;
+    --max-inline-size: 90ch;
+    --size-content-3: var(--max-inline-size);
+
     /* Create your own dynamic, theme-aware equivalent string */
     --theme-gradient: linear-gradient(135deg, var(--color-3), var(--color-9));
   }
@@ -126,6 +127,11 @@
 
   .full-width {
     grid-column: full-width-start/full-width-end;
+    /*
+      Guarantees that a full-bleed panoramic flora photograph
+      stretches across the exact layout inline width of the short screen track.
+    */
+    inline-size: 100vi;
   }
 
   /* Minimalist Hybrid Em Flow */

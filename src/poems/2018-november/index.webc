@@ -38,7 +38,7 @@ endOfYear: false
     <div slot="col-3-images">
       <div></div>
 
-      <img src="/poems/2018-november/image-1.png" alt="" slot="header-tr" />
+      <img src="/poems/2018-november/image-1.avif" alt="" slot="header-tr" />
       <div></div>
     </div>
 

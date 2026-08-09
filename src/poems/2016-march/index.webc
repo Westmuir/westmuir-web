@@ -12,15 +12,15 @@ endOfYear: false
   <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
     <!-- Header Section -->
     <div slot="header-tl">
-      <img src="/poems/2016-march/image-0.png" alt="" />
+      <img src="/poems/2016-march/image-0.avif" alt="" />
       <!-- <img -->
-      <!--   src="/poems/2016-march/march-borrow.png" -->
+      <!--   src="/poems/2016-march/march-borrow.avif" -->
       <!--   alt="" -->
       <!--   style="border: none; max-width: 200px" -->
       <!-- /> -->
     </div>
     <img
-      src="/poems/2016-march/march-borrow.png"
+      src="/poems/2016-march/march-borrow.avif"
       style="border: none; max-width: 200px"
       alt=""
       slot="header-tr"
@@ -28,8 +28,8 @@ endOfYear: false
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2016-march/image-8.png" alt="" />
-      <img src="/poems/2016-march/image-7.png" alt="" />
+      <img src="/poems/2016-march/image-8.avif" alt="" />
+      <img src="/poems/2016-march/image-7.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -72,9 +72,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2016-march/image-1.png" alt="" />
-      <img src="/poems/2016-march/image-4.png" alt="" />
-      <img src="/poems/2016-march/image-3.png" alt="" />
+      <img src="/poems/2016-march/image-1.avif" alt="" />
+      <img src="/poems/2016-march/image-4.avif" alt="" />
+      <img src="/poems/2016-march/image-3.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -110,9 +110,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2016-march/image-2.png" alt="" />
-      <img src="/poems/2016-march/image-5.png" alt="" />
-      <img src="/poems/2016-march/image-6.png" alt="" />
+      <img src="/poems/2016-march/image-2.avif" alt="" />
+      <img src="/poems/2016-march/image-5.avif" alt="" />
+      <img src="/poems/2016-march/image-6.avif" alt="" />
     </div>
   </poem-grid>
 </div>

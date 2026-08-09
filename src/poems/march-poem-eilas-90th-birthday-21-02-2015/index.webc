@@ -19,7 +19,7 @@ endOfYear: false
     <div slot="header-tl"></div>
     <div slot="header-tr">
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-8.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-8.avif"
         alt=""
       />
     </div>
@@ -27,15 +27,15 @@ endOfYear: false
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-5.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-5.avif"
         alt=""
       />
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-6.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-6.avif"
         alt=""
       />
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-4.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-4.avif"
         alt=""
       />
     </div>
@@ -74,15 +74,15 @@ endOfYear: false
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-2.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-2.avif"
         alt=""
       />
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-3.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-3.avif"
         alt=""
       />
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-1.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-1.avif"
         alt=""
       />
     </div>
@@ -127,16 +127,16 @@ endOfYear: false
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-0.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-0.avif"
         alt=""
       />
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-9.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-9.avif"
         alt=""
       />
 
       <img
-        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-7.png"
+        src="/poems/march-poem-eilas-90th-birthday-21-02-2015/image-7.avif"
         alt=""
       />
     </div>

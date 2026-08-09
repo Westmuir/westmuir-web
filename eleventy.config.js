@@ -79,8 +79,8 @@ export default async function (eleventyConfig) {
     urlPath: '/img/',
 
     // 🚀 DROP LATEST JPEG: WebP and AVIF handle 100% of modern web layout demands!
-    formats: ['avif', 'webp'],
-    widths: [1200, 'auto'],
+    formats: ['avif'],
+    widths: [400, 800, 'auto'],
     htmlOptions: {
       imgAttributes: {
         loading: 'lazy',

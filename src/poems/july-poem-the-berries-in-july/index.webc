@@ -13,27 +13,27 @@ endOfYear: false
     <!-- Header Section -->
     <div slot="header-tl">
       <img
-        src="/poems/july-poem-the-berries-in-july/image-4.png"
+        src="/poems/july-poem-the-berries-in-july/image-4.avif"
         alt=""
         slot="header-tl"
       />
       <img
-        src="/poems/july-poem-the-berries-in-july/image-11.png"
+        src="/poems/july-poem-the-berries-in-july/image-11.avif"
         alt=""
         slot="header-tl"
       />
     </div>
     <img
-      src="/poems/july-poem-the-berries-in-july/image-8.png"
+      src="/poems/july-poem-the-berries-in-july/image-8.avif"
       alt=""
       slot="header-tr"
     />
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/july-poem-the-berries-in-july/image-5.png" alt="" />
-      <img src="/poems/july-poem-the-berries-in-july/image-6.png" alt="" />
-      <img src="/poems/july-poem-the-berries-in-july/image-7.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-5.avif" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-6.avif" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-7.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -76,9 +76,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/july-poem-the-berries-in-july/image-0.png" alt="" />
-      <img src="/poems/july-poem-the-berries-in-july/image-3.png" alt="" />
-      <img src="/poems/july-poem-the-berries-in-july/image-1.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-0.avif" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-3.avif" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-1.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -114,9 +114,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/july-poem-the-berries-in-july/image-12.png" alt="" />
-      <img src="/poems/july-poem-the-berries-in-july/image-10.png" alt="" />
-      <img src="/poems/july-poem-the-berries-in-july/image-9.png" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-12.avif" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-10.avif" alt="" />
+      <img src="/poems/july-poem-the-berries-in-july/image-9.avif" alt="" />
     </div>
   </poem-grid>
 </div>

@@ -15,14 +15,14 @@ endOfYear: false
     :theme="bgTheme"
   >
     <!-- Header Section -->
-    <img src="/poems/2017-november/image-13.png" alt="" slot="header-tl" />
-    <img src="/poems/2017-november/image-12.png" alt="" slot="header-tr" />
+    <img src="/poems/2017-november/image-13.avif" alt="" slot="header-tl" />
+    <img src="/poems/2017-november/image-12.avif" alt="" slot="header-tr" />
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2017-november/image-14.png" alt="" />
-      <img src="/poems/2017-november/image-15.png" alt="" />
-      <img src="/poems/2017-november/image-3.png" alt="" />
+      <img src="/poems/2017-november/image-14.avif" alt="" />
+      <img src="/poems/2017-november/image-15.avif" alt="" />
+      <img src="/poems/2017-november/image-3.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -58,10 +58,10 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2017-november/image-1.png" alt="" />
-      <img src="/poems/2017-november/image-11.png" alt="" />
-      <img src="/poems/2017-november/image-4.png" alt="" />
-      <img src="/poems/2017-november/image-16.png" alt="" />
+      <img src="/poems/2017-november/image-1.avif" alt="" />
+      <img src="/poems/2017-november/image-11.avif" alt="" />
+      <img src="/poems/2017-november/image-4.avif" alt="" />
+      <img src="/poems/2017-november/image-16.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -90,9 +90,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2017-november/image-6.png" alt="" />
-      <img src="/poems/2017-november/image-8.png" alt="" />
-      <img src="/poems/2017-november/image-10.png" alt="" />
+      <img src="/poems/2017-november/image-6.avif" alt="" />
+      <img src="/poems/2017-november/image-8.avif" alt="" />
+      <img src="/poems/2017-november/image-10.avif" alt="" />
     </div>
   </poem-grid>
 </div>

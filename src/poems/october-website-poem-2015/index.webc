@@ -12,9 +12,9 @@ endOfYear: false
   <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/october-website-poem-2015/image-6.png" alt="" />
-      <img src="/poems/october-website-poem-2015/image-7.png" alt="" />
-      <img src="/poems/october-website-poem-2015/apples.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image-6.avif" alt="" />
+      <img src="/poems/october-website-poem-2015/image-7.avif" alt="" />
+      <img src="/poems/october-website-poem-2015/apples.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -57,10 +57,10 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/october-website-poem-2015/image-1.png" alt="" />
-      <img src="/poems/october-website-poem-2015/image-0.png" alt="" />
-      <img src="/poems/october-website-poem-2015/image-2.png" alt="" />
-      <img src="/poems/october-website-poem-2015/image-3.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image-1.avif" alt="" />
+      <img src="/poems/october-website-poem-2015/image-0.avif" alt="" />
+      <img src="/poems/october-website-poem-2015/image-2.avif" alt="" />
+      <img src="/poems/october-website-poem-2015/image-3.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -103,9 +103,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/october-website-poem-2015/image-4.png" alt="" />
-      <img src="/poems/october-website-poem-2015/image.png" alt="" />
-      <img src="/poems/october-website-poem-2015/image-5.png" alt="" />
+      <img src="/poems/october-website-poem-2015/image-4.avif" alt="" />
+      <img src="/poems/october-website-poem-2015/image.avif" alt="" />
+      <img src="/poems/october-website-poem-2015/image-5.avif" alt="" />
     </div>
   </poem-grid>
 </div>

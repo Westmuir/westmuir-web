@@ -1,16 +1,16 @@
 <!-- _components/page-header.webc -->
-<figure class="page-header" webc:root="override">
-  <!-- 1. Render the background image layer only if a path is provided -->
+<figure class="page-header" :position="pos" webc:root="override">
+  <!-- The background image (whether 11ty leaves it naked or wraps it) -->
   <picture webc:if="image">
     <img
       :src="image"
       :alt="alt || 'Section header graphic'"
-      width="1200"
-      height="300"
+      width="1980"
+      sizes="100vw"
     />
   </picture>
 
-  <!-- 2. Text layout content block linked to your central grid boundaries -->
+  <!-- The text overlay content block -->
   <div class="page-header-info">
     <div class="content">
       <h1 @text="title"></h1>
@@ -19,43 +19,52 @@
   </div>
 </figure>
 
-<!-- Move your existing .page-header CSS nested block right in here! -->
 <style>
   .page-header {
-    height: 220px;
+    /* 1. THE PILE: Define a single grid area where everything stacks */
+    display: grid;
+    grid-template-areas: "pile";
+    align-items: center;
+
+    height: clamp(8rem, 15vw, 12rem);
     background-color: var(--primary);
     background-image: var(--themed-gradient-30);
-    display: flex;
-    align-items: center;
-    position: relative;
-    /* Prevent text hugging the screen edges on small viewports */
-    padding-inline: var(--size-5);
+    overflow: hidden; /* Keeps the clip-path / images clean at the edges */
 
-    > picture {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100%;
-      z-index: 1;
-
-      > img[width][height] {
-        height: 100%; /* Or height: inherit; */
-        width: 100%;
-        object-fit: cover;
-        object-position: bottom;
-        filter: brightness(0.75);
-      }
+    /* 2. Assign ALL children layers to the exact same pile area */
+    > picture,
+    > img,
+    .page-header-info {
+      grid-area: pile;
     }
 
-    .page-header-info {
-      z-index: 2;
-      display: flex;
+    /* 3. Style the background graphic layer */
+    img {
       width: 100%;
+      height: 100%;
+      min-height: 0;
+      object-fit: cover;
+      filter: brightness(0.75);
+      object-position: bottom; /* Default fallback */
+    }
 
-      /* MATCH YOUR CENTRAL GRID BOUNDARIES: */
-      /* Set this max-width to match whatever your main content well is (e.g., 1200px or 1440px) */
-      max-inline-size: var(--size-content-3, 1200px);
+    /* Position attributes target the image directly and cleanly */
+    &[position="top"] img {
+      object-position: top;
+    }
+    &[position="center"] img {
+      object-position: center;
+    }
+    &[position="bottom"] img {
+      object-position: bottom;
+    }
+
+    /* 4. Style the text information layer */
+    .page-header-info {
+      display: flex;
+      padding-inline-start: var(--size-7);
+      max-inline-size: var(--size-content-3, 75ch);
+      justify-self: start;
 
       .content {
         flex: 1;
@@ -64,7 +73,6 @@
         flex-direction: column;
         justify-content: center;
         gap: var(--size-2, 8px);
-        z-index: 2;
         background: var(--color-8);
         clip-path: polygon(100% 0, 100% 31%, 92% 100%, 0 100%, 0 0);
         padding: var(--size-3) var(--size-5) var(--size-3) var(--size-4);
@@ -72,7 +80,12 @@
 
         > h1 {
           font-family: "Merriweather Sans", sans-serif;
-          font-size: clamp(1.75rem, 4vw, 2.5rem);
+          font-size: clamp(
+            1.5rem,
+            3.5vw,
+            2.25rem
+          ); /* Tweak sizes slightly for fluid header */
+
           line-height: var(--font-lineheight-1, 1.1);
           font-weight: 800;
           letter-spacing: -0.03em;

@@ -6,108 +6,102 @@ headerImage: "/woodland/walkway-1980.avif"
 headerAlt: "woodland walkway"
 ---
 
-<div class="content-grid flow home-container">
-  <!-- <section-cards -->
-  <!--   webc:nokeep -->
-  <!--   :@cards="collections.sectionCards[$data.page.filePathStem.split('/').filter(Boolean)[0]] || []" -->
-  <!-- ></section-cards> -->
+<editorial-block
+  class="breakoutX"
+  align="right"
+  caption="A unique close-up of a forest fern."
+>
+  <p>
+    Big tussocks of moss, wet birch woodland dripping with lichen, common
+    lizards basking in the sun on the boardwalks, birds flitting, the buzz of
+    insects on wildflowers and the recreation of local people, all this is part
+    of our community woodland.
+  </p>
 
-  <section class="breakout content-image-text">
-    <div class="content-image image-center">
-      <figure class="framed-photo">
-        <img
-          class="framed"
-          src="/woodland/woodland-park.avif"
-          alt="Westmuir Community Woodland"
-        />
-      </figure>
-    </div>
-    <div class="content-text content-text-highlight">
-      <p>
-        Big tussocks of moss, wet birch woodland dripping with lichen, common
-        lizards basking in the sun on the boardwalks, birds flitting, the buzz
-        of insects on wildflowers and the recreation of local people, all this
-        is part of our community woodland.
-      </p>
+  <p>
+    Opened in 2007 but a good few years in the making, the Westmuir Community
+    Woodland Park was set up by a few visionary local people (give names?) to be
+    a peaceful amenity for the village and to protect and enhance the nature
+    that lives there. The Westmuir Community Development Trust was set up to
+    develop and look after the community woodland and it is still doing this
+    today.
+  </p>
 
-      <p>
-        Opened in 2007 but a good few years in the making, the Westmuir
-        Community Woodland Park was set up by a few visionary local people (give
-        names?) to be a peaceful amenity for the village and to protect and
-        enhance the nature that lives there. The Westmuir Community Development
-        Trust was set up to develop and look after the community woodland and it
-        is still doing this today.
-      </p>
+  <!-- Explicitly pass your own image directly into the named slot -->
+  <img
+    slot="image"
+    :src="$data.page.url + '/woodland-park.avif'"
+    alt="Westmuir Community Woodland"
+    width="1980"
+    height="1213"
+    sizes="(min-width: 50rem) 35ch, 90vw"
+  />
+</editorial-block>
 
-      <p>
-        This area of nearly 9 acres is leased from the Lindertis Estate and
-        during the setting-up, grants were received from various organisations
-        to create a network of all-ability paths, signage, a car park,
-        recycled-plastic boardwalk over wet areas and fencing. Since then, there
-        have been many hundreds of volunteer hours spent planting trees,
-        maintaining paths, building drystone entrance walls, planting
-        wildflowers and putting up bird boxes. The kickaround area has been
-        mowed each spring, summer and autumn by volunteers but now we are
-        delighted to have the help of the Angus Council Justice Service
-        Community Payback Team.
-      </p>
-    </div>
-  </section>
+<p>
+  This area of nearly 9 acres is leased from the Lindertis Estate and during the
+  setting-up, grants were received from various organisations to create a
+  network of all-ability paths, signage, a car park, recycled-plastic boardwalk
+  over wet areas and fencing. Since then, there have been many hundreds of
+  volunteer hours spent planting trees, maintaining paths, building drystone
+  entrance walls, planting wildflowers and putting up bird boxes. The kickaround
+  area has been mowed each spring, summer and autumn by volunteers but now we
+  are delighted to have the help of the Angus Council Justice Service Community
+  Payback Team.
+</p>
+<div>
+  There have been various phases of tree planting: the natural wet birch
+  woodland has been enhanced by the planting of alder (which love this wet
+  site!), rowan, aspen, hazel, hawthorn, gean or wild cherry and a scattering of
+  oak. Sadly, we lost our largest Scots pine tree to Storm Arwen but others have
+  been added. We have also had donations of crab apple and elder trees so we
+  will wait to see how they like our woodland site.
+</div>
 
-  <section class="content-text-block">
-    <div>
-      There have been various phases of tree planting: the natural wet birch
-      woodland has been enhanced by the planting of alder (which love this wet
-      site!), rowan, aspen, hazel, hawthorn, gean or wild cherry and a
-      scattering of oak. Sadly, we lost our largest Scots pine tree to Storm
-      Arwen but others have been added. We have also had donations of crab apple
-      and elder trees so we will wait to see how they like our woodland site.
-    </div>
+<div>
+  We have tried to add other native flowering plant species, like snowdrop,
+  native daffodils & bluebells in drier locations, we will see how they settle
+  and whether they thrive. The wonderful late summer display of devils-bit
+  scabious flowers turbo-charges the nectar and pollen on offer to insects, and
+  earlier in the flowering season the star flower of chickweed wintergreen shows
+  this area has never been ploughed.
+</div>
 
-    <div>
-      We have tried to add other native flowering plant species, like snowdrop,
-      native daffodils & bluebells in drier locations, we will see how they
-      settle and whether they thrive. The wonderful late summer display of
-      devils-bit scabious flowers turbo-charges the nectar and pollen on offer
-      to insects, and earlier in the flowering season the star flower of
-      chickweed wintergreen shows this area has never been ploughed.
-    </div>
+<div>
+  In fact, many years ago this area was used as a gathering point for cattle
+  drovers before heading to markets near and far.
+</div>
 
-    <div>
-      In fact, many years ago this area was used as a gathering point for cattle
-      drovers before heading to markets near and far.
-    </div>
+<div>
+  We’ve been fortunate to have the support of experts in plants, bugs, birds,
+  fungi and herpetofauna (reptiles and amphibians to you and me!)
+</div>
 
-    <div>
-      We’ve been fortunate to have the support of experts in plants, bugs,
-      birds, fungi and herpetofauna (reptiles and amphibians to you and me!)
-    </div>
+<div>
+  Since the beginning volunteers have been the life blood of our park. Ordinary,
+  local people have brought ideas and energy in an extraordinary way. Could you
+  be part of our team? Please consider volunteering in whatever way you can,
+  it’s a place that gets under your skin!
+</div>
 
-    <div>
-      Since the beginning volunteers have been the life blood of our park.
-      Ordinary, local people have brought ideas and energy in an extraordinary
-      way. Could you be part of our team? Please consider volunteering in
-      whatever way you can, it’s a place that gets under your skin!
-    </div>
+<div>
+  Ending on a high, in 2024 we were encouraged to enter the Scotland’s Finest
+  Woods competition in the Best Small Community Woodland category. After a visit
+  from the judge and a long wait, we finally heard we won! A representative of
+  the Westmuir Community Development Trust went to the Scottish Parliament at
+  Holyrood in November 2024 to be given the award- a lovely cherrywood plaque.
+  We also received £1,000 to spend on looking after the woodland.
+</div>
 
-    <div>
-      Ending on a high, in 2024 we were encouraged to enter the Scotland’s
-      Finest Woods competition in the Best Small Community Woodland category.
-      After a visit from the judge and a long wait, we finally heard we won! A
-      representative of the Westmuir Community Development Trust went to the
-      Scottish Parliament at Holyrood in November 2024 to be given the award- a
-      lovely cherrywood plaque. We also received £1,000 to spend on looking
-      after the woodland.
-    </div>
-
-    <div>
-      This was the most amazing boost to all the volunteers, past and present,
-      who have helped care for this very special place.
-    </div>
-  </section>
+<div>
+  This was the most amazing boost to all the volunteers, past and present, who
+  have helped care for this very special place.
 </div>
 
 <style>
+  editorial-block {
+    --pane-bg: hsl(47.1, 83.5%, 59.6%);
+  }
   .home-container {
     --section-color: light-dark(var(--grey-9), var(--grey-2));
     --section-bg: light-dark(var(--cyan-2), var(--cyan-9));

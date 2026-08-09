@@ -13,40 +13,40 @@ endOfYear: false
     <!-- Header Section -->
     <div slot="header-tl">
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/heather.png"
+        src="/poems/august-poem-the-heather-hills-of-august/heather.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-8.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-8.avif"
         alt=""
       />
     </div>
     <div slot="header-tr">
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-1.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-1.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-7.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-7.avif"
         alt=""
       />
     </div>
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-3.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-3.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-6.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-6.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-4.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-4.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/ling.png"
+        src="/poems/august-poem-the-heather-hills-of-august/ling.avif"
         alt=""
       />
     </div>
@@ -85,15 +85,15 @@ endOfYear: false
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-2.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-2.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-3.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-3.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-5.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-5.avif"
         alt=""
       />
     </div>
@@ -125,15 +125,15 @@ endOfYear: false
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-11.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-11.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-9.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-9.avif"
         alt=""
       />
       <img
-        src="/poems/august-poem-the-heather-hills-of-august/image-13.png"
+        src="/poems/august-poem-the-heather-hills-of-august/image-13.avif"
         alt=""
       />
     </div>

@@ -1,0 +1,109 @@
+<!-- _components/page-header.webc -->
+<figure class="page-header" :position="pos" webc:root="override">
+  <!-- _components/page-header.webc -->
+  <picture webc:if="image">
+    <img
+      :src="image"
+      :alt="alt || 'Section header graphic'"
+      width="1980"
+      height="337"
+      sizes="100vw"
+    />
+  </picture>
+
+  <!-- 2. Text layout content block linked to your central grid boundaries -->
+  <div class="page-header-info">
+    <div class="content">
+      <h1 @text="title"></h1>
+      <p webc:if="description" @text="description"></p>
+    </div>
+  </div>
+</figure>
+
+<!-- Move your existing .page-header CSS nested block right in here! -->
+<style>
+  .page-header {
+    height: 220px;
+    background-color: var(--primary);
+    background-image: var(--themed-gradient-30);
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Prevent text hugging the screen edges on small viewports */
+    padding-inline: var(--size-5);
+
+    /* > picture { */
+    /*   position: absolute; */
+    /*   top: 0; */
+    /*   left: 0; */
+    /*   right: 0; */
+    /*   height: 100%; */
+    /*   z-index: 1; */
+    /* } */
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; /* Replaces height: 100% to fill the bounding relative box cleanly */
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      object-fit: cover;
+      filter: brightness(0.75);
+      object-position: bottom; /* Fallback default */
+    }
+    /* Keep your custom attribute position selectors working nicely */
+
+    &[position="top"] img {
+      object-position: top;
+    }
+    &[position="center"] img {
+      object-position: center;
+    }
+
+    .page-header-info {
+      z-index: 2;
+      display: flex;
+      width: 100%;
+
+      /* MATCH YOUR CENTRAL GRID BOUNDARIES: */
+      /* Set this max-width to match whatever your main content well is (e.g., 1200px or 1440px) */
+      max-inline-size: var(--size-content-3, 1200px);
+
+      .content {
+        flex: 1;
+        display: flex;
+        max-width: 560px;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--size-2, 8px);
+        z-index: 2;
+        background: var(--color-8);
+        clip-path: polygon(100% 0, 100% 31%, 92% 100%, 0 100%, 0 0);
+        padding: var(--size-3) var(--size-5) var(--size-3) var(--size-4);
+        width: 95%;
+
+        > h1 {
+          font-family: "Merriweather Sans", sans-serif;
+          font-size: clamp(1.75rem, 4vw, 2.5rem);
+          line-height: var(--font-lineheight-1, 1.1);
+          font-weight: 800;
+          letter-spacing: -0.03em;
+          color: var(--gray-2);
+          text-shadow: 0 var(--size-1) var(--size-2)
+            color-mix(in oklch, var(--color-1) 35%, transparent);
+        }
+
+        > p {
+          font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+          max-inline-size: 100%;
+          color: var(--gray-2);
+          font-weight: 500;
+          padding-inline-end: var(--size-6, 2rem);
+        }
+      }
+    }
+  }
+</style>

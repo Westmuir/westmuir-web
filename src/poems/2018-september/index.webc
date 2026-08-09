@@ -15,14 +15,14 @@ endOfYear: false
     :theme="bgTheme"
   >
     <!-- Header Section -->
-    <img src="/poems/2018-september/image-1.png" alt="" slot="header-tl" />
-    <img src="/poems/2018-september/image-5.png" alt="" slot="header-tr" />
+    <img src="/poems/2018-september/image-1.avif" alt="" slot="header-tl" />
+    <img src="/poems/2018-september/image-5.avif" alt="" slot="header-tr" />
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
       <div></div>
-      <img src="/poems/2018-september/image-13.png" alt="" />
-      <img src="/poems/2018-september/image-10.png" alt="" />
+      <img src="/poems/2018-september/image-13.avif" alt="" />
+      <img src="/poems/2018-september/image-10.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -51,9 +51,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2018-september/image-3.png" alt="" />
-      <img src="/poems/2018-september/image-7.png" alt="" />
-      <img src="/poems/2018-september/image-12.png" alt="" />
+      <img src="/poems/2018-september/image-3.avif" alt="" />
+      <img src="/poems/2018-september/image-7.avif" alt="" />
+      <img src="/poems/2018-september/image-12.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -75,8 +75,8 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2018-september/image-9.png" alt="" />
-      <img src="/poems/2018-september/image-14.png" alt="" />
+      <img src="/poems/2018-september/image-9.avif" alt="" />
+      <img src="/poems/2018-september/image-14.avif" alt="" />
     </div>
   </poem-grid>
 </div>

@@ -11,7 +11,7 @@ endOfYear: false
   <poem-grid class="wide-text" :title="poemTitle" :author="author" :theme="bgTheme">
     <!-- Header Section -->
     <div slot="header-tl">
-      <img src="/poems/2018-october/image-1.png" alt="" " />
+      <img src="/poems/2018-october/image-1.avif" alt="" " />
 
       <svg width="158.33" height="79.333" version="1.1" viewBox="0 0 158.33 79.333" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
@@ -80,14 +80,14 @@ endOfYear: false
     <text transform="matrix(1.3333 0 0 1.3333 836.2 115.49)" clip-path="url(#clipPath156)" xml:space="preserve"><tspan x="0" y="0" fill="#000000" font-family="'Liberation Mono'" font-size="8px" font-style="italic"> </tspan></text>
   </g>
 </svg>
-      <img src="/poems/2018-october/image-7.png" alt=""  />
+      <img src="/poems/2018-october/image-7.avif" alt=""  />
     </div>
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2018-october/image-8.png" alt="" />
-      <img src="/poems/2018-october/image-17.png" alt="" />
-      <img src="/poems/2018-october/image-3.png" alt="" />
+      <img src="/poems/2018-october/image-8.avif" alt="" />
+      <img src="/poems/2018-october/image-17.avif" alt="" />
+      <img src="/poems/2018-october/image-3.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -115,9 +115,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2018-october/image-10.png" alt="" />
-      <img src="/poems/2018-october/image-5.png" alt="" />
-      <img src="/poems/2018-october/image-12.png" alt="" />
+      <img src="/poems/2018-october/image-10.avif" alt="" />
+      <img src="/poems/2018-october/image-5.avif" alt="" />
+      <img src="/poems/2018-october/image-12.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -146,9 +146,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2018-october/image-13.png" alt="" />
-      <img src="/poems/2018-october/image-14.png" alt="" />
-      <img src="/poems/2018-october/image-16.png" alt="" />
+      <img src="/poems/2018-october/image-13.avif" alt="" />
+      <img src="/poems/2018-october/image-14.avif" alt="" />
+      <img src="/poems/2018-october/image-16.avif" alt="" />
     </div>
   </poem-grid>
 </div>

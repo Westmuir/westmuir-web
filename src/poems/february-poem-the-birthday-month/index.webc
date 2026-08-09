@@ -14,8 +14,8 @@ endOfYear: false
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/february-poem-the-birthday-month/image-3.png" alt="" />
-      <img src="/poems/february-poem-the-birthday-month/image-6.png" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-3.avif" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-6.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -51,10 +51,10 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/february-poem-the-birthday-month/image-4.png" alt="" />
-      <img src="/poems/february-poem-the-birthday-month/image-1.png" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-4.avif" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-1.avif" alt="" />
 
-      <img src="/poems/february-poem-the-birthday-month/image-2.png" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-2.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -83,8 +83,8 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/february-poem-the-birthday-month/image-5.png" alt="" />
-      <img src="/poems/february-poem-the-birthday-month/image-0.png" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-5.avif" alt="" />
+      <img src="/poems/february-poem-the-birthday-month/image-0.avif" alt="" />
     </div>
   </poem-grid>
 </div>

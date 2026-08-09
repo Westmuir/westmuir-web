@@ -12,26 +12,26 @@ endOfYear: false
   <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
     <!-- Header Section -->
     <div slot="header-tl">
-      <img src="/poems/2016-september/image-1.png" alt="" />
-      <img src="/poems/2016-september/image-13.png" alt="" />
+      <img src="/poems/2016-september/image-1.avif" alt="" />
+      <img src="/poems/2016-september/image-13.avif" alt="" />
     </div>
 
     <div slot="header-tr">
       <img
-        src="/poems/2016-september/image-2.png"
+        src="/poems/2016-september/image-2.avif"
         alt=""
         style="border: none"
       />
-      <img src="/poems/2016-september/image-10.png" alt="" />
+      <img src="/poems/2016-september/image-10.avif" alt="" />
     </div>
     <div slot="header-title" class="small-title">
       <h2 class="poem-title" @text="poemTitle"></h2>
     </div>
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2016-september/image-7.png" alt="" />
-      <img src="/poems/2016-september/image-4.png" alt="" />
-      <img src="/poems/2016-september/image-6.png" alt="" />
+      <img src="/poems/2016-september/image-7.avif" alt="" />
+      <img src="/poems/2016-september/image-4.avif" alt="" />
+      <img src="/poems/2016-september/image-6.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -60,9 +60,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2016-september/image-0.png" alt="" />
-      <img src="/poems/2016-september/image-3.png" alt="" />
-      <img src="/poems/2016-september/image-9.png" alt="" />
+      <img src="/poems/2016-september/image-0.avif" alt="" />
+      <img src="/poems/2016-september/image-3.avif" alt="" />
+      <img src="/poems/2016-september/image-9.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -91,10 +91,10 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2016-september/image-11.png" alt="" />
-      <img src="/poems/2016-september/image-9.png" alt="" />
-      <img src="/poems/2016-september/image-5.png" alt="" />
-      <img src="/poems/2016-september/image-12.png" alt="" />
+      <img src="/poems/2016-september/image-11.avif" alt="" />
+      <img src="/poems/2016-september/image-9.avif" alt="" />
+      <img src="/poems/2016-september/image-5.avif" alt="" />
+      <img src="/poems/2016-september/image-12.avif" alt="" />
     </div>
   </poem-grid>
 </div>

@@ -16,13 +16,13 @@ endOfYear: false
   >
     <!-- Header Section -->
     <img
-      src="/poems/december-poem-eilas-reflections/treedecs.png"
+      src="/poems/december-poem-eilas-reflections/treedecs.avif"
       alt=""
       style="border: none"
       slot="header-tl"
     />
     <img
-      src="/poems/december-poem-eilas-reflections/treedecs.png"
+      src="/poems/december-poem-eilas-reflections/treedecs.avif"
       alt=""
       style="border: none"
       slot="header-tr"
@@ -30,8 +30,8 @@ endOfYear: false
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/december-poem-eilas-reflections/image_1.png" alt="" />
-      <img src="/poems/december-poem-eilas-reflections/image_2.png" alt="" />
+      <img src="/poems/december-poem-eilas-reflections/image_1.avif" alt="" />
+      <img src="/poems/december-poem-eilas-reflections/image_2.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -74,13 +74,13 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/december-poem-eilas-reflections/image_3.png" alt="" />
+      <img src="/poems/december-poem-eilas-reflections/image_3.avif" alt="" />
       <img
-        src="/poems/december-poem-eilas-reflections/santa.png"
+        src="/poems/december-poem-eilas-reflections/santa.avif"
         alt=""
         style="border: none"
       />
-      <img src="/poems/december-poem-eilas-reflections/image.png" alt="" />
+      <img src="/poems/december-poem-eilas-reflections/image.avif" alt="" />
       <!-- No center images -->
     </div>
 
@@ -124,8 +124,8 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/december-poem-eilas-reflections/manger.png" alt="" />
-      <img src="/poems/december-poem-eilas-reflections/image_4.png" alt="" />
+      <img src="/poems/december-poem-eilas-reflections/manger.avif" alt="" />
+      <img src="/poems/december-poem-eilas-reflections/image_4.avif" alt="" />
       <!-- No side images -->
     </div>
   </poem-grid>

@@ -12,20 +12,20 @@ endOfYear: false
   <poem-grid class="small" :title="poemTitle" :author="author" :theme="bgTheme">
     <!-- Header Section -->
     <poem-img
-      src="/poems/2016-january/image-17.png"
+      src="/poems/2016-january/image-17.avif"
       alt=""
       slot="header-tl"
     ></poem-img>
     <poem-img
-      src="/poems/2016-january/image_8.png"
+      src="/poems/2016-january/image_8.avif"
       alt=""
       slot="header-tr"
     ></poem-img>
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <poem-img src="/poems/2016-january/image_1.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-january/image_9.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_1.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_9.avif" alt=""></poem-img>
     </div>
     <!-- Column 2 Text -->
     <div slot="col-2-text">
@@ -60,9 +60,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <poem-img src="/poems/2016-january/image_2.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-january/image_3.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-january/image_4.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_2.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_3.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_4.avif" alt=""></poem-img>
     </div>
 
     <!-- Column 4 Text -->
@@ -98,9 +98,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <poem-img src="/poems/2016-january/image_7.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-january/image_6.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-january/image_5.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_7.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_6.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-january/image_5.avif" alt=""></poem-img>
     </div>
   </poem-grid>
 </div>
