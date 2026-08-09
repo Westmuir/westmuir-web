@@ -4,7 +4,7 @@ layout: "base"
 cta: true
 hero: false
 description: Welcome to Westmuir Village
-headerImage: "images/east-bank.avif"
+headerImage: "images/east-bank-1920.avif"
 headerAlt: "East bank, Westmuir"
 headerPosition: center
 ---
@@ -28,10 +28,8 @@ headerPosition: center
           >volunteers&#64;westmuir.org.uk </a
         >)
       <!-- or join us at the AGM on 16th June, at 7.30pm. Thanks! -->
-      </div>
     </p>
-  </hgroupiv>
-
+  </hgroup></div>
 <h2 class="main-heading">Latest</h2>
 
 <postslist-articles
