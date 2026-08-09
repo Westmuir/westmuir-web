@@ -16,19 +16,19 @@ endOfYear: false
   >
     <!-- Header Section -->
     <div slot="header-tl">
-      <img src="/poems/2018-may/image-1.png" alt="" />
-      <img src="/poems/2018-may/image-13.png" alt="" />
+      <img src="/poems/2018-may/image-1.avif" alt="" />
+      <img src="/poems/2018-may/image-13.avif" alt="" />
     </div>
     <div slot="header-tr">
-      <img src="/poems/2018-may/image-3.png" alt="" />
-      <img src="/poems/2018-may/image-14.png" alt="" />
+      <img src="/poems/2018-may/image-3.avif" alt="" />
+      <img src="/poems/2018-may/image-14.avif" alt="" />
     </div>
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2018-may/image-17.png" alt="" />
-      <img src="/poems/2018-may/image-10.png" alt="" />
-      <img src="/poems/2018-may/image-8.png" alt="" />
+      <img src="/poems/2018-may/image-17.avif" alt="" />
+      <img src="/poems/2018-may/image-10.avif" alt="" />
+      <img src="/poems/2018-may/image-8.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -57,10 +57,10 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <img src="/poems/2018-may/image-3.png" alt="" />
-      <img src="/poems/2018-may/image-12.png" alt="" />
-      <img src="/poems/2018-may/image-7.png" alt="" />
-      <img src="/poems/2018-may/image-18.png" alt="" />
+      <img src="/poems/2018-may/image-3.avif" alt="" />
+      <img src="/poems/2018-may/image-12.avif" alt="" />
+      <img src="/poems/2018-may/image-7.avif" alt="" />
+      <img src="/poems/2018-may/image-18.avif" alt="" />
     </div>
 
     <!-- Column 4 Text -->
@@ -89,9 +89,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2018-may/image-15.png" alt="" />
-      <img src="/poems/2018-may/image-9.png" alt="" />
-      <img src="/poems/2018-may/image-16.png" alt="" />
+      <img src="/poems/2018-may/image-15.avif" alt="" />
+      <img src="/poems/2018-may/image-9.avif" alt="" />
+      <img src="/poems/2018-may/image-16.avif" alt="" />
     </div>
   </poem-grid>
 </div>

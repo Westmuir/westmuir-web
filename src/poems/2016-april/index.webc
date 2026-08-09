@@ -11,20 +11,20 @@ endOfYear: false
   <poem-grid :title="poemTitle" :author="author">
     <!-- Header Section -->
     <poem-img
-      src="/poems/2016-april/image-4.png"
+      src="/poems/2016-april/image-4.avif"
       alt=""
       slot="header-tl"
     ></poem-img>
     <poem-img
-      src="/poems/2016-april/image-5.png"
+      src="/poems/2016-april/image-5.avif"
       alt=""
       slot="header-tr"
     ></poem-img>
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <poem-img src="/poems/2016-april/image-8.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-april/image-3.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-8.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-3.avif" alt=""></poem-img>
     </div>
 
     <!-- Column 2 Text -->
@@ -60,9 +60,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <poem-img src="/poems/2016-april/image-0.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-april/image-1.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-april/image-2.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-0.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-1.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-2.avif" alt=""></poem-img>
     </div>
 
     <!-- Column 4 Text -->
@@ -98,8 +98,8 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <poem-img src="/poems/2016-april/image-6.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-april/image-7.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-6.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-april/image-7.avif" alt=""></poem-img>
     </div>
   </poem-grid>
 </div>

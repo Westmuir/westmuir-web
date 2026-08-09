@@ -12,12 +12,12 @@ endOfYear: false
     <!-- Header Section -->
 
     <poem-img
-      src="/poems/meaningful_christmas_by_eila/image_5.png"
+      src="/poems/meaningful_christmas_by_eila/image_5.avif"
       alt=""
       slot="header-tl"
     ></poem-img>
     <poem-img
-      src="/poems/meaningful_christmas_by_eila/image_6.png"
+      src="/poems/meaningful_christmas_by_eila/image_6.avif"
       alt=""
       slot="header-tr"
     ></poem-img>
@@ -62,20 +62,20 @@ endOfYear: false
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
       <poem-img
-        src="/poems/meaningful_christmas_by_eila/image_4.png"
+        src="/poems/meaningful_christmas_by_eila/image_4.avif"
         alt=""
       ></poem-img>
       <poem-img
-        src="/poems/meaningful_christmas_by_eila/image_3.png"
+        src="/poems/meaningful_christmas_by_eila/image_3.avif"
         alt=""
       ></poem-img>
       <poem-img
-        src="/poems/meaningful_christmas_by_eila/decs.png"
+        src="/poems/meaningful_christmas_by_eila/decs.avif"
         style="border: none"
         alt=""
       ></poem-img>
       <poem-img
-        src="/poems/meaningful_christmas_by_eila/manger.png"
+        src="/poems/meaningful_christmas_by_eila/manger.avif"
         style="border: none"
         alt=""
       ></poem-img>
@@ -110,7 +110,7 @@ endOfYear: false
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
       <poem-img
-        src="/poems/meaningful_christmas_by_eila/image.png"
+        src="/poems/meaningful_christmas_by_eila/image.avif"
         alt=""
       ></poem-img>
     </div>

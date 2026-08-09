@@ -12,19 +12,19 @@ endOfYear: false
   <poem-grid class="poem" :title="poemTitle" :author="author" :theme="bgTheme">
     <!-- Header Section -->
     <div slot="header-tl">
-      <poem-img src="/poems/2016-august/image-1.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-14.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-1.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-14.avif" alt=""></poem-img>
     </div>
     <div slot="header-tr">
-      <poem-img src="/poems/2016-august/image-13.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-2.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-13.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-2.avif" alt=""></poem-img>
     </div>
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <poem-img src="/poems/2016-august/image-9.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-4.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-6.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-3.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-9.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-4.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-6.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-3.avif" alt=""></poem-img>
     </div>
 
     <!-- Column 2 Text -->
@@ -60,10 +60,10 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <poem-img src="/poems/2016-august/image-0.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-3.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-4.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-5.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-0.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-3.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-4.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-5.avif" alt=""></poem-img>
     </div>
 
     <!-- Column 4 Text -->
@@ -92,10 +92,10 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <poem-img src="/poems/2016-august/image-10.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-12.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-11.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-august/image-15.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-10.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-12.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-11.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-august/image-15.avif" alt=""></poem-img>
     </div>
   </poem-grid>
 </div>

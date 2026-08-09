@@ -19,11 +19,11 @@ endOfYear: false
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
       <poem-img
-        src="/poems/january-poem-a-moment-in-time/image-1.png"
+        src="/poems/january-poem-a-moment-in-time/image-1.avif"
         alt=""
       ></poem-img>
       ><poem-img
-        src="/poems/january-poem-a-moment-in-time/image-2.png"
+        src="/poems/january-poem-a-moment-in-time/image-2.avif"
         alt=""
       ></poem-img>
     </div>
@@ -61,11 +61,11 @@ endOfYear: false
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
       <poem-img
-        src="/poems/january-poem-a-moment-in-time/image-3.png"
+        src="/poems/january-poem-a-moment-in-time/image-3.avif"
         alt=""
       ></poem-img>
       ><poem-img
-        src="/poems/january-poem-a-moment-in-time/image-0.png"
+        src="/poems/january-poem-a-moment-in-time/image-0.avif"
         alt=""
       ></poem-img>
     </div>

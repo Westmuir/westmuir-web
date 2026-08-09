@@ -12,21 +12,21 @@ endOfYear: false
   <poem-grid :title="poemTitle" :author="author" :theme="bgTheme">
     <!-- Header Section -->
     <poem-img
-      src="/poems/2016-december/image-3.png"
+      src="/poems/2016-december/image-3.avif"
       alt=""
       slot="header-tl"
     ></poem-img>
     <poem-img
-      src="/poems/2016-december/image-4.png"
+      src="/poems/2016-december/image-4.avif"
       alt=""
       slot="header-tr"
     ></poem-img>
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <poem-img src="/poems/2016-december/image-10.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-december/image-1.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-december/image-11.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-10.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-1.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-11.avif" alt=""></poem-img>
     </div>
 
     <!-- Column 2 Text -->
@@ -61,9 +61,9 @@ endOfYear: false
 
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
-      <poem-img src="/poems/2016-december/image-0.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-december/image-2.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-december/image-6.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-0.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-2.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-6.avif" alt=""></poem-img>
     </div>
 
     <!-- Column 4 Text -->
@@ -85,9 +85,9 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <poem-img src="/poems/2016-december/image-7.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-december/image-5.png" alt=""></poem-img>
-      <poem-img src="/poems/2016-december/image-8.png" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-7.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-5.avif" alt=""></poem-img>
+      <poem-img src="/poems/2016-december/image-8.avif" alt=""></poem-img>
     </div>
   </poem-grid>
 </div>

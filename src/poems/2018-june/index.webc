@@ -14,12 +14,12 @@ endOfYear: false
     :author="author"
     :theme="bgTheme"
   >
-    <img src="/poems/2018-june/image-6.png" alt="" slot="header-tr" />
+    <img src="/poems/2018-june/image-6.avif" alt="" slot="header-tr" />
 
     <!-- Column 1 Images (15%) -->
     <div slot="col-1-images">
-      <img src="/poems/2018-june/image-2.png" alt="" />
-      <img src="/poems/2018-june/image-4.png" alt="" />
+      <img src="/poems/2018-june/image-2.avif" alt="" />
+      <img src="/poems/2018-june/image-4.avif" alt="" />
     </div>
 
     <!-- Column 2 Text -->
@@ -49,7 +49,7 @@ endOfYear: false
     <!-- Column 3 Middle Images -->
     <div slot="col-3-images">
       <div></div>
-      <img src="/poems/2018-june/image-3.png" alt="" />
+      <img src="/poems/2018-june/image-3.avif" alt="" />
       <div></div>
     </div>
 
@@ -79,8 +79,8 @@ endOfYear: false
 
     <!-- Column 5 Images (15%) -->
     <div slot="col-5-images">
-      <img src="/poems/2018-june/image-0.png" alt="" />
-      <img src="/poems/2018-june/image-8.png" alt="" />
+      <img src="/poems/2018-june/image-0.avif" alt="" />
+      <img src="/poems/2018-june/image-8.avif" alt="" />
     </div>
   </poem-grid>
 </div>
