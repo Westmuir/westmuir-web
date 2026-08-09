@@ -28,12 +28,12 @@ headerPosition: center
 <!--           >volunteers&#64;westmuir.org.uk </a -->
 <!--         >) -->
 <!--       <!-- or join us at the AGM on 16th June, at 7.30pm. Thanks! -->
--->
 <!--     </p> -->
 <!--   </hgroup></div> -->
 <h2 class="main-heading">Latest</h2>
 
 <postslist-articles
+  class="posts-articles"
   :@list="head(categoryFilter($data.collections.posts, 'featured'), -2)"
 ></postslist-articles>
 <postslist-cards
@@ -90,6 +90,9 @@ headerPosition: center
 </div>
 
 <style>
+  /* .posts-articles { */
+  /*   grid-column: breakout-start / breakout-end; */
+  /* } */
   .color-outline {
     --border-color: var(--primary);
     border-radius: var(--radius-3);

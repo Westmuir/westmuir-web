@@ -95,13 +95,14 @@ cardType: hall
   :host .cc-header {
     background-color: #ffffff;
     color: #333333;
-    margin: -2rem -2rem 2rem -2rem;
+    /* margin: -2rem -2rem 2rem -2rem; */
     padding: 1.5rem 2rem;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     display: flex;
     align-items: center;
     gap: 1.25rem;
+    max-inline-size: 75ch;
   }
 
   :host .cc-logo-graphic {
@@ -207,6 +208,7 @@ cardType: hall
     background-color: rgba(255, 255, 255, 0.08);
     padding: 1rem;
     border-radius: 6px;
+    max-inline-size: 95ch;
   }
 
   :host .cc-chat-invite {
