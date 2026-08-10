@@ -1,7 +1,7 @@
 ---
 title: Creative Craft Club.
 description: A Creative craft club in the village hall on Monday afternoons.
-date: 2025-07-03
+date: 2026-08-10
 tags: hall
 categories: [hall, featured]
 cover: /blog/craft-club/craft-wool.png
@@ -13,14 +13,14 @@ cardType: hall
 
   <div class="cc-image-left right">
     <div>
-      <strong>Weekly from Monday 4th September, 2023</strong>
+      <h3>Monday 31st August, 2026</h3>
       <img src="/blog/craft-club/craft-wool.png" alt="Craft wool" />
 
       <div class="ci-strong">2pm - 4pm</div>
       <div class="ci-strong">Refreshments available</div>
       <div>Tel. 01575 573314 for more details.</div>
     </div>
-    <figure class="figure rotate-r">
+    <figure class="figure">
       <img
         class="bg-yellow-100 sm-p-3 shadow-lg rotate-r"
         src="/blog/craft-club/craft-sew-2.png"
@@ -30,7 +30,8 @@ cardType: hall
   </div>
 
   <div class="cc-image-left">
-    <figure class="figure rotate-l">
+    <figure class="figure">
+      <figcaption>Bring your own project</figcaption>
       <img
         class="bg-yellow-100 sm-p-3 shadow-lg rotate-l"
         src="/blog/craft-club/craft-paint-2.png"
@@ -39,8 +40,8 @@ cardType: hall
     </figure>
 
     <div>
-      This is a group by Lillian McDownie and Christine Cobb who run a Creative
-      craft club in the village hall on Monday afternoons.
+      This is a group by Lillian McDownie who runs a Creative craft club in the
+      village hall on Monday afternoons.
     </div>
   </div>
 </div>
@@ -99,6 +100,7 @@ cardType: hall
         0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
       max-width: 20ch;
+      color: contrast-color(ivory);
     }
 
     > .rotate-l {
