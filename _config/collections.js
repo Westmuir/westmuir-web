@@ -42,4 +42,31 @@ export default function (eleventyConfig) {
     }
     return contextMap;
   });
+
+  eleventyConfig.addCollection('sortedBento', function (collectionApi) {
+    return collectionApi.getFilteredByTag('woodlandLife').sort((a, b) => {
+      // 1. Establish the size weight mapping hierarchy
+      const sizeWeights = {
+        feature: 1, // Big cards float to the absolute front
+        medium: 2, // Medium cards come next
+        '': 3, // Standard cards fall to the back
+      };
+
+      // 2. Fetch the sizes (safely falling back to a standard card if blank/omitted)
+      const sizeA = sizeWeights[a.data.bentoSize] ?? 3;
+      const sizeB = sizeWeights[b.data.bentoSize] ?? 3;
+
+      // 3. Primary Sort: Compare the macro size weights
+      if (sizeA !== sizeB) {
+        return sizeA - sizeB;
+      }
+
+      // 4. Secondary Sort (Tie-Breaker): If sizes match, check optional order numbers
+      // We default to 99 so unnumbered cards of the same size naturally sit at the end of their group
+      const orderA = a.data.bentoOrder ?? 99;
+      const orderB = b.data.bentoOrder ?? 99;
+
+      return orderA - orderB;
+    });
+  });
 }
