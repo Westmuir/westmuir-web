@@ -1,9 +1,7 @@
 ---
+title: Flora & Fauna
 layout: base
-title: "Birds Foot Trefoil small tortoiseshell butterfly"
-tags: ["woodlandLife"]
-bentoSize: "feature"
-bentoImg: "/woodland/birds-foot-trefoil.avif"
+description: Learn about the Westmuir Community Development Trust and the Woodland.
 ---
 
 <div class="content-grid flow">

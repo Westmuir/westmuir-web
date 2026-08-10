@@ -1,6 +1,8 @@
 ---
-title: Scots Pine
-layout: base
+title: "Scots Pine"
+tags: ["woodlandLife"]
+bentoSize: "medium"
+bentoImg: "/woodland/flora/scots-pine.avif"
 ---
 
 <div class="content-grid flow">

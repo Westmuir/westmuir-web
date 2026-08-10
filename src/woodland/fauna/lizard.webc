@@ -1,6 +1,8 @@
 ---
-title: Lizards
+title: Viviparous lizard
 layout: base
+tags: ["woodlandLife"]
+bentoImg: "/woodland/fauna/lizard.avif"
 ---
 
 <div class="content-grid flow">
