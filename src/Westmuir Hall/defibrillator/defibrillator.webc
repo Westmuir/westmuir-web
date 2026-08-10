@@ -8,11 +8,7 @@ headerImage: "/wcdt/wcdt-banner.avif"
 headerAlt: "Main road"
 ---
 
-<editorial-block
-  class="breakoutX"
-  align="right"
-  caption="The defibrillator home."
->
+<editorial-block class="breakoutX" align="right" caption="The defibrillator">
   <p>
     In early 2019 a group of volunteers from the village embarked on a project
     to purchase a defibrillator for the Community with a view to locating it in
