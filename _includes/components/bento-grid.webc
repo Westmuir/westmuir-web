@@ -25,93 +25,77 @@
 
 <!-- Inside components/bento-grid.webc -->
 <style webc:scoped>
-  /* ==========================================================================
-     1. THE MASTER BENTO TRACK ENGINE
-     ========================================================================== */
-  .bento-gallery {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: var(--size-4);
-    grid-auto-flow: row dense; /* Auto-packs small cards into empty gaps */
-  }
-
-  /* --- Tablet View (2 Columns) --- */
-  @media (min-width: 45rem) {
-    .bento-gallery {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    /* RESTORED: Let wide and big cards expand comfortably on tablets */
-    .bento-card.size-feature {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    .bento-card.size-medium {
-      grid-column: span 2;
-    }
-  }
-
-  /* --- Large Desktop View (4 Columns) --- */
-  @media (min-width: 65rem) {
-    .bento-gallery {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: var(--size-5);
-    }
-
-    /*
-      RESTORED: Explicitly locks your spanning ratios on large viewports
-      so your featured wildlife profiles genuinely stand out!
-    */
-    .bento-card.size-feature {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    .bento-card.size-medium {
-      grid-column: span 2;
-    }
-  }
-
-  /* ==========================================================================
-     2. CARD BASE & INTERNAL STYLING
-     ========================================================================== */
   .bento-card {
-    container-type: inline-size;
+    /*
+      1. Register your internal private theme scoped tokens.
+      The browser automatically selects the first token for Light Mode
+      and the second token for Dark Mode!
+    */
+    --_border-color: light-dark(var(--color-5), var(--color-10));
+    --_hover-bg: light-dark(var(--color-4), var(--color-11));
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
     text-decoration: none;
+
     background-color: var(--surface-default);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--_border-color); /* Hooks directly into your smart token */
     border-radius: var(--radius-3);
     box-shadow: var(--shadow-1);
+
     transition:
       box-shadow 0.2s var(--ease-3),
-      background-color 0.2s var(--ease-2);
+      background-color 0.2s var(--ease-2),
+      border-color 0.2s var(--ease-2); /* Smooth transition when shifting layout states */
   }
 
+  /* Safe interactive feedback for both viewports */
   .bento-card:is(:hover, :focus-visible) {
     box-shadow: var(--shadow-3);
-    background-color: var(--surface-2);
+    background-color: var(--_hover-bg);
+    /* Optional: Make the border slightly more pronounced on hover */
+    --_border-color: light-dark(var(--color-6), var(--color-9));
   }
-
+  /* ==========================================================================
+     2. DYNAMIC MEDIA EXPANSION ENGINE
+     ========================================================================== */
   .bento-media {
     width: 100%;
+    /*
+      THE MAGIC FIX:
+      Forces the image container to stretch and absorb 100% of any remaining
+      empty vertical space inside your large 2x2 and 2x1 grid blocks!
+    */
+    flex-grow: 1;
     overflow: hidden;
     background-color: var(--surface-3);
+
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* Crops the photo cleanly into its expanded layout frame */
+
+      /*
+        Sets a solid landscape base for standard 1x1 cards.
+        For large feature blocks, flex-grow overrides this to fill the cell depth.
+      */
       aspect-ratio: var(--ratio-landscape);
     }
   }
 
+  /* ==========================================================================
+     3. TYPOGRAPHY CANVAS
+     ========================================================================== */
   .bento-content {
     padding: var(--size-4);
     display: flex;
     flex-direction: column;
     gap: var(--size-1);
+
+    /* Lock the text deck to its content boundaries so it never steals image space */
+    flex-shrink: 0;
+
     h3 {
       font-size: var(--font-size-2);
       font-weight: var(--font-weight-7);
@@ -119,6 +103,7 @@
       margin: 0;
       text-wrap: balance;
     }
+
     p {
       font-size: var(--font-size-1);
       color: var(--text-secondary);
@@ -129,24 +114,39 @@
   }
 
   /* ==========================================================================
-     3. INTERNAL COMPONENT CONTAINER QUERY (Side-by-Side Split)
+     4. MASTER BENTO SYSTEM TRACKS & SPANNING (Unchanged)
      ========================================================================== */
-  @container (min-width: 28rem) {
-    .bento-card {
-      flex-direction: row;
-      align-items: stretch;
+  .bento-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: var(--size-4);
+    grid-auto-flow: row dense;
+  }
+
+  @media (min-width: 45rem) {
+    .bento-gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .bento-media {
-      width: 40%;
-      flex-grow: 0;
-      img {
-        aspect-ratio: auto;
-      } /* Automatically match expanded text height */
+    .bento-card.size-feature {
+      grid-column: span 2;
+      grid-row: span 2;
     }
-    .bento-content {
-      width: 60%;
-      padding: var(--size-5);
-      justify-content: center;
+    .bento-card.size-medium {
+      grid-column: span 2;
+    }
+  }
+
+  @media (min-width: 65rem) {
+    .bento-gallery {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--size-5);
+    }
+    .bento-card.size-feature {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .bento-card.size-medium {
+      grid-column: span 2;
     }
   }
 </style>
