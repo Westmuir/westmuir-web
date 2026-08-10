@@ -4,78 +4,86 @@ layout: base
 inSectionNav: true
 inContextNav: true
 description: A warm place for the community in challenging conditions
-headerImage: '/Westmuir Hall/resilience/generator.avif'
-headerAlt: 'Backup generator'
+headerImage: "/Westmuir Hall/resilience/generator-1920.avif"
+headerAlt: "Backup generator"
 ---
 
-<div class="content-grid flow">
-  <section class="breakout content-image-text">
-    <div class="content-image image-center">
-      <figure class="framed-photo">
-        <img
-          class="framed"
-          src="/Westmuir Hall/resilience/generator.avif"
-          alt="Inside Westmuir Hall"
-        />
-      </figure>
-    </div>
-    <div class="content-text">
-      <h3>Aims of WHCRG as a resilience hub</h3>
-      We will endeavour to:
-      <ol class="points-list">
-        <li>
-          To open the hall as a 'safe refuge' providing heat, light and phone
-          charging facilities for West/mur community and anyone visiting.
-        </li>
-        <li>
-          To maintain contact with the Angus Council Resilience Officer
-          throughout any emergency.
-        </li>
-        <li>
-          Use the hall as a receiving/distribution centre for equipment/supplies
-          during an emergency.
-        </li>
-        <li>
-          Provide a localised hub for use by the emergency services/utility
-          companies in time of emergency.
-        </li>
-        <li>
-          Address the wellbeing of those in the community who are most
-          vulnerable.
-        </li>
-      </ol>
-      <h3>Opening the resilience hub</h3>
+<editorial-block
+  class="breakoutX"
+  align="right"
+  caption="The defibrillator home."
+>
+  <h3>Aims of WHCRG</h3>
+  <p>As a resilience hub we will endeavour to:</p>
+  <ol class="points-list">
+    <li>
+      To open the hall as a 'safe refuge' providing heat, light and phone
+      charging facilities for West/mur community and anyone visiting.
+    </li>
+    <li>
+      To maintain contact with the Angus Council Resilience Officer throughout
+      any emergency.
+    </li>
+    <li>
+      Use the hall as a receiving/distribution centre for equipment/supplies
+      during an emergency.
+    </li>
+    <li>
+      Provide a localised hub for use by the emergency services/utility
+      companies in time of emergency.
+    </li>
+    <li>
+      Address the wellbeing of those in the community who are most vulnerable.
+    </li>
+  </ol>
+  <img
+    slot="image"
+    :src="$data.page.url + '/generator-1920.avif'"
+    alt="Westmuir generator"
+    width="1920"
+    sizes="(min-width: 50rem) 35ch, 90vw"
+  />
+</editorial-block>
 
-      WHCRG will try to open Westmuir Hall as a Resilience Hub under the
-      following circumstances:
-      <ol class="points-list">
-        <li>
-          There is a specific request made to open the hub by Angus Council
-          Resilience Team.
-        </li>
-        <li>
-          There is a specific request to open the hub by one or more of the
-          emergency services (police, fire, ambulance).
-        </li>
-        <li>
-          There is a specific request to open the hub by one or more of the
-          utility companies (gas, water, electricity).
-        </li>
-        <li>
-          WHCRG committee become aware of a serious situation that will affect
-          the community but there has been no specific request made by any of
-          the above to open the Resilience Hub.
-        </li>
-      </ol>
+<h3>Opening the resilience hub</h3>
 
-      When dealing with an incident or emergency WHCRG volunteers must not take
-      unacceptable risks that place themselves or others in danger.
-      <p>
-        Further advice and Information can be found online at
-        <a href="https://www.readyscotland.org" target="_blank" rel="noopener"
-          >www.readyscotland.org</a
-        >
-      </p>
-    </div>
-  </section>
-</div>
+<p>
+  WHCRG will try to open Westmuir Hall as a Resilience Hub under the following
+  circumstances:
+</p>
+<ol class="points-list">
+  <li>
+    There is a specific request made to open the hub by Angus Council Resilience
+    Team.
+  </li>
+  <li>
+    There is a specific request to open the hub by one or more of the emergency
+    services (police, fire, ambulance).
+  </li>
+  <li>
+    There is a specific request to open the hub by one or more of the utility
+    companies (gas, water, electricity).
+  </li>
+  <li>
+    WHCRG committee become aware of a serious situation that will affect the
+    community but there has been no specific request made by any of the above to
+    open the Resilience Hub.
+  </li>
+</ol>
+<p>
+  When dealing with an incident or emergency WHCRG volunteers must not take
+  unacceptable risks that place themselves or others in danger.
+</p>
+<p>
+  Further advice and Information can be found online at
+  <a href="https://www.readyscotland.org" target="_blank" rel="noopener"
+    >www.readyscotland.org</a
+  >
+</p>
+
+<style>
+  .points-list {
+    list-style-type: disc;
+    padding-inline-start: var(--size-5);
+  }
+</style>
