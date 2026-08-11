@@ -60,6 +60,8 @@ export const config = {
  * @param {EleventyConfig} eleventyConfig
  */
 export default async function (eleventyConfig) {
+  // Sets a global fallback layout for every single template file
+  eleventyConfig.addGlobalData('layout', 'base.webc');
   //  Only copy global structural assets to the build output
   eleventyConfig.addPassthroughCopy('src/images/icons');
   eleventyConfig.addPassthroughCopy('src/images/logos');

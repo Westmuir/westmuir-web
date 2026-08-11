@@ -1,5 +1,4 @@
 ---
-layout: "base.webc"
 title: "Hall Bookings - Westmuir Village"
 ---
 
@@ -7,4 +6,3 @@ title: "Hall Bookings - Westmuir Village"
 <p>Check availability below and submit a request to hold a date.</p>
 
 <booking-system></booking-system>
-

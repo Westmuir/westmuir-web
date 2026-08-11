@@ -1,9 +1,9 @@
 ---
 title: Archive
-layout: base
 description: Airchive of events & activities.
 headerImage: "/wcdt/wcdt-banner.avif"
 headerAlt: "westmuir village"
+inContextNav: true
 ---
 
 <div class="container container-spacing" name="main-content">
