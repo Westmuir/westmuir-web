@@ -5,42 +5,23 @@ bentoImg: "/woodland/ling.avif"
 layout: base
 ---
 
-<div class="content-grid flow">
-  <figure class="page-header full-width-content" op-center>
-    <img src="/woodland/ling.avif" alt="ling" />
-    <div class="page-header-info">
-      <div class="content">
-        <h1>Ling</h1>
-        <p>Calluna vulgaris</p>
-      </div>
-    </div>
-  </figure>
-
-  <section class="breakout content-image-text">
-    <div class="content-image">
-      <figure>
-        <img
-          class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="/woodland/ling.avif"
-          alt=""
-        />
-      </figure>
-    </div>
-    <div class="content-text species-facts">
-      <h4>Species Facts</h4>
-      <ul>
-        <li><strong>Category: </strong>Wildflower</li>
-        <li><strong>Scientific name: </strong>Calluna vulgaris</li>
-        <li><strong>Height: </strong>up to 90cm</li>
-        <li><strong>Status: </strong>Common</li>
-      </ul>
-    </div>
-  </section>
-  <species-info @distribution="Common in Scotland">
+<woodland-info
+  @title="Ling"
+  @distribution="Common in Scotland"
+  src="/woodland/ling.avif"
+  alt="Ling"
+>
+  <div slot="species-facts">
+    <p><span>Category: </span>Wildflower</p>
+    <p><span>Scientific name: </span>Calluna vulgaris</p>
+    <p><span>Height: </span>up to 90cm</p>
+    <p><span>Status: </span>Common</p>
+  </div>
+  <div slot="species-info">
     <p>
       The stems of heather are woody and coarse, sometimes clumped together and
       close to the ground in exposed areas. The delicate pink flowers grow
       loosely up the stem and the short, narrow leaves are borne in rows.
     </p>
-  </species-info>
-</div>
+  </div>
+</woodland-info>

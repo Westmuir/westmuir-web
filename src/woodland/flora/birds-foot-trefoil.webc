@@ -1,53 +1,29 @@
 ---
 layout: base
-title: "Birds Foot Trefoil small tortoiseshell butterfly"
+title: "Birds Foot Trefoil"
 tags: ["woodlandLife"]
 bentoSize: "feature"
 bentoImg: "/woodland/birds-foot-trefoil.avif"
 ---
 
-<div class="content-grid flow">
-  <figure class="page-header full-width-content" op-center>
-    <img src="/woodland/birds-foot-trefoil.avif" alt="woodland walkway" />
-    <div class="page-header-info">
-      <div class="content">
-        <h1>Bird's Foot Trefoil</h1>
-        <p>Lotus corniculatus</p>
-      </div>
-    </div>
-  </figure>
-
-  <div class="container container-spacing" name="main-content">
-    <div class="section"></div>
+<woodland-info
+  @title="Small Tortoiseshell Butterfly"
+  @distribution="Common"
+  src="/woodland/birds-foot-trefoil.avif"
+  alt="Bird's Foot Trefoil"
+>
+  <div slot="species-facts">
+    <p><span>Category: </span>Wildflower</p>
+    <p><span>Scientific name: </span>Lotus corniculatus</p>
+    <p><span>Height: </span>up to 35cm</p>
+    <p><span>Status: </span>Widespread</p>
   </div>
-
-  <section class="breakout content-image-text">
-    <div class="content-image">
-      <figure>
-        <img
-          class="bg-yellow-100 sm-p-3 shadow-lg"
-          src="/woodland/birds-foot-trefoil.avif"
-          alt=""
-        />
-      </figure>
-    </div>
-    <div class="content-text species-facts">
-      <h4>Species Facts</h4>
-      <ul>
-        <li><strong>Category: </strong>Wildflower</li>
-        <li><strong>Scientific name: </strong>Lotus corniculatus</li>
-        <li><strong>Height: </strong>up to 35cm</li>
-        <li><strong>Status: </strong>Common</li>
-      </ul>
-    </div>
-  </section>
-
-  <species-info @distribution="Widespread">
+  <div slot="species-info">
     <p>
       Its yellow flowers look like little slippers and appear in small clusters.
       They are followed by seed pods that look distinctly like bird's feet or
       claws, hence the common name. A low-growing plant, its leaves have five
       leaflets and are downy.
     </p>
-  </species-info>
-</div>
+  </div>
+</woodland-info>
