@@ -1,6 +1,11 @@
 <h2 @text="title"></h2>
 <div class="species-facts">
   <figure>
+    <img :src="src" :alt="alt" />
+
+    <p @text="alt"></p>
+  </figure>
+  <figure>
     <!-- Trigger Button wrapped around the image for accessible zoom activation -->
     <button
       type="button"
@@ -8,12 +13,7 @@
       aria-haspopup="dialog"
       :aria-label="'Enlarge ' + alt"
     >
-      <img
-        :src="src"
-        :alt="alt"
-        width="1920"
-        sizes="(min-width: 768px) 35ch, 92vw"
-      />
+      <img :src="src" :alt="alt" />
     </button>
     <p @text="alt"></p>
   </figure>
@@ -38,6 +38,9 @@
   </div>
 </div>
 
+<!-- ==========================================
+     OPEN PROPS UI NATIVE LIGHTBOX MODAL
+     ========================================== -->
 <dialog class="ui-dialog lightbox-modal">
   <form method="dialog">
     <!-- Click overlay background close / upper corner escape button -->
@@ -50,40 +53,6 @@
     <p webc:if="alt" class="lightbox-caption" @text="alt"></p>
   </div>
 </dialog>
-
-<script>
-  class WoodlandInfo extends HTMLElement {
-    connectedCallback() {
-      const trigger = this.querySelector(".lightbox-trigger");
-      const dialog = this.querySelector(".lightbox-modal");
-      const targetImg = this.querySelector(".lightbox-target");
-
-      if (!trigger || !dialog || !targetImg) return;
-
-      // Extract the current rendered image source string
-      const sourceImage = trigger.querySelector("img");
-      const currentSrc = sourceImage ? sourceImage.getAttribute("src") : "";
-
-      trigger.addEventListener("click", () => {
-        // Dynamic Allocation Loop: Keeps page loads instant on weak mobile links
-        targetImg.setAttribute("src", currentSrc);
-
-        // Native, fully focus-trapped browser dialogue opening sequence
-        dialog.showModal();
-      });
-
-      // Accessible Overlay Exit (Clicking the backdrop shadow dismisses the layout modal)
-      dialog.addEventListener("click", (e) => {
-        if (e.target === dialog) dialog.close();
-      });
-    }
-  }
-
-  // Register the element layout safely within the page pipeline
-  if (!customElements.get("woodland-info")) {
-    customElements.define("woodland-info", WoodlandInfo);
-  }
-</script>
 
 <style>
   .species-facts {
@@ -120,15 +89,15 @@
     hr {
       margin-block: var(--size-fluid-3);
     }
-  }
-
+   /* ==========================================
+     NEW: LIGHTBOX INTERACTION & MODAL STYLES
+     ========================================== */
   .lightbox-trigger {
     background: none;
     border: none;
     padding: 0;
-    cursor: zoom-in;
-    width: 100%; /* Spans the full width of Open Props' figure column box model */
-    display: block;
+    cursor: zoom-in; /* Communicates zoom capacity to nature essay readers */
+    width: 100%;
   }
 
   .lightbox-trigger img {
@@ -141,7 +110,7 @@
 
   .lightbox-trigger:hover img {
     transform: scale(1.015); /* Snappy tactile micro-interaction */
-  } /* --- Lightbox Button Reset --- */
+  }
 
   /* --- Open Props UI Native Dialog Configurations --- */
   .lightbox-modal {
@@ -175,9 +144,7 @@
   }
 
   .lightbox-caption {
-    color: var(
-      --gray-2
-    ); /* High contrast light text over full-bleed modal mask */
+    color: var(--gray-2); /* High contrast light text over full-bleed modal mask */
     font-size: var(--font-size-1);
     font-style: italic;
     text-align: center;
