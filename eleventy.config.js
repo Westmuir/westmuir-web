@@ -168,16 +168,6 @@ export default async function (eleventyConfig) {
     },
   });
 
-  // eleventyConfig.addTransform('force-global-component-bucket', function (content) {
-  //   // Only target your WebC template files during compilation passes
-  //   if (this.page.outputPath && this.page.outputPath.endsWith('.html')) {
-  //     // STOPS THE 19 FILES BUG: Intercept raw template strings and rewrite
-  //     // un-bucketed <style> blocks to explicitly belong to "main" before WebC groups them!
-  //     return content.replace(/<style(?![\s>]*webc:bucket=)>/g, '<style webc:bucket="main">');
-  //   }
-  //   return content;
-  // });
-
   eleventyConfig.addPlugin(pluginWebc, {
     components: ['./_includes/components/**/*.webc', 'npm:@11ty/eleventy-img/*.webc'],
 
