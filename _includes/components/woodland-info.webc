@@ -1,0 +1,65 @@
+<h2 @text="title"></h2>
+<div class="species-facts">
+  <figure>
+    <img :src="src" :alt="alt" />
+
+    <p @text="alt"></p>
+  </figure>
+  <div>
+    <h4>Species Facts</h4>
+    <div class="sf-stack">
+      <slot name="species-facts"></slot>
+    </div>
+  </div>
+</div>
+<div class="species-information prose light-bg">
+  <h2>Species information</h2>
+  <div>
+    <h4>Identification</h4>
+
+    <slot name="species-info"></slot>
+
+    <hr class="ui-divider" />
+
+    <h4>Distribution</h4>
+    <p @text="distribution"></p>
+  </div>
+</div>
+
+<style>
+  .species-facts {
+    gap: var(--size-7);
+    margin-block: var(--size-7);
+    display: grid;
+    align-items: start;
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .sf-stack {
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: var(--size-1);
+
+    span {
+      font-weight: var(--font-weight-7);
+      font-size: var(--font-size-3);
+    }
+  }
+
+  .light-bg {
+    --content-light-bg: light-dark(var(--color-3), var(--color-12));
+
+    background-color: var(--content-light-bg);
+  }
+
+  .species-information {
+    --border-color: var(--surface-3);
+    padding-block: var(--size-3);
+    padding-inline: var(--size-4);
+
+    hr {
+      margin-block: var(--size-fluid-3);
+    }
+  }
+</style>
