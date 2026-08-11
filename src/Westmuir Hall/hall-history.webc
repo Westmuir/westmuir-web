@@ -1,0 +1,132 @@
+---
+title: Hall Minutes 1932 - 1987
+inContextNav: true
+
+order: 99
+---
+
+<img
+  slot="image"
+  src="/Westmuir Hall/westmuir-hall-original.avif"
+  alt="Westmuir hall"
+  width="450"
+  sizes="(min-width: 50rem) 35ch, 90vw"
+/>
+<div class="prose">
+  <h3>Westmuir Hall Minutes 1932 – 1987</h3>
+
+  <p>
+    A Minutes of Hall meetings book for the Village Hall has survived intact
+    since 1932.
+  </p>
+
+  <p>
+    The first formal meeting of Hall Trustees was held on 21st January 1932
+    though there is reference to an earlier meeting in September 1929. The hall
+    was officially opened on 25th October 1928 by Sir Torquil Munro of
+    Lindertis, later of Drumleys.
+  </p>
+
+  <p>
+    It was very much due to the efforts of Sir Torquil that the hall was built
+    in the first place and both he and his sister Miss Carmen Munro, Craigton of
+    Airlie remained as Hall Trustees throughout their lifetime. Sir Torquil was
+    elected Chair at that first meeting in January 1932.
+  </p>
+
+  <p>
+    There was quite a pattern to the meetings with similar topics and problems
+    coming up for discussion and interestingly some of the topics are similar to
+    those which crop up even now in the 21st Century.
+  </p>
+  <editorial-block class="breakoutX" align="right">
+    <p>
+      What to charge for Hall lettings was always difficult and in 1929
+      (following an appeal from three ploughmen) the charge was reduced from
+      £2.00 to 30/- shillings to hold a dance. A wise decision it seems as
+      fifteen dances were held during the ensuing year compared to none at all
+      the previous year. The early 1930s were bleak times economically
+      throughout Britain so for country folk to have a bit of a ‘fling’ the only
+      answer was to attend events at local Village Halls. Dances at that time
+      would finish at 2.00am (with no provision of alcohol) and a long trek home
+      afterwards. The hall charges remained much the same for over 40 years. In
+      1975 the charge for dances was raised again to £2.00 per let but with an
+      extra £1.00 per hour after 10.00 pm until (and no later than) 2.00 am
+      finish time.
+    </p>
+
+    <p>
+      Improvements to the accommodation offered in the hall ranged from adding a
+      cloakroom to a ‘retiring room for the ladies’. By 1935 a larger kitchen
+      was on the horizon “with built-in cupboards” becoming a must! The roof
+      forever needed repairs and creosoting the outer walls was always a
+      priority but only occasionally would the work be achieved. Maintaining the
+      boundary fence and repairing the entrance path were also forever appearing
+      on the minutes only to be deferred year after year until 1959 when Sir
+      Torquil ‘sent along a man’ who concreted the path and renewed the fencing.
+    </p>
+    <!-- Explicitly pass your own image directly into the named slot -->
+    <img
+      slot="image"
+      src="/Westmuir Hall/hall-opening.avif"
+      alt="Newspaper cutting"
+      width="400"
+      sizes="(min-width: 50rem) 35ch, 90vw"
+    />
+  </editorial-block>
+
+  <p>
+    During the War Years 1940 to 1943 there were no meetings of the Trustees.
+  </p>
+
+  <p>
+    Some years after the War (1951) the Trustees decided it was important to
+    have electricity installed, a major step as it was so expensive to install
+    and would involve hefty running costs.
+  </p>
+  <p>
+    <strong>By 1940</strong> some consideration was given to the cost of
+    installing heating and in the same year a request was approved for free use
+    of the Hall for Whist Drives and dances to raise money for the Red Cross.<br />
+    <strong>In March 1945</strong> the WRI requested (with a small charge for
+    the Hall) that they would run dances on Saturday nights in aid of the
+    Welcome Home Fund.<br />
+    <strong>In May 1947</strong> the Trustees agreed that the charge for the
+    Hall be fixed at 5/- shillings (plus paraffin costs) per week for school
+    children having dinner in the hall.
+  </p>
+
+  <p>
+    The WRI played a significantly important role in village halls. Very often
+    the prime reason for the existence of these halls was to provide a meeting
+    place for Women’s Rural Institute members. Initially in Westmuir the WRI did
+    not have to pay a hire charge but were required to organise events and raise
+    funds to help maintain their village halls. By 1970 everything changed and
+    payment of hall fees by all hall users became essential (and perhaps the WRI
+    became tired of the work involved in planning fund-raising events).
+  </p>
+
+  <p>
+    For many years there was an active Men’s Club (darts, dominoes, indoor bowls
+    etc quite competitive!) and they were required to pay a hire charge of 5/-
+    and eventually 15/- per weekly meeting. The Men’s Club offered extra support
+    by assisting with some of the hall maintenance work.
+  </p>
+
+  <p>
+    Hall finance featured in every set of minutes with normally a reasonable
+    debit balance ranging from - £1.50 (1971) to £369.26 (1985). Some minutes
+    reflected a degree of alarm when annual expenditure exceeded income!
+  </p>
+</div>
+<style>
+  .hall-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    img {
+      max-height: 500px;
+      object-fit: contain;
+    }
+  }
+</style>

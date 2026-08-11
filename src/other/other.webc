@@ -1,9 +1,9 @@
 ---
 title: Archive
-layout: base
 description: Airchive of events & activities.
 headerImage: "/wcdt/wcdt-banner.avif"
 headerAlt: "westmuir village"
+inContextNav: true
 ---
 
 <div class="container container-spacing" name="main-content">
@@ -27,8 +27,6 @@ headerAlt: "westmuir village"
         </li>
       </ul>
     </div>
-
-    <!-- <nav-cards :@cards="$data.archivecards"></nav-cards> -->
   </div>
 </div>
 

@@ -1,89 +1,89 @@
 ---
-layout: base
 title: Westmuir Village Hall
-
 description: A comunity space for many activities.
 headerImage: "/wcdt/wcdt-banner.avif"
 headerAlt: "westmuir village"
 ---
 
-<div class="content-grid flow home-container">
-  <section class="full-width">
-    <div class="content">
-      <div>
-        <p>
-          Originally built in 1933, Westmuir Village Hall provides a welcome
-          community space for many activities, whether they be regular weekly
-          groups, local clubs, fund raising functions to meet the rising running
-          costs, or bookings for a variety of private functions. More recently,
-          having obtained a generator from grant funding, and with community
-          resilience in mind, the Hall has also become a local Resilience Hub; a
-          venue able to provide shelter, warmth and power to our local community
-          at times of emergency or power outage.
-        </p>
-      </div>
+<editorial-block class="breakoutX" align="right">
+  <p>
+    Originally built in 1933, Westmuir Village Hall provides a welcome community
+    space for many activities, whether they be regular weekly groups, local
+    clubs, fund raising functions to meet the rising running costs, or bookings
+    for a variety of private functions. More recently, having obtained a
+    generator from grant funding, and with community resilience in mind, the
+    Hall has also become a local Resilience Hub; a venue able to provide
+    shelter, warmth and power to our local community at times of emergency or
+    power outage.
+  </p>
+  <!-- Explicitly pass your own image directly into the named slot -->
+  <img
+    slot="image"
+    :src="$data.page.url + '/westmuir-hall-original.avif'"
+    alt="Woodland logo"
+    width="450"
+    sizes="(min-width: 50rem) 35ch, 90vw"
+  />
+</editorial-block>
 
-      <div>
-        <p>
-          A dedicated committee of volunteer villagers oversee the running of
-          the hall, which includes the upkeep of all fabric, internal
-          maintenance, and care of surrounding grounds, thereby ensuring the
-          Hall continues to be fit for purpose. Having made internal
-          improvements to the Hall by replacing the old kitchen, fitting new
-          heaters and refreshing the interior paintwork, the Committee
-          subsequently noted marked deterioration in the external fabric of the
-          building. Two Committee members undertook the mammoth task of
-          obtaining sufficient grant funding to cover the cost of external
-          renovation. The old wood cladding was removed and replaced with cement
-          fibreboard wood effect cladding, new flashings, building regulation
-          specification insulation, and installation of new Upvc windows. The
-          final challenge will be to replace the old roof with new sheeting and
-          insulation to complete the refurbishment, which will ‘future proof’
-          the exterior of the building for many years to come.
-        </p>
-      </div>
-      <div>
-        <p>
-          Members of the Community are collectively delighted with the new
-          refreshed look and warmer environment in the Hall, and with new padded
-          chairs for improved comfort we can be sure our inclusive, popular
-          space is one that everyone will be happy to enjoy when hiring the
-          Hall. With new large folding tables and classic white porcelain
-          crockery to cover 80 settings, and a large Marquee for summer events,
-          the Hall is available and waiting for your call to book a date.
-        </p>
-      </div>
-      <div>
-        <p>
-          As always, we would welcome anyone with a few hours of spare time, (as
-          much or little as you can offer), to help existing volunteers manage
-          the Hall and ensure its future use for generations to come.
-        </p>
-      </div>
-    </div>
-  </section>
+<p>
+  A dedicated committee of volunteer villagers oversee the running of the hall,
+  which includes the upkeep of all fabric, internal maintenance, and care of
+  surrounding grounds, thereby ensuring the Hall continues to be fit for
+  purpose. Having made internal improvements to the Hall by replacing the old
+  kitchen, fitting new heaters and refreshing the interior paintwork, the
+  Committee subsequently noted marked deterioration in the external fabric of
+  the building.
+</p>
+<editorial-block class="breakoutX" align="left">
+  <p>
+    Two Committee members undertook the mammoth task of obtaining sufficient
+    grant funding to cover the cost of external renovation. The old wood
+    cladding was removed and replaced with cement fibreboard wood effect
+    cladding, new flashings, building regulation specification insulation, and
+    installation of new Upvc windows. The final challenge will be to replace the
+    old roof with new sheeting and insulation to complete the refurbishment,
+    which will ‘future proof’ the exterior of the building for many years to
+    come.
+  </p>
+
+  <!-- Explicitly pass your own image directly into the named slot -->
+  <img
+    slot="image"
+    :src="$data.page.url + '/hall-nocladding.avif'"
+    alt="Woodland logo"
+    width="1920"
+    sizes="(min-width: 50rem) 35ch, 90vw"
+  />
+</editorial-block>
+
+<div class="prose">
+  <editorial-block class="breakoutX" align="right">
+    <p>
+      Members of the Community are collectively delighted with the new refreshed
+      look and warmer environment in the Hall, and with new padded chairs for
+      improved comfort we can be sure our inclusive, popular space is one that
+      everyone will be happy to enjoy when hiring the Hall. With new large
+      folding tables and classic white porcelain crockery to cover 80 settings,
+      and a large Marquee for summer events, the Hall is available and waiting
+      for your call to book a date.
+    </p>
+
+    <!-- Explicitly pass your own image directly into the named slot -->
+    <img
+      slot="image"
+      :src="$data.page.url + '/hall-padded-bench.avif'"
+      alt="Padded bench"
+      width="1920"
+      sizes="(min-width: 50rem) 35ch, 90vw"
+    />
+  </editorial-block>
+
+  <p>
+    As always, we would welcome anyone with a few hours of spare time, (as much
+    or little as you can offer), to help existing volunteers manage the Hall and
+    ensure its future use for generations to come.
+  </p>
 </div>
 
-<style>
-  .home-container {
-    --section-color: light-dark(var(--grey-9), var(--grey-2));
-    --section-bg: light-dark(var(--cyan-2), var(--cyan-9));
-  }
-
-  .wcdt-list {
-    li {
-      max-inline-size: var(--size-content-3);
-    }
-  }
-  .wcdt-logo {
-    max-width: 100px;
-  }
-  .content div p {
-    margin-block-end: 2em;
-  }
-  .pull-left {
-    float: left;
-    margin-inline-end: 1.5rem;
-    margin-block-end: 0.5rem;
-  }
-</style>
+<style></style>
