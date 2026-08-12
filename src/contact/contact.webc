@@ -1,0 +1,242 @@
+<div class="contact">
+  <h1>Contact Us</h1>
+  <form class="ui-form" id="kitchen-sink-example-row-html">
+    <!-- <fieldset class="ui-fieldset"> -->
+    <!-- <div class="ui-field-group" role="group"> -->
+    <label class="ui-text-field ui-spread">
+      <span class="ui-label">First Name</span>
+      <span class="ui-field">
+        <input type="text" placeholder="Jane" required />
+      </span>
+    </label>
+    <label class="ui-text-field ui-spread">
+      <span class="ui-label">Last name</span>
+      <span class="ui-field">
+        <input type="text" placeholder="Doe" required />
+      </span>
+    </label>
+    <label class="ui-text-field span-all">
+      <span class="ui-label">Email Address</span>
+      <span class="ui-field">
+        <input type="email" placeholder="jane@example.com" required />
+      </span>
+    </label>
+    <!-- </div> -->
+    <!-- </fieldset> -->
+    <div class="ui-field-group span-all" role="group">
+      <label class="ui-textarea">
+        <span class="ui-label">Biography</span>
+        <span class="ui-field">
+          <textarea
+            placeholder="Tell us about yourself..."
+            rows="4"
+            required
+          ></textarea>
+        </span>
+      </label>
+    </div>
+    <label class="ui-checkbox">
+      <input type="checkbox" name="terms" required />
+      <span class="ui-label">I agree to the terms and conditions</span>
+      <span class="ui-end-text">Support this text</span>
+    </label>
+  </form>
+  <form novalidate>
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="first_name" required data-error="a" />
+      <span class="error-message"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="last_name" required data-error="a" />
+      <span class="error-message"></span>
+    </div>
+
+    <div class="form-group span-all">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required data-error="a" />
+      <span class="error-message"></span>
+    </div>
+    <!-- https://issues.chromium.org/issues/40278914 -->
+    <fieldset class="span-all">
+      <legend>Query Type</legend>
+
+      <div class="form-group">
+        <input
+          type="radio"
+          id="general"
+          name="query"
+          value="general_enquiry"
+          required
+          data-error="a"
+        />
+        <label for="general">General Enquiry</label>
+      </div>
+
+      <div class="form-group">
+        <input
+          type="radio"
+          id="support"
+          name="query"
+          value="support"
+          required
+          data-error="abc"
+        />
+        <label for="support">Support Request</label>
+      </div>
+      <span class="error-message"></span>
+    </fieldset>
+
+    <div class="form-group span-all">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" required></textarea>
+      <span class="error-message"></span>
+    </div>
+
+    <div class="form-group span-all">
+      <input
+        type="checkbox"
+        name="consent"
+        id="consent"
+        required
+        data-error="a"
+      />
+      <label for="consent">I consent to being contacted by the team</label>
+      <span class="error-message"></span>
+    </div>
+
+    <button class="span-all">Submit</button>
+  </form>
+</div>
+<script>
+  // Simple validation script
+  const form = document.querySelector("form");
+
+  // Function to validate any field
+  function validateField(field) {
+    // For radio buttons, check if any in the group are checked
+    if (field.type === "radio") {
+      const isChecked = form.querySelector(
+        `input[name="${field.name}"]:checked`,
+      );
+      field = isChecked ? isChecked : field; // Use checked radio or first radio for validation
+    }
+
+    // Find the error message element
+    const errorDiv =
+      field.type === "radio"
+        ? field.closest("fieldset").querySelector(".error-message")
+        : field.parentElement.querySelector(".error-message");
+
+    // Check validity and show/hide error
+    if (!field.validity.valid) {
+      errorDiv.textContent = field.dataset.error || "This field is required";
+      errorDiv.classList.add("show");
+      return false;
+    } else {
+      errorDiv.textContent = "";
+      errorDiv.classList.remove("show");
+      return true;
+    }
+  }
+
+  // Add validation on blur/change
+  form.querySelectorAll("input, textarea").forEach((input) => {
+    const event = input.type === "radio" ? "change" : "blur";
+    input.addEventListener(event, () => validateField(input));
+  });
+
+  // Validate entire form on submit
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+
+    // Validate all fields (skip duplicate radio validations)
+    const validated = new Set();
+    form.querySelectorAll("input, textarea").forEach((field) => {
+      const key = field.type === "radio" ? `radio-${field.name}` : field.id;
+      if (!validated.has(key)) {
+        validated.add(key);
+        if (!validateField(field)) isValid = false;
+      }
+    });
+
+    if (isValid) {
+      alert("Form submitted successfully!");
+      console.log("Form data:", new FormData(form));
+    } else {
+      // Focus first invalid field
+      form.querySelector(":invalid")?.focus();
+    }
+  });
+</script>
+<style>
+  :where(.contact) {
+    --pale-green: hsl(148, 38%, 91%);
+    --green: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --light-teal: hsl(186, 15%, 59%);
+    --dark-teal: hsl(187, 24%, 22%);
+
+    --ff-base: "Karla", sans-serif;
+    /* color: black; */
+    /* accent-color: var(--green); */
+    font-size: 1rem;
+    font-family: var(--ff-base);
+    line-height: 1.6;
+    /* background-color: var(--pale-green); */
+
+    h1,
+    h2,
+    p {
+      margin-block: 0;
+    }
+
+    input,
+    button,
+    textarea {
+      font: inherit;
+    }
+
+    padding: 2rem;
+    /* background-color: var(--white); */
+    border-radius: 1rem;
+    max-inline-size: 700px;
+    margin: 0 auto;
+
+    form {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-group {
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .form-group:has(:not([type="radio"])[required]) label,
+    fieldset:has([required]) legend {
+      display: flex;
+      gap: 1ch;
+
+      &::after {
+        content: "*";
+        color: var(--green);
+      }
+    }
+
+    .form-group:has([type="radio"], [type="checkbox"]) {
+      display: flex;
+      gap: 1ch;
+    }
+
+    .span-all {
+      grid-column: 1 / -1;
+    }
+  }
+</style>
