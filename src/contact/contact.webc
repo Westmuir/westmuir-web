@@ -1,48 +1,23 @@
 <div class="contact">
   <h1>Contact Us</h1>
-  <form class="ui-form" id="kitchen-sink-example-row-html">
-    <!-- <fieldset class="ui-fieldset"> -->
-    <!-- <div class="ui-field-group" role="group"> -->
-    <label class="ui-text-field ui-spread">
-      <span class="ui-label">First Name</span>
+  <form novalidaxte>
+    <label class="ui-text-field">
+      <span class="ui-label">Label</span>
       <span class="ui-field">
-        <input type="text" placeholder="Jane" required />
+        <input type="text" placeholder="Outlined" required />
       </span>
+      <span class="ui-end-text">First name is required</span>
     </label>
-    <label class="ui-text-field ui-spread">
-      <span class="ui-label">Last name</span>
-      <span class="ui-field">
-        <input type="text" placeholder="Doe" required />
-      </span>
-    </label>
-    <label class="ui-text-field span-all">
-      <span class="ui-label">Email Address</span>
-      <span class="ui-field">
-        <input type="email" placeholder="jane@example.com" required />
-      </span>
-    </label>
-    <!-- </div> -->
-    <!-- </fieldset> -->
-    <div class="ui-field-group span-all" role="group">
-      <label class="ui-textarea">
-        <span class="ui-label">Biography</span>
-        <span class="ui-field">
-          <textarea
-            placeholder="Tell us about yourself..."
-            rows="4"
-            required
-          ></textarea>
-        </span>
-      </label>
+
+    <div class="ui-text-field form-groupX">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="first_name" required data-error="a" />
+      <span class="error-message"></span>
     </div>
-    <label class="ui-checkbox">
-      <input type="checkbox" name="terms" required />
-      <span class="ui-label">I agree to the terms and conditions</span>
-      <span class="ui-end-text">Support this text</span>
-    </label>
   </form>
+
   <form novalidate>
-    <div class="form-group">
+    <div class="form-groupX">
       <label for="fname">First Name</label>
       <input type="text" id="fname" name="first_name" required data-error="a" />
       <span class="error-message"></span>
@@ -129,15 +104,33 @@
       field.type === "radio"
         ? field.closest("fieldset").querySelector(".error-message")
         : field.parentElement.querySelector(".error-message");
+    const errorMsg =
+      field.type === "radio"
+        ? field.closest("fieldset").querySelector(".ui-end-text")
+        : field.closest(".ui-text-field").querySelector(".ui-end-text");
 
     // Check validity and show/hide error
+
     if (!field.validity.valid) {
-      errorDiv.textContent = field.dataset.error || "This field is required";
-      errorDiv.classList.add("show");
+      try {
+        if (errorDiv) {
+          errorDiv.textContent =
+            field.dataset.error || "This field is required";
+          errorDiv.classList.add("show");
+        }
+        // errorMsg.textContent = field.dataset.error || "This field is required";
+        // errorMsg.classList.add("show");
+      } catch (e) {}
       return false;
     } else {
-      errorDiv.textContent = "";
-      errorDiv.classList.remove("show");
+      try {
+        if (errorDiv) {
+          errorDiv.textContent = "";
+          errorDiv.classList.remove("show");
+        }
+        // errorMsg.textContent = "";
+        // errorMsg.classList.remove("show");
+      } catch (e) {}
       return true;
     }
   }
@@ -189,6 +182,23 @@
     font-family: var(--ff-base);
     line-height: 1.6;
     /* background-color: var(--pale-green); */
+    .ui-field {
+      /* Style the input box when the user leaves it invalid */
+      &:has(input:user-invalid) input {
+        border-color: var(--red-6);
+        outline-color: var(--red-6);
+      }
+
+      /* Target the error message right next to the invalid field */
+      &:has(input:user-invalid) + .ui-end-text {
+        display: block;
+      }
+    }
+    .ui-end-text {
+      display: none;
+      color: var(--red-6);
+      font-size: var(--font-size-0);
+    }
 
     h1,
     h2,
@@ -201,7 +211,6 @@
     textarea {
       font: inherit;
     }
-
     padding: 2rem;
     /* background-color: var(--white); */
     border-radius: 1rem;
@@ -237,6 +246,61 @@
 
     .span-all {
       grid-column: 1 / -1;
+    }
+
+    input,
+    textarea,
+    .form-group:has(input[type="radio"]) {
+      border: 1px solid var(--dark-teal);
+      border-radius: 8px;
+      padding: 0.75em 1.5em;
+    }
+
+    input,
+    textarea {
+      outline-color: green;
+    }
+
+    fieldset {
+      border: 0;
+      padding: 0;
+
+      display: grid;
+      gap: inherit;
+      grid-template-columns: subgrid;
+    }
+
+    legend {
+      margin-bottom: 0.5em;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      width: 1.75cap;
+    }
+
+    .form-group:has(input[type="radio"]:checked) {
+      background: var(--pale-green);
+      border-color: var(--green);
+    }
+
+    textarea {
+      box-sizing: content-box;
+      min-block-size: 3lh;
+      resize: block;
+    }
+
+    button {
+      background: var(--green);
+      color: var(--white);
+      border: 0;
+      border-radius: 6px;
+      padding: 0.75em 1.5em;
+
+      &:hover,
+      &:focus-visible {
+        background: var(--dark-teal);
+      }
     }
   }
 </style>
