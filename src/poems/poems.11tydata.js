@@ -9,4 +9,8 @@ export default {
       return `/poems/${data.page.fileSlug}/index.html`;
     },
   },
+
+  webc: {
+    components: '~/src/poems/components/*.webc',
+  },
 };

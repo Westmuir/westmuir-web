@@ -1,5 +1,0 @@
----
-layout: base.webc
----
-
-<template webc:nokeep @raw="content"></template>
