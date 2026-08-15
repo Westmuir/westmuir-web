@@ -83,7 +83,7 @@
     <div class="form-group">
       <label for="lname">Last Name</label>
       <input type="text" id="lname" name="last_name" required data-error="a" />
-      <span class="error-message"></span>
+      <span class="error-message">Last name is required</span>
     </div>
 
     <div class="form-group span-all">
@@ -91,8 +91,14 @@
       <input type="email" id="email" name="email" required data-error="a" />
       <span class="error-message"></span>
     </div>
-    <!-- https://issues.chromium.org/issues/40278914-->
-    <fielset class="span-all">
+
+    <div class="form-group span-all">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" required></textarea>
+      <span class="error-message"></span>
+    </div>
+    <!-- https://issues.chromium.org/issues/4027891-->
+    <fieldset class="span-all">
       <legend>Query Type</legend>
 
       <div class="form-group">
@@ -120,12 +126,6 @@
       </div>
       <span class="error-message"></span>
     </fieldset>
-
-    <div class="form-group span-all">
-      <label for="message">Message</label>
-      <textarea name="message" id="message" required></textarea>
-      <span class="error-message"></span>
-    </div>
 
     <div class="form-group span-all">
       <input
@@ -224,7 +224,6 @@
   });
 </script>
 
-
 <style>
   :where(.contact) {
     --pale-green: hsl(148, 38%, 91%);
@@ -233,9 +232,10 @@
     --white: hsl(0, 0%, 100%);
     --light-teal: hsl(186, 15%, 59%);
     --dark-teal: hsl(187, 24%, 22%);
+    --_critical: var(--red);
 
     --ff-base: "Karla", sans-serif;
-    /* color: black; */
+    color: var(--text-primary);
     /* accent-color: var(--green); */
     font-size: 1rem;
     font-family: var(--ff-base);
@@ -377,6 +377,7 @@
     button,
     textarea {
       font: inherit;
+      background-color: var(--ptimary-contrast);
     }
     padding: 2rem;
     /* background-color: var(--white); */
@@ -395,22 +396,44 @@
       .form-group {
         display: grid;
         gap: 0.25rem;
+        grid-auto-rows: min-content;
       }
 
-      .form-group:has(:not([type="radio"])[required]) label,
-      fieldset:has([required]) legend {
-        display: flex;
-        gap: 1ch;
+      .form-group:has(:not([type="radio"])[required]),
+      fieldset:has([required]) {
+        /* 1. Setup layout for labels and legends */
+        & label,
+        & legend {
+          display: flex;
+          gap: 1ch;
 
-        &::after {
-          content: "*";
-          color: var(--green);
+          /* 2. Permanent asterisk: Default color when valid/untouched */
+          &::after {
+            content: "*";
+            color: var(--text-muted, #71717a); /* Neutral gray */
+          }
+        }
+
+        /* 3. Asterisk turns red ONLY when the user triggers an invalid state */
+        &:has(:user-invalid) {
+          & label::after,
+          & legend::after {
+            color: var(--_critical); /* Critical red */
+          }
+
+          /* 4. Show the error message at the same time */
+          .error-message {
+            display: block;
+          }
         }
       }
-
       .form-group:has([type="radio"], [type="checkbox"]) {
         display: flex;
         gap: 1ch;
+      }
+      .error-message {
+        display: none;
+        color: var(--_critical);
       }
 
       .span-all {
