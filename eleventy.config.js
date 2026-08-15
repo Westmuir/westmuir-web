@@ -178,7 +178,9 @@ export default async function (eleventyConfig) {
       hoistDuplicateBundles: true,
       transforms: [
         async function (content) {
-          if (this.type === 'css') {
+          // console.log(this.buckets[0]);
+
+          if (this.type === 'css' && this.bucket === undefined) {
             if (!content || !content.trim()) return '';
 
             try {

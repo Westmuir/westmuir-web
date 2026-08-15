@@ -36,6 +36,19 @@
 
     <link rel="stylesheet" :href="getBundleFileUrl('css' )" webc:keep />
 
+    <link
+      webc:if="$data.componentBucket"
+      webc:keep
+      rel="stylesheet"
+      :href="getBundleFileUrl('css', $data.componentBucket)"
+    />
+
+    <style
+      webc:if="$data.pageBucket"
+      @raw="getBundle('css', $data.pageBucket)"
+      webc:keep
+    ></style>
+
     <!-- Critical inline initialization to prevent dark-mode page flash -->
     <script>
       const savedTheme = localStorage.getItem("theme-preference");

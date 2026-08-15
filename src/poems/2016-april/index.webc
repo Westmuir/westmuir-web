@@ -103,7 +103,7 @@ endOfYear: false
   </poem-grid>
 </div>
 <!-- 🚀 SCOPED STYLE BLOCK: Clean, organized, and isolated to this page -->
-<style>
+<style webc:bucket="poem-theme">
   :where(poem-grid) {
     --bg-color: #c5e0b4;
     --title-color: #1a365d;

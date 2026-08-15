@@ -103,7 +103,7 @@ endOfYear: false
   </poem-grid>
 </div>
 
-<style webc:scoped>
+<style webc:bucket="poem-theme">
   :where(poem-grid) {
     --bg-color: #ccc0d8;
     --title-color: #2772bc;

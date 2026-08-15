@@ -73,10 +73,12 @@ endOfYear: false
     </div>
   </poem-grid>
 </div>
-<style>
-  :where(poem-grid) {
-    --bg-color: #fbe5d6;
-    --title-color: #ff0000;
-    --stanza-color: #ff0000;
+<style webc:bucket="poem-theme">
+  @layer theme {
+    :where(poem-grid) {
+      --bg-color: #fbe5d6;
+      --title-color: #ff0000;
+      --stanza-color: #ff0000;
+    }
   }
 </style>
