@@ -110,7 +110,9 @@
         Support Request
       </label>
 
-      <span class="error-message">Please select what kind of query.</span>
+      <span class="error-message" aria-live="polite"
+        >Please select what kind of query.</span
+      >
     </fieldset>
 
     <label class="form-group span-all">
@@ -376,53 +378,61 @@
         grid-auto-rows: min-content;
       }
 
-      .form-group:has(:not([type="radio"])[required]),
-      fieldset:has([required]) {
-        /* 1. Setup layout for labels and legends */
-        & label,
-        & legend {
-          display: flex;
-          gap: 1ch;
+      fieldset:has([required]) legend,
+      .form-group:has(:not([type="radio"])[required]) label {
+        display: flex;
+        gap: 1ch;
 
-          /* 2. Permanent asterisk: Default color when valid/untouched */
-          &::after {
-            content: "*";
-            color: var(--text-muted, #71717a); /* Neutral gray */
-          }
+        &::after {
+          content: "*";
+          color: var(--text-muted, #71717a); /* Neutral gray */
         }
 
-        /* 3. Asterisk turns red ONLY when the user triggers an invalid state */
         &:has(:user-invalid) {
-          /* & label::after, */
-          /* & legend::after { */
-          /*   color: var(--_critical); /* Critical red  */
-          /* } */
-
-          /* 4. Show the error message at the same time */
           .error-message {
             display: block;
           }
         }
       }
-      .form-group:has([type="radio"]) {
-        display: flex;
-        gap: 1ch;
+
+      .form-group:has(:not([type="radio"])[required]) {
+        &:has(:user-invalid) {
+          .error-message {
+            display: block;
+          }
+        }
       }
       .form-group:has([type="checkbox"]) {
         display: grid;
-        grid-template-columns: auto 1fr; /* Column 1: the input, Column 2: the label text */
-        gap: 0.5rem 1ch; /* Row gap of 0.5rem, column gap of 1 character */
+        grid-template-columns: auto auto 1fr;
+        gap: 0.5rem 1ch;
         > input {
           grid-column: 1;
           grid-row: 1;
-          align-self: center; /* Vertically centers the checkbox with the first line of text */
+          align-self: center;
         }
         .error-message {
-          grid-column: 1 / -1; /* Spans the full width of this specific form group */
-          grid-row: 2; /* Drops it safely onto the second row */
-          min-width: 0; /* Prevents the text from forcing the column wider */
-          font-size: 0.875rem; /* Optional: standard smaller size for errors */
+          grid-column: 1 / -1;
+          grid-row: 2;
+          min-width: 0;
+          font-size: 0.875rem;
         }
+      }
+
+      label.form-group:has([type="checkbox"]) {
+        &::after {
+          content: "*";
+          color: var(--text-muted, #71717a); /* Neutral gray */
+        }
+      }
+
+      .form-group:has([type="radio"]) {
+        display: flex;
+        gap: 1ch;
+        align-items: center;
+        /* display: grid; */
+        /* grid-template-columns: auto 1fr; /* Column 1: the input, Column 2: the label text */
+        /* gap: 0.5rem 1ch; /* Row gap of 0.5rem, column gap of 1 character */
       }
 
       /* .form-group:has([type="radio"]) { */
