@@ -1,6 +1,9 @@
 <ul class="section-cards">
-  <li :class="`section-card ${post.data.cardType ?? 'na'}`" webc:for="post of reverse(list)">
-    <a :href="post.url">
+  <li
+    :class="`section-card ${post.data.cardType ?? 'na'}`"
+    webc:for="post of reverse(list)"
+  >
+    <a :href="post.url" alt="">
       <div class="section-cards-title" @text="post.data.title"></div>
       <p @text="post.data.description"></p>
     </a>

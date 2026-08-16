@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Council Elections"
 description: from 17th August
 date: 2026-08-01
 expires: 2026-09-2
@@ -48,7 +48,7 @@ cardType: hall
     <p class="cc-action-prompt">
       For more details on requirements and how to stand for election, view
       updates directly on the official
-      <a href="https://angus.gov.uk" class="cc-web-link"
+      <a href="https://angus.gov.uk" alt="Angus council" class="cc-web-link"
         >Angus Council Web Portal</a
       >.
     </p>

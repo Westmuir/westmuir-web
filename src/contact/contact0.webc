@@ -74,56 +74,72 @@
   <!---->
   <!-- <hr class="ui-divider" /> -->
   <form class="kp" novalidate>
-    <label class="form-group">
-      First Name
-      <input type="text" name="first_name" required />
+    <div class="form-group">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="first_name" required data-error="a" />
       <span class="error-message">First name is required</span>
-    </label>
+    </div>
 
-    <label class="form-group">
-      Last Name
-      <input type="text" name="last_name" required />
+    <div class="form-group">
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="last_name" required data-error="a" />
       <span class="error-message">Last name is required</span>
-    </label>
+    </div>
 
-    <label class="form-group span-all">
-      Email
-      <input type="email" name="email" required />
+    <div class="form-group span-all">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required data-error="a" />
       <span class="error-message"></span>
-    </label>
+    </div>
 
-    <label class="form-group span-all">
-      Message
-      <textarea name="message" required></textarea>
-      <span class="error-message">This field is required</span>
-    </label>
+    <div class="form-group span-all">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" required></textarea>
+      <span class="error-message"></span>
+    </div>
     <!-- https://issues.chromium.org/issues/4027891-->
     <fieldset class="span-all">
       <legend>Query Type</legend>
 
-      <label class="form-group">
-        <input type="radio" name="query" value="general_enquiry" required />
-        General Enquiry
-      </label>
-      <label class="form-group">
-        <input type="radio" name="query" value="support" required />
-        Support Request
-      </label>
+      <div class="form-group">
+        <input
+          type="radio"
+          id="general"
+          name="query"
+          value="general_enquiry"
+          required
+          data-error="a"
+        />
+        <label for="general">General Enquiry</label>
+      </div>
 
-      <span class="error-message">Please select what kind of query.</span>
+      <div class="form-group">
+        <input
+          type="radio"
+          id="support"
+          name="query"
+          value="support"
+          required
+          data-error="abc"
+        />
+        <label for="support">Support Request</label>
+      </div>
+      <span class="error-message"></span>
     </fieldset>
 
-    <label class="form-group span-all">
-      <input type="checkbox" name="consent" required />
-      I consent to being contacted by the team
-      <span class="error-message"
-        >You must consent to us contacted you to submit this form.</span
-      >
-    </label>
+    <div class="form-group span-all">
+      <input
+        type="checkbox"
+        name="consent"
+        id="consent"
+        required
+        data-error="a"
+      />
+      <label for="consent">I consent to being contacted by the team</label>
+      <span class="error-message"></span>
+    </div>
 
-    <button class="ui-button ui-filled ui-primary ui-tonal span-all">
-      Submit
-    </button>
+    <button class="span-all">Submit</button>
   </form>
 </div>
 <script>
@@ -350,7 +366,7 @@
     button,
     textarea {
       font: inherit;
-      background-color: var(--surface-default);
+      background-color: var(--ptimary-contrast);
     }
     padding: 2rem;
     /* background-color: var(--white); */
@@ -369,7 +385,6 @@
       .form-group {
         display: grid;
         gap: 0.25rem;
-        grid-template-columns: repeat(auto-fit, minmax());
         grid-auto-rows: min-content;
       }
 
@@ -390,10 +405,10 @@
 
         /* 3. Asterisk turns red ONLY when the user triggers an invalid state */
         &:has(:user-invalid) {
-          /* & label::after, */
-          /* & legend::after { */
-          /*   color: var(--_critical); /* Critical red  */
-          /* } */
+          & label::after,
+          & legend::after {
+            color: var(--_critical); /* Critical red */
+          }
 
           /* 4. Show the error message at the same time */
           .error-message {
@@ -405,17 +420,6 @@
         display: flex;
         gap: 1ch;
       }
-
-      /* .form-group:has([type="radio"]) { */
-      /*   position: relative; */
-      /**/
-      /*   label::after { */
-      /*     content: ""; */
-      /*     position: absolute; */
-      /*     inset: 0; */
-      /*   } */
-      /* } */
-
       .error-message {
         display: none;
         color: var(--_critical);
@@ -458,7 +462,6 @@
 
       .form-group:has(input[type="radio"]:checked) {
         background: var(--pale-green);
-        color: contrast-color(var(--pale-green));
         border-color: var(--green);
       }
 
@@ -466,24 +469,19 @@
         box-sizing: content-box;
         min-block-size: 3lh;
         resize: block;
-        field-sizing: content;
       }
 
-      /* button { */
-      /*   background: var(--green); */
-      /*   color: var(--white); */
-      /*   border: 0; */
-      /*   border-radius: 6px; */
-      /*   padding: 0.75em 1.5em; */
-      /**/
-      /*   &:hover, */
-      /*   &:focus-visible { */
-      /*     background: var(--dark-teal); */
-      /*   } */
-      /* } */
-      input:user-invalid,
-      textarea:user-invalid {
-        border-color: var(--red);
+      button {
+        background: var(--green);
+        color: var(--white);
+        border: 0;
+        border-radius: 6px;
+        padding: 0.75em 1.5em;
+
+        &:hover,
+        &:focus-visible {
+          background: var(--dark-teal);
+        }
       }
     }
   }
