@@ -4,12 +4,7 @@
     <p
       @text="description ?? 'Get involved with events, news, and village life.'"
     ></p>
-    <a
-      :href="buttonurl"
-      class="btn"
-      @text="buttonlabel"
-      webc:if="buttonlabel && buttonurl"
-    ></a>
+    <button class="btn" @text="buttonlabel"></button>
   </a>
 </section>
 

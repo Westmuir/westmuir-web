@@ -1,7 +1,12 @@
 <ol reversed class="postlist">
   <li webc:for="post of reverse(list)">
     <article :class="`item-list ${post.data.cardType ?? 'na'}`">
-      <a :href="post.url" @text="post.data.title ?? post.url"> </a>
+      <a
+        :href="post.url"
+        @text="post.data.title ?? post.url"
+        :alt="post.data.title ?? post.url"
+      >
+      </a>
       <div>
         <time
           :datetime="htmlDateString(post.date)"

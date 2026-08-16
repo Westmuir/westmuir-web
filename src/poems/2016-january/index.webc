@@ -104,7 +104,7 @@ endOfYear: false
     </div>
   </poem-grid>
 </div>
-<style>
+<style webc:bucket="poem-theme">
   :host {
     --local-bg: #92cddc;
     --local-title-color: #365f91;

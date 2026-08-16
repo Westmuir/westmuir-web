@@ -106,7 +106,9 @@ export default async function (eleventyConfig) {
       }
 
       // Modern regex that cleanly captures the file targets from @import statements
-      const importRuleRegex = /@import\s+(?:url\()?['"]?([^'"\);]+)['"]?\)?.*;/g;
+      // const importRuleRegex = /@import\s+(?:url\()?['"]?([^'"\);]+)['"]?\)?.*;/g;
+      const importRuleRegex = /@import\s+(?:url\()?['"]?([^'"\);\s]+)['"]?\)?/g;
+
       const fileList = [];
       let match;
 
@@ -162,7 +164,7 @@ export default async function (eleventyConfig) {
           },
           drafts: {
             nesting: true,
-            customMedia: true, // Successfully unrolls your OpenProps dimensions down to pixels
+            customMedia: true,
           },
         });
         return code;
@@ -178,7 +180,9 @@ export default async function (eleventyConfig) {
       hoistDuplicateBundles: true,
       transforms: [
         async function (content) {
-          if (this.type === 'css') {
+          // console.log(this.buckets[0]);
+
+          if (this.type === 'css' && this.bucket === undefined) {
             if (!content || !content.trim()) return '';
 
             try {

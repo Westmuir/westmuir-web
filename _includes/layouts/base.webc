@@ -36,6 +36,19 @@
 
     <link rel="stylesheet" :href="getBundleFileUrl('css' )" webc:keep />
 
+    <link
+      webc:if="$data.componentBucket"
+      webc:keep
+      rel="stylesheet"
+      :href="getBundleFileUrl('css', $data.componentBucket)"
+    />
+
+    <style
+      webc:if="$data.pageBucket"
+      @raw="getBundle('css', $data.pageBucket)"
+      webc:keep
+    ></style>
+
     <!-- Critical inline initialization to prevent dark-mode page flash -->
     <script>
       const savedTheme = localStorage.getItem("theme-preference");
@@ -77,6 +90,12 @@
     src="https://unpkg.com/htmx.org@1.9.12"
     integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
     crossorigin="anonymous"
+    webc:keep
+  ></script>
+  <script
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async
+    defer
     webc:keep
   ></script>
 </html>

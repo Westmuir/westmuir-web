@@ -6,6 +6,7 @@
     command="show-modal"
     aria-haspopup="dialog"
     aria-controls="drawer-inline-start-html"
+    aria-label="Open navigation menu"
   >
     <svg
       class="hamburger-icon"
@@ -194,7 +195,7 @@
   /* This ensures the vertical pipe sits exactly at the container edge
      without crowding the arrows or the following text links */
   .context-lane .nav-links a:not(:last-child)::after {
-    content: '';
+    content: "";
     position: absolute;
     right: 0; /* Keep it locked to the bounding edge */
     top: 25%;

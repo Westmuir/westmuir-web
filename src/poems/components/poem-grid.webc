@@ -1,0 +1,463 @@
+<template webc:type="js" webc:nokeep webc:root="keep">
+  export default ({ author, title, $data }) => { const list =
+  $data.collections.writtenPoems || []; const currentUrl = $data.page.url; const
+  currentIdx = list.findIndex(item => item.url === currentUrl); const prev=
+  currentIdx > 0 ? list[currentIdx - 1].url : null; const next= currentIdx <
+  list.length - 1 ? list[currentIdx + 1].url : null; return `
+  <div class="poem-wrapper">
+    <div class="poem-card">
+      <!-- ROW 1: HEADER BANNER -->
+      <header class="row-header">
+        <div class="header-left-images">
+          <slot name="header-tl"></slot>
+        </div>
+        <div class="header-title-text">
+          <slot name="header-title">
+            <h1 class="ui-h2 poem-title">${title}</h1>
+          </slot>
+        </div>
+        <div class="header-right-images">
+          <slot name="header-tr"></slot>
+        </div>
+      </header>
+
+      <!-- ROW 2: THE 5-COLUMN CONTENT MESH -->
+      <div class="grid-body">
+        <aside class="col-outer col-left-pics">
+          <slot name="col-1-images"></slot>
+        </aside>
+        <section class="col-inner col-left-text">
+          <slot name="col-2-text"></slot>
+        </section>
+        <aside class="col-inner col-mid-pics">
+          <slot name="col-3-images"></slot>
+        </aside>
+        <section class="col-inner col-right-text">
+          <slot name="col-4-text"></slot>
+        </section>
+        <aside class="col-outer col-right-pics">
+          <slot name="col-5-images"></slot>
+        </aside>
+
+        <!-- STRADDLE FOOTER & NAVIGATION LINKS -->
+        <footer class="grid-straddle-signature">
+          ${author ? `
+          <p class="signature">— ${author}</p>
+          ` : ''}
+
+          <nav class="poem-navigation" aria-label="Poem pagination navigation">
+            ${prev ? `<a href="${prev}" class="nav-link prev-link"
+              >← Previous Poem</a
+            >` : '<span class="nav-disabled"></span>'} ${next ? `<a
+              href="${next}"
+              class="nav-link next-link"
+              >Next Poem →</a
+            >` : '<span class="nav-disabled"></span>'}
+          </nav>
+        </footer>
+      </div>
+    </div>
+  </div>
+  `;}
+</template>
+<style webc:bucket="poem-global">
+  @layer components.root {
+    .poem-wrapper {
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      box-sizing: border-box;
+      color: #000;
+
+      --_bg-color: var(--bg-color, antiquewhite);
+      --_title-color: var(--title-color, #000);
+      --_stanza-color: var(--stanza-color, #000);
+      --_img-color: var(--img-color, var(--_title-color));
+      --border-theme: var(
+        --card-border-color,
+        oklch(from var(--_bg-color) calc(l * 0.65) calc(c * 1.2) h)
+      );
+
+      h1,
+      h2 {
+        color: var(--_title-color);
+        font-family: "Kalam", var(--font-humanist);
+      }
+      img {
+        border: 0.2rem solid var(--_img-color);
+        border-radius: var(--radius-2);
+      }
+    }
+
+    .poem-card {
+      background-color: var(--_bg-color);
+      border: var(--border-size-3, 3px) solid var(--border-theme);
+      border-radius: var(--radius-2, 12px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Row 1: Symmetrical Flex Header Container */
+    .row-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem 1rem 0.5rem 1rem;
+      font-family: var(--font-handwritten, sans-serif);
+    }
+
+    .poem-title {
+      flex-shrink: 0; /* Prevents the title text from being squeezed by the sides */
+      max-width: 50%; /* Caps the width so long titles wrap elegantly in the center area */
+      text-align: center;
+      margin: 0;
+      font-family: "Kalam", var(--font-humanist);
+      color: var(--_title-color);
+    }
+    /* 🚀 ELASTIC SIDE HEADER BOXES (LHS -> Title & RHS -> Title) */
+    .header-left-images,
+    .header-right-images {
+      display: flex;
+      align-items: center;
+
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+
+      min-width: 120px; /* Prevents columns from collapsing into nothing on narrow layouts */
+    }
+
+    .header-title-text {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      h1,
+      h2 {
+        max-width: 100%;
+      }
+    }
+    .small-title {
+      h1,
+      h2 {
+        font-size: var(--font-size-fluid-1);
+      }
+    }
+
+    .poem-wrapper .no-border {
+      img {
+        border: none;
+      }
+    }
+    .row-header .header-title-images {
+      flex-shrink: 0;
+      flex: 1;
+      margin: 0;
+      picture {
+        img {
+          max-width: 50%;
+          margin-inline: auto;
+          border: none;
+        }
+      }
+    }
+
+    .header-right-images {
+      justify-content: flex-end; /* Anchors the right-side images to the outer right edge */
+    }
+
+    /* 🚀 DISSOLVE SLOT WRAPPER DIV INTERFERENCE */
+    .header-left-images div,
+    .header-right-images div {
+      display: flex;
+      align-items: center;
+      width: 100%; /* Forces the slot wrapper div to stretch full-width inside the elastic box */
+    }
+
+    .header-right-images div {
+      justify-content: flex-end;
+    }
+
+    /* 🚀 THE DYNAMIC MARGIN-AUTO SEPARATION TRICK */
+    .header-left-images div img:nth-child(2),
+    .header-left-images div picture:nth-child(2) {
+      margin-inline: auto;
+    }
+
+    .header-right-images div img:nth-child(2),
+    .header-right-images div picture:nth-child(2) {
+      margin-inline: auto;
+      order: -1; /* Flips visual execution stacking order cleanly if needed */
+    }
+    .header-left-images div svg {
+      margin-inline: auto;
+    }
+    .header-right-images div svg {
+      margin-inline: auto;
+      order: -1;
+    }
+
+    /* IMAGE LIMITS */
+    .row-header img,
+    .row-header picture img {
+      height: 120px;
+      width: auto;
+      max-width: 120px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    /* Row 2: 5-Column Grid */
+    .grid-body {
+      display: grid;
+      grid-template-columns: 15% 1fr minmax(0, 200px) 1fr 15%;
+      gap: 1rem;
+      align-items: start;
+      padding: 1rem;
+      font-family: "Kalam", var(--font-humanist);
+    }
+
+    .wide .grid-body {
+      grid-template-columns: 1% 1fr minmax(0, 200px) 1fr 15%;
+    }
+    .wide-text .grid-body {
+      grid-template-columns: 10% 1fr minmax(0, 160px) 1fr 10%;
+      gap: 0.75rem;
+    }
+    .no-middle-images .grid-body {
+      grid-template-columns: 20% 1fr 1fr 20%;
+      gap: 1rem;
+
+      .col-mid-pics {
+        display: none;
+      }
+      .col-left-pics > div,
+      .col-right-pics > div {
+        align-items: center;
+      }
+
+      .col-outer img {
+        height: auto;
+        width: auto;
+        max-width: 200px;
+      }
+    }
+    .col-outer,
+    .col-inner {
+      height: 100%;
+    }
+
+    .col-inner {
+      display: flex;
+      justify-content: center;
+      div {
+        margin-block: auto;
+      }
+    }
+
+    /* Target the injected slot container divs directly */
+    .col-outer.col-left-pics div,
+    .col-inner.col-mid-pics div,
+    .col-outer.col-right-pics div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    /* Image limits */
+    .col-mid-pics img,
+    .col-mid-pics picture img {
+      width: 100%;
+      max-width: 200px;
+      max-height: 200px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+
+    .grid-body img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      object-fit: contain;
+      max-width: 180px;
+      margin-block: var(--size-2);
+    }
+
+    .col-left-text p,
+    .col-right-text p {
+      font-size: clamp(0.8rem, 2vw, 1.2rem);
+      line-height: 1.7;
+
+      /* 1. Safe layout: Let code formatters add spaces without affecting the browser */
+      white-space: normal;
+
+      /* 2. Precision control: Tighten or loosen the space between your stanzas here */
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+
+      color: var(--_stanza-color);
+
+      /* Reset internal spacing rules */
+      br {
+        content: "";
+        margin: 0;
+      }
+    }
+    .small .col-left-text p,
+    .small .col-right-text p {
+      font-size: var(--font-fluid-size-0);
+    }
+
+    /* Signature Layout styling */
+    .grid-straddle-signature {
+      grid-column: 4 / 6;
+      margin-top: 1rem;
+      text-align: left;
+      padding-left: 2rem;
+    }
+
+    .signature {
+      font-style: italic;
+      font-weight: bold;
+      font-size: var(--font-size-fluid-1);
+      margin: 0;
+    }
+
+    .poem-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: var(--size-4, 2rem);
+      padding-top: var(--size-2, 1rem);
+      border-top: 1px solid oklch(from var(--_bg-color) calc(l * 0.8) c h);
+      width: 100%;
+
+      .nav-link {
+        font-family: sans-serif;
+        font-size: var(--font-size-1, 0.95rem);
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        color: var(--_title-color, #1a365d);
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: oklch(from var(--_title-color) calc(l * 1.4) c h);
+        }
+      }
+      .nav-disabled {
+        visibility: hidden;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      /* Collapse the flex header linearly so it never squishes images */
+      .row-header {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .header-title-text,
+      .header-left-images,
+      .header-right-images {
+        max-width: 100% !important;
+        width: 100% !important;
+        justify-content: center;
+        div {
+          justify-content: center;
+        }
+      }
+      .row-header .header-title-images picture img {
+        max-width: 120px;
+      }
+
+      /* Convert the template grid layout into a true 2-column configuration */
+      .grid-body,
+      .wide .grid-body,
+      .wide-text .grid-body,
+      .no-middle-images .grid-body {
+        grid-template-columns: 1fr 2fr !important;
+        gap: 1.5rem 1rem !important;
+      }
+
+      /* ── BLOCK 1: Left Images + Left Stanzas ── */
+      .col-left-pics {
+        grid-column: 1;
+        grid-row: 1;
+
+        div {
+          flex-direction: column !important;
+          gap: var(--size-2) !important;
+        }
+      }
+      .col-left-text {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      /* ── BLOCK 2: Right Images + Right Stanzas ── */
+      /* Pulls Column 5 over into the left tracking lane underneath Column 1! */
+      .col-right-pics {
+        grid-column: 2;
+        grid-row: 2;
+
+        div {
+          flex-direction: column !important;
+          gap: var(--size-2) !important;
+        }
+      }
+      .col-right-text {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      /* ── BLOCK 3: Middle Images Column Handling ── */
+      /* If the page uses mid images, they center cleanly between the blocks */
+      .col-mid-pics {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 1rem;
+
+        div {
+          flex-direction: row !important;
+          flex-wrap: wrap !important;
+          justify-content: center !important;
+        }
+      }
+
+      /* If the page has `.no-middle-images` assigned, hide the mid track entirely */
+      .no-middle-images .col-mid-pics {
+        display: none !important;
+      }
+
+      /* ── BLOCK 4: SIGNATURE & FOOTER NAVIGATION ── */
+      .grid-straddle-signature {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        padding-left: 0;
+        text-align: center;
+        margin-top: 1.5rem;
+      }
+
+      .poem-navigation {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .poem-navigation {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+    }
+  }
+</style>
