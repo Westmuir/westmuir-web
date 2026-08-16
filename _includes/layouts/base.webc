@@ -92,4 +92,10 @@
     crossorigin="anonymous"
     webc:keep
   ></script>
+  <script
+    src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+    async
+    defer
+    webc:keep
+  ></script>
 </html>

@@ -1,349 +1,134 @@
 <div class="contact">
-  <h1>Contact Us</h1>
-  <!-- <form class="ui-form" novalidate> -->
-  <!--   <div class="ui-field-group span-all" role="group"> -->
-  <!--     <label class="ui-text-field"> -->
-  <!--       <span class="ui-label">First name</span> -->
-  <!--       <span class="ui-field"> -->
-  <!--         <input type="text" placeholder="Jane" name="first" required /> -->
-  <!--       </span> -->
-  <!--       <span class="ui-end-text">First name is required</span> -->
-  <!--     </label> -->
-  <!---->
-  <!--     <label class="ui-text-field"> -->
-  <!--       <span class="ui-label">Last name</span> -->
-  <!--       <span class="ui-field"> -->
-  <!--         <input type="text" placeholder="Doe" name="last" required /> -->
-  <!--       </span> -->
-  <!--       <span class="ui-end-text">This field is required</span> -->
-  <!--     </label> -->
-  <!--     <label class="ui-text-field span-all"> -->
-  <!--       <span class="ui-label">Email</span> -->
-  <!--       <span class="ui-field"> -->
-  <!--         <input type="email" placeholder="" name="email" required /> -->
-  <!--       </span> -->
-  <!--       <span class="ui-end-text">This field is required</span> -->
-  <!--     </label> -->
-  <!--   </div> -->
-  <!---->
-  <!--   <fieldset class="field-set span-all"> -->
-  <!--     <legend>Query Type</legend> -->
-  <!---->
-  <!--     <label class="form-group"> -->
-  <!--       <input -->
-  <!--         type="radio" -->
-  <!--         id="general" -->
-  <!--         name="query" -->
-  <!--         value="general_enquiry" -->
-  <!--         required -->
-  <!--         data-error="a" -->
-  <!--       /> -->
-  <!--       General Enquiry -->
-  <!--     </label> -->
-  <!---->
-  <!--     <div class="form-group"> -->
-  <!--       <input -->
-  <!--         type="radio" -->
-  <!--         id="support" -->
-  <!--         name="query" -->
-  <!--         value="support" -->
-  <!--         required -->
-  <!--         data-error="abc" -->
-  <!--       /> -->
-  <!--       <label for="support">Support Request</label> -->
-  <!--     </div> -->
-  <!--     <span class="error-message"></span> -->
-  <!--   </fieldset> -->
-  <!--   <label class="ui-textarea span-all"> -->
-  <!--     <span class="ui-label">Message</span> -->
-  <!--     <span class="ui-field"> -->
-  <!--       <textarea placeholder="" required></textarea> -->
-  <!--     </span> -->
-  <!--     <span class="ui-end-text" -->
-  <!--       >Only letters from the first half of the alphabet are allowed.</span -->
-  <!--     > -->
-  <!--   </label> -->
-  <!---->
-  <!--   <label class="ui-checkbox span-all"> -->
-  <!--     <input name="consent" type="checkbox" required /> -->
-  <!--     <span class="ui-label">I consent to being contacted by the team</span -->
-  <!--     ><span class="ui-end-text">Consent to being contacted</span> -->
-  <!--   </label> -->
-  <!--   <button class="ui-button ui-primary ui-tonal span-all">Submit</button> -->
-  <!-- </form> -->
-  <!---->
-  <!-- <hr class="ui-divider" /> -->
-  <form class="kp" novalidate>
-    <label class="form-group">
-      First Name
-      <input type="text" name="first_name" required />
-      <span class="error-message">First name is required</span>
-    </label>
+  <div id="contact-container">
+    <h1>Contact Us</h1>
 
-    <label class="form-group">
-      Last Name
-      <input type="text" name="last_name" required />
-      <span class="error-message">Last name is required</span>
-    </label>
+    <form class="contact-form" novalidate>
+      <div class="form-group">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="first_name" required />
+        <span class="error-message">First name is required</span>
+      </div>
+      <div class="form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="last_name" required />
+        <span class="error-message">Last name is required</span>
+      </div>
+      <div class="form-group span-all">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required />
+        <span class="error-message">Email is required</span>
+      </div>
+      <!-- https://issues.chromium.org/issues/4027891-->
+      <fieldset class="span-all">
+        <legend>Query Type</legend>
+        <div class="form-group">
+          <input
+            type="radio"
+            id="general"
+            name="query"
+            value="General Enquiry"
+            required
+          />
+          <label for="general">General Enquiry</label>
+        </div>
 
-    <label class="form-group span-all">
-      Email
-      <input type="email" name="email" required />
-      <span class="error-message"></span>
-    </label>
+        <div class="form-group">
+          <input
+            type="radio"
+            id="support"
+            name="query"
+            value="Support Request"
+            required
+          />
+          <label for="support">Support Request</label>
+        </div>
 
-    <label class="form-group span-all">
-      Message
-      <textarea name="message" required></textarea>
-      <span class="error-message">This field is required</span>
-    </label>
-    <!-- https://issues.chromium.org/issues/4027891-->
-    <fieldset class="span-all">
-      <legend>Query Type</legend>
+        <span class="error-message" aria-live="polite"
+          >Please select what kind of query.</span
+        >
+      </fieldset>
+      <div class="form-group span-all">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <span class="error-message" aria-live="polite"
+          >Message is required</span
+        >
+      </div>
 
-      <label class="form-group">
-        <input type="radio" name="query" value="general_enquiry" required />
-        General Enquiry
-      </label>
-      <label class="form-group">
-        <input type="radio" name="query" value="support" required />
-        Support Request
-      </label>
+      <div class="form-group span-all">
+        <input type="checkbox" name="consent" id="consent" required />
+        <label for="consent">I consent to being contacted by the team</label>
+        <span class="error-message" aria-live="polite"
+          >You must consent to us contacted you to submit this form.</span
+        >
+      </div>
 
-      <span class="error-message" aria-live="polite"
-        >Please select what kind of query.</span
+      <button
+        class="span-all"
+        hx-post="/api/submit-contact"
+        hx-target="#contact-container"
+        hx-swap="outerHTML"
       >
-    </fieldset>
-
-    <label class="form-group span-all">
-      <input type="checkbox" name="consent" required />
-      I consent to being contacted by the team
-      <span class="error-message"
-        >You must consent to us contacted you to submit this form.</span
-      >
-    </label>
-
-    <button class="span-all">Submit</button>
-  </form>
+        Submit
+      </button>
+      <div
+        class="cf-turnstile"
+        :data-sitekey="process.env.TURNSTILE_SITEKEY || '1x00000000000000000000AA'"
+        style="margin-bottom: 1rem"
+      ></div>
+    </form>
+  </div>
 </div>
 <script>
-  // Simple validation script
   const form = document.querySelector("form");
-
-  // // Function to validate any field
-  // function validateField(field) {
-  //   // For radio buttons, check if any in the group are checked
-  //   if (field.type === "radio") {
-  //     const isChecked = form.querySelector(
-  //       `input[name="${field.name}"]:checked`,
-  //     );
-  //     field = isChecked ? isChecked : field; // Use checked radio or first radio for validation
-  //   }
-  //
-  //   // Find the error message element
-  //   const errorDiv =
-  //     field.type === "radio"
-  //       ? field.closest("fieldset").querySelector(".error-message")
-  //       : field.parentElement.querySelector(".error-message");
-  //   const errorMsg =
-  //     field.type === "radio"
-  //       ? field.closest("fieldset").querySelector(".ui-end-text")
-  //       : field.closest(".ui-text-field").querySelector(".ui-end-text");
-  //
-  //   // Check validity and show/hide error
-  //
-  //   if (!field.validity.valid) {
-  //     try {
-  //       if (errorDiv) {
-  //         errorDiv.textContent =
-  //           field.dataset.error || "This field is required";
-  //         errorDiv.classList.add("show");
-  //       }
-  //       // errorMsg.textContent = field.dataset.error || "This field is required";
-  //       // errorMsg.classList.add("show");
-  //     } catch (e) {}
-  //     return false;
-  //   } else {
-  //     try {
-  //       if (errorDiv) {
-  //         errorDiv.textContent = "";
-  //         errorDiv.classList.remove("show");
-  //       }
-  //       // errorMsg.textContent = "";
-  //       // errorMsg.classList.remove("show");
-  //     } catch (e) {}
-  //     return true;
-  //   }
-  // }
-
-  // // Add validation on blur/change
-  // form.querySelectorAll("input, textarea").forEach((input) => {
-  //   const event = input.type === "radio" ? "change" : "blur";
-  //   input.addEventListener(event, () => validateField(input));
-  // });
-  //
-  // Validate entire form on submit
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     const isValid = e.target.checkValidity();
 
     if (isValid) {
       alert("Form submitted successfully!");
-      console.log("Form data:", new FormData(form));
+      const formData = Object.fromEntries(new FormData(form));
+      console.log("Form data:", formData);
     } else {
-      // Focus first invalid field
-      form.querySelector(":invalid")?.focus();
+      if (firstInvalid) {
+        // If the invalid item is a radio button, focus its labeled container box instead
+        if (firstInvalid.type === "radio") {
+          const groupContainer =
+            firstInvalid.closest("fieldset") ||
+            firstInvalid.closest(".form-group");
+          groupContainer?.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+          firstInvalid.focus({ preventScroll: true });
+        } else {
+          // Standard inputs get normal smooth focus
+          firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+          firstInvalid.focus({ preventScroll: true });
+        }
+      }
     }
   });
 </script>
 
 <style>
   :where(.contact) {
-    --pale-green: hsl(148, 38%, 91%);
-    --green: hsl(169, 82%, 27%);
     --red: hsl(0, 66%, 54%);
-    --white: hsl(0, 0%, 100%);
-    --light-teal: hsl(186, 15%, 59%);
-    --dark-teal: hsl(187, 24%, 22%);
     --_critical: var(--red);
     --_color: light-dark(var(--color-16), var(--color-1));
     --_color-contrast: light-dark(var(--color-1), var(--color-16));
     --_filled-hover-bg-color: oklch(from var(--primary) calc(l - 0.1) c h);
     --_border-color: light-dark(var(--color-7), var(--color-10));
     --_query-color: light-dark(var(--color-4), var(--color-12));
-    --ff-base: "Karla", sans-serif;
 
     color: var(--text-primary);
-    /* accent-color: var(--green); */
-    font-size: 1rem;
-    font-family: var(--ff-base);
+    font-size: var(--size-4);
+    font-family: var(--ff-base, inherit);
     line-height: 1.6;
-    /* background-color: var(--pale-green); */
-    /* .ui-field { */
-    /*   /* Style the input box when the user leaves it invalid */
-    /*   &:has(input:user-invalid) input { */
-    /*     border-color: var(--red-6); */
-    /*     outline-color: var(--red-6); */
-    /*   } */
-    /**/
-    /*   /* Target the error message right next to the invalid field */
-    /*   &:has(input:user-invalid) + .ui-end-text { */
-    /*     display: block; */
-    /*   } */
-    /* } */
-    /* .ui-end-text { */
-    /*   display: none; */
-    /*   /* color: var(--red-6); */
-    /*   /* font-size: var(--font-size-0); */
-    /* } */
-    /* .ui-text-field:has(input:user-invalid), */
-    /* .ui-textarea:has(textarea:user-invalid), */
-    /* .ui-checkbox:has(input:user-invalid) { */
-    /*   .ui-end-text { */
-    /*     display: block; */
-    /*   } */
-    /* } */
-    /* textarea { */
-    /*   /* Automatically grows and shrinks with text */
-    /*   field-sizing: content; */
-    /**/
-    /*   /* Open Props token gives an inviting initial depth */
-    /*   min-height: var(--size-11); */
-    /**/
-    /*   /* Removes the redundant drag handle and protects layouts */
-    /*   resize: none; */
-    /* } */
-    /* .ui-form { */
-    /*   display: grid; */
-    /*   grid-template-columns: 1fr 1fr; */
-    /**/
-    /*   gap: var(--size-4) h1; */
-    /* } */
-    /**/
-    /* .ui-field-group { */
-    /*   display: grid; */
-    /*   grid-template-columns: inherit; */
-    /*   grid-auto-rows: min-content; */
-    /*   gap: var(--size-4); */
-    /* } */
-    /* .ui-text-field { */
-    /*   grid-auto-rows: min-content; */
-    /* } */
-    /**/
-    /* .ui-end-text { */
-    /*   color: var(--critical); */
-    /* } */
-    /**/
-    /* .span-all { */
-    /*   grid-column: 1 / -1; */
-    /* } */
-    /* .form-group:has([type="radio"], [type="checkbox"]) { */
-
-    /*   gap: 1ch; */
-    /*   align-items: center; */
-    /* } */
-    /* .form-group:has(input[type="radio"]) { */
-    /*   border: 1px solid var(--dark-teal); */
-    /*   border-radius: 8px; */
-    /*   padding: 0.75em 1.5em; */
-    /* } */
-    /* .form-group:has([type="radio"]) { */
-    /*   position: relative; */
-    /**/
-    /*   label::after { */
-    /*     content: ""; */
-    /*     position: absolute; */
-    /*     inset: 0; */
-    /*   } */
-    /* } */
-    /**/
-    /* fieldset.field-set { */
-    /*   border: 0; */
-    /*   padding: 0; */
-    /**/
-    /*   display: grid; */
-    /*   gap: inherit; */
-    /*   grid-template-columns: subgrid; */
-    /* } */
-    /**/
-    /* fieldset:has([required]) legend, */
-    /* .form-group:has(:not([type="radio"])[required]) label { */
-    /*   display: flex; */
-    /*   gap: 1ch; */
-    /*   align-items: center; */
-    /**/
-    /*   &::after { */
-    /*     content: "*"; */
-    /*     color: var(--green); */
-    /*   } */
-    /* } */
-    /**/
-    /* legend { */
-    /*   margin-bottom: 0.5em; */
-    /* } */
-    /**/
-    /* input[type="radio"], */
-    /* input[type="checkboxX"] { */
-    /*   width: 1.75cap; */
-    /* } */
-    /**/
-    /* .form-group:has(input[type="radio"]:checked) { */
-    /*   background: var(--pale-green); */
-    /*   border-color: var(--green); */
-    /*   color: contrast-color(var(--pale-green)); */
-    /* } */
-    /* buttonX { */
-    /*   background: var(--green); */
-    /*   color: var(--white); */
-    /*   border: 0; */
-    /*   border-radius: 6px; */
-    /*   padding: 0.75em 1.5em; */
-    /**/
-    /*   &:hover, */
-    /*   &:focus-visible { */
-    /*     background: var(--dark-teal); */
-    /*   } */
-    /* } */
+    padding: 2rem;
+    border-radius: 1rem;
+    max-inline-size: 700px;
+    margin: 0 auto;
 
     h1,
     h2,
@@ -354,148 +139,95 @@
     input,
     button,
     textarea {
-      font: inherit;
       background-color: var(--surface-default);
     }
-    padding: 2rem;
-    /* background-color: var(--white); */
-    border-radius: 1rem;
-    max-inline-size: 700px;
-    margin: 0 auto;
 
-    :where(form.kp) {
+    :where(form.contact-form) {
       display: grid;
-      gap: 1rem;
+      gap: var(--size-3);
 
       @media (width > 500px) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      fieldset {
+        border: 0;
+        padding: 0;
+
+        display: grid;
+        gap: var(--size-1) var(--size-3);
+        grid-template-columns: inherit;
+        .error-message {
+          grid-column: 1 / -1;
+        }
+      }
+      textarea {
+        box-sizing: content-box;
+        min-block-size: 3lh;
+        resize: none;
+        field-sizing: content;
       }
 
       .form-group {
         display: grid;
-        gap: 0.25rem;
-        grid-template-columns: repeat(auto-fit, minmax());
         grid-auto-rows: min-content;
       }
 
       fieldset:has([required]) legend,
       .form-group:has(:not([type="radio"])[required]) label {
         display: flex;
-        gap: 1ch;
+        gap: var(--size-2);
 
         &::after {
           content: "*";
-          color: var(--text-muted, #71717a); /* Neutral gray */
+          color: var(--text-muted, #71717a);
         }
-
-        &:has(:user-invalid) {
-          .error-message {
-            display: block;
-          }
-        }
-      }
-
-      .form-group:has(:not([type="radio"])[required]) {
-        &:has(:user-invalid) {
-          .error-message {
-            display: block;
-          }
-        }
-      }
-      .form-group:has([type="checkbox"]) {
-        display: grid;
-        grid-template-columns: auto auto 1fr;
-        gap: 0.5rem 1ch;
-        > input {
-          grid-column: 1;
-          grid-row: 1;
-          align-self: center;
-        }
-        .error-message {
-          grid-column: 1 / -1;
-          grid-row: 2;
-          min-width: 0;
-          font-size: 0.875rem;
-        }
-      }
-
-      label.form-group:has([type="checkbox"]) {
-        &::after {
-          content: "*";
-          color: var(--text-muted, #71717a); /* Neutral gray */
-        }
-      }
-
-      .form-group:has([type="radio"]) {
-        display: flex;
-        gap: 1ch;
-        align-items: center;
-        /* display: grid; */
-        /* grid-template-columns: auto 1fr; /* Column 1: the input, Column 2: the label text */
-        /* gap: 0.5rem 1ch; /* Row gap of 0.5rem, column gap of 1 character */
-      }
-
-      /* .form-group:has([type="radio"]) { */
-      /*   position: relative; */
-      /**/
-      /*   label::after { */
-      /*     content: ""; */
-      /*     position: absolute; */
-      /*     inset: 0; */
-      /*   } */
-      /* } */
-
-      .error-message {
-        display: none;
-        color: var(--_critical);
-      }
-
-      .span-all {
-        grid-column: 1 / -1;
       }
 
       input,
       textarea,
       .form-group:has(input[type="radio"]) {
         border: 1px solid var(--_border-color);
-        border-radius: 8px;
-        padding: 0.75em 1.5em;
+        border-radius: 0.5rem;
+        padding: 0.5em 0.75em;
+
+        &:focus-visible {
+          outline-color: var(--primary);
+        }
       }
 
-      input,
-      textarea {
-        outline-color: green;
+      [type="radio"],
+      [type="checkbox"] {
+        width: var(--size-3);
+        height: var(--size-3);
+        margin: 0;
+        flex-shrink: 0;
+      }
+      .form-group:has([type="radio"], [type="checkbox"]) {
+        display: flex;
+        gap: var(--size-2);
+        align-items: center;
       }
 
-      fieldset {
-        border: 0;
-        padding: 0;
+      .form-group:has(input[type="radio"]) {
+        border: 1px solid var(--_border-color);
+        border-radius: 0.5rem;
+        padding: 0.5em 0.75em;
+        display: flex;
+        gap: var(--size-2);
+        align-items: center;
+        position: relative;
 
-        display: grid;
-        gap: inherit;
-        grid-template-columns: subgrid;
+        label::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          cursor: pointer;
+        }
       }
-
-      legend {
-        margin-bottom: 0.5em;
-      }
-
-      input[type="radio"],
-      input[type="checkbox"] {
-        width: 1.75cap;
-      }
-
-      .form-group:has(input[type="radio"]:checked) {
+      .form-group:has([type="radio"]:checked) {
         background: var(--_query-color);
         color: contrast-color(var(--_query-color));
         border-color: var(--_border-color);
-      }
-
-      textarea {
-        box-sizing: content-box;
-        min-block-size: 3lh;
-        resize: block;
-        field-sizing: content;
       }
 
       button {
@@ -503,7 +235,7 @@
         color: var(--primary-contrast);
 
         border: 0;
-        border-radius: 6px;
+        border-radius: var(--radius-2);
         padding: 0.75em 1.5em;
 
         &:hover,
@@ -512,9 +244,47 @@
         }
       }
 
+      .error-message {
+        display: none;
+        color: var(--_critical);
+        font-size: var(--size-3);
+      }
+
+      fieldset:has([type="radio"][required]):has(:user-invalid) .error-message,
+      .form-group:has([required]):has(:user-invalid) .error-message {
+        display: block;
+      }
+
       input:user-invalid,
       textarea:user-invalid {
         border-color: var(--red);
+      }
+
+      .form-group:has([type="checkbox"]) {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.25rem var(--size-2);
+        align-items: start;
+
+        > input {
+          grid-column: 1;
+          grid-row: 1;
+          margin-top: 0.25rem; /* Aligns box nicely with first text line */
+        }
+
+        > label {
+          grid-column: 2;
+          grid-row: 1;
+        }
+
+        .error-message {
+          grid-column: 1 / -1;
+          grid-row: 2;
+        }
+      }
+
+      .span-all {
+        grid-column: 1 / -1;
       }
     }
   }
