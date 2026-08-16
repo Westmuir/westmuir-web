@@ -192,27 +192,16 @@
     }
   }
 
-  // Add validation on blur/change
-  form.querySelectorAll("input, textarea").forEach((input) => {
-    const event = input.type === "radio" ? "change" : "blur";
-    input.addEventListener(event, () => validateField(input));
-  });
-
+  // // Add validation on blur/change
+  // form.querySelectorAll("input, textarea").forEach((input) => {
+  //   const event = input.type === "radio" ? "change" : "blur";
+  //   input.addEventListener(event, () => validateField(input));
+  // });
+  //
   // Validate entire form on submit
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
-    let isValid = true;
-
-    // Validate all fields (skip duplicate radio validations)
-    const validated = new Set();
-    form.querySelectorAll("input, textarea").forEach((field) => {
-      const key = field.type === "radio" ? `radio-${field.name}` : field.id;
-      if (!validated.has(key)) {
-        validated.add(key);
-        if (!validateField(field)) isValid = false;
-      }
-    });
+    const isValid = e.target.checkValidity();
 
     if (isValid) {
       alert("Form submitted successfully!");
