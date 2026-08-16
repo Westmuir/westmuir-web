@@ -121,9 +121,7 @@
       >
     </label>
 
-    <button class="ui-button ui-filled ui-primary ui-tonal span-all">
-      Submit
-    </button>
+    <button class="span-all">Submit</button>
   </form>
 </div>
 <script>
@@ -206,8 +204,13 @@
     --light-teal: hsl(186, 15%, 59%);
     --dark-teal: hsl(187, 24%, 22%);
     --_critical: var(--red);
-
+    --_color: light-dark(var(--color-16), var(--color-1));
+    --_color-contrast: light-dark(var(--color-1), var(--color-16));
+    --_filled-hover-bg-color: oklch(from var(--primary) calc(l - 0.1) c h);
+    --_border-color: light-dark(var(--color-7), var(--color-10));
+    --_query-color: light-dark(var(--color-4), var(--color-12));
     --ff-base: "Karla", sans-serif;
+
     color: var(--text-primary);
     /* accent-color: var(--green); */
     font-size: 1rem;
@@ -401,9 +404,25 @@
           }
         }
       }
-      .form-group:has([type="radio"], [type="checkbox"]) {
+      .form-group:has([type="radio"]) {
         display: flex;
         gap: 1ch;
+      }
+      .form-group:has([type="checkbox"]) {
+        display: grid;
+        grid-template-columns: auto 1fr; /* Column 1: the input, Column 2: the label text */
+        gap: 0.5rem 1ch; /* Row gap of 0.5rem, column gap of 1 character */
+        > input {
+          grid-column: 1;
+          grid-row: 1;
+          align-self: center; /* Vertically centers the checkbox with the first line of text */
+        }
+        .error-message {
+          grid-column: 1 / -1; /* Spans the full width of this specific form group */
+          grid-row: 2; /* Drops it safely onto the second row */
+          min-width: 0; /* Prevents the text from forcing the column wider */
+          font-size: 0.875rem; /* Optional: standard smaller size for errors */
+        }
       }
 
       /* .form-group:has([type="radio"]) { */
@@ -428,7 +447,7 @@
       input,
       textarea,
       .form-group:has(input[type="radio"]) {
-        border: 1px solid var(--dark-teal);
+        border: 1px solid var(--_border-color);
         border-radius: 8px;
         padding: 0.75em 1.5em;
       }
@@ -457,9 +476,9 @@
       }
 
       .form-group:has(input[type="radio"]:checked) {
-        background: var(--pale-green);
-        color: contrast-color(var(--pale-green));
-        border-color: var(--green);
+        background: var(--_query-color);
+        color: contrast-color(var(--_query-color));
+        border-color: var(--_border-color);
       }
 
       textarea {
@@ -469,18 +488,20 @@
         field-sizing: content;
       }
 
-      /* button { */
-      /*   background: var(--green); */
-      /*   color: var(--white); */
-      /*   border: 0; */
-      /*   border-radius: 6px; */
-      /*   padding: 0.75em 1.5em; */
-      /**/
-      /*   &:hover, */
-      /*   &:focus-visible { */
-      /*     background: var(--dark-teal); */
-      /*   } */
-      /* } */
+      button {
+        background: var(--primary);
+        color: var(--primary-contrast);
+
+        border: 0;
+        border-radius: 6px;
+        padding: 0.75em 1.5em;
+
+        &:hover,
+        &:focus-visible {
+          background: var(--_filled-hover-bg-color);
+        }
+      }
+
       input:user-invalid,
       textarea:user-invalid {
         border-color: var(--red);
