@@ -10,7 +10,7 @@ export async function onRequestPost(context) {
     const secretKey = env.TURNSTILE_SECRET_KEY || '1x00000000000000000000000000000000AA';
 
     // 4. Validate the token against Cloudflare's verification endpoint
-    const verifyResponse = await fetch('https://cloudflare.com', {
+    const verifyResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
