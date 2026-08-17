@@ -12,7 +12,6 @@ export async function onRequestPost(context) {
     const turnstileToken = formData.get('cf-turnstile-response');
 
     const turnstileSecret = context.env.TURNSTILE_SECRET || '1x00000000000000000000000000000000AA';
-
     // 2. Simple server-side validation check
     if (!date || !name || !email) {
       return new Response("<p class='error-msg'>⚠️ Missing required form fields. Please fill out all entries.</p>", {
