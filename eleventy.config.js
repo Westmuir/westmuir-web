@@ -60,6 +60,12 @@ export const config = {
  * @param {EleventyConfig} eleventyConfig
  */
 export default async function (eleventyConfig) {
+  // Determine if the local development server is running
+  const isLocalServer = process.env.ELEVENTY_RUN_MODE === 'serve' || process.env.ELEVENTY_RUN_MODE === 'watch';
+  // Inject it directly into the data cascade under the "env" namespace
+  eleventyConfig.addGlobalData('env', {
+    isLocalServer: isLocalServer,
+  });
   // Sets a global fallback layout for every single template file
   eleventyConfig.addGlobalData('layout', 'base.webc');
   //  Only copy global structural assets to the build output
@@ -238,4 +244,5 @@ export default async function (eleventyConfig) {
       fs.cpSync(sourceDir, destDir, { recursive: true });
     }
   });
+  eleventyConfig.addPassthroughCopy({ './public': '/' });
 }
