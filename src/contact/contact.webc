@@ -101,13 +101,15 @@
       <button
         class="span-all"
         hx-post="/api/submit-contact"
+        :hx-on:htmx:before-request="env.isLocalServer ? 'event.preventDefault(); alert(\'Form validation passed! HTMX submit intercepted locally without Wrangler.\');' : ''"
         hx-target="#contact-container"
         hx-swap="outerHTML"
       >
         Submit
       </button>
       <div
-        class="cf-turnstile"
+        webc:if="!env.isLocalServer"
+        class="cf-turnstileile"
         :data-sitekey="process.env.TURNSTILE_SITEKEY || '1x00000000000000000000AA'"
         style="margin-bottom: 1rem"
       ></div>
