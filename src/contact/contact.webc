@@ -129,6 +129,9 @@
     border-radius: 1rem;
     max-inline-size: 700px;
     margin: 0 auto;
+    width: 100%; /* this needs structural width to give the container an intrinsic size */
+
+    container-type: inline-size;
 
     h1,
     h2,
@@ -146,7 +149,7 @@
       display: grid;
       gap: var(--size-3);
 
-      @media (width > 500px) {
+      @container (inline-size > 500px) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       fieldset {
