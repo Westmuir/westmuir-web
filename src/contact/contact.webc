@@ -109,7 +109,7 @@
       </button>
       <div
         webc:if="!env.isLocalServer"
-        class="cf-turnstileile"
+        class="cf-turnstile"
         :data-sitekey="process.env.TURNSTILE_SITEKEY || '1x00000000000000000000AA'"
         style="margin-bottom: 1rem"
       ></div>
