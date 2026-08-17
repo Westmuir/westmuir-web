@@ -9,7 +9,7 @@ export async function onRequestPost(context) {
     const ip = request.headers.get('CF-Connecting-IP');
 
     // 3. Fallback to Cloudflare's testing secret key if your production environment variable isn't set yet
-    const secretKey = env.TURNSTILE_SECRET_KEY || '1x0000000000000000000000000000000AA';
+    const secretKey = env.TURNSTILE_SECRET || '1x0000000000000000000000000000000AA';
 
     // 4. Validate the token against Cloudflare's verification endpoint
     const verifyResponse = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
