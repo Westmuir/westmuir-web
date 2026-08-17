@@ -5,21 +5,45 @@
     <form class="contact-form" novalidate>
       <div class="form-group">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="first_name" required />
-        <span class="error-message">First name is required</span>
+        <input
+          type="text"
+          id="fname"
+          name="first_name"
+          required
+          aria-describedby="fname-error"
+        />
+        <span class="error-message" id="fname-error" aria-live="polite">
+          First name is required
+        </span>
       </div>
       <div class="form-group">
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="last_name" required />
-        <span class="error-message">Last name is required</span>
+        <input
+          type="text"
+          id="lname"
+          name="last_name"
+          required
+          aria-describedby="lname-error"
+        />
+        <span class="error-message" id="lname-error" aria-live="polite">
+          Last name is required
+        </span>
       </div>
       <div class="form-group span-all">
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" required />
-        <span class="error-message">Email is required</span>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          required
+          aria-describedby="email-error"
+        />
+        <span class="error-message" id="email-error" aria-live="polite">
+          Email is required
+        </span>
       </div>
       <!-- https://issues.chromium.org/issues/4027891-->
-      <fieldset class="span-all">
+      <fieldset class="span-all" aria-describedby="query-error">
         <legend>Query Type</legend>
         <div class="form-group">
           <input
@@ -43,24 +67,35 @@
           <label for="support">Support Request</label>
         </div>
 
-        <span class="error-message" aria-live="polite"
+        <span class="error-message" id="query-error" aria-live="polite"
           >Please select what kind of query.</span
         >
       </fieldset>
       <div class="form-group span-all">
         <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-        <span class="error-message" aria-live="polite"
-          >Message is required</span
-        >
+        <textarea
+          id="message"
+          name="message"
+          required
+          aria-describedby="message-error"
+        ></textarea>
+        <span class="error-message" id="message-error" aria-live="polite">
+          Message is required
+        </span>
       </div>
 
       <div class="form-group span-all">
-        <input type="checkbox" name="consent" id="consent" required />
+        <input
+          type="checkbox"
+          name="consent"
+          id="consent"
+          required
+          aria-describedby="consent-error"
+        />
         <label for="consent">I consent to being contacted by the team</label>
-        <span class="error-message" aria-live="polite"
-          >You must consent to us contacted you to submit this form.</span
-        >
+        <span class="error-message" id="consent-error" aria-live="polite">
+          You must consent to us contacting you to submit this form.
+        </span>
       </div>
 
       <button
