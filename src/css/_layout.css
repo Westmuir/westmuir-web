@@ -65,6 +65,23 @@
     --theme-gradient: linear-gradient(135deg, var(--color-3), var(--color-9));
   }
 
+  ::view-transition-old(root) {
+    animation-delay: 500ms;
+  }
+
+  ::view-transition-new(root) {
+    animation: circle-in 500ms;
+  }
+
+  @keyframes circle-in {
+    from {
+      clip-path: circle(0% at 50% 0%);
+    }
+    to {
+      clip-path: circle(120% at 50% 0%);
+    }
+  }
+
   body {
     min-block-size: 100svh;
     font-family: var(--font-humanist);
@@ -75,9 +92,9 @@
     color: var(--text-primary);
 
     /* 2. Smooth Light/Dark Mode Ambient Transition */
-    transition:
-      background-color 0.2s var(--ease-2, ease),
-      color 0.2s var(--ease-2, ease);
+    /* transition: */
+    /*   background-color 0.2s var(--ease-2, ease), */
+    /*   color 0.2s var(--ease-2, ease); */
 
     /* 3. Rendering Enhancements */
     -webkit-font-smoothing: antialiased;
