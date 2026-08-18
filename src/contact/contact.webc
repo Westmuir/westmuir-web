@@ -2,7 +2,14 @@
   <div id="contact-container">
     <h1>Contact Us</h1>
 
-    <form class="contact-form" novalidate>
+    <form
+      class="contact-form"
+      novalidate
+      hx-post="/api/submit-contact"
+      :hx-on:htmx:before-request="env.isLocalServer ? 'event.preventDefault(); alert(\'Form validation by-passed! HTMX submit intercepted locally without Wrangler.\');' : ''"
+      hx-target="#contact-container"
+      hx-swap="outerHTML"
+    >
       <div class="form-group">
         <label for="fname">First Name</label>
         <input
@@ -64,7 +71,7 @@
             value="Support Request"
             required
           />
-          <label for="support">Support Request</label>
+          <label for="support">Booking Request</label>
         </div>
 
         <span class="error-message" id="query-error" aria-live="polite"
@@ -98,15 +105,7 @@
         </span>
       </div>
 
-      <button
-        class="span-all"
-        hx-post="/api/submit-contact"
-        :hx-on:htmx:before-request="env.isLocalServer ? 'event.preventDefault(); alert(\'Form validation passed! HTMX submit intercepted locally without Wrangler.\');' : ''"
-        hx-target="#contact-container"
-        hx-swap="outerHTML"
-      >
-        Submit
-      </button>
+      <button class="span-all">Submit</button>
       <div
         webc:if="!env.isLocalServer"
         class="cf-turnstile"
@@ -123,6 +122,7 @@
     const isValid = e.target.checkValidity();
 
     if (isValid) {
+      console.log(Object.keys(this));
       alert("Form submitted successfully!");
       const formData = Object.fromEntries(new FormData(form));
       console.log("Form data:", formData);
