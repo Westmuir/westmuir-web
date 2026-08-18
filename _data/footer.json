@@ -5,7 +5,7 @@
       "url": "/about/"
     },
     {
-      "hidden": true,
+      "hidden": false,
       "label": "Contact",
       "url": "/contact/"
     },
