@@ -60,9 +60,23 @@
     --woodland-info-font: 'Merriweather Sans', sans-serif;
     --max-inline-size: 90ch;
     --size-content-3: var(--max-inline-size);
+  }
 
-    /* Create your own dynamic, theme-aware equivalent string */
-    --theme-gradient: linear-gradient(135deg, var(--color-3), var(--color-9));
+  ::view-transition-old(root) {
+    animation-delay: 500ms;
+  }
+
+  ::view-transition-new(root) {
+    animation: circle-in 500ms;
+  }
+
+  @keyframes circle-in {
+    from {
+      clip-path: circle(0% at 50% 0%);
+    }
+    to {
+      clip-path: circle(120% at 50% 0%);
+    }
   }
 
   body {
@@ -73,12 +87,6 @@
     /* 1. OPUI Automated Color Pairings */
     background-color: var(--surface-default);
     color: var(--text-primary);
-
-    /* 2. Smooth Light/Dark Mode Ambient Transition */
-    transition:
-      background-color 0.2s var(--ease-2, ease),
-      color 0.2s var(--ease-2, ease);
-
     /* 3. Rendering Enhancements */
     -webkit-font-smoothing: antialiased;
     display: grid;
