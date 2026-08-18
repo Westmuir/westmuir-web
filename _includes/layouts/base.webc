@@ -52,7 +52,7 @@
     ></style>
 
     <!-- Critical inline initialization to prevent dark-mode page flash -->
-    <script>
+    <script webc:keep>
       const savedTheme = localStorage.getItem("theme-preference");
 
       // FIXED: If prefers-color-scheme is dark, default to dark; otherwise light.
