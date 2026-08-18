@@ -122,10 +122,7 @@
     const isValid = e.target.checkValidity();
 
     if (isValid) {
-      console.log(Object.keys(this));
-      alert("Form submitted successfully!");
       const formData = Object.fromEntries(new FormData(form));
-      console.log("Form data:", formData);
     } else {
       if (firstInvalid) {
         // If the invalid item is a radio button, focus its labeled container box instead
