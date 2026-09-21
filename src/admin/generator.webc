@@ -1,5 +1,5 @@
 ---
-title:  Manage generator
+title: Manage generator
 pagetitle: Westmuir resilience
 headerImage: /images/logo-high.png
 headerAlt: Westmuir community logo
@@ -7,7 +7,6 @@ headerAlt: Westmuir community logo
 
 <div class="breakout">
   <h1 class="ui-h2">Admin: Generator management</h1>
-  <div id="form-error-banner"></div>
 
   <generator-manager></generator-manager>
 
@@ -25,4 +24,4 @@ headerAlt: Westmuir community logo
       Loading latest readings...
     </div>
   </div>
-</d
+</div>
