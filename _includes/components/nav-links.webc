@@ -2,24 +2,28 @@
   <script webc:type="js">
     export default function () {
       // 1. GLOBAL NAVIGATION TIER RENDERING
-      if (this.tier !== 'context') {
-        if (!this.$data.navigation) return '';
+      if (this.tier !== "context") {
+        if (!this.$data.navigation) return "";
 
         return this.$data.navigation
-          .map(item => {
+          .map((item) => {
             const isActive =
               item.exact && this.$data.page.url === item.url
-                ? 'active'
+                ? "active"
                 : item.includes && this.$data.page.url.includes(item.url)
-                  ? 'active'
+                  ? "active"
                   : !item.exact &&
                       !item.includes &&
                       this.$data.page.url === item.url
-                    ? 'active'
-                    : '';
-            return `<a href="${item.url}" class="${isActive}">${item.label}</a>`;
+                    ? "active"
+                    : "";
+
+            const showFor = item.showFor
+              ? `data-show-for="${item.showFor}"`
+              : "";
+            return `<a href="${item.url}" class="${isActive}" ${showFor}>${item.label}</a>`;
           })
-          .join('');
+          .join("");
       }
 
       // 2. CONTEXT NAVIGATION TIER RENDERING
@@ -32,19 +36,19 @@
       }
 
       // If both tracks turn up empty, strip out the HTML rendering loop
-      if (!subItems || subItems.length === 0) return '';
+      if (!subItems || subItems.length === 0) return "";
 
       // Target the first item in the array to calculate paths safely
       const firstItemUrl = subItems[0].url;
-      const paths = firstItemUrl.split('/').filter(Boolean);
-      const parentUrl = paths.length > 0 ? `/${paths[0]}/` : '/';
+      const paths = firstItemUrl.split("/").filter(Boolean);
+      const parentUrl = paths.length > 0 ? `/${paths[0]}/` : "/";
 
       // Check if the user is sitting exactly on the section landing root folder page
-      const isParentActive = this.$data.page.url === parentUrl ? 'active' : '';
+      const isParentActive = this.$data.page.url === parentUrl ? "active" : "";
 
       // Cross-reference top-level menus to fetch the exact visual category label
       const parentMenuMatch = this.$data.navigation?.find(
-        item => item.url === parentUrl,
+        (item) => item.url === parentUrl,
       );
       const parentLabel = parentMenuMatch ? parentMenuMatch.label : paths[0];
 
@@ -53,20 +57,20 @@
 
       // Map out the rest of the sibling pages
       const childLinksHtml = subItems
-        .map(item => {
+        .map((item) => {
           const isActive =
             item.exact && this.$data.page.url === item.url
-              ? 'active'
+              ? "active"
               : item.includes && this.$data.page.url.includes(item.url)
-                ? 'active'
+                ? "active"
                 : !item.exact &&
                     !item.includes &&
                     this.$data.page.url === item.url
-                  ? 'active'
-                  : '';
+                  ? "active"
+                  : "";
           return `<a href="${item.url}" class="${isActive}">${item.label}</a>`;
         })
-        .join('');
+        .join("");
 
       return parentLinkHtml + childLinksHtml;
     }
