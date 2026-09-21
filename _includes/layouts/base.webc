@@ -51,18 +51,27 @@
       webc:keep
     ></style>
 
+    <!-- WebC injects the dynamically generated JSON directly into the template -->
+    <script type="importmap" webc:keep>
+      {
+        "imports": {
+          "js/": "/js/"
+        }
+      }
+    </script>
+
     <!-- Critical inline initialization to prevent dark-mode page flash -->
     <script webc:keep>
-      const savedTheme = localStorage.getItem("theme-preference");
+      const savedTheme = localStorage.getItem('theme-preference');
 
       // FIXED: If prefers-color-scheme is dark, default to dark; otherwise light.
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
         .matches
-        ? "dark"
-        : "light";
+        ? 'dark'
+        : 'light';
 
       document.documentElement.setAttribute(
-        "data-theme",
+        'data-theme',
         savedTheme || systemTheme,
       );
     </script>
@@ -107,7 +116,7 @@
   ></script>
   <script webc:keep>
     htmx.config.implicitInheritance = false;
-    htmx.config.noSwap = [204, 304, "4xx", "5xx"];
+    htmx.config.noSwap = [204, 304, '4xx', '5xx'];
   </script>
   <script
     src="https://challenges.cloudflare.com/turnstile/v0/api.js"
@@ -118,8 +127,8 @@
   <script>
     (function () {
       const match = document.cookie.match(/(^| )user_role=([^;]+)/);
-      const role = match ? match[2].trim() : "guest";
-      document.body.setAttribute("data-user-role", role);
+      const role = match ? match[2].trim() : 'guest';
+      document.body.setAttribute('data-user-role', role);
     })();
   </script>
 </html>
