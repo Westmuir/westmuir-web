@@ -1,0 +1,28 @@
+---
+title:  Manage generator
+pagetitle: Westmuir resilience
+headerImage: /images/logo-high.png
+headerAlt: Westmuir community logo
+---
+
+<div class="breakout">
+  <h1 class="ui-h2">Admin: Generator management</h1>
+  <div id="form-error-banner"></div>
+
+  <generator-manager></generator-manager>
+
+  <h2>Recent Results Log</h2>
+  <div
+    id="recent-results"
+    hx-get="/api/get-readings"
+    hx-trigger="load"
+    hx-swap="outerHTML"
+  >
+    <div
+      class="loading-placeholder"
+      style="color: var(--text-3); padding: var(--size-3)"
+    >
+      Loading latest readings...
+    </div>
+  </div>
+</d
