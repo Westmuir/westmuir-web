@@ -1,7 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "westmuir-web",
-  "account_id": "954de07165b0977731e2a2a594197b5b", // Explicitly forces the right account
   "compatibility_date": "2026-06-05",
   "pages_build_output_dir": "_site",
   "compatibility_flags": [
