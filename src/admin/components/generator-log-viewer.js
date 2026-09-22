@@ -25,30 +25,6 @@ class GeneratorLogViewer extends GeneratorBase {
 
     this.setupFilterListeners();
     this.setupSyncListeners();
-
-    this.addEventListener('click', event => {
-      const editBtn = event.target.closest('.edit-log-btn');
-      if (!editBtn) return;
-
-      event.stopPropagation();
-      const logId = editBtn.dataset.id;
-
-      // 1. Locate the exact raw log entry from our local memory model
-      const rawLogObject = this.filteredLogs.find(l => l.id === logId);
-      if (!rawLogObject) return;
-
-      // 2. Dispatch it upwards with zero DOM scraping overhead
-      this.dispatchEvent(
-        new CustomEvent('edit-log-request', {
-          bubbles: true,
-          composed: true,
-          detail: {
-            id: logId,
-            fields: rawLogObject, // The clean, flat database object goes straight to the form manager
-          },
-        }),
-      );
-    });
   }
 
   async loadLogs() {
@@ -98,21 +74,45 @@ class GeneratorLogViewer extends GeneratorBase {
       this.applyFiltersAndRender();
     });
 
-    // Handle standard internal Edit click mechanics
+    // // Handle standard internal Edit click mechanics
+    // this.addEventListener('click', event => {
+    //   const editBtn = event.target.closest('.edit-log-btn');
+    //   if (!editBtn) return;
+    //
+    //   event.stopPropagation();
+    //   const logId = editBtn.dataset.id;
+    //   const row = this.querySelector(`.log-row[data-id="${logId}"]`);
+    //   if (!row) return;
+    //
+    //   this.dispatchEvent(
+    //     new CustomEvent('edit-log-request', {
+    //       bubbles: true,
+    //       composed: true,
+    //       detail: { id: logId, fields: { ...row.dataset } },
+    //     }),
+    //   );
+    // });
+
     this.addEventListener('click', event => {
       const editBtn = event.target.closest('.edit-log-btn');
       if (!editBtn) return;
 
       event.stopPropagation();
       const logId = editBtn.dataset.id;
-      const row = this.querySelector(`.log-row[data-id="${logId}"]`);
-      if (!row) return;
 
+      // 1. Locate the exact raw log entry from our local memory model
+      const rawLogObject = this.filteredLogs.find(l => l.id === logId);
+      if (!rawLogObject) return;
+
+      // 2. Dispatch it upwards with zero DOM scraping overhead
       this.dispatchEvent(
         new CustomEvent('edit-log-request', {
           bubbles: true,
           composed: true,
-          detail: { id: logId, fields: { ...row.dataset } },
+          detail: {
+            id: logId,
+            fields: rawLogObject, // The clean, flat database object goes straight to the form manager
+          },
         }),
       );
     });

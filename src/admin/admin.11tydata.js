@@ -1,7 +1,7 @@
 // src/poems/poems.11tydata.js
 export default {
   layout: 'base.webc',
-  componentBucketX: 'syllabus',
+  componentBucket: 'generator',
   webc: {
     components: '~/src/admin/components/*.webc',
   },

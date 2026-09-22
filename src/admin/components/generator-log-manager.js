@@ -3,6 +3,8 @@ import { GeneratorBase } from 'js/generator-base.js';
 class GeneratorLogManager extends GeneratorBase {
   constructor() {
     super();
+
+    this.isFormDirty = false;
     this.activeDeleteId = null;
   }
 
@@ -13,18 +15,78 @@ class GeneratorLogManager extends GeneratorBase {
     this.idField = this.querySelector('.log-id-field');
     this.errorBanner = this.querySelector('.form-error-banner');
 
-    this.cancelBtn = this.querySelector('.cancel-edit-btn');
-    this.createBtn = this.querySelector('.switch-to-create-btn');
+    this.cancelButton = this.querySelector('.cancel-edit-btn');
+    this.createButton = this.querySelector('.switch-to-create-btn');
     this.modal = this.querySelector('#delete-confirm-modal');
+    this.setupFormListeners();
+  }
+
+  updateActionButtonsVisibility() {
+    // The Cancel button is HIDDEN when the form is clean (NOT dirty)
+    if (this.cancelButton) this.cancelButton.classList.toggle('hidden', !this.isFormDirty);
+
+    // The Create button is HIDDEN when the form is dirty
+    if (this.createButton) this.createButton.classList.toggle('hidden', this.isFormDirty);
+
+    if (this.modeTitle) this.modeTitle.textContent = 'Modify Existing record';
+
+    const idEl = this.querySelector('input[type="hidden"]');
+    const deleteBtn = this.querySelector('.delete-competition-btn');
+
+    if (deleteBtn) {
+      // Only show or enable the delete action if an ID exists (meaning it's an Edit, not a Create)
+      const hasId = !!(idEl && idEl.value);
+      deleteBtn.classList.toggle('hidden', !hasId);
+    }
+  }
+
+  setupFormListeners() {
+    const form = this.form;
 
     // Wire component layout triggers
-    this.form?.addEventListener('submit', e => this.handleFormSubmit(e));
-    this.cancelBtn?.addEventListener('click', () => this.setFormMode('create'));
-    this.createBtn?.addEventListener('click', () => this.setFormMode('create'));
+    form.addEventListener('submit', e => this.handleFormSubmit(e));
+
+    // Any input event anywhere signals a change
+    form.addEventListener('input', () => {
+      // ⚡️ PERFORMANCE GUARD: If we already know the form is dirty,
+      // stop immediately and skip costly DOM style updates!
+      if (this.isFormDirty) return;
+
+      this.isFormDirty = true;
+      this.updateActionButtonsVisibility();
+    });
+
+    // 3. Simple escape hatch execution
+    const cancelButton = form.querySelector('.cancel-edit-btn');
+    if (cancelButton) {
+      cancelButton.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        if (this.startingModel) {
+          // Rollback straight to our starting state data object
+          this.hydrateForm(this.startingModel, form);
+        } else {
+          this.clearForm();
+          this.isFormDirty = false;
+          this.updateActionButtonsVisibility();
+        }
+      });
+    } // Handle explicit Switch to Create Click (Wipe and Reset Mode)
+
+    const createButton = this.querySelector('.switch-to-create-btn');
+
+    if (createButton) {
+      createButton.addEventListener('click', e => {
+        if (this.isFormDirty) return;
+
+        this.clearForm();
+      });
+    }
 
     // Handle incoming row edit trigger requests via bubbles
-    this.addEventListener('edit-log-request', e => {
-      this.handleEditFill(e.detail.fields);
+    document.addEventListener('edit-log-request', e => {
+      this.hydrateForm(e.detail.fields);
     });
 
     // Intercept native child deletion notifications to trigger the dialog
@@ -35,9 +97,7 @@ class GeneratorLogManager extends GeneratorBase {
         this.activeDeleteId = deleteBtn.dataset.id;
         this.modal?.showModal();
       }
-    });
-
-    // Modal Confirmation Actions
+    }); // Modal Confirmation Actions
     this.modal?.querySelector('.close-modal-btn')?.addEventListener('click', () => this.modal.close());
     this.modal?.querySelector('.confirm-delete-btn')?.addEventListener('click', () => this.executeDeletion());
   }
@@ -58,16 +118,63 @@ class GeneratorLogManager extends GeneratorBase {
   }
 
   handleEditFill(fields) {
-    if (!this.form) return;
-    this.setFormMode('edit');
+    const form = this.form;
+    if (!form) return;
+    // this.setFormMode(form, 'edit');
     if (this.formAccordion) this.formAccordion.setAttribute('open', '');
 
-    this.form.querySelectorAll('input, select, textarea').forEach(input => {
+    form.querySelectorAll('input, select, textarea').forEach(input => {
       if (input.name) {
         input.value = fields[input.name] || '';
       }
     });
-    this.form.querySelector('input[name="date"]')?.focus();
+    form.querySelector('input[name="date"]')?.focus();
+  }
+
+  hydrate(data) {
+    // 1. Only fallback to {} if data or data.competition is genuinely null/undefined
+    const record = data ?? {};
+    if (this.formAccordion) this.formAccordion.setAttribute('open', '');
+
+    // 2. Handle the hidden ID element
+    const idEl = this.querySelector('input[type="hidden"]');
+    idEl.value = record.id ?? this.generateId();
+
+    this.form.querySelectorAll('input, select, textarea').forEach(input => {
+      if (input.name) {
+        input.value = record[input.name] || '';
+      }
+    });
+    this.form.querySelector('input[name="date"]')?.focus(); //
+
+    // // 3. Loop through the standard inputs
+    // ['name', 'kind', 'reserves'].forEach(field => {
+    //   const el = this.querySelector(`[name="competition[${field}]"]`);
+    //   if (!el) return; // Defensive check in case the HTML changes
+    //
+    //   if (field === 'kind') {
+    //     // If competition.kind is null/undefined, default to 'local'
+    //     el.value = competition.kind ?? 'league';
+    //
+    //     // Warning for stale database values
+    //     if (el.value === '' && competition.kind) {
+    //       console.warn(`Old database value "${competition.kind}" is no longer valid for kind.`);
+    //     }
+    //   } else {
+    //     // Using ?? ensures that 0 or false isn't wiped out into an empty string
+    //     el.value = competition[field] ?? '';
+    //   }
+    // });
+  }
+
+  hydrateForm(data) {
+    this.startingModel = data;
+    this.isFormDirty = false;
+
+    this.hydrate(data);
+
+    // 3. Sync up the view layout states
+    this.updateActionButtonsVisibility();
   }
 
   async handleFormSubmit(event) {
@@ -99,7 +206,7 @@ class GeneratorLogManager extends GeneratorBase {
         }),
       );
 
-      this.setFormMode('create');
+      // this.setFormMode('create');
     } catch (err) {
       if (this.errorBanner) {
         this.errorBanner.textContent = err.message;

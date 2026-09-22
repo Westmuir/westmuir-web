@@ -9,8 +9,16 @@
 
     <div class="title-wrapper">
       <h3 class="form-mode-title ui-h4">New Log Entry</h3>
-      <div class="form-error-banner" hidden></div>
+      <button
+        type="button"
+        commandfor="delete-confirm-modal"
+        command="show-modal"
+        class="delete-competition-btn hidden ui-button ui-tonal"
+      >
+        <span>🗑️</span> Delete
+      </button>
     </div>
+    <div class="form-error-banner" hidden></div>
 
     <!-- Section A: Log Metadata -->
     <fieldset class="ui-fieldset">
@@ -214,3 +222,97 @@
 <slot></slot>
 
 <script src="/js/generator-log-manager.js" type="module" webc:keep></script>
+
+<style webc:bucket="generator">
+  @layer components.extended {
+    .ui-tonal.action-cancel {
+      /* Light Mode: Super soft color tint
+       Dark Mode: Deep, quiet charcoal/tint step (keeps luminance way down) */
+      background-color: light-dark(var(--color-2), var(--color-2));
+
+      /* Ensure the text contrast drops safely without being completely unreadable */
+      color: light-dark(var(--color-12), var(--color-11));
+
+      /* Smooth focus & hover states so it still feels responsive */
+      &:hover {
+        background-color: light-dark(var(--color-3), var(--color-3));
+      }
+    }
+    .ui-filled.action-create {
+      background-color: light-dark(var(--gray-11), var(--gray-4));
+      color: light-dark(var(--gray-1), var(--gray-13));
+
+      &:hover {
+        background-color: light-dark(var(--gray-12), var(--gray-5));
+      }
+    }
+  }
+
+  :where(form.generator-form) {
+    --_border-color-cf: light-dark(var(--color-7), var(--color-10));
+
+    input,
+    textarea {
+      background-color: var(--surface-default);
+    }
+
+    input,
+    textarea {
+      border: 1px solid var(--_border-color-cf);
+      border-radius: 0.5rem;
+      padding: 0.5em 0.75em;
+
+      &:focus-visible {
+        outline-color: var(--primary);
+      }
+    }
+
+    select {
+      border: 1px solid var(--_border-color-cf);
+      background-color: var(--surface-default);
+
+      &:focus-visible {
+        outline-color: var(--primary);
+      }
+    }
+    .form-actions-container {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .task-actions {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 10px;
+      justify-content: start;
+    }
+
+    .context-actions {
+      justify-self: end;
+    }
+
+    > fieldset {
+      border: 1px solid var(--border, var(--gray-8));
+      padding: var(--size-3);
+      margin-bottom: var(--size-3);
+      border-radius: var(--radius-2);
+
+      legend {
+        padding: 0 var(--size-1);
+        font-weight: bold;
+      }
+    }
+
+    .title-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  }
+</style>
