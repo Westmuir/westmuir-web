@@ -169,7 +169,7 @@ class GeneratorLogViewer extends GeneratorBase {
 
         <div class="log-cell actions-cell">
           <button type="button" class="edit-log-btn ui-button" data-id="${log.id}">✏️ Edit</button>
-          <button type="button" class="delete-log-btn ui-button" data-id="${log.id}">🗑️</button>
+          <!-- <button type="button" class="delete-log-btn ui-button" data-id="${log.id}">🗑️</button> -->
         </div>
       </div>
     `;

@@ -19,15 +19,13 @@ class GeneratorLogManager extends GeneratorBase {
     this.createButton = this.querySelector('.switch-to-create-btn');
     this.modal = this.querySelector('#delete-confirm-modal');
     this.setupFormListeners();
+    this.setupClickListener();
   }
 
   updateActionButtonsVisibility() {
     // The Cancel button is HIDDEN when the form is clean (NOT dirty)
     if (this.cancelButton) this.cancelButton.classList.toggle('hidden', !this.isFormDirty);
-
-    // The Create button is HIDDEN when the form is dirty
     if (this.createButton) this.createButton.classList.toggle('hidden', this.isFormDirty);
-
     if (this.modeTitle) this.modeTitle.textContent = 'Modify Existing record';
 
     const idEl = this.querySelector('input[type="hidden"]');
@@ -40,13 +38,46 @@ class GeneratorLogManager extends GeneratorBase {
     }
   }
 
+  setupClickListener() {
+    this.addEventListener('click', event => {
+      const cancelButton = event.target.closest('.cancel-edit-btn');
+
+      if (cancelButton) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        if (this.startingModel) {
+          this.hydrateForm(this.startingModel);
+        } else {
+          this.clearForm();
+          this.isFormDirty = false;
+          this.updateActionButtonsVisibility();
+        }
+        return;
+      }
+      const createButton = event.target.closest('.switch-to-create-btn');
+
+      if (createButton) {
+        if (this.isFormDirty) return;
+
+        this.clearForm();
+        return;
+      }
+
+      const deleteBtn = event.target.closest('.delete-log-btn');
+      if (deleteBtn) {
+        event.stopPropagation();
+        this.activeDeleteId = deleteBtn.dataset.id;
+        this.modal?.showModal();
+        return;
+      }
+    });
+  }
+
   setupFormListeners() {
     const form = this.form;
 
-    // Wire component layout triggers
-    form.addEventListener('submit', e => this.handleFormSubmit(e));
-
-    // Any input event anywhere signals a change
+    form.addEventListener('submit', event => this.handleFormSubmit(event));
     form.addEventListener('input', () => {
       // ⚡️ PERFORMANCE GUARD: If we already know the form is dirty,
       // stop immediately and skip costly DOM style updates!
@@ -56,71 +87,56 @@ class GeneratorLogManager extends GeneratorBase {
       this.updateActionButtonsVisibility();
     });
 
-    // 3. Simple escape hatch execution
-    const cancelButton = form.querySelector('.cancel-edit-btn');
-    if (cancelButton) {
-      cancelButton.addEventListener('click', e => {
-        e.preventDefault();
-        e.stopImmediatePropagation();
-
-        if (this.startingModel) {
-          // Rollback straight to our starting state data object
-          this.hydrateForm(this.startingModel, form);
-        } else {
-          this.clearForm();
-          this.isFormDirty = false;
-          this.updateActionButtonsVisibility();
-        }
-      });
-    } // Handle explicit Switch to Create Click (Wipe and Reset Mode)
-
-    const createButton = this.querySelector('.switch-to-create-btn');
-
-    if (createButton) {
-      createButton.addEventListener('click', e => {
-        if (this.isFormDirty) return;
-
-        this.clearForm();
-      });
-    }
-
-    // Handle incoming row edit trigger requests via bubbles
-    document.addEventListener('edit-log-request', e => {
-      this.hydrateForm(e.detail.fields);
+    document.addEventListener('edit-log-request', event => {
+      this.hydrateForm(event.detail.fields);
     });
 
-    // Intercept native child deletion notifications to trigger the dialog
-    this.addEventListener('click', event => {
-      const deleteBtn = event.target.closest('.delete-log-btn');
-      if (deleteBtn) {
-        event.stopPropagation();
-        this.activeDeleteId = deleteBtn.dataset.id;
-        this.modal?.showModal();
-      }
-    }); // Modal Confirmation Actions
-    this.modal?.querySelector('.close-modal-btn')?.addEventListener('click', () => this.modal.close());
-    this.modal?.querySelector('.confirm-delete-btn')?.addEventListener('click', () => this.executeDeletion());
-  }
+    const modal = document.getElementById('delete-confirm-modal');
 
-  setFormMode(mode) {
-    if (mode === 'edit') {
-      this.modeTitle.textContent = '✏️ Editing Log Entry';
-      this.cancelBtn?.classList.remove('hidden');
-      this.createBtn?.classList.remove('hidden');
-    } else {
-      this.modeTitle.textContent = '➕ New Log Entry';
-      this.idField.value = '';
-      this.form.reset();
-      this.cancelBtn?.classList.add('hidden');
-      this.createBtn?.classList.add('hidden');
+    if (modal) {
+      modal.addEventListener('close', async event => {
+        if (modal.returnValue === 'confirm') {
+          const compId = form.querySelector('input[type="hidden"]')?.value;
+          if (!compId) return;
+
+          try {
+            const response = await fetch(`/admin/generator/${compId}`, { method: 'DELETE' });
+
+            if (!response.ok) throw new Error('Wipe operation rejected by server.');
+
+            const result = await response.json();
+
+            if (result.success) {
+              this.clearForm();
+              this.dispatchEvent(new CustomEvent('generator-log-deleted', { bubbles: true, detail: { id: compId } }));
+
+              this.modal.close();
+            }
+          } catch (err) {
+            alert(err.message);
+          }
+        }
+      });
     }
-    if (this.errorBanner) this.errorBanner.hidden = true;
+  }
+  clearForm() {
+    const form = this.querySelector('form');
+    if (!form) return;
+
+    form.reset();
+
+    // 2. Erase the top-level hidden competition ID so the next save starts fresh
+    const idEl = this.querySelector('input[type="hidden"]');
+    if (idEl) idEl.value = '';
+
+    this.isFormDirty = false;
+    this.updateActionButtonsVisibility();
   }
 
   handleEditFill(fields) {
     const form = this.form;
     if (!form) return;
-    // this.setFormMode(form, 'edit');
+
     if (this.formAccordion) this.formAccordion.setAttribute('open', '');
 
     form.querySelectorAll('input, select, textarea').forEach(input => {
@@ -128,15 +144,14 @@ class GeneratorLogManager extends GeneratorBase {
         input.value = fields[input.name] || '';
       }
     });
+
     form.querySelector('input[name="date"]')?.focus();
   }
 
   hydrate(data) {
-    // 1. Only fallback to {} if data or data.competition is genuinely null/undefined
     const record = data ?? {};
     if (this.formAccordion) this.formAccordion.setAttribute('open', '');
 
-    // 2. Handle the hidden ID element
     const idEl = this.querySelector('input[type="hidden"]');
     idEl.value = record.id ?? this.generateId();
 
@@ -146,25 +161,6 @@ class GeneratorLogManager extends GeneratorBase {
       }
     });
     this.form.querySelector('input[name="date"]')?.focus(); //
-
-    // // 3. Loop through the standard inputs
-    // ['name', 'kind', 'reserves'].forEach(field => {
-    //   const el = this.querySelector(`[name="competition[${field}]"]`);
-    //   if (!el) return; // Defensive check in case the HTML changes
-    //
-    //   if (field === 'kind') {
-    //     // If competition.kind is null/undefined, default to 'local'
-    //     el.value = competition.kind ?? 'league';
-    //
-    //     // Warning for stale database values
-    //     if (el.value === '' && competition.kind) {
-    //       console.warn(`Old database value "${competition.kind}" is no longer valid for kind.`);
-    //     }
-    //   } else {
-    //     // Using ?? ensures that 0 or false isn't wiped out into an empty string
-    //     el.value = competition[field] ?? '';
-    //   }
-    // });
   }
 
   hydrateForm(data) {
@@ -173,7 +169,6 @@ class GeneratorLogManager extends GeneratorBase {
 
     this.hydrate(data);
 
-    // 3. Sync up the view layout states
     this.updateActionButtonsVisibility();
   }
 
@@ -205,8 +200,6 @@ class GeneratorLogManager extends GeneratorBase {
           detail: { log: result.log },
         }),
       );
-
-      // this.setFormMode('create');
     } catch (err) {
       if (this.errorBanner) {
         this.errorBanner.textContent = err.message;
@@ -214,28 +207,6 @@ class GeneratorLogManager extends GeneratorBase {
       }
     }
   }
-
-  async executeDeletion() {
-    if (!this.activeDeleteId) return;
-    try {
-      const response = await fetch(`/admin/generator/${this.activeDeleteId}`, { method: 'DELETE' });
-
-      if (!response.ok) throw new Error('Wipe operation rejected by server.');
-
-      const result = await response.json();
-
-      if (result.success) {
-        this.dispatchEvent(
-          new CustomEvent('generator-log-deleted', { bubbles: true, detail: { id: this.activeDeleteId } }),
-        );
-
-        this.modal.close();
-      }
-    } catch (err) {
-      alert(err.message);
-    } finally {
-      this.activeDeleteId = null;
-    }
-  }
 }
+
 customElements.define('generator-log-manager', GeneratorLogManager);
