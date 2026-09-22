@@ -1,5 +1,5 @@
 // functions/admin/create-recurring.js
-import { html } from '../../helpers/html.js';
+import { html } from '../helpers/html.js';
 
 export async function onRequestPost(context) {
   try {

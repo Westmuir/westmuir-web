@@ -1,5 +1,5 @@
 // functions/api/bookings.js
-import { html } from '../../helpers/html.js';
+import { html } from '../helpers/html.js';
 export async function onRequestGet(context) {
   const request = context.request;
   const db = context.env.village_hall;
