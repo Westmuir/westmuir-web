@@ -1,5 +1,5 @@
 // functions/admin/approve.js
-import { html } from '../../helpers/html.js';
+import { html } from '../helpers/html.js';
 export async function onRequestPost(context) {
   try {
     const db = context.env.village_hall;
