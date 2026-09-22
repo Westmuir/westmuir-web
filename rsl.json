@@ -1,0 +1,70 @@
+[
+  {
+    "date": "2025-02-12",
+    "start": {
+      "time": "13:50",
+      "battery": 12.5,
+      "fuel": "75",
+      "oil_pressure": 620
+    },
+    "end": {
+      "time": "14:34",
+      "battery": 14.3,
+      "fuel": "66",
+      "oil_pressure": 620
+    },
+    "oil level": "F",
+    "coolant": "F",
+    "reason": "M",
+    "initials": "PR",
+    "notes": ""
+  },
+  {
+    "date": "2025-03-22",
+    "Time start": "10:50:00",
+    "Time end": "11:25:00",
+    "Battery start": "12.5",
+    "Battery end": "14.7",
+    "Fuel start": "50",
+    "Fuel end": "50",
+    "Oil press start": "670",
+    "Oil press end": "700",
+    "oil level": "F",
+    "coolant": "F",
+    "reason": "R",
+    "initials": "PR",
+    "notes": ""
+  },
+  {
+    "date": "2026-04-02",
+    "Time start": "14:25:00",
+    "Time end": "14:48:00",
+    "Battery start": "12.2",
+    "Battery end": "13.2",
+    "Fuel start": "50",
+    "Fuel end": "50",
+    "Oil press start": "690",
+    "Oil press end": "710",
+    "oil level": "F",
+    "coolant": "F",
+    "reason": "A",
+    "initials": "PR",
+    "notes": "Maintenance run as well"
+  },
+  {
+    "date": "2026-06-15",
+    "Time start": "10:00:00",
+    "Time end": "11:30:00",
+    "Battery start": "-",
+    "Battery end": "-",
+    "Fuel start": "39",
+    "Fuel end": "37",
+    "Oil press start": "-",
+    "Oil press end": "660",
+    "oil level": "100",
+    "coolant": "F",
+    "reason": "S",
+    "initials": "PR",
+    "notes": ""
+  }
+]

@@ -1,29 +1,54 @@
 <!-- _components/page-header.webc -->
-<figure class="page-header" :position="pos" webc:root="override">
-  <!-- The background image (whether 11ty leaves it naked or wraps it) -->
-  <picture webc:if="image">
-    <img
-      :src="image"
-      :alt="alt || 'Section header graphic'"
-      width="1980"
-      sizes="100vw"
-    />
-  </picture>
+<div class="page-header-wrapper">
+  <figure class="page-header" :position="pos" webc:root="override">
+    <!-- The background image (whether 11ty leaves it naked or wraps it) -->
+    <picture webc:if="image">
+      <img
+        :src="image"
+        :alt="alt || 'Section header graphic'"
+        width="1980"
+        sizes="100vw"
+      />
+    </picture>
 
-  <!-- The text overlay content block -->
-  <div class="page-header-info">
-    <div class="content">
-      <h1 @text="title"></h1>
-      <p webc:if="description" @text="description"></p>
+    <!-- The text overlay content block -->
+    <div class="page-header-info">
+      <div class="content">
+        <h1 @text="title"></h1>
+        <p webc:if="description" @text="description"></p>
+      </div>
     </div>
+    <!-- COLUMN 3: Global Action Controls Tracker -->
+  </figure>
+  <div class="page-header-actions">
+    <!-- Drop your theme switcher component directly in here! -->
+    <theme-toggle></theme-toggle>
   </div>
-</figure>
+</div>
 
 <style>
-  .page-header {
-    /* 1. THE PILE: Define a single grid area where everything stacks */
+  .page-header-wrapper {
     display: grid;
     grid-template-areas: "pile";
+    align-items: center;
+    background-color: var(--primary);
+    background-image: var(--themed-gradient-30);
+    overflow: hidden;
+    position: relative; /* Safe context boundary */
+  }
+  .page-header-actions {
+    grid-area: pile;
+    justify-self: end;
+    align-self: start;
+    margin: var(--size-3);
+    position: absolute;
+    z-index: 2; /* Ensures it floats cleanly above the banner graphics */
+  }
+  .page-header {
+    grid-area: pile;
+    /* 1. THE PILE: Define a single grid area where everything stacks */
+    display: grid;
+    grid-template-areas: "pilex";
     align-items: center;
 
     height: clamp(8rem, 15vw, 12rem);
@@ -35,7 +60,7 @@
     > picture,
     > img,
     .page-header-info {
-      grid-area: pile;
+      grid-area: pilex;
     }
 
     /* 3. Style the background graphic layer */

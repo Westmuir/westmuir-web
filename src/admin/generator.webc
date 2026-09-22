@@ -1,0 +1,15 @@
+---
+title: Manage generator
+pagetitle: Westmuir resilience
+headerImage: /images/logo-high.png
+headerAlt: Westmuir community logo
+---
+
+<div class="breakout">
+  <h1 class="ui-h2">Admin: Generator management</h1>
+
+  <generator-log-manager> </generator-log-manager
+  ><generator-log-viewer></generator-log-viewer>
+
+  <h2>Recent Results Log</h2>
+</div>

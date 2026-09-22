@@ -10,7 +10,11 @@
     "build": "eleventy",
     "fullclean": "del  './_site' './.cache'",
     "clean": "del  './_site/**/*' ",
-    "dev:backend": "wrangler pages dev _site"
+    "dev:backend": "wrangler pages dev _site --live-reload",
+    "eleventy:watch": "eleventy --watch",
+    "wrangler:dev": "wrangler pages dev _site --live-reload",
+    "dev": "concurrently --kill-others --prefix \"[{name}]\" --prefix-colors \"cyan,orange\" \"npm:eleventy:watch\" \"npm:wrangler:dev\"",
+    "devX": "npm-run-all --parallel eleventy:watch wrangler:dev"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.6",
@@ -22,25 +26,28 @@
     "fast-glob": "^3.3.3",
     "lightningcss": "^1.33.0",
     "luxon": "^3.7.2",
-    "markdown-it": "^14.3.0",
-    "markdown-it-anchor": "^9.2.1",
-    "markdown-it-attrs": "^5.0.0",
+    "markdown-it": "^15.0.2",
+    "markdown-it-anchor": "^10.0.0",
+    "markdown-it-attrs": "^5.0.1",
     "markdown-it-container": "^4.0.0",
     "markdown-it-footnote": "^4.0.0",
-    "material-symbols": "^0.45.9",
+    "material-symbols": "^0.47.4",
+    "nanoid": "^6.0.1",
     "open-props": "^1.7.23",
     "pdf-parse": "^2.4.5"
   },
   "devDependencies": {
-    "browserslist": "^4.28.7",
+    "browserslist": "^4.29.0",
+    "concurrently": "^10.0.5",
     "del-cli": "^7.0.0",
-    "prettier": "^3.9.6",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.9.8",
     "prettier-plugin-organize-imports": "^4.3.0",
     "purgecss": "^8.0.0",
     "rimraf": "^6.1.3",
     "serve": "^14.2.6",
-    "stylelint": "^17.14.1",
-    "wrangler": "^4.114.0"
+    "stylelint": "^17.15.0",
+    "wrangler": "^4.135.0"
   },
   "prettier": {
     "semi": true,

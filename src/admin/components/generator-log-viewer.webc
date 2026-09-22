@@ -1,0 +1,210 @@
+<!--- components/generator-log-viewer.webc --->
+<div class="toolbar">
+  <div class="search-wrapper">
+    <input
+      type="text"
+      class="search-box"
+      placeholder="🔍 Search records (e.g., initials, notes)..."
+    />
+  </div>
+  <div class="select-wrapper">
+    <select class="year-select">
+      <option value="2026" selected>2026</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+    </select>
+  </div>
+</div>
+
+<!-- The Unified Grid Spreadsheet Layout Canvas -->
+<div class="grid-spreadsheet">
+  <!-- Table Headers (Hidden on Mobile via CSS) -->
+  <div class="grid-header-row">
+    <div>Reason</div>
+    <div>Date</div>
+    <div>Run Window</div>
+    <div>Battery Status</div>
+    <div>Fuel Loss</div>
+    <div>Op</div>
+    <div class="actions-column">Actions</div>
+  </div>
+
+  <!-- Target injection wrapper for rows -->
+  <div class="logs-table-body">
+    <div class="loading-state">Loading generator log history...</div>
+  </div>
+</div>
+
+<script src="/js/generator-log-viewer.js" type="module" webc:keep></script>
+
+<style>
+  /* --- TOOLBAR CONTROLS --- */
+  .toolbar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .search-wrapper {
+    flex: 1;
+  }
+  .search-box,
+  .year-select {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  /* --- MOBILE FIRST LAYOUT: Stacked Cards --- */
+  .grid-header-row {
+    display: none; /* Hide wide headers on phone screen limits */
+  }
+
+  .log-row {
+    background: var(--surface-default);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .log-cell {
+    display: flex;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  /* Explicit Mobile Row Label Prefixes */
+  .cell-label {
+    font-weight: bold;
+    color: #4a5568;
+    width: 90px;
+    flex-shrink: 0;
+  }
+
+  /* Access Control Visibility Patterns matching base layout cookie rule */
+  .actions-column,
+  .actions-cell {
+    display: none !important;
+  }
+  body[data-user-role='admin'] .actions-column {
+    display: block !important;
+  }
+  body[data-user-role='admin'] .actions-cell {
+    display: flex !important;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid #edf2f7;
+    padding-top: 0.5rem;
+  }
+
+  /* --- TABLET & DESKTOP LAYOUT UPGRADE --- */
+  @media (min-width: 768px) {
+    .cell-label {
+      display: none; /* Strip out inline mobile helper text labels */
+    }
+
+    .grid-spreadsheet {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    /* Define the layout template column grid sizing rules once */
+    .grid-header-row,
+    .log-row {
+      display: grid !important;
+      grid-template-columns: 1.2fr 1.5fr 1.3fr 1.2fr 2fr;
+      gap: 0;
+      align-items: center;
+      margin-bottom: 0;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    /* Dynamically append an extra column configuration seamlessly if admin state is active */
+    body[data-user-role='admin'] .grid-header-row,
+    body[data-user-role='admin'] .log-row {
+      grid-template-columns: 1fr 1.2fr 1.2fr 1fr 1.8fr 1.2fr;
+    }
+
+    .log-row:last-child {
+      border-bottom: none;
+    }
+
+    .grid-header-row {
+      background: #f8fafc;
+      font-weight: bold;
+      color: #334155;
+      border-bottom: 2px solid #cbd5e1;
+    }
+
+    .log-cell {
+      padding: 0.75rem 1rem;
+      border: none;
+    }
+  }
+
+  .loading-state,
+  .empty-state,
+  .error-state {
+    padding: 2rem;
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+  }
+
+  /* Tablet & Desktop Column Grid Dimensions */
+  @media (min-width: 768px) {
+    .grid-header-row,
+    .log-row {
+      display: grid !important;
+      /* Added a column slice for reason, plus one for the initials */
+      grid-template-columns: 0.8fr 1.2fr 1.5fr 1.3fr 1.2fr 1fr;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    body[data-user-role='admin'] .grid-header-row,
+    body[data-user-role='admin'] .log-row {
+      grid-template-columns: 0.8fr 1fr 1.2fr 1.2fr 1fr 0.8fr 1.2fr;
+    }
+  }
+
+  /* Status Badges */
+  .status-badge {
+    display: inline-block;
+    padding: var(--size-1) var(--size-2);
+    border-radius: var(--radius-1);
+    font-size: var(--font-size-0);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 60px;
+  }
+
+  /* Color palettes utilizing standard semantic variations */
+  .state-m {
+    background: light-dark(var(--orange-2), var(--orange-9));
+    color: light-dark(var(--orange-9), var(--orange-1));
+  }
+  .state-a {
+    background: light-dark(var(--green-2), var(--green-9));
+    color: light-dark(var(--green-9), var(--green-1));
+  }
+  .state-r {
+    background: light-dark(var(--blue-2), var(--blue-9));
+    color: light-dark(var(--blue-9), var(--blue-1));
+  }
+  .state-s {
+    background: light-dark(var(--red-2), var(--red-9));
+    color: light-dark(var(--red-9), var(--red-1));
+  }
+</style>

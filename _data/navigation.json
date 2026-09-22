@@ -30,5 +30,29 @@
   {
     "url": "/other/",
     "label": "Archive"
+  },
+  {
+    "label": "Admin Options",
+    "showFor": "admin editor",
+    "children": [
+      {
+        "url": "/admin/generator/",
+        "label": "Manage Generator"
+      },
+      {
+        "url": "/admin/",
+        "label": "Review Bookings"
+      }
+    ]
+  },
+  {
+    "url": "/login/",
+    "label": "Login",
+    "showFor": "guest"
+  },
+  {
+    "url": "/logout/",
+    "label": "Logout",
+    "showFor": "admin editor member"
   }
 ]
