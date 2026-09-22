@@ -1,0 +1,64 @@
+<div class="dashboard-wrapper">
+  <div class="dashboard-banner">
+    <!-- These get populated via a quick fetch to your summary route -->
+    <div class="stat-card">
+      <span class="stat-title">Total Engine Hours</span>
+      <span class="stat-value" id="metric-hours">0.0 hrs</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-title">Fuel Consumed</span>
+      <span class="stat-value" id="metric-fuel">0 %</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-title">Average Burn Rate</span>
+      <span class="stat-value" id="metric-rate">0.0 %/hr</span>
+    </div>
+  </div>
+</div>
+
+<script src="/js/generator-metric.js" type="module" webc:keep></script>
+
+<style>
+  .dashboard-banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--size-3);
+    margin-bottom: var(--size-4);
+  }
+
+  .stat-card {
+    background: light-dark(var(--surface-1), var(--surface-2));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-2);
+    padding: var(--size-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+    box-shadow: var(--shadow-1);
+  }
+
+  .stat-title {
+    font-size: var(--font-size-0);
+    color: var(--text-2);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .stat-value {
+    font-size: var(--font-size-4);
+    font-weight: 800;
+    color: var(--text-1);
+  }
+
+  .forever-divider {
+    border-top: 2px dashed aqua;
+    margin: var(--size-4) 0 var(--size-2) 0;
+    width: 100%;
+  }
+
+  /* Optional: Make the final card stand out slightly */
+  .dashboard-banner:last-of-type .stat-card {
+    background: light-dark(var(--surface-2), var(--surface-3));
+    border-color: var(--color-5); /* Slight accent pop from your theme scale */
+  }
+</style>
