@@ -96,12 +96,17 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginCollections);
 
-  // Use the native HTML transform plugin
+  // 1. Tell Eleventy to copy the pre-transcoded images straight to the output
+  eleventyConfig.addPassthroughCopy({ 'src/img/optimized/': 'img/' });
+
+  // 2. Configure the Transform Plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    outputDir: '.cache/@11ty/images/',
+    // Write directly into the source directory so they can be checked into Git
+    outputDir: 'src/img/optimized/',
+
+    // The public URL path on the live site (matches the passthrough destination)
     urlPath: '/img/',
 
-    // 🚀 DROP LATEST JPEG: WebP and AVIF handle 100% of modern web layout demands!
     formats: ['avif'],
     widths: [400, 800, 'auto'],
     htmlOptions: {
@@ -252,20 +257,9 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginFilters);
 
   eleventyConfig.on('eleventy.before', async () => {
-    const cacheExists = fs.existsSync('.cache/@11ty/images/');
-    const files = cacheExists ? fs.readdirSync('.cache/@11ty/images/').length : 0;
-    console.log(`[cache check] image cache present: ${cacheExists}, files: ${files}`);
-  });
-
-  // 3. Move files from Cloudflare's cache to the final build output directory
-  eleventyConfig.on('eleventy.after', async ({ dir }) => {
-    const sourceDir = '.cache/@11ty/images/';
-    const destDir = `${dir.output}/img/`;
-
-    if (fs.existsSync(sourceDir)) {
-      fs.mkdirSync(destDir, { recursive: true });
-      fs.cpSync(sourceDir, destDir, { recursive: true });
-    }
+    const cacheExists = fs.existsSync('src/img/optimized/');
+    const files = cacheExists ? fs.readdirSync('src/img/optimized/').length : 0;
+    console.log(`[cache check] pre-transcoded images present: ${cacheExists}, files: ${files}`);
   });
   eleventyConfig.addPassthroughCopy({ './public': '/' });
 }
