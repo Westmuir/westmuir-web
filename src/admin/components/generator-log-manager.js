@@ -26,9 +26,12 @@ class GeneratorLogManager extends GeneratorBase {
     // The Cancel button is HIDDEN when the form is clean (NOT dirty)
     if (this.cancelButton) this.cancelButton.classList.toggle('hidden', !this.isFormDirty);
     if (this.createButton) this.createButton.classList.toggle('hidden', this.isFormDirty);
-    if (this.modeTitle) this.modeTitle.textContent = 'Modify Existing record';
 
     const idEl = this.querySelector('input[type="hidden"]');
+    const title = idEl?.value ? 'Modify Existing record' : 'New Log Entry';
+
+    if (this.modeTitle) this.modeTitle.textContent = title;
+
     const deleteBtn = this.querySelector('.delete-competition-btn');
 
     if (deleteBtn) {
@@ -133,21 +136,6 @@ class GeneratorLogManager extends GeneratorBase {
     this.updateActionButtonsVisibility();
   }
 
-  handleEditFill(fields) {
-    const form = this.form;
-    if (!form) return;
-
-    if (this.formAccordion) this.formAccordion.setAttribute('open', '');
-
-    form.querySelectorAll('input, select, textarea').forEach(input => {
-      if (input.name) {
-        input.value = fields[input.name] || '';
-      }
-    });
-
-    form.querySelector('input[name="date"]')?.focus();
-  }
-
   hydrate(data) {
     const record = data ?? {};
     if (this.formAccordion) this.formAccordion.setAttribute('open', '');
@@ -193,7 +181,12 @@ class GeneratorLogManager extends GeneratorBase {
 
       const result = await response.json();
 
-      // Dispatch event to dynamically sync your child layout array model view instantly
+      // 1. Snapshot the newly saved data as the clean baseline model
+      this.startingModel = result.log;
+      this.isFormDirty = false;
+      this.updateActionButtonsVisibility();
+
+      // 2. Sync the log viewer table layout instantly
       this.dispatchEvent(
         new CustomEvent('generator-log-saved', {
           bubbles: true,
