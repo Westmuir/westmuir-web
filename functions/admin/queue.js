@@ -12,21 +12,17 @@ export async function onRequestGet(context) {
       });
     }
 
-    let html = '';
+    let queueHtml = '';
     results.forEach(b => {
       // 1. Determine status badge classes
       let badgeClass = 'badge-tentative';
       if (b.status === 'approved') badgeClass = 'badge-approved';
       if (b.status === 'denied') badgeClass = 'badge-denied';
       if (b.status === 'cancelled') badgeClass = 'badge-cancelled';
-
       let statusLabel = b.status.charAt(0).toUpperCase() + b.status.slice(1);
-      const eventDetails = b.is_recurring
-        ? html`<span class="repeat-icon">↻</span> Weekly (Day ${b.day_of_week})`
-        : b.date;
 
-      // 2. We add 'status-${b.status}' as a class name so our CSS body filter can grab it
-      html += html`
+      const eventDetails = b.is_recurring ? `<span class="repeat-icon">↻</span> Weekly (Day ${b.day_of_week})` : b.date;
+      queueHtml += html`
         <div class="booking-row status-${b.status}" id="booking-container-${b.id}">
           <div class="booking-info">
             <span
@@ -95,8 +91,9 @@ export async function onRequestGet(context) {
       `;
     });
 
-    return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+    return new Response(queueHtml, { headers: { 'Content-Type': 'text/html; charset=utf-8' } });
   } catch (error) {
+    console.log(error.toString());
     return new Response(html`<p>Error loading log entries.</p>`, { status: 500 });
   }
 }

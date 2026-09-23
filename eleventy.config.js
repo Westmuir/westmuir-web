@@ -81,6 +81,7 @@ export default async function (eleventyConfig) {
   );
   eleventyConfig.addPassthroughCopy({
     'src/**/components/**/*.js': 'js/',
+    '_includes/components/**/*.js': 'js/',
   });
   eleventyConfig.watchIgnores.add('src/_headers');
 
