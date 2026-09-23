@@ -233,12 +233,6 @@
 <script src="/js/generator-log-manager.js" type="module" webc:keep></script>
 
 <style webc:bucket="generator">
-  generator-log-manager {
-    display: block;
-    /* ⚡️ The Layout Flag: Cascades down to any nested children natively */
-    --is-admin-panel: 1;
-  }
-
   @layer components.extended {
     .ui-tonal.action-cancel {
       /* Light Mode: Super soft color tint

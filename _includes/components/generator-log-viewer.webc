@@ -93,27 +93,14 @@
     display: none !important;
   }
 
-  .grid-spreadsheet {
-    --_grid-tracks: 0.8fr 1fr 1.5fr 1.3fr 1.2fr 0.8fr;
+  body[data-user-role="admin"] .admin-dashboard .actions-column {
+    display: block !important;
   }
 
-  .admin-view .grid-spreadsheet {
-    --_grid-tracks: 0.8fr 1fr 1.5fr 1.3fr 1.2fr 0.8fr 1.2fr;
-  }
-
-  /* The ultimate decoupled display rule: */
-  /* If --is-admin-panel is active anywhere above us in the DOM, reveal columns/cells instantly */
-  body[data-user-role="admin"] .actions-column,
-  body[data-user-role="admin"] .actions-cell {
-    display: var(--is-admin-panel, none) !important;
-  }
-
-  /* Fallback: if mobile stacked cards display actions row, make it a tidy row block */
-  body[data-user-role="admin"] .actions-cell {
+  body[data-user-role="admin"] .admin-dashboard .actions-cell {
+    display: flex !important;
     flex-direction: row;
     gap: 0.5rem;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 0.5rem;
   }
 
   /* --- TABLET & DESKTOP LAYOUT UPGRADE --- */
@@ -129,32 +116,22 @@
       overflow: hidden;
     }
 
-    /*
-    1. SINGLE CENTRAL SOURCE OF TRUTH
-    Declare the un-repeated core tracking layout once as a blueprint token.
-  */
+    /* 1. Single Central Source of Truth for standard columns */
     .grid-header-row,
     .log-row {
-      --_base-tracks: 0.8fr 1fr 1.5fr 1.3fr 1.2fr 0.8fr;
+      --_grid-tracks: 0.8fr 1fr 1.5fr 1.3fr 1.2fr 0.8fr;
 
       display: grid !important;
       align-items: center;
       border-bottom: 1px solid #e2e8f0;
-
-      /* Defaults directly to the base 6 column view scale layout */
-      grid-template-columns: var(--_base-tracks);
+      grid-template-columns: var(--_grid-tracks);
     }
 
-    /*
-    2. THE CONTROL PANELS OVERRIDE
-    If the page layout wrapper has your admin dashboard context layout class,
-    we seamlessly recycle the core token string and append the actions track slice.
-  */
+    /* 2. Seamlessly append the actions column on the admin page */
     .admin-dashboard .grid-header-row,
     .admin-dashboard .log-row {
-      grid-template-columns: var(--_base-tracks) 1.2fr;
+      grid-template-columns: var(--_grid-tracks) 1.2fr;
     }
-
     .log-row:last-child {
       border-bottom: none;
     }
