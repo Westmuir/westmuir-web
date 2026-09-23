@@ -87,19 +87,32 @@
     flex-shrink: 0;
   }
 
-  /* Access Control Visibility Patterns matching base layout cookie rule */
+  /* --- INDEPENDENT INTERFACE ACCESS GATES --- */
   .actions-column,
   .actions-cell {
     display: none !important;
   }
-  body[data-user-role='admin'] .actions-column {
-    display: block !important;
+
+  .grid-spreadsheet {
+    --_grid-tracks: 0.8fr 1fr 1.5fr 1.3fr 1.2fr 0.8fr;
   }
-  body[data-user-role='admin'] .actions-cell {
-    display: flex !important;
+
+  .admin-view .grid-spreadsheet {
+    --_grid-tracks: 0.8fr 1fr 1.5fr 1.3fr 1.2fr 0.8fr 1.2fr;
+  }
+
+  /* The ultimate decoupled display rule: */
+  /* If --is-admin-panel is active anywhere above us in the DOM, reveal columns/cells instantly */
+  body[data-user-role="admin"] .actions-column,
+  body[data-user-role="admin"] .actions-cell {
+    display: var(--is-admin-panel, none) !important;
+  }
+
+  /* Fallback: if mobile stacked cards display actions row, make it a tidy row block */
+  body[data-user-role="admin"] .actions-cell {
+    flex-direction: row;
     gap: 0.5rem;
-    margin-top: 0.5rem;
-    border-top: 1px solid #edf2f7;
+    border-top: 1px solid #e2e8f0;
     padding-top: 0.5rem;
   }
 
@@ -116,23 +129,30 @@
       overflow: hidden;
     }
 
-    /* Define the layout template column grid sizing rules once */
+    /*
+    1. SINGLE CENTRAL SOURCE OF TRUTH
+    Declare the un-repeated core tracking layout once as a blueprint token.
+  */
     .grid-header-row,
     .log-row {
+      --_base-tracks: 0.8fr 1fr 1.5fr 1.3fr 1.2fr 0.8fr;
+
       display: grid !important;
-      grid-template-columns: 1.2fr 1.5fr 1.3fr 1.2fr 2fr;
-      gap: 0;
       align-items: center;
-      margin-bottom: 0;
-      border-radius: 0;
-      border: none;
       border-bottom: 1px solid #e2e8f0;
+
+      /* Defaults directly to the base 6 column view scale layout */
+      grid-template-columns: var(--_base-tracks);
     }
 
-    /* Dynamically append an extra column configuration seamlessly if admin state is active */
-    body[data-user-role='admin'] .grid-header-row,
-    body[data-user-role='admin'] .log-row {
-      grid-template-columns: 1fr 1.2fr 1.2fr 1fr 1.8fr 1.2fr;
+    /*
+    2. THE CONTROL PANELS OVERRIDE
+    If the page layout wrapper has your admin dashboard context layout class,
+    we seamlessly recycle the core token string and append the actions track slice.
+  */
+    .admin-dashboard .grid-header-row,
+    .admin-dashboard .log-row {
+      grid-template-columns: var(--_base-tracks) 1.2fr;
     }
 
     .log-row:last-child {
@@ -152,6 +172,7 @@
     }
   }
 
+  /* --- UTILITIES & SYSTEM BADGES --- */
   .loading-state,
   .empty-state,
   .error-state {
@@ -161,24 +182,6 @@
     font-style: italic;
   }
 
-  /* Tablet & Desktop Column Grid Dimensions */
-  @media (min-width: 768px) {
-    .grid-header-row,
-    .log-row {
-      display: grid !important;
-      /* Added a column slice for reason, plus one for the initials */
-      grid-template-columns: 0.8fr 1.2fr 1.5fr 1.3fr 1.2fr 1fr;
-      align-items: center;
-      border-bottom: 1px solid var(--border);
-    }
-
-    body[data-user-role='admin'] .grid-header-row,
-    body[data-user-role='admin'] .log-row {
-      grid-template-columns: 0.8fr 1fr 1.2fr 1.2fr 1fr 0.8fr 1.2fr;
-    }
-  }
-
-  /* Status Badges */
   .status-badge {
     display: inline-block;
     padding: var(--size-1) var(--size-2);
@@ -190,7 +193,6 @@
     min-width: 60px;
   }
 
-  /* Color palettes utilizing standard semantic variations */
   .state-m {
     background: light-dark(var(--orange-2), var(--orange-9));
     color: light-dark(var(--orange-9), var(--orange-1));
