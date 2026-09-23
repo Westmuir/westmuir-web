@@ -7,3 +7,5 @@ inContextNav: true
 ---
 
 <generator-metric></generator-metric>
+
+<generator-log-viewer></generator-log-viewer>
