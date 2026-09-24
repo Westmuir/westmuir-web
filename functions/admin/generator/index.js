@@ -8,7 +8,15 @@ export async function onRequestPost(context) {
     const db = env.village_hall;
     const formData = await request.formData();
 
-    // Setup keys to clean and pull out of the payload
+    // 1. Grab the ID sent from your custom component base class
+    const logId = formData.get('id');
+    if (!logId) {
+      return new Response(JSON.stringify({ error: 'Bad Request: Missing unique entry identifier.' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+
     const fields = [
       'date',
       'time_start',
@@ -26,10 +34,7 @@ export async function onRequestPost(context) {
       'notes',
     ];
 
-    const logEntry = {};
-
-    // Fallback to a brand new native UUID if the id field is blank (Create mode)
-    logEntry.id = formData.get('id') || crypto.randomUUID();
+    const logEntry = { id: logId.toString().trim() };
 
     // Transform empty strings or hyphens from mobile touch inputs into clean SQL NULL values
     for (const key of fields) {

@@ -46,48 +46,28 @@ headerAlt: "westmuir village"
     </li>
   </ul>
 
-  <h4>WCDT Statement of Finances, Balance sheet, and Notes to account</h4>
-  Here are the latest financial statements and balance sheet for WCDT.
-
-  <ul>
-    <li>
-      October 2025
-
-      <ul class="wcdt-list">
-        <li>
-          <a href="/pdf/wcdt/Annual AGM Report 2024 - 2025.pdf" target="_blank"
-            >Annual Report 2024-25</a
-          >
-        </li>
-        <li>
-          <a
-            href="/pdf/wcdt/WCDT Accounts for 2024-25 signed off p3.pdf"
-            target="_blank"
-            >Statement of financial activities and notes.</a
-          >
-        </li>
-        <li>
-          <a
-            href="/pdf/wcdt/WCDT Accounts for 2024-25 signed off p1.pdf"
-            target="_blank"
-            >WCDT Balance Sheet</a
-          >
-        </li>
-      </ul>
-    </li>
-    <li>
-      <a href="/wcdt/accounts/" title="archive accounts">Archive accounts</a>
-    </li>
-  </ul>
-  <image-gallery
-    :collection="$data.galleries['woodland-hedge-laying']"
-    layout="strip"
-  >
-    <h3>Hedge laying - April 2026</h3>
-  </image-gallery>
+  <div class="sub-section">
+    <h5>Here are the latest financial statements and minutes for WCDT</h5>
+    <a
+      href="accounts/"
+      title="accounts and
+    minutes"
+      >Accounts and minutes</a
+    >.
+  </div>
 </div>
+<image-gallery
+  class="breakout"
+  :collection="$data.galleries['woodland-hedge-laying']"
+  layout="strip"
+>
+  <h3>Hedge laying - April 2026</h3>
+</image-gallery>
 
 <style>
+  .sub-section h5 {
+    max-inline-size: 100%;
+  }
   .highlight-text {
     font-weight: var(--font-weight-6);
     font-size: var(--font-size-4);

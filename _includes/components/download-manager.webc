@@ -1,0 +1,100 @@
+<!--- components/download-manager.webc --->
+<div class="download-container :where(.download-manager)">
+  <!-- Root Level Files First (No Accordion) -->
+  <div
+    class="uncategorized-section"
+    webc:if="collection.uncategorized.length > 0"
+  >
+    <ul class="download-list">
+      <li webc:for="file of collection.uncategorized">
+        <a :href="file.url" download @text="file.title"></a>
+        <p
+          webc:if="file.description"
+          class="file-desc"
+          @text="file.description"
+        ></p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Categorized Folders (The Accordion Loop) -->
+  <div class="ui-accordion">
+    <details webc:for="(category, i) of collection.categories">
+      <!-- Unique dynamic IDs built inline per loop pass -->
+      <summary :id="'header-cat-' + uid + '-' + i">
+        <span @text="category.categoryName"></span>
+      </summary>
+
+      <!-- Panel wrapper anchored safely via role region -->
+      <div
+        class="ui-content"
+        role="region"
+        :aria-labelledby="'header-cat-' + uid + '-' + i"
+      >
+        <p
+          webc:if="category.description"
+          class="category-desc"
+          @text="category.description"
+        ></p>
+
+        <ul class="download-list">
+          <li webc:for="file of category.files">
+            <a :href="file.url" download class="download-link">
+              <span @text="file.title"></span>
+            </a>
+            <p
+              webc:if="file.description"
+              class="file-desc"
+              @text="file.description"
+            ></p>
+          </li>
+        </ul>
+      </div>
+    </details>
+  </div>
+</div>
+
+<style>
+  :where(.download-manager) {
+    .ui-accordion details {
+      margin-bottom: var(--size-2);
+      padding: var(--size-2);
+      border: var(--border-width) solid var(--border-color);
+      border-radius: var(--field-border-radius);
+      background: var(--surface-default);
+    }
+
+    summary {
+      font-weight: var(--font-weight-7);
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: var(--size-1);
+    }
+
+    .ui-content {
+      padding: var(--size-2) var(--size-1);
+    }
+
+    .download-list {
+      list-style-type: none;
+      padding-left: var(--size-3);
+    }
+
+    .download-list li {
+      margin: var(--size-2) 0;
+    }
+
+    .download-link {
+      font-size: var(--font-size-1);
+      color: var(--brand);
+      text-decoration: underline;
+    }
+
+    .category-desc,
+    .file-desc {
+      margin: var(--size-1) 0 0 0;
+      font-size: var(--font-size-0);
+      color: var(--text-muted, #555);
+    }
+  }
+</style>
