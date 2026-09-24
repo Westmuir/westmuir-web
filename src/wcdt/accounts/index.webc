@@ -1,71 +1,17 @@
 ---
-title: Annual accounts archive
+title: Accounts and minutes
 description: Annual accounts archive.
-headerImage: '/wcdt/wcdt-banner.avif'
-headerAlt: 'westmuir village'
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "westmuir village"
 inContextNav: true
 ---
 
 <div class="content-grid flow">
   <section class="content-text-block breakout">
-    <h4>WCDT Statement of Finances, Balance sheet, and Notes to account</h4>
-    Here are the latest financial statements and balance sheet for WCDT.
+    <h4>WCDT accounts and minutes</h4>
 
-<ul>
-            <li>
-        October 2025
-
-        <ul class="wcdt-list">
-          <li>
-            <a
-              href="/pdf/wcdt/Annual AGM Report 2024 - 2025.pdf"
-              target="_blank"
-              >Annual Report 2024-25</a
-            >
-          </li>
-          <li>
-            <a
-              href="/pdf/wcdt/WCDT Accounts for 2024-25 signed off p3.pdf"
-              target="_blank"
-              >Statement of financial activities and notes.</a
-            >
-          </li>
-          <li>
-            <a
-              href="/pdf/wcdt/WCDT Accounts for 2024-25 signed off p1.pdf"
-              target="_blank"
-              >WCDT Balance Sheet</a
-            >
-          </li>
-        </ul>
-      </li>
-
-  <li>
-    <div>October 2024<div>
-
-    <ul class="wcdt-list">
-      <li>
-        <a href="/pdf/wcdt/Annual Report 2023 - 2024.pdf" target="_blank"
-          >Annual Report 2023-24</a
-        >
-      </li>
-      <li>
-        <a href="/pdf/wcdt/financial-statement-notes.pdf" target="_blank"
-          >Statement of financial activities and notes.</a
-        >
-      </li>
-      <li>
-        <a href="/pdf/wcdt/Balance sheet.pdf" target="_blank"
-          >WCDT Balance Sheet</a
-        >
-      </li>
-    </ul>
-
-  </li>
-</ul>
-
-
-</section>
+    <download-manager :@collection="wcdtFiles"></download-manager>
+  </section>
 </div>
 
 <style>
