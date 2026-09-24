@@ -8,7 +8,7 @@ headerAlt: Westmuir community logo
 <div class="breakout">
   <h1 class="ui-h2">Admin: Generator management</h1>
 
-  <generator-log-manager class="admin-dashboard">
+  <generator-log-manager>
     <h2>Recent Results Log</h2>
     <generator-log-viewer></generator-log-viewer>
   </generator-log-manager>
