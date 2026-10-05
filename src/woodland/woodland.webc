@@ -97,6 +97,14 @@ headerAlt: "woodland walkway"
   have helped care for this very special place.
 </div>
 
+<image-lightbox-gallery
+  class="breakout image-gallery-section"
+  :collection="$data.galleries['woodland-scenes']"
+  layout="bento"
+>
+  <h3>Woodland Scenes - 2026</h3>
+</image-lightbox-gallery>
+
 <style>
   editorial-block {
     --pane-bg: hsl(47.1, 83.5%, 59.6%);
@@ -104,5 +112,12 @@ headerAlt: "woodland walkway"
   .home-container {
     --section-color: light-dark(var(--grey-9), var(--grey-2));
     --section-bg: light-dark(var(--cyan-2), var(--cyan-9));
+  }
+  .image-gallery-section {
+    margin-block: var(--size-9, 4rem);
+
+    .gallery-intro {
+      max-inline-size: var(--size-content-3, 70ch);
+    }
   }
 </style>

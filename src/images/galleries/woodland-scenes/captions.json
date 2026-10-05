@@ -1,0 +1,17 @@
+{
+  "DSCN3253": {
+    "title": "Main Heath",
+    "desc": "Shot in sunny weather",
+    "size": "medium"
+  },
+  "detail-view-01": {
+    "title": "Architectural Detail",
+    "desc": "Focusing on the micro-textures of the concrete structure.",
+    "size": "medium"
+  },
+  "standard-photo-abc": "Just a normal caption entry string",
+  "another-photo-xyz": {
+    "title": "Forced Square Image",
+    "size": "standard"
+  }
+}
