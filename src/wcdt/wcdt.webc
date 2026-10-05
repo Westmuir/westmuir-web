@@ -56,13 +56,13 @@ headerAlt: "westmuir village"
     >.
   </div>
 </div>
-<image-gallery
-  class="breakout"
+<image-lightbox-gallery
+  class="breakout image-gallery-section"
   :collection="$data.galleries['woodland-hedge-laying']"
   layout="strip"
 >
   <h3>Hedge laying - April 2026</h3>
-</image-gallery>
+</image-lightbox-gallery>
 
 <style>
   .sub-section h5 {

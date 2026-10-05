@@ -1,0 +1,538 @@
+<div :class="`layout-${layout || 'grid'}`">
+  <div class="gallery-wrapper-outer">
+    <button
+      webc:if="layout === 'strip'"
+      type="button"
+      class="strip-nav-arrow left"
+      aria-label="Scroll gallery left"
+      onclick="
+        this.nextElementSibling.scrollBy({ left: -200, behavior: 'smooth' })
+      "
+    >
+      ‹
+    </button>
+
+    <div class="image-gallery-container">
+      <!-- FIX: Clean template literal class assignment prevents string evaluation collisions -->
+      <figure
+        webc:for="(item, index) of collection"
+        :class="`gallery-item ${layout === 'bento' && item.bentoSize ? 'size-' + item.bentoSize : ''} ${layout === 'grid' ? (Number(index) % 5 === 0 ? 'item-wide' : (Number(index) % 3 === 0 ? 'item-tall' : '')) : ''}`"
+      >
+        <button
+          type="button"
+          class="gallery-trigger"
+          :data-alt="item.alt || item.title"
+          aria-label="View larger image"
+        >
+          <div class="bento-media">
+            <img
+              :src="item.src"
+              :alt="item.alt || ''"
+              loading="lazy"
+              sizes="(min-width: 65rem) 400px, (min-width: 45rem) 50vw, 95vw"
+            />
+          </div>
+
+          <div webc:if="item.title || item.desc" class="bento-content">
+            <h3 webc:if="item.title" @text="item.title"></h3>
+            <p webc:if="item.desc" @text="item.desc"></p>
+          </div>
+        </button>
+        <figcaption webc:if="layout !== 'bento'" @text="item.alt"></figcaption>
+      </figure>
+    </div>
+
+    <button
+      webc:if="layout === 'strip'"
+      type="button"
+      class="strip-nav-arrow right"
+      aria-label="Scroll gallery right"
+      onclick="
+        this.previousElementSibling.scrollBy({ left: 200, behavior: 'smooth' })
+      "
+    >
+      ›
+    </button>
+  </div>
+  <!-- Lightbox Modal Box (Preserved with the fixes) -->
+  <dialog class="ui-dialog lightbox-modal" closedby="any">
+    <div class="ui-header">
+      <span class="lightbox-caption">Image View</span>
+      <button
+        class="ui-icon-button close-btn"
+        title="Close"
+        onclick="this.closest('dialog').close()"
+        aria-label="Close dialog"
+      >
+        <svg xmlns="http://w3.org" viewBox="0 0 32 32">
+          <path
+            fill="currentColor"
+            d="M26.29 4.293a1 1 0 1 1 1.414 1.414L17.413 16l10.291 10.29a1 1 0 1 1-1.414 1.414L16 17.413L5.707 27.704a1 1 0 0 1-1.414-1.414L14.585 16L4.293 5.707a1 1 0 0 1 1.414-1.414L16 14.584z"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div class="ui-content lightbox-content">
+      <button
+        type="button"
+        class="ui-icon-button nav-btn prev-btn"
+        aria-label="Previous image"
+      >
+        <svg
+          xmlns="http://w3.org"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="img-wrapper">
+        <img class="lightbox-img" src="" alt="" />
+      </div>
+
+      <button
+        type="button"
+        class="ui-icon-button nav-btn next-btn"
+        aria-label="Next image"
+      >
+        <svg
+          xmlns="http://w3.org"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+  </dialog>
+</div>
+<script src="/js/image-lightbox-gallery.js" type="module" webc:keep></script>
+
+<style>
+  /* --- GLOBAL STRUCTURAL CONTAINER WRAPPER --- */
+  .gallery-wrapper-outer {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  /* --- VARIANT 2: SWIPING STRIP (FIXED & IMPROVED) --- */
+  .layout-strip .image-gallery-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: var(--size-3);
+    padding-bottom: var(--size-2);
+
+    /* Native scrolling engine configurations */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide default ugly trackbars */
+  }
+  .layout-strip .image-gallery-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .layout-strip .gallery-item {
+    flex: 0 0 calc(100% / 5.5);
+    scroll-snap-align: start;
+    min-width: 0; /* FIX: Prevents nested flex items from expanding or breaking boundaries */
+  }
+
+  @media (max-width: 768px) {
+    .layout-strip .gallery-item {
+      flex: 0 0 calc(100% / 2.5);
+    }
+  }
+
+  /* STICKY CLICK ICONS AT BOTH ENDS */
+  .strip-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--size-8);
+    height: var(--size-8);
+    border-radius: var(--radius-round);
+    background-color: var(--surface-default);
+    border: 1px solid var(--surface-3);
+    box-shadow: var(--shadow-2);
+    color: var(--text-primary);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-7);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: var(--layer-1, 10);
+    transition:
+      background-color 0.2s var(--ease-out),
+      transform 0.2s var(--ease-out);
+  }
+
+  .strip-nav-arrow:hover {
+    background-color: var(--surface-filled);
+    transform: translateY(-50%) scale(1.05);
+  }
+
+  .strip-nav-arrow.left {
+    left: calc(var(--size-4) * -1);
+  }
+  .strip-nav-arrow.right {
+    right: calc(var(--size-4) * -1);
+  }
+
+  /* Smooth out layout positioning on small screens */
+  @media (max-width: 768px) {
+    .strip-nav-arrow {
+      display: none;
+    } /* Hide arrow buttons on mobile where native touch swiping feels best */
+  }
+  /* --- OPEN PROPS TOKEN INTEGRATION --- */
+  .gallery-trigger {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+    overflow: hidden;
+    border-radius: var(--radius-2);
+  }
+
+  /* Refined Lightbox Container Modal */
+  dialog.lightbox-modal {
+    background-color: var(--surface-1);
+    box-shadow: var(--shadow-5);
+    border-radius: var(--radius-3);
+    max-width: var(--size-md);
+    width: 90vw;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid var(--surface-2);
+    transition: transform var(--transition-fade-duration) var(--ease-out);
+  }
+
+  .ui-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--size-3) var(--size-4);
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--surface-3);
+  }
+
+  .lightbox-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-3);
+    padding: var(--size-4);
+    background: var(--surface-1);
+  }
+
+  .img-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-3);
+  }
+
+  .close-btn {
+    width: var(--size-7);
+    height: var(--size-7);
+    padding: var(--size-1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close-btn svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .nav-btn {
+    width: var(--size-8);
+    height: var(--size-8);
+    padding: var(--size-2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--surface-3);
+    color: var(--text-1);
+    border-radius: var(--radius-round);
+    flex-shrink: 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s var(--ease-out);
+  }
+
+  .nav-btn:hover {
+    background-color: var(--surface-4);
+  }
+  .nav-btn svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ==========================================================================
+     --- GLOBAL BENTO CONTENT RULES (BASE VARIANT ACCESSIBILITY) ---
+     ========================================================================== */
+  .bento-content {
+    padding: var(--size-3) var(--size-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .bento-content h3 {
+    font-size: var(--font-size-1); /* Downsized default variant base scale */
+    font-weight: var(--font-weight-6);
+    color: var(--text-primary);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .bento-content p {
+    font-size: var(--font-size-0);
+    color: var(--text-secondary);
+    line-height: var(--font-lineheight-2);
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  /* --- VARIANT 1: STANDARD GRID MODE --- */
+  .layout-grid .image-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--size-4);
+  }
+  .layout-grid .gallery-trigger {
+    border-radius: var(--radius-2);
+  }
+  .layout-grid .bento-media img {
+    aspect-ratio: var(--ratio-square);
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* --- VARIANT 2: SWIPING STRIP --- */
+  .layout-strip .image-gallery-container {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--size-2);
+    padding-bottom: var(--size-3);
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .layout-strip .image-gallery-container::-webkit-scrollbar {
+    display: none;
+  }
+  .layout-strip .gallery-item {
+    flex: 0 0 auto;
+    width: calc(100% / 5.5);
+    scroll-snap-align: start;
+  }
+
+  @media (max-width: 768px) {
+    .layout-strip .gallery-item {
+      width: calc(100% / 2.5);
+    }
+  }
+
+  .layout-strip .bento-media img {
+    height: var(--size-11);
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-2);
+    transition: transform 0.2s var(--ease-out);
+  }
+  .layout-strip .bento-media img:hover {
+    transform: scale(var(--scale-1));
+  }
+  .layout-strip figcaption {
+    display: none;
+  }
+
+  /* FIX: Styled micro-caption display logic for horizontal strips */
+  .layout-strip .bento-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--size-2) 0 0 0; /* Align perfectly with edges of thumbnail */
+    width: 100%;
+    min-width: 0; /* Essential for text-overflow systems to work in flex boxes */
+  }
+
+  .layout-strip .bento-content h3 {
+    font-size: var(--font-size-0); /* Micro text sizing scale */
+    font-weight: var(--font-weight-5);
+    color: var(--text-secondary);
+    margin: 0;
+
+    /* Truncate layout overflow with an ellipsis if title runs too long */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: none;
+  }
+
+  /* Completely drop descriptions in strip mode to maintain thumbnail tracking lines */
+  .layout-strip .bento-content p {
+    display: none;
+  }
+
+  /* ==========================================================================
+     --- VARIANT 3: REPURPOSED INTEGRATED BENTO ENGINE ---
+     ========================================================================== */
+  .layout-bento .image-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: var(--size-4);
+    grid-auto-flow: row dense;
+  }
+
+  .layout-bento .gallery-trigger {
+    --_border-color: light-dark(var(--color-5), var(--color-10));
+    --_hover-bg: light-dark(var(--color-4), var(--color-11));
+    background-color: var(--surface-default);
+    border: 1px solid var(--_border-color);
+    border-radius: var(--radius-3);
+    box-shadow: var(--shadow-1);
+    transition:
+      box-shadow 0.2s var(--ease-3),
+      background-color 0.2s var(--ease-2),
+      border-color 0.2s var(--ease-2);
+  }
+
+  .layout-bento .gallery-trigger:is(:hover, :focus-visible) {
+    box-shadow: var(--shadow-3);
+    background-color: var(--_hover-bg);
+    --_border-color: light-dark(var(--color-6), var(--color-9));
+  }
+
+  .layout-bento .bento-media {
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    background-color: var(--surface-3);
+    min-height: 0;
+  }
+
+  .layout-bento .bento-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* FIX: Compressed textual padding footprint gives vertical space back to image containers */
+  .layout-bento .bento-content {
+    padding: var(--size-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-0.5);
+    flex-shrink: 0;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .layout-bento .bento-content h3 {
+    font-size: var(--font-size-1); /* Downsized from var(--font-size-2) */
+    font-weight: var(--font-weight-7);
+    color: var(--text-primary);
+    margin: 0;
+    text-wrap: balance;
+
+    /* Clean truncation fallback for headers */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .layout-bento .bento-content p {
+    font-size: var(--font-size-0); /* Downsized from var(--font-size-1) */
+    color: var(--text-secondary);
+    line-height: var(--font-lineheight-1);
+    margin: 0;
+
+    /* FIX: Modern cross-browser multi-line truncation bounds */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Strict layout clamp max line ceiling count */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-wrap: pretty;
+  }
+
+  /* FIX: Automatically drop sub-descriptions on tiny 1x1 cards to protect layout lines */
+  .layout-bento
+    .gallery-item:not(.size-feature):not(.size-medium)
+    .bento-content
+    p {
+    display: none;
+  }
+
+  /* Responsive Track Spanning Logic mapped from your Bento System */
+  @media (min-width: 45rem) {
+    .layout-bento .image-gallery-container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 250px;
+    }
+    .layout-bento .gallery-item.size-feature {
+      grid-column: span 2 !important;
+      grid-row: span 2 !important;
+    }
+    .layout-bento .gallery-item.size-medium {
+      grid-column: span 2 !important;
+      grid-row: span 1 !important;
+    }
+  }
+
+  @media (min-width: 65rem) {
+    .layout-bento .image-gallery-container {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--size-5);
+
+      /* FIX: Increased tracking height slightly to accommodate the clean text blocks */
+      grid-auto-rows: 200px;
+    }
+    .layout-bento .gallery-item.size-feature {
+      grid-column: span 2 !important;
+      grid-row: span 2 !important;
+    }
+    .layout-bento .gallery-item.size-medium {
+      grid-column: span 2 !important;
+      grid-row: span 1 !important;
+    }
+
+    /* Allow feature blocks slightly more breathing room for headers if they are wide */
+    .layout-bento .gallery-item.size-feature .bento-content h3 {
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+</style>
