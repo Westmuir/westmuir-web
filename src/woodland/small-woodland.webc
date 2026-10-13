@@ -1,0 +1,179 @@
+---
+title: Westmuir Woodland
+description: Scotland's small woodland winner 2024.
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "Small woodland winner"
+inContextNav: true
+---
+
+<main class="woodland-container breakout">
+  <div class="content-grid">
+    <!-- Left Column: Centred Logo Frame (PNG) -->
+    <div class="grid-column logo-frame">
+      <img
+        src="/wcdt/woodland-logo.png"
+        alt="Westmuir Community Woodland Angus"
+        sizes="(min-width: 48em) 50vw, 100vw"
+        loading="eager"
+      />
+    </div>
+
+    <!-- Right Column: Recognition Typography Details -->
+    <div class="grid-column info-canvas">
+      <header class="recognition-text">
+        <h3>Westmuir Woodland Recognition</h3>
+        <div class="extra-info">
+          <p class="award-lead">
+            Scotland Finest Wood Award 2024 in the Small community woodland
+            category.
+          </p>
+          <p class="award-link">
+            <a href="https://sfwa.co.uk" target="_blank" rel="noopener"
+              >https://sfwa.co.uk</a
+            >
+          </p>
+        </div>
+      </header>
+
+      <!-- Award Presentation Photo Block -->
+      <section class="winner-container">
+        <p class="winner-title">
+          Community Woodland Group - Small Group Winner
+        </p>
+        <div class="photo-frame">
+          <img
+            src="/woodland/PW_SFWA-24_CWA-Small-Winner_Westmuir_Ann-W-with-CabSec-600x402.png"
+            alt="Ann W receiving Scotland's Finest Woods Award at the Scottish Parliament"
+            sizes="(min-width: 48em) 50vw, 100vw"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Metadata List -->
+        <ul class="clean-list micro-metadata">
+          <li><strong>Rights:</strong> Free to use images</li>
+          <li><strong>Event:</strong> Scotland's Finest Woods Awards 2024</li>
+          <li><strong>Venue:</strong> Scottish Parliament</li>
+          <li><strong>Date:</strong> 27th November 2024</li>
+          <li><strong>Credit:</strong> Picture by Phil Wilkinson</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</main>
+
+<style>
+  .woodland-container {
+    font-family: var(--font-stack);
+    color: var(--text-primary);
+    max-width: var(--size-content-4, 1140px);
+    margin-inline: auto;
+    padding: var(--size-5) var(--size-3);
+  }
+
+  /* Core Responsive Grid */
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-6);
+  }
+
+  .grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+
+  /* --- LEFT COLUMN LOGO CANVAS ALIGNMENT --- */
+  .logo-frame {
+    display: grid;
+    place-items: center; /* Perfect horizontal & vertical alignment */
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+  }
+
+  .logo-frame img {
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Prevents logo from exploding on ultra-wide viewports */
+    object-fit: contain;
+    display: block;
+  }
+
+  /* --- RIGHT COLUMN CONTENT TYPOGRAPHY --- */
+  .recognition-text h3 {
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-7);
+    color: var(--text-primary);
+    margin-bottom: var(--size-2);
+    line-height: var(--font-lineheight-1);
+  }
+
+  .award-lead {
+    font-size: var(--font-size-3);
+    line-height: var(--font-lineheight-3);
+    color: light-dark(var(--gray-12), var(--gray-4));
+    margin-bottom: var(--size-2);
+  }
+
+  .award-link a {
+    color: var(--brand, #107c65);
+    text-decoration: underline;
+    font-weight: var(--font-weight-5);
+  }
+
+  /* Winner Content Container Split */
+  .winner-container {
+    border-top: 1px solid var(--surface-3, #ccc);
+    padding-top: var(--size-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3);
+  }
+
+  .winner-title {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-6);
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-2, 6px);
+    box-shadow: var(--shadow-2);
+    display: block;
+  }
+
+  /* Clean Nested Metadata Bullet Tracking lines */
+  .micro-metadata {
+    margin: 0;
+    padding-inline-start: var(--size-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+  }
+
+  .micro-metadata li {
+    font-size: var(--font-size-1);
+    color: var(--text-muted);
+    line-height: var(--font-lineheight-2);
+  }
+
+  /* Desktop View Layout Transition */
+  @media (min-width: 48em) {
+    /* 768px */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr; /* Balance weight shifts to the logo side */
+      gap: var(--size-8);
+      align-items: center; /* Keeps both tracks vertically locked to their centrelines */
+    }
+
+    .logo-frame {
+      min-height: auto; /* Hands structural height computation back to the text column parent */
+    }
+  }
+</style>
