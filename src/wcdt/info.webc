@@ -1,0 +1,174 @@
+---
+title: Westmuir Trust
+description: To preserve, restore and improve the environment in the area.
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "westmuir trust"
+inContextNav: true
+---
+
+<main class="trust-container breakout">
+  <!-- Header Block -->
+  <header class="main-header">
+    <h1 class="ui-h2">Westmuir Community Development Trust</h1>
+    <p class="intro-text">
+      Is the name of the umbrella charity that looks after the key communal
+      areas of the Village. 5 Local residents are trustees that manage the
+      projects, fundraising and provide annual reports to Scotland's Charity
+      Commission.
+    </p>
+  </header>
+
+  <div class="content-grid">
+    <div class="grid-column">
+      <!-- History: Standard editorial paragraphs flow beautifully around the badge -->
+      <trust-card icon="history_edu" title="History of the WCDT">
+        <p>
+          Over 25 years ago, a group of villagers formed the Trust & then were
+          successful in their application for a substantial grant to develop the
+          woodland into an area of an accessible network of paths...
+        </p>
+        <p>
+          Subsequent grants made sure the paths were developed to be accessible
+          for all users.
+        </p>
+      </trust-card>
+
+      <!-- Fundraising: Contains a <ul> block, so we use layout="split" to keep bullets crisp and full width -->
+      <trust-card
+        icon="volunteer_activism"
+        title="Fundraising"
+        lead="We raise funds in 2 ways:"
+        layout="split"
+      >
+        <ul class="clean-list">
+          <li>
+            <strong>The Christmas Raffle</strong> relies on residents to donate
+            items for the gift hampers & sell tickets to the surrounding
+            community—the income pays for running costs like insurance.
+          </li>
+          <li>
+            <strong>Grants</strong> applied for are usually for specified
+            projects - e.g., path improvement and benches/seating areas.
+          </li>
+        </ul>
+      </trust-card>
+
+      <!-- Website & Socials: Short paragraph, fits the standard float shape nicely -->
+      <trust-card icon="devices" title="Website & Social Media">
+        <p>
+          The website was set up to give us a central place to access
+          information about Westmuir and communicate any fundraising events and
+          recruit volunteers for community projects.
+        </p>
+      </trust-card>
+    </div>
+    <div class="grid-column">
+      <!-- Woodland: Features the subtle accent design variation + full-width list items underneath the badge -->
+      <trust-card
+        icon="forest"
+        title="Westmuir Woodland"
+        layout="split"
+        accent="true"
+      >
+        <p>
+          Has been a wonderful space for everyone to access and enjoy the peace,
+          tranquility, and biodiversity on offer - both flora and fauna.
+        </p>
+        <p>
+          <strong>Scotland's Finest Wood:</strong> Awarded in the small
+          community woodland category - a huge achievement due to the quality of
+          the other woodlands in the category.
+        </p>
+        <p>
+          <strong>Angus Local Nature Conservation Site:</strong> Designated due
+          to our unique habitat and biodiversity.
+        </p>
+      </trust-card>
+
+      <!-- Volunteers: Standard editorial description wraps smoothly below -->
+      <trust-card icon="diversity_3" title="Volunteers">
+        <p>
+          Volunteers are what makes everything happen, from fundraising, to
+          creating content on socials & website, to being a trustee or helping
+          out on various projects, we are always looking for your skills to
+          support the village and the communal areas to develop for future
+          generations.
+        </p>
+      </trust-card>
+    </div>
+  </div>
+</main>
+
+<style>
+  .trust-container {
+    font-family: var(--font-stack);
+    color: var(--text-primary);
+    max-width: var(--size-content-4, 1140px); /* Open Props max-width scale */
+    margin-inline: auto;
+    padding: var(--size-5) var(--size-3); /* fluid padding scale */
+  }
+
+  /* Header */
+  .main-header {
+    text-align: center;
+    margin-bottom: var(--size-7);
+  }
+
+  .main-header h1 {
+    text-transform: uppercase;
+    letter-spacing: var(--font-letterspacing-3, 0.05em);
+    color: var(--text-primary);
+    margin-bottom: var(--size-2);
+    max-inline-size: var(--size-content-3, 75ch);
+  }
+
+  .intro-text {
+    font-size: var(--font-size-2); /* Open Props Typography scale */
+    line-height: var(--font-lineheight-3);
+    max-width: var(--size-content-3);
+    margin-inline: auto;
+    color: light-dark(#4a5552, #9ec9be);
+  }
+
+  /* Grid Layout: Stacked for Mobile, Dual for Desktop */
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+
+  .grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+
+  /* --- CLEAN LIST FORMATTING FIX --- */
+  .clean-list {
+    margin: 0;
+    padding-inline-start: var(
+      --size-4
+    ); /* Nicely indented list tracking marker */
+    display: flex;
+    flex-direction: column;
+    gap: var(
+      --size-3
+    ); /* Perfectly spaces list item blocks using the system token */
+  }
+
+  .clean-list li {
+    line-height: var(--font-lineheight-3);
+    color: var(--local-card-body);
+  }
+
+  /* Desktop View Overrides */
+  @media (min-width: 48em) {
+    /* 768px */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--size-7);
+      align-items: start;
+    }
+  }
+</style>

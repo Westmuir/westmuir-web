@@ -1,0 +1,162 @@
+<section
+  :class="`info-card ${accent ? 'accent-card' : ''} ${layout === 'split' ? 'column-split' : 'flow-float'}`"
+>
+  <!-- PATTERN A: The Modern Editorial Float Variant -->
+  <template webc:type="11ty" 11ty:type="liquid" webc:nokeep>
+    {% if layout != 'split' %}
+    <div class="card-icon">
+      <span class="material-symbols-outlined" aria-hidden="true"
+        >{{ icon }}</span
+      >
+    </div>
+    <h2>{{ title }}</h2>
+    <slot></slot>
+    {% endif %}
+  </template>
+
+  <!-- PATTERN B: The Structural Split Layout Variant (Handles Lists Flawlessly) -->
+  <template webc:type="11ty" 11ty:type="liquid" webc:nokeep>
+    {% if layout == 'split' %}
+    <div class="card-hero-row">
+      <div class="card-icon">
+        <span class="material-symbols-outlined" aria-hidden="true"
+          >{{ icon }}</span
+        >
+      </div>
+      <div class="card-hero-text">
+        <h2>{{ title }}</h2>
+        <p class="sub-lead" webc:if="lead">{{ lead }}</p>
+      </div>
+    </div>
+    <div class="card-extended-content">
+      <slot></slot>
+    </div>
+    {% endif %}
+  </template>
+</section>
+
+<style webc:scoped>
+  :host {
+    --local-trust-green: light-dark(#107c65, #149b7e);
+    --local-badge-text: light-dark(#ffffff, #0d1513);
+    --local-card-bg: var(--surface-default, light-dark(#ffffff, #1e2926));
+    --local-accent-bg-start: light-dark(#f2f7f5, #212b29);
+    --local-accent-bg-end: light-dark(#e6eff1, #33413e);
+
+    --local-card-title: var(--text-primary);
+    --local-card-body: var(--text-muted);
+  }
+
+  /* --- Base Shared Card Shell Architecture --- */
+  .info-card {
+    background-color: var(--local-card-bg);
+    border-radius: 8px;
+    padding: 1.75rem;
+    box-shadow: var(--shadow-2, 0 4px 6px -1px rgba(0, 0, 0, 0.05));
+    border-top: 4px solid var(--local-trust-green);
+  }
+
+  .accent-card {
+    background: linear-gradient(
+      to bottom right,
+      var(--local-accent-bg-start),
+      var(--local-accent-bg-end)
+    );
+    border-left: 5px solid var(--local-trust-green);
+    border-top: none;
+    box-shadow: var(--shadow-3, 0 10px 15px -3px rgba(0, 0, 0, 0.08));
+  }
+
+  /* --- The Icon Badge Block Styling --- */
+  .card-icon {
+    background-color: var(--local-trust-green);
+    color: var(--local-badge-text);
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: var(--radius-3, 12px);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem auto; /* Default mobile centered alignment */
+  }
+
+  .card-icon .material-symbols-outlined {
+    font-size: 4.5rem;
+    line-height: 1;
+    display: block;
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 300,
+      "GRAD" 0,
+      "opsz" 48;
+  }
+
+  /* --- Typography Sizing Pass --- */
+  .info-card h2 {
+    color: var(--local-card-title);
+    margin: 0 0 0.75rem 0;
+    font-size: 1.5rem;
+  }
+
+  .info-card p,
+  .info-card ul {
+    color: var(--local-card-body);
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+  }
+
+  .info-card p:last-child,
+  .info-card ul:last-child {
+    margin-bottom: 0;
+  }
+
+  .sub-lead {
+    font-weight: 600;
+  }
+
+  /* --- VARIANT 1 STYLE ENGINE: Pure Editorial Float --- */
+  @media (min-width: 48em) {
+    .flow-float .card-icon {
+      float: left;
+      margin: 0 1.75rem 0.75rem 0;
+      shape-outside: margin-box;
+    }
+
+    .flow-float::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  /* --- VARIANT 2 STYLE ENGINE: Structural Layout Split (Safe for Lists) --- */
+  .column-split {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .card-hero-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (min-width: 48em) {
+    .card-hero-row {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .column-split .card-icon {
+      margin: 0; /* Clear mobile margin behavior */
+    }
+  }
+
+  .card-extended-content {
+    width: 100%;
+  }
+</style>

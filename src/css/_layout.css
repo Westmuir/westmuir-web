@@ -117,10 +117,10 @@
 
     grid-template-columns:
       [full-width-start] minmax(var(--size-5), 1fr)
-      [breakout-start] minmax(0, var(--size-10))
+      [breakout-start] minmax(0, var(--size-11))
       [content-start] minmax(0, var(--max-inline-size))
       [content-end]
-      minmax(0, var(--size-10)) [breakout-end]
+      minmax(0, var(--size-11)) [breakout-end]
       minmax(var(--size-5), 1fr) [full-width-end];
 
     @media (max-width: 600px) {
