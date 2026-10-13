@@ -1,0 +1,116 @@
+---
+title: Westmuir Woodland
+description: Scotland's small woodland winner 2024.
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "Small woodland winner"
+inContextNav: true
+---
+
+<main class="woodland-container breakout">
+  <div class="content-grid">
+    <div class="grid-column">
+      <img
+        src="/wcdt/woodland-logo.png"
+        alt="Woodland logo"
+        width="800"
+        sizes="(min-width: 60rem) 45ch, 90vw"
+      />
+    </div>
+    <div class="grid-column">
+      <div class="recognition-text">
+        <h3>Westmuir Woodland Recognition</h3>
+        <div class="extra-info">
+          <p>
+            Scotland Finest Wood Award 2024 in the Small community woodland
+            category.
+          </p>
+          <p><a href="https://www.sfwa.co.uk/">https://www.sfwa.co.uk/</a></p>
+        </div>
+      </div>
+
+      <div class="winner-container">
+        <p>Community Woodland Group - Small Group Winner</p>
+        <img
+          src="/woodland/PW_SFWA-24_CWA-Small-Winner_Westmuir_Ann-W-with-CabSec-600x402.png"
+          alt="Woodland logo"
+          width="800"
+          sizes="(min-width: 60rem) 45ch, 90vw"
+        />
+        <ul>
+          <li>Free to use images</li>
+          <li>Scotland's Finest Woods Awards 2024</li>
+          <li>Scottish Parliament</li>
+          <li>27th November 2024</li>
+          <li>Picture by Phil Wilkinson</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+<style>
+  .trust-container {
+    font-family: var(--font-stack);
+    color: var(--text-primary);
+    max-width: var(--size-content-4, 1140px); /* Open Props max-width scale */
+    margin-inline: auto;
+    padding: var(--size-5) var(--size-3); /* fluid padding scale */
+  }
+
+  /* Header */
+  .main-header {
+    text-align: center;
+    margin-bottom: var(--size-7);
+  }
+
+  .main-header h1 {
+    text-transform: uppercase;
+    letter-spacing: var(--font-letterspacing-3, 0.05em);
+    color: var(--text-primary);
+    margin-bottom: var(--size-2);
+    max-inline-size: var(--size-content-3, 75ch);
+  }
+
+  .intro-text {
+    font-size: var(--font-size-2); /* Open Props Typography scale */
+    line-height: var(--font-lineheight-3);
+    max-width: var(--size-content-3);
+    margin-inline: auto;
+    color: light-dark(#4a5552, #9ec9be);
+  }
+
+  /* Grid Layout: Stacked for Mobile, Dual for Desktop */
+  .content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+
+  .grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+  /* Desktop View Overrides */
+  @media (min-width: 48em) {
+    /* 768px */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--size-7);
+      align-items: start;
+    }
+  }
+
+  .recognition-text {
+    h3 {
+      font-size: var(--font-size-5);
+    }
+    .extra-info {
+      p {
+        color: light-dark(var(--gray-12), var(--gray-4));
+
+        font-size: var(--font-size-4);
+      }
+    }
+  }
+</style>
