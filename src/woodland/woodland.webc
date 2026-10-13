@@ -105,6 +105,16 @@ headerAlt: "woodland walkway"
   <h3>Woodland Scenes - 2026</h3>
 </image-lightbox-gallery>
 
+<h3 class="breakout">Hedge laying - April 2026</h3>
+
+<image-lightbox-gallery
+  class="breakout image-gallery-section"
+  :collection="$data.galleries['woodland-hedge-laying']"
+  layout="strip"
+>
+  <h3>Hedge laying - April 2026</h3>
+</image-lightbox-gallery>
+
 <style>
   editorial-block {
     --pane-bg: hsl(47.1, 83.5%, 59.6%);
