@@ -8,23 +8,23 @@ inContextNav: true
 
 <main class="woodland-container breakout">
   <div class="content-grid">
-    <!-- Left Column: The Logo Canvas -->
+    <!-- Left Column: Centred Logo Frame (PNG) -->
     <div class="grid-column logo-frame">
       <img
         src="/wcdt/woodland-logo.png"
-        alt="Westmuir Community Woodland Angus Logo"
+        alt="Westmuir Community Woodland Angus"
         sizes="(min-width: 48em) 50vw, 100vw"
         loading="eager"
       />
     </div>
 
-    <!-- Right Column: Text & Recognition Info -->
+    <!-- Right Column: Recognition Typography Details -->
     <div class="grid-column info-canvas">
       <header class="recognition-text">
-        <h1 class="ui-h2">Westmuir Woodland Recognition</h1>
+        <h3>Westmuir Woodland Recognition</h3>
         <div class="extra-info">
           <p class="award-lead">
-            Scotland's Finest Wood Award 2024 in the Small community woodland
+            Scotland Finest Wood Award 2024 in the Small community woodland
             category.
           </p>
           <p class="award-link">
@@ -35,10 +35,11 @@ inContextNav: true
         </div>
       </header>
 
+      <!-- Award Presentation Photo Block -->
       <section class="winner-container">
-        <h2 class="winner-title">
+        <p class="winner-title">
           Community Woodland Group - Small Group Winner
-        </h2>
+        </p>
         <div class="photo-frame">
           <img
             src="/woodland/PW_SFWA-24_CWA-Small-Winner_Westmuir_Ann-W-with-CabSec-600x402.png"
@@ -47,6 +48,8 @@ inContextNav: true
             loading="lazy"
           />
         </div>
+
+        <!-- Metadata List -->
         <ul class="clean-list micro-metadata">
           <li><strong>Rights:</strong> Free to use images</li>
           <li><strong>Event:</strong> Scotland's Finest Woods Awards 2024</li>
@@ -68,49 +71,49 @@ inContextNav: true
     padding: var(--size-5) var(--size-3);
   }
 
-  /* Core Layout Grid System */
+  /* Core Responsive Grid */
   .content-grid {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-7);
-  }
-
-  .grid-column {
     display: flex;
     flex-direction: column;
     gap: var(--size-6);
   }
 
-  /* --- LEFT COLUMN LOGO CANVAS MAGIC --- */
+  .grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+
+  /* --- LEFT COLUMN LOGO CANVAS ALIGNMENT --- */
   .logo-frame {
     display: grid;
-    place-items: center; /* Centers horizontally and vertically */
+    place-items: center; /* Perfect horizontal & vertical alignment */
     width: 100%;
     height: 100%;
-    min-height: 300px; /* Prevents collapsing on smaller mobile portrait views */
+    min-height: 250px;
   }
 
   .logo-frame img {
     width: 100%;
     height: auto;
-    max-width: 550px; /* Limits size on ultra-wide screens to prevent pixelation */
+    max-width: 500px; /* Prevents logo from exploding on ultra-wide viewports */
     object-fit: contain;
     display: block;
   }
 
-  /* --- RIGHT COLUMN CONTENT FORMATTING --- */
-  .recognition-text h1 {
+  /* --- RIGHT COLUMN CONTENT TYPOGRAPHY --- */
+  .recognition-text h3 {
     font-size: var(--font-size-5);
     font-weight: var(--font-weight-7);
     color: var(--text-primary);
-    margin-bottom: var(--size-3);
+    margin-bottom: var(--size-2);
     line-height: var(--font-lineheight-1);
   }
 
   .award-lead {
     font-size: var(--font-size-3);
     line-height: var(--font-lineheight-3);
-    color: var(--text-muted);
+    color: light-dark(var(--gray-12), var(--gray-4));
     margin-bottom: var(--size-2);
   }
 
@@ -120,13 +123,13 @@ inContextNav: true
     font-weight: var(--font-weight-5);
   }
 
-  /* Winner Feature Block */
+  /* Winner Content Container Split */
   .winner-container {
     border-top: 1px solid var(--surface-3, #ccc);
     padding-top: var(--size-5);
     display: flex;
     flex-direction: column;
-    gap: var(--size-4);
+    gap: var(--size-3);
   }
 
   .winner-title {
@@ -144,7 +147,7 @@ inContextNav: true
     display: block;
   }
 
-  /* Micro Metadata List Tracking */
+  /* Clean Nested Metadata Bullet Tracking lines */
   .micro-metadata {
     margin: 0;
     padding-inline-start: var(--size-4);
@@ -159,18 +162,18 @@ inContextNav: true
     line-height: var(--font-lineheight-2);
   }
 
-  /* Desktop View Grid Upgrades */
+  /* Desktop View Layout Transition */
   @media (min-width: 48em) {
     /* 768px */
     .content-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr; /* Gives the logo side slightly more balance track weight */
+      grid-template-columns: 1.1fr 0.9fr; /* Balance weight shifts to the logo side */
       gap: var(--size-8);
-      align-items: center; /* Locks the logo and text tracking center lines together */
+      align-items: center; /* Keeps both tracks vertically locked to their centrelines */
     }
 
     .logo-frame {
-      min-height: auto; /* Lets the height map dynamically based on text column content height */
+      min-height: auto; /* Hands structural height computation back to the text column parent */
     }
   }
 </style>
