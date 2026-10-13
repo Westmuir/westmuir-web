@@ -8,109 +8,169 @@ inContextNav: true
 
 <main class="woodland-container breakout">
   <div class="content-grid">
-    <div class="grid-column">
+    <!-- Left Column: The Logo Canvas -->
+    <div class="grid-column logo-frame">
       <img
         src="/wcdt/woodland-logo.png"
-        alt="Woodland logo"
-        width="800"
-        sizes="(min-width: 60rem) 45ch, 90vw"
+        alt="Westmuir Community Woodland Angus Logo"
+        sizes="(min-width: 48em) 50vw, 100vw"
+        loading="eager"
       />
     </div>
-    <div class="grid-column">
-      <div class="recognition-text">
-        <h3>Westmuir Woodland Recognition</h3>
+
+    <!-- Right Column: Text & Recognition Info -->
+    <div class="grid-column info-canvas">
+      <header class="recognition-text">
+        <h1 class="ui-h2">Westmuir Woodland Recognition</h1>
         <div class="extra-info">
-          <p>
-            Scotland Finest Wood Award 2024 in the Small community woodland
+          <p class="award-lead">
+            Scotland's Finest Wood Award 2024 in the Small community woodland
             category.
           </p>
-          <p><a href="https://www.sfwa.co.uk/">https://www.sfwa.co.uk/</a></p>
+          <p class="award-link">
+            <a href="https://sfwa.co.uk" target="_blank" rel="noopener"
+              >https://sfwa.co.uk</a
+            >
+          </p>
         </div>
-      </div>
+      </header>
 
-      <div class="winner-container">
-        <p>Community Woodland Group - Small Group Winner</p>
-        <img
-          src="/woodland/PW_SFWA-24_CWA-Small-Winner_Westmuir_Ann-W-with-CabSec-600x402.png"
-          alt="Woodland logo"
-          width="800"
-          sizes="(min-width: 60rem) 45ch, 90vw"
-        />
-        <ul>
-          <li>Free to use images</li>
-          <li>Scotland's Finest Woods Awards 2024</li>
-          <li>Scottish Parliament</li>
-          <li>27th November 2024</li>
-          <li>Picture by Phil Wilkinson</li>
+      <section class="winner-container">
+        <h2 class="winner-title">
+          Community Woodland Group - Small Group Winner
+        </h2>
+        <div class="photo-frame">
+          <img
+            src="/woodland/PW_SFWA-24_CWA-Small-Winner_Westmuir_Ann-W-with-CabSec-600x402.png"
+            alt="Ann W receiving Scotland's Finest Woods Award at the Scottish Parliament"
+            sizes="(min-width: 48em) 50vw, 100vw"
+            loading="lazy"
+          />
+        </div>
+        <ul class="clean-list micro-metadata">
+          <li><strong>Rights:</strong> Free to use images</li>
+          <li><strong>Event:</strong> Scotland's Finest Woods Awards 2024</li>
+          <li><strong>Venue:</strong> Scottish Parliament</li>
+          <li><strong>Date:</strong> 27th November 2024</li>
+          <li><strong>Credit:</strong> Picture by Phil Wilkinson</li>
         </ul>
-      </div>
+      </section>
     </div>
   </div>
 </main>
+
 <style>
-  .trust-container {
+  .woodland-container {
     font-family: var(--font-stack);
     color: var(--text-primary);
-    max-width: var(--size-content-4, 1140px); /* Open Props max-width scale */
+    max-width: var(--size-content-4, 1140px);
     margin-inline: auto;
-    padding: var(--size-5) var(--size-3); /* fluid padding scale */
+    padding: var(--size-5) var(--size-3);
   }
 
-  /* Header */
-  .main-header {
-    text-align: center;
-    margin-bottom: var(--size-7);
-  }
-
-  .main-header h1 {
-    text-transform: uppercase;
-    letter-spacing: var(--font-letterspacing-3, 0.05em);
-    color: var(--text-primary);
-    margin-bottom: var(--size-2);
-    max-inline-size: var(--size-content-3, 75ch);
-  }
-
-  .intro-text {
-    font-size: var(--font-size-2); /* Open Props Typography scale */
-    line-height: var(--font-lineheight-3);
-    max-width: var(--size-content-3);
-    margin-inline: auto;
-    color: light-dark(#4a5552, #9ec9be);
-  }
-
-  /* Grid Layout: Stacked for Mobile, Dual for Desktop */
+  /* Core Layout Grid System */
   .content-grid {
     display: flex;
     flex-direction: column;
-    gap: var(--size-5);
+    gap: var(--size-7);
   }
 
   .grid-column {
     display: flex;
     flex-direction: column;
-    gap: var(--size-5);
+    gap: var(--size-6);
   }
-  /* Desktop View Overrides */
+
+  /* --- LEFT COLUMN LOGO CANVAS MAGIC --- */
+  .logo-frame {
+    display: grid;
+    place-items: center; /* Centers horizontally and vertically */
+    width: 100%;
+    height: 100%;
+    min-height: 300px; /* Prevents collapsing on smaller mobile portrait views */
+  }
+
+  .logo-frame img {
+    width: 100%;
+    height: auto;
+    max-width: 550px; /* Limits size on ultra-wide screens to prevent pixelation */
+    object-fit: contain;
+    display: block;
+  }
+
+  /* --- RIGHT COLUMN CONTENT FORMATTING --- */
+  .recognition-text h1 {
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-7);
+    color: var(--text-primary);
+    margin-bottom: var(--size-3);
+    line-height: var(--font-lineheight-1);
+  }
+
+  .award-lead {
+    font-size: var(--font-size-3);
+    line-height: var(--font-lineheight-3);
+    color: var(--text-muted);
+    margin-bottom: var(--size-2);
+  }
+
+  .award-link a {
+    color: var(--brand, #107c65);
+    text-decoration: underline;
+    font-weight: var(--font-weight-5);
+  }
+
+  /* Winner Feature Block */
+  .winner-container {
+    border-top: 1px solid var(--surface-3, #ccc);
+    padding-top: var(--size-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-4);
+  }
+
+  .winner-title {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-6);
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-2, 6px);
+    box-shadow: var(--shadow-2);
+    display: block;
+  }
+
+  /* Micro Metadata List Tracking */
+  .micro-metadata {
+    margin: 0;
+    padding-inline-start: var(--size-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+  }
+
+  .micro-metadata li {
+    font-size: var(--font-size-1);
+    color: var(--text-muted);
+    line-height: var(--font-lineheight-2);
+  }
+
+  /* Desktop View Grid Upgrades */
   @media (min-width: 48em) {
     /* 768px */
     .content-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--size-7);
-      align-items: start;
+      grid-template-columns: 1.1fr 0.9fr; /* Gives the logo side slightly more balance track weight */
+      gap: var(--size-8);
+      align-items: center; /* Locks the logo and text tracking center lines together */
     }
-  }
 
-  .recognition-text {
-    h3 {
-      font-size: var(--font-size-5);
-    }
-    .extra-info {
-      p {
-        color: light-dark(var(--gray-12), var(--gray-4));
-
-        font-size: var(--font-size-4);
-      }
+    .logo-frame {
+      min-height: auto; /* Lets the height map dynamically based on text column content height */
     }
   }
 </style>
