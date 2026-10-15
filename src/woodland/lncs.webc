@@ -1,0 +1,352 @@
+---
+title: Local Conservation Nature Site
+description: Market of Muir LCNS
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "market of muir"
+inContextNav: true
+---
+
+<!-- Clean, text-layered Hero Box -->
+<section class="hero-header full-width">
+  <div class="hero-bg-wrapper">
+    <img src="/woodland/leaves.avif" alt="leaves bkg" width="1836" />
+  </div>
+  <!-- Wrap text in a layout alignment container -->
+  <div class="hero-content">
+    <p class="site-category">Local Conservation Nature Site</p>
+    <h2>Biodiversity site: Market of Muir</h2>
+  </div>
+</section>
+
+<!-- Combined Layout Box for Description, Metrics, and Boundary Map -->
+<div class="breakout grid-main-layout">
+  <!-- Left Side Column: Text Narrative -->
+  <section class="narrative">
+    <h2>Site Description</h2>
+    <p>
+      Market of Muir is situated to the west of Westmuir and about 2km west of
+      Kirriemuir in a predominantly agricultural area of lowland Angus.
+      Extending to 31.6ha, the site is divided into three parts by two roads
+      with the majority falling north of the A926 which is further divided by a
+      minor road.
+    </p>
+    <p>
+      The principal habitat is semi-natural broadleaved woodland which is
+      considered <strong>locally rare</strong> and a
+      <strong>UK Priority Habitat</strong>. Most of the site is dominated by
+      birch woodland, some of which has been felled and replaced by Sitka
+      spruce. Birch scrub separates the woodland from open areas containing
+      remnants of wet and dry heath, and acid grassland communities.
+    </p>
+    <p>
+      To the east of the site is an area of wet birch woodland and wet heath
+      which is managed as <strong>Westmuir Community Woodland</strong>. This
+      part of the site contains a formal path network.
+    </p>
+  </section>
+
+  <!-- Right Side Column: Boundary Data Card Stack & Map Display -->
+  <div class="side-panel-stack">
+    <section class="lncs-metrics">
+      <h3>Site Boundary</h3>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="label">Grid Reference</span>
+          <span class="value">NO362525</span>
+        </div>
+        <div class="metric-card">
+          <span class="label">Total Area</span>
+          <span class="value">31.6 ha</span>
+        </div>
+        <div class="metric-card">
+          <span class="label">Elevation</span>
+          <span class="value">100 - 160m</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="map-wrapper">
+      <img
+        src="/woodland/market-of-muir.avif"
+        alt="market of muir boundary"
+        width="1400"
+      />
+    </aside>
+  </div>
+</div>
+
+<!-- 3. ECOLOGY DATA: Standard content view, equal splitting -->
+<section class="grid-2-col">
+  <div class="data-block habitat-block">
+    <h3>Habitats Present</h3>
+    <ul class="bullet-list">
+      <li>Semi-natural broadleaved woodland</li>
+      <li>Broadleaved & Coniferous plantation</li>
+      <li>Continuous & Scattered scrub</li>
+      <li>Marshy grassland & Acid grassland mosaic</li>
+      <li>Dry & Wet dwarf shrub heath</li>
+      <li>Open running water</li>
+    </ul>
+  </div>
+
+  <div class="data-block species-block">
+    <h3>Species of Interest</h3>
+    <p class="intro-text">
+      A range of vascular plants, including locally rare varieties and Ancient
+      Woodland Indicators:
+    </p>
+    <ul class="bullet-list special-species">
+      <li>
+        <strong>Lysimachia europaea</strong>
+        <span class="common-name">(Chickweed wintergreen)</span>
+      </li>
+      <li>
+        <strong>Pyrola minor</strong>
+        <span class="common-name">(Common wintergreen)</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. REGIONAL NETWORKS: Full width visual segment separating sections -->
+<section class="full-width connectivity-banner">
+  <div class="connectivity-content">
+    <h2>Connectivity & Regional Networks</h2>
+    <p>
+      Market of Muir forms part of the Strathmore B-Lines network (Dunkeld –
+      Montrose), offering high value as part of a habitat network connected in a
+      wider context.
+    </p>
+
+    <div class="grid-4-col text-center">
+      <div class="network-badge"><strong>Strathmore B-lines</strong> Link</div>
+      <div class="network-badge">
+        <strong>Egno Moss SSSI</strong> Contiguous
+      </div>
+      <div class="network-badge">
+        <strong>Red Loch LNCS</strong> Connected via SSSI
+      </div>
+      <div class="network-badge">
+        <strong>Loch of Kinnordy</strong> 0.83km away
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Fixed Responsive Hero Configuration */
+  .hero-header {
+    position: relative;
+    min-height: 14rem;
+    max-height: 18rem;
+    overflow: hidden;
+    background-color: var(--primary, #1e3a2f);
+
+    /* NEW: Force hero to inherit the main grid tracks */
+    display: grid;
+    grid-template-columns: inherit;
+    align-items: center;
+  }
+
+  .hero-bg-wrapper {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .hero-bg-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.45);
+  }
+
+  /* 1. Set the mobile fallback layout track by default */
+  .hero-header .hero-content {
+    grid-column: content-start / content-end; /* Natively scales safely to 100% on phones */
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding-inline: var(
+      --size-4,
+      1rem
+    ); /* Prevents the lettering from touching screen edges */
+  }
+
+  .hero-header .site-category {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  .hero-header h2 {
+    font-size: clamp(
+      1.3rem,
+      5vi,
+      2.5rem
+    ); /* Scaled down base slightly for thin phone frames */
+    margin: 0.2rem 0 0 0;
+    color: white;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  /* Layout Structure Containers */
+  .grid-main-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--size-7, 40px);
+    margin-block: var(--size-6);
+  }
+
+  .side-panel-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-5, 20px);
+  }
+
+  .lncs-metrics h3 {
+    margin-block-end: var(--size-3);
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--size-4, 16px);
+    width: 100%;
+  }
+
+  /*
+    OPUI THEMED METRIC CARD
+    Flips background and dynamically swaps internal typography colors for perfect contrast
+  */
+  .metric-card {
+    background: light-dark(var(--gray-3), var(--gray-11));
+    color: light-dark(var(--gray-9), var(--gray-2));
+    padding: var(--size-4);
+    border-radius: var(--radius-3, 8px);
+    border-left: 4px solid var(--green-7, #2e5a44);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .metric-card .label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    color: light-dark(var(--gray-8), var(--gray-4));
+  }
+
+  .metric-card .value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: light-dark(var(--green-8), var(--green-8));
+    white-space: nowrap;
+  }
+
+  /* Map Container Layout Details */
+  .map-wrapper {
+    border-radius: var(--radius-3, 8px);
+    overflow: hidden;
+    border: 1px solid light-dark(var(--gray-3), var(--gray-9));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  }
+
+  .map-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Ecology Data and General Grid Components */
+  .grid-2-col,
+  .grid-4-col {
+    display: grid;
+    gap: var(--size-5, 20px);
+    grid-template-columns: 1fr;
+  }
+
+  /*
+    OPUI THEMED DATA BLOCK
+    Uses step surface shifts and matches border accents to the themes
+  */
+  .data-block {
+    padding: var(--size-5);
+    border-radius: var(--radius-3, 8px);
+    background: light-dark(var(--gray-3), var(--gray-12));
+    color: light-dark(var(--gray-9), var(--gray-2));
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid light-dark(var(--gray-2), var(--gray-11));
+  }
+
+  .habitat-block {
+    border-top: 4px solid var(--green-6, #4a7c59);
+  }
+  .species-block {
+    border-top: 4px solid var(--blue-6, #3d85c6);
+  }
+
+  .bullet-list {
+    padding-left: var(--size-5);
+  }
+  .bullet-list li {
+    margin-block-end: 0.5em;
+  }
+  .special-species li {
+    list-style-type: "🌱 ";
+  }
+
+  .common-name {
+    font-style: italic;
+    color: light-dark(var(--gray-6), var(--gray-4));
+  }
+
+  /* Full-width Regional Connectivity Elements */
+  .connectivity-banner {
+    background-color: var(--green-11, #1e3a2f);
+    color: white;
+    padding-block: var(--size-7);
+    display: grid;
+    grid-template-columns: inherit;
+  }
+  .connectivity-content {
+    grid-column: content-start / content-end;
+  }
+  .connectivity-banner h2 {
+    color: white;
+  }
+
+  .network-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: var(--size-3);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+
+  /* 2. Desktop Dynamic Scaling Viewport Promotes */
+  @media (min-width: 768px) {
+    /* Safe to expand typography to breakout width on wider viewports */
+    .hero-header .hero-content {
+      grid-column: breakout-start / breakout-end;
+      padding-inline: 0; /* Remove internal padding once layout boundaries expand */
+    }
+
+    .grid-main-layout {
+      grid-template-columns: 5fr 4fr;
+      align-items: start;
+    }
+    .grid-2-col {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-4-col {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
