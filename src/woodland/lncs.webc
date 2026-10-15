@@ -133,6 +133,41 @@ inContextNav: true
   </div>
 </section>
 
+<section class="full-width logo-container-wrapper">
+  <div class="logo-grid">
+    <div class="logo-item">
+      <img
+        eleventy:ignore
+        src="/woodland/scottish-wildlife.svg"
+        alt="Scottish Wildlife Trust"
+      />
+    </div>
+    <div class="logo-item">
+      <img
+        src="/woodland/tayside-biodiversity.jpg"
+        alt="Tayside Biodiversity"
+      />
+    </div>
+    <div class="logo-item">
+      <img eleventy:ignore src="/woodland/nature-scot.svg" alt="NatureScot" />
+    </div>
+    <div class="logo-item">
+      <img
+        eleventy:ignore
+        src="/woodland/angus-council.svg"
+        alt="Angus Council"
+      />
+    </div>
+    <div class="logo-item">
+      <img
+        eleventy:ignore
+        src="/woodland/bsbi-logo-rgb.svg"
+        alt="Community Woodland"
+      />
+    </div>
+  </div>
+</section>
+
 <style>
   /* Fixed Responsive Hero Configuration */
   .hero-header {
@@ -348,5 +383,54 @@ inContextNav: true
     .grid-4-col {
       grid-template-columns: repeat(4, 1fr);
     }
+  }
+
+  .logo-container-wrapper {
+    background-color: var(--gray-2);
+    padding-block: 40px; /* Gives top and bottom breathing room before the next section */
+    border-radius: 8px; /* Optional: Softens the edges of the gray block */
+  }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+
+    /* Your exact sizing layout setup */
+    inline-size: 80%;
+    margin-inline: auto;
+
+    /* Pro-tip addition: Prevents columns from getting too cramped on tiny phones */
+    max-width: 1200px; /* Optional: Stops the logo bar from stretching infinitely on ultra-wide monitors */
+  }
+
+  /* For mobile devices, you can let it use more screen real estate if needed */
+  @media (max-width: 480px) {
+    .logo-grid {
+      inline-size: 90%; /* Bumps it up slightly on tiny screens so logos stay legible */
+    }
+  }
+
+  /* For tablets and larger screens (600px wide and up) */
+  @media (min-width: 600px) {
+    .logo-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* For desktops (900px wide and up) -> Clean row of 5 columns */
+  @media (min-width: 900px) {
+    .logo-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .logo-item img {
+    width: 100%;
+    height: auto;
+    max-height: 80px; /* Prevents taller logos from dominating the row */
+    object-fit: contain; /* Keeps the logos from stretching out of shape */
   }
 </style>
