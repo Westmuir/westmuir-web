@@ -8,7 +8,7 @@ headerAlt: "woodland walkway"
 <editorial-block
   class="breakoutX"
   align="right"
-  caption="A unique close-up of a forest fern."
+  caption="Westmuir Comunity Woodland"
 >
   <p>
     Big tussocks of moss, wet birch woodland dripping with lichen, common
@@ -27,12 +27,19 @@ headerAlt: "woodland walkway"
   </p>
 
   <!-- Explicitly pass your own image directly into the named slot -->
+  <!-- <img -->
+  <!--   slot="image" -->
+  <!--   :src="$data.page.url + '/woodland-park.avif'" -->
+  <!--   alt="Westmuir Community Woodland" -->
+  <!--   width="1980" -->
+  <!--   height="1213" -->
+  <!--   sizes="(min-width: 50rem) 35ch, 90vw" -->
+  <!-- /> -->
   <img
     slot="image"
-    :src="$data.page.url + '/woodland-park.avif'"
-    alt="Westmuir Community Woodland"
-    width="1980"
-    height="1213"
+    :src="$data.page.url + '../wcdt/woodland-logo.png'"
+    alt="Woodland logo"
+    width="800"
     sizes="(min-width: 50rem) 35ch, 90vw"
   />
 </editorial-block>
