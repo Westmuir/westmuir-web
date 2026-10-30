@@ -1,0 +1,271 @@
+---
+title: Westmuir Trust and Village Hall
+description: Welscome to Westmuir Trust and Village Hall
+headerImage: "/woodland/walkway-1980.avif"
+headerAlt: "woodland walkway"
+---
+
+<h1>Westmuir Welcomes You!</h1>
+
+<h2>About Us</h2>
+<p>
+  We are the Westmuir Community Development Trust that looks after the communal
+  areas in the Village &amp; set up this welcome leaflet to provide key info
+  that might be helpful for anyone newly arrived to Westmuir!
+</p>
+
+<div class="side-by-side">
+  <div class="green-circle-badge">
+    <div class="circle-line top-accent">westmuir.org.uk</div>
+    <div class="circle-line middle-sub">&amp; facebook page -</div>
+    <div class="circle-line main-title">Westmuir Village Life</div>
+    <div class="circle-line bottom-text">has more information</div>
+    <div class="circle-line bottom-sub">about what's going on!</div>
+  </div>
+
+  <div class="highlight-block">
+    <p>In Westmuir we have:</p>
+    <ul>
+      <li>Village Hall for events</li>
+      <li>Award winning Community Woodland</li>
+      <li>Path Network Walks</li>
+      <li>Village Garden Centre</li>
+      <li>Post Office</li>
+      <li>Defibrillator in the Phone Box</li>
+    </ul>
+
+    <p>In Kirriemuir you can find:</p>
+    <ul>
+      <li>Health Centre</li>
+      <li>Dental Practice</li>
+      <li>2 Pharmacies</li>
+      <li>Thrums Vets</li>
+      <li>Library</li>
+      <li>Lots of local shops that need our support</li>
+    </ul>
+  </div>
+</div>
+<editorial-block>
+  <p>
+    If you are interested in making a difference in your new community, we would
+    love to hear from you! All different types of skills are needed - please get
+    in touch!
+  </p>
+
+  <img
+    slot="image"
+    src="/wcdt/woodland-logo.png"
+    alt="Woodland logo"
+    width="800"
+    sizes="(min-width: 50rem) 35ch, 90vw"
+  />
+</editorial-block>
+
+<!-- Right Side Elements -->
+
+<p>
+  <a href="mailto:trust@westmuir.org.uk">trust@westmuir.org.uk</a>
+</p>
+
+<!-- Positioned bottom right logo container -->
+<div class="footer-logo-container">
+  <!-- Replace with your actual file path -->
+  <!-- <img src="your-logo.png" alt="Westmuir Trust Logo" /> -->
+</div>
+
+<style>
+  h1,
+  h2 {
+    color: #1b5e20;
+    /* Darker green header accent */
+    max-inline-size: 100%;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  /* Ensure links stand out cleanly */
+  a {
+    color: #2e7d32;
+    font-weight: bold;
+  }
+
+  .highlight-block {
+    border: 4px double black;
+    border-radius: var(--radius-2);
+    padding: var(--size-2);
+  }
+  /* ==========================================================================
+   2. LAYOUT WRAPPER & DECORATIVE WAVY EDGE
+   ========================================================================== */
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    padding-right: 20px;
+    /* Safe padding for mobile phone screens */
+  }
+
+  /* Only apply the wavy right-hand background edge on larger desktop screens */
+  @media (min-width: 900px) {
+    .page-wrapper::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      /* Width of the colored accent strip */
+      height: 100%;
+
+      /* The background color of your wavy right side margin */
+      background-color: #e8f5e9;
+      /* Light complementary green */
+
+      /* SVG mask pattern creates the clean vector wave shape */
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 20 100' preserveAspectRatio='none'%3E%3Cpath d='M20,0 C10,25 0,25 0,50 C0,75 10,75 20,100 Z' fill='black'/%3E%3C/svg%3E");
+      mask-size: 100% 120px;
+      mask-repeat: repeat-y;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' viewBox='0 0 20 100' preserveAspectRatio='none'%3E%3Cpath d='M20,0 C10,25 0,25 0,50 C0,75 10,75 20,100 Z' fill='black'/%3E%3C/svg%3E");
+      -webkit-mask-size: 100% 120px;
+      -webkit-mask-repeat: repeat-y;
+
+      z-index: -1;
+      /* Pushes layout layer behind your text contents */
+    }
+
+    .page-wrapper {
+      padding-right: 100px;
+      /* Safely pushes text grid clear of desktop wave graphics */
+    }
+  }
+
+  /* ==========================================================================
+   3. RESPONSIVE MAIN GRID
+   ========================================================================== */
+  .side-by-side {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Switches to side-by-side columns on screens wider than 768px (tablets/desktops) */
+  @media (min-width: 768px) {
+    .side-by-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+  }
+
+  /* ==========================================================================
+   4. GREEN CIRCLE BADGE & INTERNAL TYPOGRAPHY
+   ========================================================================== */
+  .green-circle-badge {
+    width: 280px;
+    height: 280px;
+    /* Prevents circle scaling from overflowing very tiny phone screen perimeters */
+    max-width: 90vw;
+    max-height: 90vw;
+    border-radius: 50%;
+
+    /* Defines your precise leaflet solid green background shade */
+    background-color: #cee8bdff;
+
+    padding: 35px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #222;
+
+    margin: 20px auto;
+    /* Centers badge when stacked inside columns on mobile screens */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .green-circle-badge {
+      margin: 20px 0;
+      /* Aligns circle nicely inside left desktop column layout */
+    }
+  }
+
+  /* Formatting line strings inside the green leaflet circle */
+  .circle-line {
+    width: 100%;
+    line-height: 1.2;
+    margin: 2px 0;
+  }
+
+  .top-accent {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #222;
+    margin-bottom: 4px;
+  }
+
+  .middle-sub {
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.9;
+  }
+
+  .main-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 4px 0 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 6px;
+  }
+
+  .bottom-text {
+    font-size: 0.95rem;
+    opacity: 0.95;
+  }
+
+  .bottom-sub {
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.85;
+  }
+
+  /* ==========================================================================
+   5. BOTTOM RIGHT PNG LOGO CONSTRAINTS
+   ========================================================================== */
+  .footer-logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background: #fafafa;
+  }
+
+  /* Relocates logo into position inside the wavy line grid on desktop screens */
+  @media (min-width: 900px) {
+    .footer-logo-container {
+      position: absolute;
+      bottom: 30px;
+      right: 110px;
+      padding: 0;
+      background: transparent;
+    }
+  }
+
+  .footer-logo-container img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+  }
+</style>
