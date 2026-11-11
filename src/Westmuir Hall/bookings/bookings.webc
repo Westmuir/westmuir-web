@@ -1,8 +1,12 @@
 ---
 title: "Hall Bookings - Westmuir Village"
+description: A comunity space for many activities.
+headerImage: "/wcdt/wcdt-banner.avif"
+headerAlt: "westmuir village"
+inContextNav: true
 ---
 
-<h1>Village Hall Hire</h1>
+<h1>Village Hall Diary</h1>
 <p>Check availability below and submit a request to hold a date.</p>
 
 <booking-system></booking-system>

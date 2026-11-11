@@ -3,6 +3,7 @@ import { html } from '../helpers/html.js';
 export async function onRequestGet(context) {
   const request = context.request;
   const db = context.env.village_hall;
+
   try {
     // Fetch both approved and tentative bookings
     const { results } = await db
@@ -10,19 +11,19 @@ export async function onRequestGet(context) {
       .all();
 
     if (!results || results.length === 0) {
-      return new Response(html`<p class="no-bookings">No events scheduled at the moment.</p>`, {
+      return new Response(booking_html`<p class="no-bookings">No events scheduled at the moment.</p>`, {
         headers: { 'Content-Type': 'text/html; charset=utf-8' },
       });
     }
 
-    let html = html`<ul class="bookings-list"></ul>`;
+    let booking_html = html`<ul class="bookings-list"></ul>`;
 
     results.forEach(b => {
       if (b.is_recurring) {
         const days = ['Sundays', 'Mondays', 'Tuesdays', 'Wednesdays', 'Thursdays', 'Fridays', 'Saturdays'];
 
         // Inside your functions file loops, update the badge section of the string:
-        html += html`
+        booking_html += html`
           <li class="booking-item recurring status-${b.status}">
             <span class="booking-meta"><strong>Every ${days[b.day_of_week]}</strong> — ${b.name}</span>
             <span class="booking-badge"><span class="repeat-icon">↻</span> Weekly</span>
@@ -31,7 +32,7 @@ export async function onRequestGet(context) {
       } else {
         // We include status-${b.status} so WebC can style tentative vs approved slots differently
         const label = b.status === 'tentative' ? '⏳ Hold' : '✅ Booked';
-        html += html`
+        booking_html += html`
           <li class="booking-item single status-${b.status}">
             <span class="booking-meta"><strong>${b.date}</strong> — ${b.name}</span>
             <span class="booking-badge">${label}</span>
@@ -40,9 +41,9 @@ export async function onRequestGet(context) {
       }
     });
 
-    html += html`</ul>`;
+    booking_html += html`</ul>`;
 
-    return new Response(html, {
+    return new Response(booking_html, {
       headers: { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-cache' },
     });
   } catch (error) {
